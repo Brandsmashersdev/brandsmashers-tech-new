@@ -1,0 +1,62 @@
+.navbar {
+    font-family: gilroy;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 1% 5% 1% 5%;
+    }
+    
+    .logo img {
+      height: 40px;
+    }
+    
+    .navLinks {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      align-items: center;
+    }
+    
+    .navLinks li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      
+  
+    }
+    
+    .navLinks a {
+      text-decoration: none;
+      color: #343333;
+      font-weight: 500;
+      font-size: 20px;
+    }
+    
+    .navLinks li:hover a {
+      color: #007bff;
+    }
+  
+    .dropdownIcon {
+      margin-left: 5px;
+      width: 8px;
+      height: 5px;
+    }
+    
+    .contactBtn {
+      padding: 8px 16px;
+      background-color:  #2CC5D9;
+      border: none;
+      border-radius: 4px;
+      color: #343333;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    
+    .contactBtn:hover {
+      background-color: #00a0a5;
+    }
+    
