@@ -1,0 +1,169 @@
+.visionContainer {
+  /* background-color: #1E1E1E; */
+  padding: 4rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-family: gilroy;
+  
+}
+
+.visionContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.title {
+  font-size: 3.6rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 3rem;
+  /* text-align: center; */
+}
+
+.highlight {
+  color: #2cc5d9;
+  font-weight: 300;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.imageWrapper {
+  flex: 1;
+  position: relative;
+  max-width: 500px;
+}
+
+.imageFrame {
+  position: relative;
+}
+
+.image {
+  width: 82%;
+  height: 580px;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.mobileImage {
+  display: none;
+}
+
+.textContent {
+  flex: 1;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .contentWrapper {
+    gap: 2rem; /* Reduce gap for smaller desktops */
+  }
+
+  .title {
+    font-size: 3rem; /* Slightly smaller font for titles */
+  }
+}
+
+@media (max-width: 1024px) {
+  .contentWrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imageWrapper {
+    margin-bottom: 1.5rem;
+    max-width: 100%; /* Allow images to scale */
+    width: 100%;
+  }
+
+
+  .image {
+    display: none; 
+  }
+
+  .mobileImage {
+    display: block; 
+    width: 100%;
+    height: auto;
+  }
+
+  .textContent {
+    text-align: left;
+    font-size: 20px; /* Adjust font size for readability */
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .visionContainer {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .contentWrapper {
+    gap: 1.5rem; /* Reduce gap for smaller screens */
+  }
+
+  .textContent {
+    font-size: 19px;
+    text-align: left;
+  }
+
+  .image {
+    display: none; 
+  }
+
+  .mobileImage {
+    display: block; 
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .visionContainer {
+    padding: 1.2rem;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .contentWrapper {
+    gap: 1rem; /* Reduce gap further for very small devices */
+  }
+
+  .textContent {
+    text-align: left;
+    /* font-size: 12px; */
+    line-height: 1.4; /* Tighten line height for small screens */
+  }
+
+  .description{
+    font-size: 14px;
+  }
+
+  .imageWrapper {
+    max-width: 90%; /* Shrink image container */
+  }
+}

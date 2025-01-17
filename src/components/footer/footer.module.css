@@ -1,0 +1,312 @@
+.footerContainer {
+  position: relative;
+  background-color: #343333;
+  min-height: 100%;
+  border-radius: 24px;
+}
+
+.leftTriangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 100%;
+  background-color: #22d3ee;
+  border-top-left-radius: 24px;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.rightTriangle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 64px;
+  height: 100%;
+  background-color: #22d3ee;
+  border-top-right-radius: 24px;
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+.footer {
+  position: relative;
+  color: white;
+}
+
+.footerContent {
+  margin: 0 auto;
+  padding: 24px 32px;
+}
+
+/* Mobile Layout */
+.mobileLayout {
+  display: none;
+  padding: 0 40px;
+}
+
+.footerSection {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.aboutText {
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  margin-bottom: 24px;
+  width: 365px;
+}
+
+.companyLinks,
+.servicesLinks {
+  color: #FFFFFF;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.companyLinks {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.servicesLinks {
+  display: grid;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Desktop Layout */
+.desktopLayout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px;
+  padding-left: 64px;
+}
+
+/* Social Icons */
+.socialIcons {
+  position: relative;
+  width: fit-content;
+}
+
+.socialRowFirst {
+  display: flex;
+  margin-bottom: -65.2px;
+  padding-left: 55px;
+}
+
+.socialRowSecond {
+  display: flex;
+  margin-left: 4px;
+}
+
+.socialIcon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.socialLink {
+  display: block;
+  transition: transform 0.2s;
+}
+
+.socialLink:hover {
+  transform: translateY(-4px);
+}
+
+/* Bottom Bar */
+.bottomBar {
+  border-top: 3px solid #FFFFFF;
+  margin: 16px 56px 0;
+  padding-top: 8px;
+}
+
+.bottomContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.875rem;
+  color: #FFFFFF;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.bottomLinks a:hover {
+  color: white;
+}
+
+.tagline {
+  text-align: left;
+  font-size: 1rem;
+  margin-top: 60px;
+  color: white;
+  font-weight: 600;
+}
+
+.copyright .highlight {
+  color: #22d3ee;
+}
+
+.companyLinks a:hover,
+.servicesLinks a:hover {
+  color: #2CC5D9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.backToTop:hover {
+  color: #2CC5D9;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .leftTriangle,
+  .rightTriangle {
+    width: 32px;
+  }
+
+  .desktopLayout {
+    display: none;
+  }
+
+  .mobileLayout {
+    display: block;
+  }
+
+  .footerContent {
+    padding: 24px 16px;
+  }
+
+  .bottomContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tagline {
+    margin-top: 40px;
+  }
+
+  .mobileSocial {
+    margin-left: 13%;
+  }
+
+  .socialIcon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .socialRowFirst {
+    margin-bottom: -27.2%;
+    padding-left: 7%;
+  }
+
+  .socialRowSecond {
+    margin-left: -10%;
+  }
+
+  .aboutText {
+    width: 100%;
+  }
+
+  .companyLinks,
+  .servicesLinks {
+    display: flex;
+    margin-left: 10%;
+  }
+}
+
+@media (min-width: 760px) {
+  .bottomContent {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .copyright {
+    text-align: right;
+  }
+
+  .tagline {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 60px;
+  }
+
+  .desktopLayout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+    padding-left: 43px;
+    padding-right: 3%;
+  }
+
+  .aboutText {
+    width: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .leftTriangle,
+  .rightTriangle {
+    width: 32px;
+  }
+
+  .desktopLayout {
+    display: none;
+  }
+
+  .mobileLayout {
+    display: block;
+  }
+
+  .footerContent {
+    padding: 24px 16px;
+  }
+
+  .bottomContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tagline {
+    margin-top: 40px;
+  }
+
+  .socialIcon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .socialRowFirst {
+    margin-bottom: -27.2%;
+    padding-left: 7%;
+  }
+
+  .socialRowSecond {
+    margin-left: -10%;
+  }
+
+  .aboutText {
+    width: 100%;
+  }
+
+  .companyLinks,
+  .servicesLinks {
+    display: flex;
+    margin-left: 10%;
+  }
+
+  .mobileSocial {
+    margin-left: 1%;
+    margin-right: -1%;
+    padding-left: 6px;
+  }
+}
