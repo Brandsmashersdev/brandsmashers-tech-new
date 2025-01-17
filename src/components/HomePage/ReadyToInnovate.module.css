@@ -1,0 +1,159 @@
+.container {
+  background-color: #f6f5f5;
+  position: relative;
+  height: auto;
+  width: 100%;
+  margin: 4rem 0 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: gilroy, sans-serif;
+  font-style: italic;
+  padding: 2rem 3rem; /* Added padding for better spacing */
+}
+
+.imageContainer {
+  flex: 1;
+  margin-right: 2rem; /* Added spacing between image and text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  max-width: 400px;
+  max-height: 470px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content {
+  flex: 1;
+  max-width: 50%; /* Adjusted for better proportion */
+  text-align: left;
+}
+
+.title {
+  font-size: 2.7rem;
+  font-weight: 600;
+  color: #343333;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: #2cc5d9;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  background-color: #00c4cc;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem; /* Ensure spacing below text */
+}
+
+.button:hover {
+  background-color: #00fbff;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow content to wrap if necessary */
+    padding: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .content {
+    max-width: 60%; /* Increase width for better readability */
+    margin-left: 2rem;
+    text-align: left;
+  }
+
+  .imageContainer {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .image {
+    max-width: 100%; /* Ensure image scales properly */
+    max-height: 400px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .button {
+    font-size: 1.2rem;
+    padding: 10px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .content {
+    max-width: 100%;
+    text-align: left; /* Center-align for smaller screens */
+    margin-top: 15px;
+  }
+
+  .imageContainer {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .imageContainer img {
+    content: url('/MobileView_ReadyToInnovate.png'); /* Mobile-specific image */
+    max-width: 300px;
+    max-height: 450px;
+    margin-top: -52px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .content,
+  .container {
+    width: 100%;
+  }
+
+  .button {
+    width: auto;
+  }
+}

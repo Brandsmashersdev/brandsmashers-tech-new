@@ -1,0 +1,209 @@
+.solutionsContainer {
+    width: 100%;
+    background: #f6f5f5;
+    border-bottom: 2px solid #e5f9f7;
+    padding: 2rem 7rem;
+    font-family: gilroy;
+    border-bottom: 8px solid #00fbff;
+  }
+  
+  .solutionsWrapper {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+  
+  .solutionsLeft {
+    flex: 1;
+    padding-right: 2rem;
+    margin-left: 20px; 
+  }
+  
+  .solutionsTitle {
+    font-size: 27px;
+    font-weight: 600;
+    color: #343333;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  
+  .solutionsSubtitle {
+    font-size: 30px;
+    font-weight: 500;
+    color: #343333;
+    margin: 0;
+    margin-bottom: 8px;
+    /* color:black; */
+  }
+  
+  .italicText {
+    font-style: italic;
+    color: #343333;
+  }
+  
+  .solutionsDescription {
+    font-size: 20px;
+    color: #000000;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    max-width: 530px;
+    font-style: italic;
+  }
+  
+  .solutionsButton {
+    background-color: #2cc5d9;
+    color: white;
+    border: none;
+    padding: 10px 48px;
+    border-radius: 10px;
+    font-size: 21px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .solutionsButton:hover {
+    background-color: #00fbff;
+  }
+  
+  .solutionsRight {
+    flex: 1;
+  }
+  
+  .solutionsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .solutionsStat {
+    text-align: center;
+  }
+  
+  .statValue {
+    font-size: 48px;
+    font-weight: 700;
+    color: #2cc5d9;
+    margin-bottom: 4px;
+    font-style: italic;
+  }
+  
+  .statLabel {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 600;
+  }
+
+  @media (max-width: 760px) {
+    .solutionsContainer {
+      flex-direction: column;
+      /* display: flex; */
+      max-width: 100%;
+      padding: 1rem;
+      padding-bottom: 25px;
+      padding-left: 0;
+      padding-right: 0px;
+    }
+    .solutionsDescription{
+      font-size:14px;
+      padding-left: 4px;
+    }
+  
+    .solutionsWrapper {
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 300px;
+    }
+
+    .solutionsTitle{
+      font-size:22px;
+    }
+    .solutionsSubtitle{
+      font-size: 26px;
+    }
+  
+    .solutionsLeft {
+      padding-right: 0;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .solutionsGrid {
+      gap: 1.5rem;
+    }
+
+    .solutionsButton{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        margin: 0 auto;
+        padding: 10px 30px;
+    }
+
+    .solutionsRight{
+        margin: auto;
+    }
+    .statValue{
+        font-size: 40px;
+    }
+    .statLabel{
+        font-size: 16px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .solutionsContainer {
+      flex-direction: row;
+      width: 100%;
+      max-width: 100%;
+      padding: 1rem;
+      padding-bottom: 25px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .solutionsDescription{
+      font-size:14px;
+      padding-left: 4px;
+    }
+  
+    .solutionsWrapper {
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 300px;
+    }
+
+    .solutionsTitle{
+      font-size:22px;
+    }
+    .solutionsSubtitle{
+      font-size: 26px;
+    }
+  
+    .solutionsLeft {
+      padding-right: 0;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .solutionsGrid {
+      gap: 1.5rem;
+    }
+
+    .solutionsButton{
+        display: flex;
+        justify-content: center; /* Center the content inside the button */
+        align-items: center;
+        margin: 0 auto; /* Center the button horizontally */
+        padding: 10px 30px;
+    }
+
+    .solutionsRight{
+        margin: auto;
+    }
+    .statValue{
+        font-size: 40px;
+    }
+    .statLabel{
+        font-size: 16px;
+    }
+  }
