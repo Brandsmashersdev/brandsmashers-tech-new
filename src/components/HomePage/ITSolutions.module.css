@@ -8,9 +8,12 @@
   font-family: gilroy;
   align-items: center;
   justify-content: space-between;
-  margin-top: 6rem;
-  padding-left: 90px;
-  padding-right: 90px;
+  /* margin-top: 6rem; */
+  /* padding-left: 90px;
+  padding-right: 90px; */
+  background-color: #343333;
+  /* padding-top: 50px;
+  padding-bottom: 50px */
 }
 
 .imageContainer {

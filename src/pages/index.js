@@ -12,10 +12,7 @@ import WhyChooseUs from "@/components/HomePage/whyChooseUs";
 
 export default function Home() {
   return (
-    <div className="container" style={{
-      backgroundColor: "#343333",
-      fontFamily:"gilroy"
-    }}>
+    <div>
     <Navbar/>
     <SolutionsMatrix/>
     <ITSolutions/>
