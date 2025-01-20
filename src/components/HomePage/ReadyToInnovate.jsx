@@ -3,6 +3,7 @@ import styles from "./ReadyToInnovate.module.css";
 
 const ReadyToInnovate = () => {
   return (
+    <div className={styles.divider}>
     <div className={styles.container}>
       <div className={styles.imageContainer}>
         <img
@@ -26,6 +27,7 @@ const ReadyToInnovate = () => {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };
