@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="w-full py-8 md:py-16 px-4 md:bg-transparent">
+    <section className="w-full py-8 md:py-16 px-4 md:bg-transparent bg-[#343333]">
       <div className="max-w-md mx-auto sm:max-w-2xl md:max-w-6xl">
         {/* Header Section */}
         <div className="text-left md:text-center mb-8 md:mb-12">

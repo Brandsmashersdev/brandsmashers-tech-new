@@ -19,7 +19,7 @@ const Navbar = () => {
       </div>
       <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
         <li>
-          <Link href="#">Hire Developers</Link>
+          <Link href="/hiredevelopers">Hire Developers</Link>
           <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
         </li>
         <li>
