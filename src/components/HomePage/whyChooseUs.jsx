@@ -101,7 +101,8 @@ const WhyChooseUs = () => {
               <div
                 key={index}
                 className={`${item.className} bg-[#2CC5D9B8] rounded-lg p-8 transition-all duration-300 flex flex-row items-start gap-6`}
-              >
+              > 
+             
                 <h3 className="font-medium mb-6 text-xl text-[#2E2E2E] text-center pt-2">
                   {item.title}
                 </h3>
