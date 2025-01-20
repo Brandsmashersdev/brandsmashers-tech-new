@@ -1,0 +1,17 @@
+.container{
+    background-color: #343333;
+    display: flex;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    margin: auto;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.charts{
+    flex-wrap: wrap;
+}

@@ -1,0 +1,110 @@
+/* Main container */
+.container {
+    background-color: #343333;
+    padding: 50px 20px;
+    text-align: center;
+    color: #ffffff;
+    font-style: italic;
+  }
+
+  .headingContainer {
+    margin-bottom: 30px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 65px;
+  }
+  
+  .button {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 1.29rem;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin: auto;
+    cursor: pointer;
+    width: fit-content;
+    font-style: italic;
+    transition: all 0.3s ease;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    margin: 20px 0;
+  }
+  
+  .highlight {
+    color: #24c0e3;
+  }
+  
+  .subheading {
+    font-size: 1.3rem;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  /* Tab Navigation */
+  .tabContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+  
+  .tab {
+    font-size: 1.3rem;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .tab:hover {
+    color: #24c0e3;
+  }
+  
+  .activeTab {
+    color: #24c0e3;
+    border-bottom: 2px solid #24c0e3;
+  }
+  
+  /* Cards Container */
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #d9d9d9;
+    color: #000000;
+    width: 380px;
+    height: 200px;
+    border-radius: 42px 6px;
+    padding: 20px;
+    text-align: left;
+    padding-top: 32px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cardTitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #343333;
+  }
+  
+  .cardDescription {
+    font-size: 1.1rem;
+    color: #000000;
+    text-align: left;
+  }
+  
