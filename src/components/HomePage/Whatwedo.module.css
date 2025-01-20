@@ -10,7 +10,7 @@
   font-weight: 500;
   font-style: italic;
   line-height: 77px;
-  font-family: gilroy;
+  font-family: gilroy; 
 }
 
 .sectionHeader h1 .highlight {
@@ -29,6 +29,7 @@
 .cardsContainer {
   width: 100%;
   min-height: 100%;
+  padding-bottom: 5%;
 }
 
 .cardsWrapper {
