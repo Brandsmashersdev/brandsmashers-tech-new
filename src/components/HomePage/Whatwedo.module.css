@@ -43,6 +43,8 @@
   gap: 1.5rem;
 }
 
+
+
 @media (min-width: 768px) {
   .cardsGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -71,8 +73,10 @@
 }
 
 .cardContent {
-  padding: 1.5rem;
+  padding: 0.5rem;
   height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .cardTitle {
@@ -99,11 +103,12 @@
   background-color: #343333;
   clip-path: polygon(100% 0, 0 100%, 100% 100%);
   transition: all 0.5s ease;
+  border-radius: 10px;
 }
 
 .card:hover .triangle {
-  width: 10rem;
-  height: 10rem;
+  width: 15rem;
+  height: 15rem;
 }
 
 @media (max-width: 600px) {
