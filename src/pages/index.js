@@ -8,21 +8,31 @@ import HeroSection from "@/components/HomePage/herosection";
 import SolutionsMatrix from "@/components/HomePage/SolutionsMatrix";
 import ExpandableCards from "@/components/HomePage/Whatwedo";
 import OurPartner from "@/components/OurPartners/OurPartner";
+import TechnologyServices from "@/components/HomePage/TechnologyServices";
+import Industries from "@/components/HomePage/Industries";
+import FAQSection from "@/components/HomePage/FAQSection";
+// import "../components/HomePage/TechnologyServices.module.css";
+// import "../components/HomePage/Industries.module.css";
+
+
 
 
 export default function Home() {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
     <HeroSection/>
     <SolutionsMatrix/>
     <ITSolutions/>
     <ExpandableCards/>
     <ReadyToInnovate/>
     <OurPartner/>
+    <TechnologyServices/>
+    <Industries />
     <OurVision/>
     <WhyChooseUs/>
-    <Footer/>
+    <FAQSection/>
+     <Footer/> 
     </div>
   );
 }
