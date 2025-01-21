@@ -5,6 +5,7 @@ import TopRemoteDevelopers from "@/components/HireDevelopers/TopRemoteDevelopers
 import HiringModels from "@/components/HireDevelopers/HiringModels";
 import WhatWeOffer from "@/components/HireDevelopers/WhatWeOffer";
 import ProcessChart from "@/components/HireDevelopers/ProcessChart";
+import FAQSection from "@/components/HomePage/FAQSection";
 
 export default function hiredevelopers() {
   return (
@@ -16,6 +17,7 @@ export default function hiredevelopers() {
       <DeveloperSkills/>
       <WhatWeOffer/>
       <HiringModels/>
+      <FAQSection/>
       <Footer />
       </>
   );

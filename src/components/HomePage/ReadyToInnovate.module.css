@@ -168,14 +168,10 @@
     margin-top: 38px;
     padding-left: 0;
     margin-left: 0;
-    /* padding-right: 8px; */
   }
 .title{
   font-size: 27px;
 }
-  .subtitle{
-    /* padding-right: 15px; */
-  }
   .button {
     width: auto;
   }
