@@ -7,13 +7,17 @@ import WhyChooseUs from "@/components/HomePage/whyChooseUs";
 import HeroSection from "@/components/HomePage/herosection";
 import SolutionsMatrix from "@/components/HomePage/SolutionsMatrix";
 import ExpandableCards from "@/components/HomePage/Whatwedo";
+<<<<<<< Updated upstream
 import OurPartner from "@/components/OurPartners/OurPartner";
+=======
+import ServiceSection from "@/components/Service/webDesign";
+>>>>>>> Stashed changes
 
 
 export default function Home() {
   return (
     <div>
-    <Navbar/>
+    {/* <Navbar/>
     <HeroSection/>
     <SolutionsMatrix/>
     <ITSolutions/>
@@ -22,7 +26,8 @@ export default function Home() {
     <OurPartner/>
     <OurVision/>
     <WhyChooseUs/>
-    <Footer/>
+    <Footer/> */}
+    <ServiceSection/>
     </div>
   );
 }
