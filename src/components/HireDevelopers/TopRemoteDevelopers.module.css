@@ -62,7 +62,6 @@
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 1.8rem;
-    /* margin-top: 0.1rem; */
     line-height: 1.2;
     text-align: left;
   }
@@ -221,7 +220,7 @@
     }
   
     .title {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       margin-top: 25px;
     }
   

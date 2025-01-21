@@ -21,6 +21,7 @@
   font-weight: 300;
   color: white;
   margin-bottom: 3rem;
+  font-style: italic;
   /* text-align: center; */
 }
 
@@ -59,13 +60,13 @@
 
 .textContent {
   flex: 1;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
 .description {
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 @media (max-width: 1200px) {
