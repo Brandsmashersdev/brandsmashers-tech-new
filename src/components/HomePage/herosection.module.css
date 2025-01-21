@@ -1,5 +1,5 @@
 .heroSection {
-  min-height: 100vh;
+  min-height: 100%;
   background-color: #343333;
   display: flex;
   align-items: center;
@@ -148,7 +148,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 650px) {
   .imageContainer {
     order: -1; /* This moves the image container to the top */
     width: 100%;
@@ -178,34 +178,21 @@
     text-align: left;
   }
 }
-
-@media (min-width: 400px) and (max-width: 1000px) {
-  .imageContainer {
-    order: -1; /* This moves the image container to the top */
-    width: 100%;
-    align-items: center; /* Adjust based on your needs */
+@media (min-width: 651px) and (max-width: 1000px) {
+  .heroContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
+
   .textContainer {
     text-align: left;
-  }
-  .heroSection {
-    padding: 1rem;
-  }
-
-  .heroContainer {
-    padding: 20px;
+    padding-left: 3%;
+    padding-top: 1%;
+    width: 100%;
   }
 
-  .heroTitle {
-    font-size: 36px;
-  }
-
-  .subtitle {
-    font-size: 30px;
-  }
-
-  .description {
-    font-size: 18px;
+  .imageContainer {
+    justify-content: flex-end;
   }
 }
 

@@ -168,7 +168,7 @@
 }
 
 /* Media Queries */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .leftTriangle,
   .rightTriangle {
     width: 32px;
@@ -224,7 +224,7 @@
   }
 }
 
-@media (min-width: 760px) {
+@media (min-width: 651px) {
   .bottomContent {
     flex-direction: row;
     justify-content: space-between;
