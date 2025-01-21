@@ -27,7 +27,7 @@ const Navbar = () => {
           <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
         </li>
         <li>
-          <Link href="#">Technologies</Link>
+          <Link href="/technologie">Technologies</Link>
           <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
         </li>
         <li>

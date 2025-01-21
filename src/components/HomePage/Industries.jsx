@@ -122,10 +122,10 @@ const Industries = () => {
     <div className="industries-container">
       {/* Heading and Paragraph Section */}
       <div className="text-left mb-10">
-        <h1 className="text-[40px] font-[500] italic leading-[48.41px] text-left mb-[4rem]">
+        <h1 className="heading text-[40px] font-[500] italic leading-[48.41px] text-left mb-[4rem]" style={{ color: '#ffffff' }}>
           Industries We <span style={{ color: '#2CC5D9' }}>Serve</span>
         </h1>
-        <p className="text-[20px] font-[500] italic leading-[24.2px] text-left">
+        <p className="subheading text-[20px] font-[500] italic leading-[24.2px] text-left" style={{ color: '#ffffff' }}>
           We have successfully helped businesses belonging to almost all
           industry verticals. Our dedicated developers can help you build
           industry-specific solutions that perfectly serve your business
