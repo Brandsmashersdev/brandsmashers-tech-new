@@ -23,7 +23,7 @@ const Navbar = () => {
           <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
         </li>
         <li>
-          <Link href="#">Services</Link>
+          <Link href="/service">Services</Link>
           <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
         </li>
         <li>

@@ -1,9 +1,14 @@
+import Footer from '@/components/footer/footer'
+import Navbar from '@/components/navbar/navbar'
+import ServiceSection from '@/components/Service/webDesign'
 import React from 'react'
 
 const Service = () => {
   return (
     <div>
-        sevivce
+        <Navbar/>
+        <ServiceSection/>
+        <Footer/>
     </div>
   )
 }
