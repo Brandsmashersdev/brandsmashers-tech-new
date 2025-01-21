@@ -69,7 +69,6 @@
     border-bottom: 2px solid #24c0e3;
   }
   
-  /* Cards Container */
   .cardsContainer {
     display: flex;
     flex-wrap: wrap;
@@ -108,3 +107,15 @@
     text-align: left;
   }
   
+  @media (max-width: 575px) {
+    .container {
+      padding-left:0 ;
+      padding-right:0 ;
+    }
+
+    .headingContainer{
+      width: 100%;
+      padding-left: 21px;
+      padding-right: 21px;
+    }
+  }
