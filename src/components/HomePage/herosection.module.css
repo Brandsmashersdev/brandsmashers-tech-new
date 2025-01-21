@@ -177,6 +177,9 @@
   .textContainer {
     text-align: left;
   }
+  .contactButton{
+    width: 100%;
+  }
 }
 @media (min-width: 651px) and (max-width: 1000px) {
   .heroContent {
