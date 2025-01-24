@@ -10,6 +10,18 @@
   gap: 20px;
 }
 
+.heading{
+  font-size: 38px;
+  color: #ffffff;
+  margin-bottom: 63px;
+  font-style: italic;
+  text-align: left;
+  width: 80%;
+}
+
+.highlight{
+  color: #2cc5d9;
+}
 .charts {
   display: flex;
   flex-wrap: wrap;
@@ -50,5 +62,9 @@
   .chart1 img{
     width: 90%;
     margin: auto;
+  }
+
+  .heading{
+    font-size: 28px;
   }
 }

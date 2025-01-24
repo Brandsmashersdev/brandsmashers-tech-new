@@ -23,6 +23,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  /* mix-blend-mode: color-burn; */
 }
 
 .scroll {
@@ -34,6 +35,11 @@
 .imageWrapper {
   flex-shrink: 0;
   margin: 0 2rem;
+  mix-blend-mode: color-burn;
+}
+
+.imageWrapper img{
+  mix-blend-mode: color-burn;
 }
 
 .image {

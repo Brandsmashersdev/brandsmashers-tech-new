@@ -4,6 +4,7 @@ import styles from "./ProcessChart.module.css";
 const ProcessChart = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.heading}><h2>Hire Remote Developers <span className={styles.highlight}>in 4 </span>Steps</h2></div>
       <div className={styles.charts}>
         <div className={styles.chart1}>
           <img src="/chart1.svg" alt="chart1" />
