@@ -9,9 +9,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 64px;
+  width: 100px;
   height: 100%;
-  background-color: #22d3ee;
+  background-color: #2CC5D9;
   border-top-left-radius: 24px;
   clip-path: polygon(0 0, 100% 100%, 0 100%);
 }
@@ -20,9 +20,9 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 64px;
+  width: 100px;
   height: 100%;
-  background-color: #22d3ee;
+  background-color: #2CC5D9;
   border-top-right-radius: 24px;
   clip-path: polygon(100% 0, 100% 100%, 0 0);
 }
@@ -48,14 +48,14 @@
 }
 
 .sectionTitle {
-  font-size: 1.875rem;
+  font-size: 32px;
   font-weight: 600;
   margin-bottom: 16px;
 }
 
 .aboutText {
   color: #FFFFFF;
-  font-size: 0.875rem;
+  font-size: 14px;
   margin-bottom: 24px;
   width: 365px;
 }
@@ -64,10 +64,11 @@
 .servicesLinks {
   color: #FFFFFF;
   margin-top: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .companyLinks {
+  display: grid;
   flex-wrap: wrap;
   gap: 8px;
 }
@@ -77,13 +78,15 @@
   flex-wrap: wrap;
   gap: 8px;
 }
-
+.companysection{
+  padding-left: 23%;
+}
 /* Desktop Layout */
 .desktopLayout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 90px;
-  padding-left: 64px;
+  padding-left: 6%;
 }
 
 /* Social Icons */
@@ -116,7 +119,7 @@
 }
 
 .socialLink:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
 /* Bottom Bar */
@@ -153,7 +156,7 @@
 }
 
 .copyright .highlight {
-  color: #22d3ee;
+  color: #2CC5D9;
 }
 
 .companyLinks a:hover,
@@ -168,10 +171,10 @@
 }
 
 /* Media Queries */
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   .leftTriangle,
   .rightTriangle {
-    width: 32px;
+    width: 54px;
   }
 
   .desktopLayout {
@@ -221,10 +224,11 @@
   .servicesLinks {
     display: flex;
     margin-left: 10%;
+    gap: 1.5rem;
   }
 }
 
-@media (min-width: 651px) {
+@media (min-width: 751px) {
   .bottomContent {
     flex-direction: row;
     justify-content: space-between;
@@ -244,19 +248,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5%;
-    padding-left: 43px;
-    padding-right: 3%;
+    padding-left: 6%;
+    padding-right: 4%;
   }
 
   .aboutText {
-    width: 300px;
+    width: 319px;
   }
+
 }
 
 @media (max-width: 400px) {
   .leftTriangle,
   .rightTriangle {
-    width: 32px;
+    width: 42px;
   }
 
   .desktopLayout {
@@ -302,6 +307,7 @@
   .servicesLinks {
     display: flex;
     margin-left: 10%;
+    gap: 1.5rem;
   }
 
   .mobileSocial {
