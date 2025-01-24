@@ -59,22 +59,22 @@ const FAQSection = () => {
     <div className=" p-8">
       <div className=" mx-auto md:w-4/5 ">
         {/* Header Section */}
-        <div className="flex justify-between items-center mb-[6rem] gap-6 ">
+        <div className="flex justify-between items-center mb-[4rem] gap-6 ">
           {/* Left Section */}
-          <h1 className="text-xl md:text-4xl font-bold text-white">
+          <h1 className="text-xl md:text-3xl font-bold text-white">
             Frequently Asked
             <span style={{ color: '#2CC5D9' }}> Questions</span>
           </h1>
           
           {/* Right Section */}
           <div className="">
-            <h2 className="text-white text-xl md:text-3xl ">Still Have Questions?</h2>
+            <h2 className="text-white text-xl md:text-2xl ">Still Have Questions?</h2>
             <a href="#" style={{ color: '#2CC5D9' }} className="text-lg md:text-xl hover:underline">Lets Talk</a>
           </div>
         </div>
 
         {/* FAQ Section */}
-        <div className="space-y-4 max-w-full lg:max-w-[83%] ">
+        <div className="space-y-4 max-w-full  ">
           {faqData.map((faq, index) => (
             <div key={index} className="transition-all duration-300">
               {/* Question */}

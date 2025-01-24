@@ -48,12 +48,12 @@ const TechnologyPage = () => {
         <p className="font-inter italic" 
            style={{ 
              fontSize: '20px', 
-             lineHeight: '24.2px', 
+             lineHeight: '23px', 
              fontWeight: 400,
              textAlign: 'left',
              textUnderlinePosition: 'from-font',
              textDecorationSkipInk: 'none',
-             color: '#666666'
+             color: 'black'
            }}>
           At Brandsmashers, we leverage cutting-edge technologies to deliver innovative, scalable, and secure solutions that 
           meet the evolving needs of businesses across industries. Our expertise spans across a wide array of tools, platforms, 
@@ -71,12 +71,12 @@ const TechnologyPage = () => {
               className="slide mx-4"
             >
               <div className="tech-card bg-cyan-400 rounded-lg p-6 w-56 h-64 relative group hover:-translate-y-2 transition-transform duration-300">
-                <h3 className="card-title text-black text-xl font-semibold mb-7 font-inter italic"
+                <h3 className="card-title text-[#343333] text-xl font-semibold mb-7 font-inter italic"
                     style={{ 
                       fontSize: '16px',
                       lineHeight: '19.36px',
                       fontWeight: 400,
-                      textAlign: 'left',
+                      textAlign: 'center',
                       textUnderlinePosition: 'from-font',
                       textDecorationSkipInk: 'none'
                     }}>
@@ -105,7 +105,7 @@ const TechnologyPage = () => {
         .slider-track {
           display: flex;
           width: fit-content;
-          animation: scroll 40s linear infinite;
+          animation: scroll 60s linear infinite;
           will-change: transform;
         }
 
@@ -143,7 +143,7 @@ const TechnologyPage = () => {
           }
 
           .card-title {
-            font-size: 24px !important;
+            font-size: 20px !important;
             line-height: 19.36px !important;
             font-weight: 400 !important;
             text-align: center !important;
@@ -153,7 +153,7 @@ const TechnologyPage = () => {
           }
 
           .slider-track {
-            animation-duration: 20s;
+            animation-duration: 50s;
           }
         }
 

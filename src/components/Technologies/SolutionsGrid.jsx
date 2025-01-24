@@ -69,7 +69,7 @@ const SolutionsGrid = () => {
           <div className="flex flex-col lg:flex-row gap-2 lg:justify-center w-full">
             {solutions.slice(0, 3).map((solution, index) => (
               <div key={index} className={`${solution.containerStyle} min-w-0`}>
-                <div className={`rounded-xl p-6 h-[160px] shadow-sm ${solution.bgColor} overflow-hidden`}>
+                <div className={`rounded-md p-6 h-[160px] shadow-sm ${solution.bgColor} overflow-hidden`}>
                   <div className="flex flex-col h-full">
                     <div className="flex items-center mb-3 w-full">
                       <span className="text-4xl flex-shrink-0 mr-2">{solution.icon}</span>
@@ -88,7 +88,7 @@ const SolutionsGrid = () => {
           <div className="flex flex-col lg:flex-row gap-2 lg:pl-14 w-full">
             {solutions.slice(3, 5).map((solution, index) => (
               <div key={index} className={`${solution.containerStyle} min-w-0`}>
-                <div className={`rounded-xl p-6 h-[140px] shadow-sm ${solution.bgColor} overflow-hidden`}>
+                <div className={`rounded-md p-6 h-[140px] shadow-sm ${solution.bgColor} overflow-hidden`}>
                   <div className="flex flex-col h-full">
                     <div className="flex items-center mb-3 w-full">
                       <span className="text-4xl flex-shrink-0 mr-2">{solution.icon}</span>
@@ -107,7 +107,7 @@ const SolutionsGrid = () => {
           <div className="flex flex-col lg:flex-row gap-2 lg:justify-center w-full">
             {solutions.slice(5).map((solution, index) => (
               <div key={index} className={`${solution.containerStyle} min-w-0`}>
-                <div className={`rounded-xl p-6 h-[160px] shadow-sm ${solution.bgColor} overflow-hidden`}>
+                <div className={`rounded-md p-6 h-[160px] shadow-sm ${solution.bgColor} overflow-hidden`}>
                   <div className="flex flex-col h-full">
                     <div className="flex items-center mb-3 w-full">
                       <span className="text-4xl flex-shrink-0 mr-2">{solution.icon}</span>

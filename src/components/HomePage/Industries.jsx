@@ -7,7 +7,7 @@ const Industries = () => {
     <div className=" industries-container">
       {/* Heading and Paragraph Section */}
       <div className="text-left mb-10">
-        <h1 className="heading text-[40px] font-[500] italic leading-[48.41px] text-left mb-[4rem]" style={{ color: '#ffffff' }}>
+        <h1 className="heading text-[40px] font-[500] italic leading-[48.41px] text-left mb-[2rem]" style={{ color: '#ffffff' }}>
           Industries We <span style={{ color: '#2CC5D9' }}>Serve</span>
         </h1>
         <p className="subheading text-[20px] font-[500] italic leading-[24.2px] text-left" style={{ color: '#ffffff' }}>
@@ -40,7 +40,7 @@ const Industries = () => {
                 />
               </div>
               <div className="flex items-center justify-center">
-                <h2 className="text-left font-bold text-[16px] sm:text-[20px] italic leading-[24.2px] text-black py-1 rounded">
+                <h2 className="text-left font-[500] text-[16px] sm:text-[20px] italic leading-[24.2px] text-black py-1 rounded">
                   {industry.title}
                 </h2>
               </div>
@@ -79,7 +79,7 @@ const Industries = () => {
         .industry-item {
           position: relative;
           padding: 1rem;
-          border-radius: 0.5rem;
+          border-radius: 5px;
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
           transition: transform 0.3s;
         }

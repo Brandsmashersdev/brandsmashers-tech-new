@@ -65,7 +65,7 @@ const ExpandableGrid = () => {
   };
 
   return (
-    <div className="bg-[#343333] min-h-screen flex items-center  p-10">
+    <div className="bg-[#343333] h-[60vh] flex items-center  p-10">
       <div className="flex flex-col lg:flex-row w-full  gap-2 justify-center">
         {items.map((item, index) => (
           <div
