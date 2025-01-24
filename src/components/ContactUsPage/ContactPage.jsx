@@ -21,7 +21,7 @@ const IconSlider = () => {
       {iconRows.map((row, rowIndex) => (
         <div key={rowIndex} className={styles.iconRow}>
           <div className={styles.slideTrack}>
-            {[...row, ...row,].map((item, index) => (
+            {[...row, ...row].map((item, index) => (
               <div key={index} className={styles.iconBox}>
                 {item.icon}
                 <span className={styles.iconLabel}>{item.label}</span>
@@ -35,8 +35,18 @@ const IconSlider = () => {
 };
 
 const ContactPage = () => {
-  const [helpType, setHelpType] = useState('recruiting');
-  
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    skills: '',
+    source: ''
+  });
+
+  const [errors, setErrors] = useState({});
+  const [helpType, setHelpType] = useState(null);
+
   const skillOptions = [
     'React js',
     'Node js',
@@ -59,11 +69,122 @@ const ContactPage = () => {
     'Friend/Colleague'
   ];
 
+  const validateName = (name) => {
+    const nameRegex = /^[A-Za-z\s]+$/;
+    return nameRegex.test(name);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phone.replace(/\D/g, ''));
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    let newValue = value;
+    let error = '';
+
+    switch (name) {
+      case 'firstName':
+      case 'lastName':
+        if (value && !validateName(value)) {
+          error = 'Please enter only letters';
+          newValue = formData[name]; // Keep old value if invalid
+        }
+        break;
+
+      case 'phone':
+        const digits = value.replace(/\D/g, '');
+        if (digits.length > 10) {
+          newValue = formData[name]; // Keep old value if more than 10 digits
+        } 
+        break;
+
+      default:
+        break;
+    }
+
+    setFormData(prev => ({
+      ...prev,
+      [name]: newValue
+    }));
+
+    if (error) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: error
+      }));
+    } else {
+      setErrors(prev => {
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      });
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.firstName) {
+      newErrors.firstName = 'First name is required';
+    } else if (!validateName(formData.firstName)) {
+      newErrors.firstName = 'Please enter only letters';
+    }
+
+    if (!formData.lastName) {
+      newErrors.lastName = 'Last name is required';
+    } else if (!validateName(formData.lastName)) {
+      newErrors.lastName = 'Please enter only letters';
+    }
+
+    if (!formData.email) {
+      newErrors.email = 'Email is required';
+    } else if (!validateEmail(formData.email)) {
+      newErrors.email = 'Please enter a valid email';
+    }
+
+    if (!formData.phone) {
+      newErrors.phone = 'Phone number is required';
+    } else if (!validatePhone(formData.phone)) {
+      newErrors.phone = 'Please enter a valid 10-digit phone number';
+    }
+
+    if (!helpType) {
+      newErrors.helpType = 'Please select how we can help';
+    }
+
+    if (!formData.skills) {
+      newErrors.skills = 'Please select your skills';
+    }
+
+    if (!formData.source) {
+      newErrors.source = 'Please select how you heard about us';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      console.log('Form submitted:', formData);
+      // Handle form submission
+    }
+  };
+
   return (
     <div className={styles.contactContainer}>
       <div className={styles.contactWrapper}>
         {/* Left Section */}
         <div className={styles.leftSection}>
+          {/* Your existing left section code */}
           <div className={styles.headerContent}>
             <h1 className={styles.mainTitle}>
               <span className={styles.brandName}>Brandsmashers</span>
@@ -86,7 +207,6 @@ const ContactPage = () => {
                 <span className={styles.badgeText}>AI Bootcamp Top 20</span>
               </div>
             </div>
-          
             <p className={styles.tagline}>
               Top Devs, Trusted by The <span className={styles.highlight}>Best</span> in Business
             </p>
@@ -94,107 +214,132 @@ const ContactPage = () => {
           <IconSlider />
         </div>
 
-        {/* Right Section - Form */}
+        {/* Form Section */}
         <div className={styles.formSection}>
           <div className={styles.formContainer}>
-            <form className={styles.contactForm}>
+            <form className={styles.contactForm} onSubmit={handleSubmit}>
               <div className={styles.formGroup}>
                 <label className={styles.formLabel}>Name</label>
                 <div className={styles.nameInputs}>
-                  <input
-                    type="text"
-                    placeholder="First name"
-                    className={`${styles.formInput} ${styles.halfWidth}`}
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last name"
-                    className={`${styles.formInput} ${styles.halfWidth}`}
-                  />
+                  <div className={styles.inputWrapper}>
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="First name"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className={`${styles.formInput} ${styles.halfWidth} ${errors.firstName ? styles.error : ''}`}
+                    />
+                    {errors.firstName && <span className={styles.errorText}>{errors.firstName}</span>}
+                  </div>
+                  <div className={styles.inputWrapper}>
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="Last name"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className={`${styles.formInput} ${styles.halfWidth} ${errors.lastName ? styles.error : ''}`}
+                    />
+                    {errors.lastName && <span className={styles.errorText}>{errors.lastName}</span>}
+                  </div>
                 </div>
               </div>
 
               <div className={styles.formGroup}>
                 <label className={styles.formLabel}>Email</label>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className={styles.formInput}
-                />
+                <div className={styles.inputWrapper}>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={`${styles.formInput} ${errors.email ? styles.error : ''}`}
+                  />
+                  {errors.email && <span className={styles.errorText}>{errors.email}</span>}
+                </div>
               </div>
 
               <div className={styles.formGroup}>
                 <label className={styles.formLabel}>Phone Number</label>
-                <input
-                  type="tel"
-                  placeholder="Phone number"
-                  className={styles.formInput}
-                />
+                <div className={styles.inputWrapper}>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone number"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className={`${styles.formInput} ${errors.phone ? styles.error : ''}`}
+                  />
+                  {errors.phone && <span className={styles.errorText}>{errors.phone}</span>}
+                </div>
               </div>
 
               <div className={styles.formGroup}>
                 <label className={`${styles.formLabel} ${styles.helpLabel}`}>How we can Help</label>
                 <div className={styles.helpOptions}>
-                  <label 
-                    className={styles.helpOption}
-                    onClick={() => setHelpType('recruiting')}
-                  >
-                    <div className={styles.radioButton}>
-                      {helpType === 'recruiting' && (
-                        <Check className={styles.checkIcon} />
-                      )}
+                  <label className={styles.helpOption}>
+                    <div 
+                      className={`${styles.radioButton} ${helpType === 'recruiting' ? styles.checked : ''}`}
+                      onClick={() => setHelpType('recruiting')}
+                    >
+                      {helpType === 'recruiting' && <Check className={styles.checkIcon} />}
                     </div>
                     <span className={styles.optionText}>I'm Recruiting</span>
                   </label>
-                  <label 
-                    className={styles.helpOption}
-                    onClick={() => setHelpType('developer')}
-                  >
-                    <div className={styles.radioButton}>
-                      {helpType === 'developer' && (
-                        <Check className={styles.checkIcon} />
-                      )}
+                  <label className={styles.helpOption}>
+                    <div 
+                      className={`${styles.radioButton} ${helpType === 'developer' ? styles.checked : ''}`}
+                      onClick={() => setHelpType('developer')}
+                    >
+                      {helpType === 'developer' && <Check className={styles.checkIcon} />}
                     </div>
                     <span className={styles.optionText}>I'm a Developer</span>
                   </label>
                 </div>
+                {errors.helpType && <span className={styles.errorText}>{errors.helpType}</span>}
               </div>
 
               <div className={styles.formGroup}>
-                <label className={styles.formLabel}>
-                  What skills are you looking for?
-                </label>
+                <label className={styles.formLabel}>What skills are you looking for?</label>
                 <div className={styles.selectWrapper}>
-                  <select className={styles.formSelect}>
+                  <select
+                    name="skills"
+                    value={formData.skills}
+                    onChange={handleChange}
+                    className={`${styles.formSelect} ${errors.skills ? styles.error : ''}`}
+                  >
                     <option value="">What skills are you looking for?</option>
                     {skillOptions.map((skill) => (
-                      <option key={skill} value={skill}>
-                        {skill}
-                      </option>
+                      <option key={skill} value={skill}>{skill}</option>
                     ))}
                   </select>
                   <div className={styles.selectIcon}>
                     <ChevronDown className={styles.chevronIcon} />
                   </div>
+                  {errors.skills && <span className={styles.errorText}>{errors.skills}</span>}
                 </div>
               </div>
 
               <div className={styles.formGroup}>
-                <label className={styles.formLabel}>
-                  How did you hear about Brandsmashers?
-                </label>
+                <label className={styles.formLabel}>How did you hear about Brandsmashers?</label>
                 <div className={styles.selectWrapper}>
-                  <select className={styles.formSelect}>
+                  <select
+                    name="source"
+                    value={formData.source}
+                    onChange={handleChange}
+                    className={`${styles.formSelect} ${errors.source ? styles.error : ''}`}
+                  >
                     <option value="">How did you hear about Brandsmashers?</option>
                     {sourceOptions.map((source) => (
-                      <option key={source} value={source}>
-                        {source}
-                      </option>
+                      <option key={source} value={source}>{source}</option>
                     ))}
                   </select>
                   <div className={styles.selectIcon}>
                     <ChevronDown className={styles.chevronIcon} />
                   </div>
+                  {errors.source && <span className={styles.errorText}>{errors.source}</span>}
                 </div>
               </div>
 
