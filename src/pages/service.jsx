@@ -1,5 +1,4 @@
 import Footer from '@/components/footer/footer'
-import FAQSection from '@/components/HomePage/FAQSection'
 import HeroSection from '@/components/HomePage/herosection'
 import Navbar from '@/components/navbar/navbar'
 import AIML from '@/components/Service/aiMl'
@@ -11,8 +10,11 @@ import ServiceHero from '@/components/Service/herosection'
 import MobileApp from '@/components/Service/mobileApp'
 import UIUX from '@/components/Service/uiux'
 import Webdesign from '@/components/Service/webDesign'
-import WhyUs from '@/components/Service/whyus'
 import React from 'react'
+import FAQSection from '@/components/HomePage/FAQSection'
+import { Expand } from 'lucide-react'
+import BrandsmashersGrid from '@/components/Service/BrandsmashersGrid'
+
 
 const Service = () => {
   return (
@@ -27,6 +29,7 @@ const Service = () => {
         <DataDive/>
         <Digital/>
         <Browser/>
+        <BrandsmashersGrid/>
         <FAQSection/>
         <Footer/>
     </div>
