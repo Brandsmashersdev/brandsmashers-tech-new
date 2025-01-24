@@ -3,7 +3,7 @@ import styles from "./footer.module.css";
 
 const Footer = () => {
   const aboutText =
-    "Founded in 2018, Brandmasters has quickly grown into a trusted name in the world of software development. We specialize in delivering tailor-made software solutions that drive business transformation forward by connecting technical innovation with ease.";
+    "Founded in 2018, Brandsmashers has quickly grown into a trusted name in the world of software development. We specialize in delivering tailor-made software solutions that drive business transformation forward by connecting technical innovation with ease.";
 
   const companyLinks = [
     { name: "Home", href: "/" },
@@ -131,8 +131,8 @@ const Footer = () => {
                 <a href="/terms">TERM</a>
               </div>
               <p className={styles.copyright}>
-                © 2018 <span className={styles.highlight}>Brandmasters</span> Tech | 
-                <a href="#top" className={styles.backToTop}>BACK TO TOP ↑</a>
+                © 2018 <span className={styles.highlight}>Brandsmashers</span> Tech | 
+                <a href="#top" className={styles.backToTop}> BACK TO TOP ↑</a>
               </p>
             </div>
             <div className={styles.tagline}>
