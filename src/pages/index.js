@@ -19,7 +19,7 @@ import FAQSection from "@/components/HomePage/FAQSection";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-[#343333]">
      <Navbar/>
     <HeroSection/>
     <SolutionsMatrix/>

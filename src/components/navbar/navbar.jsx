@@ -27,7 +27,7 @@ const Navbar = () => {
           <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
         </li>
         <li>
-          <Link href="/technologie">Technologies</Link>
+          <Link href="/technologies">Technologies</Link>
           <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
         </li>
         <li>
@@ -38,7 +38,9 @@ const Navbar = () => {
           <Link href="#">About Us</Link>
         </li>
       </ul>
+      <Link href="/contactus">
       <button className={styles.contactBtn}>Contact Us</button>
+      </Link>
     </nav>
   );
 };
