@@ -12,7 +12,9 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
+      <Link href="/">
         <img src="/nav.svg" alt="Logo" />
+        </Link>
       </div>
       <div className={styles.hamburger} onClick={toggleMenu}>
         <img src="/hamburger.png" alt=""/>
@@ -31,11 +33,11 @@ const Navbar = () => {
           <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
         </li>
         <li>
-          <Link href="#">Blogs</Link>
+          <Link href="/blogs">Blogs</Link>
           <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
         </li>
         <li>
-          <Link href="#">About Us</Link>
+          <Link href="/aboutus">About Us</Link>
         </li>
       </ul>
       <Link href="/contactus">

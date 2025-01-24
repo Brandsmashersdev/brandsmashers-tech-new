@@ -56,8 +56,8 @@ const FAQSection = () => {
   };
 
   return (
-    <div className=" bg-[#343333] p-8">
-      <div className=" mx-auto w-4/5  mx-auto">
+    <div className=" p-8">
+      <div className=" mx-auto md:w-4/5 ">
         {/* Header Section */}
         <div className="flex justify-between items-center mb-[6rem] gap-6 ">
           {/* Left Section */}

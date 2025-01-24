@@ -1,12 +1,11 @@
 .container {
     position: relative;
     width: 100%;
-    padding-top: 4rem;
     padding-bottom: 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 6rem;
+    margin-top: 5.5rem;
     padding-right: 90px;
     background-color: #343333;
   }
@@ -48,7 +47,6 @@
   
   .textContainer {
     flex: 1;
-    /* margin-left: -55px; */
     display: flex;
     text-align: left;
     flex-direction: column;
@@ -142,7 +140,7 @@
       padding: 2rem 1rem;
       padding-top: 25px;
       padding-bottom: 25px;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
       margin-top: 2rem;
       width: 100%;

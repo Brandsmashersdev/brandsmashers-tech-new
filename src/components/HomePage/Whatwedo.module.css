@@ -123,12 +123,12 @@
   }
 
   .cardsGrid {
-    grid-template-columns: 1fr; /* One column for small screens */
-    gap: 1rem; /* Smaller gap */
+    grid-template-columns: 1fr; 
+    gap: 1rem; 
   }
 
   .card {
-    height: 12rem; /* Reduced height */
+    height: 12rem;
   }
 
   .cardContent {
@@ -136,11 +136,11 @@
   }
 
   .cardTitle {
-    font-size: 1rem; /* Smaller title font size */
+    font-size: 1rem; 
   }
 
   .cardDescription {
-    font-size: 0.875rem; /* Smaller description font size */
+    font-size: 0.875rem; 
   }
   .cardsContainer{
     padding: 20px;

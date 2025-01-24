@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import DeveloperSkills from "@/components/HireDevelopers/DeveloperSkills";
+import HeroSection from "@/components/HireDevelopers/HeroSection";
 import TopRemoteDevelopers from "@/components/HireDevelopers/TopRemoteDevelopers";
 import HiringModels from "@/components/HireDevelopers/HiringModels";
 import WhatWeOffer from "@/components/HireDevelopers/WhatWeOffer";
@@ -13,6 +14,7 @@ export default function hiredevelopers() {
     <>
     
       <Navbar />
+      <HeroSection/>
       <TopRemoteDevelopers/>
       <ProcessChart/>
       <ExpandableGrid/>
