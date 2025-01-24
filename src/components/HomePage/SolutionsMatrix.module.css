@@ -21,18 +21,18 @@
   
   .solutionsTitle {
     font-size: 27px;
-    font-weight: 600;
+    font-weight: 500;
     color: #343333;
     margin: 0;
-    margin-bottom: 4px;
+    margin-bottom: 15px;
   }
   
   .solutionsSubtitle {
     font-size: 30px;
     font-weight: 500;
-    color: #343333;
+    color: #000000;
     margin: 0;
-    margin-bottom: 8px;
+    margin-bottom: 18px;
   }
   
   .italicText {
@@ -57,12 +57,13 @@
     border-radius: 10px;
     font-size: 21px;
     font-weight: 600;
+    font-style: italic;
     cursor: pointer;
     transition: background-color 0.2s ease;
   }
   
   .solutionsButton:hover {
-    background-color: #00fbff;
+    background-color: #46dbdd;
   }
   
   .solutionsRight {
@@ -80,17 +81,19 @@
   }
   
   .statValue {
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 55px;
+    font-weight: 500;
     color: #2cc5d9;
     margin-bottom: 4px;
     font-style: italic;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add drop shadow */
   }
+  
   
   .statLabel {
     font-size: 20px;
     color: #000000;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   @media (max-width: 760px) {
@@ -199,7 +202,7 @@
         margin: auto;
     }
     .statValue{
-        font-size: 38px;
+        font-size: 45px;
     }
     .statLabel{
         font-size: 15px;

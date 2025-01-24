@@ -22,27 +22,26 @@ const Navbar = () => {
       <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
         <li>
           <Link href="/hiredevelopers">Hire Developers</Link>
-          <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
+          {/* <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} /> */}
         </li>
         <li>
           <Link href="/service">Services</Link>
-          <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
+          {/* <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} /> */}
         </li>
         <li>
           <Link href="/technologies">Technologies</Link>
-          <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
+          {/* <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} /> */}
         </li>
         <li>
           <Link href="/blogs">Blogs</Link>
-          <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} />
+          {/* <img src="/Vector.png" alt="Dropdown" className={styles.dropdownIcon} /> */}
         </li>
         <li>
           <Link href="/aboutus">About Us</Link>
         </li>
       </ul>
-      <Link href="/contactus">
-      <button className={styles.contactBtn}>Contact Us</button>
-      </Link>
+     
+      <button className={styles.contactBtn}> <Link href="/contactus">Contact Us</Link></button>
     </nav>
   );
 };
