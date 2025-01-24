@@ -86,7 +86,7 @@ const ExpandableCards = () => {
   ];
 
   const handleCardClick = (link) => {
-    router.push(link); // Redirect to the specified page
+    router.push(link); 
   };
 
   return (

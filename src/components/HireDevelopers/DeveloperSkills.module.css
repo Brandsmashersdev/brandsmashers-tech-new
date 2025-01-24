@@ -13,6 +13,7 @@
     font-weight: 600;
     font-style: italic;
     text-align: left;
+    margin-left: 140px;
   }
   
   .subheading {
@@ -20,6 +21,7 @@
     color: #666;
     margin-bottom: 40px;
     text-align: left;
+    margin-left: 140px;
   }
   
   .titleHighlight {
@@ -93,11 +95,12 @@
   
     .heading {
       font-size: 1.8rem;
-      /* margin-bottom: 15px; */
+      margin-left: 0;
     }
   
     .subheading {
       font-size: 1rem;
+      margin-left: 0;
         }
   
     .skillRow {
@@ -113,6 +116,10 @@
   @media (max-width: 480px) {
     .heading {
       font-size: 1.5rem;
+      margin-left: 0;
+    }
+    .subheading{
+      margin-left: 0;
     }
   
     .skillTag {
@@ -121,7 +128,6 @@
     }
   }
   
-  /* Animation for tags appearing */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -133,7 +139,6 @@
     }
   }
   
-  /* Stagger animation for each row */
   .skillRow:nth-child(1) .skillTag { animation-delay: 0.1s; }
   .skillRow:nth-child(2) .skillTag { animation-delay: 0.2s; }
   .skillRow:nth-child(3) .skillTag { animation-delay: 0.3s; }

@@ -22,7 +22,6 @@
   color: white;
   margin-bottom: 3rem;
   font-style: italic;
-  /* text-align: center; */
 }
 
 .highlight {
@@ -71,11 +70,11 @@
 
 @media (max-width: 1200px) {
   .contentWrapper {
-    gap: 2rem; /* Reduce gap for smaller desktops */
+    gap: 2rem; 
   }
 
   .title {
-    font-size: 3rem; /* Slightly smaller font for titles */
+    font-size: 3rem;
   }
 }
 
@@ -88,7 +87,7 @@
 
   .imageWrapper {
     margin-bottom: 1.5rem;
-    max-width: 100%; /* Allow images to scale */
+    max-width: 100%; 
     width: 100%;
   }
 
@@ -105,7 +104,7 @@
 
   .textContent {
     text-align: left;
-    font-size: 20px; /* Adjust font size for readability */
+    font-size: 20px;
   }
 
   .description {
@@ -123,7 +122,7 @@
   }
 
   .contentWrapper {
-    gap: 1.5rem; /* Reduce gap for smaller screens */
+    gap: 1.5rem; 
   }
 
   .textContent {
@@ -153,13 +152,12 @@
   }
 
   .contentWrapper {
-    gap: 1rem; /* Reduce gap further for very small devices */
+    gap: 1rem; 
   }
 
   .textContent {
     text-align: left;
-    /* font-size: 12px; */
-    line-height: 1.4; /* Tighten line height for small screens */
+    line-height: 1.4;
   }
 
   .description{
@@ -167,6 +165,6 @@
   }
 
   .imageWrapper {
-    max-width: 90%; /* Shrink image container */
+    max-width: 90%;
   }
 }

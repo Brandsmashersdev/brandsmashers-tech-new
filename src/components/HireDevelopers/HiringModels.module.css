@@ -1,74 +1,86 @@
 /* HiringModels.module.css */
 .container {
-    background-color: #343333; 
-    padding: 50px 20px;
-    color: #ffffff;
-    text-align: center;
-    
-  }
-  
-  .headingContainer {
-    margin-bottom: 40px;
-    font-style: italic;
-    margin-bottom: 69px;
-  }
-  
+  background-color: #343333;
+  padding: 50px 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.headingContainer {
+  margin-bottom: 40px;
+  font-style: italic;
+  margin-bottom: 69px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.highlight {
+  color: #24c0e3; 
+}
+
+.subheading {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.modelsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.cards {
+  background-color: #2cc5d9; 
+  color: #000000;
+  width: 340px;
+  height: 250px;
+  padding: 25px;
+  text-align: left;
+  transform: skewX(-10deg); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards:hover {
+  transform: skewX(-10deg) scale(1.05); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background-color: #1aa1c3; 
+}
+
+
+.content {
+  transform: skewX(10deg); 
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 18px;
+}
+
+@media (max-width: 575px) {
   .heading {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #ffffff;
+    font-size: 2.1rem;
   }
-  
-  .highlight {
-    color: #24c0e3; /* Light blue highlight for "Hiring" */
-  }
-  
   .subheading {
-    font-size: 1.3rem;
-    font-weight: 300;
-    color: #ffffff;
-    margin-top: 10px;
-  }
-  
-  .modelsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-  }
-  
-  .cards {
-    background-color: #2cc5d9; /* Light blue */
-    color: #000000; /* Black text */
-    width: 340px;
-    height: 250px;
-    padding: 25px;
-    /* border-radius: 8px; */
+    font-size: 1.09rem;
     text-align: left;
-    transform: skewX(-10deg); /* Skew effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
-  .cards:hover {
-    /* transform: skewX(0deg) scale(1.05);  */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .content {
-    transform: skewX(10deg); /* Opposite skew to align text */
-  }
-  
   .title {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 10px;
-    font-style: italic;
+    font-size: 1.7rem;
   }
-  
-  .description {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #ffffff;
-    margin-top: 18px;
-  }
-  
+}

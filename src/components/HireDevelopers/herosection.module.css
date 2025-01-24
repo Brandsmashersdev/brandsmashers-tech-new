@@ -46,9 +46,7 @@
 }
 
 .subtitle {
-  font-size: 70px;
-  font-style: italic;
-  font-family: gilroy;
+  font-size: 75px;
   color: white;
   line-height: 1;
   font-weight: 500;
@@ -56,7 +54,6 @@
 
 .description {
   color: white;
-  font-style: italic;
   opacity: 0.9;
   font-size: 32px;
 }
@@ -65,9 +62,9 @@
   margin-top: 1.5rem;
   background-color: #22d3ee;
   color: #343333;
-  padding: 0.625rem 1.5rem;
+  padding: 0.625rem 1.4rem;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   width: 303px;
   height: 72px;
@@ -83,7 +80,7 @@
 .imageContainer {
   display: flex;
   justify-content: center;
-  margin:auto;
+  margin: auto;
 }
 
 .brandImage {
@@ -97,7 +94,6 @@
   height: auto;
 }
 
-/* Media Queries */
 @media (min-width: 640px) {
   .heroSection {
     padding: 1.5rem;
@@ -117,7 +113,7 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 43.57px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 
@@ -151,10 +147,10 @@
 
 @media (max-width: 650px) {
   .imageContainer {
-    order: -1; /* This moves the image container to the top */
+    order: -1; 
     width: 100%;
     max-width: 250px;
-    align-items: center; /* Adjust based on your needs */
+    align-items: center; 
   }
   .heroSection {
     padding: 1rem;
@@ -178,7 +174,7 @@
   .textContainer {
     text-align: left;
   }
-  .contactButton{
+  .contactButton {
     width: 100%;
   }
 }
@@ -200,18 +196,6 @@
   }
 }
 
-/* Animations */
-/* @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
-
 .textContainer {
   animation: fadeIn 0.8s ease-out;
 }
@@ -225,5 +209,9 @@
   .contactButton {
     width: 200px;
     text-align: left;
+    font-size: 21px;
+  }
+  .subtitle {
+    font-size: 25px;
   }
 }

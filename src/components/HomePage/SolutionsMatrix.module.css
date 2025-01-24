@@ -33,7 +33,6 @@
     color: #343333;
     margin: 0;
     margin-bottom: 8px;
-    /* color:black; */
   }
   
   .italicText {
@@ -97,7 +96,6 @@
   @media (max-width: 760px) {
     .solutionsContainer {
       flex-direction: column;
-      /* display: flex; */
       max-width: 100%;
       padding: 1rem;
       padding-bottom: 25px;
@@ -191,9 +189,9 @@
 
     .solutionsButton{
         display: flex;
-        justify-content: center; /* Center the content inside the button */
+        justify-content: center;
         align-items: center;
-        margin: 0 auto; /* Center the button horizontally */
+        margin: 0 auto;
         padding: 10px 30px;
     }
 
@@ -201,9 +199,9 @@
         margin: auto;
     }
     .statValue{
-        font-size: 40px;
+        font-size: 38px;
     }
     .statLabel{
-        font-size: 16px;
+        font-size: 15px;
     }
   }
