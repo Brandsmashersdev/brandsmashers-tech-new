@@ -1,10 +1,9 @@
 .sectionHeader {
   padding: 4rem 0.5rem;
-  border-radius: 8px;
 }
 
 .sectionHeader h1 {
-  font-size: 72px;
+  font-size: 64px;
   margin-bottom: 0.5rem;
   color: #ffffff;
   font-weight: 500;
@@ -14,12 +13,12 @@
 }
 
 .sectionHeader h1 .highlight {
-  color: #22d3ee;
+  color: #2CC5D9;
   font-family: gilroy;
 }
 
 .sectionHeader p {
-  font-size: 28px;
+  font-size: 24px;
   color: #ffffff;
   line-height: 38px;
   font-weight: 500;
@@ -40,7 +39,7 @@
 .cardsGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 
@@ -59,11 +58,12 @@
 
 .card {
   position: relative;
-  background-color: #22d3ee;
-  border-radius: 0.5rem;
+  background-color: #2CC5D9;
+  border-radius: 5px;
   overflow: hidden;
-  height: 16rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 18rem;
+  /* width: 330px; */
+  box-shadow: 0 4px 10px #343333;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -80,30 +80,33 @@
 }
 
 .cardTitle {
-  font-size: 1.50rem;
+  font-size: 20px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 1rem;
   color: #343333;
   font-family: gilroy;
+  mix-blend-mode: difference;
 }
 
 .cardDescription {
   color: #FFFFFF;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 9% 0 4%;
   font-family: gilroy;
 }
 
 .triangle {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 2px;
+  right: 3px;
   width: 4rem;
   height: 4rem;
   background-color: #343333;
   clip-path: polygon(100% 0, 0 100%, 100% 100%);
   transition: all 0.5s ease;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .card:hover .triangle {

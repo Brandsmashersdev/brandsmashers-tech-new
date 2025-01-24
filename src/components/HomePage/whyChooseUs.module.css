@@ -46,7 +46,7 @@
   }
   
   .card {
-    background-color: rgba(44, 197, 217, 0.72);
+    background-color: #2CC5D9B8;
     border-radius: 0.5rem;
     padding: 1rem;
   }
@@ -131,7 +131,7 @@
     }
   
     .desktopCard {
-      background-color: rgba(44, 197, 217, 0.72);
+      background-color: #2CC5D9B8;
       border-radius: 0.5rem;
       padding: 2rem;
       transition: all 0.3s;
@@ -155,7 +155,8 @@
       font-size: 1rem;
       color: white;
       text-align: center;
-      padding-left: 5rem;
+      max-width: 300px;
+      /* padding-left: 5rem; */
     }
   
     /* Specific card heights */
@@ -189,9 +190,9 @@
 }
 
 .title {
-  font-size: 1.25rem;
+  font-size:24px;
   text-align: left;
-  font-weight: 500;
+  font-weight: 600;
   font-style: italic;
   color: white;
   margin-bottom: 1.5rem;
@@ -227,15 +228,15 @@
 }
 
 .cardTitle {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #2E2E2E;
+  font-size: 24px;
+  font-weight: 600;
+  color: #343333;
   margin-bottom: 0.5rem;
   text-align: center;
 }
 
 .cardDescription {
-  font-size: 0.75rem;
+  font-size: 20px;
   color: white;
   text-align: center;
 }
@@ -330,7 +331,8 @@
     font-size: 1rem;
     color: white;
     text-align: center;
-    padding-left: 5rem;
+    max-width: 300px;
+    /* padding-left: 5rem; */
   }
 
   /* Specific card heights */

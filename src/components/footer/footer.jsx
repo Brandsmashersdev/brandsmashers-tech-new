@@ -3,13 +3,13 @@ import styles from "./footer.module.css";
 
 const Footer = () => {
   const aboutText =
-    "Founded in 2018, Brandsmashers has quickly grown into a trusted name in the world of software development. We specialize in delivering tailor-made software solutions that drive business transformation forward by connecting technical innovation with ease.";
+    "Founded in 2018, Brandsmashers has quickly grown into a trusted name in the world of software development and staff augmentation. We specialize in delivering tailor-made software solutions that drive business success and help companies scale their operations with top-tier talent. By combining technical expertise with innovative solutions, we help our clients navigate the complexities of digital transformation with ease.";
 
   const companyLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Service", href: "/service" },
-    { name: "Contact us", href: "/contact" },
+    { name: "About", href: "/aboutus" },
+    { name: "Service", href: "/services" },
+    { name: "Contact us", href: "/contactus" },
     { name: "Our Partners", href: "/partners" },
   ];
 
@@ -25,11 +25,11 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "LinkedIn", href: "#", image: "/linkedin-icon.png", row: 2 },
-    { name: "Facebook", href: "#", image: "/facebook-icon.png", row: 1 },
-    { name: "Cloud", href: "#", image: "/clutch-icon.png", row: 2 },
-    { name: "YouTube", href: "#", image: "/youtube-icon.png", row: 1 },
-    { name: "Instagram", href: "#", image: "/instagram-icon.png", row: 2 },
+    { name: "LinkedIn", href: "https://in.linkedin.com/company/brandsmashers-tech-pvt-ltd", image: "/linkedin-icon.png", row: 2 },
+    { name: "Facebook", href: "https://www.facebook.com/brandsamsherstechnologies", image: "/facebook-icon.png", row: 1 },
+    { name: "Cloud", href: "https://clutch.co/profile/brandsmashers-tech", image: "/clutch-icon.png", row: 2 },
+    { name: "YouTube", href: "https://youtube.com/@Brandsmashers", image: "/youtube-icon.png", row: 1 },
+    { name: "Instagram", href: "https://www.instagram.com/brandsmashers_technologies/", image: "/instagram-icon.png", row: 2 },
   ];
 
   const SocialIcons = () => (
@@ -38,7 +38,8 @@ const Footer = () => {
         {socialLinks
           .filter((social) => social.row === 1)
           .map((social) => (
-            <a key={social.name} href={social.href} className={styles.socialLink}>
+            <a key={social.name} href={social.href} className={styles.socialLink} target="_blank"
+            rel="noopener noreferrer">
               <img src={social.image} alt={social.name} className={styles.socialIcon} />
             </a>
           ))}
@@ -47,7 +48,8 @@ const Footer = () => {
         {socialLinks
           .filter((social) => social.row === 2)
           .map((social) => (
-            <a key={social.name} href={social.href} className={styles.socialLink}>
+            <a key={social.name} href={social.href} className={styles.socialLink} target="_blank"
+            rel="noopener noreferrer">
               <img src={social.image} alt={social.name} className={styles.socialIcon} />
             </a>
           ))}
