@@ -1,0 +1,93 @@
+.valuesSection {
+    padding: 4rem 1rem;
+    color: white;
+  }
+  
+  .container {
+    width: 80% ;
+    margin: 0 auto;
+  }
+  
+  .mainTitle {
+    font-size: 48px;
+    margin-bottom: 3rem;
+    font-style: italic;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .highlight {
+    color: #2CC5D9;
+  }
+  
+  .valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+  
+  .valueCard {
+    /* padding: 0.5rem; */
+    background-color: transparent;
+  }
+  
+  .valueTitle {
+    color: #2CC5D9;
+    font-size: 26px;
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .valueDescription {
+    color: #ffffff;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 29.2px;
+    font-weight: 400;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .mainTitle {
+      font-size: 48px;
+    }
+  
+    .valuesGrid {
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .valuesSection {
+      padding: 3rem 1rem;
+    }
+  
+    .mainTitle {
+      font-size: 40px;
+      margin-bottom: 2rem;
+    }
+  
+    .valuesGrid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .valuesSection {
+      padding: 2rem 1rem;
+    }
+  
+    .mainTitle {
+      font-size: 40px;
+    }
+  
+    .valueTitle {
+      font-size: 24px;
+    }
+  
+    .valueDescription {
+      font-size: 18px;
+    }
+  }
