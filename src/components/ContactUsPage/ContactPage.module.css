@@ -1,11 +1,20 @@
+/* Page Layout Styles */
+.pageWrapper {
+  min-height: 100vh;
+  background-color: #343333;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+}
+
 .contactContainer {
   width: 100%;
-  background-color: #343333;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
+  flex: 1;
 }
 
 .contactWrapper {
@@ -61,6 +70,34 @@
   color: #2CC5D9;
 }
 
+/* Text Carousel Styles */
+.textCarouselContainer {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin-top: 2rem;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.textCarouselTrack {
+  display: flex;
+  white-space: nowrap;
+  animation: textSlide 50s linear infinite;
+  width: fit-content;
+}
+
+.carouselText {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.832);
+  font-size: 3.5rem;
+  font-weight: bold;
+  padding: 52px 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
 /* Badge Styles */
 .badgeContainer {
   display: flex;
@@ -94,6 +131,53 @@
   color: white;
   text-align: center;
   font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+/* Icon Slider Styles */
+.iconSliderContainer {
+  display: none;
+  margin-top: 2rem;
+}
+
+.iconRow {
+  position: relative;
+  overflow: hidden;
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+
+.slideTrack {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: slideAnimation 50s linear infinite;
+  display: flex;
+  gap: 1rem;
+}
+
+.iconBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  min-width: 7.5rem;
+}
+
+.techIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #00C9C9;
+  margin-bottom: 0.5rem;
+}
+
+.iconLabel {
+  color: white;
+  font-size: 0.875rem;
+  white-space: nowrap;
 }
 
 /* Form Section Styles */
@@ -120,15 +204,14 @@
 .contactForm {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  height: 100%;
+  
+  height: 96%;
 }
 
 .formGroup {
   display: flex;
   flex-direction: column;
   margin-bottom: 0.5rem;
-  position: relative;
 }
 
 .formLabel {
@@ -153,8 +236,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  /* position: relative; */
 }
 
 /* Form Input Styles */
@@ -191,7 +274,6 @@
 .helpOption {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
   cursor: pointer;
 }
 
@@ -221,6 +303,7 @@
   font-size: 0.875rem;
   color: #4a5568;
   font-weight: bold;
+  margin-left: 0.75rem;
 }
 
 /* Select Styles */
@@ -274,7 +357,7 @@
   box-shadow: -9px 0px 0px 0px rgba(52,51,51,1);
   border: none;
   cursor: pointer;
-  margin-top: auto;
+  margin-top: 2rem;
 }
 
 .submitButton:hover {
@@ -299,52 +382,35 @@
   border-color: #EF4444;
 }
 
-/* Icon Slider Styles */
-.iconSliderContainer {
-  display: none;
-  margin-top: 2rem;
-}
-
-.iconRow {
-  position: relative;
-  overflow: hidden;
-  height: 5rem;
-  margin-bottom: 1rem;
-}
-
-.slideTrack {
-  position: absolute;
-  white-space: nowrap;
-  will-change: transform;
-  animation: slideAnimation 25s linear infinite;
+/* Privacy Section Styles */
+.privacySection {
+  width: 100%;
+  background-color: #343333;
+  padding: 2rem 0;
   display: flex;
-  gap: 1rem;
-}
-
-.iconBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  min-width: 7.5rem;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.techIcon {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: #00C9C9;
-  margin-bottom: 0.5rem;
+.privacyContainer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.iconLabel {
-  color: white;
-  font-size: 0.875rem;
-  white-space: nowrap;
+.privacyText {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 19.36px;
+  color: #9CA3AF;
+  text-align: center;
 }
 
+/* Animations */
 @keyframes slideAnimation {
   0% {
     transform: translateX(0);
@@ -354,8 +420,25 @@
   }
 }
 
+@keyframes textSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-90%);
+  }
+}
+
 /* Mobile Styles */
 @media (max-width: 600px) {
+  .carouselText {
+    font-size: 2rem;
+  }
+
+  .textCarouselContainer {
+    margin-top: 1.5rem;
+  }
+
   .brandName, 
   .techText {
     font-size: 2.2rem;
@@ -367,9 +450,9 @@
   }
 
   .formContainer {
-    padding: 1.5rem 1rem;
+    padding: 4rem 1rem;
     width: 100%;
-    min-height: auto;
+    min-height: 76vh;
   }
 
   .nameInputs {
@@ -387,6 +470,15 @@
 
   .halfWidth {
     width: 100%;
+  }
+
+  .privacySection {
+    padding: 1.5rem 1rem;
+  }
+
+  .privacyText {
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 
@@ -428,10 +520,26 @@
   .iconSliderContainer {
     display: block;
   }
+
+  .privacySection {
+    padding: 2.5rem 0;
+  }
+
+  .carouselText {
+    font-size: 3rem;
+  }
 }
 
 /* Large Desktop Styles */
 @media (min-width: 1200px) {
+  .carouselText {
+    font-size: 4rem;
+  }
+  
+  .textCarouselContainer {
+    margin-top: 3rem;
+  }
+
   .brandName, 
   .techText {
     font-size: 4rem;
@@ -476,5 +584,14 @@
     padding: 2.5rem;
     width: 650px;
     min-height: 820px;
+  }
+
+  .privacyContainer {
+    max-width: 1200px;
+  }
+
+  .privacyText {
+    font-size: 16px;
+    line-height: 19.36px;
   }
 }

@@ -18,8 +18,8 @@ export default function hiredevelopers() {
       <TopRemoteDevelopers/>
       <ProcessChart/>
       <ExpandableGrid/>
-      <DeveloperCard/>
       <DeveloperSkills/>
+      <DeveloperCard/>
       <WhatWeOffer/>
       <HiringModels/>
       <FAQSection/>

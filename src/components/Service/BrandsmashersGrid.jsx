@@ -15,7 +15,7 @@ const BrandsmashersGrid = () => {
         </div>
 
         {/* Freestyle Grid Layout */}
-        <div className="relative w-full">
+        <div className=" w-full">
           {/* Top Row - 3 cards */}
           <div className="flex flex-col md:flex-row gap-3 mb-4">
             {/* Tailored Solutions */}

@@ -77,7 +77,7 @@ const Industries = () => {
         }
         
         .industry-item {
-          position: relative;
+          ;
           padding: 1rem;
           border-radius: 5px;
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
