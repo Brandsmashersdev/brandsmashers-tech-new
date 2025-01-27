@@ -1,180 +1,4 @@
 .section {
-    width: 100%;
-    padding: 2rem 1rem;
-  }
-  
-  .container {
-    max-width: 28rem;
-    margin: 0 auto;
-  }
-  
-  .headerSection {
-    text-align: left;
-    margin-bottom: 2rem;
-  }
-  
-  .title {
-    font-size: 1.25rem;
-    text-align: left;
-    font-weight: 500;
-    font-style: italic;
-    color: white;
-    margin-bottom: 1.5rem;
-  }
-  
-  .highlightText {
-    color: #2CC5D9;
-  }
-  
-  .description {
-    display: none;
-    font-weight: 500;
-    font-size: 1.25rem;
-    color: white;
-  }
-  
-  .gridContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-  }
-  
-  .column {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  
-  .card {
-    background-color: #2CC5D9B8;
-    border-radius: 0.5rem;
-    padding: 1rem;
-  }
-  
-  .cardTitle {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #2E2E2E;
-    margin-bottom: 0.5rem;
-    text-align: center;
-  }
-  
-  .cardDescription {
-    font-size: 0.75rem;
-    color: white;
-    text-align: center;
-  }
-  
-  .desktopGrid {
-    display: none;
-  }
-  
-  /* Tablet (sm) breakpoint */
-  @media (min-width: 640px) {
-    .container {
-      max-width: 42rem;
-    }
-  
-    .gridContainer {
-      gap: 1rem;
-    }
-  
-    .column {
-      gap: 1rem;
-    }
-  
-    .card {
-      padding: 1.5rem;
-    }
-  
-    .cardTitle {
-      font-size: 1.125rem;
-    }
-  
-    .cardDescription {
-      font-size: 0.875rem;
-    }
-  }
-  
-  /* Medium (md) breakpoint */
-  @media (min-width: 768px) {
-    .section {
-      padding: 4rem 1rem;
-      background-color: transparent;
-    }
-  
-    .container {
-      max-width: 72rem;
-    }
-  
-    .headerSection {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-  
-    .title {
-      font-size: 2.25rem;
-    }
-  
-    .description {
-      display: block;
-    }
-  
-    .gridContainer {
-      display: none;
-    }
-  
-    .desktopGrid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-  
-    .desktopCard {
-      background-color: #2CC5D9B8;
-      border-radius: 0.5rem;
-      padding: 2rem;
-      transition: all 0.3s;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 1.5rem;
-    }
-  
-    .desktopCardTitle {
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-      font-size: 1.25rem;
-      color: #2E2E2E;
-      text-align: center;
-      padding-top: 0.5rem;
-    }
-  
-    .desktopCardDescription {
-      font-weight: 500;
-      font-size: 1rem;
-      color: white;
-      text-align: center;
-      max-width: 300px;
-      /* padding-left: 5rem; */
-    }
-  
-    /* Specific card heights */
-    .expertiseCard {
-      height: 11rem;
-      padding-top: 2.25rem;
-    }
-  
-    .standardCard {
-      height: 8rem;
-    }
-  
-    .eliminateRiskCard {
-      height: 11rem;
-      padding-top: 2.5rem;
-    }
-  }
-  .section {
   width: 100%;
   padding: 2rem 1rem;
 }
@@ -190,9 +14,9 @@
 }
 
 .title {
-  font-size:24px;
+  font-size: 1.25rem;
   text-align: left;
-  font-weight: 600;
+  font-weight: 500;
   font-style: italic;
   color: white;
   margin-bottom: 1.5rem;
@@ -222,21 +46,21 @@
 }
 
 .card {
-  background-color: rgba(44, 197, 217, 0.72);
+  background-color: #2CC5D9B8;
   border-radius: 0.5rem;
   padding: 1rem;
 }
 
 .cardTitle {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: #343333;
   margin-bottom: 0.5rem;
   text-align: center;
 }
 
 .cardDescription {
-  font-size: 20px;
+  font-size: 0.75rem;
   color: white;
   text-align: center;
 }
@@ -245,16 +69,13 @@
   display: none;
 }
 
-/* Tablet (sm) breakpoint */
+/* Tablet breakpoint */
 @media (min-width: 640px) {
   .container {
     max-width: 42rem;
   }
 
-  .gridContainer {
-    gap: 1rem;
-  }
-
+  .gridContainer,
   .column {
     gap: 1rem;
   }
@@ -265,14 +86,16 @@
 
   .cardTitle {
     font-size: 1.125rem;
+    text-align: center;
   }
 
   .cardDescription {
     font-size: 0.875rem;
+    text-align: center;
   }
 }
 
-/* Medium (md) breakpoint */
+/* Desktop breakpoint */
 @media (min-width: 768px) {
   .section {
     padding: 4rem 1rem;
@@ -307,21 +130,22 @@
   }
 
   .desktopCard {
-    background-color: rgba(44, 197, 217, 0.72);
+    background-color: #2CC5D9B8;
     border-radius: 0.5rem;
     padding: 2rem;
     transition: all 0.3s;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 2.5rem;
   }
 
   .desktopCardTitle {
     font-weight: 500;
+    width: 150px;
     margin-bottom: 1.5rem;
     font-size: 1.25rem;
-    color: #2E2E2E;
+    color: #343333;
     text-align: center;
     padding-top: 0.5rem;
   }
@@ -332,10 +156,35 @@
     color: white;
     text-align: center;
     max-width: 300px;
-    /* padding-left: 5rem; */
   }
 
-  /* Specific card heights */
+  /* Adjust styles for medium screens */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .desktopGrid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .desktopCard {
+      padding: 1.5rem;
+      gap: 1rem;
+    }
+
+    .desktopCardTitle {
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+    }
+
+    .desktopCardDescription {
+      font-size: 0.875rem;
+    }
+
+    .expertiseCard,
+    .eliminateRiskCard {
+      padding-top: 1.5rem;
+    }
+  }
+
   .expertiseCard {
     height: 11rem;
     padding-top: 2.25rem;
@@ -350,54 +199,53 @@
     padding-top: 2.5rem;
   }
 }
+
+/* Intermediate Tablet-Desktop breakpoint */
 @media (min-width: 760px) and (max-width: 900px) {
-    .desktopCard {
-      padding: 1rem;  
-      gap: 0.75rem;  
-    }
-  
-    .desktopCardTitle {
-      padding-top: 0;  
-      margin-bottom: 0;  
-      font-size: 1.125rem;  
-      min-width: 120px;  
-    }
-  
-    .desktopCardDescription {
-      padding-left: 0; 
-      font-size: 0.875rem;  
-    }
-  
-    /* Adjust specific card heights for this range */
-    .expertiseCard {
-      height: auto;     
-      min-height: 8rem; 
-      padding-top: 1rem;
-    }
-  
-    .standardCard {
-      height: auto;
-      min-height: 6rem;
-    }
-  
-    .eliminateRiskCard {
-      height: auto;
-      min-height: 8rem;
-      padding-top: 1rem;
-    }
-  
-    /* Container adjustments */
-    .container {
-      max-width: 100%;  
-      padding: 0 0.5rem;
-    }
-  
-    /* Header adjustments */
-    .title {
-      font-size: 1.75rem;  
-    }
-  
-    .description {
-      font-size: 1rem;  
-    }
+  .desktopCard {
+    padding: 1rem;
+    gap: 0.75rem;
   }
+
+  .desktopCardTitle {
+    padding-top: 0;
+    margin-bottom: 0;
+    font-size: 1.125rem;
+    min-width: 120px;
+  }
+
+  .desktopCardDescription {
+    padding-left: 0;
+    font-size: 0.875rem;
+  }
+
+  .expertiseCard {
+    height: auto;
+    min-height: 8rem;
+    padding-top: 1rem;
+  }
+
+  .standardCard {
+    height: auto;
+    min-height: 6rem;
+  }
+
+  .eliminateRiskCard {
+    height: auto;
+    min-height: 8rem;
+    padding-top: 1rem;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}

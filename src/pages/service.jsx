@@ -14,6 +14,7 @@ import React from 'react'
 import FAQSection from '@/components/HomePage/FAQSection'
 import { Expand } from 'lucide-react'
 import BrandsmashersGrid from '@/components/Service/BrandsmashersGrid'
+import CustomizedDesign from '@/components/Service/CustomizedStrategies'
 
 
 const Service = () => {
@@ -29,6 +30,7 @@ const Service = () => {
         <DataDive/>
         <Digital/>
         <Browser/>
+        <CustomizedDesign/>
         <BrandsmashersGrid/>
         <FAQSection/>
         <Footer/>
