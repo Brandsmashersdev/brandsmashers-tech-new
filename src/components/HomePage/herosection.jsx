@@ -15,7 +15,8 @@ const HeroSection = () => {
 
             <div className={styles.subtitleContainer}>
               <p className={styles.subtitle}>
-                Expert <span className={styles.brandCyan}>Developers</span>,<br />
+                Expert <span className={styles.brandCyan}>Developers</span>,
+                <br />
                 Streamlined<span className={styles.brandCyan}> Solutions</span>
               </p>
             </div>
@@ -24,9 +25,13 @@ const HeroSection = () => {
               All in One Place with Brandsmashers Tech
             </p>
 
-            <button className={styles.contactButton}>
-              Contact with us
+            <button className={styles.button}>
+              <h5>Contact us</h5>
+              <div className={styles.ball}>
+                <h4>Lets Reach Out</h4>
+              </div>
             </button>
+            
           </div>
 
           {/* Image Container */}
