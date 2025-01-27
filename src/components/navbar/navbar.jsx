@@ -43,7 +43,7 @@ const Navbar = () => {
      
       <button className={styles.contactBtn}> <Link href="/contactus">Contact Us</Link></button>
     </nav>
-  );
+  );w
 };
 
 export default Navbar;

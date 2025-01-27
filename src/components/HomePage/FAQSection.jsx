@@ -79,7 +79,7 @@ const FAQSection = () => {
             <div key={index} className="transition-all duration-300">
               {/* Question */}
               <div
-                className="relative cursor-pointer"
+                className=" cursor-pointer"
                 style={{
                   backgroundColor: faq.background,
                   borderRadius: "6px",

@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const DeveloperCard = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#343333] p-4">
-      <div className="w-full max-w-[80%] rounded-lg bg-[#2CC5D9] p-8 md:p-12 shadow-lg transition-transform duration-300 ">
+    <div className="flex justify-center items-center min-h-[62vh] bg-[#343333] p-4">
+      <div className="w-full lg:max-w-[80%] md:max-w-[100%] rounded-lg bg-[#2CC5D9] p-8 md:p-12 shadow-lg transition-transform duration-300 ">
         <div className="flex flex-col items-center">
           <h2 className="text-3xl md:text-3xl font-semibold text-gray-800 mb-7 italic text-center">
             Top Developers for top companies
