@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        brandCyan: '#2CC5D9',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

@@ -1,0 +1,155 @@
+.sectionHeader {
+  padding: 4rem 0.5rem;
+}
+
+.sectionHeader h1 {
+  font-size: 64px;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 77px;
+  font-family: gilroy; 
+}
+
+.sectionHeader h1 .highlight {
+  color: #2CC5D9;
+  font-family: gilroy;
+}
+
+.sectionHeader p {
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 38px;
+  font-weight: 500;
+  font-family: gilroy;
+}
+
+.cardsContainer {
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: 5%;
+}
+
+.cardsWrapper {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+
+
+@media (min-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  background-color: #2CC5D9;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 18rem;
+  /* width: 330px; */
+  box-shadow: 0 4px 10px #343333;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.cardContent {
+  padding: 0.5rem;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.cardTitle {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #343333;
+  font-family: gilroy;
+  mix-blend-mode: difference;
+}
+
+.cardDescription {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 9% 0 4%;
+  font-family: gilroy;
+}
+
+.triangle {
+  position: absolute;
+  bottom: 2px;
+  right: 3px;
+  width: 4rem;
+  height: 4rem;
+  background-color: #343333;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  transition: all 0.5s ease;
+  border-radius: 4px;
+}
+
+.card:hover .triangle {
+  width: 15rem;
+  height: 15rem;
+}
+
+@media (max-width: 600px) {
+  .sectionHeader h1 {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .sectionHeader p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr; 
+    gap: 1rem; 
+  }
+
+  .card {
+    height: 12rem;
+  }
+
+  .cardContent {
+    padding: 1rem;
+  }
+
+  .cardTitle {
+    font-size: 1rem; 
+  }
+
+  .cardDescription {
+    font-size: 0.875rem; 
+  }
+  .cardsContainer{
+    padding: 20px;
+  }
+  .card:hover .triangle {
+    width: 10rem;
+    height: 10rem;
+  }
+}

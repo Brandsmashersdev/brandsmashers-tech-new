@@ -1,0 +1,148 @@
+.container {
+    background: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 100%);
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+  }
+  
+  .header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .header p {
+    font-size: 1.1rem;
+    color: #cacaca;
+    font-style: italic;
+  }
+  
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .card {
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 150px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Card Colors */
+  .pinkCard {
+    background-color: #ffe6e6;
+  }
+  
+  .greenCard {
+    background-color: #e6ffe6;
+  }
+  
+  .blueCard {
+    background-color: #e6f2ff;
+  }
+  
+  .yellowCard {
+    background-color: #fff9e6;
+  }
+  
+  .lightBlueCard {
+    background-color: #e6fbff;
+  }
+  
+  .purpleCard {
+    background-color: #f5e6ff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .gridContainer {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+  
+    .header h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .gridContainer {
+      grid-template-columns: 1fr;
+    }
+  
+    .container {
+      padding: 2rem 1rem;
+    }
+  
+    .header h2 {
+      font-size: 1.75rem;
+    }
+  
+    .header p {
+      font-size: 1rem;
+    }
+  
+    .card {
+      padding: 1.25rem;
+    }
+  }
+  
+  /* Animation for cards */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .card:nth-child(1) { animation-delay: 0.1s; }
+  .card:nth-child(2) { animation-delay: 0.2s; }
+  .card:nth-child(3) { animation-delay: 0.3s; }
+  .card:nth-child(4) { animation-delay: 0.4s; }
+  .card:nth-child(5) { animation-delay: 0.5s; }
+  .card:nth-child(6) { animation-delay: 0.6s; }

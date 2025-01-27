@@ -1,0 +1,127 @@
+
+
+.navbar {
+  font-family: gilroy;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1% 7% 1% 7%;
+}  
+
+.logo img {
+  height: 50px;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.navLinks li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #343333;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.navLinks li:hover a {
+  color: #007bff;
+}
+
+.dropdownIcon {
+  margin-left: 5px;
+  width: 8px;
+  height: 5px;
+}
+
+.contactBtn {
+  padding: 8px 16px;
+  background-color: #2CC5D9;
+  border: none;
+  color: #343333;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.contactBtn:hover {
+  background-color: #00a0a5;
+}
+
+.hamburger {
+  display: none; /* Hidden by default for desktop view */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  .logo {
+    order: 1; 
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .contactBtn {
+    order: 2;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding: 10px 20px;
+    max-width: 140px;
+
+  }
+
+  .hamburger {
+    order: 3; 
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer
+  }
+
+  .hamburger img {
+    width: 25px; 
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+}
+
+/* Button */
+
+ 

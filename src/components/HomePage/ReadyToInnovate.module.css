@@ -1,0 +1,187 @@
+.container {
+  background-color: #f6f5f5;
+  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-style: italic;
+}
+
+.divider{
+  width: 100%;
+  height: 100%;
+  background-color: #343333;
+  margin-top: 5%;
+  margin-bottom: 5%;
+ 
+}
+
+.imageContainer {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.5);
+}
+
+.content {
+  flex: 6;
+  max-width: 55%;
+  text-align: left;
+  margin-bottom: 7%;
+}
+
+.title {
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: #343333;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.7rem;
+  color: #2cc5d9;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  background-color: #00c4cc;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  background-color: #00fbff;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .content {
+    flex:7;
+    max-width: 60%;
+    margin-left: 2rem;
+    text-align: left;
+  }
+
+  .imageContainer {
+    flex: 3;
+    justify-content: center;
+  }
+
+  .image {
+    max-width: 100%; 
+    max-height: 400px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .button {
+    font-size: 1.2rem;
+    padding: 10px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .divider{
+    margin-top: 25%;
+  }
+
+  .content {
+    flex:1;
+    max-width: 100%;
+    text-align: left; 
+    margin-top: 40px;
+  }
+
+  .imageContainer {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .imageContainer img {
+    content: url('/MobileView_ReadyToInnovate.png');
+    max-width: 250px;
+    margin-top: -52px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 100%;
+    padding-bottom: 0px;
+  }
+.divider{
+  margin-top: 25%;
+}
+  .content{
+    margin-top: 40px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+.title{
+  font-size: 23px;
+}
+
+.subtitle{
+  font-size: 17px;
+}
+  .button {
+    width: auto;
+  }
+
+  .imageContainer img{
+    width: 70%;
+  }
+}

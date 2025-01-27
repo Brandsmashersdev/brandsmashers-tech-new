@@ -1,0 +1,121 @@
+.aboutSection {
+    width: 100%;
+    padding: 4rem 1rem;
+    background-color: #FFFFFF;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    text-align: left;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .heading p {
+    font-size: 20px;
+    color: #343333;
+    line-height: 24.2px;
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  .cardContainer {
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    flex: 1;
+    width: 100%;
+    height: 275px;
+    background-color: #2CC5D9;
+    padding: 2rem;
+    border-radius: 27px;
+    border-top-left-radius: 72px;
+    border-bottom-right-radius: 72px;
+    box-shadow: -16px 0 0px -1px #343333,  /* Left side shadow */
+                0 8px 10px -5px #343333;    /* Bottom drop shadow */
+
+    overflow: hidden;
+    word-wrap: break-word;  
+  }
+  
+  .card p {
+    color: #343333;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 29.05px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1124px){
+    .card {
+      height: 330px;
+    }
+  }
+  @media (max-width: 999px) {
+    .aboutSection {
+      padding: 3rem 0.5rem;
+    }
+  
+    .cardContainer {
+      gap: 3rem;
+    }
+  
+    .card {
+      height: 300px;
+      min-width: 240px;
+      padding: 1.5rem;
+    }
+    .card p{
+      font-size:14px;
+    }
+  }
+  
+  @media (max-width: 678px) {
+    .aboutSection {
+      padding: 3rem 0.5rem;
+    }
+  
+    .cardContainer {
+      gap: 2rem;
+    }
+  
+    .card {
+      min-width: 240px;
+      padding: 1.5rem;
+      height: 220px;
+    }
+    .card p{
+      font-size:14px;
+    }
+  }
+  @media (max-width: 480px) {
+    .aboutSection {
+      padding: 2rem 0.5rem;
+    }
+  
+    .cardContainer {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 3rem;
+    }
+  
+    .card {
+      width: auto;
+      margin: 0;
+      min-width: 0;
+      max-width: none;
+    }
+    .card p{
+        font-size: 14px;
+    }
+  }
