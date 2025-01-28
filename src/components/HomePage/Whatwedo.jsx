@@ -113,9 +113,9 @@ const ExpandableCards = () => {
               className={styles.card}
               onClick={() => handleCardClick(card.redirectLink)}
             >
-              <div className='bg-[#2CC5D9] w-full  h-[70px] overflow-hidden text-white flex justify-center items-center'>
-                <div className="cir w-[120px] h-[120px] absolute rounded-full bottom-1 border-8 border-[#343333] bg-transparent justoify-center items-center flex"> 
-                 {card.icon && <card.icon className="w-[60px] h-[60px] flex items-center justify-center text-[#343333] ml-6 pt-6"  />}  
+              <div className='bg-[#2CC5D9] w-full  h-[70px] overflow-hidden text-white flex justify-center items-center '>
+                <div className="cir w-[120px] h-[125px]  rounded-full bottom-1 border-8 border-[#343333] bg-transparent justoify-center items-center flex mb-14"> 
+                 {card.icon && <card.icon className="w-[60px] h-[60px] flex items-center justify-center text-[#343333] ml-5 pt-7"  />}  
                 </div>
               </div>
               <div className={styles.cardContent}>
