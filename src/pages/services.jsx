@@ -17,7 +17,7 @@ import BrandsmashersGrid from '@/components/Service/BrandsmashersGrid'
 import CustomizedDesign from '@/components/Service/CustomizedStrategies'
 
 
-const Service = () => {
+const services = () => {
   return (
     <div>
         <Navbar/>
@@ -38,4 +38,4 @@ const Service = () => {
   )
 }
 
-export default Service
+export default services
