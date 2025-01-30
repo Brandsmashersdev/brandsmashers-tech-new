@@ -8,21 +8,31 @@ import WhatWeOffer from "@/components/HireDevelopers/WhatWeOffer";
 import ProcessChart from "@/components/HireDevelopers/ProcessChart";
 import FAQSection from "@/components/HomePage/FAQSection";
 import DeveloperCard from "@/components/HireDevelopers/DeveloperCard";
-import ExpandableGrid from '@/components/HireDevelopers/ExpandableGrid'
+import ExpandableGrid from '@/components/HireDevelopers/ExpandableGrid';
+import AndroidHeroSection from "@/components/HireDevelopers/Android/AndroidHeroSection";
+import RemoteDevelopers from "@/components/HireDevelopers/RemoteDevelopers";
+import TechnologyServices from "@/components/HomePage/TechnologyServices";
+import Gridsection from "@/components/HireDevelopers/Gridsection";
+import { Grid } from "lucide-react";
+import TrialForm from "@/components/HireDevelopers/Android/Trial";
+// import AndroidOurVision from "@/components/HireDevelopers/Android/AndroidOurVision";
 export default function hiredevelopers() {
   return (
     <>
     
       <Navbar />
       <HeroSection/>
-      <TopRemoteDevelopers/>
+      {/* <AndroidHeroSection/> */}
+      <RemoteDevelopers/>
+      {/* <TopRemoteDevelopers/> */}
       <ProcessChart/>
       <ExpandableGrid/>
       <DeveloperSkills/>
-      <DeveloperCard/>
+      <Gridsection/>
       <WhatWeOffer/>
       <HiringModels/>
       <FAQSection/>
+      <TrialForm/>
       <Footer />
       </>
   );
