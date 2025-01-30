@@ -15,7 +15,7 @@ import TechnologyServices from "@/components/HomePage/TechnologyServices";
 import Gridsection from "@/components/HireDevelopers/Gridsection";
 import { Grid } from "lucide-react";
 import TrialForm from "@/components/HireDevelopers/Android/Trial";
-// import AndroidOurVision from "@/components/HireDevelopers/Android/AndroidOurVision";
+import PartnerCompanies from "@/components/HireDevelopers/PartnerCompanies";
 export default function hiredevelopers() {
   return (
     <>
@@ -31,6 +31,7 @@ export default function hiredevelopers() {
       <Gridsection/>
       <WhatWeOffer/>
       <HiringModels/>
+      <PartnerCompanies/>
       <FAQSection/>
       <TrialForm/>
       <Footer />
