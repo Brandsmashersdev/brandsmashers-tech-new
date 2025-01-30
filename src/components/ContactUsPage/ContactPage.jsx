@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Check, ChevronDown, Code, Database, Globe, Server, Cpu, Cloud, Smartphone, Palette, Users, Brain, BarChart3 } from 'lucide-react';
 import styles from './ContactPage.module.css';
+import axios from 'axios';
 
 const TextCarousel = () => {
   return (
@@ -184,13 +185,45 @@ const ContactPage = () => {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+  
     if (validateForm()) {
-      console.log('Form submitted:', formData);
+      try {
+        const response = await axios.post(
+          'https://script.google.com/macros/s/AKfycbz7ZP0A1g8iwVEvCVa1METbtptX-shKZaq3zLKpmifvW3ifp8CmqXpsfR07wyl29oEu/exec',
+          {
+            ...formData,
+            helpType, // Include helpType explicitly
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        );
+  
+        if (response.data.status === 'success') {
+          alert('Form submitted successfully!');
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            skills: '',
+            source: '',
+          });
+          setHelpType(null);
+        } else {
+          alert('Error submitting form. Please try again.');
+        }
+      } catch (error) {
+        console.error('Axios Error:', error.response || error.message); 
+        alert('Network error. Please try again later.');
+      }
     }
   };
+  
 
   return (
     <div className={styles.pageWrapper}>
