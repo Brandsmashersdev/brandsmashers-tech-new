@@ -3,12 +3,32 @@
   background-color: #343333;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient Ellipse */
+.heroSection::after {
+  content: '';
+  position: absolute;
+  width: 516px;
+  height: 476px;
+  top: 270px;
+  left: 1110px;
+  background: #00FBFF4F;
+  border-radius: 50%;
+  opacity: 0.31;
+  filter: blur(100px);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .heroContainer {
   width: 100%;
   margin: 0 auto;
   padding: 3rem 0;
+  position: relative;
+  z-index: 2;
 }
 
 .heroContent {
@@ -80,7 +100,7 @@
 .imageContainer {
   display: flex;
   justify-content: center;
-  margin:auto;
+  margin: auto;
 }
 
 .brandImage {
@@ -94,40 +114,78 @@
   height: auto;
 }
 
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.textContainer {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.brandImage {
+  animation: fadeIn 1s ease-out 0.2s;
+  animation-fill-mode: backwards;
+}
+
+/* Button Styles */
+.button {
+  padding: 10px 40px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #2CC5D9;
+  font-size: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 40%;
+}
+
+.ball {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  left: -20px;
+  transition: all ease 1s;
+  color: white;
+}
+
+.ball h4 {
+  display: none;
+}
+
+.button:hover {
+  border: 1px solid #2CC5D9;
+}
+
+.button:hover h5 {
+  opacity: 0;
+}
+
+.button:hover .ball {
+  background-color: rgb(51, 49, 49);
+  transform: scale(5);
+  z-index: 7;
+  left: 40px;
+}
+
+.button:hover .ball h4 {
+  display: initial;
+  position: absolute;
+  top: 8px;
+  left: -5px;
+  font-size: 3px;
+  width: 50px;
+}
+
 /* Media Queries */
-@media (min-width: 640px) {
-  .heroSection {
-    padding: 1.5rem;
-  }
-  .contactButton {
-    font-size: 32px;
-    font-weight: 600;
-  }
-  .heroTitle {
-    font-size: 60px;
-  }
-
-  .subtitle {
-    font-size: 40px;
-  }
-  .description {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 43.57px;
-    color: #FFFFFF;
-  }
-}
-
-@media (min-width: 768px) {
-  .heroContainer {
-    padding: 4rem 0;
-  }
-
-  .heroTitle {
-    font-size: 3.5rem;
-  }
-}
-
 @media (min-width: 1000px) {
   .heroContent {
     grid-template-columns: 1fr 1fr;
@@ -146,76 +204,99 @@
   }
 }
 
+@media (min-width: 768px) {
+  .heroContainer {
+    padding: 4rem 0;
+  }
+
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .heroSection {
+    padding: 1.5rem;
+  }
+  .contactButton {
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .heroTitle {
+    font-size: 60px;
+  }
+  .subtitle {
+    font-size: 40px;
+  }
+  .description {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 43.57px;
+    color: #FFFFFF;
+  }
+}
+
+@media (max-width: 1200px) {
+  .heroSection::after {
+    left: 70%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection::after {
+    width: 300px;
+    height: 300px;
+    top: auto;
+    bottom: 0;
+    left: 50%;
+  }
+}
+
 @media (max-width: 650px) {
   .imageContainer {
-    order: -1; /* This moves the image container to the top */
+    order: -1;
     width: 100%;
     max-width: 250px;
-    align-items: center; /* Adjust based on your needs */
+    align-items: center;
   }
   .heroSection {
     padding: 1rem;
   }
-
   .heroContainer {
     padding: 20px;
   }
-
   .heroTitle {
     font-size: 32px;
   }
-
   .subtitle {
     font-size: 28px;
   }
-
   .description {
     font-size: 18px;
   }
   .textContainer {
     text-align: left;
   }
-  .contactButton{
+  .contactButton {
     width: 100%;
   }
 }
+
 @media (min-width: 651px) and (max-width: 1000px) {
   .heroContent {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
-
   .textContainer {
     text-align: left;
     padding-left: 3%;
     padding-top: 1%;
     width: 100%;
   }
-
   .imageContainer {
     justify-content: flex-end;
   }
-}
-
-/* Animations */
-/* @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
-
-.textContainer {
-  animation: fadeIn 0.8s ease-out;
-}
-
-.brandImage {
-  animation: fadeIn 1s ease-out 0.2s;
-  animation-fill-mode: backwards;
 }
 
 @media (max-width: 475px) {
@@ -224,94 +305,3 @@
     text-align: left;
   }
 }
-
-
-/*Button*/
-
-
-
- /* .button{ 
-  padding: 14px 40px; 
-  color: whitesmoke; 
-  border-radius: 4px;  
-  background-color: rgb(51, 50, 50);
-  border: 1px solid whitesmoke;
-  position:relative; 
-  overflow: hidden;
- } 
-
- .cir{ 
-  width: 0px;
-  height: 0px;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%; 
-  left: -20%; 
-  transform: translate(-50%,-50%); 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all ease 0.4s;
- }
- .cir p{ 
-  opacity: 0;
- }
-
- .button:hover .cir{ 
-  background-color: #2CC5D9; 
-  top: 50%;
-  left: 50%; 
-  transform: translate(-50%,-50%); 
-  width: 400px;
-  height: 200px;
- }
- .button:hover .cir p{ 
-  opacity: 1;
-  color: rgb(37, 37, 37);
- } */
-
- .button {
-  padding: 10px 40px;
-  border-radius: 10px;
-  outline: none;
-  background-color:#2CC5D9;
-  font-size: 20px;
-  position: relative;
-  overflow: hidden; 
-  width: 40%;
- 
- }
- 
- .ball {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  left: -20px;
-  transition: all ease 1s;
-  color: white;
- }
- .ball h4{ 
-  display: none;
- }
- .button:hover{ 
-  border: 1px solid #2CC5D9;
- }
- .button:hover h5{ 
-  opacity: 0;
- }
- .button:hover .ball {
-  background-color: rgb(51, 49, 49);
-  transform: scale(5); 
-  z-index: 7;
-  left: 40px;
- }
- .button:hover .ball h4{
- display: initial;
- position: absolute;
- top: 8px;
- left: -5px;
- font-size: 3px;
- width: 50px;
- }
- 
