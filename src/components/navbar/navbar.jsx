@@ -10,38 +10,38 @@ const Navbar = () => {
   const techDropdownContent = {
     "Mobile App Developers": {
       items: [
-        { name: "Android Developer", iconSrc: "/Nav-Dropdown-icons/Android.svg" },
-        { name: "iOS Developer", iconSrc: "/Nav-Dropdown-icons/iOS-Developer.svg" },
-        { name: "Flutter Developer", iconSrc: "/Nav-Dropdown-icons/Flutter.svg" },
-        { name: "React-Native Developer", iconSrc: "/Nav-Dropdown-icons/React.svg" },
-        { name: "Unity Developers", iconSrc: "/Nav-Dropdown-icons/Unity.svg" },
-        { name: "Metaverse Developers", iconSrc: "/Nav-Dropdown-icons/Metaverse.svg" }
+        { name: "Android Developer", iconSrc: "/Nav-Dropdown-icons/Android.svg", path: "/android" },
+        { name: "iOS Developer", iconSrc: "/Nav-Dropdown-icons/iOS-Developer.svg", path: "/ios" },
+        { name: "Flutter Developer", iconSrc: "/Nav-Dropdown-icons/Flutter.svg", path: "/flutter" },
+        { name: "React-Native Developer", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "/react-native" },
+        { name: "Unity Developers", iconSrc: "/Nav-Dropdown-icons/Unity.svg", path: "/unity" },
+        { name: "Metaverse Developers", iconSrc: "/Nav-Dropdown-icons/Metaverse.svg", path: "/metaverse" }
       ]
     },
     "Front End Developer": {
       items: [
-        { name: "Angular JS Developers", iconSrc: "/Nav-Dropdown-icons/Angular.svg" },
-        { name: "React JS Developers", iconSrc: "/Nav-Dropdown-icons/React.svg" },
-        { name: "JS Developer", iconSrc: "/Nav-Dropdown-icons/JS.svg" },
-        { name: "Next JS Developer", iconSrc: "/Nav-Dropdown-icons/Next-JS.svg" }
+        { name: "Angular JS Developers", iconSrc: "/Nav-Dropdown-icons/Angular.svg", path: "/angular" },
+        { name: "React JS Developers", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "/react" },
+        { name: "JS Developer", iconSrc: "/Nav-Dropdown-icons/JS.svg", path: "/js" },
+        { name: "Next JS Developer", iconSrc: "/Nav-Dropdown-icons/Next-JS.svg", path: "/next-js" }
       ]
     },
     "Back-End Developers": {
       items: [
-        { name: "Laravel Developer", iconSrc: "/Nav-Dropdown-icons/Laravel.svg" },
-        { name: "Node JS Developer", iconSrc: "/Nav-Dropdown-icons/Node-JS.svg" },
-        { name: "Python Developer", iconSrc: "/Nav-Dropdown-icons/Python.svg" },
-        { name: ".Net Developer", iconSrc: "/Nav-Dropdown-icons/DotNet.svg" },
-        { name: "PHP Developers", iconSrc: "/Nav-Dropdown-icons/PHP.svg" }
+        { name: "Laravel Developer", iconSrc: "/Nav-Dropdown-icons/Laravel.svg", path: "/laravel" },
+        { name: "Node JS Developer", iconSrc: "/Nav-Dropdown-icons/Node-JS.svg", path: "/node-js" },
+        { name: "Python Developer", iconSrc: "/Nav-Dropdown-icons/Python.svg", path: "/python" },
+        { name: ".Net Developer", iconSrc: "/Nav-Dropdown-icons/DotNet.svg", path: "/dotnet" },
+        { name: "PHP Developers", iconSrc: "/Nav-Dropdown-icons/PHP.svg", path: "/php" }
       ]
     },
     "CMS & E-Commerce Developers": {
       items: [
-        { name: "Drupal Developer", iconSrc: "/Nav-Dropdown-icons/Drupal.svg" },
-        { name: "WordPress Developer", iconSrc: "/Nav-Dropdown-icons/WordPress.svg" },
-        { name: "Shopify Developer", iconSrc: "/Nav-Dropdown-icons/Shopify.svg" },
-        { name: "Magento Developer", iconSrc: "/Nav-Dropdown-icons/Magento.svg" },
-        { name: "Java Developers", iconSrc: "/Nav-Dropdown-icons/Java.svg" }
+        { name: "Drupal Developer", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "/drupal" },
+        { name: "WordPress Developer", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "/wordpress" },
+        { name: "Shopify Developer", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "/shopify" },
+        { name: "Magento Developer", iconSrc: "/Nav-Dropdown-icons/Magento.svg", path: "/magento" },
+        { name: "Java Developers", iconSrc: "/Nav-Dropdown-icons/Java.svg", path: "/java" }
       ]
     }
   };
@@ -59,11 +59,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
   }, [isMenuOpen]);
 
   const toggleMenu = () => {
@@ -71,11 +67,13 @@ const Navbar = () => {
   };
 
   const toggleDropdown = (menu) => {
-    if (activeDropdown === menu) {
-      setActiveDropdown(null);
-    } else {
-      setActiveDropdown(menu);
-    }
+    setActiveDropdown(activeDropdown === menu ? null : menu);
+  };
+
+  const handleItemClick = (path) => {
+    window.location.href = path;
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
   };
 
   const menuItems = [
@@ -108,7 +106,7 @@ const Navbar = () => {
             onClick={() => item.hasDropdown && toggleDropdown(item.name)}
           >
             <div className={styles.menuItem}>
-              <Link href={`/${item.name.toLowerCase().replace(/\s+/g, '')}`}>
+              <Link href={item.href || "#"}>
                 {item.name}
               </Link>
               {item.hasDropdown && (
@@ -128,7 +126,7 @@ const Navbar = () => {
             </div>
             {item.name === "Technologies" && (
               <div className={`${styles.dropdownMenu} ${
-                activeDropdown === item.name || activeDropdown === "Technologies" ? styles.show : ''
+                activeDropdown === item.name ? styles.show : ''
               }`}>
                 <div className={styles.dropdownGrid}>
                   {Object.entries(techDropdownContent).map(([category, { items }]) => (
@@ -136,8 +134,8 @@ const Navbar = () => {
                       <h3>{category}</h3>
                       <ul>
                         {items.map((item, index) => (
-                          <li key={index}>
-                            <Link href={`/tech/${item.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                          <li key={index} onClick={() => handleItemClick(item.path)}>
+                            <Link href={item.path}>
                               <span className={styles.iconWrapper}>
                                 <Image 
                                   src={item.iconSrc}
