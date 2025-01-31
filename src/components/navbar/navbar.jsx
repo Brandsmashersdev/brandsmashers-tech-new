@@ -10,20 +10,20 @@ const Navbar = () => {
   const techDropdownContent = {
     "Mobile App Developers": {
       items: [
-        { name: "Android Developer", iconSrc: "/Nav-Dropdown-icons/Android.svg", path: "/android" },
-        { name: "iOS Developer", iconSrc: "/Nav-Dropdown-icons/iOS-Developer.svg", path: "/ios" },
-        { name: "Flutter Developer", iconSrc: "/Nav-Dropdown-icons/Flutter.svg", path: "/flutter" },
-        { name: "React-Native Developer", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "/react-native" },
+        { name: "Android Developer", iconSrc: "/Nav-Dropdown-icons/Android.svg", path: "android-developer" },
+        { name: "iOS Developer", iconSrc: "/Nav-Dropdown-icons/iOS-Developer.svg", path: "ios-developer" },
+        { name: "Flutter Developer", iconSrc: "/Nav-Dropdown-icons/Flutter.svg", path: "flutter-developer" },
+        { name: "React-Native Developer", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "react-native-developer" },
         { name: "Unity Developers", iconSrc: "/Nav-Dropdown-icons/Unity.svg", path: "/unity" },
         { name: "Metaverse Developers", iconSrc: "/Nav-Dropdown-icons/Metaverse.svg", path: "/metaverse" }
       ]
     },
     "Front End Developer": {
       items: [
-        { name: "Angular JS Developers", iconSrc: "/Nav-Dropdown-icons/Angular.svg", path: "/angular" },
-        { name: "React JS Developers", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "/react" },
-        { name: "JS Developer", iconSrc: "/Nav-Dropdown-icons/JS.svg", path: "/js" },
-        { name: "Next JS Developer", iconSrc: "/Nav-Dropdown-icons/Next-JS.svg", path: "/next-js" }
+        { name: "Angular JS Developers", iconSrc: "/Nav-Dropdown-icons/Angular.svg", path: "/angular-developer" },
+        { name: "React JS Developers", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "/react-js-developer" },
+        { name: "JS Developer", iconSrc: "/Nav-Dropdown-icons/JS.svg", path: "/js-developer" },
+        { name: "Next JS Developer", iconSrc: "/Nav-Dropdown-icons/Next-JS.svg", path: "/next-js-developer" }
       ]
     },
     "Back-End Developers": {
@@ -133,20 +133,15 @@ const Navbar = () => {
                     <div key={category} className={styles.dropdownColumn}>
                       <h3>{category}</h3>
                       <ul>
-                        {items.map((item, index) => (
-                          <li key={index} onClick={() => handleItemClick(item.path)}>
-                            <Link href={item.path}>
-                              <span className={styles.iconWrapper}>
-                                <Image 
-                                  src={item.iconSrc}
-                                  alt={`${item.name} icon`}
-                                  width={20}
-                                  height={20}
-                                />
-                              </span>
-                              {item.name}
-                            </Link>
-                          </li>
+                        {items.map((tech, index) => (
+                         <li key={tech.path}>
+                         <Link href={`/tech/${tech.path}`}>
+                           <span className={styles.iconWrapper}>
+                             <Image src={tech.iconSrc} alt={`${tech.name} icon`} width={20} height={20} />
+                           </span>
+                           {tech.name}
+                         </Link>
+                       </li>
                         ))}
                       </ul>
                     </div>
