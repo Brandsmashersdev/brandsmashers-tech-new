@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './TrialForm.module.css';
 
-const TrialForm = () => {
+const TrialForm = ({ closeForm }) => {  // Accept closeForm as a prop
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,7 +21,6 @@ const TrialForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log('Form submitted:', formData);
   };
 
@@ -49,6 +48,9 @@ const TrialForm = () => {
           <div className={styles.rightSection}>
             <h2 className={styles.heading}>Start your 1-Week Risk-FREE Trial Now!</h2>
             
+            {/* Close Button */}
+            <button className={styles.closeButton} onClick={closeForm}>×</button> 
+
             <form className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.nameEmailGrid}>
                 <div className={styles.formGroup}>
