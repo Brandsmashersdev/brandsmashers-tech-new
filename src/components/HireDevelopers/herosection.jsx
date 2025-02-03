@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// Import Trial component (Ensure the path is correct)
 import styles from "./herosection.module.css";
 import TrialForm from "./Android/Trial"; // Import the TrialForm component
 
@@ -40,7 +41,7 @@ const HeroSection = () => {
           <div className={styles.imageContainer}>
             <div className={styles.brandImage}>
               <img
-                src="./heroSection.png"
+                src="/heroSection.png"
                 alt="Brandsmashers Logo"
                 className={styles.objectContain}
               />

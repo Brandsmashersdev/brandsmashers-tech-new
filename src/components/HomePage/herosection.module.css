@@ -72,7 +72,7 @@
   font-style: italic;
   font-family: gilroy;
   color: white;
-  line-height: 1;
+  line-height: 1.5;
   font-weight: 500;
 }
 
@@ -83,6 +83,15 @@
   font-size: 32px;
   margin-bottom: 1rem;
 }
+
+.inlineHeading {
+  display: inline; 
+  font-size: inherit; 
+  font-weight: bold;
+  margin: 0; 
+  padding: 0;
+}
+
 
 .contactButton {
   margin-top: 1.5rem;
@@ -229,11 +238,12 @@
   }
   .subtitle {
     font-size: 40px;
+
   }
   .description {
     font-size: 24px;
     font-weight: 400;
-    line-height: 43.57px;
+    line-height: 40.57px;
     color: #FFFFFF;
   }
 }

@@ -1,71 +1,31 @@
-// pages/index.js or any other page
-import React, { Component } from 'react';
+import React from 'react';
 import ServiceCard from '../ServiceCards';
 
-class ServiceGrids extends Component {
-  render() {
-    const serviceData = {
-      mainTitle: "Our Android App Developers at Your Service",
-      highlightedWord: "App Developers",
-      subTitle: "Hire offshore Android app programmers with us to enhance your in-house team and create user-friendly, custom, feature-rich mobile and web applications using the latest technology.",
-      services: [
-        {
-            title: "Custom Android App Development",
-            description: "Hire our application developer to build a custom app from scratch. Our Android engineers are familiar with Android Studio and will deliver top-notch mobile apps for your business.",
-            iconSrc: "/Android-page-img/mobile-icon.svg" 
-          },
-          {
-            title: "Custom Android App Development",
-            description: "Hire our application developer to build a custom app from scratch. Our Android engineers are familiar with Android Studio and will deliver top-notch mobile apps for your business.",
-            iconSrc: "/Android-page-img/mobile-icon.svg" 
-          },
-          {
-            title: "Custom Android App Development",
-            description: "Hire our application developer to build a custom app from scratch. Our Android engineers are familiar with Android Studio and will deliver top-notch mobile apps for your business.",
-            iconSrc: "/Android-page-img/mobile-icon.svg" 
-          },
-          {
-            title: "Custom Android App Development",
-            description: "Hire our application developer to build a custom app from scratch. Our Android engineers are familiar with Android Studio and will deliver top-notch mobile apps for your business.",
-            iconSrc: "/Android-page-img/mobile-icon.svg" 
-          },
-          {
-            title: "Custom Android App Development",
-            description: "Hire our application developer to build a custom app from scratch. Our Android engineers are familiar with Android Studio and will deliver top-notch mobile apps for your business.",
-            iconSrc: "/Android-page-img/mobile-icon.svg" 
-          },
-          {
-            title: "Custom Android App Development",
-            description: "Hire our application developer to build a custom app from scratch. Our Android engineers are familiar with Android Studio and will deliver top-notch mobile apps for your business.",
-            iconSrc: "/Android-page-img/mobile-icon.svg" 
-          },
-          {
-            title: "Custom Android App Development",
-            description: "Hire our application developer to build a custom app from scratch. Our Android engineers are familiar with Android Studio and will deliver top-notch mobile apps for your business.",
-            iconSrc: "/Android-page-img/mobile-icon.svg" 
-          },
-          {
-            title: "Custom Android App Development",
-            description: "Hire our application developer to build a custom app from scratch. Our Android engineers are familiar with Android Studio and will deliver top-notch mobile apps for your business.",
-            iconSrc: "/Android-page-img/mobile-icon.svg" 
-          },
-          {
-            title: "Custom Android App Development",
-            description: "Hire our application developer to build a custom app from scratch. Our Android engineers are familiar with Android Studio and will deliver top-notch mobile apps for your business.",
-            iconSrc: "/Android-page-img/mobile-icon.svg" 
-          }
-      ]
-    };
+const ServiceGrids = ({ serviceData }) => {
+  // Fallback to default data if no props are provided
+  const defaultData = {
+    mainTitle: "Our Developers at Your Service",
+    highlightedWord: "App Developers",
+    subTitle: "Hire offshore developers to enhance your in-house team and create user-friendly, feature-rich applications.",
+    services: [
+      {
+        title: "Custom App Development",
+        description: "Build custom apps from scratch using cutting-edge technologies.",
+        iconSrc: "/default-icon.svg"
+      }
+    ]
+  };
 
-    return (
-      <ServiceCard
-        mainTitle={serviceData.mainTitle}
-        highlightedWord={serviceData.highlightedWord}
-        subTitle={serviceData.subTitle}
-        services={serviceData.services}
-      />
-    );
-  }
-}
+  const finalData = serviceData || defaultData;
+
+  return (
+    <ServiceCard
+      mainTitle={finalData.mainTitle}
+      highlightedWord={finalData.highlightedWord}
+      subTitle={finalData.subTitle}
+      services={finalData.services}
+    />
+  );
+};
 
 export default ServiceGrids;

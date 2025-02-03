@@ -26,9 +26,9 @@
   }
   
   .heroTitle {
-    font-size: 75px;
+    font-size: 60px;
     font-weight: 700;
-    line-height: 57px;
+    line-height: 50px;
     font-family: gilroy;
   }
   
@@ -46,7 +46,7 @@
   }
   
   .subtitle {
-    font-size: 45px;
+    font-size: 42px;
     color: white;
     font-weight: 600;
   }
