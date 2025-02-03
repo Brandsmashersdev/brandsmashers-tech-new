@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-// Import Trial component (Ensure the path is correct)
 import styles from "./herosection.module.css";
-import TrialForm from "./Android/Trial"; // Import the TrialForm component
+import TrialForm from "./Android/Trial"; 
 
 const HeroSection = () => {
   // State to control the visibility of the TrialForm
