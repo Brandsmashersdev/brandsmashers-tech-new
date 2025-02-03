@@ -18,11 +18,12 @@ const DeveloperSkills = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Various Skills that <span className={styles.titleHighlight}>Remote Developers</span> Possess</h1>
+      <h1 className={styles.heading}>Smart Solutions,<span className={styles.titleHighlight}>Cost-Effective Developers</span> </h1>
       <p className={styles.subheading}>
-        Access the talent network of <span className={styles.highlight}>1M+ skilled professionals</span> with <span className={styles.highlight}>100+ skill sets</span>
-      </p>
+        At <span className={styles.highlight}>Brandsmashers Tech</span> we offer skilled remote developers who deliver high-quality solutions at competitive costs. From custom web to mobile app development, our experts ensure innovative, efficient, and budget-friendly results tailored to your business needs.
 
+      </p>
+ 
       <div className={styles.skillsContainer}>
         {skillCategories.map((row, rowIndex) => (
           <div key={rowIndex} className={styles.skillRow}>

@@ -1,11 +1,11 @@
-import React from 'react';
-import styles from './ITSolutions.module.css'; // Import the CSS module
+import React from "react";
+import styles from "./ITSolutions.module.css"; // Import the CSS module
 
 const ITSolutions = () => {
   const images = [
-    { height: 'small', id: 1, src: '/IT-Solutions-1.svg' },
-    { height: 'medium', id: 2, src: '/IT-Solutions-2.svg' },
-    { height: 'small', id: 3, src: '/IT-Solutions-3.svg' }
+    { height: "small", id: 1, src: "/IT-Solutions-1.svg" },
+    { height: "medium", id: 2, src: "/IT-Solutions-2.svg" },
+    { height: "small", id: 3, src: "/IT-Solutions-3.svg" },
   ];
 
   return (
@@ -31,15 +31,19 @@ const ITSolutions = () => {
       {/* Right side - Content */}
       <div className={styles.textContainer}>
         <h2 className={styles.title}>
-          Software Development & IT Solutions for Startups to Fortune 500s in India
+          Software Development & IT Solutions for Startups to Fortune 500s in
+          India
         </h2>
         <p className={styles.paragraph}>
-          At Brandsmashers, one of the leading software development companies in
-          India, we masterfully tackle complex software development challenges
-          with innovative technology solutions and strategic thought processes.
-          As a trusted software development company in Bhopal, we ensure that
-          our approach is customized to meet the unique needs of each business
-          we work with.
+          At Brandsmashers, a leading software development company in India, we
+          tackle complex challenges with innovative technology and strategic
+          solutions. As Bhopal's trusted IT partner, we deliver personalized
+          software solutions tailored to each business’s objectives.
+          Specializing in software development outsourcing, we help industries
+          achieve their goals with scalable, high-performance applications.
+          Whether you need a reliable custom software development company in
+          India or end-to-end IT services, Brandsmashers Tech ensures a seamless
+          digital transformation with precision and excellence.
         </p>
       </div>
 

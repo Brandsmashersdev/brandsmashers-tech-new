@@ -69,7 +69,7 @@ const FAQSection = () => {
           {/* Right Section */}
           <div className="">
             <h2 className="text-white text-xl md:text-2xl ">Still Have Questions?</h2>
-            <a href="#" style={{ color: '#2CC5D9' }} className="text-lg md:text-xl hover:underline">Lets Talk</a>
+            <a href="/contactus" style={{ color: '#2CC5D9' }} className="text-lg md:text-xl hover:underline">Lets Talk</a>
           </div>
         </div>
 

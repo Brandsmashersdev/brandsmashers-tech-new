@@ -1,0 +1,218 @@
+.heroSection {
+    min-height: 100%;
+    background-color: #343333;
+    display: flex;
+    align-items: center;
+  }
+  
+  .heroContainer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+  
+  .heroContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .textContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .heroTitle {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 50px;
+    font-family: gilroy;
+  }
+  
+  .brandCyan {
+    color: #22d3ee;
+  }
+  
+  .textWhite {
+    color: rgba(255, 255, 255, 0);
+  }
+  
+  .subtitleContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .subtitle {
+    font-size: 42px;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .description {
+    color: white;
+    opacity: 0.9;
+    font-size: 32px;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  
+  .contactButton {
+    margin-top: 1.5rem;
+    background-color: #22d3ee;
+    color: #343333;
+    padding: 0.625rem 1.4rem;
+    border-radius: 5px;
+    font-size: 27px;
+    font-weight: 600;
+    width: 303px;
+    height: 72px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contactButton:hover {
+    background-color: #67e8f9;
+  }
+  
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .brandImage {
+    max-width: 28rem;
+  }
+  
+  .responsiveSvg {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (min-width: 640px) {
+    .heroSection {
+      padding: 1.5rem;
+    }
+    .contactButton {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .heroTitle {
+      font-size: 60px;
+    }
+  
+    .subtitle {
+      font-size: 60px;
+    }
+    .description {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 43.57px;
+      color: #ffffff;
+      
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .heroContainer {
+      padding: 4rem 0;
+    }
+  
+    .heroTitle {
+      font-size: 3.5rem;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    .heroContent {
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  
+    .textContainer {
+      text-align: left;
+      padding-left: 22%;
+      padding-top: 3%;
+      width: 100%;
+    }
+  
+    .imageContainer {
+      justify-content: flex-end;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .imageContainer {
+      order: -1; 
+      width: 100%;
+      max-width: 250px;
+      align-items: center; 
+    }
+    .heroSection {
+      padding: 1rem;
+    }
+  
+    .heroContainer {
+      padding: 20px;
+    }
+  
+    .heroTitle {
+      font-size: 32px;
+    }
+  
+    .subtitle {
+      font-size: 28px;
+    }
+  
+    .description {
+      font-size: 18px;
+    }
+    .textContainer {
+      text-align: left;
+    }
+    .contactButton {
+      width: 100%;
+    }
+  }
+  @media (min-width: 651px) and (max-width: 1000px) {
+    .heroContent {
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  
+    .textContainer {
+      text-align: left;
+      padding-left: 3%;
+      padding-top: 1%;
+      width: 100%;
+    }
+  
+    .imageContainer {
+      justify-content: flex-end;
+    }
+  }
+  
+  .textContainer {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .brandImage {
+    animation: fadeIn 1s ease-out 0.2s;
+    animation-fill-mode: backwards;
+  }
+  
+  @media (max-width: 475px) {
+    .contactButton {
+      width: 200px;
+      text-align: left;
+      font-size: 21px;
+    }
+    .subtitle {
+      font-size: 25px;
+    }
+  }
+  

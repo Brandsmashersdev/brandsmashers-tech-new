@@ -158,14 +158,14 @@ const industriesData = [
   },
   {
     title: "Health Solutions",
-    img: "/health.png",
-    bg: "bg-[#B4E9FF]",
+    img: "/education.png",
+    bg: "bg-[#DCFCE7]",
     // width: 368,
     // height: 112,
   },
   {
     title: "Education Solutions",
-    img: "/education.png",
+    img: "/health.png",
     bg: "bg-[#F3E8FF]",
     // width: 368,
     // height: 112,

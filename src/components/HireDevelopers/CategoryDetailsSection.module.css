@@ -1,0 +1,58 @@
+.sectionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    padding: 50px 20px;
+  }
+  
+  .contentContainer {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .imageWrapper {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .textWrapper {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .techImage {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: cyan;
+  }
+  
+  .description {
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  
+  .benefitsList {
+    margin-top: 15px;
+  }
+  
+  .benefitItem {
+    font-size: 14px;
+    background: #333;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+  
