@@ -30,21 +30,21 @@ const ExpandableCards = () => {
     {
       title: "Web Development",
       description:
-        "Being one of the best web design company in Bhopal, while designing our products, we lay extensive focus on speed, responsiveness and user interactivity.",
+        "Being the best web design company in Bhopal, we focus on speed, responsiveness, and efficiency in our designs.",
       redirectLink: "/web-development",
       icon:LayoutTemplate,
     },
     {
       title: "E-Commerce Solutions",
       description:
-        "Our configurable eCommerce solutions help increase your revenues – whether starting from a new store or redesign existing one.",
+        "Our configurable e-commerce solutions boost revenues, whether launching a new store or redesigning an existing one",
       redirectLink: "/e-commerce-solutions",
       icon:ShoppingCart,
     },
     {
       title: "Mobile App Development",
       description:
-        "We create stable iOS and Android applications with a comprehensive list of natural and appealing UX/UI design.",
+        "Our configurable e-commerce solutions drive revenue growth, whether you're starting a new store or redesigning an existing one.",
       redirectLink: "/mobile-app-development",
       icon:TabletSmartphone,
     },
@@ -58,7 +58,7 @@ const ExpandableCards = () => {
     {
       title: "Product Development",
       description:
-        "From idea generation to market entry, we develop effective competitors &apos; apps; products employing innovative technology and current tendencies.",
+        "From idea generation to market entry, we craft competitive products using innovative technology and current trends.",
       redirectLink: "/product-development",
       icon:Settings,
     },
@@ -72,14 +72,14 @@ const ExpandableCards = () => {
     {
       title: "Staff Augmentation",
       description:
-        "Find experienced IT professionals promptly and ramp up your team – that will allow you to complete the project as soon as possible without lowering the desired quality.",
+        "Find Quickly find experienced IT professionals to scale your team and complete projects on time without compromising quality.",
       redirectLink: "/staff-augmentation",
       icon:UserRoundCog,
     },
     {
       title: "Desktop App Development",
       description:
-        "We build effective and safe desktop applications for your business to solve your industry’s distinct requirements and sustain their stability and functionality.",
+        "We create secure, efficient desktop apps tailored to your industry's needs, ensuring long-term stability and functionality.",
       redirectLink: "/desktop-app-development",
       icon:Airplay,
     },

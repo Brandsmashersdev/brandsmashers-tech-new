@@ -31,7 +31,6 @@ const HeroSection = () => {
                 <h4>Lets Reach Out</h4>
               </div>
             </button>
-            
           </div>
 
           {/* Image Container */}

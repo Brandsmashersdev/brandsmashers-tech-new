@@ -14,34 +14,34 @@ const Navbar = () => {
         { name: "iOS Developer", iconSrc: "/Nav-Dropdown-icons/iOS-Developer.svg", path: "ios-developer" },
         { name: "Flutter Developer", iconSrc: "/Nav-Dropdown-icons/Flutter.svg", path: "flutter-developer" },
         { name: "React-Native Developer", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "react-native-developer" },
-        { name: "Unity Developers", iconSrc: "/Nav-Dropdown-icons/Unity.svg", path: "/unity" },
-        { name: "Metaverse Developers", iconSrc: "/Nav-Dropdown-icons/Metaverse.svg", path: "/metaverse" }
+        // { name: "Unity Developers", iconSrc: "/Nav-Dropdown-icons/Unity.svg", path: "unity" },
+        // { name: "Metaverse Developers", iconSrc: "/Nav-Dropdown-icons/Metaverse.svg", path: "metaverse" }
       ]
     },
     "Front End Developer": {
       items: [
-        { name: "Angular JS Developers", iconSrc: "/Nav-Dropdown-icons/Angular.svg", path: "/angular-developer" },
-        { name: "React JS Developers", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "/react-js-developer" },
-        { name: "JS Developer", iconSrc: "/Nav-Dropdown-icons/JS.svg", path: "/js-developer" },
-        { name: "Next JS Developer", iconSrc: "/Nav-Dropdown-icons/Next-JS.svg", path: "/next-js-developer" }
+        { name: "Angular JS Developers", iconSrc: "/Nav-Dropdown-icons/Angular.svg", path: "angular-developer" },
+        { name: "React JS Developers", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "react-js-developer" },
+        { name: "JS Developer", iconSrc: "/Nav-Dropdown-icons/JS.svg", path: "js-developer" },
+        { name: "Next JS Developer", iconSrc: "/Nav-Dropdown-icons/Next-JS.svg", path: "next-js-developer" }
       ]
     },
     "Back-End Developers": {
       items: [
-        { name: "Laravel Developer", iconSrc: "/Nav-Dropdown-icons/Laravel.svg", path: "/laravel" },
-        { name: "Node JS Developer", iconSrc: "/Nav-Dropdown-icons/Node-JS.svg", path: "/node-js" },
-        { name: "Python Developer", iconSrc: "/Nav-Dropdown-icons/Python.svg", path: "/python" },
-        { name: ".Net Developer", iconSrc: "/Nav-Dropdown-icons/DotNet.svg", path: "/dotnet" },
-        { name: "PHP Developers", iconSrc: "/Nav-Dropdown-icons/PHP.svg", path: "/php" }
+        { name: "Laravel Developer", iconSrc: "/Nav-Dropdown-icons/Laravel.svg", path: "laravel-developer" },
+        { name: "Node JS Developer", iconSrc: "/Nav-Dropdown-icons/Node-JS.svg", path: "node-js-developer" },
+        { name: "Python Developer", iconSrc: "/Nav-Dropdown-icons/Python.svg", path: "python-developer" },
+        { name: ".Net Developer", iconSrc: "/Nav-Dropdown-icons/DotNet.svg", path: "dotnet-developer" },
+        { name: "PHP Developers", iconSrc: "/Nav-Dropdown-icons/PHP.svg", path: "php-developer" }
       ]
     },
     "CMS & E-Commerce Developers": {
       items: [
-        { name: "Drupal Developer", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "/drupal" },
-        { name: "WordPress Developer", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "/wordpress" },
-        { name: "Shopify Developer", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "/shopify" },
-        { name: "Magento Developer", iconSrc: "/Nav-Dropdown-icons/Magento.svg", path: "/magento" },
-        { name: "Java Developers", iconSrc: "/Nav-Dropdown-icons/Java.svg", path: "/java" }
+        { name: "Drupal Developer", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "drupal" },
+        { name: "WordPress Developer", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "wordpress" },
+        { name: "Shopify Developer", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "shopify" },
+        { name: "Magento Developer", iconSrc: "/Nav-Dropdown-icons/Magento.svg", path: "magento" },
+        { name: "Java Developers", iconSrc: "/Nav-Dropdown-icons/Java.svg", path: "java" }
       ]
     }
   };
