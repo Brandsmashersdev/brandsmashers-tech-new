@@ -43,7 +43,7 @@ const SolutionsMatrix = () => {
             Proof is in the <span className={styles.italicText}>Numbers</span>
           </h3>
           <p className={styles.solutionsDescription}>
-            A Reliable Tech Partner Driving Growth and Preparing You for the Future with Innovative Solutions.
+          With over 6+ years of experience, Brandsmashers Tech is a trusted software development company in India, delivering innovative, custom solutions to drive your growth and prepare you for the future.
           </p>
           <button className={styles.solutionsButton}>Get Started</button>
         </div>

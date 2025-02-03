@@ -6,7 +6,11 @@ import HeroSectionTech from "@/components/HireDevelopers/HeroSectionForTech";
 import Stats from "@/components/HireDevelopers/Android/Stats";
 import PartnerCompanies from "@/components/HireDevelopers/Android/PartnerCompanies";
 import CategoryDetailsSection from "@/components/HireDevelopers/CategoryDetailsSection";
+import AndroidHero from "@/components/HireDevelopers/Android/AndroidHero";
+import ServiceGrids from "@/components/HireDevelopers/Android/ServiceGrid";
+import AndroidCarousel from "@/components/HireDevelopers/Android/AndroidCarousel";
 import Head from "next/head";
+import FAQSection from "@/components/HomePage/FAQSection";
 
 // Technology data
 const technologyData = {
@@ -88,15 +92,11 @@ export default function TechnologyDetails() {
       />
       <Stats />
       <PartnerCompanies />
-      
-      {/* 🔥 Dynamic Section with Different Data */}
-      <CategoryDetailsSection 
-        title={data.title}
-        description={data.description}
-        imageSrc={data.imageSrc}
-        benefits={data.benefits}
-      />
-      
+       <AndroidHero/>
+       <ServiceGrids/>
+       <AndroidCarousel/>
+     
+      <FAQSection/>
       <Footer />
     </>
   );

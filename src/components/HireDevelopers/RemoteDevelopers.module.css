@@ -1,4 +1,5 @@
 .main {
+  margin-top: 3rem;
   width: 100%;
   min-height: 100vh;
   background-color: #343333;
@@ -100,6 +101,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.2;
+  font-style: italic;
 }
 
 .highlight {
@@ -119,13 +121,44 @@
 }
 
 .description {
+  font-size: 1.25rem;
   line-height: 1.6;
+  font-style: italic;
 }
 
 .text {
   line-height: 1.6;
   color: #cccccc;
 }
+.iconImage {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.whiteText {
+  color: #1a1a1a;
+}
+
+.card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cardText {
+  font-size: 1.125rem;
+  font-style: italic;
+}
+
+.days {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
 @media (max-width: 1268px){
    .cardContainer {
     display: grid;
@@ -139,8 +172,28 @@
   }
   
   .cardContainer {
-    display: grid;
+    display: contents;
     grid-template-columns: repeat(2, 1fr);
   }
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+  }
+  /* Update responsive styles */
+@media (max-width: 768px) {
+  .iconImage {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .days {
+    font-size: 1.5rem;
+  }
+  
+  .cardText {
+    font-size: 1rem;
+  }
+}
 }
 

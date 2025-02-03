@@ -51,6 +51,7 @@
   line-height: 57px;
   font-family: gilroy;
   padding-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .brandCyan {
@@ -80,6 +81,7 @@
   font-style: italic;
   opacity: 0.9;
   font-size: 32px;
+  margin-bottom: 1rem;
 }
 
 .contactButton {
