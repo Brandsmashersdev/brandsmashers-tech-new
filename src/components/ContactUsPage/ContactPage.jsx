@@ -192,16 +192,10 @@ const ContactPage = () => {
       try {
         const response = await axios.post(
           'https://script.google.com/macros/s/AKfycbz7ZP0A1g8iwVEvCVa1METbtptX-shKZaq3zLKpmifvW3ifp8CmqXpsfR07wyl29oEu/exec',
-          {
-            ...formData,
-            helpType, // Include helpType explicitly
-          },
-          {
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          }
+          { ...formData, helpType },
+          { headers: { 'Content-Type': 'application/json' }, withCredentials: true }
         );
+        
   
         if (response.data.status === 'success') {
           alert('Form submitted successfully!');
