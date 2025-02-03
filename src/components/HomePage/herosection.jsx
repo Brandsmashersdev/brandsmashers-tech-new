@@ -22,7 +22,7 @@ const HeroSection = () => {
             </div>
 
             <p className={styles.description}>
-              All in One Place with Brandsmashers Tech
+            All in One Place with Brandsmashers Tech  One of the Leading <span className={styles.brandCyan}> Software Development Companies in India, </span> Delivering Excellence and Innovation.
             </p>
 
             <button className={styles.button}>

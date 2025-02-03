@@ -5,12 +5,12 @@ const images = [
   { src: "/assets/googles.png", alt: "google" },
   { src: "/assets/accionlabs.png", alt: "accion-labs" },
   { src: "/assets/airbnb.png", alt: "airbnb" },
-  { src: "/assets/dunzo.png", alt: "dunzo" },
+  // { src: "/assets/dunzo.png", alt: "dunzo" },
   // { src: "/assets/eventbrite.png", alt: "eventbrite" },
-  // { src: "/assets/Goeasy.png", alt: "Goeasy" },
+  { src: "/assets/Goeasy.png", alt: "Goeasy" },
   { src: "/assets/salesforce.png", alt: "salesforce" },
-  { src: "/assets/boxly.webp", alt: "boxly" },
-  { src: "/assets/turing-logo-new.png", alt: "Turing" },
+  // { src: "/assets/boxly.webp", alt: "boxly" },
+  // { src: "/assets/turing-logo-new.png", alt: "Turing" },
 ];
 
 const OurPartner = () => {

@@ -10,7 +10,7 @@ const images = [
   // { src: "/assets/Goeasy.png", alt: "Goeasy" },
   { src: "/assets/salesforce.png", alt: "salesforce" },
   { src: "/assets/boxly.webp", alt: "boxly" },
-  { src: "/assets/turing-logo-new.png", alt: "Turing" },
+  // { src: "/assets/turing-logo-new.png", alt: "Turing" },
 ];
 
 const OurPartner = () => {
