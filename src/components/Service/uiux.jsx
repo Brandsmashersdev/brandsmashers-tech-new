@@ -9,8 +9,8 @@ const UIUX = () => {
         <div className={styles.leftSection}>
           <div className={styles.imageWrapper}>
             <img 
-              src="/uiux.png"
-              alt="Web Development"
+              src="/UIUX.png"
+              alt="ui-ux"
               className={styles.image}
             />
             

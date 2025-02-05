@@ -6,7 +6,7 @@ const AboutHeroSection = () => {
     <div className={styles.container}>
       <div className={styles.heroContainer}>
         <div className={styles.image}>
-          <img src="/About-hero.png" alt="Hero Section About Us" />
+          <img src="/About-Hero.png" alt="Hero Section About Us" />
         </div>
         <div className={styles.heading}>
         Creating <span className={styles.highlight}>technology solutions</span> that enable businesses to achieve
