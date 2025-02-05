@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './TrialForm.module.css';
 
-const TrialForm = ({ closeForm }) => {  // Accept closeForm as a prop
+const TrialForm = ({ closeForm }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,6 +36,7 @@ const TrialForm = ({ closeForm }) => {  // Accept closeForm as a prop
   return (
     <div className={styles.mainContainer}>
       <div className={styles.innerContainer}>
+      <button className={styles.closeButton} onClick={closeForm}>×</button>
         <div className={styles.contentWrapper}>
           <div className={styles.leftSection}>
             <img 
@@ -46,10 +47,10 @@ const TrialForm = ({ closeForm }) => {  // Accept closeForm as a prop
           </div>
           
           <div className={styles.rightSection}>
+            {/* Close Button Moved Inside the Form */}
+
+
             <h2 className={styles.heading}>Start your 1-Week Risk-FREE Trial Now!</h2>
-            
-            {/* Close Button */}
-            <button className={styles.closeButton} onClick={closeForm}>×</button> 
 
             <form className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.nameEmailGrid}>
@@ -131,7 +132,7 @@ const TrialForm = ({ closeForm }) => {  // Accept closeForm as a prop
                 <textarea
                   id="projectDescription"
                   name="projectDescription"
-                  placeholder="Let us Know your requirements"
+                  placeholder="Let us know your requirements"
                   className={styles.textarea}
                   value={formData.projectDescription}
                   onChange={handleChange}
