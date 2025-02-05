@@ -84,4 +84,10 @@
   .title {
     font-size: 1.7rem;
   }
+  .modelsContainer{
+    padding: 15px;
+  }
+  .cards{
+    height: 325px;
+  }
 }
