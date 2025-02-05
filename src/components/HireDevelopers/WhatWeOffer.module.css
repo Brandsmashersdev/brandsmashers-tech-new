@@ -136,8 +136,9 @@
     font-size: 0.9rem;
   }
   .card {
-    width: 350px;
+    width: 320px;
     height: 190px;
+    
   }
   .cardTitle {
     font-size: 1.29rem;

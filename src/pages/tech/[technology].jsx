@@ -666,7 +666,6 @@ export default function TechnologyDetails() {
        {/* <ServiceGrids/> */}
        <ServiceGrids serviceData={data.services} />
        <AndroidCarousel/>
-     
       <FAQSection/>
       <Footer />
     </>
