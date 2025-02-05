@@ -11,6 +11,7 @@ import RemoteDevelopers from "@/components/HireDevelopers/RemoteDevelopers";
 import Gridsection from "@/components/HireDevelopers/Gridsection";
 import styles from "../components/HireDevelopers/herosection.module.css";
 import PartnerCompanies from "@/components/HireDevelopers/PartnerCompanies";
+import TrialForm from "@/components/HireDevelopers/Android/Trial";
 
 export default function HireDevelopers() {
   // State to handle visibility of TrialForm
