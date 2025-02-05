@@ -17,10 +17,12 @@
   font-style: italic;
   text-align: left;
   width: 80%;
+
 }
 
 .highlight{
   color: #2cc5d9;
+  
 }
 .charts {
   display: flex;
