@@ -34,7 +34,7 @@ const Webdesign  = () => {
         <div className={styles.rightSection}>
           <div className={styles.imageWrapper}>
             <img 
-              src="/web-img.png"
+              src="/Web-img.png"
               alt="Web Development"
               className={styles.image}
             />
