@@ -1,25 +1,6 @@
-.mainContainer {
-  width: 100%;
-  background-color: #343333;
-  padding: 32px;
-}
-
-.innerContainer {
-  width: 100%;
-  max-width: 80vw;
-  margin: 0 auto;
-  background-color: #2CC5D9;
-  border-top-right-radius: 126px;
-  border-bottom-left-radius: 126px;
-  box-shadow: 0 20px 0 0 rgb(0, 0, 0), 0 8px 0 0 rgb(0 0 0);
-  height: 80vh;
-
-}
-
-/* Add this CSS for the TrialForm modal effect */
+/* General Mobile Styles */
 .mainContainer {
   position: fixed;
-  overflow-x: hidden; 
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -27,26 +8,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Darken background */
-  z-index: 1000; 
-  /* background-color: orange; */
-}
-/* Add this to TrialForm.module.css */
-
-.closeButton {
-  position: absolute;
-  top: 70px;
-  left: 12%;
-  background: transparent;
-  border: none;
-  font-size: 3rem;
-  color: #333;
-  cursor: pointer;
-}
-.closeButton:hover {
-  color: rgb(255, 221, 221);
+  background-color: transparent;  /* No background */
+  z-index: 1000;
+  padding: 16px;
 }
 
+
+.innerContainer {
+  position: relative;
+  padding-top: 40px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #2CC5D9;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  box-shadow: 0 10px 0 0 rgb(0, 0, 0), 0 4px 0 0 rgb(0 0 0);
+  height: auto;
+  max-height: 90vh;
+  overflow-y: auto; /* Allow scroll in mobile if content overflows */
+}
 
 .contentWrapper {
   display: flex;
@@ -55,53 +36,59 @@
 }
 
 .leftSection {
-  
-  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px;
-  /* background-color: #313a3b; */
-  position: relative;
+  padding: 16px;
 }
 
 .robotImage {
-  width: 200px;
-  scale: 1.2;
+  width: 150px;
   height: auto;
   object-fit: contain;
-  position: absolute;
-  top: 70%;
-  left: 60%;
-  transform: translate(-50%, -50%);
 }
 
 .rightSection {
   width: 100%;
   padding: 20px;
+  position: relative;  /* Ensure close button is positioned relative to this section */
+}
+
+.closeButton {
+  position: absolute;  /* Absolute relative to .innerContainer */
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 30;  /* Ensure it's above all other elements */
+}
+.closeButton:hover {
+  color: rgb(255, 221, 221);
+  transform: scale(1.1);
 }
 
 .heading {
   color: #343333;
   font-weight: 600;
   text-align: center;
-  line-height: 1; 
-  margin-bottom: 20px;
-  /* background-color: #e5e7eb; */
-  font-size: 12px;
+  line-height: 1.2;
+  margin: 30px 0 16px; /* Adjusted margin for spacing */
+  font-size: 20px;
 }
-
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .nameEmailGrid {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .formGroup {
@@ -116,60 +103,24 @@
   margin-bottom: 4px;
 }
 
-.input {
+.input, .select, .textarea, .phoneInput, .countrySelect {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   border-radius: 4px;
-  background-color: rgba(243, 244, 246, 0.778);
-  border: 1px solid transparent;
+  background-color: rgba(243, 244, 246, 0.8);
+  border: 1px solid #ccc;
 }
 
 .phoneInputContainer {
   display: flex;
-}
-
-.countrySelect {
-  width: 80px;
-  padding: 8px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  background-color: rgba(243, 244, 246, 0.448);
-  border: 1px solid transparent;
-  border-right: 1px solid #e5e7eb;
-}
-
-.phoneInput {
-  flex: 1;
-  padding: 8px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  background-color: rgba(243, 244, 246, 0.732);
-  border: 1px solid transparent;
-}
-
-.select {
-  width: 100%;
-  padding: 8px;
-  border-radius: 4px;
-  background-color: rgba(243, 244, 246, 0.596);
-  border: 1px solid transparent;
-}
-
-.textarea {
-  width: 100%;
-  padding: 8px;
-  border-radius: 4px;
-  background-color: rgba(243, 244, 246, 0.84);
-  height: 87px;
-  border: 1px solid transparent;
+  gap: 8px;
 }
 
 .submitButton {
   background-color: rgb(31 41 55);
   color: white;
-  padding: 8px 32px;
+  padding: 12px;
   border-radius: 4px;
-  transition: background-color 0.2s;
   cursor: pointer;
   border: none;
   width: 100%;
@@ -179,8 +130,16 @@
   background-color: rgb(55 65 81);
 }
 
-/* Tablet and above */
+/* Tablet and larger devices */
 @media (min-width: 768px) {
+  .innerContainer {
+    max-width: 80vw;
+    height: 80vh;
+    overflow-y: auto; /* Allow vertical scroll if needed */
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
   .contentWrapper {
     flex-direction: row;
   }
@@ -191,22 +150,28 @@
   }
 
   .robotImage {
-    width: 300px;
+    width: 250px;
   }
 
   .rightSection {
     width: 50%;
-    padding: 48px;
+    padding: 32px;
+  }
+
+  .closeButton {
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;
   }
 
   .heading {
-    font-size: 32px;
+    font-size: 28px;
     text-align: left;
   }
 
   .nameEmailGrid {
     flex-direction: row;
-    gap: 24px;
+    gap: 16px;
   }
 
   .submitButton {
@@ -215,13 +180,22 @@
   }
 }
 
-/* Desktop and above */
+/* Desktop and larger screens */
 @media (min-width: 1024px) {
+  .innerContainer {
+    max-width: 60vw;
+    height: 90vh;
+  }
+  .closeButton {
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+  }
   .robotImage {
-    width: 400px;
+    width: 350px;
   }
 
   .heading {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
