@@ -12,6 +12,7 @@
     "@shadcn/ui": "^0.0.4",
     "axios": "^1.7.9",
     "card": "^2.5.4",
+    "dotenv": "^16.4.7",
     "framer-motion": "^12.0.1",
     "lucide": "^0.473.0",
     "lucide-react": "^0.473.0",
@@ -20,7 +21,8 @@
     "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
     "react-icon": "^1.0.0",
-    "react-icons": "^5.4.0"
+    "react-icons": "^5.4.0",
+    "react-toastify": "^11.0.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

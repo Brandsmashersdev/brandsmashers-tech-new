@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Check, ChevronDown, Code, Database, Globe, Server, Cpu, Cloud, Smartphone, Palette, Users, Brain, BarChart3 } from 'lucide-react';
 import styles from './ContactPage.module.css';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const TextCarousel = () => {
   return (
@@ -48,7 +50,15 @@ const IconSlider = () => {
     </div>
   );
 };
-
+const toastConfig = {
+  position: "top-right",
+  autoClose: 3000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  style: { background: '#2CC5D9', color: 'white' }
+};
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -190,15 +200,24 @@ const ContactPage = () => {
   
     if (validateForm()) {
       try {
-        const response = await axios.post(
-          'https://script.google.com/macros/s/AKfycbz7ZP0A1g8iwVEvCVa1METbtptX-shKZaq3zLKpmifvW3ifp8CmqXpsfR07wyl29oEu/exec',
-          { ...formData, helpType },
-          { headers: { 'Content-Type': 'application/json' }, withCredentials: true }
-        );
+        const formDataToSend = new FormData();
         
-  
-        if (response.data.status === 'success') {
-          alert('Form submitted successfully!');
+        Object.keys(formData).forEach(key => {
+          formDataToSend.append(key, formData[key]);
+        });
+        formDataToSend.append('helpType', helpType);
+        formDataToSend.append('access_key', '1ebfcdb8-aa31-432e-aa57-4f18f2a1fb46');
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formDataToSend
+        });
+
+        const data = await response.json();
+        
+        if (data.success) {
+          toast.success('Form submitted successfully!', toastConfig);
+          
           setFormData({
             firstName: '',
             lastName: '',
@@ -209,18 +228,18 @@ const ContactPage = () => {
           });
           setHelpType(null);
         } else {
-          alert('Error submitting form. Please try again.');
+          toast.error('Error submitting form. Please try again.', toastConfig);
         }
       } catch (error) {
-        console.error('Axios Error:', error.response || error.message); 
-        alert('Network error. Please try again later.');
+        console.error('Submission Error:', error);
+        toast.error('Network error. Please try again later.', toastConfig);
       }
     }
   };
-  
 
   return (
     <div className={styles.pageWrapper}>
+      <ToastContainer />
       <div className={styles.contactContainer}>
         <div className={styles.contactWrapper}>
           {/* Left Section */}
