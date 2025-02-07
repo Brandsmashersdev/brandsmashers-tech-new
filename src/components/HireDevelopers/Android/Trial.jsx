@@ -1,7 +1,21 @@
 import React, { useState } from 'react';
 import styles from './TrialForm.module.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const TrialForm = ({ closeForm }) => {
+  const WEB3FORMS_ACCESS_KEY = '26fd49ac-7bdb-4e08-9818-dbca12903e42';
+
+  const toastConfig = {
+    position: "top-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    style: { background: '#2CC5D9', color: 'white' }
+  };
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,6 +25,8 @@ const TrialForm = ({ closeForm }) => {
     projectDescription: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -19,9 +35,52 @@ const TrialForm = ({ closeForm }) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+
+    try {
+      const fullPhoneNumber = `${formData.countryCode}${formData.phone}`;
+      const formPayload = {
+        access_key: WEB3FORMS_ACCESS_KEY,
+        name: formData.name,
+        email: formData.email,
+        phone: fullPhoneNumber,
+        project_requirement: formData.projectRequirement,
+        project_description: formData.projectDescription
+      };
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formPayload)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast.success('Form submitted successfully!', toastConfig);
+        // Reset form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          countryCode: '+91',
+          projectRequirement: '',
+          projectDescription: ''
+        });
+      } else {
+        toast.error(result.message || 'Submission failed. Please try again.', toastConfig);
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      toast.error('An error occurred. Please try again later.', toastConfig);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const projectOptions = [
@@ -35,8 +94,9 @@ const TrialForm = ({ closeForm }) => {
 
   return (
     <div className={styles.mainContainer}>
+      <ToastContainer />
       <div className={styles.innerContainer}>
-      <button className={styles.closeButton} onClick={closeForm}>×</button>
+        <button className={styles.closeButton} onClick={closeForm}>×</button>
         <div className={styles.contentWrapper}>
           <div className={styles.leftSection}>
             <img 
@@ -47,9 +107,6 @@ const TrialForm = ({ closeForm }) => {
           </div>
           
           <div className={styles.rightSection}>
-            {/* Close Button Moved Inside the Form */}
-
-
             <h2 className={styles.heading}>Start your 1-Week Risk-FREE Trial Now!</h2>
 
             <form className={styles.form} onSubmit={handleSubmit}>
@@ -140,8 +197,12 @@ const TrialForm = ({ closeForm }) => {
                 ></textarea>
               </div>
 
-              <button type="submit" className={styles.submitButton}>
-                Submit
+              <button 
+                type="submit" 
+                className={styles.submitButton} 
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Submitting...' : 'Submit'}
               </button>
             </form>
           </div>
