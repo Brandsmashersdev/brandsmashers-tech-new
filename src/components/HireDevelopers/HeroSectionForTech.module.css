@@ -26,7 +26,7 @@
   }
   
   .heroTitle {
-    font-size: 60px;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 50px;
     font-family: gilroy;
@@ -46,7 +46,7 @@
   }
   
   .subtitle {
-    font-size: 42px;
+    font-size: 40px;
     color: white;
     font-weight: 600;
   }
@@ -98,20 +98,20 @@
       padding: 1.5rem;
     }
     .contactButton {
-      font-size: 20px;
-      font-weight: 500;
+      font-size: 22px;
+      font-weight: 600;
     }
     .heroTitle {
       font-size: 60px;
     }
   
     .subtitle {
-      font-size: 60px;
+      font-size: 50px;
     }
     .description {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
-      line-height: 43.57px;
+      line-height: 40.57px;
       color: #ffffff;
       
     }
