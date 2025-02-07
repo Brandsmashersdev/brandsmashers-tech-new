@@ -4,7 +4,7 @@ import styles from "./WhyBrandsmashers.module.css";
 const cardData = [
   {
     icon: "/about_icon1.svg",
-    title: "One - Stop Solution",
+    title: "All in One Solution",
     description:
       "We offer end-to-end IT services, design, development, quality assurance with a dedicated group of experts for various industry domains and technologies.",
   },

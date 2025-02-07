@@ -8,23 +8,23 @@ const OurBusiness = () => {
         <div className={styles.heading}>
          <h2>Our <span className={styles.highlight}>Business Engagement </span>Approach</h2>
           <p>
-          At Brandsmashers, we offer flexible and client-centric business engagement models that ensure efficiency
-          and high-quality results. Whether you're looking to augment your team with skilled professionals or need a dedicated team to build and manage your software solutions, we have the right approach for you.
+          At Brandsmashers, we provide dynamic and client-focused engagement models designed to maximize efficiency and deliver top-tier results. Whether you need to scale your team with skilled professionals or require a dedicated development team to bring your vision to life, we have the perfect solution for you.
+
           </p>
         </div>
         
         <div className={styles.cardContainer}>
           <div className={styles.card}>
-            <h3>End-to-End Services</h3>
+            <h3>Comprehensive Development Solutions</h3>
             <p>
-            We provide full software development services, including planning, design, development, testing, and maintenance, ensuring that your project is completed to the highest standard.
+            We offer full-cycle software development services, covering everything from strategic planning and intuitive design to seamless development, rigorous testing, and ongoing maintenance. Our commitment is to deliver high-quality solutions that align with your business goals.
             </p>
           </div>
 
           <div className={styles.card}>
-            <h3>Team Augmentation</h3>
+            <h3>Expert Team Augmentation</h3>
             <p>
-            Access a pool of highly experienced developers and IT professionals to fill immediate skill gaps, boost your team's capabilities, and accelerate project timelines.
+            Gain access to a curated pool of seasoned developers and IT specialists ready to seamlessly integrate with your team. Bridge skill gaps, enhance your team’s capabilities, and accelerate project delivery with our flexible and scalable talent solutions.
             </p>
           </div>
         </div>

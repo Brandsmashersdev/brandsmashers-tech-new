@@ -24,9 +24,10 @@
   border-top-right-radius: 60px;
   border-bottom-left-radius: 60px;
   box-shadow: 0 10px 0 0 rgb(0, 0, 0), 0 4px 0 0 rgb(0 0 0);
-  height: auto;
+  height: 90vh;
+  overflow-y: auto;
   max-height: 90vh;
-  overflow-y: auto; /* Allow scroll in mobile if content overflows */
+  /* overflow-y: auto;  */
 }
 
 .contentWrapper {
@@ -39,13 +40,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  /* padding: 16px; */
+}
+
+.leftSection img{
+  /* width: 100%; */
+  transform: scale(1.1);
+  /* margin-top: -120px; */
 }
 
 .robotImage {
-  width: 150px;
-  height: auto;
-  object-fit: contain;
+  /* width: 250px; */
+  /* height: auto; */
+  /* object-fit: contain; */
 }
 
 .rightSection {
@@ -135,9 +142,11 @@
   .innerContainer {
     max-width: 80vw;
     height: 80vh;
-    overflow-y: auto; /* Allow vertical scroll if needed */
+    overflow: hidden;
+     /* Allow vertical scroll if needed */
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
+    
   }
 
   .contentWrapper {

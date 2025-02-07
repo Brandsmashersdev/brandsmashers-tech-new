@@ -7,10 +7,7 @@ const AboutSection = () => {
       <div className={styles.container}>
         <div className={styles.heading}>
           <p>
-          Founded in 2018, <strong>Brandsmashers</strong> has quickly grown into a trusted name in the world of software development and staff augmentation. 
-           specialize in developing tailor-made software solutions that drive business success and help companies scale their
-            operations with top-tier talent. By combining technical expertise with innovative solutions, we help our 
-            clients navigate the complexities of digital transformation with ease.
+          Founded in 2018, <strong>Brandsmashers</strong> has rapidly established itself as a trusted leader in software development and staff augmentation. We specialize in delivering tailor-made software solutions that empower businesses to scale efficiently, optimize operations, and stay ahead in the digital landscape. Our expertise spans a wide range of industries, including fintech, healthcare, e-commerce, and education, ensuring that our clients receive cutting-edge, industry-specific solutions. With a strong focus on innovation, agility, and quality, we leverage the latest technologies, including AI, cloud computing, and full-stack development, to transform ideas into impactful digital products. At Brandsmashers, we don’t just build software—we create long-term technology partnerships that drive sustainable growth and success.
           </p>
         </div>
         

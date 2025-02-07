@@ -79,9 +79,9 @@
       padding: 1.75rem;
     }
   } */
-  @media (max-width: 1124px){
+  @media (max-width: 1145px){
     .card {
-      height: 300px;
+      height: 420px;
     }
   }
   
@@ -95,8 +95,8 @@
     }
     
     .card {
-      height: 300px;
-      min-width: 240px;
+      height: 400px;
+      min-width: 280px;
       padding: 1.5rem;
     }
     .card p{
@@ -118,7 +118,7 @@
     .card {
       min-width: 240px;
       padding: 1.5rem;
-      height: 220px;
+      height: 280px;
     }
     .card p{
         font-size:14px;

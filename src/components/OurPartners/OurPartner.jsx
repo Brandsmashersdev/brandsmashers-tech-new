@@ -16,7 +16,7 @@ const images = [
 
 const OurPartner = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="our-partners">
       <div className={styles.headingContainer}>
         <h2 className={styles.title}>Our <span className={styles.highlight}>Partners</span></h2>
       </div>

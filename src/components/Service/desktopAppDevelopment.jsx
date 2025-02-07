@@ -3,7 +3,7 @@ import styles from './rightservice.module.css';
 
 const DesktopApp = () => {
   return (
-    <div className={styles.serviceContainer}>
+    <div className={styles.serviceContainer} id='desktop-apps'>
       <div className={styles.contentWrapper}>
         {/* Left Content Section */}
         <div className={styles.leftSection}>

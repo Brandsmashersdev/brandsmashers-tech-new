@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import CountUp from "react-countup";
 import styles from "./SolutionsMatrix.module.css";
+import Link from "next/link";
 
 const SolutionsMatrix = () => {
   const stats = [
@@ -10,7 +11,7 @@ const SolutionsMatrix = () => {
     { value: 50, label: "Global Brands" },
   ];
 
-  const [startCount, setStartCount] = useState(false); // 
+  const [startCount, setStartCount] = useState(false);
   const sectionRef = useRef(null); 
 
   useEffect(() => {
@@ -45,7 +46,9 @@ const SolutionsMatrix = () => {
           <p className={styles.solutionsDescription}>
           With over 6+ years of experience, Brandsmashers Tech is a trusted software development company in India, delivering innovative, custom solutions to drive your growth and prepare you for the future.
           </p>
+          <Link href="/contactus" passHref>
           <button className={styles.solutionsButton}>Get Started</button>
+          </Link>
         </div>
 
         {/* Right Section */}
