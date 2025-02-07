@@ -77,8 +77,8 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { name: "Hire Developers", hasDropdown: true, href: '/hiredevelopers' },
-    { name: "Services", hasDropdown: true, href: '/services' },
+    { name: "Hire Developers", hasDropdown: false, href: '/hiredevelopers' },
+    { name: "Services", hasDropdown: false, href: '/services' },
     { name: "Technologies", hasDropdown: true },
     { name: "Blogs", hasDropdown: false, href: '/blogs' },
     { name: "About Us", hasDropdown: false, href: '/aboutus' }

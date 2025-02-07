@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./herosection.module.css";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -22,15 +23,23 @@ const HeroSection = () => {
             </div>
 
             <p className={styles.description}>
-            All in One Place with Brandsmashers Tech  One of the Leading <span className={styles.brandCyan}> Software Development Companies in India, </span> Delivering Excellence and Innovation.
+              All in One Place with Brandsmashers Tech One of the Leading{" "}
+              <span className={styles.brandCyan}>
+                {" "}
+                Software Development Companies in India,{" "}
+              </span>{" "}
+              Delivering Excellence and Innovation.
             </p>
 
-            <button className={styles.button}>
-              <h5>Contact us</h5>
-              <div className={styles.ball}>
-                <h4>Lets Reach Out</h4>
-              </div>
-            </button>
+            <Link href="/contactus">
+              {" "}
+              <button className={styles.button}>
+                <h5>Contact us</h5>
+                <div className={styles.ball}>
+                  <h4>Lets Reach Out</h4>
+                </div>
+              </button>
+            </Link>
           </div>
 
           {/* Image Container */}

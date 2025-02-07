@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #222; */
+    padding: 40px;
+    font-family: gilroy;
+    font-style: italic;
+  }
+  
+  .cardContainer {
+    display: flex;
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 85%;
+    gap: 40px;
+  }
+  
+  .leftSection {
+    flex: 1;
+    /* padding-left: 30px; */
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #00e6e6;
+  }
+  
+  .points {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .point {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+  
+  .icon {
+    background-color: #00e6e6;
+    color: black;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    width: 80px;
+    text-align: center;
+    margin-right: 25px;
+  }
+  
+  .ctaButton {
+    background-color: #00e6e6;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 50%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ctaButton:hover {
+    background-color: #00b3b3;
+  }
+  
+  .rightSection {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+    justify-content: center;
+  }
+  
+  .image {
+    width: 400px;
+    height: 560px;
+    border-radius: 12px;
+  }
+  

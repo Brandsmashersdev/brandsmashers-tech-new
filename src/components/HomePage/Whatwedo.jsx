@@ -24,63 +24,63 @@ const ExpandableCards = () => {
       title: "Custom Software Development",
       description:
         "We also develop custom software to improve your organisational processes thus improving productivity and efficiency.",
-      redirectLink: "/custom-software-development",
+      redirectLink: "/services",
       icon:BrainCircuit,
     },
     {
       title: "Web Development",
       description:
         "Being the best web design company in Bhopal, we focus on speed, responsiveness, and efficiency in our designs.",
-      redirectLink: "/web-development",
+      redirectLink: "/services",
       icon:LayoutTemplate,
     },
     {
       title: "E-Commerce Solutions",
       description:
         "Our configurable e-commerce solutions boost revenues, whether launching a new store or redesigning an existing one",
-      redirectLink: "/e-commerce-solutions",
+      redirectLink: "/services",
       icon:ShoppingCart,
     },
     {
       title: "Mobile App Development",
       description:
         "Our configurable e-commerce solutions drive revenue growth, whether you're starting a new store or redesigning an existing one.",
-      redirectLink: "/mobile-app-development",
+      redirectLink: "/services",
       icon:TabletSmartphone,
     },
     {
       title: "UI/UX Design",
       description:
         "Our designers build interfaces simplifying the way a user is able to interact with the digital product with ease and without strain.",
-      redirectLink: "/ui-ux-design",
+      redirectLink: "/services",
       icon:Component,
     },
     {
       title: "Product Development",
       description:
         "From idea generation to market entry, we craft competitive products using innovative technology and current trends.",
-      redirectLink: "/product-development",
+      redirectLink: "/services",
       icon:Settings,
     },
     {
       title: "Digital Marketing",
       description:
         "Our SEO, social media and content creation services increase brand visibility and website ranking on the search engines.",
-      redirectLink: "/digital-marketing",
+      redirectLink: "/services",
       icon:Activity,
     },
     {
       title: "Staff Augmentation",
       description:
         "Find Quickly find experienced IT professionals to scale your team and complete projects on time without compromising quality.",
-      redirectLink: "/staff-augmentation",
+      redirectLink: "/services",
       icon:UserRoundCog,
     },
     {
       title: "Desktop App Development",
       description:
         "We create secure, efficient desktop apps tailored to your industry's needs, ensuring long-term stability and functionality.",
-      redirectLink: "/desktop-app-development",
+      redirectLink: "/services",
       icon:Airplay,
     },
   ];

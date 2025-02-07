@@ -207,9 +207,9 @@
   
   @media (max-width: 475px) {
     .contactButton {
-      width: 200px;
+      width: 80%;
       text-align: left;
-      font-size: 21px;
+      font-size: 19px;
     }
     .subtitle {
       font-size: 25px;

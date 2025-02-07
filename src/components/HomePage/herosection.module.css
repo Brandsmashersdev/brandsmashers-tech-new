@@ -152,10 +152,11 @@
   border-radius: 10px;
   outline: none;
   background-color: #2CC5D9;
-  font-size: 20px;
+  font-size: 21px;
   position: relative;
   overflow: hidden;
   width: 40%;
+  font-weight: 600;
 }
 
 .ball {
@@ -253,6 +254,9 @@
     left: 70%;
     transform: translateX(-50%);
   }
+  .button{
+    width: auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -309,11 +313,22 @@
   .imageContainer {
     justify-content: flex-end;
   }
+  .button{
+    width: auto;
+  }
+
 }
 
-@media (max-width: 475px) {
+@media (max-width: 600px) {
   .contactButton {
     width: 200px;
     text-align: left;
   }
+  .button{
+    width: auto;
+    font-size: 20px;
+  }
+
+
+
 }
