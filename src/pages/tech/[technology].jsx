@@ -204,64 +204,64 @@ const technologyData = {
           id: 1,
           title: 'iOS + Swift',
           description: 'Modern iOS development with Swift. Build fast, safe, and interactive applications with Apples preferred language.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techios.png',
+          icon2: '/icon-techswift.png'
         },
         {
           id: 2,
           title: 'iOS + Objective-C',
           description: 'Traditional iOS development with Objective-C. Perfect for maintaining legacy apps and utilizing established codebases.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techios.png',
+          icon2: '/icon-techobjectiveC.png'
         },
         {
           id: 3,
           title: 'iOS + Objective-C++',
           description: 'Combine Objective-C with C++ for high-performance computing and complex algorithms in iOS applications.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techios.png',
+          icon2: '/icon-techobjectiveC++.png'
         },
         {
           id: 4,
           title: 'iOS + Python',
           description: 'Integrate Python scripts and libraries into iOS apps using Pythonkit. Perfect for data analysis and ML features.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techios.png',
+          icon2: '/icon-techpython.png'
         },
         {
           id: 5,
           title: 'iOS + JavaScript',
           description: 'Utilize JavaScript with frameworks like React Native or integrate JS libraries into native iOS applications.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techios.png',
+          icon2: '/icon-techjavascript.png'
         },
         {
           id: 6,
           title: 'iOS + C++',
           description: 'Leverage C++ for performance-critical components and cross-platform code sharing in iOS applications.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techios.png',
+          icon2: '/icon-techobjectiveC++.png'
         },
         {
           id: 7,
           title: 'iOS + Ruby',
           description: 'Integrate Ruby scripts and automate iOS development workflows. Perfect for custom build tools and testing.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techios.png',
+          icon2: '/icon-techruby.png'
         },
         {
           id: 8,
           title: 'iOS + Dart',
           description: 'Build iOS applications using Flutter/Dart. Create beautiful, natively compiled applications from a single codebase.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techios.png',
+          icon2: '/icon-techdart.png'
         },
         {
           id: 9,
           title: 'iOS + Shell Script',
           description: 'Automate iOS development processes and create custom build scripts using Shell scripting for enhanced workflow.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techios.png',
+          icon2: '/icon-techshellscript.png'
         }
       ]
     }
@@ -328,64 +328,64 @@ const technologyData = {
           id: 1,
           title: 'Flutter + Firebase',
           description: 'Build scalable apps with Firebase backend. Integrate real-time databases, authentication, cloud functions, and analytics.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techflutter.png',
+          icon2: '/icon-techfirebase.png'
         },
         {
           id: 2,
           title: 'Flutter + REST APIs',
           description: 'Develop apps with RESTful services integration. Handle complex API interactions, data serialization, and state management.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techflutter.png',
+          icon2: '/icon-techrestapi.png'
         },
         {
           id: 3,
           title: 'Flutter + GraphQL',
           description: 'Create efficient data-driven applications using GraphQL. Optimize network requests and implement real-time features.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techflutter.png',
+          icon2: '/icon-techgraphql.png'
         },
         {
           id: 4,
           title: 'Flutter + BLoC',
           description: 'Implement robust state management using BLoC pattern. Build predictable and testable application architecture.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techflutter.png',
+          icon2: '/icon-techbloc.png'
         },
         {
           id: 5,
           title: 'Flutter + GetX',
           description: 'Leverage GetX for state, route, and dependency management. Build lightweight and high-performance applications.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techflutter.png',
+          icon2: '/icon-techgetx.png'
         },
         {
           id: 6,
           title: 'Flutter + ML Kit',
           description: 'Integrate machine learning capabilities with ML Kit. Add features like text recognition, face detection, and image labeling.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techflutter.png',
+          icon2: '/icon-techmlkit.png'
         },
         {
           id: 7,
           title: 'Flutter + WebRTC',
           description: 'Build real-time communication apps with WebRTC. Implement video calls, chat, and data sharing functionalities.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1:'/icon-techflutter.png',
+          icon2: '/icon-techwebrtc.png'
         },
         {
           id: 8,
           title: 'Flutter + SQLite',
           description: 'Implement local data persistence using SQLite. Create offline-first applications with robust data management.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techflutter.png',
+          icon2: '/icon-techsqlite.png'
         },
         {
           id: 9,
           title: 'Flutter + Provider',
           description: 'Use Provider pattern for efficient state management. Build scalable apps with dependency injection and reactive programming.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png' 
+          icon1: '/icon-techflutter.png',
+          icon2: '/icon-techprovider.png' 
         }
       ]
     }
@@ -451,64 +451,64 @@ const technologyData = {
           id: 1,
           title: 'React Native + Redux',
           description: 'Implement robust state management with Redux. Build predictable app states, manage complex data flows, and enable easy debugging.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techredux.png'
         },
         {
           id: 2,
           title: 'React Native + TypeScript',
           description: 'Develop type-safe applications with TypeScript. Enhance code quality, catch errors early, and improve development experience.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '//icon-techreact.png',
+          icon2: '/icon-techtypescript.png'
         },
         {
           id: 3,
           title: 'React Native + Firebase',
           description: 'Build scalable apps with Firebase integration. Implement authentication, real-time database, cloud functions, and analytics.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techfirebase.png'
         },
         {
           id: 4,
           title: 'React Native + GraphQL',
           description: 'Create efficient data-driven applications using GraphQL. Optimize API calls and implement real-time features with subscriptions.',
-          iicon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          iicon1: '/icon-techreact.png',
+          icon2: '/icon-techgraphql.png'
         },
         {
           id: 5,
           title: 'React Native + MobX',
           description: 'Utilize MobX for simple and scalable state management. Build reactive applications with automatic state tracking.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techmobx.png'
         },
         {
           id: 6,
           title: 'React Native + Native Modules',
           description: 'Extend app capabilities with native modules. Bridge native Android/iOS functionalities for optimal performance.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-technativemodules.png'
         },
         {
           id: 7,
           title: 'React Native + Realm',
           description: 'Implement efficient local database with Realm. Create offline-first apps with real-time synchronization capabilities.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techrealm.png'
         },
         {
           id: 8,
           title: 'React Native + Socket.IO',
           description: 'Build real-time applications with Socket.IO. Implement live chat, notifications, and bi-directional communication.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techsocketio.png'
         },
         {
           id: 9,
           title: 'React Native + AWS Amplify',
           description: 'Leverage AWS services with Amplify integration. Add cloud storage, authentication, APIs, and analytics to your app.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techawsamplify.png'
         }
       ]
     }
@@ -575,64 +575,64 @@ const technologyData = {
           id: 1,
           title: 'Angular + TypeScript',
           description: 'Build enterprise applications with TypeScript. Leverage strong typing, decorators, and advanced OOP features for robust development.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techangular.png',
+          icon2: '/icon-techtypescript.png'
         },
         {
           id: 2,
           title: 'Angular + RxJS',
           description: 'Implement reactive programming with RxJS. Handle complex data streams, event management, and asynchronous operations.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techangular.png',
+          icon2: '/icon-techrjxs.png'
         },
         {
           id: 3,
           title: 'Angular + NgRx',
           description: 'Manage state with NgRx store. Implement Redux pattern for predictable state management and improved application scalability.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techangular.png',
+          icon2: '/icon-techngrx.png'
         },
         {
           id: 4,
           title: 'Angular + Material',
           description: 'Create beautiful UIs with Angular Material. Build responsive, modern interfaces following Material Design principles.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techangular.png',
+          icon2: '/icon-techmaterial.png'
         },
         {
           id: 5,
           title: 'Angular + Firebase',
           description: 'Integrate Firebase backend services. Implement authentication, real-time database, hosting, and cloud functions.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techangular.png',
+          icon2: '/icon-techfirebase.png'
         },
         {
           id: 6,
           title: 'Angular + GraphQL',
           description: 'Build efficient APIs with GraphQL integration. Optimize data fetching and implement real-time features with Apollo Client.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techangular.png',
+          icon2: '/icon-techgraphql.png'
         },
         {
           id: 7,
           title: 'Angular + PWA',
           description: 'Develop Progressive Web Applications. Create installable, offline-capable web apps with native-like features.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techangular.png',
+          icon2: '/icon-techpwa.png'
         },
         {
           id: 8,
           title: 'Angular + Jest',
           description: 'Implement comprehensive testing with Jest. Write unit tests, integration tests, and ensure code quality.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techangular.png',
+          icon2: '/icon-techjest.png'
         },
         {
           id: 9,
           title: 'Angular + Nx',
           description: 'Build monorepo applications with Nx. Create scalable enterprise applications with shared libraries and efficient tooling.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techangular.png',
+          icon2: '/icon-technx.png'
         }
       ]
     }
@@ -699,64 +699,64 @@ const technologyData = {
           id: 1,
           title: 'React + Redux',
           description: 'Implement robust state management with Redux. Create predictable state containers, manage complex data flows, and enable powerful debugging.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techredux.png'
         },
         {
           id: 2,
           title: 'React + TypeScript',
           description: 'Build type-safe applications with TypeScript. Enhance code quality, catch errors during development, and improve team collaboration.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techtypescript.png'
         },
         {
           id: 3,
           title: 'React + Next.js',
           description: 'Create server-side rendered applications with Next.js. Optimize for SEO, improve performance, and enhance user experience.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-technextjs.png'
         },
         {
           id: 4,
           title: 'React + GraphQL',
           description: 'Build efficient APIs with GraphQL integration. Optimize data fetching and implement real-time features using Apollo Client.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techgraphql.png'
         },
         {
           id: 5,
           title: 'React + Material UI',
           description: 'Design beautiful interfaces with Material UI. Create responsive, modern UIs with customizable components and themes.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techmaterialui.png'
         },
         {
           id: 6,
           title: 'React + Tailwind CSS',
           description: 'Style applications with Tailwind CSS. Build custom designs efficiently with utility-first CSS framework.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techtailwindcss.png'
         },
         {
           id: 7,
           title: 'React + Firebase',
           description: 'Integrate Firebase backend services. Implement authentication, real-time database, hosting, and serverless functions.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techfirebase.png'
         },
         {
           id: 8,
           title: 'React + Testing Library',
           description: 'Ensure code quality with Testing Library. Write maintainable tests that replicate user behavior and scenarios.',
-         icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+         icon1: '/icon-techreact.png',
+          icon2: '/icon-techtestinglibrary.png'
         },
         {
           id: 9,
           title: 'React + Zustand',
           description: 'Manage state with Zustand. Implement simple yet powerful state management with minimal boilerplate code.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techreact.png',
+          icon2: '/icon-techzustand.png'
         }
       ]
     }
@@ -822,64 +822,64 @@ const technologyData = {
           id: 1,
           title: 'JavaScript + Node.js',
           description: 'Build scalable server-side applications with Node.js. Create fast, event-driven backends and RESTful APIs.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techjavascript.png',
+          icon2: '/icon-technodejs.png'
         },
         {
           id: 2,
           title: 'JavaScript + Express.js',
           description: 'Develop web applications with Express.js framework. Create robust APIs, handle middleware, and manage routing efficiently.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techjavascript.png',
+          icon2: '/icon-techexpressjs.png'
         },
         {
           id: 3,
           title: 'JavaScript + MongoDB',
           description: 'Implement NoSQL database solutions with MongoDB. Build flexible, scalable data storage with powerful querying capabilities.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techjavascript.png',
+          icon2: '/icon-techmongodb.png'
         },
         {
           id: 4,
           title: 'JavaScript + Vue.js',
           description: 'Create dynamic front-end applications with Vue.js. Build reactive interfaces with a progressive JavaScript framework.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techjavascript.png',
+          icon2: '/icon-techvuejs.png'
         },
         {
           id: 5,
           title: 'JavaScript + WebSocket',
           description: 'Implement real-time features with WebSocket. Build bi-directional communication for live updates and notifications.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techjavascript.png',
+          icon2: '/icon-techwebsocket.png'
         },
         {
           id: 6,
           title: 'JavaScript + jQuery',
           description: 'Enhance web applications with jQuery. Simplify DOM manipulation, event handling, and AJAX interactions.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techjavascript.png',
+          icon2: '/icon-techjquery.png'
         },
         {
           id: 7,
           title: 'JavaScript + Three.js',
           description: 'Create 3D visualizations with Three.js. Build immersive web experiences and interactive 3D graphics.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techjavascript.png',
+          icon2: '/icon-techthreejs.png'
         },
         {
           id: 8,
           title: 'JavaScript + D3.js',
           description: 'Build data visualizations with D3.js. Create interactive charts, graphs, and custom data representations.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techjavascript.png',
+          icon2: '/icon-techd3js.png'
         },
         {
           id: 9,
           title: 'JavaScript + Jest',
           description: 'Ensure code quality with Jest testing. Implement comprehensive testing suites for reliable applications.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techjavascript.png',
+          icon2: '/icon-techjest.png'
         }
       ]
     }
@@ -945,64 +945,64 @@ const technologyData = {
           id: 1,
           title: 'Next.js + TypeScript',
           description: 'Build type-safe applications with TypeScript integration. Enhance code quality, catch errors early, and improve development workflow.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technextjs.png',
+          icon2: '/icon-techtypescript.png'
         },
         {
           id: 2,
           title: 'Next.js + Prisma',
           description: 'Implement robust database operations with Prisma ORM. Create type-safe database queries and efficient data modeling.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technextjs.png',
+          icon2: '/icon-techprisma.png'
         },
         {
           id: 3,
           title: 'Next.js + tRPC',
           description: 'Build end-to-end typesafe APIs with tRPC. Create seamless full-stack applications with automatic type inference.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technextjs.png',
+          icon2: '/icon-techtrpc.png'
         },
         {
           id: 4,
           title: 'Next.js + Tailwind CSS',
           description: 'Style applications efficiently with Tailwind CSS. Create responsive, modern interfaces using utility-first approach.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technextjs.png',
+          icon2: '/icon-techtailwindcss.png'
         },
         {
           id: 5,
           title: 'Next.js + Redux Toolkit',
           description: 'Manage complex state with Redux Toolkit. Implement efficient state management with modern Redux best practices.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technextjs.png',
+          icon2: '/icon-techreduxtoolkit.png'
         },
         {
           id: 6,
           title: 'Next.js + Vercel',
           description: 'Deploy and scale applications with Vercel. Utilize serverless functions, edge computing, and global CDN.',
-         icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+         icon1: '/icon-technextjs.png',
+          icon2: '/icon-techvercel.png'
         },
         {
           id: 7,
           title: 'Next.js + Auth.js',
           description: 'Implement authentication with Auth.js (NextAuth). Add secure, flexible authentication with multiple providers.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technextjs.png',
+          icon2: '/icon-techauthjs.png'
         },
         {
           id: 8,
           title: 'Next.js + React Query',
           description: 'Manage server state with React Query. Handle caching, synchronization, and real-time data updates efficiently.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technextjs.png',
+          icon2: '/icon-techreactquery.png'
         },
         {
           id: 9,
           title: 'Next.js + Jest/Testing Library',
           description: 'Ensure application quality with comprehensive testing. Implement unit, integration, and end-to-end tests.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technextjs.png',
+          icon2: '/icon-techjest.png'
         }
       ]
     }
@@ -1069,64 +1069,64 @@ const technologyData = {
           id: 1,
           title: 'Laravel + Vue.js',
           description: 'Create dynamic single-page applications with Vue.js integration. Build reactive interfaces with Laravel\'s preferred front-end framework.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techlaravel.png',
+          icon2: '/icon-techvue.png'
         },
         {
           id: 2,
           title: 'Laravel + Livewire',
           description: 'Build dynamic interfaces without writing JavaScript. Create full-stack applications with real-time functionality using Livewire.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techlaravel.png',
+          icon2: '/icon-techlivewire.png'
         },
         {
           id: 3,
           title: 'Laravel + MySQL',
           description: 'Implement robust database solutions with MySQL. Utilize Eloquent ORM for efficient database operations and relationships.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techlaravel.png',
+          icon2: '/icon-techmysql.png'
         },
         {
           id: 4,
           title: 'Laravel + Redis',
           description: 'Enhance application performance with Redis caching. Implement queue systems and real-time features efficiently.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techlaravel.png',
+          icon2: '/icon-techredis.png'
         },
         {
           id: 5,
           title: 'Laravel + Docker',
           description: 'Containerize applications with Docker integration. Create consistent development and deployment environments.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techlaravel.png',
+          icon2: '/icon-techdocker.png'
         },
         {
           id: 6,
           title: 'Laravel + Tailwind CSS',
           description: 'Style applications with Tailwind CSS framework. Build modern, responsive interfaces using utility-first approach.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techlaravel.png',
+          icon2: '/icon-techtailwindcss.png'
         },
         {
           id: 7,
           title: 'Laravel + PHPUnit',
           description: 'Ensure code quality with PHPUnit testing. Implement comprehensive testing suites for reliable applications.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techlaravel.png',
+          icon2: '/icon-techphpunit.png'
         },
         {
           id: 8,
           title: 'Laravel + AWS',
           description: 'Deploy and scale applications on AWS. Utilize cloud services for storage, queuing, and serverless functions.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techlaravel.png',
+          icon2: '/icon-techaws.png'
         },
         {
           id: 9,
           title: 'Laravel + Sanctum',
           description: 'Implement secure authentication with Sanctum. Build token-based APIs and SPAs with robust security features.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techlaravel.png',
+          icon2: '/icon-techsanctum.png'
         }
       ]
     }
@@ -1193,64 +1193,64 @@ const technologyData = {
           id: 1,
           title: 'Node.js + Express',
           description: 'Build robust web applications with Express framework. Create RESTful APIs, handle middleware, and implement secure routing.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technodejs.png',
+          icon2: '/icon-techexpressjs.png'
         },
         {
           id: 2,
           title: 'Node.js + MongoDB',
           description: 'Implement NoSQL database solutions with MongoDB. Create flexible, scalable data storage with Mongoose ODM integration.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technodejs.png',
+          icon2: '/icon-techmongodb.png'
         },
         {
           id: 3,
           title: 'Node.js + PostgreSQL',
           description: 'Build reliable database systems with PostgreSQL. Utilize Sequelize ORM for efficient relational data management.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technodejs.png',
+          icon2: '/icon-techpostgresql.png'
         },
         {
           id: 4,
           title: 'Node.js + Socket.IO',
           description: 'Create real-time applications with Socket.IO. Build chat systems, live dashboards, and collaborative features.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technodejs.png',
+          icon2: '/icon-techsocketio.png'
         },
         {
           id: 5,
           title: 'Node.js + GraphQL',  
           description: 'Build efficient APIs with GraphQL. Optimize data fetching and implement flexible query capabilities.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technodejs.png',
+          icon2: '/icon-techgraphql.png'
         },
         {
           id: 6,
           title: 'Node.js + Redis',
           description: 'Enhance performance with Redis caching. Implement session management, caching, and real-time features.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technodejs.png',
+          icon2: '/icon-techredis.png'
         },
         {
           id: 7,
           title: 'Node.js + Microservices',
           description: 'Build distributed systems with microservices architecture. Create scalable and maintainable service-oriented applications.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technodejs.png',
+          icon2: '/icon-techmicroservices.png'
         },
         {
           id: 8,
           title: 'Node.js + Docker',
           description: 'Containerize applications with Docker. Create consistent development and deployment environments.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technodejs.png',
+          icon2: '/icon-techdocker.png'
         },
         {
           id: 9,
           title: 'Node.js + AWS',
           description: 'Deploy and scale on AWS infrastructure. Utilize serverless functions, cloud storage, and managed services.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technodejs.png',
+          icon2: '/icon-techaws.png'
         }
       ]
     }
@@ -1317,64 +1317,64 @@ const technologyData = {
           id: 1,
           title: 'Python + Django',
           description: 'Build robust web applications with Django framework. Create secure, scalable backends with built-in admin interface and ORM capabilities.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techpython.png',
+          icon2: '/icon-techdjango.png'
         },
         {
           id: 2,
           title: 'Python + Flask',
           description: 'Develop lightweight web applications with Flask. Create RESTful APIs, microservices, and flexible routing with minimal framework overhead.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techpython.png',
+          icon2: '/icon-techflask.png'
         },
         {
           id: 3,
           title: 'Python + PostgreSQL',
           description: 'Build reliable database systems with PostgreSQL. Utilize SQLAlchemy ORM for efficient relational data management and complex queries.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techpython.png',
+          icon2: '/icon-techpostgresql.png'
         },
         {
           id: 4,
           title: 'Python + Data Science',
           description: 'Leverage NumPy, Pandas, and Scikit-learn for data analysis and machine learning. Build predictive models and data visualization solutions.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techpython.png',
+          icon2: '/icon-techdatascience.png'
         },
         {
           id: 5,
           title: 'Python + FastAPI',
           description: 'Create high-performance APIs with FastAPI. Build async-capable endpoints with automatic OpenAPI documentation and type validation.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techpython.png',
+          icon2: '/icon-techfastapi.png'
         },
         {
           id: 6,
           title: 'Python + Redis',
           description: 'Enhance application performance with Redis caching. Implement session management, task queues, and real-time features.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techpython.png',
+          icon2: '/icon-techredis.png'
         },
         {
           id: 7,
           title: 'Python + Microservices',
           description: 'Build distributed systems with microservices architecture. Create scalable applications using FastAPI or Flask with Docker integration.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techpython.png',
+          icon2: '/icon-techmicroservices.png'
         },
         {
           id: 8,
           title: 'Python + Docker',
           description: 'Containerize applications with Docker. Ensure consistent deployment across environments and simplify development workflows.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techpython.png',
+          icon2: '/icon-techdocker.png'
         },
         {
           id: 9,
           title: 'Python + AWS',
           description: 'Deploy and scale on AWS infrastructure. Utilize Lambda functions, S3 storage, and other cloud services for serverless applications.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techpython.png',
+          icon2: '/icon-techaws.png'
         }
       ]
     }
@@ -1440,64 +1440,64 @@ const technologyData = {
           id: 1,
           title: '.NET + ASP.NET Core',
           description: 'Build modern web applications with ASP.NET Core. Create high-performance APIs, MVC applications, and Razor Pages with cross-platform compatibility.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technet.png',
+          icon2: '/icon-techaspnetcore.png'
         },
         {
           id: 2,
           title: '.NET + Entity Framework',
           description: 'Implement robust data access with Entity Framework Core. Create efficient database operations with code-first approach and LINQ integration.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technet.png',
+          icon2: '/icon-techerframework.png'
         },
         {
           id: 3,
           title: '.NET + SQL Server',
           description: 'Build enterprise-grade database solutions with SQL Server. Utilize stored procedures, transactions, and advanced querying capabilities.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technet.png',
+          icon2: '/icon-techsqlserver.png'
         },
         {
           id: 4,
           title: '.NET + Blazor',
           description: 'Create interactive web UIs with Blazor. Build single-page applications using C# instead of JavaScript for both client and server.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technet.png',
+          icon2: '/icon-techblazor.png'
         },
         {
           id: 5,
           title: '.NET + Azure',
           description: 'Deploy and scale applications on Azure cloud. Leverage App Services, Azure Functions, and managed services for cloud-native solutions.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technet.png',
+          icon2: '/icon-techazure.png'
         },
         {
           id: 6,
           title: '.NET + Microservices',
           description: 'Build distributed systems using microservices architecture. Create scalable, containerized services with service mesh integration.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technet.png',
+          icon2: '/icon-techmicroservices.png'
         },
         {
           id: 7,
           title: '.NET + SignalR',
           description: 'Implement real-time features with SignalR. Build chat applications, live dashboards, and collaborative features with WebSocket support.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technet.png',
+          icon2: '/icon-techsignalr.png'
         },
         {
           id: 8,
           title: '.NET + Docker',
           description: 'Containerize applications with Docker. Create consistent development and deployment environments across different platforms.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technet.png',
+          icon2: '/icon-techdocker.png'
         },
         {
           id: 9,
           title: '.NET + Xamarin',
           description: 'Build cross-platform mobile applications with Xamarin. Create native iOS and Android apps using shared C# codebase and .NET features.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-technet.png',
+          icon2: '/icon-techxamarin.png'
         }
       ]
     }
@@ -1562,64 +1562,64 @@ const technologyData = {
           id: 1,
           title: 'PHP + Laravel',
           description: 'Build elegant web applications with Laravel framework. Create secure, maintainable solutions with MVC architecture, Eloquent ORM, and Blade templating.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techlaravel.png'
         },
         {
           id: 2,
           title: 'PHP + Symfony',
           description: 'Develop enterprise-grade applications with Symfony framework. Utilize reusable components, Doctrine ORM, and robust security features.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techsymfony.png'
         },
         {
           id: 3,
           title: 'PHP + MySQL',
           description: 'Build reliable database systems with MySQL. Implement efficient data management with optimized queries and transaction handling.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techmysql.png'
         },
         {
           id: 4,
           title: 'PHP + WordPress',
           description: 'Create custom WordPress solutions. Develop themes, plugins, and extend core functionality for content management systems.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techwordpress.png'
         },
         {
           id: 5,
           title: 'PHP + WooCommerce',
           description: 'Build e-commerce solutions with WooCommerce. Create custom shopping experiences with payment integrations and inventory management.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techwoocommerce.png'
         },
         {
           id: 6,
           title: 'PHP + Redis',
           description: 'Enhance performance with Redis caching. Implement session management, caching layers, and real-time features for faster applications.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techredis.png'
         },
         {
           id: 7,
           title: 'PHP + Microservices',
           description: 'Build distributed systems with microservices architecture. Create scalable and maintainable service-oriented applications with API integration.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techmicroservices.png'
         },
         {
           id: 8,
           title: 'PHP + Docker',
           description: 'Containerize applications with Docker. Ensure consistent development environments and streamline deployment processes.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techdocker.png'
         },
         {
           id: 9,
           title: 'PHP + Cloud Platforms',
           description: 'Deploy and scale on major cloud platforms. Utilize AWS, Google Cloud, or Azure services for robust hosting and scaling solutions.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techcloud.png'
         }
       ]
     }
