@@ -104,7 +104,7 @@
   }
   .contactButton {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
   }
   .heroTitle {
     font-size: 60px;
@@ -179,7 +179,9 @@
     text-align: left;
   }
   .contactButton {
-    width: 100%;
+    width: 50%;
+    font-size: 20px;
+    font-weight: 500;
   }
 }
 @media (min-width: 651px) and (max-width: 1000px) {
