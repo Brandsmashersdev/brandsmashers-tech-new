@@ -10,6 +10,7 @@ import ServiceGrids from "@/components/HireDevelopers/Android/ServiceGrid";
 import AndroidCarousel from "@/components/HireDevelopers/Android/AndroidCarousel";
 import Head from "next/head";
 import FAQSection from "@/components/HomePage/FAQSection";
+import ComingSoon from "@/pages/coming-soon";
 
 // Technology data
 const technologyData = {
@@ -68,7 +69,7 @@ const technologyData = {
     description:
       "Are you looking for a remote ios app developer from India? Look nowhere and hire Android app developers through Best Remote Team. Our skilled Android experts offer the best-in-class, tailor-made mobile solutions that provide a visually enticing experience to your app users.",
     buttonText: "Hire iOS Developer",
-  
+
     services: {
       mainTitle:
         "Hire expert iOS developers to build robust, high-performance apps.",
@@ -471,7 +472,7 @@ const technologyData = {
     title: "Hire Best Node Js Developer from India",
     description:
       "On the lookout for an experienced Node.js developer from India? Look no further! At Brandsmashers Tech, we offer exceptional Node.js development services to help you create high-performance, real-time applications. Our expert Node.js developers are equipped with the right skills and knowledge to develop scalable, fast, and reliable web applications that cater to your business needs. Hire Node.js developers from India now and build next-gen web solutions that power your business growth!",
-    buttonText: "Hire Flutter Developer",
+    buttonText: "Hire NodeJS Developer",
     services: {
       mainTitle:
         "Hire Expert Node.js Developers to Build Scalable, High-Performance Applications.",
@@ -522,7 +523,7 @@ const technologyData = {
     title: "Hire Best Python Developer from India",
     description:
       "Looking for a skilled Python developer from India? Your search ends here! At Brandsmashers Tech, we specialize in providing top-tier Python development services that enable you to build powerful, scalable, and secure web applications. Our Python experts leverage the latest frameworks and technologies to create high-performance solutions that align with your business needs. Hire Python developers from India today to unlock the potential of your next project and take it to new heights!",
-      buttonText: "Hire Python Developer",
+    buttonText: "Hire Python Developer",
     services: {
       mainTitle:
         "Hire Expert Python Developers to Build Scalable, High-Performance Applications.",
@@ -624,7 +625,7 @@ const technologyData = {
 export default function TechnologyDetails() {
   const router = useRouter();
   const [data, setData] = useState(null);
-  const heroImage = '/Tech-Dropdown-Image.png';
+  const heroImage = "/Tech-Dropdown-Image.png";
 
   // Update data when route changes
   useEffect(() => {
@@ -637,10 +638,7 @@ export default function TechnologyDetails() {
     return (
       <>
         <Navbar />
-        <div className="text-center mt-20">
-          <h1 className="text-4xl font-bold">Page Not Found</h1>
-          <p className="text-gray-400 mt-2">This technology does not exist.</p>
-        </div>
+        <ComingSoon />
         <Footer />
       </>
     );
@@ -662,11 +660,11 @@ export default function TechnologyDetails() {
       />
       <Stats />
       <PartnerCompanies />
-       <AndroidHero/>
-       {/* <ServiceGrids/> */}
-       <ServiceGrids serviceData={data.services} />
-       <AndroidCarousel/>
-      <FAQSection/>
+      <AndroidHero />
+      {/* <ServiceGrids/> */}
+      <ServiceGrids serviceData={data.services} />
+      <AndroidCarousel />
+      <FAQSection />
       <Footer />
     </>
   );

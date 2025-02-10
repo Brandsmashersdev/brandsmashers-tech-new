@@ -9,8 +9,9 @@ const AboutHeroSection = () => {
           <img src="/About-Hero.png" alt="Hero Section About Us" />
         </div>
         <div className={styles.heading}>
-        Creating <span className={styles.highlight}>technology solutions</span> that enable businesses to achieve
-        <span className={styles.highlight}> success </span>.
+        Empowering  <span className={styles.highlight}>Businesses  </span> with Cutting-Edge
+        <span className={styles.highlight}> Software Solutions
+        </span> & Top-Tier Talent.
         </div>
       </div>
     </div>

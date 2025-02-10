@@ -3,7 +3,7 @@ import styles from './leftservice.module.css';
 
 const DataDive= () => {
   return (
-    <div className={styles.serviceContainer}>
+    <div className={styles.serviceContainer} id='data-dive'>
       <div className={styles.contentWrapper}>
         {/* Left Image Section */}
         <div className={styles.leftSection}>

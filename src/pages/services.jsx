@@ -15,12 +15,14 @@ import FAQSection from '@/components/HomePage/FAQSection'
 import { Expand } from 'lucide-react'
 import BrandsmashersGrid from '@/components/Service/BrandsmashersGrid'
 import CustomizedDesign from '@/components/Service/CustomizedStrategies'
+import ProjectDiscussion from '@/components/Service/Dropdown/ProjectDiscussion'
 
 
 const services = () => {
   return (
     <div>
         <Navbar/>
+        {/* <ProjectDiscussion/> */}
         <ServiceHero/>
         <Webdesign/>
         <MobileApp/>

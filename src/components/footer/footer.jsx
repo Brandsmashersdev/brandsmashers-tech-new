@@ -10,26 +10,51 @@ const Footer = () => {
     { name: "About", href: "/aboutus" },
     { name: "Service", href: "/services" },
     { name: "Contact us", href: "/contactus" },
-    { name: "Our Partners", href: "/partners" },
+    { name: "Our Partners", href: "/#our-partners" },
   ];
 
   const servicesLinks = [
-    { name: "Web Design", href: "/services/web-design" },
-    { name: "Desktop app development", href: "/services/desktop-apps" },
-    { name: "Mobile app development", href: "/services/mobile-apps" },
-    { name: "UI/UX", href: "/services/ui-ux" },
-    { name: "AI/ML", href: "/services/ai-ml" },
-    { name: "Data Drive", href: "/services/data" },
-    { name: "Digital marketing", href: "/services/marketing" },
-    { name: "Beyond the Browser", href: "/services/beyond" },
+    { name: "Web Design", href: "/services/#web-design" },
+    { name: "Desktop app development", href: "/services/#desktop-apps" },
+    { name: "Mobile app development", href: "/services/#mobile-apps" },
+    { name: "UI/UX", href: "/services/#ui-ux" },
+    { name: "AI/ML", href: "/services/#ai-ml" },
+    { name: "Data Drive", href: "/services/#data-dive" },
+    { name: "Digital marketing", href: "/services/#digital-marketing" },
+    { name: "Beyond the Browser", href: "/services/#beyond-the-browser" },
   ];
 
   const socialLinks = [
-    { name: "LinkedIn", href: "https://in.linkedin.com/company/brandsmashers-tech-pvt-ltd", image: "/linkedin-icon.png", row: 2 },
-    { name: "Facebook", href: "https://www.facebook.com/brandsamsherstechnologies", image: "/facebook-icon.png", row: 1 },
-    { name: "Cloud", href: "https://clutch.co/profile/brandsmashers-tech", image: "/clutch-icon.png", row: 2 },
-    { name: "YouTube", href: "https://youtube.com/@Brandsmashers", image: "/youtube-icon.png", row: 1 },
-    { name: "Instagram", href: "https://www.instagram.com/brandsmashers_technologies/", image: "/instagram-icon.png", row: 2 },
+    {
+      name: "LinkedIn",
+      href: "https://in.linkedin.com/company/brandsmashers-tech-pvt-ltd",
+      image: "/linkedin-icon.png",
+      row: 2,
+    },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/brandsamsherstechnologies",
+      image: "/facebook-icon.png",
+      row: 1,
+    },
+    {
+      name: "Cloud",
+      href: "https://clutch.co/profile/brandsmashers-tech",
+      image: "/clutch-icon.png",
+      row: 2,
+    },
+    {
+      name: "YouTube",
+      href: "https://youtube.com/@Brandsmashers",
+      image: "/youtube-icon.png",
+      row: 1,
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/brandsmashers_technologies/",
+      image: "/instagram-icon.png",
+      row: 2,
+    },
   ];
 
   const SocialIcons = () => (
@@ -38,9 +63,18 @@ const Footer = () => {
         {socialLinks
           .filter((social) => social.row === 1)
           .map((social) => (
-            <a key={social.name} href={social.href} className={styles.socialLink} target="_blank"
-            rel="noopener noreferrer">
-              <img src={social.image} alt={social.name} className={styles.socialIcon} />
+            <a
+              key={social.name}
+              href={social.href}
+              className={styles.socialLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={social.image}
+                alt={social.name}
+                className={styles.socialIcon}
+              />
             </a>
           ))}
       </div>
@@ -48,9 +82,18 @@ const Footer = () => {
         {socialLinks
           .filter((social) => social.row === 2)
           .map((social) => (
-            <a key={social.name} href={social.href} className={styles.socialLink} target="_blank"
-            rel="noopener noreferrer">
-              <img src={social.image} alt={social.name} className={styles.socialIcon} />
+            <a
+              key={social.name}
+              href={social.href}
+              className={styles.socialLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={social.image}
+                alt={social.name}
+                className={styles.socialIcon}
+              />
             </a>
           ))}
       </div>
@@ -133,8 +176,12 @@ const Footer = () => {
                 <a href="/terms">TERM</a>
               </div>
               <p className={styles.copyright}>
-                © 2018 <span className={styles.highlight}>Brandsmashers</span> Tech | 
-                <a href="#top" className={styles.backToTop}> BACK TO TOP ↑</a>
+                © 2018 <span className={styles.highlight}>Brandsmashers</span>{" "}
+                Tech |
+                <a href="#top" className={styles.backToTop}>
+                  {" "}
+                  BACK TO TOP ↑
+                </a>
               </p>
             </div>
             <div className={styles.tagline}>
