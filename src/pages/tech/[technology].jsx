@@ -1622,9 +1622,8 @@ const technologyData = {
           icon2: '/icon-techcloud.png'
         }
       ]
-    }
+    },
   },
-<<<<<<< Updated upstream
   "wordpress": {
     title: "Hire Best Wordpress Developer from India",
     description:"Unlock the Power of WordPress with Expert Developers from India!At Brandsmashers Tech, we bring your vision to life with cutting-edge WordPress development services. Whether you need a custom website, theme development, plugin integration, or a complete eCommerce solution, our skilled WordPress developers craft seamless, high-performing, and SEO-friendly websites tailored to your business goals.Hire dedicated WordPress developers from India today and experience innovation, scalability, and excellence in web development! ",
@@ -1670,84 +1669,87 @@ const technologyData = {
           description:
             "Keep your website safe, updated, and running smoothly with our expert maintenance services.We provide regular updates, security audits, and 24/7 support to ensure your site is secure and up-to-date.",
           iconSrc: "/Android-page-img/mobile-icon.svg",
-=======
-  "shopify": {
-    title: "Hire Best Shopify Developer from India",
-    description:" Looking for a skilled Shopify developer from India? Your search ends here! Hire top Shopify developers from Brandsmashers Tech to build secure, scalable, and high-performing eCommerce stores. Our experts ensure seamless integrations, user-friendly designs, and customized solutions tailored to meet your business needs. Hire Shopify developers today to create a feature-rich online store that drives conversions and growth.",
-    buttonText: "Hire Shopify Developer",
-    services: {
-      mainTitle: "Hire Expert Shopify Developers to Elevate Your eCommerce Business!",
-      
-      subTitle:
-        "Build high-performing, scalable, and fully customized Shopify stores with our skilled developers, ensuring a seamless shopping experience and optimized sales potential.",
-      services: [
-        {
-          title: "Custom Shopify Store Development",
-          description: "Our expert Shopify developers craft unique, user-friendly, and visually appealing Shopify stores tailored to your brand’s identity, ensuring a seamless shopping experience.",
-          iconSrc: "/android-techicon.png"
-        },
-        {
-          title: "Shopify Theme Development & Customization",
-          description: "Enhance your store with custom themes and modifications. Our developers ensure mobile responsiveness, fast loading times, and a visually engaging shopping experience.",
-          iconSrc: "/android-techicon.png"
-        },
-        {
-          title: "Shopify App Development & Integration",
-          description: "Extend your Shopify stores functionality with custom apps and third-party integrations, from payment gateways to CRM solutions, ensuring smooth business operations.",
-          iconSrc: "/android-techicon.png"
-        },
-        {
-          title: "Shopify Migration Services",
-          description: "Seamlessly migrate your existing store from platforms like WooCommerce or Magento to Shopify, ensuring zero data loss, SEO preservation, and enhanced performance.",
-          iconSrc: "/android-techicon.png"
-        },
-        {
-          title: "Performance Optimization & SEO",
-          description: "Boost your Shopify stores speed and visibility with our optimization services. We enhance load times, improve search engine rankings, and drive organic traffic.",
-          iconSrc: "/android-techicon.png"
-        },
-        {
-          title: "Ongoing Shopify Support & Maintenance",
-          description: "Ensure smooth operation with our dedicated Shopify support. We provide regular updates, bug fixes, and feature enhancements to keep your store running efficiently.",
-          iconSrc: "/android-techicon.png"
->>>>>>> Stashed changes
         },
       ],
     },
-    carousel: {
-      heading: {
-        beforeHighlight: "Hire Remote ",
-<<<<<<< Updated upstream
-        highlight: "Android Application Developers",
-        afterHighlight: " The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services."
-      },
-      description: "The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services.",
-      cardsData: [
-        {
-          id: 1,
-          title: 'Wordpress + Reactjs',
-          description: 'WordPress and ReactJS can be combined to develop high-end web solutions.We have a team of dedicated WP developer who are well-versed inReactJS as well. ',
-          icon1: '/icon-techphp.png',
-          icon2: '/icon-techlaravel.png'
+          carousel: {
+            "heading": {
+              "beforeHighlight": "Hire Remote",
+              "highlight": " Programmatic Developers ",
+              "afterHighlight": "from India – Automate, Optimize & Scale Your Business"
+            },
+          
+            "description": "Get top programmatic developers to build intelligent, data-driven automation solutions for your business. Leverage custom scripts, API integrations, and workflow automation to enhance efficiency, reduce manual effort, and scale seamlessly.",
+          
+            "cardsData": [
+              {
+                "id": 1,
+                "title": "Custom Scripting & Automation",
+                "description": "Automate repetitive tasks with custom scripts in Python, JavaScript, and Shell. Enhance efficiency and reduce operational overhead.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techautomation.png"
+              },
+              {
+                "id": 2,
+                "title": "API Development & Integration",
+                "description": "Integrate third-party APIs, create custom RESTful services, and automate data exchanges between applications.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techapi.png"
+              },
+              {
+                "id": 3,
+                "title": "Web Scraping & Data Extraction",
+                "description": "Extract valuable insights from the web using advanced web scraping techniques and structured data parsing.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techscraping.png"
+              },
+              {
+                "id": 4,
+                "title": "Workflow Automation",
+                "description": "Optimize business processes by automating tasks across multiple platforms using Zapier, Integromat, and custom scripts.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techworkflow.png"
+              },
+              {
+                "id": 5,
+                "title": "Cloud & Serverless Automation",
+                "description": "Deploy automation solutions using AWS Lambda, Google Cloud Functions, and Azure Functions for cost-effective scalability.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techcloud.png"
+              },
+              {
+                "id": 6,
+                "title": "AI & Machine Learning Automation",
+                "description": "Integrate AI-powered automation using NLP, computer vision, and predictive analytics to enhance decision-making.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techai.png"
+              },
+              {
+                "id": 7,
+                "title": "Database Automation & Management",
+                "description": "Automate database tasks such as backups, performance tuning, and real-time data synchronization.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techdatabase.png"
+              },
+              {
+                "id": 8,
+                "title": "AdTech & Programmatic Advertising",
+                "description": "Leverage programmatic advertising automation for campaign optimization, real-time bidding, and audience targeting.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techadtech.png"
+              },
+              {
+                "id": 9,
+                "title": "CI/CD & DevOps Automation",
+                "description": "Implement continuous integration and deployment pipelines with Jenkins, GitHub Actions, and Kubernetes for seamless software delivery.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techdevops.png"
         },
-        {
-          id: 2,
-          title: 'WordPress + Ruby On Rails',
-          description: 'if you want to develop highly customized plugins for website,you can use Ruby on Rails a server-side web development framework to build scalable web pages ',
-          icon1: '/icon-techphp.png',
-          icon2: '/icon-techsymfony.png'
-        },
-        {
-          id: 3,
-          title: 'WordPress + AJAX',
-          description: 'AJAX can be hlpful in web application development for data exchange between wordpress and other systems seamlessly',
-          icon1: '/icon-techphp.png',
-          icon2: '/icon-techmysql.png'
-        },
-        
-      ]
+      ],
     }
   },
+
+  
   "programmatic-developer": {
     title: "Transform Your Business with Programmatic Advertising Experts",
     description:"Boost your brand’s reach and drive data-driven results with Brandsmashers Tech — your trusted partner for hiring programmatic advertising experts. Our team connects you with skilled professionals who use AI-powered strategies to automate ad placements, optimize bidding, and maximize ROI. Whether you're scaling an eCommerce store or expanding your SaaS platform, our programmatic advertising experts tailor campaigns to target the right audience at the right time. Don’t let outdated ad strategies hold you back — partner with Brandsmashers Tech to hire programmatic advertising experts for measurable results and sustained growth. ",
@@ -1866,6 +1868,7 @@ const technologyData = {
           "description": "Implement continuous integration and deployment pipelines with Jenkins, GitHub Actions, and Kubernetes for seamless software delivery.",
           "icon1": "/icon-techprogrammatic.png",
           "icon2": "/icon-techdevops.png"
+        
         }
       ]
     }
@@ -1994,80 +1997,84 @@ const technologyData = {
         }
       ]
     }
-  }
-=======
-        highlight: "Shopify Developers",
-        afterHighlight: " from India  Pre-Vetted Experts for eCommerce Growth"
+  },
+  "shopify": {
+    title: "Hire Best Shopify Developer from India",
+    description:" Looking for a skilled Shopify developer from India? Your search ends here! Hire top Shopify developers from Brandsmashers Tech to build secure, scalable, and high-performing eCommerce stores. Our experts ensure seamless integrations, user-friendly designs, and customized solutions tailored to meet your business needs. Hire Shopify developers today to create a feature-rich online store that drives conversions and growth.",
+    buttonText: "Hire Shopify Developer",
+    services: {
+      mainTitle: "Hire Expert Shopify Developers to Elevate Your eCommerce Business!",
+      
+      subTitle:
+        "Build high-performing, scalable, and fully customized Shopify stores with our skilled developers, ensuring a seamless shopping experience and optimized sales potential.",
+      services: [
+        {
+          title: "Custom Shopify Store Development",
+          description: "Our expert Shopify developers craft unique, user-friendly, and visually appealing Shopify stores tailored to your brand’s identity, ensuring a seamless shopping experience.",
+          iconSrc: "/android-techicon.png"
+        },
+        {
+          title: "Shopify Theme Development & Customization",
+          description: "Enhance your store with custom themes and modifications. Our developers ensure mobile responsiveness, fast loading times, and a visually engaging shopping experience.",
+          iconSrc: "/android-techicon.png"
+        },
+        {
+          title: "Shopify App Development & Integration",
+          description: "Extend your Shopify stores functionality with custom apps and third-party integrations, from payment gateways to CRM solutions, ensuring smooth business operations.",
+          iconSrc: "/android-techicon.png"
+        },
+        {
+          title: "Shopify Migration Services",
+          description: "Seamlessly migrate your existing store from platforms like WooCommerce or Magento to Shopify, ensuring zero data loss, SEO preservation, and enhanced performance.",
+          iconSrc: "/android-techicon.png"
+        },
+        {
+          title: "Performance Optimization & SEO",
+          description: "Boost your Shopify stores speed and visibility with our optimization services. We enhance load times, improve search engine rankings, and drive organic traffic.",
+          iconSrc: "/android-techicon.png"
+        },
+        {
+          title: "Ongoing Shopify Support & Maintenance",
+          description: "Ensure smooth operation with our dedicated Shopify support. We provide regular updates, bug fixes, and feature enhancements to keep your store running efficiently.",
+          iconSrc: "/android-techicon.png"
+        },
+      ],
+    },
+    carousel: {
+      heading: {
+        beforeHighlight: "Hire Remote ",
+        highlight: "Android Application Developers",
+        afterHighlight: " The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services."
       },
-      description: "Build scalable, feature-rich Shopify stores with our expert developers. We specialize in crafting high-performance eCommerce solutions tailored to your business success.",
+      description: "The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services.",
       cardsData: [
         {
           id: 1,
-          title: "Shopify + Liquid",
-          description: "Develop dynamic and customized themes with Liquid, Shopifys powerful templating language, for enhanced user experience.",
-          icon1: "/icon-techshopify.png",
-          icon2: "/icon-techliquid.png"
+          title: 'Wordpress + Reactjs',
+          description: 'WordPress and ReactJS can be combined to develop high-end web solutions.We have a team of dedicated WP developer who are well-versed inReactJS as well. ',
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techlaravel.png'
         },
         {
           id: 2,
-          title: "Shopify + React",
-          description: "Enhance your Shopify store with React components, enabling a fast, interactive, and engaging shopping experience.",
-          icon1: "/icon-techshopify.png",
-          icon2: "/icon-techreact.png"
+          title: 'WordPress + Ruby On Rails',
+          description: 'if you want to develop highly customized plugins for website,you can use Ruby on Rails a server-side web development framework to build scalable web pages ',
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techsymfony.png'
         },
         {
           id: 3,
-          title: "Shopify + Headless Commerce",
-          description: "Implement headless commerce solutions with Shopify for greater flexibility and omnichannel experiences.",
-          icon1: "/icon-techshopify.png",
-          icon2: "/icon-techheadless.png"
+          title: 'WordPress + AJAX',
+          description: 'AJAX can be hlpful in web application development for data exchange between wordpress and other systems seamlessly',
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techmysql.png'
         },
-        {
-          id: 4,
-          title: "Shopify + GraphQL",
-          description: "Leverage Shopifys GraphQL API for efficient data querying, optimizing store performance and reducing loading times.",
-          icon1: "/icon-techshopify.png",
-          icon2: "/icon-techgraphql.png"
-        },
-        {
-          id: 5,
-          title: "Shopify + Payment Gateway Integration",
-          description: "Integrate secure payment gateways like Stripe, PayPal, and Razorpay for smooth and reliable transactions.",
-          icon1: "/icon-techshopify.png",
-          icon2: "/icon-techpayments.png"
-        },
-        {
-          id: 6,
-          title: "Shopify + Dropshipping",
-          description: "Build a successful dropshipping business with Shopify, automating order fulfillment and supplier management.",
-          icon1: "/icon-techshopify.png",
-          icon2: "/icon-techdropshipping.png"
-        },
-        {
-          id: 7,
-          title: "Shopify + SEO Optimization",
-          description: "Boost organic traffic with Shopify SEO strategies, optimizing product listings, site structure, and content for higher search rankings.",
-          icon1: "/icon-techshopify.png",
-          icon2: "/icon-techseo.png"
-        },
-        {
-          id: 8,
-          title: "Shopify + Multi-Vendor Marketplace",
-          description: "Develop a multi-vendor marketplace on Shopify, allowing multiple sellers to list products and manage their storefronts.",
-          icon1: "/icon-techshopify.png",
-          icon2: "/icon-techmarketplace.png"
-        },
-        {
-          id: 9,
-          title: "Shopify + AI & Personalization",
-          description: "Enhance user experience with AI-driven personalization, including product recommendations and dynamic content.",
-          icon1: "/icon-techshopify.png",
-          icon2: "/icon-techai.png"
-     }
+        
       ]
     }
   },
->>>>>>> Stashed changes
+
+
 };
 
 export default function TechnologyDetails() {
