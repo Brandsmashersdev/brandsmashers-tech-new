@@ -36,7 +36,7 @@ const Navbar = () => {
       ]
     },
     
-    "CMS & E-Commerceeee Developers": {
+    "CMS & E-Commerce Developers": {
       items: [
         { name: "Drupal Developer", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "drupal" },
         { name: "WordPress Developer", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "wordpress" },
@@ -45,7 +45,7 @@ const Navbar = () => {
         { name: "Java Developers", iconSrc: "/Nav-Dropdown-icons/Java.svg", path: "java" }
       ]
     },
-    "Marketing": {
+    "Marketinggggg": {
       items: [
         { name: "SEO", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "seo-developer" },
         { name: "Programmatic", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "programmatic-developer" },
