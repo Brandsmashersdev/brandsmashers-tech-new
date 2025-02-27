@@ -1624,6 +1624,87 @@ const technologyData = {
       ]
     }
   },
+  "wordpress": {
+    title: "Hire Best Wordpress Developer from India",
+    description:"Unlock the Power of WordPress with Expert Developers from India!At Brandsmashers Tech, we bring your vision to life with cutting-edge WordPress development services. Whether you need a custom website, theme development, plugin integration, or a complete eCommerce solution, our skilled WordPress developers craft seamless, high-performing, and SEO-friendly websites tailored to your business goals.Hire dedicated WordPress developers from India today and experience innovation, scalability, and excellence in web development! ",
+    buttonText: "Hire Dotnet Developer",
+    services: {
+      mainTitle: "Hire Skilled WordPress Developers to Elevate Your Online Presence!",
+      // highlightedWord: "App Developers",
+      subTitle:
+        "At Brandsmashers Tech, our experienced WordPress developers specialize in crafting feature-rich, responsive, and user-friendly websites to help your business thrive online.",
+      services: [
+        {
+          title: "Custom WordPress Website Development",
+          description:
+            " Hire our expert WordPress developers to build a unique and high-performing website from scratch.Our developers specialize in creating fully customized, SEO-friendly WordPress websites tailored to your business needs.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "WordPress Theme Development & Customization",
+          description:
+            "Get a visually stunning and fully responsive WordPress theme designed for your brand.We build and customize themes to match your vision, ensuring a modern and professional web presence.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "WordPress Plugin Development & Integration",
+          description:
+            "Enhance your website’s functionality with custom plugin development.Our experts create and integrate powerful plugins that improve performance, security, and user engagement.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "WooCommerce Development for Online Stores",
+          description:
+            "Launch and grow your eCommerce business with a feature-rich WooCommerce website.We develop secure, scalable, and fully optimized online stores that boost sales and improve user experience.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "WordPress Speed & Performance Optimization",
+          description:
+            "Improve website loading speed and overall performance with our optimization services.We fine-tune your WordPress site for fast loading, better user experience, and higher search engine rankings.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "WordPress Security & Maintenance Services",
+          description:
+            "Keep your website safe, updated, and running smoothly with our expert maintenance services.We provide regular updates, security audits, and 24/7 support to ensure your site is secure and up-to-date.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+      ],
+    },
+    carousel: {
+      heading: {
+        beforeHighlight: "Hire Remote ",
+        highlight: "Android Application Developers",
+        afterHighlight: " The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services."
+      },
+      description: "The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services.",
+      cardsData: [
+        {
+          id: 1,
+          title: 'Wordpress + Reactjs',
+          description: 'WordPress and ReactJS can be combined to develop high-end web solutions.We have a team of dedicated WP developer who are well-versed inReactJS as well. ',
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techlaravel.png'
+        },
+        {
+          id: 2,
+          title: 'WordPress + Ruby On Rails',
+          description: 'if you want to develop highly customized plugins for website,you can use Ruby on Rails a server-side web development framework to build scalable web pages ',
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techsymfony.png'
+        },
+        {
+          id: 3,
+          title: 'WordPress + AJAX',
+          description: 'AJAX can be hlpful in web application development for data exchange between wordpress and other systems seamlessly',
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techmysql.png'
+        },
+        
+      ]
+    }
+  },
 };
 
 export default function TechnologyDetails() {
