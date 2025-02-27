@@ -1705,6 +1705,129 @@ const technologyData = {
       ]
     }
   },
+  "programmatic-developer": {
+    title: "Transform Your Business with Programmatic Advertising Experts",
+    description:"Boost your brand’s reach and drive data-driven results with Brandsmashers Tech — your trusted partner for hiring programmatic advertising experts. Our team connects you with skilled professionals who use AI-powered strategies to automate ad placements, optimize bidding, and maximize ROI. Whether you're scaling an eCommerce store or expanding your SaaS platform, our programmatic advertising experts tailor campaigns to target the right audience at the right time. Don’t let outdated ad strategies hold you back — partner with Brandsmashers Tech to hire programmatic advertising experts for measurable results and sustained growth. ",
+    buttonText: "Programmatic Advertising Experts",
+    services: {
+      mainTitle: "Hire Skilled Programmatic Advertising Experts to Maximize Your ROI",
+      // highlightedWord: "App Developers",
+      subTitle:
+        "At Brandsmashers Tech, our skilled programmatic advertising experts harness the power of automation and data analytics to streamline ad buying and drive campaign performance.",
+      services: [
+        {
+          title: "Custom Programmatic Advertising Strategy",
+          description:
+            "Our experts design tailored programmatic ad strategies aligned with your business goals. From real-time bidding (RTB) to audience segmentation, we create targeted campaigns that boost your brand visibility and ROI.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "AI-Powered Ad Optimization",
+          description:
+            "We leverage AI algorithms to analyze user behavior, optimize ad placements, and adjust bidding strategies in real-time — ensuring your ads reach the most relevant audience with maximum efficiency.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "Cross-Platform Advertising ",
+          description:
+            "Our programmatic advertising experts manage multi-channel campaigns across display, video, mobile, and social media platforms, helping you engage your audience wherever they are online.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "Audience Targeting & Segmentation ",
+          description:
+            "We use advanced data analytics to segment your audience based on demographics, interests, and online behavior, delivering personalized ad experiences that drive higher engagement and conversions.",
+        },
+        {
+          title: "Ad Performance Tracking & Reporting",
+          description:
+            "Stay informed with detailed reports on ad performance, including impressions, click-through rates (CTR), conversion rates, and ROI. Our transparent reporting helps you make data-backed decisions for continuous improvement.",
+        },
+        {
+          title: "Retargeting & Remarketing Campaigns ",
+          description:
+            "Our experts develop retargeting strategies to re-engage users who’ve shown interest in your products or services, boosting your chances of conversion and customer retention.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+      ],
+    },
+    carousel: {
+      "heading": {
+        "beforeHighlight": "Hire Remote",
+        "highlight": " Programmatic Developers ",
+        "afterHighlight": "from India – Automate, Optimize & Scale Your Business"
+      },
+    
+      "description": "Get top programmatic developers to build intelligent, data-driven automation solutions for your business. Leverage custom scripts, API integrations, and workflow automation to enhance efficiency, reduce manual effort, and scale seamlessly.",
+    
+      "cardsData": [
+        {
+          "id": 1,
+          "title": "Custom Scripting & Automation",
+          "description": "Automate repetitive tasks with custom scripts in Python, JavaScript, and Shell. Enhance efficiency and reduce operational overhead.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techautomation.png"
+        },
+        {
+          "id": 2,
+          "title": "API Development & Integration",
+          "description": "Integrate third-party APIs, create custom RESTful services, and automate data exchanges between applications.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techapi.png"
+        },
+        {
+          "id": 3,
+          "title": "Web Scraping & Data Extraction",
+          "description": "Extract valuable insights from the web using advanced web scraping techniques and structured data parsing.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techscraping.png"
+        },
+        {
+          "id": 4,
+          "title": "Workflow Automation",
+          "description": "Optimize business processes by automating tasks across multiple platforms using Zapier, Integromat, and custom scripts.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techworkflow.png"
+        },
+        {
+          "id": 5,
+          "title": "Cloud & Serverless Automation",
+          "description": "Deploy automation solutions using AWS Lambda, Google Cloud Functions, and Azure Functions for cost-effective scalability.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techcloud.png"
+        },
+        {
+          "id": 6,
+          "title": "AI & Machine Learning Automation",
+          "description": "Integrate AI-powered automation using NLP, computer vision, and predictive analytics to enhance decision-making.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techai.png"
+        },
+        {
+          "id": 7,
+          "title": "Database Automation & Management",
+          "description": "Automate database tasks such as backups, performance tuning, and real-time data synchronization.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techdatabase.png"
+        },
+        {
+          "id": 8,
+          "title": "AdTech & Programmatic Advertising",
+          "description": "Leverage programmatic advertising automation for campaign optimization, real-time bidding, and audience targeting.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techadtech.png"
+        },
+        {
+          "id": 9,
+          "title": "CI/CD & DevOps Automation",
+          "description": "Implement continuous integration and deployment pipelines with Jenkins, GitHub Actions, and Kubernetes for seamless software delivery.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techdevops.png"
+        }
+      ]
+    }
+    
+  }
 };
 
 export default function TechnologyDetails() {
