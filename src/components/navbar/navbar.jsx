@@ -35,6 +35,7 @@ const Navbar = () => {
         { name: "PHP Developers", iconSrc: "/Nav-Dropdown-icons/PHP.svg", path: "php-developer" }
       ]
     },
+    
     "CMS & E-Commerce Developers": {
       items: [
         { name: "Drupal Developer", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "drupal" },
@@ -43,7 +44,15 @@ const Navbar = () => {
         { name: "Magento Developer", iconSrc: "/Nav-Dropdown-icons/Magento.svg", path: "magento" },
         { name: "Java Developers", iconSrc: "/Nav-Dropdown-icons/Java.svg", path: "java" }
       ]
-    }
+    },
+    "Marketing": {
+      items: [
+        { name: "SEO", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "seo-developer" },
+        { name: "Programmatic", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "programmatic-developer" },
+        { name: "SEM & PPC", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "sem-ppc" },
+        
+      ]
+    },
   };
 
   useEffect(() => {
