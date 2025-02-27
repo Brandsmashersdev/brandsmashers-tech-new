@@ -47,7 +47,7 @@ const Navbar = () => {
     },
     "Marketing": {
       items: [
-        { name: "SEO", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "seo-developer" },
+        { name: "SEO", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "SEO" },
         { name: "Programmatic", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "programmatic-developer" },
         { name: "SEM & PPC", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "sem-ppc" },
         

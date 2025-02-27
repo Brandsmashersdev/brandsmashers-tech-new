@@ -1827,6 +1827,130 @@ const technologyData = {
       ]
     }
     
+  },
+  "SEO": {
+    title: "Hire Professional SEO Experts For Your Project.",
+    description:"Boost your online presence with Brandsmashers Tech — your go-to partner for hiring remote SEO experts. Our team connects you with top-tier SEO specialists, ensuring you get the expertise to elevate your website's performance. Whether it's a SaaS platform or an eCommerce site, our experts drive organic traffic, optimize site structure, and enhance user experience. From keyword research to technical SEO audits and link-building, we craft strategies tailored to your business goals. Don’t let competitors outrank you — partner with Brandsmashers Tech to hire remote SEO experts for measurable results and long-term growth.",
+    buttonText: "Hire SEO Developer",
+    services: {
+      mainTitle: "Hire Skilled SEO Experts to Drive Your Business Growth.",
+      // highlightedWord: "App Developers",
+      subTitle:
+        "Boost Your Online Presence At Brandsmashers Tech, our skilled SEO experts specialize in driving organic traffic, improving search engine rankings, and enhancing your website's performance.",
+      services: [
+        {
+          title: "Custom SEO Strategy Development",
+          description:
+            " Our SEO experts craft tailored SEO strategies focused on your business goals. From in-depth keyword research to on-page and off-page optimization, we ensure your website ranks higher and reaches the right audience.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "Technical SEO Optimization.",
+          description:
+            "We identify and fix technical SEO issues that may be affecting your site's performance. Our team optimizes site speed, mobile responsiveness, and indexing to ensure search engines can easily crawl and rank your pages",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "Content Optimization & Strategy",
+          description:
+            "Let our SEO experts create and optimize content that not only engages your audience but also aligns with search engine algorithms. We focus on high-quality, keyword-rich content that drives traffic and boosts conversions",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "Link Building & Off-Page SEO",
+          description:
+            "Our SEO specialists build high-quality backlinks and develop effective off-page strategies to increase your website's domain authority and search rankings.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "Local SEO Solutions",
+          description:
+            "Target your local audience with precision. We optimize your website for local search, ensuring your business appears in local listings, Google Maps, and location-based searches.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "SEO Audit & Reporting",
+          description:
+            "Our SEO experts conduct comprehensive SEO audits to uncover opportunities for growth. With transparent reporting, we provide actionable insights and track progress to ensure your SEO strategies deliver measurable results.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+      ],
+    },
+    carousel: {
+      "heading": {
+        "beforeHighlight": "Hire Remote",
+        "highlight": "SEO Developers",
+        "afterHighlight": "from India – Optimize, Rank & Grow Your Business"
+      },
+    
+      "description": "Get top SEO developers to build high-performance, search engine-optimized websites and automation solutions. Leverage technical SEO, website speed optimization, structured data, and AI-driven strategies to enhance rankings, drive traffic, and maximize conversions.",
+    
+      "cardsData": [
+        {
+          "id": 1,
+          "title": "Technical SEO & Site Optimization",
+          "description": "Enhance website performance with Core Web Vitals optimization, structured data implementation, and mobile-first indexing strategies.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techoptimization.png"
+        },
+        {
+          "id": 2,
+          "title": "SEO Automation & AI Integration",
+          "description": "Implement AI-driven SEO automation for content generation, keyword research, and rank tracking using machine learning models.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techai.png"
+        },
+        {
+          "id": 3,
+          "title": "Schema Markup & Structured Data",
+          "description": "Boost search visibility with JSON-LD, microdata, and rich snippets to enhance Google rankings and click-through rates.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techschema.png"
+        },
+        {
+          "id": 4,
+          "title": "API & SEO Tool Integrations",
+          "description": "Seamlessly integrate SEO tools like Google Search Console, SEMrush, Ahrefs, and Moz for data-driven insights and automation.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techapi.png"
+        },
+        {
+          "id": 5,
+          "title": "Content Optimization & NLP",
+          "description": "Leverage NLP and AI to create high-quality, search-optimized content that ranks for competitive keywords and improves engagement.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-technlp.png"
+        },
+        {
+          "id": 6,
+          "title": "Page Speed & Core Web Vitals",
+          "description": "Optimize load times with advanced caching, lazy loading, and CDN integration to meet Google's Core Web Vitals standards.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techspeed.png"
+        },
+        {
+          "id": 7,
+          "title": "E-Commerce SEO & Marketplace Optimization",
+          "description": "Boost sales and visibility on platforms like Shopify, WooCommerce, and Amazon with structured SEO strategies.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techcommerce.png"
+        },
+        {
+          "id": 8,
+          "title": "SEO-Optimized Web Development",
+          "description": "Develop websites with clean code, SEO-friendly architecture, and mobile-first design for better indexing and rankings.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techdevelopment.png"
+        },
+        {
+          "id": 9,
+          "title": "Local SEO & Google My Business Optimization",
+          "description": "Improve local search visibility with GMB optimization, citation management, and geo-targeted SEO strategies.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techlocal.png"
+        }
+      ]
+    }
   }
 };
 
