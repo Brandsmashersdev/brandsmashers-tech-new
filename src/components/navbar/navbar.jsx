@@ -36,7 +36,7 @@ const Navbar = () => {
       ]
     },
     
-    "CMS & E-Commerce Developers": {
+    "CMS & E-Commerceeee Developers": {
       items: [
         { name: "Drupal Developer", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "drupal" },
         { name: "WordPress Developer", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "wordpress" },
