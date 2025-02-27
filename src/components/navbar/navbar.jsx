@@ -45,7 +45,7 @@ const Navbar = () => {
         { name: "Java Developers", iconSrc: "/Nav-Dropdown-icons/Java.svg", path: "java" }
       ]
     },
-    "Marketinggggg": {
+    "Marketing": {
       items: [
         { name: "SEO", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "seo-developer" },
         { name: "Programmatic", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "programmatic-developer" },
