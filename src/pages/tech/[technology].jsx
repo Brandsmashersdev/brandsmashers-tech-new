@@ -1998,6 +1998,80 @@ const technologyData = {
       ]
     }
   },
+  wordpress: {
+    "title": "Hire Best WordPress Developer from India",
+    "description": "Unlock the power of WordPress with expert developers from India! At Brandsmashers Tech, we bring your vision to life with cutting-edge WordPress development services. Whether you need a custom website, theme development, plugin integration, or a complete eCommerce solution, our skilled WordPress developers craft seamless, high-performing, and SEO-friendly websites tailored to your business goals. Hire dedicated WordPress developers from India today and experience innovation, scalability, and excellence in web development!",
+    "buttonText": "Hire WordPress Developer",
+    "services": {
+      "mainTitle": "Hire Expert WordPress Developers to Elevate Your Online Presence!",
+      "subTitle": "Build dynamic, scalable, and fully customized WordPress websites with our expert developers, ensuring a high-performance web experience and optimized conversions.",
+      "services": [
+        {
+          "title": "Custom WordPress Website Development",
+          "description": "Hire our expert WordPress developers to build a unique and high-performing website from scratch. Our developers specialize in creating fully customized, SEO-friendly WordPress websites tailored to your business needs.",
+          "iconSrc": "/wordpress-techicon.png"
+        },
+        {
+          "title": "WordPress Theme Development & Customization",
+          "description": "Get a visually stunning and fully responsive WordPress theme designed for your brand. We build and customize themes to match your vision, ensuring a modern and professional web presence.",
+          "iconSrc": "/wordpress-techicon.png"
+        },
+        {
+          "title": "WordPress Plugin Development & Integration",
+          "description": "Enhance your website’s functionality with custom plugin development. Our experts create and integrate powerful plugins that improve performance, security, and user engagement.",
+          "iconSrc": "/wordpress-techicon.png"
+        },
+        {
+          "title": "WooCommerce Development for Online Stores",
+          "description": "Launch and grow your eCommerce business with a feature-rich WooCommerce website. We develop secure, scalable, and fully optimized online stores that boost sales and improve user experience.",
+          "iconSrc": "/wordpress-techicon.png"
+        },
+        {
+          "title": "WordPress Speed & Performance Optimization",
+          "description": "Improve website loading speed and overall performance with our optimization services. We fine-tune your WordPress site for fast loading, better user experience, and higher search engine rankings.",
+          "iconSrc": "/wordpress-techicon.png"
+        },
+        {
+          "title": "WordPress Security & Maintenance Services",
+          "description": "Keep your website safe, updated, and running smoothly with our expert maintenance services. We provide regular updates, security audits, and 24/7 support to ensure your site is secure and up-to-date.",
+          "iconSrc": "/wordpress-techicon.png"
+        }
+      ]
+    },
+    "carousel": {
+      "heading": {
+        "beforeHighlight": "Hire Remote ",
+        "highlight": "WordPress Developers",
+        "afterHighlight": " The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services."
+      },
+      "description": "The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services to create a seamless, high-performance website for your business.",
+      "cardsData": [
+        {
+          "id": 1,
+          "title": "WordPress + ReactJS",
+          "description": "Combine WordPress with ReactJS for high-end web solutions. Our developers build dynamic and highly interactive WordPress websites using the latest JavaScript frameworks.",
+          "icon1": "/icon-techphp.png",
+          "icon2": "/icon-techlaravel.png"
+        },
+        {
+          "id": 2,
+          "title": "WordPress + Ruby On Rails",
+          "description": "Leverage Ruby on Rails with WordPress to develop highly customized plugins and scalable web applications for advanced functionalities and seamless integrations.",
+          "icon1": "/icon-techphp.png",
+          "icon2": "/icon-techsymfony.png"
+        },
+        {
+          "id": 3,
+          "title": "WordPress + HTML",
+          "description": "Utilize HTML to create a fully customized WordPress site with tailored UI/UX. Our developers use HTML, CSS, and JavaScript to enhance design and functionality.",
+          "icon1": "/icon-techphp.png",
+          "icon2": "/icon-techmysql.png"
+        },
+      ]
+    }
+  },
+
+  
   "shopify": {
     title: "Hire Best Shopify Developer from India",
     description:" Looking for a skilled Shopify developer from India? Your search ends here! Hire top Shopify developers from Brandsmashers Tech to build secure, scalable, and high-performing eCommerce stores. Our experts ensure seamless integrations, user-friendly designs, and customized solutions tailored to meet your business needs. Hire Shopify developers today to create a feature-rich online store that drives conversions and growth.",
@@ -2043,29 +2117,29 @@ const technologyData = {
     carousel: {
       heading: {
         beforeHighlight: "Hire Remote ",
-        highlight: "Android Application Developers",
-        afterHighlight: " The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services."
+        highlight: "Shopify Developers",
+        afterHighlight: " The Shopify platform is a powerful and widely preferred solution for building high-performing eCommerce stores. Explore our range of expert Shopify development services."
       },
-      description: "The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services.",
+      description: "The Shopify platform is a powerful and widely preferred solution for building high-performing eCommerce stores. Explore our range of expert Shopify development services to create a seamless, scalable, and sales-driven online store for your business.",
       cardsData: [
         {
           id: 1,
-          title: 'Wordpress + Reactjs',
-          description: 'WordPress and ReactJS can be combined to develop high-end web solutions.We have a team of dedicated WP developer who are well-versed inReactJS as well. ',
+          title: 'Shopify + Reactjs',
+          description: 'Our dedicated Shopify developers are proficient in the latest themes, apps, and frameworks to deliver high-performing, conversion-optimized online stores',
           icon1: '/icon-techphp.png',
           icon2: '/icon-techlaravel.png'
         },
         {
           id: 2,
-          title: 'WordPress + Ruby On Rails',
-          description: 'if you want to develop highly customized plugins for website,you can use Ruby on Rails a server-side web development framework to build scalable web pages ',
+          title: 'Shopify + Ruby On Rails',
+          description: 'Our dedicated Shopify developers are proficient in the latest themes, apps, and frameworks to deliver high-performing, conversion-optimized online stores.',
           icon1: '/icon-techphp.png',
           icon2: '/icon-techsymfony.png'
         },
         {
           id: 3,
-          title: 'WordPress + AJAX',
-          description: 'AJAX can be hlpful in web application development for data exchange between wordpress and other systems seamlessly',
+          title: 'Shopify + HTML',
+          description: 'Leverage HTML to create a fully customized Shopify store with tailored UI/UX',
           icon1: '/icon-techphp.png',
           icon2: '/icon-techmysql.png'
         },
