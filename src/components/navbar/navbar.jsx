@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./navbar.module.css";
 
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -46,6 +47,13 @@ const Navbar = () => {
     }
   };
 
+  
+  const companyItems = [
+    { label: 'Who We Are', href: '/whoweare' },
+    { label: 'Career', href: '/career' },
+    { label: 'Blog', href: '/Blog' }
+  ];
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isMenuOpen && !event.target.closest(`.${styles.navbar}`)) {
@@ -77,11 +85,14 @@ const Navbar = () => {
   };
 
   const menuItems = [
+    
+    {name:"Company",hasDropdown: true },
     { name: "Hire Developers", hasDropdown: false, href: '/hiredevelopers' },
     { name: "Services", hasDropdown: false, href: '/services' },
     { name: "Technologies", hasDropdown: true },
     { name: "Blogs", hasDropdown: false, href: '/blogs' },
     { name: "About Us", hasDropdown: false, href: '/aboutus' }
+    
   ];
 
   return (
@@ -149,7 +160,22 @@ const Navbar = () => {
                 </div>
               </div>
             )}
-          </li>
+            {item.name === "Company" && (
+             <div className={`${styles.dropdownMenu} ${
+              activeDropdown === item.name ? styles.show : ''
+            }`}>
+              <ul className={styles.simpleDropdown}>
+                {companyItems.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href}>{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+         )}
+
+
+        </li>
         ))}
       </ul>
 
@@ -161,3 +187,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
