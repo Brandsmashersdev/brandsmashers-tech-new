@@ -1,17 +1,28 @@
-import React from 'react';
-import Navbar from '@/components/navbar/navbar';
-import Herosection from '@/components/Company/Herosection';
-//import Teamdesc from '@/components/Company/Teamdesc';
+
+import CultureSection from "@/components/Company/CultureSection";
+import HeroSection from "@/components/Company/Herosection";
+import Story from "@/components/Company/Story";
+import StoryBanner from "@/components/Company/StoryBanner";
+import Footer from "@/components/footer/footer";
+import Navbar from "@/components/navbar/navbar";
+import React from "react";
+import EmployeeTestimonials from "@/components/Company/EmployeeTestimonials";
+import WhoWeAre from "@/components/Company/Introduction";
+import PerksSection from "@/components/Company/PerksSection";
 
 
-const Career = () => {
+const career = () => {
   return (
     <div>
-      <Navbar />
-      <Herosection />
-      //<Teamdesc />
+        <Navbar/>
+      <HeroSection/>
+      <Story/>
+      <PerksSection/>
+      <StoryBanner/>
+      <CultureSection/>
+      <EmployeeTestimonials/> 
     </div>
   );
 };
 
-export default Career;
+export default career;

@@ -6,44 +6,16 @@ export default function MilestoneTimeline() {
   const milestones = [
     {
       id: 1,
-      title: 'Model assessment and strategy',
+      title: 'Empowering Businessses with Tech Talent, Technology, and Transformation.',
       description:
-        'Our in-house solution architects and experts perform a curated evaluation and analysis.',
-      icon: '/Nav-Dropdown-icons/Achievement.png',
+        'At Brandsmashers Tech, we are driven by a clear purpose — to bridge the gap between global businesses and exceptional remote developers. As a leading Software Development company in India, our mission is to simplify tech hiring through our best-in-class IT Staff Augmentation services, while delivering scalable and impactful digital solutions across industries.     We envision a future where innovation knows no borders and world-class teams are built without limits. Through talent, technology, and trust, we’re shaping the next generation of digital success stories.',
+        icon: '/Nav-Dropdown-icons/Achievement.png',
     },
     {
       id: 2,
-      title: 'Fully-managed large language model training',
+      title: 'Meet the Minds Behind the Mission',
       description:
-        'Using our vetted technical professionals, we build your fully managed team of model trainers.',
-      icon: '/Nav-Dropdown-icons/Achievement.png',
-    },
-    {
-      id: 3,
-      title: 'LLM data and training tasking',
-      description:
-        'You focus solely on task design while we handle coordination and operation.',
-      icon: '/Nav-Dropdown-icons/Achievement.png',
-    },
-    {
-      id: 4,
-      title: 'Quality assurance and monitoring',
-      description:
-        'We ensure every model output is validated and refined through rigorous QA protocols.',
-      icon: '/Nav-Dropdown-icons/Achievement.png',
-    },
-    {
-      id: 5,
-      title: 'Model deployment & integration',
-      description:
-        'Our team handles seamless integration of your models into production environments.',
-      icon: '/Nav-Dropdown-icons/Achievement.png',
-    },
-    {
-      id: 6,
-      title: 'Performance optimization & scaling',
-      description:
-        'We continuously monitor and enhance your models to scale with growing data and usage.',
+        'At the heart of Brandsmashers Tech is a team of passionate leaders with a bold vision and relentless drive. From steering strategic direction to nurturing a culture of excellence, our leadership team brings deep industry expertise and a shared commitment to delivering world-class IT solutions and staff augmentation services. Get to know the people powering our mission and inspiring our team of 80+ tech experts.',
       icon: '/Nav-Dropdown-icons/Achievement.png',
     },
   ];

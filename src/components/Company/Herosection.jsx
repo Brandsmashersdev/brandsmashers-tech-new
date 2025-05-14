@@ -1,34 +1,32 @@
 'use client';
 
-import Image from 'next/image';
+import Link from 'next/link';
 
-const Career = () => {
+export default function HeroSection() {
   return (
-    <div className="relative w-full h-[80vh] text-white">
-      <Image
-        src="/career.jpg"
-        alt="Career Background"
-        fill
-        priority
-        className="object-cover brightness-75"
-      />
-
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 drop-shadow-lg">
-          Careers at Brandsmashers
+    <section
+      className="bg-cover bg-center py-24 sm:py-28 md:py-32 lg:py-40 px-6 text-black text-center"
+      style={{
+        backgroundImage: "url('/Nav-Dropdown-icons/design_page.jpg')",
+        //backgroundColor: 'rgba(255, 255, 255, 0.5)', // White background with 50% opacity
+      }}
+    >
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black">
+          Join The Dream Team
         </h1>
-        <p className="text-lg sm:text-xl max-w-2xl text-white/90">
-          Be part of a fast-growing team shaping the future of technology.
+        <p className="text-lg sm:text-xl md:text-2xl mb-8 text-black max-w-3xl mx-auto">
+          At <span className="font-semibold text-[#ff5010]">Brandsmashers Tech</span>, we don’t just build technology — we build futures.
+          We’re a dynamic team of creators, coders, marketers, and dreamers who thrive on innovation and collaboration.
+          If you're looking to grow, challenge yourself, and make an impact, your journey starts here.
         </p>
-        <a
-          href="#apply"
-          className="mt-8 inline-block bg-[#ff5010] hover:bg-[#e04810] text-white font-bold py-3 px-8 rounded-full shadow-md transition duration-300"
+        <Link
+          href="/careers"
+          className="inline-block bg-[#ff5010] text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-600 transition-all duration-200"
         >
           Apply Now
-        </a>
+        </Link>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Career; // ✅ Make sure you're exporting the component
+}
