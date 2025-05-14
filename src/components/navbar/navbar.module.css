@@ -87,7 +87,7 @@
 /* Dropdown Grid Layout */
 .dropdownGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
   background: transparent;
 }
@@ -148,18 +148,18 @@
 /* Contact Button Styles */
 .contactBtn {
   padding: 8px 16px;
-  background-color: #2CC5D9;
+  background-color: #ff5010;
   border: none;
-  color: #343333;
+  color: #ffffff;
   font-weight: 500;
   cursor: pointer;
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
-.contactBtn:hover {
+/* .contactBtn:hover {
   background-color: #00a0a5;
-}
+} */
 
 .contactBtn a {
   text-decoration: none;
