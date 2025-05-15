@@ -205,9 +205,9 @@ const ContactPage = () => {
       newErrors.phone = 'Please enter a valid 10-digit phone number';
     }
 
-    if (!helpType) {
-      newErrors.helpType = 'Please select how we can help';
-    }
+    // if (!helpType) {
+    //   newErrors.helpType = 'Please select how we can help';
+    // }
 
     if (!formData.skills) {
       newErrors.skills = 'Please select your skills';
