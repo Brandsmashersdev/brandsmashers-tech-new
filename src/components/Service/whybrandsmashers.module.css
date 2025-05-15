@@ -37,12 +37,12 @@
     font-size: 1.125rem;
     font-weight: 600;
     font-style: italic;
-    color: #000;
+    color:#000;
   }
   
   .description {
     font-size: 0.875rem;
-    color: #000;
+    color: #0000;
   }
   
   /* Card background colors */

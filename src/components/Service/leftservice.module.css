@@ -1,7 +1,7 @@
 .serviceContainer {
     width: 100%;
     min-height: 500px;
-    background:#343333;
+    background:white;
     color: white;
     padding: 2rem;
     padding-left: 7%;
@@ -43,23 +43,23 @@
   }
   
   .highlight {
-    color: #2CC5D9;
+    color: #ff5010;
   }
   
   .highlightoverlay {
-    color: #343333;
+    color: black;
   }
   
   .subtitle {
     text-align: left;
-    color: #2CC5D9;
+    color: black;
     font-size: 20px;
     line-height: 29px;
     font-style: italic;
   }
   
   .textContent p {
-    color: #FFFFFF;
+    color: black;
     font-size: 18px;
     font-style: italic;
     font-weight: 500;
@@ -87,7 +87,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 21rem;
-    background: #2CC5D9;
+    background: #ff5010;
     padding: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-top-right-radius: 70px;
