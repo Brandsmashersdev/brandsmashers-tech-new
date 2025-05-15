@@ -13,39 +13,46 @@ const ToggleIcon = ({ isOpen, background }) => (
 const faqData = [
   {
     question: "What services does Brandsmashers Tech offer?",
-    answer: "Brand Smashers Tech is an innovative software development company, that can offer a full range of IT services, such as custom software development, web and mobile application development, UI/UX design, e-commerce Website development, SEO and advertising. The services also include staff augmentation here we provide businesses with experienced remote developers for hire. No matter whether you require development of custom software solution or custom digital marketing solution for your business, you can be assured to get professional solutions from us with adequate technical competence for designing the perfect solution for your business.",
-    background: "#FEE2E1"
+    answer:
+      "Brand Smashers Tech is an innovative software development company, offering a full range of IT services, including custom software development, web and mobile app development, UI/UX design, e-commerce solutions, SEO, advertising, and staff augmentation with remote developers.",
+    background: "#FEE2E1",
   },
   {
     question: "How does Brandsmashers Tech ensure the quality of its developers?",
-    answer: "When it comes to selecting developers at Brandsmashers Tech, we do not let loose anyone who does not conform to the highest standards set in this industry. The team assembled by our company comprises professional developers familiar with advanced technologies including React, Node.js and Java. Based in Bhopal, we are a software development company that strives to provide the best as a result of that, we make sure our developers are always up to date with new technologies through training and performance evaluations.. This guarantees that every project is handled by qualified experts who deliver quality solutions on time.",
-    background: "#FEF9C3"
+    answer:
+      "We hire only developers who meet high industry standards. Our team is proficient in React, Node.js, and Java. Regular training and evaluations keep them up-to-date, ensuring top-quality project execution.",
+    background: "#FEF9C3",
   },
   {
     question: "Can Brandsmashers Tech scale a team for a large project?",
-    answer: "Absolutely. Brandsmashers Tech employs the capability of acquiring development teams for big-scale and complicated projects. We are one of the leading software development companies in India and our staff augmentation services enable clients to quickly scale their team with professional developers, regardless of the current trends, to meet project needs immediately.",
-    background: "#F3E8FF"
+    answer:
+      "Absolutely. We specialize in assembling skilled teams quickly for large-scale and complex projects. Our staff augmentation services help scale efficiently to meet immediate demands.",
+    background: "#F3E8FF",
   },
   {
     question: "What technologies do your developers specialize in?",
-    answer: "Our developers at Brandsmashers Tech specialize in a wide array of technologies, including React, Vue.js, Node.js, Java, React Native, and AWS. This diverse skill set allows us to offer innovative solutions tailored to your business needs. Whether youre looking for a custom-built application or need to improve your existing systems, our expertise as a leading software development company ensures you get the best technical solutions.",
-    background: "#FCDFA4"
+    answer:
+      "Our team works with React, Vue.js, Node.js, Java, React Native, and AWS. This diverse expertise ensures tailored and innovative tech solutions for any business need.",
+    background: "#FCDFA4",
   },
   {
     question: "Do you offer post-launch support?",
-    answer: "Of course, we provide post-launch assistance for all the projects which have been developed by our fleet of professionals. Being a reliable company, which provides software development in Bhopal, we realize that you might change your requirements after the project is completed. These are steps such as bug fixes, upgrades, and adding qualities to software applications which we undertake to assist in maintaining your software throughout its usage.",
-    background: "#B4E9FF"
+    answer:
+      "Yes, we provide post-launch support including bug fixes, updates, and feature enhancements to ensure your software stays current and functional.",
+    background: "#B4E9FF",
   },
   {
     question: "What is your typical project timeline?",
-    answer: "The time it takes to complete projects can therefore not be generalized but it depends on the project at Brandsmashers Tech. The time required from the conceptual stage to project completion in SMM varies, and it normally ranges from 4 weeks in a small project to 12 weeks in an mid-sized project. We are a top software development company that employs the agile software development approach, making changes and reporting to the customer on progress constantly. The project deadlines are particularly well managed through teamwork with the clients to enhance quality.",
-    background: "#DCFCE7"
+    answer:
+      "Timelines vary by project. Small projects take around 4 weeks, while mid-sized ones can take up to 12 weeks. We use agile practices for transparent and efficient delivery.",
+    background: "#DCFCE7",
   },
   {
     question: "What industries do you serve?",
-    answer: "Our solutions at Brandsmashers Tech range across most sectors such as e-commerce and online businesses, healthcare, education, logistics, agriculture, among others. CIM has been an established software company in India and provides our solutions as per the specific requirements of each of these sectors to ensure the optimum utilization and development of our services. Regardless of whether your organization operates in the retail or the healthcare industry we provide the necessary knowledge to match your business environment and ensure success.",
-    background: "#DBE9FE"
-  }
+    answer:
+      "We serve various industries such as e-commerce, healthcare, education, logistics, and agriculture, tailoring our solutions to meet each sector's unique requirements.",
+    background: "#DBE9FE",
+  },
 ];
 
 const FAQSection = () => {
@@ -56,54 +63,62 @@ const FAQSection = () => {
   };
 
   return (
-    <div className=" p-8">
-      <div className=" mx-auto md:w-4/5 ">
+    <div className="bg-black text-white p-8">
+      <div className="mx-auto md:w-4/5">
         {/* Header Section */}
-        <div className="flex justify-between items-center mb-[4rem] gap-6 ">
+        <div className="flex justify-between items-center mb-12 gap-6 flex-col md:flex-row">
           {/* Left Section */}
-          <h1 className="text-xl md:text-3xl font-bold text-white">
-            Frequently Asked
-            <span style={{ color: '#2CC5D9' }}> Questions</span>
+          <h1 className="text-3xl md:text-5xl font-bold">
+            Frequently Asked <span className="text-orange-500">Questions</span>
           </h1>
-          
+
           {/* Right Section */}
-          <div className="">
-            <h2 className="text-white text-xl md:text-2xl ">Still Have Questions?</h2>
-            <a href="/contactus" style={{ color: '#2CC5D9' }} className="text-lg md:text-xl hover:underline">Lets Talk</a>
+          <div className="text-center md:text-right">
+            <h2 className="text-xl md:text-2xl">Still Have Questions?</h2>
+            <a
+              href="/contactus"
+              className="text-lg md:text-xl text-orange-400 hover:underline"
+            >
+              Let’s Talk
+            </a>
           </div>
         </div>
 
         {/* FAQ Section */}
-        <div className="space-y-4 max-w-full  ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {faqData.map((faq, index) => (
             <div key={index} className="transition-all duration-300">
-              {/* Question */}
+              {/* Question Card */}
               <div
-                className=" cursor-pointer"
+                onClick={() => toggleQuestion(index)}
+                className="cursor-pointer border-t-4 shadow-md"
                 style={{
-                  backgroundColor: faq.background,
-                  borderRadius: "6px",
+                  backgroundColor: "#111827",
+                  borderTopColor: "#F97316",
+                  borderRadius: "0.5rem",
                 }}
               >
-                <div
-                  className="flex justify-between  items-center p-4 md:p-6"
-                  onClick={() => toggleQuestion(index)}
-                >
-                  <h3 className="font-bold text-lg md:text-xl font-bold italic text-black">
+                <div className="flex justify-between items-center p-4 md:p-6">
+                  <h3 className="text-white text-lg md:text-xl font-semibold italic">
                     {faq.question}
                   </h3>
-                  <div className="transition-transform duration-300">
-                    <ToggleIcon isOpen={activeIndex === index} background={faq.background} />
-                  </div>
+                  <ToggleIcon isOpen={activeIndex === index} background="#F97316" />
                 </div>
               </div>
 
-              {/* Answer */}
+              {/* Answer Section */}
               <div
-                style={{ backgroundColor: faq.background }}
-                className={`overflow-hidden transition-all duration-300 ${activeIndex === index ? 'max-h-[500px]' : 'max-h-0'}`}
+                style={{
+                  backgroundColor: "#111827",
+                  borderRadius: "0.5rem",
+                }}
+                className={`overflow-hidden transition-all duration-300 ${
+                  activeIndex === index ? 'max-h-[500px]' : 'max-h-0'
+                }`}
               >
-                <p className="p-4 md:p-6 text-sm md:text-xl italic text-black">{faq.answer}</p>
+                <p className="p-4 md:p-6 text-sm md:text-lg text-gray-300 leading-relaxed">
+                  {faq.answer}
+                </p>
               </div>
             </div>
           ))}

@@ -1505,7 +1505,7 @@ const technologyData = {
   "php-developer": {
     title: "Hire Best PHP Developer from India",
     description:" Looking for a skilled PHP developer from India? Your search ends here At Brandsmashers Tech, we specialize in providing top-tier PHP development services to help you build dynamic, scalable, and secure web applications. Our expert PHP developers use the latest frameworks and technologies to create high-performance, user-friendly solutions tailored to your business needs. Hire PHP developers from India today and transform your web development with robust and efficient PHP solutions",
-    buttonText: "Hire Dotnet Developer",
+    buttonText: "Hire php Developer",
     services: {
       mainTitle: "Hire Skilled PHP Developers to Drive Your Business Growth",
       // highlightedWord: "App Developers",
