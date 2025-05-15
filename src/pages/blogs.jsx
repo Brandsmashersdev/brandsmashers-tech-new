@@ -8,11 +8,13 @@ import BlogPage from "@/components/Blogs/blogcards";
 const blogs = () => {
   return (
     <div>
+
       <Navbar />
       <BlogsHeroSection/>
       <BlogPage/>
       {/* <BlogDetails/> */}
       <Footer />
+      
     </div>
   );
 };
