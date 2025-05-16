@@ -129,69 +129,64 @@ export default function MobileAppDevelopmentPage() {
   };
   
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-md py-4 px-6 md:px-12">
-        <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold" style={{ color: primaryColor }}>
-            Brandsmashers
-          </div>
-          <div className="hidden md:flex space-x-6">
-            <a href="#" className="hover:text-gray-500">Home</a>
-            <a href="#" className="hover:text-gray-500">Services</a>
-            <a href="#" className="hover:text-gray-500">About</a>
-            <a href="#" className="hover:text-gray-500">Portfolio</a>
-            <a href="#" className="hover:text-gray-500">Contact</a>
-          </div>
-          <button 
-            className="rounded-md px-6 py-2 text-white"
-            style={{ backgroundColor: primaryColor }}
-          >
-            Get a Quote
-          </button>
+     <div className="flex flex-col min-h-screen bg-gray-50">
+      {/* Hero Section with Background Image - IMPROVED TEXT LAYOUT */}
+      <section 
+        className="py-16 px-6 md:px-12 text-white relative bg-gray-900 flex-grow"
+      >
+        {/* Background Image with Overlay */}
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1536148935331-408321065b18?q=80&w=1920&auto=format&fit=crop')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Darker Overlay for Better Text Contrast */}
+          <div className="absolute inset-0 bg-black opacity-80"></div>
         </div>
-      </nav>
 
-      {/* Hero Section */}
-      <section className="py-16 px-6 md:px-12 bg-gray-900 text-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Mobile App Development Company
+              {/* Modified title to ensure it stays on one line */}
+              <h1 
+                className="text-4xl md:text-5xl font-bold mb-6 whitespace-nowrap" 
+                style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}
+              >
+                Mobile App Development
               </h1>
-              <p className="text-lg mb-8">
-                Build fast, secure, and feature-rich mobile apps tailored to your business goals. From iOS to Android, we deliver seamless cross-platform experiences that engage users and drive real results.
-              </p>
+              {/* Modified paragraph to create two distinct lines */}
+              <div className="text-lg mb-8 font-medium text-white">
+                <p className="mb-2">
+                  Build fast, secure, and feature-rich mobile apps tailored to your
+                  business goals. From iOS to Android, we deliver seamless cross-platform
+                  experiences that engage users and drive real results.
+                </p>
+              </div>
               <div className="flex space-x-4">
                 <button 
-                  className="rounded-md px-6 py-3 font-medium flex items-center"
+                  className="rounded-md px-6 py-3 font-bold flex items-center"
                   style={{ backgroundColor: primaryColor }}
                 >
-                  Start Your Project <ArrowRight className="ml-2" size={18} />
+                  Get Started <ArrowRight className="ml-2" size={18} />
                 </button>
-                <button className="rounded-md px-6 py-3 bg-transparent border border-white font-medium">
+                <button className="rounded-md px-6 py-3 bg-transparent border-2 border-white font-bold">
                   Learn More
                 </button>
               </div>
             </div>
-            <div className="hidden md:block">
-              <img 
-                src="/api/placeholder/600/400" 
-                alt="Mobile App Development" 
-                className="rounded-lg shadow-lg"
-              />
-            </div>
           </div>
         </div>
       </section>
-
+    
       {/* Services Section */}
       <section className="py-16 px-6 md:px-12 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Mobile App Development Services</h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+            <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
               Transform your ideas into high-performing mobile apps with end-to-end development services tailored for iOS, Android, and cross-platform solutions.
             </p>
           </div>
@@ -206,7 +201,7 @@ export default function MobileAppDevelopmentPage() {
                   <div style={{ color: primaryColor }}>{service.icon}</div>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <p className="text-gray-800">{service.description}</p>
               </div>
             ))}
           </div>
@@ -223,7 +218,8 @@ export default function MobileAppDevelopmentPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Your Trusted Partner for Scalable and Custom Mobile App Development
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-300">
+            {/* Improved visibility for paragraph text */}
+            <p className="max-w-3xl mx-auto text-lg font-medium text-white">
               At Brandsmashers Tech, we build custom mobile apps that are scalable, secure, and user-friendly. From idea to launch, our expert team ensures your app meets your business goals and delivers a seamless user experience.
             </p>
           </div>
@@ -231,27 +227,27 @@ export default function MobileAppDevelopmentPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-800 p-6 rounded-lg">
               <div className="text-4xl font-bold mb-2" style={{ color: primaryColor }}>200+</div>
-              <p className="text-gray-300">Apps Delivered</p>
+              <p className="text-white font-medium">Apps Delivered</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg">
               <div className="text-4xl font-bold mb-2" style={{ color: primaryColor }}>50+</div>
-              <p className="text-gray-300">Tech Experts</p>
+              <p className="text-white font-medium">Tech Experts</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg">
               <div className="text-4xl font-bold mb-2" style={{ color: primaryColor }}>95%</div>
-              <p className="text-gray-300">Client Satisfaction</p>
+              <p className="text-white font-medium">Client Satisfaction</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg">
               <div className="text-4xl font-bold mb-2" style={{ color: primaryColor }}>8+</div>
-              <p className="text-gray-300">Years Experience</p>
+              <p className="text-white font-medium">Years Experience</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg">
               <div className="text-4xl font-bold mb-2" style={{ color: primaryColor }}>100%</div>
-              <p className="text-gray-300">Project Delivery</p>
+              <p className="text-white font-medium">Project Delivery</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg">
               <div className="text-4xl font-bold mb-2" style={{ color: primaryColor }}>24/7</div>
-              <p className="text-gray-300">Support</p>
+              <p className="text-white font-medium">Support</p>
             </div>
           </div>
         </div>
@@ -267,7 +263,7 @@ export default function MobileAppDevelopmentPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Hire a Custom Mobile App Developer As Per Your Requirements
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+            <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
               Simple & Transparent Pricing | Fully Signed NDA | Code Security | Easy Exit Policy
             </p>
           </div>
@@ -275,7 +271,7 @@ export default function MobileAppDevelopmentPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-lg font-medium mb-4">Basic</div>
-              <div className="text-4xl font-bold mb-6" style={{ color: primaryColor }}>$25<span className="text-lg text-gray-500">/hr</span></div>
+              <div className="text-4xl font-bold mb-6" style={{ color: primaryColor }}>$25<span className="text-lg text-gray-800">/hr</span></div>
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> Basic Features</li>
                 <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> Single Platform</li>
@@ -299,7 +295,7 @@ export default function MobileAppDevelopmentPage() {
                 Most Popular
               </div>
               <div className="text-lg font-medium mb-4 mt-4">Standard</div>
-              <div className="text-4xl font-bold mb-6" style={{ color: primaryColor }}>$40<span className="text-lg text-gray-400">/hr</span></div>
+              <div className="text-4xl font-bold mb-6" style={{ color: primaryColor }}>$40<span className="text-lg text-white">/hr</span></div>
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> Advanced Features</li>
                 <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> Cross-Platform</li>
@@ -315,7 +311,7 @@ export default function MobileAppDevelopmentPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-lg font-medium mb-4">Premium</div>
-              <div className="text-4xl font-bold mb-6" style={{ color: primaryColor }}>$60<span className="text-lg text-gray-500">/hr</span></div>
+              <div className="text-4xl font-bold mb-6" style={{ color: primaryColor }}>$60<span className="text-lg text-gray-800">/hr</span></div>
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> All Features</li>
                 <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> All Platforms</li>
@@ -339,7 +335,7 @@ export default function MobileAppDevelopmentPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Mobile App Development Process</h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+            <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
               We follow a streamlined process to deliver high-quality mobile apps—from idea validation and UI/UX design to agile development, testing, and launch.
             </p>
           </div>
@@ -355,7 +351,7 @@ export default function MobileAppDevelopmentPage() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+                  <p className="text-gray-800">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -371,7 +367,7 @@ export default function MobileAppDevelopmentPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">App Development Technologies We Work On</h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+            <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
               Leverage the expertise of a top app development company to build high-performance, feature-rich mobile apps.
             </p>
           </div>
@@ -397,7 +393,7 @@ export default function MobileAppDevelopmentPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Brandsmashers Tech Is a Smart Choice for Custom Mobile App Development
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+            <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
               Brandsmashers Tech stands out as a smart choice for custom mobile app development with its blend of innovation, expertise, and client-first approach.
             </p>
           </div>
@@ -413,7 +409,7 @@ export default function MobileAppDevelopmentPage() {
                   />
                   {advantage.title}
                 </h3>
-                <p className="text-gray-600">{advantage.description}</p>
+                <p className="text-gray-800">{advantage.description}</p>
               </div>
             ))}
           </div>
@@ -422,17 +418,53 @@ export default function MobileAppDevelopmentPage() {
 
       {/* Call to Action */}
       <section 
-        className="py-16 px-6 md:px-12 text-white"
-        style={{ backgroundColor: primaryColor }}
+        className="py-16 px-6 md:px-12 text-white bg-black relative overflow-hidden"
       >
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Build Your Mobile App?</h2>
-          <p className="max-w-2xl mx-auto text-lg mb-8">
+        {/* Small orange accent shape */}
+        <div 
+          className="absolute -bottom-10 right-0 w-32 h-32 md:w-64 md:h-64 bg-orange-500 rounded-full opacity-10"
+        ></div>
+        
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Ready to Build Your <span className="text-orange-500">Mobile App?</span>
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg mb-12 text-white font-medium">
             Let's transform your idea into a powerful mobile application that drives growth and engages users.
           </p>
-          <button className="bg-white px-8 py-3 rounded-md font-medium" style={{ color: primaryColor }}>
-            Get a Free Consultation
-          </button>
+          <div className="inline-block mb-16">
+            <button 
+              className="bg-transparent hover:bg-orange-500 transition-colors px-8 py-3 rounded-md font-medium text-white border-2 border-orange-500 hover:border-orange-500"
+            >
+              Get a Free Consultation
+            </button>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center md:space-x-16 space-y-6 md:space-y-0">
+            <div className="flex items-center justify-center">
+              <div className="h-10 w-10 rounded-full bg-black border-2 border-orange-500 flex items-center justify-center mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-orange-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <span className="font-medium">24/7 Support</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="h-10 w-10 rounded-full bg-black border-2 border-orange-500 flex items-center justify-center mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-orange-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <span className="font-medium">Expert Developers</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="h-10 w-10 rounded-full bg-black border-2 border-orange-500 flex items-center justify-center mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-orange-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <span className="font-medium">Fast Delivery</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -441,7 +473,7 @@ export default function MobileAppDevelopmentPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-800 font-medium">
               Find answers to common questions about our mobile app development services.
             </p>
           </div>
@@ -463,7 +495,7 @@ export default function MobileAppDevelopmentPage() {
                   }
                 </button>
                 {activeFaq === index && (
-                  <div className="p-4 pt-0 text-gray-600 border-t">
+                  <div className="p-4 pt-0 text-gray-800 border-t">
                     {item.answer}
                   </div>
                 )}
@@ -479,13 +511,13 @@ export default function MobileAppDevelopmentPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="text-2xl font-bold mb-4" style={{ color: primaryColor }}>Brandsmashers</div>
-              <p className="text-gray-400">
+              <p className="text-white">
                 Top-rated mobile app development company specialized in creating intuitive, scalable, and secure applications.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-medium mb-4">Services</h3>
-              <ul className="space-y-2 text-gray-400">
+              <ul className="space-y-2 text-white">
                 <li>Android App Development</li>
                 <li>iOS App Development</li>
                 <li>Cross-platform Development</li>
@@ -495,7 +527,7 @@ export default function MobileAppDevelopmentPage() {
             </div>
             <div>
               <h3 className="text-lg font-medium mb-4">Company</h3>
-              <ul className="space-y-2 text-gray-400">
+              <ul className="space-y-2 text-white">
                 <li>About Us</li>
                 <li>Case Studies</li>
                 <li>Testimonials</li>
@@ -505,14 +537,14 @@ export default function MobileAppDevelopmentPage() {
             </div>
             <div>
               <h3 className="text-lg font-medium mb-4">Contact Us</h3>
-              <ul className="space-y-2 text-gray-400">
+              <ul className="space-y-2 text-white">
                 <li>info@brandsmashers.com</li>
                 <li>+1 (123) 456-7890</li>
-                <li>123 Tech Street, San Francisco, CA</li>
+                <li>Govindpura, Bhopal</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-white">
             © {new Date().getFullYear()} Brandsmashers Tech. All rights reserved.
           </div>
         </div>
