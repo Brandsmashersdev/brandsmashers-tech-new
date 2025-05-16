@@ -8,6 +8,7 @@ function mobileAppDevelopmentService() {
     <div>
       <Navbar />
      <MobileAppDevelopment/>
+     <Footer/>
     </div>
   )
 }

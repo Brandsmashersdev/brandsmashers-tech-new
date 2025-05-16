@@ -9,7 +9,7 @@ function DigitalMarketingServicesPage() {
       <Navbar />
       {/* <HeroSection /> */}
       <DigitalMarketingServices />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

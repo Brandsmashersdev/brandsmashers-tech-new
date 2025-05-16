@@ -272,11 +272,11 @@ export default function CustomSoftwareDevelopmentPage() {
     };
 
   return (
-    <div className="font-sans text-gray-800">
+    <div className="font-sans text-gray-800 bg-black">
       {/* Hero Section */}
       <header className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white" 
        style={{
-        backgroundImage: `url(https://i0.wp.com/eastgate-software.com/wp-content/uploads/2024/05/Custom-Software-Development-1024x538-1.webp?fit=1024%2C538&ssl=1)`,
+        // backgroundImage: `url(https://i0.wp.com/eastgate-software.com/wp-content/uploads/2024/05/Custom-Software-Development-1024x538-1.webp?fit=1024%2C538&ssl=1)`,
         backgroundSize:'cover'
      }}
      >
@@ -548,52 +548,7 @@ export default function CustomSoftwareDevelopmentPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Brandsmashers Tech</h3>
-              <p className="text-gray-400 mb-6">
-                Your trusted partner for custom software development that drives innovation and business growth.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>Custom Software Development</li>
-                <li>Enterprise Software Solutions</li>
-                <li>Software Product Development</li>
-                <li>API Development</li>
-                <li>Software Integration</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>About Us</li>
-                <li>Our Team</li>
-                <li>Careers</li>
-                <li>Blog</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Contact</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>info@brandsmashers.com</li>
-                <li>+91 123 456 7890</li>
-                <li>New Delhi, India</li>
-              </ul>
-              <div className="flex space-x-4 mt-4">
-                {/* Social media icons would go here */}
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© 2025 Brandsmashers Tech. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+  
     </div>
   );
 }

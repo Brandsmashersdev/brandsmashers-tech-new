@@ -10,6 +10,7 @@ function ProductDevelopmentPage() {
       <ProductDevelopment />
       {/* Uncomment if needed */}
       {/* <HeroSection /> */}
+      <Footer/>
       
     </div>
   )

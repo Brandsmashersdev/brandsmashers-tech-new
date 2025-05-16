@@ -36,7 +36,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-gray-900 to-black text-white">
+    <footer className="relative bg-gradient-to-b from-black to-black text-white">
       {/* Diagonal border top */}
       <div className="absolute top-0 left-0 right-0 h-12 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-12 bg-gray-900" 
