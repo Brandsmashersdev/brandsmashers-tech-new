@@ -478,7 +478,9 @@ export default function CustomSoftwareDevelopmentPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {["Healthcare", "Finance", "E-Commerce"].map((industry) => (
               <div key={industry} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                <div className="h-48 bg-gray-300"></div>
+                <div className="h-48 bg-gray-300">
+                  {/* <img src="https://i.pinimg.com/736x/d9/dc/07/d9dc073561f34685fd7622aa73bebee3.jpg" className="h-48 w-full bg-cover bg-center"/> */}
+                </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{industry} Solution</h3>
                   <p className="text-gray-600 mb-4">How we helped a {industry.toLowerCase()} company streamline operations and boost efficiency with custom software.</p>

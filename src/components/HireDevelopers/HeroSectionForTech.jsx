@@ -33,11 +33,11 @@ const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
           {/* Image Container */}
           <div className="w-full md:w-1/2 relative">
             <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl">
-              <img
+               <img
                 src={imageSrc}
                 alt="Hero Section Image"
                 className="w-full h-auto object-contain"
-              />
+              /> 
             </div>
             <div className="absolute -top-6 -right-6 w-64 h-64 bg-orange-100 rounded-full -z-0 blur-xl opacity-70"></div>
             <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[#ff5010] rounded-full -z-0 blur-xl opacity-20"></div>
