@@ -1,64 +1,76 @@
 import React, { useState } from 'react';
-import { Check, ChevronDown, Code, Database, Globe, Server, Cpu, Cloud, Smartphone, Palette, Users, Brain, BarChart3 } from 'lucide-react';
-import styles from './ContactPage.module.css';
-import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
+import { Check, ChevronDown, Code, Database, Globe, Server, 
+         Cpu, Cloud, Smartphone, Palette, Users, Brain, 
+         BarChart3, Send, Phone, Mail, User, Rocket, Award, Zap } from 'lucide-react';
 import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
-const TextCarousel = () => {
+// Improved gradient background with new theme color
+const GradientBackground = () => {
   return (
-    <div className={styles.textCarouselContainer}>
-      <div className={styles.textCarouselTrack}>
-        {[...Array(10)].map((_, index) => (
-          <span key={index} className={styles.carouselText}>
-            Brandsmashers Tech
-          </span>
-        ))}
-      </div>
+    <div className="absolute inset-0 -z-10 overflow-hidden">
+      <div className="absolute top-0 left-0 w-96 h-96 bg-orange-500 opacity-20 rounded-full blur-3xl"></div>
+      <div className="absolute top-64 right-0 w-80 h-80 bg-orange-600 opacity-20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-red-500 opacity-20 rounded-full blur-3xl"></div>
     </div>
   );
 };
 
+// Improved Badge component with better spacing and visual appeal
+const Badge = ({ icon, text }) => {
+  return (
+    <div className="flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-3 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300">
+      <span className="font-bold text-white bg-gradient-to-r from-orange-500 to-red-500 w-8 h-8 flex items-center justify-center rounded-full shadow-lg">
+        {icon}
+      </span>
+      <span className="text-sm text-gray-200">{text}</span>
+    </div>
+  );
+};
 
-const IconSlider = () => {
-  const iconRows = [
-    [
-      { icon: <Code className={styles.techIcon} />, label: "Frontend" },
-      { icon: <Database className={styles.techIcon} />, label: "Backend" },
-      { icon: <Globe className={styles.techIcon} />, label: "Web Dev" },
-      { icon: <Brain className={styles.techIcon} />, label: "AI/ML" },
-      { icon: <Smartphone className={styles.techIcon} />, label: "Mobile App" },
-      { icon: <Users className={styles.techIcon} />, label: "UI/UX" },
-      { icon: <BarChart3 className={styles.techIcon} />, label: "Data Dive" }
-    ]
+// Improved Tech icons with better layout and hover effects
+const TechIcons = () => {
+  const technologies = [
+    { icon: <Code size={20} />, label: "Frontend" },
+    { icon: <Database size={20} />, label: "Backend" },
+    { icon: <Globe size={20} />, label: "Web Dev" },
+    { icon: <Brain size={20} />, label: "AI/ML" },
+    { icon: <Smartphone size={20} />, label: "Mobile" },
+    { icon: <Users size={20} />, label: "UI/UX" },
+    { icon: <BarChart3 size={20} />, label: "Data" }
   ];
 
   return (
-    <div className={styles.iconSliderContainer}>
-      {iconRows.map((row, rowIndex) => (
-        <div key={rowIndex} className={styles.iconRow}>
-          <div className={styles.slideTrack}>
-            {[...row, ...row, ...row, ...row, ...row, ...row, ...row, ...row, ...row, ...row].map((item, index) => (
-              <div key={index} className={styles.iconBox}>
-                {item.icon}
-                <span className={styles.iconLabel}>{item.label}</span>
-              </div>
-            ))}
-          </div>
+    <div className="flex flex-wrap gap-3 justify-center my-8">
+      {technologies.map((tech, index) => (
+        <div 
+          key={index} 
+          className="group flex items-center gap-2 bg-white/10 backdrop-blur-sm p-3 px-4 rounded-full cursor-pointer transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-500/30 hover:to-red-500/30 border border-white/10 hover:border-orange-500/30"
+        >
+          <span className="text-gray-300 group-hover:text-white transition-colors">{tech.icon}</span>
+          <span className="text-sm text-gray-300 group-hover:text-white transition-colors font-medium">{tech.label}</span>
         </div>
       ))}
     </div>
   );
 };
-const toastConfig = {
-  position: "top-right",
-  autoClose: 3000,
-  hideProgressBar: false,
-  closeOnClick: true,
-  pauseOnHover: true,
-  draggable: true,
-  style: { background: '#2CC5D9', color: 'white' }
+
+// New component: Featured Clients for social proof
+const FeaturedClients = () => {
+  return (
+    <div className="mt-8 mb-6">
+      <h3 className="text-gray-400 text-sm uppercase tracking-wider mb-3 font-medium">Trusted By</h3>
+      <div className="flex flex-wrap gap-4 items-center">
+        <div className="bg-white/5 px-3 py-2 rounded-md text-gray-300 text-xs font-medium">Google</div>
+        <div className="bg-white/5 px-3 py-2 rounded-md text-gray-300 text-xs font-medium">Microsoft</div>
+        <div className="bg-white/5 px-3 py-2 rounded-md text-gray-300 text-xs font-medium">Amazon</div>
+        <div className="bg-white/5 px-3 py-2 rounded-md text-gray-300 text-xs font-medium">Meta</div>
+        <div className="bg-white/5 px-3 py-2 rounded-md text-gray-300 text-xs font-medium">+ 50 more</div>
+      </div>
+    </div>
+  );
 };
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -93,6 +105,16 @@ const ContactPage = () => {
     'Blog/News/Article',
     'Friend/Colleague'
   ];
+
+  const toastConfig = {
+    position: "top-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    style: { background: '#ff5010', color: 'white' }
+  };
 
   const validateName = (name) => {
     const nameRegex = /^[A-Za-z\s]+$/;
@@ -168,21 +190,24 @@ const ContactPage = () => {
       newErrors.lastName = 'Please enter only letters';
     }
 
+
+
     if (!formData.email) {
       newErrors.email = 'Email is required';
     } else if (!validateEmail(formData.email)) {
       newErrors.email = 'Please enter a valid email';
     }
 
+  
     if (!formData.phone) {
       newErrors.phone = 'Phone number is required';
     } else if (!validatePhone(formData.phone)) {
       newErrors.phone = 'Please enter a valid 10-digit phone number';
     }
 
-    if (!helpType) {
-      newErrors.helpType = 'Please select how we can help';
-    }
+    // if (!helpType) {
+    //   newErrors.helpType = 'Please select how we can help';
+    // }
 
     if (!formData.skills) {
       newErrors.skills = 'Please select your skills';
@@ -195,7 +220,8 @@ const ContactPage = () => {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-  const handleSubmit = async (e) => {
+  
+  const handleSubmit = async(e) => {
     e.preventDefault();
   
     if (validateForm()) {
@@ -237,196 +263,260 @@ const ContactPage = () => {
     }
   };
 
+  // Hex color #ff5010 converted to RGB values for customization
+  const themeColor = '#ff5010';
+
   return (
-    <div className={styles.pageWrapper}>
+    <div className="min-h-screen bg-gray-900 text-white relative">
       <ToastContainer />
-      <div className={styles.contactContainer}>
-        <div className={styles.contactWrapper}>
-          {/* Left Section */}
-          <div className={styles.leftSection}>
-            <div className={styles.headerContent}>
-              <h1 className={styles.mainTitle}>
-                <span className={styles.brandName}>Brandsmashers</span>
-                <span className={styles.techText}> Tech.</span>
+      <GradientBackground />
+      
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col lg:flex-row gap-16 items-stretch">
+          {/* Left section - About - IMPROVED FORMATTING */}
+          <div className="lg:w-5/12 space-y-6">
+            {/* Improved heading with better text hierarchy */}
+            <div className="mb-8">
+              <div className="inline-block px-3 py-1 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full text-orange-500 text-xs font-semibold tracking-wider mb-4">
+                TECH TALENT EXPERTS
+              </div>
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">Brandsmashers</span> Tech.
               </h1>
-              <h2 className={styles.subTitle}>
-                Work With <span className={styles.highlight}>Only The</span>
-                <br />
-                Top Pre-vetted <span className={styles.highlight}>Tech Talent</span>
+              <h2 className="text-xl md:text-2xl font-semibold text-white/80 leading-relaxed">
+                Work With <span className="text-orange-500">Only The</span>
+                <br className="hidden md:block" />
+                Top Pre-vetted <span className="text-orange-500">Tech Talent</span>
               </h2>
             </div>
-            <div>
-              <div className={styles.badgeContainer}>
-                <div className={styles.badge}>
-                  <span className={styles.badgeIcon}>in</span>
-                  <span className={styles.badgeText}>Top 20 Indians Startups of 2023</span>
-                </div>
-                <div className={styles.badge}>
-                  <span className={styles.badgeIcon}>G</span>
-                  <span className={styles.badgeText}>AI Bootcamp Top 20</span>
-                </div>
-              </div>
-              <p className={styles.tagline}>
-                Top Devs, Trusted by The <span className={styles.highlight}>Best</span> in Business
-              </p>
+            
+            {/* Improved badges with better layout */}
+            <div className="flex flex-col md:flex-row gap-4 mb-8">
+              <Badge icon={<Award size={16} />} text="Top 20 Indians Startups of 2023" />
+              <Badge icon={<Zap size={16} />} text="AI Bootcamp Top 20" />
             </div>
-            <IconSlider />
-            <TextCarousel />
+            
+            {/* Added new Featured Clients component */}
+            <FeaturedClients />
+            
+            {/* Improved tagline with clearer typography */}
+            <p className="text-lg text-gray-300 font-medium border-l-4 border-orange-500 pl-4 py-2">
+              Top Devs, Trusted by The <span className="text-orange-500 font-semibold">Best</span> in Business
+            </p>
+            
+            {/* Improved Tech Icons section */}
+            <TechIcons />
+
+            {/* Added statistics section for social proof */}
+            <div className="grid grid-cols-3 gap-4 mt-8">
+              <div className="text-center p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+                <div className="text-3xl font-bold text-orange-500">500+</div>
+                <div className="text-sm text-gray-400 mt-1">Developers</div>
+              </div>
+              <div className="text-center p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+                <div className="text-3xl font-bold text-orange-500">98%</div>
+                <div className="text-sm text-gray-400 mt-1">Success Rate</div>
+              </div>
+              <div className="text-center p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+                <div className="text-3xl font-bold text-orange-500">100+</div>
+                <div className="text-sm text-gray-400 mt-1">Clients</div>
+              </div>
+            </div>
           </div>
 
-          {/* Form Section */}
-          <div className={styles.formSection}>
-            <div className={styles.formContainer}>
-              <form className={styles.contactForm} onSubmit={handleSubmit}>
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Name</label>
-                  <div className={styles.nameInputs}>
-                    <div className={styles.inputWrapper}>
-                      <input
-                        type="text"
-                        name="firstName"
-                        placeholder="First name"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        className={`${styles.formInput} ${styles.halfWidth} ${errors.firstName ? styles.error : ''}`}
-                      />
-                      {errors.firstName && <span className={styles.errorText}>{errors.firstName}</span>}
+          {/* Right section - Form */}
+          <div className="lg:w-7/12 bg-white/5 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/10 shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 rounded-full -mr-32 -mt-32 blur-xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-500/10 rounded-full -ml-32 -mb-32 blur-xl"></div>
+            
+            <h3 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Get In Touch</h3>
+            
+            <form onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                {/* Name fields */}
+                <div>
+                  <label className="block text-gray-300 text-sm mb-2">First Name</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <User size={16} className="text-orange-500" />
                     </div>
-                    <div className={styles.inputWrapper}>
-                      <input
-                        type="text"
-                        name="lastName"
-                        placeholder="Last name"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        className={`${styles.formInput} ${styles.halfWidth} ${errors.lastName ? styles.error : ''}`}
-                      />
-                      {errors.lastName && <span className={styles.errorText}>{errors.lastName}</span>}
-                    </div>
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder="First name"
+                      className={`w-full pl-10 pr-3 py-2 bg-white/10 border ${errors.firstName ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
+                    />
                   </div>
+                  {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
                 </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Email</label>
-                  <div className={styles.inputWrapper}>
+                
+                <div>
+                  <label className="block text-gray-300 text-sm mb-2">Last Name</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <User size={16} className="text-orange-500" />
+                    </div>
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      placeholder="Last name"
+                      className={`w-full pl-10 pr-3 py-2 bg-white/10 border ${errors.lastName ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
+                    />
+                  </div>
+                  {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
+                </div>
+                
+                {/* Email */}
+                <div>
+                  <label className="block text-gray-300 text-sm mb-2">Email</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <Mail size={16} className="text-orange-500" />
+                    </div>
                     <input
                       type="email"
                       name="email"
-                      placeholder="Email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`${styles.formInput} ${errors.email ? styles.error : ''}`}
+                      placeholder="Email address"
+                      className={`w-full pl-10 pr-3 py-2 bg-white/10 border ${errors.email ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
                     />
-                    {errors.email && <span className={styles.errorText}>{errors.email}</span>}
                   </div>
+                  {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                 </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Phone Number</label>
-                  <div className={styles.inputWrapper}>
+                
+                {/* Phone */}
+                <div>
+                  <label className="block text-gray-300 text-sm mb-2">Phone Number</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <Phone size={16} className="text-orange-500" />
+                    </div>
                     <input
                       type="tel"
                       name="phone"
-                      placeholder="Phone number"
                       value={formData.phone}
                       onChange={handleChange}
-                      className={`${styles.formInput} ${errors.phone ? styles.error : ''}`}
+                      placeholder="Phone number"
+                      className={`w-full pl-10 pr-3 py-2 bg-white/10 border ${errors.phone ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
                     />
-                    {errors.phone && <span className={styles.errorText}>{errors.phone}</span>}
                   </div>
+                  {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
-
-                <div className={styles.formGroup}>
-                  <label className={`${styles.formLabel} ${styles.helpLabel}`}>How we can Help</label>
-                  <div className={styles.helpOptions}>
-                    <label className={styles.helpOption}>
-                      <div 
-                        className={`${styles.radioButton} ${helpType === 'recruiting' ? styles.checked : ''}`}
-                        onClick={() => setHelpType('recruiting')}
-                      >
-                        {helpType === 'recruiting' && <Check className={styles.checkIcon} />}
-                      </div>
-                      <span className={styles.optionText}>I'm Recruiting</span>
-                    </label>
-                    <label className={styles.helpOption}>
-                      <div 
-                        className={`${styles.radioButton} ${helpType === 'developer' ? styles.checked : ''}`}
-                        onClick={() => setHelpType('developer')}
-                      >
-                        {helpType === 'developer' && <Check className={styles.checkIcon} />}
-                      </div>
-                      <span className={styles.optionText}>I'm a Developer</span>
-                    </label>
-                  </div>
-                  {errors.helpType && <span className={styles.errorText}>{errors.helpType}</span>}
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>What skills are you looking for?</label>
-                  <div className={styles.selectWrapper}>
-                    <select
-                      name="skills"
-                      value={formData.skills}
-                      onChange={handleChange}
-                      className={`${styles.formSelect} ${errors.skills ? styles.error : ''}`}
-                    >
-                      <option value="">What skills are you looking for?</option>
-                      {skillOptions.map((skill) => (
-                        <option key={skill} value={skill}>{skill}</option>
-                      ))}
-                    </select>
-                    <div className={styles.selectIcon}>
-                      <ChevronDown className={styles.chevronIcon} />
+              </div>
+              
+              {/* How we can help */}
+              <div className="mb-6">
+                <label className="block text-gray-300 text-sm mb-3">How we can Help</label>
+                <div className="grid grid-cols-2 gap-4">
+                  <div 
+                    onClick={() => setHelpType('recruiting')}
+                    className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all ${
+                      helpType === 'recruiting' 
+                      ? 'bg-gradient-to-r from-orange-500/30 to-orange-700/30 border border-orange-500/50' 
+                      : 'bg-white/10 border border-white/20 hover:bg-white/15'
+                    }`}
+                  >
+                    <div className={`w-5 h-5 rounded-full flex items-center justify-center border ${
+                      helpType === 'recruiting' ? `border-orange-500 bg-orange-500` : 'border-white/30'
+                    }`}>
+                      {helpType === 'recruiting' && <Check size={12} className="text-white" />}
                     </div>
-                    {errors.skills && <span className={styles.errorText}>{errors.skills}</span>}
+                    <span>I'm Recruiting</span>
                   </div>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>How did you hear about Brandsmashers?</label>
-                  <div className={styles.selectWrapper}>
-                    <select
-                      name="source"
-                      value={formData.source}
-                      onChange={handleChange}
-                      className={`${styles.formSelect} ${errors.source ? styles.error : ''}`}
-                    >
-                      <option value="">How did you hear about us?</option>
-                      {sourceOptions.map((source) => (
-                        <option key={source} value={source}>{source}</option>
-                      ))}
-                    </select>
-                    <div className={styles.selectIcon}>
-                      <ChevronDown className={styles.chevronIcon} />
+                  
+                  <div 
+                    onClick={() => setHelpType('developer')}
+                    className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all ${
+                      helpType === 'developer' 
+                      ? 'bg-gradient-to-r from-red-500/30 to-red-700/30 border border-red-500/50' 
+                      : 'bg-white/10 border border-white/20 hover:bg-white/15'
+                    }`}
+                  >
+                    <div className={`w-5 h-5 rounded-full flex items-center justify-center border ${
+                      helpType === 'developer' ? 'border-red-500 bg-red-500' : 'border-white/30'
+                    }`}>
+                      {helpType === 'developer' && <Check size={12} className="text-white" />}
                     </div>
-                    {errors.source && <span className={styles.errorText}>{errors.source}</span>}
+                    <span> I'm a Developer </span>
                   </div>
                 </div>
-
-                <button type="submit" className={styles.submitButton}>
-                  Lets Talk
-                </button>
-              </form>
-            </div>
+                {errors.helpType && <p className="text-red-500 text-xs mt-1">{errors.helpType}</p>}
+              </div>
+              
+              {/* Skills */}
+              <div className="mb-6">
+                <label className="block text-gray-300 text-sm mb-2">What skills are you looking for?</label>
+                <div className="relative">
+                  <select
+                    name="skills"
+                    value={formData.skills}
+                    onChange={handleChange}
+                    className={`w-full pl-3 pr-10 py-2 appearance-none bg-white/10 border ${errors.skills ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
+                  >
+                    <option value="" className="bg-gray-800">What skills are you looking for?</option>
+                    {skillOptions.map((skill) => (
+                      <option key={skill} value={skill} className="bg-gray-800">{skill}</option>
+                    ))}
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                    <ChevronDown size={16} className="text-orange-500" />
+                  </div>
+                </div>
+                {errors.skills && <p className="text-red-500 text-xs mt-1">{errors.skills}</p>}
+              </div>
+              
+              {/* Source */}
+              <div className="mb-8">
+                <label className="block text-gray-300 text-sm mb-2">How did you hear about Brandsmashers?</label>
+                <div className="relative">
+                  <select
+                    name="source"
+                    value={formData.source}
+                    onChange={handleChange}
+                    className={`w-full pl-3 pr-10 py-2 appearance-none bg-white/10 border ${errors.source ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
+                  >
+                    <option value="" className="bg-gray-800">How did you hear about us?</option>
+                    {sourceOptions.map((source) => (
+                      <option key={source} value={source} className="bg-gray-800">{source}</option>
+                    ))}
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                    <ChevronDown size={16} className="text-orange-500" />
+                  </div>
+                </div>
+                {errors.source && <p className="text-red-500 text-xs mt-1">{errors.source}</p>}
+              </div>
+              
+              {/* Submit button */}
+              <button 
+                type="submit" 
+                className="w-full py-3 px-6 rounded-lg font-medium text-white flex items-center justify-center gap-2 transition-all bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 shadow-lg"
+              >
+                Let's Talk <Rocket size={16} />
+              </button>
+            </form>
           </div>
         </div>
-      </div>
-
-      {/* Privacy Notice Section */}
-      <div className={styles.privacySection}>
-        <div className={styles.privacyContainer}>
-          <p className={styles.privacyText}>
-            Your <span className={styles.highlight}>trust is our priority</span>. 
+        
+        {/* Privacy notice */}
+        <div className="mt-12 bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 max-w-3xl mx-auto">
+          <p className="text-gray-300 text-center">
+            Your <span className="text-orange-500">trust is our priority</span>. 
             We value your privacy and ensure that your personal information is{' '}
-            <span className={styles.highlight}>kept secure</span>. 
+            <span className="text-orange-500">kept secure</span>. 
             Rest assured, we do{' '}
-            <span className={styles.highlight}>not share, sell,</span> or{' '}
-            <span className={styles.highlight}>misuse</span> your{' '}
-            <span className={styles.highlight}>data</span> in any way. 
+            <span className="text-orange-500">not share, sell,</span> or{' '}
+            <span className="text-orange-500">misuse</span> your{' '}
+            <span className="text-orange-500">data</span> in any way. 
             Your information will never be{' '}
-            <span className={styles.highlight}>pirated or shared</span> with{' '}
-            <span className={styles.highlight}>third parties</span> without{' '}
-            <span className={styles.highlight}>your consent</span>.
+            <span className="text-orange-500">pirated or shared</span> with{' '}
+            <span className="text-orange-500">third parties</span> without{' '}
+            <span className="text-orange-500">your consent</span>.
           </p>
         </div>
       </div>

@@ -3,14 +3,14 @@
     width: 100%;
   }
   .heading {
-    color: #ffffff;
+    color: black;
   }
   .heroContainer{
     padding-top: 5%;
     padding-bottom: 5%;
   }
   .highlight {
-    color: #2cc5d9;
+    color: #ff5010;
   }
   
   .image {
@@ -18,7 +18,7 @@
     margin-bottom: 65px;
   }
   
-  .image img {
+ .image img {
     margin: auto;
     max-width: 100%; 
     height: auto; 
@@ -36,11 +36,7 @@
       margin: auto;
     }
   
-    .image img {
-      width: 100%; 
-      max-width: 500px; 
-      height: auto; 
-    }
+    
   
     .heading {
       font-size: 20px;

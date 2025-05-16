@@ -7,6 +7,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
+  // Dropdown content for the Tech/Hire Developers section
   const techDropdownContent = {
     "Mobile App Developers": {
       items: [
@@ -43,6 +44,50 @@ const Navbar = () => {
         { name: "Magento Developer", iconSrc: "/Nav-Dropdown-icons/Magento.svg", path: "magento" },
         { name: "Java Developers", iconSrc: "/Nav-Dropdown-icons/Java.svg", path: "java" }
       ]
+    },
+    
+    "Marketing": {
+      items: [
+        { name: "SEO", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "SEO" },
+        { name: "Programmatic", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "programmatic-developer" },
+        { name: "SEM & PPC", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "sem-ppc" },
+      ]
+    },
+  };
+
+  // Dropdown content for the Company section
+  const companyDropdownContent = {
+    "Company": {
+      items: [
+        { name: "Who We Are", iconSrc: "/Nav-Dropdown-icons/About.svg", path: "who-we-are" },
+        { name: "Join Our Team", iconSrc: "/Nav-Dropdown-icons/Team.svg", path: "join-our-team" },
+        { name: "Blog", iconSrc: "/Nav-Dropdown-icons/Blog.svg", path: "blog" },
+      ]
+    }
+  };
+
+  // Dropdown content for the Services section
+  const servicesDropdownContent = {
+    "Development Services": {
+      items: [
+        { name: "Mobile App Development", iconSrc: "/Nav-Dropdown-icons/Mobile.svg", path: "mobile-app-development" },
+        { name: "Web Development", iconSrc: "/Nav-Dropdown-icons/Web.svg", path: "web-development" },
+        { name: "Custom Software Development", iconSrc: "/Nav-Dropdown-icons/Software.svg", path: "custom-software-development" },
+      ]
+    },
+    "Digital Marketing": {
+      items: [
+        { name: "SEO Services", iconSrc: "/Nav-Dropdown-icons/SEO.svg", path: "seo-services" },
+        { name: "Social Media Marketing", iconSrc: "/Nav-Dropdown-icons/Social.svg", path: "social-media-marketing" },
+        { name: "Content Marketing", iconSrc: "/Nav-Dropdown-icons/Content.svg", path: "content-marketing" },
+      ]
+    },
+    "Design Services": {
+      items: [
+        { name: "UI/UX Design", iconSrc: "/Nav-Dropdown-icons/UI-UX.svg", path: "ui-ux-design" },
+        { name: "Brand Identity", iconSrc: "/Nav-Dropdown-icons/Brand.svg", path: "brand-identity" },
+        { name: "Graphic Design", iconSrc: "/Nav-Dropdown-icons/Graphic.svg", path: "graphic-design" },
+      ]
     }
   };
 
@@ -75,20 +120,18 @@ const Navbar = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null);
   };
-
   const menuItems = [
-    { name: "Hire Developers", hasDropdown: false, href: '/hiredevelopers' },
-    { name: "Services", hasDropdown: false, href: '/services' },
-    { name: "Technologies", hasDropdown: true },
-    { name: "Blogs", hasDropdown: false, href: '/blogs' },
-    { name: "About Us", hasDropdown: false, href: '/aboutus' }
+    { name: "Company", hasDropdown: true },
+    { name: "Services", hasDropdown: true },
+    { name: "Hire Developers", hasDropdown: true },
+    { name: "Industries", hasDropdown: false, href: '/industries' },
   ];
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image src="/nav.svg" alt="Logo" width={150} height={40} />
+          {/* <Image src="/nav.svg" alt="Logo" width={150} height={40} /> */}
         </Link>
       </div>
       
@@ -124,7 +167,63 @@ const Navbar = () => {
                 </svg>
               )}
             </div>
-            {item.name === "Technologies" && (
+            
+            {/* Company Dropdown */}
+            {item.name === "Company" && (
+              <div className={`${styles.dropdownMenu} ${
+                activeDropdown === item.name ? styles.show : ''
+              }`}>
+                <div className={styles.dropdownGrid}>
+                  {Object.entries(companyDropdownContent).map(([category, { items }]) => (
+                    <div key={category} className={styles.dropdownColumn}>
+                      <h3>{category}</h3>
+                      <ul>
+                        {items.map((item) => (
+                          <li key={item.path}>
+                            <Link href={`/${item.path}`}>
+                              <span className={styles.iconWrapper}>
+                                <Image src={item.iconSrc} alt={`${item.name} icon`} width={20} height={20} />
+                              </span>
+                              {item.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            {/* Services Dropdown */}
+            {item.name === "Services" && (
+              <div className={`${styles.dropdownMenu} ${
+                activeDropdown === item.name ? styles.show : ''
+              }`}>
+                <div className={styles.dropdownGrid}>
+                  {Object.entries(servicesDropdownContent).map(([category, { items }]) => (
+                    <div key={category} className={styles.dropdownColumn}>
+                      <h3>{category}</h3>
+                      <ul>
+                        {items.map((service) => (
+                          <li key={service.path}>
+                            <Link href={`/services/${service.path}`}>
+                              <span className={styles.iconWrapper}>
+                                <Image src={service.iconSrc} alt={`${service.name} icon`} width={20} height={20} />
+                              </span>
+                              {service.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            {/* Hire Developers Dropdown */}
+            {item.name === "Hire Developers" && (
               <div className={`${styles.dropdownMenu} ${
                 activeDropdown === item.name ? styles.show : ''
               }`}>
@@ -133,15 +232,15 @@ const Navbar = () => {
                     <div key={category} className={styles.dropdownColumn}>
                       <h3>{category}</h3>
                       <ul>
-                        {items.map((tech, index) => (
-                         <li key={tech.path}>
-                         <Link href={`/tech/${tech.path}`}>
-                           <span className={styles.iconWrapper}>
-                             <Image src={tech.iconSrc} alt={`${tech.name} icon`} width={20} height={20} />
-                           </span>
-                           {tech.name}
-                         </Link>
-                       </li>
+                        {items.map((tech) => (
+                          <li key={tech.path}>
+                            <Link href={`/tech/${tech.path}`}>
+                              <span className={styles.iconWrapper}>
+                                <Image src={tech.iconSrc} alt={`${tech.name} icon`} width={20} height={20} />
+                              </span>
+                              {tech.name}
+                            </Link>
+                          </li>
                         ))}
                       </ul>
                     </div>
