@@ -66,24 +66,24 @@ export default function BrandSmasherBlog() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-10">
             {[
               {
-                title: 'How Blue Tokai rewrote India’s coffee culture',
+                title: 'Healthy Documentation : An Unsung Hero of a Scalable Team.',
                 desc: 'The bite-sized story of how a local coffee brand changed the café landscape.',
-                img: '/api/placeholder/600/300',
+                img: 'Nav-Dropdown-icons/image_blog.jpg',
               },
               {
                 title: 'Eliminating Bottlenecks in Real-Time Data Streaming',
                 desc: 'A journey through Zomato Ads Flink architecture and real-time streaming.',
-                img: '/api/placeholder/600/301',
+                img: 'Nav-Dropdown-icons/image_blog.jpg',
               },
               {
                 title: 'Transforming SMBs with Scalable SaaS Solutions',
                 desc: 'How small businesses are growing through smart automation.',
-                img: '/api/placeholder/600/302',
+                img: 'Nav-Dropdown-icons/image_blog.jpg',
               },
               {
                 title: 'Design Systems that Scale: A UI Engineering Guide',
                 desc: 'Learn how design systems can streamline development across teams.',
-                img: '/api/placeholder/600/303',
+                img: 'Nav-Dropdown-icons/image_blog.jpg',
               },
             ].map((card, idx) => (
               <div

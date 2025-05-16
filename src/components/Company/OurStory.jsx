@@ -19,16 +19,19 @@ export default function FounderCard() {
             className="w-full h-full object-cover"
           />
           <div className={`absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-80'} md:hidden`}>
-            <h3 className="text-2xl font-bold">Jigar Shah</h3>
-            <p className="text-lg">CEO & Founder</p>
+            <h3 className="text-2xl font-bold"></h3>
+            <p className="text-lg"></p>
           </div>
         </div>
 
         {/* Content Section */}
         <div className={`md:w-1/2 p-8 bg-white flex flex-col justify-center transition-all duration-300 ${isHovered ? 'bg-gray-50' : ''}`}>
           <div className="hidden md:block mb-6">
-            <h3 className="text-3xl font-bold text-gray-800">Aayush Jain</h3>
-            <p className="text-xl text-gray-600">CEO & Founder</p>
+            <h3 className="text-3xl font-bold">
+           <span className="text-black">Brands</span>
+           <span className="text-[#ff5010]">masher's Story</span>
+           </h3>
+
           </div>
 
           <blockquote className="mb-6 italic text-lg text-gray-700 border-l-4 border-[#ff5010] pl-4">
