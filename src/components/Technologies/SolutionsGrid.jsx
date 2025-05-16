@@ -5,123 +5,83 @@ const SolutionsGrid = () => {
     {
       icon: "🏠",
       title: "Real Estate Solutions",
-      description: "Innovative solutions for real estate businesses, facilitating property transactions and providing comprehensive listings.",
-      bgColor: "bg-pink-50",
-      containerStyle: "w-full lg:w-[380px]"
+      description: "Innovative property management, virtual tours, and smart building applications."
     },
     {
-      icon: "🏪",
+      icon: "🛒",
       title: "Retail Solutions",
-      description: "Comprehensive solutions for retail and ecommerce businesses, enabling seamless online transactions and customer experiences.",
-      bgColor: "bg-emerald-50",
-      containerStyle: "w-full lg:w-[380px]"
+      description: "End-to-end e-commerce platforms, inventory management, and customer loyalty systems."
     },
     {
       icon: "🚗",
-      title: "Logistic and Distribution",
-      description: "Efficient solutions for logistics and distribution networks, optimizing supply chain processes and enhancing operational efficiency.",
-      bgColor: "bg-blue-50",
-      containerStyle: "w-full lg:w-[380px]"
+      title: "Automotive Solutions",
+      description: "Vehicle management, dealer platforms, and connected car applications."
     },
     {
-      icon: "🏠+",
-      title: "Social Networking",
-      description: "Dynamic platforms for social networking, fostering connections and interactions through innovative features and functionalities.",
-      bgColor: "bg-yellow-50",
-      containerStyle: "w-full lg:w-[480px]"
+      icon: "⚡",
+      title: "E.V. Industry Solutions",
+      description: "Charging infrastructure software, battery management, and fleet monitoring systems."
     },
     {
-      icon: "✈️",
-      title: "Travel and Hospitality",
-      description: "Innovative solutions for travel and hospitality businesses, enhancing customer experiences and streamlining bookings and reservations.",
-      bgColor: "bg-sky-50",
-      containerStyle: "w-full lg:w-[380px]"
-    },
-    {
-      icon: "📚",
-      title: "Education Solutions",
-      description: "Innovative educational solutions that enhance learning experiences through interactive content and intuitive user interfaces.",
-      bgColor: "bg-purple-50",
-      containerStyle: "w-full lg:w-[380px]"
+      icon: "☁️",
+      title: "Cloud Solutions",
+      description: "Scalable and secure cloud computing services tailored to business needs."
     },
     {
       icon: "🏥",
-      title: "Health Solutions",
-      description: "Revolutionary solutions for healthcare and fitness industries, promoting wellness and facilitating access to medical resources.",
-      bgColor: "bg-green-50",
-      containerStyle: "w-full lg:w-[400px]"
+      title: "Healthcare Solutions",
+      description: "Advanced healthcare platforms, patient management systems, and telemedicine solutions."
     },
     {
-      icon: "🥤",
-      title: "Food and Beverage",
-      description: "Innovative solutions for food and beverage industries, enhancing customer experiences and optimizing restaurant operations.",
-      bgColor: "bg-amber-50",
-      containerStyle: "w-full lg:w-[380px]"
+      icon: "🎓",
+      title: "Education Solutions",
+      description: "Interactive learning platforms, LMS systems, and virtual classroom solutions."
+    },
+    {
+      icon: "💰",
+      title: "Finance IT Solutions",
+      description: "Robust financial software for banking, insurance, and investment sectors."
     }
   ];
 
   return (
-    <div className="w-full min-h-[75vh] bg-[#343333] px-6 py-10">
-      <div className="max-w-7xl mx-auto space-y-6">
-        {/* Container for all items */}
-        <div className="flex flex-col items-center space-y-2">
-          {/* Row 1 */}
-          <div className="flex flex-col lg:flex-row gap-2 lg:justify-center w-full">
-            {solutions.slice(0, 3).map((solution, index) => (
-              <div key={index} className={`${solution.containerStyle} min-w-0`}>
-                <div className={`rounded-md p-6 h-[160px] shadow-sm ${solution.bgColor} overflow-hidden`}>
-                  <div className="flex flex-col h-full">
-                    <div className="flex items-center mb-3 w-full">
-                      <span className="text-4xl flex-shrink-0 mr-2">{solution.icon}</span>
-                      <div className="min-w-0 flex-1">
-                        <h3 className="text-lg font-semibold italic text-black truncate pr-2">{solution.title}</h3>
-                      </div>
-                    </div>
-                    <p className="text-sm text-black line-clamp-3 overflow-ellipsis">{solution.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Row 2 */}
-          <div className="flex flex-col lg:flex-row gap-2 lg:pl-14 w-full">
-            {solutions.slice(3, 5).map((solution, index) => (
-              <div key={index} className={`${solution.containerStyle} min-w-0`}>
-                <div className={`rounded-md p-6 h-[140px] shadow-sm ${solution.bgColor} overflow-hidden`}>
-                  <div className="flex flex-col h-full">
-                    <div className="flex items-center mb-3 w-full">
-                      <span className="text-4xl flex-shrink-0 mr-2">{solution.icon}</span>
-                      <div className="min-w-0 flex-1">
-                        <h3 className="text-lg font-semibold italic text-black truncate pr-2">{solution.title}</h3>
-                      </div>
-                    </div>
-                    <p className="text-sm text-black line-clamp-3 overflow-ellipsis">{solution.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Row 3 */}
-          <div className="flex flex-col lg:flex-row gap-2 lg:justify-center w-full">
-            {solutions.slice(5).map((solution, index) => (
-              <div key={index} className={`${solution.containerStyle} min-w-0`}>
-                <div className={`rounded-md p-6 h-[160px] shadow-sm ${solution.bgColor} overflow-hidden`}>
-                  <div className="flex flex-col h-full">
-                    <div className="flex items-center mb-3 w-full">
-                      <span className="text-4xl flex-shrink-0 mr-2">{solution.icon}</span>
-                      <div className="min-w-0 flex-1">
-                        <h3 className="text-lg font-semibold italic text-black truncate pr-2">{solution.title}</h3>
-                      </div>
-                    </div>
-                    <p className="text-sm text-black line-clamp-3 overflow-ellipsis">{solution.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+    <div className="w-full min-h-[100vh] bg-[#000000] px-6 py-14 text-white">
+      <div className="max-w-7xl mx-auto space-y-10">
+        
+        {/* Header Section */}
+        <div className="text-center space-y-4">
+          <h2 className="text-4xl font-bold">
+            Industries We <span className="text-orange-500">Serve</span>
+          </h2>
+          <p className="text-gray-300 max-w-3xl mx-auto">
+            At Brandsmashers Tech, we empower businesses across all industries with innovative, tailor-made technology solutions. From startups to enterprises, we deliver cutting-edge software, web, mobile, and AI-driven services that drive growth, efficiency, and digital transformation.
+          </p>
+          <p className="text-gray-300 max-w-3xl mx-auto">
+            Our IT staff augmentation services help you scale your team effortlessly with top-tier, on-bench talent ready to jump into your projects and accelerate delivery.
+          </p>
         </div>
+
+        {/* Highlight Box */}
+        <div className="bg-[#131313] border border-orange-600 rounded-lg p-8 text-center shadow-lg">
+          <div className="text-5xl mb-4">⚙️</div>
+          <h3 className="text-2xl font-semibold mb-2">Custom Technology Solutions</h3>
+          <p className="text-gray-400">Tailored to your specific industry needs and business goals</p>
+        </div>
+
+        {/* Grid Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {solutions.map((solution, index) => (
+            <div key={index} className="bg-[#131313] border border-gray-800 rounded-lg p-6 h-full shadow hover:shadow-lg transition">
+              <div className="flex items-center mb-4">
+                <span className="text-3xl mr-3">{solution.icon}</span>
+                <h4 className="text-lg font-semibold">{solution.title}</h4>
+              </div>
+              <p className="text-gray-400 text-sm">{solution.description}</p>
+              <div className="mt-4 text-sm text-orange-500 cursor-pointer hover:underline">Learn more →</div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ const Technologies = () => {
         <TechnologyPage/>
         <SolutionsGrid/>
         <FAQSection/>
-        <Footer/>
+        
     </div>
   )
 }
