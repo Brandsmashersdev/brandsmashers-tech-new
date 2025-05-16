@@ -19,7 +19,7 @@ const Map = () => {
             <MapPin className="w-6 h-6 text-red-600" />
           </div>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.882981095024!2d77.4629056!3d23.2513597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c4342fd2a66f5%3A0xc5940ffcc9fd2fa5!2sJAP%20Tower%2C%20Ward%20No.%2042%2C%20Raisen%20Rd%2C%20Bhopal%2C%20Madhya%20Pradesh%20462010!5e0!3m2!1sen!2sin!4v1712732452063!5m2!1sen!2sin"
+            src="https://maps.google.com/maps?width=600&height=400&hl=en&q=Brandsmashers%20Tech%20Bhopal&t=&z=14&ie=UTF8&iwloc=B&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -27,6 +27,18 @@ const Map = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
+          
+          {/* Fallback link for accessibility */}
+          <div className="mt-4 text-center">
+            <a
+              href="https://www.google.com/maps/place/JAP+Tower,+Raisen+Rd,+Bhopal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#ff5010] underline"
+            >
+              View on Google Maps
+            </a>
+          </div>
         </div>
 
         {/* Info Card */}
