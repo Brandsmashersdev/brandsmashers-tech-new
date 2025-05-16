@@ -351,7 +351,7 @@ const process = [
                   <div className={`w-12 h-12 rounded-lg flex items-center justify-center mr-4 transition-colors duration-300 ${
                     hoveredIndex === index ? "bg-[#ff5010] text-white" : "bg-[#ff5010] bg-opacity-20 text-[#ff5010]"
                   }`}>
-                  
+                 {reason.icon && (<reason.icon className="w-6 h-6" />)}
                   </div>
                   <h3 className="font-bold text-lg text-white">{reason.title}</h3>
                 </div>
