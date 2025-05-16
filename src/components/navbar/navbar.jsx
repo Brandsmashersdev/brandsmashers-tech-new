@@ -134,32 +134,36 @@ const Navbar = () => {
           {/* <Image src="/nav.svg" alt="Logo" width={150} height={40} /> */}
         </Link>
       </div>
-
+      
       <div className={styles.hamburger} onClick={toggleMenu}>
         <Image src="/hamburger.png" alt="Menu" width={24} height={24} />
       </div>
 
       <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
         {menuItems.map((item) => (
-          <li
-            key={item.name}
-            className={`${item.hasDropdown ? styles.hasDropdown : ''} ${activeDropdown === item.name ? styles.active : ''}`}
+          <li 
+            key={item.name} 
+            className={`${item.hasDropdown ? styles.hasDropdown : ''} ${
+              activeDropdown === item.name ? styles.active : ''
+            }`}
             onClick={() => item.hasDropdown && toggleDropdown(item.name)}
           >
             <div className={styles.menuItem}>
-              <Link href={item.href || "#"} className={styles.link}>
+              <Link href={item.href || "#"}>
                 {item.name}
               </Link>
               {item.hasDropdown && (
-                <svg
-                  className={`${styles.dropdownIcon} ${activeDropdown === item.name ? styles.rotate : ''}`}
-                  width="10"
-                  height="6"
-                  viewBox="0 0 10 6"
-                  fill="none"
+                <svg 
+                  className={`${styles.dropdownIcon} ${
+                    activeDropdown === item.name ? styles.rotate : ''
+                  }`}
+                  width="10" 
+                  height="6" 
+                  viewBox="0 0 10 6" 
+                  fill="none" 
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               )}
             </div>
@@ -248,10 +252,9 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* ✅ Fixed "Contact Us" button to use <Link> */}
-      <Link href="/contactus" className={styles.contactBtn}>
-        Contact Us
-      </Link>
+      <button className={styles.contactBtn}>
+        <Link href="/contactus">Contact Us</Link>
+      </button>
     </nav>
   );
 };

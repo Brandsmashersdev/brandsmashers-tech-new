@@ -392,18 +392,3 @@
     animation: none;
   }
 }
-
-
-.dropdownMenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  display: none;
-}
-
-.hasDropdown:hover .dropdownMenu {
-  display: block;
-}
