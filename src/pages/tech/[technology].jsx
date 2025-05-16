@@ -2114,7 +2114,7 @@ export default function TechnologyDetails() {
         imageSrc={heroImage}
       />
       <Stats />
-      <PartnerCompanies />
+     
        <AndroidHero/>
        {/* <ServiceGrids/> */}
        <ServiceGrids serviceData={data.services} />

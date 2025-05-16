@@ -1,33 +1,46 @@
 import React from "react";
-import styles from "./HeroSectionForTech.module.css";
+import { ArrowRight } from "lucide-react";
 
 const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
   return (
-    <div className={styles.heroSection}>
-      <div className={styles.heroContainer}>
-        <div className={styles.heroContent}>
+    <div className="bg-black w-full py-16 px-4 md:px-8 lg:px-16">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Text Content */}
-          <div className={styles.textContainer}>
-            <div className={styles.subtitleContainer}>
-              <p className={styles.subtitle}>
-                <span className={styles.brandCyan}>{title}</span>
-              </p>
+          <div className="w-full md:w-1/2 space-y-6">
+            <div className="inline-block">
+              <span className="text-lg font-semibold px-4 py-2 rounded-full bg-orange-100 text-[#ff5010]">
+                {title}
+              </span>
             </div>
-
-            <p className={styles.description}>{description}</p>
-
-            <button className={styles.contactButton}>{buttonText}</button>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-white-900 leading-tight">
+              Innovative solutions <span className="text-[#ff5010]">for your business</span>
+            </h2>
+            
+            <p className="text-lg text-white-600 max-w-xl">
+              {description}
+            </p>
+            
+            <div className="pt-4">
+              <button className="flex items-center gap-2 px-8 py-4 rounded-lg font-medium text-white bg-[#ff5010] hover:bg-[#e04509] transition-colors duration-300 shadow-lg shadow-orange-200">
+                {buttonText}
+                <ArrowRight size={18} />
+              </button>
+            </div>
           </div>
-
+          
           {/* Image Container */}
-          <div className={styles.imageContainer}>
-            <div className={styles.brandImage}>
+          <div className="w-full md:w-1/2 relative">
+            <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl">
               <img
                 src={imageSrc}
                 alt="Hero Section Image"
-                className={styles.objectContain}
+                className="w-full h-auto object-contain"
               />
             </div>
+            <div className="absolute -top-6 -right-6 w-64 h-64 bg-orange-100 rounded-full -z-0 blur-xl opacity-70"></div>
+            <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[#ff5010] rounded-full -z-0 blur-xl opacity-20"></div>
           </div>
         </div>
       </div>
