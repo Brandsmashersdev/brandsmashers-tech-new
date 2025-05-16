@@ -185,7 +185,7 @@ export default function MobileAppDevelopmentPage() {
       <section className="py-16 px-6 md:px-12 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Mobile App Development Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Mobile App Development Services</h2>
             <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
               Transform your ideas into high-performing mobile apps with end-to-end development services tailored for iOS, Android, and cross-platform solutions.
             </p>
@@ -200,7 +200,7 @@ export default function MobileAppDevelopmentPage() {
                 >
                   <div style={{ color: primaryColor }}>{service.icon}</div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-black">{service.title}</h3>
                 <p className="text-gray-800">{service.description}</p>
               </div>
             ))}

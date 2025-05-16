@@ -123,12 +123,18 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>
-        <Link href="/">
-          {/* <Image src="/logo.jpg" alt="Logo" width={200} height={800} /> */}
-        </Link>
-      </div>
-      
+   <div className={styles.logo}>
+  <Link href="/">
+    <Image 
+      src="/logo.jpg" 
+      alt="Logo" 
+      width={100} 
+      height={50} 
+      style={{ objectFit: "cover" }} 
+    />
+  </Link>
+</div>
+
       <div className={styles.hamburger} onClick={toggleMenu}>
         <Image src="/hamburger.png" alt="Menu" width={24} height={24} />
       </div>
