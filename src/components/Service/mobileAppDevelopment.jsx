@@ -138,7 +138,7 @@ export default function MobileAppDevelopmentPage() {
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{
-            // backgroundImage: "url('https://images.unsplash.com/photo-1536148935331-408321065b18?q=80&w=1920&auto=format&fit=crop')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1536148935331-408321065b18?q=80&w=1920&auto=format&fit=crop')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

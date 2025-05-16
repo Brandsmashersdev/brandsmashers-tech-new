@@ -118,14 +118,14 @@ const Navbar = () => {
     { name: "Company", hasDropdown: true },
     { name: "Services", hasDropdown: true },
     { name: "Hire Developers", hasDropdown: true },
-    { name: "Industries", hasDropdown: false, href: '/industries' },
+    { name: "Technology", hasDropdown: false, href: '/technologies' },
   ];
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
         <Link href="/">
-          {/* <Image src="/nav.svg" alt="Logo" width={150} height={40} /> */}
+          {/* <Image src="/logo.jpg" alt="Logo" width={200} height={800} /> */}
         </Link>
       </div>
       
