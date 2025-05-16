@@ -8,8 +8,8 @@ export default function BrandSmasherBlog() {
     <div className="min-h-screen bg-white font-sans">
       {/* Hero Section */}
       <div
-        className="relative h-[80vh] bg-cover bg-center flex items-center justify-center text-white"
-        style={{ backgroundImage: `url('/Nav-Dropdown-icons/image.png')` }}
+        className="relative h-[80vh] bg-cover bg-center flex items-center justify-center text-white bg-black"
+        // style={{ backgroundImage: `url('/Nav-Dropdown-icons/image.png')` }}
       >
         <div className="absolute top-0 left-0 w-full h-full bg-black/50" />
         <div className="relative z-10 max-w-7xl w-full px-6 flex flex-col md:flex-row justify-between items-center">
