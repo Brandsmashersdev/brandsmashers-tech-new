@@ -1,18 +1,17 @@
-import BlogsHeroSection from "@/components/Blogs/BlogsHeroSection";
-import BlogDetails from "@/components/Blogs/BlogDetails";
+import BlogSection3 from "@/components/Company/BlogSection3";
+import BlogSection2 from "@/components/Company/BlogSection2"
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import React from "react";
-import BlogPage from "@/components/Blogs/blogcards";
+import Blog from "./Blog";
 
 const blogs = () => {
   return (
     <div>
 
       <Navbar />
-      <BlogsHeroSection/>
-      <BlogPage/>
-      {/* <BlogDetails/> */}
+      <BlogSection3 />
+      {/* <BlogSection2/> */}
       <Footer />
       
     </div>

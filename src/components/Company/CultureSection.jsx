@@ -12,7 +12,7 @@ export default function CultureSection() {
       title: 'Fun Saturday',
       description:
         "Who said weekends were only for rest? At Brandsmashers Tech, some Saturdays are reserved for fun, games, creativity, and camaraderie. Whether it's a hackathon or a movie day, we make sure fun stays on the calendar.",
-      image: '/Nav-Dropdown-icons/fun-saturday.jpg', // Replace with an image if needed
+      image: '/Nav-Dropdown-icons/team-4.jpg', // Replace with an image if needed
     },
   ];
 

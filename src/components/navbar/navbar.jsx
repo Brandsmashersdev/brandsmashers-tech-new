@@ -60,8 +60,8 @@ const Navbar = () => {
     "Company": {
       items: [
         { name: "Who We Are", iconSrc: "/Nav-Dropdown-icons/About.svg", path: "/whoweare" },
-        { name: "Join Our Team", iconSrc: "/Nav-Dropdown-icons/Team.svg", path: "Career" },
-        { name: "Blog", iconSrc: "/Nav-Dropdown-icons/Blog.svg", path: "Blog" },
+        { name: "Join Our Team", iconSrc: "/Nav-Dropdown-icons/Team.svg", path: "/career" },
+        { name: "Blog", iconSrc: "/Nav-Dropdown-icons/Blog.svg", path: "/Blog" },
       ]
     }
   };
