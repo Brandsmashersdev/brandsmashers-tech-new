@@ -42,34 +42,12 @@ const TechIcons = () => {
 
 
 
- async function mail(){
-    const response = await fetch('/api/sendMail', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      email: 'you@example.com',
-      sendTo: 'target@example.com',
-      subject: 'Test Subject',
-      text: 'This is a test message',
-      html: '<p>This is a <strong>test</strong> message</p>',
-    }),
-  });
-
-  const result = await response.json();
-
-  if (result.success) {
-    alert('Message sent!');
-  } else {
-    alert('Failed to send message.');
-  }
-  }
+ 
 
 
   return (
     <div className="flex flex-wrap gap-3 justify-center my-8">
-      <button onClick={mail}>
-        mail
-      </button>
+      
       {technologies.map((tech, index) => (
         <div 
           key={index} 

@@ -23,16 +23,156 @@ import {
   Zap,
   
 } from "lucide-react";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function DigitalMarketingPage() {
   const [activeFaq, setActiveFaq] = useState(null);
-  const [showContactForm, setShowContactForm] = useState(false);
-  const [contactForm, setContactForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
+    const toastConfig = {
+    position: 'top-right',
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  };
+     const [showContactForm, setShowContactForm] = useState(false);
+     const [errors, setErrors] = useState({});
+       const [helpType, setHelpType] = useState(null);
+     const [serviceForm, setServiceForm] = useState({
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
+    const handleServiceFormChange = (e) => {
+      const { name, value } = e.target;
+      let newValue = value;
+      let error = '';
+     switch (name) {
+        case 'name':
+          if (value && !validateName(value)) {
+            error = 'Please enter only letters';
+            newValue = serviceForm[name];
+          }
+          break;
+          case 'email':
+          if (value && !validateEmail(value)) {
+            error = 'Please enter only letters';
+            newValue = serviceForm[name];
+          }
+          break;
+  
+        case 'phone':
+          const digits = value.replace(/\D/g, '');
+          if (digits.length > 10) {
+            newValue = serviceForm[name];
+          } 
+          break;
+          
+  
+        default:
+          break;
+      }
+  
+      setServiceForm(prev => ({
+        ...prev,
+        [name]: value
+      }));
+      
+  
+      if (error) {
+        setErrors(prev => ({
+          ...prev,
+          [name]: error
+        }));
+      } else {
+        setErrors(prev => {
+          const newErrors = { ...prev };
+          delete newErrors[name];
+          return newErrors;
+        });
+      }
+  
+    };
+  
+    const handleServiceFormSubmit = async(e) => {
+      e.preventDefault();
+      // In a real application, you would handle the form submission here
+     if (validateForm()) {
+           try {
+             const formDataToSend = new FormData();
+             
+             Object.keys(serviceForm).forEach(key => {
+               formDataToSend.append(key, serviceForm[key]);
+             });
+             formDataToSend.append('helpType', helpType);
+             formDataToSend.append('access_key', 'b02aa529-635c-470f-9fed-2d06aaa3e8f2');
+     
+             const response = await fetch('https://api.web3forms.com/submit', {
+               method: 'POST',
+               body: formDataToSend
+             });
+     
+             const data = await response.json();
+             
+             if (data.success) {
+               toast.success('Form submitted successfully!', toastConfig);
+               
+               setServiceForm({
+                 name:'',
+                 email: '',
+                 phone: '',
+                 message: '',
+               });
+               setHelpType(null);
+             } else {
+               toast.error('Error submitting form. Please try again.', toastConfig);
+             }
+           } catch (error) {
+             console.error('Submission Error:', error);
+             toast.error('Network error. Please try again later.', toastConfig);
+           }
+         }
+    };
+  
+    const validateName = (name) => {
+      const nameRegex = /^[A-Za-z\s]+$/;
+      return nameRegex.test(name);
+    };
+  
+    const validateEmail = (email) => {
+      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+      return emailRegex.test(email);
+    };
+  
+    const validatePhone = (phone) => {
+      const phoneRegex = /^\d{10}$/;
+      return phoneRegex.test(phone.replace(/\D/g, ''));
+    };
+  
+    const validateForm = () => {
+      const newErrors = {};
+  
+      if (!serviceForm.name) {
+        newErrors.firstName = 'First name is required';
+      } else if (!validateName(serviceForm.firstName)) {
+        newErrors.firstName = 'Please enter only letters';
+      }
+      if (!serviceForm.email) {
+        newErrors.email = 'Email is required';
+      } else if (!validateEmail(serviceForm.email)) {
+        newErrors.email = 'Please enter a valid email';
+      }  
+      if (!serviceForm.phone) {
+        newErrors.phone = 'Phone number is required';
+      } else if (!validatePhone(serviceForm.phone)) {
+        newErrors.phone = 'Please enter a valid 10-digit phone number';
+      }
+      setErrors(newErrors);
+      return Object.keys(newErrors).length === 0;
+    };
 
   const toggleFaq = (index) => {
     if (activeFaq === index) {
@@ -41,26 +181,7 @@ export default function DigitalMarketingPage() {
       setActiveFaq(index);
     }
   };
-const handleContactFormChange = (e) => {
-    const { name, value } = e.target;
-    setContactForm(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
 
-  const handleContactFormSubmit = (e) => {
-    e.preventDefault();
-    // In a real application, you would handle the form submission here
-    alert("Thank you for your interest! We'll contact you soon.");
-    setShowContactForm(false);
-    setContactForm({
-      name: "",
-      email: "",
-      phone: "",
-      message: ""
-    });
-  };
   const primaryColor = "#ff5010";
   const secondaryColor = "#ff7a47";
   const darkColor = "#222";
@@ -203,6 +324,7 @@ const handleContactFormChange = (e) => {
 
 return (
     <div>
+      <ToastContainer />
       {/* Hero Section with Digital Marketing Background */}
       <header className="relative text-white bg-black" 
       style={{ 
@@ -359,78 +481,78 @@ return (
               
               <h3 className="text-2xl font-bold mb-6 text-center text-black">Schedule a Call</h3>
               
-              <form onSubmit={handleContactFormSubmit}>
-                <div className="mb-4">
-                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={contactForm.name}
-                    onChange={handleContactFormChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="Your Name"
-                    required
-                  />
-                </div>
-                
-                <div className="mb-4">
-                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={contactForm.email}
-                    onChange={handleContactFormChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="your@email.com"
-                    required
-                  />
-                </div>
-                
-                <div className="mb-4">
-                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={contactForm.phone}
-                    onChange={handleContactFormChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="+1 (123) 456-7890"
-                    required
-                  />
-                </div>
-                
-                <div className="mb-6">
-                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                    How can we help you? (Optional)
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={contactForm.message}
-                    onChange={handleContactFormChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
-                    placeholder="Tell us about your digital marketing needs..."
-                  ></textarea>
-                </div>
-                
-                <div className="flex items-center justify-center">
-                  <button
-                    type="submit"
-                    className="bg-[#ff5010] hover:bg-[#ff672b] text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline w-full"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
+               <form onSubmit={handleServiceFormSubmit}>
+                      <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                          Full Name
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={serviceForm.name}
+                          onChange={handleServiceFormChange}
+                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          placeholder="Your Name"
+                          required
+                        />
+                      </div>
+                      
+                      <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                          Email
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={serviceForm.email}
+                          onChange={handleServiceFormChange}
+                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          placeholder="your@email.com"
+                          required
+                        />
+                      </div>
+                      
+                      <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          value={serviceForm.phone}
+                          onChange={handleServiceFormChange}
+                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          placeholder="+1 (123) 456-7890"
+                          required
+                        />
+                      </div>
+                      
+                      <div className="mb-6">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+                          How can we help you? (Optional)
+                        </label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          value={serviceForm.message}
+                          onChange={handleServiceFormChange}
+                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                          placeholder="Tell us about your digital marketing needs..."
+                        ></textarea>
+                      </div>
+                      
+                      <div className="flex items-center justify-center">
+                        <button
+                          type="submit"
+                          className="bg-[#ff5010] hover:bg-[#ff672b] text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline w-full"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </form>
             </div>
           </div>
         )}
