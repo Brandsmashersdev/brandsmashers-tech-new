@@ -13,6 +13,7 @@ import {
   Layers, 
   FileCode, 
   Cloud, 
+  X,
   TestTube, 
   Wrench,
   ArrowRight,
@@ -32,11 +33,41 @@ import {
   ServerCog,
   LifeBuoy,
   RefreshCw,
+  FileText,
 } from "lucide-react";
 
 import AimlSolutionMetrix from './AimlSolutionMetrix';
 import AimlHiring from './AimlHiring';
 const AiMlService = () => {
+
+   const [showContactForm, setShowContactForm] = useState(false);
+  const [contactForm, setContactForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+
+  const handleContactFormChange = (e) => {
+    const { name, value } = e.target;
+    setContactForm(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleContactFormSubmit = (e) => {
+    e.preventDefault();
+    // In a real application, you would handle the form submission here
+    alert("Thank you for your interest! We'll contact you soon.");
+    setShowContactForm(false);
+    setContactForm({
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
+  };
 
 //services data
 const services = [
@@ -276,8 +307,146 @@ const toggleFaq = (index) => {
        {/* Solution Metrics Section */}
   <AimlSolutionMetrix/>
 
-      {/**cost  section */}
-      <AimlHiring/>
+      {/**hiring cost section */}
+      
+      <section className="py-16 px-6 md:px-12 bg-white text-black">
+              <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                    Hire a <span className="text-[#ff5010]">AI/ML Developer</span> Tailored to Your Business Needs
+                  </h2>
+                  <p className="max-w-3xl mx-auto text-lg text-gray-600">
+                    Boost your online presence with expert digital marketers who understand your goals. Whether it's SEO, social media, paid ads, or full-scale strategy — hire dedicated professionals on flexible terms with complete transparency and security.
+                  </p>
+                </div>
+      
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                  {[
+                    { 
+                      title: "Simple & Transparent Pricing", 
+                      icon: CheckCircle,
+                      description: "Clear pricing structure with no hidden costs. Pay only for what you need."
+                    },
+                    { 
+                      title: "Fully Signed NDA", 
+                      icon: FileText,
+                      description: "Your business information stays secure with legally binding non-disclosure agreements."
+                    },
+                    { 
+                      title: "Easy Exit Policy", 
+                      icon: ArrowRight,
+                      description: "Flexible engagement models with straightforward exit terms if needed."
+                    }
+                  ].map((item, index) => (
+                    <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                      <div className="flex items-center mb-4">
+                        <item.icon className="text-[#ff5010] mr-3" size={24} />
+                        <h3 className="text-lg font-bold text-black">{item.title}</h3>
+                      </div>
+                      <p className="text-gray-600">{item.description}</p>
+                    </div>
+                  ))}
+                </div>
+      
+                <div className="text-center">
+                  <button 
+                    onClick={() => setShowContactForm(true)}
+                    className="inline-block bg-[#ff5010] hover:bg-[#ff672b] text-white font-medium px-8 py-3 rounded-md transition"
+                  >
+                    Schedule a Call
+                  </button>
+                </div>
+              </div>
+      
+              {/* Contact Form Modal */}
+              {showContactForm && (
+                <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+                  <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md relative">
+                    <button 
+                      onClick={() => setShowContactForm(false)}
+                      className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+                    >
+                      <X size={24} />
+                    </button>
+                    
+                    <h3 className="text-2xl font-bold mb-6 text-center text-black">Schedule a Call</h3>
+                    
+                    <form onSubmit={handleContactFormSubmit}>
+                      <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                          Full Name
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={contactForm.name}
+                          onChange={handleContactFormChange}
+                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          placeholder="Your Name"
+                          required
+                        />
+                      </div>
+                      
+                      <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                          Email
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={contactForm.email}
+                          onChange={handleContactFormChange}
+                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          placeholder="your@email.com"
+                          required
+                        />
+                      </div>
+                      
+                      <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          value={contactForm.phone}
+                          onChange={handleContactFormChange}
+                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          placeholder="+1 (123) 456-7890"
+                          required
+                        />
+                      </div>
+                      
+                      <div className="mb-6">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+                          How can we help you? (Optional)
+                        </label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          value={contactForm.message}
+                          onChange={handleContactFormChange}
+                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                          placeholder="Tell us about your digital marketing needs..."
+                        ></textarea>
+                      </div>
+                      
+                      <div className="flex items-center justify-center">
+                        <button
+                          type="submit"
+                          className="bg-[#ff5010] hover:bg-[#ff672b] text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline w-full"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              )}
+            </section>
       {/**process section */}
      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
