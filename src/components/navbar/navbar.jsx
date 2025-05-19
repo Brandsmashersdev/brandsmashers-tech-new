@@ -59,9 +59,9 @@ const Navbar = () => {
   const companyDropdownContent = {
     "Company": {
       items: [
-        { name: "Who We Are", iconSrc: "/Nav-Dropdown-icons/About.svg", path: "/whoweare" },
-        { name: "Join Our Team", iconSrc: "/Nav-Dropdown-icons/Team.svg", path: "Career" },
-        { name: "Blog", iconSrc: "/Nav-Dropdown-icons/Blog.svg", path: "Blog" },
+        { name: "Who We Are", iconSrc: "/team.png", path: "/whoweare" },
+        { name: "Join Our Team", iconSrc: "/handshake.png", path: "Career" },
+        { name: "Blog", iconSrc: "/content-writing.png", path: "Blog" },
       ]
     }
   };
@@ -70,17 +70,17 @@ const Navbar = () => {
   const servicesDropdownContent = {
     "Development Services": {
       items: [
-        { name: "Mobile App Development", iconSrc: "/Nav-Dropdown-icons/Mobile.svg", path:  "/mobileAppDevelopment" },
-        { name: "Web Development", iconSrc: "/Nav-Dropdown-icons/Web.svg", path: "/webdevelopment" },
-        { name: "Custom Software Development", iconSrc: "/Nav-Dropdown-icons/Software.svg", path: "/customService" },
+        { name: "Mobile App Development", iconSrc: "/smartphone.png", path:  "/mobileAppDevelopment" },
+        { name: "Web Development", iconSrc: "/web-development.png", path: "/webdevelopment" },
+        { name: "Custom Software Development", iconSrc: "/ux.png", path: "/customService" },
       ]
     },
     "Digital Marketing": {
       items: [
-        { name: "Digital marketing services", iconSrc: "/Nav-Dropdown-icons/SEO.svg", path: "/digitalMarketingServices" },
-        { name: "AIML services", iconSrc: "/Nav-Dropdown-icons/Social.svg", path: "/aimlservice" },
-        { name: "Product Development", iconSrc: "/Nav-Dropdown-icons/Content.svg", path: "/productDevelopment" },
-        { name: "UI/UX Development", iconSrc: "/Nav-Dropdown-icons/Content.svg", path: "/productDevelopment" },
+        { name: "Digital marketing services", iconSrc: "/social-media.png", path: "/digitalMarketingServices" },
+        { name: "AIML services", iconSrc: "/ai.png", path: "/aimlservice" },
+        { name: "Product Development", iconSrc: "/best-product.png", path: "/productDevelopment" },
+        { name: "UI/UX Development", iconSrc: "/ui.png", path: "/uiuxdevelopment" },
 
       ]
     },

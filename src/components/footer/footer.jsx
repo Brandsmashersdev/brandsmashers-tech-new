@@ -93,7 +93,7 @@ export default function Footer() {
       { name: "Mobile app development", link: "/services/mobileAppDevelopment" },
       { name: "Digital Marketing services", link: "/services/digitalMarketingServices" },
       { name: "AIML services", link: "/services/aimlservice" },
-      { name: "Ui/UX Development", link: "/services/ui-ux-design" },
+      { name: "Ui/UX Development", link: "/services/uiuxdevelopment" },
       { name: "Product Development", link: "/services/productDevelopment" },
       // { name: "Graphic Design", link: "/services/graphic-design" },
       // { name: "Content Marketing", link: "/services/content-marketing" },
@@ -128,12 +128,12 @@ export default function Footer() {
         </a>
       </li>
     ))}
-    <li className="transition-all duration-300 flex items-center hover:pl-2 group">
+    {/* <li className="transition-all duration-300 flex items-center hover:pl-2 group">
       <a href="/services" className="inline-flex items-center text-[#ff5010] font-medium">
         All Solutions
         <FaLongArrowAltRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
       </a>
-    </li>
+    </li> */}
   </ul>
 </div>
           
@@ -166,12 +166,12 @@ export default function Footer() {
               Contact us
             </a>
           </li>
-          <li className="transition-all duration-300 flex items-center hover:pl-2 group">
+          {/* <li className="transition-all duration-300 flex items-center hover:pl-2 group">
             <a href="/resources" className="inline-flex items-center text-[#ff5010] font-medium">
               More Resources
               <FaLongArrowAltRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

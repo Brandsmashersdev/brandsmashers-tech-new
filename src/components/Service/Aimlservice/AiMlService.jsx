@@ -138,7 +138,7 @@ const AiMlService = () => {
            
            if (data.success) {
              toast.success('Form submitted successfully!', toastConfig);
-             alert("form submitted sucessfully!!!");
+             
              setShowContactForm(false);
              setServiceForm({
                name:'',
