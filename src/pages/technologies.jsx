@@ -18,6 +18,7 @@ const Technologies = () => {
         <SolutionsGrid/>
         <FAQSection/>
         <Footer/>
+        
     </div>
   )
 }

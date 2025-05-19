@@ -190,7 +190,7 @@ export default function ProductDevelopmentPage() {
   return (
     <div>
       {/* Hero Section */}
-      <header className="relative text-white" 
+      <header className="relative text-white bg-black" 
       style={{ 
         backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url("/api/placeholder/1200/600")',
         backgroundSize: 'cover'
@@ -217,7 +217,7 @@ export default function ProductDevelopmentPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Scalable & Custom Product Development Services for Your Business</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Scalable & Custom Product Development Services for Your Business</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We redefine excellence through our custom product development services designed to meet your specific business goals. From initial concept to final launch, our expert team builds scalable, high-performing digital products that set you apart in the market.
             </p>
@@ -229,7 +229,7 @@ export default function ProductDevelopmentPage() {
                 <div style={{ color: "#ff5010" }} className="mb-4">
                   <service.icon size={40} />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-black">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
@@ -314,7 +314,7 @@ export default function ProductDevelopmentPage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Product Development Process</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Our Product Development Process</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Here is a streamlined overview of our custom product development process.
             </p>
@@ -345,7 +345,7 @@ export default function ProductDevelopmentPage() {
                     <div className={`w-full md:w-5/12 p-6 bg-white rounded-lg shadow-lg border border-gray-100 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
                       <div className="flex items-center mb-3">
                         <div style={{ color: "#ff5010" }} className="text-2xl font-bold mr-2">{index + 1}.</div>
-                        <h3 className="text-xl font-bold">{step.title}</h3>
+                        <h3 className="text-xl font-bold text-black">{step.title}</h3>
                       </div>
                       <p className="text-gray-600">{step.description}</p>
                     </div>
@@ -390,13 +390,13 @@ export default function ProductDevelopmentPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Success Stories</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Our Success Stories</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore how we've helped businesses transform their digital presence with our product development expertise.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
             {[
               {
                 title: "Fintech Mobile App",
@@ -480,17 +480,17 @@ export default function ProductDevelopmentPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
           </div>
           
           <div className="max-w-3xl mx-auto">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4 border border-gray-200 rounded-lg overflow-hidden">
                 <button 
-                  className="w-full flex justify-between items-center p-5 bg-gray-50 text-left"
+                  className="w-full flex justify-between items-center p-5 bg-gray-50 text-left text-black"
                   onClick={() => toggleFaq(index)}
                 >
-                  <span className="font-medium text-lg">{faq.question}</span>
+                  <span className="font-medium text-lg text-black">{faq.question}</span>
                   {activeFaq === index ? (
                     <ChevronUp size={20} />
                   ) : (
@@ -508,53 +508,7 @@ export default function ProductDevelopmentPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Brandsmashers Tech</h3>
-              <p className="text-gray-400 mb-6">
-                Your trusted partner for product development solutions that drive business growth.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>Product Consulting</li>
-                <li>Product Engineering</li>
-                <li>Digital Product Development</li>
-                <li>Product Design</li>
-                <li>API Development</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>About Us</li>
-                <li>Our Team</li>
-                <li>Careers</li>
-                <li>Blog</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Contact</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>info@brandsmashers.com</li>
-                <li>+91 123 456 7890</li>
-                <li>New Delhi, India</li>
-              </ul>
-              <div className="flex space-x-4 mt-4">
-                {/* Social media icons would go here */}
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© 2025 Brandsmashers Tech. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+ 
     </div>
   );
 }

@@ -22,7 +22,7 @@ const techStack = [
   export default function TechGrid() {
     return (
       <section className="py-10 px-4 bg-white">
-        <h2 className="text-3xl font-bold text-center text-primary mb-8">
+        <h2 className="text-3xl font-bold text-center text-primary mb-8 text-black">
           Web Technologies We Use
 
         </h2>
@@ -37,7 +37,7 @@ const techStack = [
                 alt={tech.name}
                 className="h-12 mb-3 object-contain"
               />
-              <span className="text-sm text-center font-medium">{tech.name}</span>
+              <span className="text-sm text-center font-medium text-black">{tech.name}</span>
             </div>
           ))}
         </div>

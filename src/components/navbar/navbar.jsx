@@ -59,9 +59,9 @@ const Navbar = () => {
   const companyDropdownContent = {
     "Company": {
       items: [
-        { name: "Who We Are", iconSrc: "/Nav-Dropdown-icons/About.svg", path: "who-we-are" },
-        { name: "Join Our Team", iconSrc: "/Nav-Dropdown-icons/Team.svg", path: "join-our-team" },
-        { name: "Blog", iconSrc: "/Nav-Dropdown-icons/Blog.svg", path: "blog" },
+        { name: "Who We Are", iconSrc: "/Nav-Dropdown-icons/About.svg", path: "/whoweare" },
+        { name: "Join Our Team", iconSrc: "/Nav-Dropdown-icons/Team.svg", path: "Career" },
+        { name: "Blog", iconSrc: "/Nav-Dropdown-icons/Blog.svg", path: "Blog" },
       ]
     }
   };
@@ -70,25 +70,19 @@ const Navbar = () => {
   const servicesDropdownContent = {
     "Development Services": {
       items: [
-        { name: "Mobile App Development", iconSrc: "/Nav-Dropdown-icons/Mobile.svg", path: "mobile-app-development" },
-        { name: "Web Development", iconSrc: "/Nav-Dropdown-icons/Web.svg", path: "web-development" },
-        { name: "Custom Software Development", iconSrc: "/Nav-Dropdown-icons/Software.svg", path: "custom-software-development" },
+        { name: "Mobile App Development", iconSrc: "/Nav-Dropdown-icons/Mobile.svg", path:  "/mobileAppDevelopment" },
+        { name: "Web Development", iconSrc: "/Nav-Dropdown-icons/Web.svg", path: "/webdevelopment" },
+        { name: "Custom Software Development", iconSrc: "/Nav-Dropdown-icons/Software.svg", path: "/customService" },
       ]
     },
     "Digital Marketing": {
       items: [
-        { name: "SEO Services", iconSrc: "/Nav-Dropdown-icons/SEO.svg", path: "seo-services" },
-        { name: "Social Media Marketing", iconSrc: "/Nav-Dropdown-icons/Social.svg", path: "social-media-marketing" },
-        { name: "Content Marketing", iconSrc: "/Nav-Dropdown-icons/Content.svg", path: "content-marketing" },
+        { name: "Digital marketing services", iconSrc: "/Nav-Dropdown-icons/SEO.svg", path: "/digitalMarketingServices" },
+        { name: "AIML services", iconSrc: "/Nav-Dropdown-icons/Social.svg", path: "/aimlservice" },
+        { name: "Product Development", iconSrc: "/Nav-Dropdown-icons/Content.svg", path: "/productDevelopment" },
       ]
     },
-    "Design Services": {
-      items: [
-        { name: "UI/UX Design", iconSrc: "/Nav-Dropdown-icons/UI-UX.svg", path: "ui-ux-design" },
-        { name: "Brand Identity", iconSrc: "/Nav-Dropdown-icons/Brand.svg", path: "brand-identity" },
-        { name: "Graphic Design", iconSrc: "/Nav-Dropdown-icons/Graphic.svg", path: "graphic-design" },
-      ]
-    }
+   
   };
 
   useEffect(() => {
@@ -124,17 +118,23 @@ const Navbar = () => {
     { name: "Company", hasDropdown: true },
     { name: "Services", hasDropdown: true },
     { name: "Hire Developers", hasDropdown: true },
-    { name: "Industries", hasDropdown: false, href: '/industries' },
+    { name: "Technology", hasDropdown: false, href: '/technologies' },
   ];
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>
-        <Link href="/">
-          {/* <Image src="/nav.svg" alt="Logo" width={150} height={40} /> */}
-        </Link>
-      </div>
-      
+   <div className={styles.logo}>
+  <Link href="/">
+    <Image 
+      src="/logo.jpg" 
+      alt="Logo" 
+      width={100} 
+      height={50} 
+      style={{ objectFit: "cover" }} 
+    />
+  </Link>
+</div>
+
       <div className={styles.hamburger} onClick={toggleMenu}>
         <Image src="/hamburger.png" alt="Menu" width={24} height={24} />
       </div>

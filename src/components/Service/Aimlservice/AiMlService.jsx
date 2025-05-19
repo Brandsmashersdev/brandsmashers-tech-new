@@ -218,6 +218,12 @@ const process = [
     const [activeFaq, setActiveFaq] = useState(null);
    const [hoveredIndex, setHoveredIndex] = useState(null);
 
+
+
+const toggleFaq = (index) => {
+  setActiveFaq(prevIndex => (prevIndex === index ? null : index));
+};
+
   return (
     <div className="font-sans text-gray-800">
 
@@ -421,8 +427,8 @@ const process = [
           <div className="max-w-3xl mx-auto">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4 border border-gray-200 rounded-lg overflow-hidden">
-                <button 
-                  className="w-full flex justify-between items-center p-5 bg-gray-100 text-left"
+               <button 
+                  className="w-full flex justify-between items-center p-5 bg-gray-50 text-left text-black"
                   onClick={() => toggleFaq(index)}
                 >
                   <span className="font-medium text-lg">{faq.question}</span>

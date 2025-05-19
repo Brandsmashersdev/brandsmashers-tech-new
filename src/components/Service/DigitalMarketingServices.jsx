@@ -176,9 +176,9 @@ export default function DigitalMarketingPage() {
 return (
     <div>
       {/* Hero Section with Digital Marketing Background */}
-      <header className="relative text-white" 
+      <header className="relative text-white bg-black" 
       style={{ 
-        backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop")',
+        // backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop")',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }} 
@@ -215,7 +215,7 @@ return (
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Result-Driven Digital Marketing Services to Grow Your Business</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Result-Driven Digital Marketing Services to Grow Your Business</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Unlock your brand's full potential with our comprehensive digital marketing services. From boosting visibility to driving leads and sales, we use proven strategies and modern tools to help your business thrive in the digital world.
             </p>
@@ -227,7 +227,7 @@ return (
                 <div style={{ color: "#ff5010" }} className="mb-4">
                   <service.icon size={40} />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-black">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
@@ -258,7 +258,7 @@ return (
                 <div className="text-4xl font-extrabold mb-2 text-[#ff5722] drop-shadow-[0_0_6px_#ff5722aa]">
                   {item.value}
                 </div>
-                <p className="text-lg text-gray-300">{item.label}</p>
+                <p className="text-lg text-gray-300 text-black">{item.label}</p>
               </div>
             ))}
           </div>
@@ -301,7 +301,7 @@ return (
               <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                 <div className="flex items-center mb-4">
                   <item.icon className="text-[#ff5010] mr-3" size={24} />
-                  <h3 className="text-lg font-bold">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-black">{item.title}</h3>
                 </div>
                 <p className="text-gray-600">{item.description}</p>
               </div>
@@ -320,7 +320,7 @@ return (
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Proven Digital Marketing Process That Delivers Real Results</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Proven Digital Marketing Process That Delivers Real Results</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Our digital marketing approach is built on clarity, strategy, and performance. From understanding your business to delivering measurable results, we follow a streamlined process that drives consistent growth.
             </p>
@@ -351,7 +351,7 @@ return (
                     <div className={`w-full md:w-5/12 p-6 bg-white rounded-lg shadow-lg border border-gray-100 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
                       <div className="flex items-center mb-3">
                         <div style={{ color: "#ff5010" }} className="text-2xl font-bold mr-2">{index + 1}.</div>
-                        <h3 className="text-xl font-bold">{step.title}</h3>
+                        <h3 className="text-xl font-bold text-black">{step.title}</h3>
                       </div>
                       <p className="text-gray-600">{step.description}</p>
                     </div>
@@ -396,7 +396,7 @@ return (
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Success Stories</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Our Success Stories</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Real results for real businesses. See how our digital marketing services have transformed brands and driven measurable growth.
             </p>
@@ -410,7 +410,7 @@ return (
                 </div>
                 <div className="p-6">
                   <div className="text-sm font-medium text-[#ff5010] mb-2">{item.industry}</div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-black">{item.title}</h3>
                   <p className="text-gray-600 mb-4">{item.description}</p>
                   <a 
                     href="#" 
@@ -470,17 +470,17 @@ return (
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
           </div>
           
           <div className="max-w-3xl mx-auto">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4 border border-gray-200 rounded-lg overflow-hidden">
                 <button 
-                  className="w-full flex justify-between items-center p-5 bg-gray-50 text-left"
+                  className="w-full flex justify-between items-center p-5 bg-gray-50 text-left text-black"
                   onClick={() => toggleFaq(index)}
                 >
-                  <span className="font-medium text-lg">{faq.question}</span>
+                  <span className="font-medium text-lg text-black">{faq.question}</span>
                   {activeFaq === index ? (
                     <ChevronUp size={20} />
                   ) : (

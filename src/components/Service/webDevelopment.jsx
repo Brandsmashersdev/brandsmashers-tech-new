@@ -194,9 +194,9 @@ export default function WebDevelopmentPage() {
   return (
     <div>
       {/* Hero Section */}
-      <header className="relative text-white" 
+      <header className="relative text-white bg-black " 
       style ={{ 
-        backgroundImage:'url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fweb-development-wallpaper&psig=AOvVaw3UNZ0A4H6LzBmmpeXgFwar&ust=1747121598651000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMC6oMm1nY0DFQAAAAAdAAAAABAR)',
+        // backgroundImage:'url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fweb-development-wallpaper&psig=AOvVaw3UNZ0A4H6LzBmmpeXgFwar&ust=1747121598651000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMC6oMm1nY0DFQAAAAAdAAAAABAR)',
     
         backgroundSize:'cover'
       
@@ -224,7 +224,7 @@ export default function WebDevelopmentPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Professional Web Development Services</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Professional Web Development Services</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Component-focused development is at the heart of every high-performing digital experience. At Brandsmashers Tech, we don't just build software—we craft tailored, scalable solutions designed to meet your unique business needs.
             </p>
@@ -236,7 +236,7 @@ export default function WebDevelopmentPage() {
                 <div style={{ color: "#ff5010" }} className="mb-4">
                   <service.icon size={40} />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-black">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
@@ -297,7 +297,7 @@ export default function WebDevelopmentPage() {
       
       {/* Basic Plan */}
       <div className="bg-[#161616] p-6 rounded-xl border border-[#222] shadow-[0_0_15px_#ff501022] hover:shadow-[0_0_20px_#ff501033] transition-shadow duration-300 text-center">
-        <div className="text-lg font-semibold mb-4">Basic</div>
+        <div className="text-lg font-semibold mb-4 text-white">Basic</div>
         <div className="text-4xl font-bold mb-6 text-[#ff5010] drop-shadow-[0_0_6px_#ff5010aa]">
           $25<span className="text-lg text-gray-400">/hr</span>
         </div>
@@ -306,7 +306,7 @@ export default function WebDevelopmentPage() {
           <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> Single Platform</li>
           <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> 30-Day Support</li>
         </ul>
-        <button className="w-full py-2 rounded-md text-white bg-[#ff5010] hover:bg-[#ff672b] transition-colors">
+        <button className="w-full py-2 rounded-md text-black bg-[#ff5010] hover:bg-[#ff672b] transition-colors">
           Get Started
         </button>
       </div>
@@ -316,7 +316,7 @@ export default function WebDevelopmentPage() {
         <div className="absolute top-0 right-0 left-0 py-1 text-sm font-medium bg-[#ff5010] rounded-t-xl">
           Most Popular
         </div>
-        <div className="text-lg font-semibold mb-4 mt-6">Standard</div>
+        <div className="text-lg font-semibold mb-4 mt-6 text-white">Standard</div>
         <div className="text-4xl font-bold mb-6 text-[#ff5010] drop-shadow-[0_0_6px_#ff5010aa]">
           $40<span className="text-lg text-gray-400">/hr</span>
         </div>
@@ -333,7 +333,7 @@ export default function WebDevelopmentPage() {
 
       {/* Premium Plan */}
       <div className="bg-[#161616] p-6 rounded-xl border border-[#222] shadow-[0_0_15px_#ff501022] hover:shadow-[0_0_20px_#ff501033] transition-shadow duration-300 text-center">
-        <div className="text-lg font-semibold mb-4">Premium</div>
+        <div className="text-lg font-semibold mb-4 text-white">Premium</div>
         <div className="text-4xl font-bold mb-6 text-[#ff5010] drop-shadow-[0_0_6px_#ff5010aa]">
           $60<span className="text-lg text-gray-400">/hr</span>
         </div>
@@ -372,7 +372,7 @@ export default function WebDevelopmentPage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Web App Development Process</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Our Web App Development Process</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Here is a streamlined overview of our custom web app development process.
             </p>
@@ -403,7 +403,7 @@ export default function WebDevelopmentPage() {
                     <div className={`w-full md:w-5/12 p-6 bg-white rounded-lg shadow-lg border border-gray-100 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
                       <div className="flex items-center mb-3">
                         <div style={{ color: "#ff5010" }} className="text-2xl font-bold mr-2">{index + 1}.</div>
-                        <h3 className="text-xl font-bold">{step.title}</h3>
+                        <h3 className="text-xl font-bold text-black">{step.title}</h3>
                       </div>
                       <p className="text-gray-600">{step.description}</p>
                     </div>
@@ -438,7 +438,7 @@ export default function WebDevelopmentPage() {
         >
           <div className="flex items-center mb-4">
             <CheckCircle className="text-[#ff5010] mr-3" size={28} />
-            <h3 className="text-xl font-semibold text-white">{reason.title}</h3>
+            <h3 className="text-xl font-semibold text-white ">{reason.title}</h3>
           </div>
           <p className="text-gray-400">{reason.description}</p>
         </div>
@@ -452,7 +452,7 @@ export default function WebDevelopmentPage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Success Stories</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Our Success Stories</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore how we've helped businesses transform their digital presence with our web development expertise.
             </p>
@@ -463,7 +463,7 @@ export default function WebDevelopmentPage() {
               <div key={item} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
                 <div className="h-48 bg-gray-300"></div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Case Study {item}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-black">Case Study {item}</h3>
                   <p className="text-gray-600 mb-4">A brief description of the project and the challenges we solved.</p>
                   <a 
                     href="#" 
@@ -525,17 +525,17 @@ export default function WebDevelopmentPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
           </div>
           
           <div className="max-w-3xl mx-auto">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4 border border-gray-200 rounded-lg overflow-hidden">
                 <button 
-                  className="w-full flex justify-between items-center p-5 bg-gray-50 text-left"
+                  className="w-full flex justify-between items-center p-5 bg-gray-50 text-left text-black"
                   onClick={() => toggleFaq(index)}
                 >
-                  <span className="font-medium text-lg">{faq.question}</span>
+                  <span className="font-medium text-lg text-black">{faq.question}</span>
                   {activeFaq === index ? (
                     <ChevronUp size={20} />
                   ) : (
@@ -552,53 +552,8 @@ export default function WebDevelopmentPage() {
           </div>
         </div>
       </section>
-      {/* Footer */}
-      <footer className="bg-black text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Brandsmashers Tech</h3>
-              <p className="text-gray-400 mb-6">
-                Your trusted partner for web development solutions that drive business growth.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>UI/UX Design</li>
-                <li>Frontend Development</li>
-                <li>Backend Development</li>
-                <li>Full Stack Development</li>
-                <li>Cloud Development</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>About Us</li>
-                <li>Our Team</li>
-                <li>Careers</li>
-                <li>Blog</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Contact</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>info@brandsmashers.com</li>
-                <li>+91 123 456 7890</li>
-                <li>New Delhi, India</li>
-              </ul>
-              <div className="flex space-x-4 mt-4">
-                {/* Social media icons would go here */}
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© 2025 Brandsmashers Tech. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+   
+  
     </div>
   );
 }

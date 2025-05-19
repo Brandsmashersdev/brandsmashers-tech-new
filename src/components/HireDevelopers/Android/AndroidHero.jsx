@@ -113,9 +113,9 @@ const AndroidPageHero = () => {
       imageSrc="/Development.png"
       imageAlt="Development Setup"
       title="Why Hire "
-      highlightedText="Android Developer"
+      highlightedText=" Developer"
       titlee="from Brandsmashers Tech?"
-      description="Elevate your business by engaging your audience with a stunning, feature-packed mobile app designed for maximum impact."
+      description=" Elevate your business by engaging your audience with a stunning, feature-packed mobile app designed for maximum impact."
       features={[
         "Dedicated Experts, No Extra Charges",
         "Fully-Vetted In-House Developers",
@@ -127,5 +127,4 @@ const AndroidPageHero = () => {
     />
   );
 };
-
 export default AndroidPageHero;
