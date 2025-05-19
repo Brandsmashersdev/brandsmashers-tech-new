@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown, ChevronRight, Code, SmartphoneCharging, Layers, Laptop, Watch, Gamepad, CheckCircle, ArrowRight } from 'lucide-react';
+import { ChevronDown, ChevronRight, Code, SmartphoneCharging, Layers, FileText,Laptop, Watch, Gamepad, CheckCircle, ArrowUpRight,ArrowRight,Zap,X } from 'lucide-react';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+
+
 
 export default function MobileAppDevelopmentPage() {
   const [activeTab, setActiveTab] = useState(0);
