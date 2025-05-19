@@ -40,8 +40,14 @@ const TechIcons = () => {
     { icon: <BarChart3 size={18} />, label: "Data" }
   ];
 
+
+
+ 
+
+
   return (
-    <div className="flex flex-wrap gap-2 md:gap-3 justify-center my-6 md:my-8">
+    <div className="flex flex-wrap gap-3 justify-center my-8">
+      
       {technologies.map((tech, index) => (
         <div 
           key={index} 
@@ -225,7 +231,7 @@ const ContactPage = () => {
           formDataToSend.append(key, formData[key]);
         });
         formDataToSend.append('helpType', helpType);
-        formDataToSend.append('access_key', '26fd49ac-7bdb-4e08-9818-dbca12903e42');
+        formDataToSend.append('access_key', 'b02aa529-635c-470f-9fed-2d06aaa3e8f2');
 
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
