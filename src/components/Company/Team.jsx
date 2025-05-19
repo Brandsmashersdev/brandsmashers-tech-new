@@ -2,13 +2,12 @@
 import Image from "next/image";
 
 const teamImages = [
-  "/images/team-1.webp",
-  "/images/team-2.webp",
-  "/images/team-3.webp",
-  "/images/team-4.webp",
-  "/images/team-5.webp",
-  "/images/team-6.webp",
-  "/images/team-7.webp",
+  "/Nav-Dropdown-icons/team-1.jpg",
+  "/Nav-Dropdown-icons/team-2.jpg",
+  "/Nav-Dropdown-icons/team-3.jpg",
+  "/Nav-Dropdown-icons/team-4.jpg",
+  "/Nav-Dropdown-icons/team-5.jpg",
+  "/Nav-Dropdown-icons/team-6.jpg",
 ];
 
 export default function TeamPage() {

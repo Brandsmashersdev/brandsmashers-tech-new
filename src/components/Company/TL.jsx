@@ -3,12 +3,12 @@
 import Image from "next/image";
 
 const teamLeads = [
-  { name: "Alice", role: "Frontend", image: "/images/teamlead-1.webp" },
-  { name: "Bob", role: "Backend", image: "/images/teamlead-2.webp" },
-  { name: "Sophie", role: "UI/UX", image: "/images/teamlead-3.webp" },
-  { name: "James", role: "DevOps", image: "/images/teamlead-4.webp" },
-  { name: "Emma", role: "QA", image: "/images/teamlead-5.webp" },
-  { name: "Liam", role: "Data", image: "/images/teamlead-6.webp" },
+  { name: "Alice", role: "", image: "/Nav-Dropdown-icons/Aniket.jpg" },
+  { name: "Bob", role: "", image: "/Nav-Dropdown-icons/Gourav.jpg" },
+  { name: "Sophie", role: "", image: "/Nav-Dropdown-icons/Hitanshi.jpg" },
+  { name: "James", role: "", image: "/Nav-Dropdown-icons/Chirag.jpg" },
+  { name: "Emma", role: "", image: "/Nav-Dropdown-icons/jay.jpg" },
+  { name: "Liam", role: "", image: "/Nav-Dropdown-icons/mayuri.jpg" },
 ];
 
 const TeamLeadSection = () => {

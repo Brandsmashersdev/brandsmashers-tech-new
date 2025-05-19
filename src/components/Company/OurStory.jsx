@@ -14,7 +14,7 @@ export default function FounderCard() {
         <div className="md:w-1/2 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10 z-10"></div>
           <img
-            src="/api/placeholder/600/800"
+            src="/Nav-Dropdown-icons/Brandsmashers.jpg"
             alt="Company Founder"
             className="w-full h-full object-cover"
           />
