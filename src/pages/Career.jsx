@@ -21,7 +21,7 @@ const career = () => {
       <StoryBanner/>
       <CultureSection/>
       <EmployeeTestimonials/> 
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 };
