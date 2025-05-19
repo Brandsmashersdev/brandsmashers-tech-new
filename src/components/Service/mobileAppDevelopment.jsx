@@ -1,10 +1,36 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown, ChevronRight, Code, SmartphoneCharging, Layers, Laptop, Watch, Gamepad, CheckCircle, ArrowRight } from 'lucide-react';
+import { ChevronDown, ChevronRight, Code, SmartphoneCharging, Layers, FileText,Laptop, Watch, Gamepad, CheckCircle, ArrowUpRight,ArrowRight,Zap,X } from 'lucide-react';
 
 export default function MobileAppDevelopmentPage() {
   const [activeTab, setActiveTab] = useState(0);
   const [activeFaq, setActiveFaq] = useState(null);
-  
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [contactForm, setContactForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+  const handleContactFormChange = (e) => {
+    const { name, value } = e.target;
+    setContactForm(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleContactFormSubmit = (e) => {
+    e.preventDefault();
+    // In a real application, you would handle the form submission here
+    alert("Thank you for your interest! We'll contact you soon.");
+    setShowContactForm(false);
+    setContactForm({
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
+  };
   const primaryColor = "#ff5010";
   const secondaryColor = "#ff7a47";
   const darkColor = "#222";
@@ -253,82 +279,147 @@ export default function MobileAppDevelopmentPage() {
         </div>
       </section>
 
-      {/* Cost Section */}
-      <section 
-        className="py-16 px-6 md:px-12"
-        style={{ backgroundColor: `${primaryColor}10` }}
-      >
+     
+        {/* Hire Digital Marketing Expert Section */}
+      <section className="py-16 px-6 md:px-12 bg-white text-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
-              Hire a Custom Mobile App Developer As Per Your Requirements
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Hire a <span className="text-[#ff5010]">Mobile App Developer</span> Tailored to Your Business Needs
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
-              Simple & Transparent Pricing | Fully Signed NDA | Code Security | Easy Exit Policy
+            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+              Boost your online presence with expert digital marketers who understand your goals. Whether it's SEO, social media, paid ads, or full-scale strategy — hire dedicated professionals on flexible terms with complete transparency and security.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-lg font-medium mb-4 text-black">Basic</div>
-              <div className="text-4xl font-bold mb-6" style={{ color: primaryColor }}>$25<span className="text-lg text-gray-800">/hr</span></div>
-              <ul className="text-left space-y-3 mb-8">
-                <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> Basic Features</li>
-                <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> Single Platform</li>
-                <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> 30-Day Support</li>
-              </ul>
-              <button 
-                className="w-full py-2 rounded-md text-white"
-                style={{ backgroundColor: primaryColor }}
-              >
-                Get Started
-              </button>
-            </div>
-            <div 
-              className="p-6 rounded-lg shadow-lg text-center text-white relative"
-              style={{ backgroundColor: darkColor }}
-            >
-              <div 
-                className="absolute top-0 right-0 left-0 py-1 text-sm font-medium"
-                style={{ backgroundColor: primaryColor }}
-              >
-                Most Popular
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {[
+              { 
+                title: "Simple & Transparent Pricing", 
+                icon: CheckCircle,
+                description: "Clear pricing structure with no hidden costs. Pay only for what you need."
+              },
+              { 
+                title: "Fully Signed NDA", 
+                icon: FileText,
+                description: "Your business information stays secure with legally binding non-disclosure agreements."
+              },
+              { 
+                title: "Easy Exit Policy", 
+                icon: ArrowRight,
+                description: "Flexible engagement models with straightforward exit terms if needed."
+              }
+            ].map((item, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div className="flex items-center mb-4">
+                  <item.icon className="text-[#ff5010] mr-3" size={24} />
+                  <h3 className="text-lg font-bold text-black">{item.title}</h3>
+                </div>
+                <p className="text-gray-600">{item.description}</p>
               </div>
-              <div className="text-lg font-medium mb-4 mt-4 text-black">Standard</div>
-              <div className="text-4xl font-bold mb-6" style={{ color: primaryColor }}>$40<span className="text-lg text-white">/hr</span></div>
-              <ul className="text-left space-y-3 mb-8">
-                <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> Advanced Features</li>
-                <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> Cross-Platform</li>
-                <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> 90-Day Support</li>
-                <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> API Integration</li>
-              </ul>
-              <button 
-                className="w-full py-2 rounded-md text-white"
-                style={{ backgroundColor: primaryColor }}
-              >
-                Get Started
-              </button>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-lg font-medium mb-4 text-black">Premium</div>
-              <div className="text-4xl font-bold mb-6" style={{ color: primaryColor }}>$60<span className="text-lg text-gray-800">/hr</span></div>
-              <ul className="text-left space-y-3 mb-8">
-                <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> All Features</li>
-                <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> All Platforms</li>
-                <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> 1-Year Support</li>
-                <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> Full Integration</li>
-                <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> White-label Option</li>
-              </ul>
-              <button 
-                className="w-full py-2 rounded-md text-white"
-                style={{ backgroundColor: primaryColor }}
-              >
-                Get Started
-              </button>
-            </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <button 
+              onClick={() => setShowContactForm(true)}
+              className="inline-block bg-[#ff5010] hover:bg-[#ff672b] text-white font-medium px-8 py-3 rounded-md transition"
+            >
+              Schedule a Call
+            </button>
           </div>
         </div>
+
+        {/* Contact Form Modal */}
+        {showContactForm && (
+          <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+            <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md relative">
+              <button 
+                onClick={() => setShowContactForm(false)}
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+              >
+                <X size={24} />
+              </button>
+              
+              <h3 className="text-2xl font-bold mb-6 text-center text-black">Schedule a Call</h3>
+              
+              <form onSubmit={handleContactFormSubmit}>
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={contactForm.name}
+                    onChange={handleContactFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={contactForm.email}
+                    onChange={handleContactFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+                
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={contactForm.phone}
+                    onChange={handleContactFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="+1 (123) 456-7890"
+                    required
+                  />
+                </div>
+                
+                <div className="mb-6">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+                    How can we help you? (Optional)
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={contactForm.message}
+                    onChange={handleContactFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                    placeholder="Tell us about your digital marketing needs..."
+                  ></textarea>
+                </div>
+                
+                <div className="flex items-center justify-center">
+                  <button
+                    type="submit"
+                    className="bg-[#ff5010] hover:bg-[#ff672b] text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline w-full"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
       </section>
+
 
       {/* Process Section */}
       <section className="py-16 px-6 md:px-12 bg-white">
