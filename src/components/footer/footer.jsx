@@ -71,107 +71,114 @@ export default function Footer() {
                 <div className="flex-shrink-0 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-[#ff5010]">
                   <FaEnvelope size={14} />
                 </div>
-                <span>info@brandsmashers.tech</span>
+                <span>info@brandsmashers.com</span>
               </div>
               
               <div className="flex items-center space-x-3">
                 <div className="flex-shrink-0 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-[#ff5010]">
                   <FaPhone size={14} />
                 </div>
-                <span>+91 123 456 7890</span>
+                <span>7000863918</span>
               </div>
             </div>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800 flex items-center">
-              <span className="inline-block mr-2 w-2 h-6 bg-[#ff5010]"></span>
-              Services
-            </h3>
-            <ul className="space-y-3 text-gray-400">
-              {["Mobile app development", "SEO services", "Social Media Marketing", "Ui/UX design","Brand Indentity","Graphic Design","Content Marketing","Customer software development","Web development"].map((item) => (
-                <li key={item} className="transition-all duration-300 hover:pl-2 hover:text-white">
-                  <a href="#" className="inline-flex items-center">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+  <h3 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800 flex items-center">
+    <span className="inline-block mr-2 w-2 h-6 bg-[#ff5010]"></span>
+    Services
+  </h3>
+  <ul className="space-y-3 text-gray-400">
+    {[
+      { name: "Mobile app development", link: "/services/mobileAppDevelopment" },
+      { name: "Digital Marketing services", link: "/services/digitalMarketingServices" },
+      { name: "AIML services", link: "/services/aimlservice" },
+      { name: "Ui/UX Development", link: "/services/ui-ux-design" },
+      { name: "Product Development", link: "/services/productDevelopment" },
+      // { name: "Graphic Design", link: "/services/graphic-design" },
+      // { name: "Content Marketing", link: "/services/content-marketing" },
+      { name: "Custom software development", link: "/services/customService" },
+      { name: "Web development", link: "/services/webdevelopment" }
+    ].map((item) => (
+      <li key={item.name} className="transition-all duration-300 hover:pl-2 hover:text-white">
+        <a href={item.link} className="inline-flex items-center group">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+          {item.name}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800 flex items-center">
-              <span className="inline-block mr-2 w-2 h-6 bg-[#ff5010]"></span>
-              Company
-            </h3>
-            <ul className="space-y-3 text-gray-400">
-              {["Who we are", "Join our team", "Blog"].map((item) => (
-                <li key={item} className="transition-all duration-300 hover:pl-2 hover:text-white">
-                  <a href="#" className="inline-flex items-center">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    {item}
-                  </a>
-                </li>
-              ))}
-              <li className="transition-all duration-300 flex items-center hover:pl-2 group">
-                <a href="#" className="inline-flex items-center text-[#ff5010] font-medium">
-                  All Solutions 
-                  <FaLongArrowAltRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </a>
-              </li>
-            </ul>
-          </div>
+  <h3 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800 flex items-center">
+    <span className="inline-block mr-2 w-2 h-6 bg-[#ff5010]"></span>
+    Company
+  </h3>
+  <ul className="space-y-3 text-gray-400">
+    {[
+      { name: "Who we are", link: "/whoweare" },
+      { name: "Join our team", link: "/career" },
+      { name: "Blog", link: "/Blog" }
+    ].map((item) => (
+      <li key={item.name} className="transition-all duration-300 hover:pl-2 hover:text-white">
+        <a href={item.link} className="inline-flex items-center group">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+          {item.name}
+        </a>
+      </li>
+    ))}
+    <li className="transition-all duration-300 flex items-center hover:pl-2 group">
+      <a href="/services" className="inline-flex items-center text-[#ff5010] font-medium">
+        All Solutions
+        <FaLongArrowAltRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+      </a>
+    </li>
+  </ul>
+</div>
           
           {/* For Talent */}
        
           
           {/* Resources and Company (Combined) */}
           <div>
-            <div className="mb-8">
-              <h3 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800 flex items-center">
-                <span className="inline-block mr-2 w-2 h-6 bg-[#ff5010]"></span>
-              Industries
-              </h3>
-              <ul className="space-y-3 text-gray-400">
-                {["Blog", "Partners", "Contact us"].map((item) => (
-                  <li key={item} className="transition-all duration-300 hover:pl-2 hover:text-white">
-                    <a href="#" className="inline-flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                      {item}
-                    </a>
-                  </li>
-                ))}
-                <li className="transition-all duration-300 flex items-center hover:pl-2 group">
-                  <a href="#" className="inline-flex items-center text-[#ff5010] font-medium">
-                    More Resources 
-                    <FaLongArrowAltRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-            
-            {/* <div>
-              <h3 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800 flex items-center">
-                <span className="inline-block mr-2 w-2 h-6 bg-[#ff5010]"></span>
-                Company
-              </h3>
-              <ul className="space-y-3 text-gray-400">
-                {["About", "Press", "Careers"].map((item) => (
-                  <li key={item} className="transition-all duration-300 hover:pl-2 hover:text-white">
-                    <a href="#" className="inline-flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div> */}
-          </div>
+      <div className="mb-8">
+        <h3 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800 flex items-center">
+          <span className="inline-block mr-2 w-2 h-6 bg-[#ff5010]"></span>
+          Industries
+        </h3>
+        <ul className="space-y-3 text-gray-400">
+          <li className="transition-all duration-300 hover:pl-2 hover:text-white group">
+            <a href="/Blog" className="inline-flex items-center">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              Blog
+            </a>
+          </li>
+          <li className="transition-all duration-300 hover:pl-2 hover:text-white group">
+            <a href="/technologies" className="inline-flex items-center">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            Technology
+            </a>
+          </li>
+          <li className="transition-all duration-300 hover:pl-2 hover:text-white group">
+            <a href="/contactus" className="inline-flex items-center">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              Contact us
+            </a>
+          </li>
+          <li className="transition-all duration-300 flex items-center hover:pl-2 group">
+            <a href="/resources" className="inline-flex items-center text-[#ff5010] font-medium">
+              More Resources
+              <FaLongArrowAltRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
         </div>
         
         {/* Newsletter Section */}
-        <div className="py-8 border-t border-b border-gray-800">
+        {/* <div className="py-8 border-t border-b border-gray-800">
           <div className="flex flex-col md:flex-row md:items-center justify-between">
             <div className="mb-6 md:mb-0">
               <h4 className="text-xl font-bold mb-2">Subscribe to Our Newsletter</h4>
@@ -188,7 +195,7 @@ export default function Footer() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
         
         {/* Bottom Section */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center">
@@ -212,11 +219,11 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex space-x-3">
             {[
-              { icon: <FaFacebookF size={16} />, link: "#" },
-              { icon: <FaInstagram size={16} />, link: "#" },
-              { icon: <FaLinkedinIn size={16} />, link: "#" },
-              { icon: <FaYoutube size={16} />, link: "#" },
-              { icon: <FaCloud size={16} />, link: "#" },
+              { icon: <FaFacebookF size={16} />, link: "https://www.facebook.com/brandsamsherstechnologies" },
+              { icon: <FaInstagram size={16} />, link: "https://www.instagram.com/brandsmashers_technologies/?hl=en" },
+              { icon: <FaLinkedinIn size={16} />, link: "https://in.linkedin.com/company/brandsmashers-tech-pvt-ltd" },
+              { icon: <FaYoutube size={16} />, link: "https://www.youtube.com/@Brandsmashers" },
+            
             ].map(({ icon, link }, idx) => (
               <a
                 key={idx}

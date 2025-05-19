@@ -80,7 +80,7 @@ export default function CutThroughNoiseSection() {
             Our Process
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-            Hire Pre-vetted Developers from <span className="text-orange-500">Best Remote Team</span>
+            Hire Pre-vetted Developers from <span className="text-orange-500">Best IT Staff Augmentation Company</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Stop wasting time on endless interviews and underqualified profiles. With our expert IT Staff Augmentation services, we match you with pre-vetted, highly skilled professionals who are ready to make an impact from day one.
@@ -158,11 +158,7 @@ export default function CutThroughNoiseSection() {
         </div>
         
         {/* CTA Button */}
-        <div className="text-center mt-16">
-          <button className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-            Start Hiring Top Talent
-          </button>
-        </div>
+      
       </div>
     </div>
   );

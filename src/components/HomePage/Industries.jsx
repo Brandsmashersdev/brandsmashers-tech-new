@@ -180,13 +180,13 @@ const Industries = () => {
         </div>
         
         {/* CTA Section */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="inline-block p-px bg-gradient-to-r from-[#ff5010] to-[#ff7040] rounded-lg">
             <button className="px-8 py-3 bg-gray-900 text-[#ff5010] font-semibold rounded-lg hover:bg-transparent hover:text-white transition-all duration-300">
               Discuss Your Industry Needs
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

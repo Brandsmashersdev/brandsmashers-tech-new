@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import Link from 'next/link';
 
 const ITSolutions = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,34 +33,38 @@ const ITSolutions = () => {
     {
       id: 1,
       src: "/digital.png",
-      alt: "Enterprise software solution",
-      title: "Enterprise Solutions",
+      alt: "Mobile App Development",
+      title: "Mobile App Development",
       description: "Scalable software systems for complex enterprise needs",
-      icon: "💼"
+      icon: "💼",
+      link: "/services/mobileAppDevelopment"
     },
     {
       id: 2,
       src: "/development.png",
-      alt: "Mobile app development",
-      title: "Mobile Development",
+      alt: "Web Development",
+      title: "Web Development",
       description: "Native and cross-platform app solutions",
-      icon: "📱"
+      icon: "📱",
+      link: "/services/webdevelopment"
     },
     {
       id: 3,
       src: "/desktop.png", 
-      alt: "Cloud integration services",
-      title: "Cloud Services",
+      alt: "Product Development",
+      title: "Product Development",
       description: "Seamless cloud migration and management",
-      icon: "☁️"
+      icon: "☁️",
+      link: "/services/productDevelopment"
     },
     {
       id: 4,
       src: "/mobileapp-img.png",
-      alt: "Data analytics platform",
-      title: "Data Analytics",
+      alt: "Custom Software Development",
+      title: "Custom Software Development",
       description: "Insightful data processing and visualization",
-      icon: "📊"
+      icon: "📊",
+      link: "/services/customService"
     }
   ];
 
@@ -89,16 +94,18 @@ const ITSolutions = () => {
           <span className="inline-block px-4 py-1 bg-[#ff5010]/10 text-[#ff5010] font-medium rounded-full text-sm mb-4">
             INNOVATIVE SOLUTIONS
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
-            Powering Digital <span className="text-[#ff5010]">Evolution</span>
+          <h2 className="text-4xl md:text-5xl lg:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+          Software Development & Engineering 
+ <span className="text-[#ff5010]">Services</span>
           </h2>
           <div className="flex justify-center space-x-2 mb-6">
             <div className="w-2 h-2 rounded-full bg-[#ff5010]"></div>
             <div className="w-12 h-2 rounded-full bg-[#ff5010]"></div>
             <div className="w-2 h-2 rounded-full bg-[#ff5010]"></div>
           </div>
-          <p className="max-w-2xl mx-auto text-gray-300 text-lg">
-            Bridging the gap between ambition and achievement with cutting-edge technology solutions
+          <p className="max-w-2xl mx-auto text-gray-300 text-lg ">
+          Build innovative, scalable, and user-centric digital solutions with our end-to-end Software Development & Engineering Services. From custom software and mobile apps to AI/ML, UI/UX, and digital marketing—we turn your ideas into powerful products.
+
           </p>
         </div>
         
@@ -128,12 +135,19 @@ const ITSolutions = () => {
                 <p className="text-gray-200 text-sm mb-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                   {item.description}
                 </p>
-                <div className="flex items-center space-x-2 text-[#ff5010]">
-                  <span className="font-medium text-sm">Explore</span>
-                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </div>
+                <Link href={item.link}>
+                  <div className="flex items-center space-x-2 text-[#ff5010] cursor-pointer">
+                    <span className="font-medium text-sm">Explore</span>
+                    <svg
+                      className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </div>
+                </Link>
               </div>
             </div>
           ))}
@@ -163,12 +177,14 @@ const ITSolutions = () => {
                 <div className="p-6 md:w-2/3 flex flex-col justify-center">
                   <h3 className="text-white font-bold text-xl mb-2">{item.title}</h3>
                   <p className="text-gray-300 mb-4">{item.description}</p>
-                  <div className="flex items-center space-x-2 text-[#ff5010]">
-                    <span className="font-medium text-sm">Learn more</span>
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </div>
+                  <Link href={item.link}>
+                    <div className="flex items-center space-x-2 text-[#ff5010]">
+                      <span className="font-medium text-sm">Learn more</span>
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -183,26 +199,31 @@ const ITSolutions = () => {
               <span className="inline-block px-3 py-1 bg-[#ff5010]/10 text-[#ff5010] rounded-md text-sm font-medium mb-4">WHY CHOOSE US</span>
               
               <h3 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
-                Elevating Businesses Through 
-                <span className="text-[#ff5010] block mt-1">Technology Excellence</span>
+              Cut Through the Noise 
+
+                <span className="text-[#ff5010] block mt-1">Connect Only with the Top 1% of Qualified Candidates</span>
               </h3>
               
               <div className="space-y-6">
                 <p className="text-gray-300 leading-relaxed">
-                  As a premier technology partner, we blend creativity with technical expertise to deliver solutions that drive growth and innovation. Our team of passionate engineers and strategists works tirelessly to transform complex challenges into elegant digital solutions.
+                Stop wasting time on endless interviews and underqualified profiles. With our expert IT Staff Augmentation services, we match you with pre-vetted, highly skilled professionals who are ready to make an impact from day one. Whether you're looking to hire remote developers from India or expand your in-house team with niche tech talent, we ensure you engage with only the best — faster, smarter, and without the hiring headaches.
+
+
+
                 </p>
                 
-                <p className="text-gray-300 leading-relaxed">
+                {/* <p className="text-gray-300 leading-relaxed">
                   From concept to deployment, we embrace a collaborative approach that ensures your vision is realized with precision and purpose, creating software that not only meets your current needs but scales with your future ambitions.
-                </p>
+                </p> */}
                 
                 {/* Feature Points */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
                   {[
-                    "Agile Development", 
-                    "Scalable Architecture", 
-                    "24/7 Support", 
-                    "Custom Solutions"
+                    " Share Your Talent Requirements", 
+                    "Receive Handpicked CVs", 
+                    "Interview the Best-Fit Engineers", 
+                    "Smooth Documentation & Compliance",
+                    "Onboard & Get Started"
                   ].map((item, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#ff5010]/10 flex items-center justify-center">
@@ -217,7 +238,7 @@ const ITSolutions = () => {
               </div>
               
               {/* CTA Buttons */}
-              <div className="mt-8 flex flex-wrap gap-4">
+              {/* <div className="mt-8 flex flex-wrap gap-4">
                 <button className="group relative overflow-hidden px-6 py-3 bg-[#ff5010] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                   <span className="relative z-10">Start Your Project</span>
                   <span className="absolute inset-0 bg-black/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
@@ -226,7 +247,7 @@ const ITSolutions = () => {
                 <button className="group px-6 py-3 border-2 border-gray-600 hover:border-[#ff5010] text-gray-300 hover:text-[#ff5010] font-semibold rounded-lg transition-all duration-300">
                   <span>Our Process</span>
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
           
@@ -247,7 +268,7 @@ const ITSolutions = () => {
                 />
                 
                 {/* Stats Overlay */}
-                <div className="absolute bottom-6 right-6 bg-black/80 backdrop-blur-sm p-4 rounded-xl border border-gray-700">
+                {/* <div className="absolute bottom-6 right-6 bg-black/80 backdrop-blur-sm p-4 rounded-xl border border-gray-700">
                   <div className="flex space-x-6">
                     <div className="text-center">
                       <h4 className="text-[#ff5010] text-3xl font-bold">98%</h4>
@@ -258,7 +279,7 @@ const ITSolutions = () => {
                       <p className="text-gray-300 text-xs">Projects</p>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -268,9 +289,9 @@ const ITSolutions = () => {
         <div className={`transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: "200+", label: "Global Clients" },
-              { value: "500+", label: "Projects Completed" },
-              { value: "15+", label: "Years of Excellence" },
+              { value: "100+", label: "Clients" },
+              { value: "250+", label: "Projects Completed" },
+              { value: "7+", label: "Years of Excellence" },
               { value: "50+", label: "Tech Specialists" }
             ].map((stat, index) => (
               <div 
@@ -286,12 +307,7 @@ const ITSolutions = () => {
         </div>
         
         {/* Footer CTA */}
-        <div className={`mt-20 text-center transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h3 className="text-2xl md:text-3xl font-bold mb-6">Ready to transform your business?</h3>
-          <button className="px-8 py-4 bg-[#ff5010] text-white font-semibold rounded-lg shadow-lg hover:bg-[#ff5010]/90 transition-all duration-300">
-            Schedule a Consultation
-          </button>
-        </div>
+      
       </div>
     </div>
   );

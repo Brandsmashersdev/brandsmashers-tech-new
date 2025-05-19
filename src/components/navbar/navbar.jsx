@@ -80,6 +80,8 @@ const Navbar = () => {
         { name: "Digital marketing services", iconSrc: "/Nav-Dropdown-icons/SEO.svg", path: "/digitalMarketingServices" },
         { name: "AIML services", iconSrc: "/Nav-Dropdown-icons/Social.svg", path: "/aimlservice" },
         { name: "Product Development", iconSrc: "/Nav-Dropdown-icons/Content.svg", path: "/productDevelopment" },
+        { name: "UI/UX Development", iconSrc: "/Nav-Dropdown-icons/Content.svg", path: "/productDevelopment" },
+
       ]
     },
    

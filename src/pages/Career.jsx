@@ -21,6 +21,7 @@ const career = () => {
       <StoryBanner/>
       <CultureSection/>
       <EmployeeTestimonials/> 
+      <Footer/>
     </div>
   );
 };

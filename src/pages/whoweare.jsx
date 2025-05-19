@@ -22,6 +22,7 @@ const whoweare = () => {
       <Team />
       <TL />
       <Map />
+      <Footer/>
     </div>
   )
 }

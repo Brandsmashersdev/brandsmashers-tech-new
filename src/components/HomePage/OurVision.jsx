@@ -3,10 +3,11 @@ import React, { useState, useRef, useEffect } from 'react';
 const ExploreOffering = () => {
   const offeringsData = [
     {
-      id: "software-consulting",
+      id: "Mobile App Development",
       number: "01.",
-      title: "Software Consulting Services",
-      description: "As one of the most sought-after custom software consulting companies, we analyze your business needs, conceptualize software structure, and help you get the best value from its development. Our dedicated team of experts leverages its technical prowess to deliver tailored software solutions that drive efficiency and productivity.",
+      title: "Mobile App Development",
+      description: "We design and develop high-performance mobile applications for iOS and Android platforms. Our team focuses on intuitive user interfaces, smooth performance, and scalable architecture, ensuring your app meets business goals and user expectations effectively across various industries.",
+      link: "/services/mobileAppDevelopment",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -14,10 +15,11 @@ const ExploreOffering = () => {
       )
     },
     {
-      id: "custom-software",
+      id: "Web development",
       number: "02.",
-      title: "Custom Software Development Services",
-      description: "A software development company with 35 years of business excellence, we can engineer reliable, scalable and secure software solutions for any OS, browser and device. We bring together deep industry expertise and the latest IT advancements to deliver custom solutions and products that perfectly fit the needs and behavior of their users.",
+      title: "Web Development",
+      description: "We create dynamic, responsive, and secure websites tailored to your brand’s needs. Our expert developers use modern frameworks and best practices to deliver high-quality web experiences that perform seamlessly across devices while aligning with your business objectives and target audience.",
+      link: "/services/webdevelopement",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -25,10 +27,11 @@ const ExploreOffering = () => {
       )
     },
     {
-      id: "enterprise-software",
+      id: "Custom Software development",
       number: "03.",
-      title: "Enterprise Software Development Services",
-      description: "Our enterprise software development services focus on creating robust, scalable solutions designed for large organizations. We develop and implement complex systems that streamline operations, integrate with existing infrastructure, and support the specific needs of enterprise-level businesses.",
+      title: "Custom Software development",
+      description: "We build bespoke software solutions designed to meet your specific business needs. Whether you need internal tools or customer-facing platforms, our team ensures functionality, scalability, and seamless integration with existing systems to enhance productivity and drive digital transformation.",
+      link: "/services/CustomService",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -36,10 +39,11 @@ const ExploreOffering = () => {
       )
     },
     {
-      id: "software-product",
+      id: "Digital Marketing Services",
       number: "04.",
-      title: "Software Product Development Services",
-      description: "We specialize in taking product ideas from concept to market with our comprehensive software product development services. Our approach includes market research, product strategy, design, development, testing, and launch support to ensure your software product succeeds in the marketplace.",
+      title: "Digital Marketing Services",
+      description: "Our digital marketing services help businesses grow online through targeted SEO, social media strategies, content marketing, and paid advertising. We focus on enhancing visibility, engagement, and conversions to build brand authority and deliver measurable ROI across digital channels.",
+      link: "/services/digitalMarketingServices",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
@@ -47,10 +51,11 @@ const ExploreOffering = () => {
       )
     },
     {
-      id: "mobile-app-development",
+      id: "AIML services",
       number: "05.",
-      title: "Mobile App Development",
-      description: "Our mobile app development team creates high-performance, feature-rich applications for iOS and Android platforms. Using the latest technologies and following best practices in UI/UX design, we deliver mobile solutions that engage users and drive business growth across various industries.",
+      title: "AIML Development",
+      description: "We develop customized AI and machine learning solutions that unlock insights from your data, automate complex tasks, and enhance decision-making. From predictive analytics to natural language processing, our AIML services help businesses gain a competitive edge through intelligent automation.",
+      link: "/services/aimlservice",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -58,10 +63,11 @@ const ExploreOffering = () => {
       )
     },
     {
-      id: "cloud-solutions",
+      id: "Product Development",
       number: "06.",
-      title: "Cloud Solutions & Migration",
-      description: "We provide comprehensive cloud solutions including architecture design, deployment, migration, and management services. Our team helps businesses leverage the power of cloud computing to improve scalability, reduce operational costs, and enhance security while ensuring smooth transitions from legacy systems.",
+      title: "Product Development",
+      description: "Our product development team transforms ideas into market-ready solutions. We guide you through product strategy, design, development, and launch—ensuring innovation, usability, and performance at every stage to meet user demands and business objectives effectively.",
+      link: "/services/productDevelopment",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
@@ -69,10 +75,11 @@ const ExploreOffering = () => {
       )
     },
     {
-      id: "ai-ml-solutions",
+      id: "UI/UX Development",
       number: "07.",
-      title: "AI & Machine Learning Solutions",
-      description: "Our AI and machine learning services help businesses implement intelligent automation, predictive analytics, and data-driven decision making. We develop custom AI solutions that transform raw data into actionable insights, optimize processes, and create competitive advantages in your industry.",
+      title: "UI/UX Development",
+      description: "We design engaging and user-centric digital experiences that combine aesthetics with usability. Our UI/UX development focuses on intuitive navigation, consistent branding, and responsive layouts, ensuring a seamless and delightful experience across all platforms and screen sizes.",
+      link: "#",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -176,17 +183,20 @@ const ExploreOffering = () => {
               {activeOfferingData.description}
             </p>
             
-            <button 
-              className="px-6 py-2 rounded-lg font-medium transition-all duration-300 mt-2"
+            <a 
+              href={activeOfferingData.link}
+              className="inline-block px-6 py-2 rounded-lg font-medium transition-all duration-300 mt-2"
               style={{ 
                 backgroundColor: primaryColor, 
-                boxShadow: '0 4px 12px rgba(255, 80, 16, 0.3)' 
+                boxShadow: '0 4px 12px rgba(255, 80, 16, 0.3)',
+                textDecoration: 'none',
+                color: 'white'
               }}
               onMouseOver={(e) => e.currentTarget.style.backgroundColor = primaryColorHover}
               onMouseOut={(e) => e.currentTarget.style.backgroundColor = primaryColor}
             >
               Learn More
-            </button>
+            </a>
           </div>
         </div>
       </div>

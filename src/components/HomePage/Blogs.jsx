@@ -265,7 +265,7 @@ const BlogCarousel = () => {
         {/* View all posts button with updated design */}
         <div className="text-center mt-14">
           <a 
-            href="#" 
+            href="/Blog" 
             className="inline-flex items-center px-8 py-4 bg-[#ff5010] text-base font-bold rounded-full text-white hover:bg-[#e84600] transition-colors duration-300 shadow-lg hover:shadow-xl hover:shadow-orange-200/50"
           >
             Explore All Articles

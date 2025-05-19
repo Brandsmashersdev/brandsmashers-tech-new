@@ -8,6 +8,7 @@ function Blog() {
     <div>
       <Navbar />
       <Blog_first />
+      <Footer/>
     </div>
   )
 }
