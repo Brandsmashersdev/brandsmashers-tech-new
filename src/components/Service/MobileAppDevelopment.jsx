@@ -260,7 +260,7 @@ export default function MobileAppDevelopmentPage() {
       >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
               Hire a Custom Mobile App Developer As Per Your Requirements
             </h2>
             <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
