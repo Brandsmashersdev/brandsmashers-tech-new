@@ -15,7 +15,7 @@ const blogs = () => {
       <Navbar />
       <BlogSection1 />
       {/* <BlogSection2/> */}
-      <Footer />
+      {/* <Footer /> */}
       
     </div>
   );
