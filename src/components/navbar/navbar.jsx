@@ -7,6 +7,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
+  // Dropdown content for the Tech/Hire Developers section
   const techDropdownContent = {
     "Mobile App Developers": {
       items: [
@@ -14,8 +15,6 @@ const Navbar = () => {
         { name: "iOS Developer", iconSrc: "/Nav-Dropdown-icons/iOS-Developer.svg", path: "ios-developer" },
         { name: "Flutter Developer", iconSrc: "/Nav-Dropdown-icons/Flutter.svg", path: "flutter-developer" },
         { name: "React-Native Developer", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "react-native-developer" },
-        // { name: "Unity Developers", iconSrc: "/Nav-Dropdown-icons/Unity.svg", path: "unity" },
-        // { name: "Metaverse Developers", iconSrc: "/Nav-Dropdown-icons/Metaverse.svg", path: "metaverse" }
       ]
     },
     "Front End Developer": {
@@ -35,22 +34,45 @@ const Navbar = () => {
         { name: "PHP Developers", iconSrc: "/Nav-Dropdown-icons/PHP.svg", path: "php-developer" }
       ]
     },
-    
     "CMS & E-Commerce Developers": {
       items: [
-        { name: "Drupal Developer", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "drupal" },
         { name: "WordPress Developer", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "wordpress" },
         { name: "Shopify Developer", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "shopify" },
-        { name: "Magento Developer", iconSrc: "/Nav-Dropdown-icons/Magento.svg", path: "magento" },
-        { name: "Java Developers", iconSrc: "/Nav-Dropdown-icons/Java.svg", path: "java" }
       ]
     },
     "Marketing": {
       items: [
         { name: "SEO", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "SEO" },
-        { name: "Programmatic", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "programmatic-developer" },
-        { name: "SEM & PPC", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "sem-ppc" },
-        
+      ]
+    },
+  };
+
+  // Dropdown content for the Company section
+  const companyDropdownContent = {
+    "Company": {
+      items: [
+        { name: "Who We Are", iconSrc: "/team.png", path: "/whoweare" },
+        { name: "Join Our Team", iconSrc: "/handshake.png", path: "Career" },
+        { name: "Blog", iconSrc: "/content-writing.png", path: "Blog" },
+      ]
+    }
+  };
+
+  // Dropdown content for the Services section
+  const servicesDropdownContent = {
+    "Development Services": {
+      items: [
+        { name: "Mobile App Development", iconSrc: "/smartphone.png", path: "/mobileAppDevelopment" },
+        { name: "Web Development", iconSrc: "/web-development.png", path: "/webdevelopment" },
+        { name: "Custom Software Development", iconSrc: "/ux.png", path: "/customService" },
+      ]
+    },
+    "Digital Marketing": {
+      items: [
+        { name: "Digital marketing services", iconSrc: "/social-media.png", path: "/digitalMarketingServices" },
+        { name: "AIML services", iconSrc: "/ai.png", path: "/aimlservice" },
+        { name: "Product Development", iconSrc: "/best-product.png", path: "/productDevelopment" },
+        { name: "UI/UX Development", iconSrc: "/ui.png", path: "/uiuxdevelopment" },
       ]
     },
   };
@@ -84,31 +106,36 @@ const Navbar = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null);
   };
-
+  
   const menuItems = [
-    { name: "Hire Developers", hasDropdown: false, href: '/hiredevelopers' },
-    { name: "Services", hasDropdown: false, href: '/services' },
-    { name: "Technologies", hasDropdown: true },
-    { name: "Blogs", hasDropdown: false, href: '/blogs' },
-    { name: "About Us", hasDropdown: false, href: '/aboutus' }
+    { name: "Company", hasDropdown: true },
+    { name: "Services", hasDropdown: true },
+    { name: "Hire Developers", hasDropdown: true },
   ];
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image src="/nav.svg" alt="Logo" width={150} height={40} />
+          <Image 
+            src="/logo.jpg" 
+            alt="Logo" 
+            width={100} 
+            height={50} 
+            style={{ objectFit: "cover" }} 
+          />
         </Link>
       </div>
-      
+
       <div className={styles.hamburger} onClick={toggleMenu}>
-        <Image src="/hamburger.png" alt="Menu" width={24} height={24} />
+        <Image src="/toggle.jpg" alt="Menu" width={24} height={24} />
       </div>
 
       <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
         {menuItems.map((item) => (
           <li 
-            key={item.name} 
+            key={item.name}
+            data-menu-type={item.name}
             className={`${item.hasDropdown ? styles.hasDropdown : ''} ${
               activeDropdown === item.name ? styles.active : ''
             }`}
@@ -133,7 +160,63 @@ const Navbar = () => {
                 </svg>
               )}
             </div>
-            {item.name === "Technologies" && (
+            
+            {/* Company Dropdown */}
+            {item.name === "Company" && (
+              <div className={`${styles.dropdownMenu} ${
+                activeDropdown === item.name ? styles.show : ''
+              }`}>
+                <div className={styles.dropdownGrid}>
+                  {Object.entries(companyDropdownContent).map(([category, { items }]) => (
+                    <div key={category} className={styles.dropdownColumn}>
+                      <h3>{category}</h3>
+                      <ul>
+                        {items.map((item) => (
+                          <li key={item.path}>
+                            <Link href={`/${item.path}`}>
+                              <span className={styles.iconWrapper}>
+                                <Image src={item.iconSrc} alt={`${item.name} icon`} width={20} height={20} />
+                              </span>
+                              {item.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            {/* Services Dropdown */}
+            {item.name === "Services" && (
+              <div className={`${styles.dropdownMenu} ${
+                activeDropdown === item.name ? styles.show : ''
+              }`}>
+                <div className={styles.dropdownGrid}>
+                  {Object.entries(servicesDropdownContent).map(([category, { items }]) => (
+                    <div key={category} className={styles.dropdownColumn}>
+                      <h3>{category}</h3>
+                      <ul>
+                        {items.map((service) => (
+                          <li key={service.path}>
+                            <Link href={`/services/${service.path}`}>
+                              <span className={styles.iconWrapper}>
+                                <Image src={service.iconSrc} alt={`${service.name} icon`} width={20} height={20} />
+                              </span>
+                              {service.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            {/* Hire Developers Dropdown */}
+            {item.name === "Hire Developers" && (
               <div className={`${styles.dropdownMenu} ${
                 activeDropdown === item.name ? styles.show : ''
               }`}>
@@ -142,15 +225,15 @@ const Navbar = () => {
                     <div key={category} className={styles.dropdownColumn}>
                       <h3>{category}</h3>
                       <ul>
-                        {items.map((tech, index) => (
-                         <li key={tech.path}>
-                         <Link href={`/tech/${tech.path}`}>
-                           <span className={styles.iconWrapper}>
-                             <Image src={tech.iconSrc} alt={`${tech.name} icon`} width={20} height={20} />
-                           </span>
-                           {tech.name}
-                         </Link>
-                       </li>
+                        {items.map((tech) => (
+                          <li key={tech.path}>
+                            <Link href={`/tech/${tech.path}`}>
+                              <span className={styles.iconWrapper}>
+                                <Image src={tech.iconSrc} alt={`${tech.name} icon`} width={20} height={20} />
+                              </span>
+                              {tech.name}
+                            </Link>
+                          </li>
                         ))}
                       </ul>
                     </div>
@@ -162,8 +245,8 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <button className={styles.contactBtn}>
-        <Link href="/contactus">Contact Us</Link>
+      <button className={`${styles.contactBtn} ${styles.mobileHidden}`}>
+        <Link href="/contact">Contact Us</Link>
       </button>
     </nav>
   );

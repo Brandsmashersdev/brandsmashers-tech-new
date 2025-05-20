@@ -1,62 +1,66 @@
-import React, { Component } from 'react';
-import Image from 'next/image';
-import styles from './ServiceCards.module.css';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 
-class ServiceCard extends Component {
-  renderHeader() {
-    const { mainTitle, highlightedWord, subTitle } = this.props;
-    if (!mainTitle) return null;
+const ServiceCard = ({ services }) => {
+  // If no services are provided, use the example from the image
+  const defaultServices = [
+    {
+      title: "Experienced AI/ML Professionals",
+      description: "Our team consists of skilled developers and data scientists with hands-on experience in building and deploying intelligent solutions tailored to various industries.",
+      iconBg: "#3d2b2b"
+    },
+    {
+      title: "Custom AI Solution for Every Business",
+      description: "We don't believe in one-size-fits-all. Our AI/ML services are fully customized to match your unique business goals, workflows, and data challenges.",
+      iconBg: "#3d2b2b"
+    },
+    {
+      title: "End-to-End Project Execution",
+      description: "From idea validation and model development to deployment and post-launch support — we handle the entire AI/ML development lifecycle seamlessly.",
+      iconBg: "#3d2b2b"
+    },
+    {
+      title: "Scalable and Future-Ready Architecture",
+      description: "We build AI systems that are designed to scale with your growing data and user base, ensuring long-term performance and adaptability.",
+      iconBg: "#3d2b2b"
+    }
+  ];
 
-    const titleParts = mainTitle.split(highlightedWord);
-    return (
-      <div className={styles.headerContainer}>
-        <h1 className={styles.mainTitle}>
-          {titleParts[0]}
-          <span className={styles.highlight}>{highlightedWord}</span>
-          {titleParts[1]}
-        </h1>
-        <p className={styles.subTitle}>{subTitle}</p>
-      </div>
-    );
-  }
+  const displayServices = services || defaultServices;
 
-  renderCards() {
-    const { services } = this.props;
-    return services?.map((service, index) => (
-      <div key={index} className={styles.cardContainer}>
-        <div className={styles.card}>
-          <div className={styles.content}>
-            <div className={styles.headerSection}>
-              <h3 className={styles.title}>{service.title}</h3>
-              {service.iconSrc && (
-                <div className={styles.iconWrapper}>
-                  <Image 
-                    src={service.iconSrc}
-                    alt="service icon"
-                    width={24}
-                    height={24}
-                    className={styles.icon}
-                  />
-                </div>
-              )}
+  return (
+    <div className="w-full bg-black p-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        {displayServices.map((service, index) => (
+          <div key={index} className="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900">
+            {/* Orange accent border at top */}
+            <div className="h-1 w-full bg-[#ff5010]"></div>
+            
+            <div className="p-6">
+              {/* Icon placeholder */}
+              <div 
+                className="h-12 w-12 rounded-lg mb-4"
+                style={{ backgroundColor: service.iconBg || "#3d2b2b" }}
+              ></div>
+              
+              {/* Title */}
+              <h3 className="text-xl font-bold text-white mb-3">
+                {service.title}
+              </h3>
+              
+              {/* Description */}
+              <p className="text-gray-300 mb-4">
+                {service.description}
+              </p>
+              
+              {/* Learn more link */}
+            
             </div>
-            <p className={styles.description}>{service.description}</p>
           </div>
-        </div>
+        ))}
       </div>
-    ));
-  }
-
-  render() {
-    return (
-      <div className={styles.sectionContainer}>
-        {this.renderHeader()}
-        <div className={styles.cardsGrid}>
-          {this.renderCards()}
-        </div>
-      </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default ServiceCard;

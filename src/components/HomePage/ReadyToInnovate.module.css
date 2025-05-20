@@ -1,187 +1,388 @@
-.container {
-  background-color: #f6f5f5;
-  
+/* ReadyToInnovate.module.css */
+.section {
   width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.divider {
+  position: relative;
+  width: 100%;
+  padding: 6rem 0;
+  background: linear-gradient(120deg, #fff 0%, rgba(255, 80, 16, 0.05) 100%);
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ff5010, transparent);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-style: italic;
-}
-
-.divider{
-  width: 100%;
-  height: 100%;
-  background-color: #343333;
-  margin-top: 5%;
-  margin-bottom: 5%;
- 
-}
-
-.imageContainer {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-  transform: scale(1.5);
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
 }
 
 .content {
-  flex: 6;
+  flex: 1;
+  position: relative;
+  z-index: 2;
   max-width: 55%;
-  text-align: left;
-  margin-bottom: 7%;
 }
 
 .title {
-  font-size: 2.6rem;
-  font-weight: 500;
-  color: #343333;
-  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #ff5010;
 }
 
 .subtitle {
-  font-size: 1.7rem;
-  color: #2cc5d9;
-  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #555;
+  margin: 2rem 0;
+  line-height: 1.5;
+}
+
+.buttonContainer {
+  margin-top: 2.5rem;
 }
 
 .button {
-  background-color: #00c4cc;
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px 50px;
+  background-color: #ff5010;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  box-shadow: 0 6px 15px rgba(255, 80, 16, 0.25);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .button:hover {
-  background-color: #00fbff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 80, 16, 0.3);
+  background-color: #e64600;
 }
 
+.buttonIcon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.buttonIcon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttonIcon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  background-color: white;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Visual Elements */
+.visualElement {
+  flex: 1;
+  height: 400px;
+  position: relative;
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 6px solid #ff5010;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  animation: float 8s ease-in-out infinite;
+}
+
+.square {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(255, 80, 16, 0.1);
+  border: 4px solid #ff5010;
+  top: 20%;
+  right: 15%;
+  transform: rotate(15deg);
+  animation: rotate 12s linear infinite;
+}
+
+.triangle {
+  position: absolute;
+  bottom: 15%;
+  right: 25%;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 100px solid rgba(255, 80, 16, 0.2);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.dots {
+  position: absolute;
+  top: 60%;
+  right: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ff5010;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.dot:nth-child(odd) {
+  animation: blink 3s ease-in-out infinite;
+}
+
+.dot:nth-child(even) {
+  animation: blink 3s ease-in-out infinite 1.5s;
+}
+
+.lines {
+  position: absolute;
+  left: 5%;
+  bottom: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.line {
+  height: 4px;
+  background-color: #ff5010;
+  margin-bottom: 6px;
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+.line:nth-child(1) {
+  width: 80px;
+}
+
+.line:nth-child(2) {
+  width: 120px;
+}
+
+.line:nth-child(3) {
+  width: 60px;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-50%) translateX(20px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(375deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+/* Responsive Styles */
 @media (max-width: 1024px) {
   .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 2rem;
-    justify-content: center;
-    align-items: flex-start;
+    gap: 2rem;
   }
-
+  
   .content {
-    flex:7;
     max-width: 60%;
-    margin-left: 2rem;
-    text-align: left;
   }
-
-  .imageContainer {
-    flex: 3;
-    justify-content: center;
-  }
-
-  .image {
-    max-width: 100%; 
-    max-height: 400px;
-  }
-
+  
   .title {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+    font-size: 2.4rem;
   }
-
+  
   .subtitle {
-    font-size: 1.6rem;
-    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
   }
-
-  .button {
-    font-size: 1.2rem;
-    padding: 10px 40px;
+  
+  .divider {
+    padding: 5rem 0;
+  }
+  
+  .visualElement {
+    height: 350px;
+  }
+  
+  .circle {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .triangle {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 80px solid rgba(255, 80, 16, 0.2);
   }
 }
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    align-items: center;
-    padding: 15px;
+    gap: 4rem;
   }
-
-  .divider{
-    margin-top: 25%;
-  }
-
+  
   .content {
-    flex:1;
     max-width: 100%;
-    text-align: left; 
-    margin-top: 40px;
+    text-align: center;
   }
-
-  .imageContainer {
-    margin: 0;
-    justify-content: center;
+  
+  .title::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
-
-  .imageContainer img {
-    content: url('/MobileView_ReadyToInnovate.png');
-    max-width: 250px;
-    margin-top: -52px;
+  
+  .visualElement {
+    width: 100%;
+    height: 250px;
+    order: -1;
   }
-
-  .title {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+  
+  .divider {
+    padding: 4rem 0;
   }
-
-  .subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+  
+  .circle {
+    left: 20%;
   }
-
-  .button {
-    font-size: 1rem;
-    margin: 20px auto;
+  
+  .square {
+    right: 20%;
   }
 }
 
 @media (max-width: 450px) {
-  .container {
-    width: 100%;
-    padding-bottom: 0px;
+  .title {
+    font-size: 1.8rem;
   }
-.divider{
-  margin-top: 25%;
-}
-  .content{
-    margin-top: 40px;
-    padding-left: 0;
-    margin-left: 0;
+  
+  .subtitle {
+    font-size: 1.1rem;
   }
-.title{
-  font-size: 23px;
-}
-
-.subtitle{
-  font-size: 17px;
-}
+  
   .button {
-    width: auto;
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+    width: 100%;
   }
-
-  .imageContainer img{
-    width: 70%;
+  
+  .divider {
+    padding: 3rem 0;
+  }
+  
+  .visualElement {
+    height: 200px;
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .square {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .triangle {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid rgba(255, 80, 16, 0.2);
   }
 }

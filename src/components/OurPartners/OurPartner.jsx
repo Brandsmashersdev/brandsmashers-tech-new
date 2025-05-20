@@ -1,37 +1,128 @@
-// OurPartner.js
-import styles from "./OurPartner.module.css";
+"use client";
+
+import { useEffect, useRef, useState } from 'react';
 
 const images = [
-  // { src: "/assets/googles.png", alt: "google" },
   { src: "/assets/accionlabs.png", alt: "accion-labs" },
   { src: "/assets/airbnb.png", alt: "airbnb" },
-  // { src: "/assets/dunzo.png", alt: "dunzo" },
-  // { src: "/assets/eventbrite.png", alt: "eventbrite" },
   { src: "/assets/Goeasy.png", alt: "Goeasy" },
   { src: "/assets/salesforce.png", alt: "salesforce" },
-  // { src: "/assets/boxly.webp", alt: "boxly" },
-  // { src: "/assets/turing-logo-new.png", alt: "Turing" },
-  { src: "/assets/amazon.png", alt: "Amazon" },
+  { src: "/assets/amazon.png", alt: "amazon" },
 ];
 
-const OurPartner = () => {
+const OurPartners = () => {
+  const outerRef = useRef(null);
+  const innerRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const [animationDuration, setAnimationDuration] = useState(20); // seconds
+
+  useEffect(() => {
+    // Clone the images to create the infinite effect
+    const createInfiniteScroll = () => {
+      if (!innerRef.current) return;
+      
+      // Clear any existing content first
+      while (innerRef.current.firstChild) {
+        innerRef.current.removeChild(innerRef.current.firstChild);
+      }
+      
+      // Create the original set
+      images.forEach((image) => {
+        const div = document.createElement('div');
+        div.className = 'partner-image-item flex-shrink-0 px-8 transition-transform hover:scale-110';
+        
+        const img = document.createElement('img');
+        img.src = image.src;
+        img.alt = image.alt;
+        img.className = 'h-12 md:h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300';
+        
+        div.appendChild(img);
+        innerRef.current.appendChild(div);
+      });
+      
+      // Clone the set multiple times to ensure smooth infinite scrolling
+      const originalItems = Array.from(innerRef.current.children);
+      for (let i = 0; i < 3; i++) {
+        originalItems.forEach(item => {
+          const clone = item.cloneNode(true);
+          innerRef.current.appendChild(clone);
+        });
+      }
+      
+      // Calculate animation duration based on the number of items
+      const totalItems = innerRef.current.children.length;
+      const newDuration = totalItems * 3; // 3 seconds per item seems reasonable
+      setAnimationDuration(newDuration);
+    };
+    
+    createInfiniteScroll();
+    
+    // Reset animation whenever window resizes
+    const handleResize = () => {
+      if (innerRef.current) {
+        innerRef.current.style.animation = 'none';
+        setTimeout(() => {
+          if (innerRef.current) {
+            innerRef.current.style.animation = isPaused ? 'none' : `scrollLeftToRight ${animationDuration}s linear infinite`;
+          }
+        }, 50);
+      }
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // Update animation state when paused/unpaused
+  useEffect(() => {
+    if (!innerRef.current) return;
+    
+    if (isPaused) {
+      innerRef.current.style.animationPlayState = 'paused';
+    } else {
+      innerRef.current.style.animationPlayState = 'running';
+    }
+  }, [isPaused]);
+
   return (
-    <div className={styles.container} id="our-partners">
-      <div className={styles.headingContainer}>
-        <h2 className={styles.title}>Our <span className={styles.highlight}>Partners</span></h2>
+    <section className="w-full bg-white py-16 overflow-hidden" id="our-partners">
+      <div className="container mx-auto px-4 mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-black">
+          Our <span className="text-[#ff5010] italic">Partners</span>
+        </h2>
       </div>
-      <div className={styles.carouselContainer}>
-        <div className={styles.scroll}>
-          {/* Repeat images for continuous scrolling */}
-          {images.concat(images).map((image, i) => (
-            <div className={styles.imageWrapper} key={i}>
-              <img src={image.src} alt={image.alt} className={styles.image} />
-            </div>
-          ))}
+      
+      <div 
+        ref={outerRef}
+        className="relative w-full bg-gradient-to-r from-[#ff5010]/5 to-[#ff5010]/10 py-12 overflow-hidden"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <div
+          ref={innerRef}
+          className="flex items-center space-x-12 whitespace-nowrap"
+          style={{
+            animation: `scrollLeftToRight ${animationDuration}s linear infinite`,
+          }}
+        >
+          {/* Items will be dynamically added here */}
         </div>
       </div>
-    </div>
+
+      <style jsx>{`
+        @keyframes scrollLeftToRight {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-${images.length * 100}%);
+          }
+        }
+      `}</style>
+    </section>
   );
 };
 
-export default OurPartner;
+export default OurPartners;
