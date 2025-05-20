@@ -126,7 +126,7 @@ export default function ProductDevelopmentPage() {
              formDataToSend.append(key, serviceForm[key]);
            });
            formDataToSend.append('helpType', helpType);
-           formDataToSend.append('access_key', 'b02aa529-635c-470f-9fed-2d06aaa3e8f2');
+           formDataToSend.append('access_key', 'ced5f765-5f1b-4a75-8584-5ca061816ed2');
    
            const response = await fetch('https://api.web3forms.com/submit', {
              method: 'POST',
