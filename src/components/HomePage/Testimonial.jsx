@@ -161,22 +161,7 @@ const ClientTestimonials = () => {
                     </p>
                     
                     {/* Client info */}
-                    <div className="flex items-center">
-                      <div className="mr-4">
-                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#ff5010] p-0.5">
-                          <img 
-                            src={testimonial.image} 
-                            alt={testimonial.name} 
-                            className="w-full h-full rounded-full object-cover" 
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-black text-xl">{testimonial.name}</h4>
-                        <p className="text-[#ff5010] font-medium">{testimonial.position}</p>
-                        <p className="text-gray-600 text-sm">{testimonial.company}</p>
-                      </div>
-                    </div>
+                
                   </div>
                 </div>
               ))}

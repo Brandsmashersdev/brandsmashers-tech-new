@@ -367,12 +367,15 @@ export default function WebDevelopmentPage() {
             <h1 className="text-5xl font-bold leading-tight mb-6">Web Development Services</h1>
             <p className="text-xl mb-8">Build high-performance websites with our expert web development services. Custom, responsive, and SEO-friendly solutions for your business growth.</p>
             <div className="flex flex-wrap gap-4">
-              <button style={{ backgroundColor: "#ff5010" }} className="px-8 py-3 rounded-md font-medium hover:opacity-90 transition">
-                Get Started
-              </button>
-              <button className="px-8 py-3 rounded-md font-medium border border-white hover:bg-white hover:text-gray-900 transition">
-                Learn More
-              </button>
+            <a href="/contactus" className="inline-block">
+  <button
+    className="rounded-md px-6 py-3 font-bold flex items-center"
+    style={{ backgroundColor: primaryColor }}
+  >
+    Get Started <ArrowRight className="ml-2" size={18} />
+  </button>
+</a>
+          
             </div>
           </div>
         </div>

@@ -15,8 +15,6 @@ const Navbar = () => {
         { name: "iOS Developer", iconSrc: "/Nav-Dropdown-icons/iOS-Developer.svg", path: "ios-developer" },
         { name: "Flutter Developer", iconSrc: "/Nav-Dropdown-icons/Flutter.svg", path: "flutter-developer" },
         { name: "React-Native Developer", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "react-native-developer" },
-        // { name: "Unity Developers", iconSrc: "/Nav-Dropdown-icons/Unity.svg", path: "unity" },
-        // { name: "Metaverse Developers", iconSrc: "/Nav-Dropdown-icons/Metaverse.svg", path: "metaverse" }
       ]
     },
     "Front End Developer": {
@@ -38,19 +36,13 @@ const Navbar = () => {
     },
     "CMS & E-Commerce Developers": {
       items: [
-        { name: "Drupal Developer", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "drupal" },
         { name: "WordPress Developer", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "wordpress" },
         { name: "Shopify Developer", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "shopify" },
-        { name: "Magento Developer", iconSrc: "/Nav-Dropdown-icons/Magento.svg", path: "magento" },
-        { name: "Java Developers", iconSrc: "/Nav-Dropdown-icons/Java.svg", path: "java" }
       ]
     },
-    
     "Marketing": {
       items: [
         { name: "SEO", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "SEO" },
-        { name: "Programmatic", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "programmatic-developer" },
-        { name: "SEM & PPC", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "sem-ppc" },
       ]
     },
   };
@@ -70,7 +62,7 @@ const Navbar = () => {
   const servicesDropdownContent = {
     "Development Services": {
       items: [
-        { name: "Mobile App Development", iconSrc: "/smartphone.png", path:  "/mobileAppDevelopment" },
+        { name: "Mobile App Development", iconSrc: "/smartphone.png", path: "/mobileAppDevelopment" },
         { name: "Web Development", iconSrc: "/web-development.png", path: "/webdevelopment" },
         { name: "Custom Software Development", iconSrc: "/ux.png", path: "/customService" },
       ]
@@ -81,10 +73,8 @@ const Navbar = () => {
         { name: "AIML services", iconSrc: "/ai.png", path: "/aimlservice" },
         { name: "Product Development", iconSrc: "/best-product.png", path: "/productDevelopment" },
         { name: "UI/UX Development", iconSrc: "/ui.png", path: "/uiuxdevelopment" },
-
       ]
     },
-   
   };
 
   useEffect(() => {
@@ -116,35 +106,36 @@ const Navbar = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null);
   };
+  
   const menuItems = [
     { name: "Company", hasDropdown: true },
     { name: "Services", hasDropdown: true },
     { name: "Hire Developers", hasDropdown: true },
-    { name: "Technology", hasDropdown: false, href: '/technologies' },
   ];
 
   return (
     <nav className={styles.navbar}>
-   <div className={styles.logo}>
-  <Link href="/">
-    <Image 
-      src="/logo.jpg" 
-      alt="Logo" 
-      width={100} 
-      height={50} 
-      style={{ objectFit: "cover" }} 
-    />
-  </Link>
-</div>
+      <div className={styles.logo}>
+        <Link href="/">
+          <Image 
+            src="/logo.jpg" 
+            alt="Logo" 
+            width={100} 
+            height={50} 
+            style={{ objectFit: "cover" }} 
+          />
+        </Link>
+      </div>
 
       <div className={styles.hamburger} onClick={toggleMenu}>
-        <Image src="/hamburger.png" alt="Menu" width={24} height={24} />
+        <Image src="/toggle.jpg" alt="Menu" width={24} height={24} />
       </div>
 
       <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
         {menuItems.map((item) => (
           <li 
-            key={item.name} 
+            key={item.name}
+            data-menu-type={item.name}
             className={`${item.hasDropdown ? styles.hasDropdown : ''} ${
               activeDropdown === item.name ? styles.active : ''
             }`}
@@ -254,8 +245,8 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <button className={styles.contactBtn}>
-        <Link href="/contactus">Contact Us</Link>
+      <button className={`${styles.contactBtn} ${styles.mobileHidden}`}>
+        <Link href="/">Contact Us</Link>
       </button>
     </nav>
   );

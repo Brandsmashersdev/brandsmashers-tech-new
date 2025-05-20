@@ -166,15 +166,15 @@ export default function MobileAppDevelopmentPage() {
                 </p>
               </div>
               <div className="flex space-x-4">
-                <button 
-                  className="rounded-md px-6 py-3 font-bold flex items-center"
-                  style={{ backgroundColor: primaryColor }}
-                >
-                  Get Started <ArrowRight className="ml-2" size={18} />
-                </button>
-                <button className="rounded-md px-6 py-3 bg-transparent border-2 border-white font-bold">
-                  Learn More
-                </button>
+              <a href="/contactus" className="inline-block">
+  <button
+    className="rounded-md px-6 py-3 font-bold flex items-center"
+    style={{ backgroundColor: primaryColor }}
+  >
+    Get Started <ArrowRight className="ml-2" size={18} />
+  </button>
+</a>
+             
               </div>
             </div>
           </div>

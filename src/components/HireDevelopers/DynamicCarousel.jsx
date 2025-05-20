@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './DynamicCarousel.module.css';
 
-const TechnologyCard = ({ icon1, icon2, title, description, isVisible }) => (
+const 
+TechnologyCard = ({ icon1, icon2, title, description, isVisible }) => (
   <div className={`${styles.technology_card} ${isVisible ? styles.fade_in : styles.fade_out}`}>
     <div className={styles.icon_container}>
       <img src={icon1 || '/placeholder.png'} alt={`${title} primary icon`} />

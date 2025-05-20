@@ -87,19 +87,7 @@ const HeroSection = ({
             </div>
             
             {/* Stats card */}
-            <div className="absolute -bottom-6 -left-6 md:bottom-8 md:left-8 bg-white p-4 rounded-lg shadow-xl z-20 hidden md:block">
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-orange-50 rounded-full">
-                  <svg className="w-6 h-6 text-[#ff5010]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500">Customer Satisfaction</p>
-                  <p className="text-xl font-bold text-gray-900">98%</p>
-                </div>
-              </div>
-            </div>
+       
           </div>
         </div>
       </div>

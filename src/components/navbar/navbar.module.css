@@ -1,3 +1,4 @@
+
 .navbar {
   font-family: gilroy;
   display: flex;
@@ -6,6 +7,7 @@
   padding: 1% 7%;
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
+  position: relative; /* Add this to make it a positioning context */
 }  
 
 .logo img {
@@ -61,16 +63,13 @@
   transform: rotate(180deg);
 }
 
-/* Dropdown Menu Container */
+/* Dropdown Menu Container - Base styles */
 .dropdownMenu {
   display: none;
   position: absolute;
   width: fit-content;
-  min-width: 900px;
   height: auto;
   top: 75px;
-  left: 5%;
-  transform: translateX(-50%);
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(52, 51, 51, 0.4));
   border-radius: 10px 71px 10px 71px;
   padding: 36px;
@@ -80,21 +79,52 @@
   -webkit-backdrop-filter: blur(17.6px);
 }
 
+/* Company dropdown */
+[data-menu-type="Company"] .dropdownMenu {
+  min-width: 300px;
+  left: -120px; /* Adjusted to center under the Company link */
+}
+
+/* Services dropdown */
+[data-menu-type="Services"] .dropdownMenu {
+  min-width: 600px;
+  left: -260px; /* Adjusted to center under the Services link */
+}
+
+/* Hire Developers dropdown */
+[data-menu-type="Hire Developers"] .dropdownMenu {
+  min-width: 80rem;
+  left: -520px; /* Adjusted to center under the Hire Developers link */
+}
+
 .dropdownMenu.show {
   display: block;
 }
 
-/* Dropdown Grid Layout */
+  /* Dropdown Grid Layout - Base */
 .dropdownGrid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
   background: transparent;
+  justify-content: center;
+}
+
+/* Specific grid layouts per dropdown */
+[data-menu-type="Company"] .dropdownGrid {
+  grid-template-columns: 1fr;
+}
+
+[data-menu-type="Services"] .dropdownGrid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+[data-menu-type="Hire Developers"] .dropdownGrid {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 /* Dropdown Column Styles */
 .dropdownColumn {
-  min-width: 250px;
+  min-width: 180px;
 }
 
 .dropdownColumn h3 {
@@ -192,24 +222,29 @@
     font-size: 16px;
   }
 
-  .dropdownMenu {
-    width: auto;
-    min-width: 750px;
-    height: auto;
-    left: 0;
-    transform: translateX(-50%);
-    padding: 20px;
-    top: 80px;
-    border-radius: 8px 40px 8px 40px;
+  /* Responsive dropdown adjustments */
+  [data-menu-type="Company"] .dropdownMenu {
+    min-width: 280px;
+    left: -100px;
+  }
+  
+  [data-menu-type="Services"] .dropdownMenu {
+    min-width: 500px;
+    left: -220px;
+  }
+  
+  [data-menu-type="Hire Developers"] .dropdownMenu {
+    min-width: 800px;
+    left: -350px;
   }
   
   .dropdownGrid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 15px;
   }
 
   .dropdownColumn {
-    min-width: 200px;
+    min-width: 160px;
   }
 
   .dropdownColumn h3 {
@@ -232,9 +267,20 @@
 
 /* Additional Medium Screen Breakpoint */
 @media (max-width: 992px) {
-  .dropdownMenu {
-    /* min-width: 600px; */
-    /* left: 15%; */
+  /* Responsive dropdown adjustments */
+  [data-menu-type="Company"] .dropdownMenu {
+    min-width: 260px;
+    left: -80px;
+  }
+  
+  [data-menu-type="Services"] .dropdownMenu {
+    min-width: 450px;
+    left: -180px;
+  }
+  
+  [data-menu-type="Hire Developers"] .dropdownMenu {
+    min-width: 700px;
+    left: -300px;
   }
 
   .dropdownGrid {
@@ -248,9 +294,20 @@
 
 /* Tablet-specific adjustments */
 @media (max-width: 768px) {
-  .dropdownMenu {
-    min-width: 100vw;
-    left: -15%;
+  /* Tablet dropdown adjustments */
+  [data-menu-type="Company"] .dropdownMenu {
+    min-width: 240px;
+    left: -60px;
+  }
+  
+  [data-menu-type="Services"] .dropdownMenu {
+    min-width: 400px;
+    left: -150px;
+  }
+  
+  [data-menu-type="Hire Developers"] .dropdownMenu {
+    min-width: 600px;
+    left: -250px;
   }
 
   .navLinks {
@@ -324,19 +381,28 @@
     padding: 10px 0;
   }
 
-  .dropdownMenu {
+  /* Reset dropdown positioning in mobile view */
+  .dropdownMenu,
+  [data-menu-type="Company"] .dropdownMenu,
+  [data-menu-type="Services"] .dropdownMenu,
+  [data-menu-type="Hire Developers"] .dropdownMenu {
     position: static;
     width: 100%;
     height: auto;
     transform: none;
     min-width: unset;
+    left: auto;
     border-radius: 10px;
     margin: 10px 0;
     padding: 15px;
   }
 
-  .dropdownGrid {
-    grid-template-columns: repeat(2, 1fr);;
+  /* Reset grid layouts for mobile */
+  .dropdownGrid,
+  [data-menu-type="Company"] .dropdownGrid,
+  [data-menu-type="Services"] .dropdownGrid,
+  [data-menu-type="Hire Developers"] .dropdownGrid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
 
@@ -390,5 +456,16 @@
   .fadeIn {
     transition: none;
     animation: none;
+  }
+}
+
+.mobileHidden {
+  display: flex;
+}
+
+/* Hide the button on screens smaller than 768px (typical mobile breakpoint) */
+@media screen and (max-width: 768px) {
+  .mobileHidden {
+    display: none;
   }
 }

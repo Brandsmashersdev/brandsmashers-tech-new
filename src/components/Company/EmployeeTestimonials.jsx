@@ -40,11 +40,7 @@ export default function EmployeeTestimonials() {
         </div>
 
         {/* Dot Indicators */}
-        <div className="flex justify-center space-x-2 mt-8">
-          <span className="w-4 h-4 bg-[#ff5010] rounded-full animate-pulse"></span>
-          <span className="w-3 h-3 bg-gray-300 dark:bg-gray-600 rounded-full"></span>
-          <span className="w-3 h-3 bg-gray-300 dark:bg-gray-600 rounded-full"></span>
-        </div>
+      
       </div>
     </section>
   );

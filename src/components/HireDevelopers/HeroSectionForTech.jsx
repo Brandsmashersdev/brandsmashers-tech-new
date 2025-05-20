@@ -9,9 +9,9 @@ const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
           {/* Text Content */}
           <div className="w-full md:w-1/2 space-y-6">
             <div className="inline-block">
-              <span className="text-lg font-semibold px-4 py-2 rounded-full bg-orange-100 text-[#ff5010]">
+              {/* <span className="text-lg font-semibold px-4 py-2 rounded-full  text-[#ff5010]">
                 {title}
-              </span>
+              </span> */}
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white-900 leading-tight">
@@ -23,10 +23,14 @@ const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
             </p>
             
             <div className="pt-4">
-              <button className="flex items-center gap-2 px-8 py-4 rounded-lg font-medium text-white bg-[#ff5010] hover:bg-[#e04509] transition-colors duration-300 shadow-lg shadow-orange-200">
-                {buttonText}
-                <ArrowRight size={18} />
-              </button>
+            <a href="/contactus" className="inline-block">
+  <button 
+    className="flex items-center gap-2 px-8 py-4 rounded-lg font-medium text-white bg-[#ff5010] hover:bg-[#e04509] transition-colors duration-300 shadow-lg"
+  >
+    {buttonText}
+    <ArrowRight size={18} />
+  </button>
+</a>
             </div>
           </div>
           
@@ -34,15 +38,11 @@ const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
           <div className="w-full md:w-1/2 relative">
             <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl">
               </div> 
+              
+          
+            {/* <div className="absolute -top-6 -right-6 w-64 h-64 bg-orange-100 rounded-full -z-0 blur-xl opacity-70"></div> */}
             
-               <img
-                src={imageSrc}
-                alt="Hero Section Image"
-                className="w-full h-auto object-contain"
-              /> 
-  
-            <div className="absolute -top-6 -right-6 w-64 h-64 bg-orange-100 rounded-full -z-0 blur-xl opacity-70"></div>
-            <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[#ff5010] rounded-full -z-0 blur-xl opacity-20"></div>
+            {/* <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[#ff5010] rounded-full -z-0 blur-xl opacity-20"></div> */}
           </div>
         </div>
       </div>

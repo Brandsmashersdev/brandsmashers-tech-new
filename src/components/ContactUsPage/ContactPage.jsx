@@ -325,7 +325,7 @@ const ContactPage = () => {
             <div className="absolute top-0 right-0 w-48 md:w-64 h-48 md:h-64 bg-orange-500/10 rounded-full -mr-24 md:-mr-32 -mt-24 md:-mt-32 blur-xl"></div>
             <div className="absolute bottom-0 left-0 w-48 md:w-64 h-48 md:h-64 bg-orange-500/10 rounded-full -ml-24 md:-ml-32 -mb-24 md:-mb-32 blur-xl"></div>
             
-            <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Get In Touch</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Get Hired</h3>
             
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">

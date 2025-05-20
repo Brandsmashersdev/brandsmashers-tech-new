@@ -230,7 +230,7 @@ const HeroSection = () => {
             
             {/* Enhanced CTA buttons - stack on mobile, side by side on larger screens */}
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 md:space-x-6 justify-center md:justify-start mb-6 sm:mb-10">
-              <Link href="/contactus">
+              <Link href="/">
                 <button className="group relative overflow-hidden px-4 sm:px-6 py-2 sm:py-3 bg-[#ff5010] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto">
                   <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
                   <div className="relative z-10 flex items-center justify-center space-x-2">
@@ -240,13 +240,16 @@ const HeroSection = () => {
                 </button>
               </Link>
               
-              <button className="group relative overflow-hidden px-4 sm:px-6 py-2 sm:py-3 bg-gray-900 border border-[#ff5010] text-[#ff5010] font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto">
+              <a href="/contactus" className="inline-block mb-4 md:mb-6">
+              <button className="group relative overflow-hidden px-4 sm:px-6 py-2 sm:py-3 bg-black border border-[#ff5010] text-[#ff5010] font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto">
                 <span className="absolute inset-0 bg-[#ff5010] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
                 <div className="relative z-10 flex items-center justify-center space-x-2">
                   <Code size={16} className="group-hover:rotate-12 transition-transform" />
                   <span className="group-hover:text-white transition-colors duration-300">Hire Developers</span>
                 </div>
               </button>
+            </a>
+            
             </div>
             
             {/* Stats counter - more compact on mobile */}

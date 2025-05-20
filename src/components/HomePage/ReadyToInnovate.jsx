@@ -14,7 +14,7 @@ const ReadyToInnovate = () => {
             Connect with Our Tech Specialists and Get Started Today!
           </p>
           <div className="flex">
-            <Link href="/contactus" legacyBehavior>
+            <Link href="/" legacyBehavior>
               <a
                 className="text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 flex items-center shadow-lg hover:shadow-xl"
                 style={{ backgroundColor: '#ff5010' }}

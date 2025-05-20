@@ -29,7 +29,7 @@ const ServiceCard = ({ services }) => {
   const displayServices = services || defaultServices;
 
   return (
-    <div className="w-full bg-gray-900 p-6">
+    <div className="w-full bg-black p-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {displayServices.map((service, index) => (
           <div key={index} className="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900">
@@ -54,10 +54,7 @@ const ServiceCard = ({ services }) => {
               </p>
               
               {/* Learn more link */}
-              <div className="flex items-center text-gray-400 hover:text-[#ff5010] cursor-pointer transition-colors group">
-                <span className="mr-1">Learn more</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </div>
+            
             </div>
           </div>
         ))}

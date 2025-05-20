@@ -41,7 +41,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import AimlSolutionMetrix from './AimlSolutionMetrix';
 import AimlHiring from './AimlHiring';
-
+const primaryColor = "#ff5010";
 
 const toastConfig = {
   position: "top-right",
@@ -399,12 +399,15 @@ const toggleFaq = (index) => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight  mb-6"> AI/ML Development Services</h1>
             <p className="text-xl mb-8">Unlock the power of Artificial Intelligence and Machine Learning with Brandsmashers Tech. We build smart, data-driven solutions that automate processes, enhance decision-making, and drive business growth</p>
             <div className="flex flex-wrap gap-4">
-              <button style={{ backgroundColor: "#ff5010" }} className="px-8 py-3 rounded-md font-medium hover:opacity-90 transition">
-                Consult Our Expert
-              </button>
-              <button className="px-8 py-3 rounded-md font-medium border border-white hover:bg-white hover:text-gray-900 transition">
-                Learn More
-              </button>
+            <a href="/contactus" className="inline-block">
+  <button
+    className="rounded-md px-6 py-3 font-bold flex items-center"
+    style={{ backgroundColor: primaryColor }}
+  >
+    Get Started <ArrowRight className="ml-2" size={18} />
+  </button>
+</a>
+          
             </div>
           </div>
         </div>

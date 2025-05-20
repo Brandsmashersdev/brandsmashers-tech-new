@@ -567,7 +567,7 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "Angular Application Developers",
-        afterHighlight: " from India with Expertise in Cross-Platform Development"
+        afterHighlight: "from India with Expertise in Cross-Platform Development "
       },
       description: "Build dynamic, high-performance web applications with our skilled AngularJS developers, ensuring scalability and smooth user experiences.",
       cardsData: [
@@ -1748,8 +1748,6 @@ const technologyData = {
       ],
     }
   },
-
-  
   "programmatic-developer": {
     title: "Transform Your Business with Programmatic Advertising Experts",
     description:"Boost your brand’s reach and drive data-driven results with Brandsmashers Tech — your trusted partner for hiring programmatic advertising experts. Our team connects you with skilled professionals who use AI-powered strategies to automate ad placements, optimize bidding, and maximize ROI. Whether you're scaling an eCommerce store or expanding your SaaS platform, our programmatic advertising experts tailor campaigns to target the right audience at the right time. Don’t let outdated ad strategies hold you back — partner with Brandsmashers Tech to hire programmatic advertising experts for measurable results and sustained growth. ",
@@ -2113,19 +2111,19 @@ export default function TechnologyDetails() {
         buttonText={data.buttonText}
         imageSrc={heroImage}
       />
+       <AndroidHero/>
       <Stats />
      
-       <AndroidHero/>
        {/* <ServiceGrids/> */}
-       <ServiceGrids serviceData={data.services} />
        {data.carousel && (
-  <DynamicCarousel
-    heading={data.carousel.heading}
-    title={data.carousel.title}
-    description={data.carousel.description}
-    cardsData={data.carousel.cardsData}
-  />
-)}
+         <DynamicCarousel
+         heading={data.carousel.heading}
+         title={data.carousel.title}
+         description={data.carousel.description}
+         cardsData={data.carousel.cardsData}
+         />
+        )}
+        <ServiceGrids serviceData={data.services} />
        {/* <AndroidCarousel/> */}
       <FAQSection/>
       <Footer />

@@ -347,12 +347,15 @@ return (
             </h1>
             <p className="text-xl mb-8 max-w-3xl">Drive growth, boost visibility, and attract the right audience with our best-in-class digital marketing services. From SEO and social media to paid ads and content marketing, we create data-driven strategies that deliver real results for your business.</p>
             <div className="flex flex-wrap gap-4">
-              <button style={{ backgroundColor: "#ff5010" }} className="px-8 py-3 rounded-md font-medium hover:opacity-90 transition">
-                Get a Free Consultation
-              </button>
-              <button className="px-8 py-3 rounded-md font-medium border border-white hover:bg-white hover:text-gray-900 transition">
-                Learn More
-              </button>
+            <a href="/contactus" className="inline-block">
+  <button
+    className="rounded-md px-6 py-3 font-bold flex items-center"
+    style={{ backgroundColor: primaryColor }}
+  >
+    Get Started <ArrowRight className="ml-2" size={18} />
+  </button>
+</a>
+           
             </div>
           </div>
         </div>

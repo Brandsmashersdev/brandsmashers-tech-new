@@ -23,7 +23,7 @@ export default function HeroSection() {
         </p>
 
         <Link
-          href="/careers"
+          href="/contactus"
           className="inline-block bg-[#ff5010] text-white font-semibold py-3 px-6 sm:py-3.5 sm:px-8 text-base sm:text-lg rounded-lg hover:bg-orange-600 transition-all duration-200"
         >
           Apply Now
