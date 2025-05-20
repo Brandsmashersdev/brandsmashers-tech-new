@@ -1,11 +1,12 @@
 import React from 'react';
+import Image from 'next/image';  // Import Image from next/image
 import styles from './rightservice.module.css';
 
 const Webdesign  = () => {
   return (
     <div className={styles.serviceContainer} id="webdesign">
       <div className={styles.contentWrapper}>
-        {/* Left Content Section */}
+                
         <div className={styles.leftSection}>
           <div className={styles.titleGroup}>
             <h1 className={styles.title}>
@@ -33,12 +34,17 @@ const Webdesign  = () => {
         {/* Right Image Section */}
         <div className={styles.rightSection}>
           <div className={styles.imageWrapper}>
-            <img 
-              src="/Web-img.png"
-              alt="Web Development"
-              className={styles.image}
-            />
-            
+            {/* Replaced <img> with <Image /> for optimization */}
+            <div className="relative w-full h-72"> {/* Container with relative position */}
+              <Image 
+                src="/Web-img.png"  // Assuming the image is inside the public folder
+                alt="Web Development"
+                layout="fill"  // Make it fill the container
+                objectFit="contain"  // Maintain aspect ratio
+                className={styles.image}
+              />
+            </div>
+
             {/* Overlay Box */}
             <div className={styles.overlayBox}>
               <p>

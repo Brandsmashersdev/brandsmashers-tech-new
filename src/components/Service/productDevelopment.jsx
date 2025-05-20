@@ -30,6 +30,10 @@ import {
 import TechGrid from "./TechGrid";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowRight, CheckCircle, FileText, ArrowUpRight, ChevronDown, ChevronUp, X } from 'react-feather';
+
 
 export default function ProductDevelopmentPage() {
   const [activeTab, setActiveTab] = useState(0);
@@ -346,7 +350,6 @@ export default function ProductDevelopmentPage() {
 
   return (
     <div>
-
       <ToastContainer />
       {/* Hero Section */}
       <header className="relative text-white bg-black" 
@@ -361,15 +364,14 @@ export default function ProductDevelopmentPage() {
             <h1 className="text-5xl font-bold leading-tight mb-6">Product Development Services</h1>
             <p className="text-xl mb-8">Bring your ideas to life with our full-cycle product development services — from concept to launch. We craft innovative, scalable, and industry-leading solutions that set your brand apart.</p>
             <div className="flex flex-wrap gap-4">
-            <a href="/contactus" className="inline-block">
-  <button
-    className="rounded-md px-6 py-3 font-bold flex items-center"
-    style={{ backgroundColor: primaryColor }}
-  >
-    Get Started <ArrowRight className="ml-2" size={18} />
-  </button>
-</a>
-          
+              <Link href="/contactus">
+                <button
+                  className="rounded-md px-6 py-3 font-bold flex items-center"
+                  style={{ backgroundColor: primaryColor }}
+                >
+                  Get Started <ArrowRight className="ml-2" size={18} />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -413,7 +415,7 @@ export default function ProductDevelopmentPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
+            {[ 
               { value: '100+', label: 'Products Launched' },
               { value: '85%', label: 'Client Retention' },
               { value: '12+', label: 'Years Experience' },
@@ -433,8 +435,7 @@ export default function ProductDevelopmentPage() {
         <div className="absolute -top-20 left-0 w-64 h-64 bg-[#ff5722] opacity-10 blur-3xl rounded-full"></div>
       </section>
 
-      
-        {/* Hire Digital Marketing Expert Section */}
+      {/* Hire Digital Marketing Expert Section */}
       <section className="py-16 px-6 md:px-12 bg-white text-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -447,7 +448,7 @@ export default function ProductDevelopmentPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {[
+            {[ 
               { 
                 title: "Simple & Transparent Pricing", 
                 icon: CheckCircle,
@@ -497,282 +498,82 @@ export default function ProductDevelopmentPage() {
               
               <h3 className="text-2xl font-bold mb-6 text-center text-black">Schedule a Call</h3>
               <form onSubmit={handleServiceFormSubmit}>
-                      <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                          Full Name
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          value={serviceForm.name}
-                          onChange={handleServiceFormChange}
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                          placeholder="Your Name"
-                          required
-                        />
-                      </div>
-                      
-                      <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                          Email
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          value={serviceForm.email}
-                          onChange={handleServiceFormChange}
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                          placeholder="your@email.com"
-                          required
-                        />
-                      </div>
-                      
-                      <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
-                          Phone Number
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          value={serviceForm.phone}
-                          onChange={handleServiceFormChange}
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                          placeholder="+1 (123) 456-7890"
-                          required
-                        />
-                      </div>
-                      
-                      <div className="mb-6">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                          How can we help you? (Optional)
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          value={serviceForm.message}
-                          onChange={handleServiceFormChange}
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
-                          placeholder="Tell us about your digital marketing needs..."
-                        ></textarea>
-                      </div>
-                      
-                      <div className="flex items-center justify-center">
-                        <button
-                          type="submit"
-                          className="bg-[#ff5010] hover:bg-[#ff672b] text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline w-full"
-                        >
-                          Submit
-                        </button>
-                      </div>
-                    </form>
-            
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={serviceForm.name}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={serviceForm.email}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+                
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={serviceForm.phone}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="+1 (123) 456-7890"
+                    required
+                  />
+                </div>
+                
+                <div className="mb-6">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+                    How can we help you? (Optional)
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={serviceForm.message}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Tell us about your project"
+                  />
+                </div>
+                
+                <div className="flex justify-center">
+                  <button
+                    type="submit"
+                    className="bg-[#ff5010] hover:bg-[#ff672b] text-white font-bold py-2 px-4 rounded-md w-full"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         )}
       </section>
-
-      {/* Process Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-black">Our Product Development Process</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Here is a streamlined overview of our custom product development process.
-            </p>
-          </div>
-          
-          <div className="max-w-5xl mx-auto">
-            <div className="relative">
-              {/* Process timeline line */}
-              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-300 transform -translate-x-1/2"></div>
-              
-              {/* Process steps */}
-              {process.map((step, index) => (
-                <div key={index} className="relative mb-12">
-                  <div className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                    {/* Circle on timeline */}
-                    <div className="hidden md:block absolute left-1/2 w-12 h-12 rounded-full bg-white border-4 border-gray-300 transform -translate-x-1/2 z-10">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <step.icon size={20} style={{ color: "#ff5010" }} />
-                      </div>
-                    </div>
-                    
-                    {/* Step number for mobile */}
-                    <div className="md:hidden w-12 h-12 rounded-full bg-white border-4 border-gray-300 flex items-center justify-center mb-4">
-                      <step.icon size={20} style={{ color: "#ff5010" }} /> 
-                    </div>
-                    
-                    {/* Content box */}
-                    <div className={`w-full md:w-5/12 p-6 bg-white rounded-lg shadow-lg border border-gray-100 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
-                      <div className="flex items-center mb-3">
-                        <div style={{ color: "#ff5010" }} className="text-2xl font-bold mr-2">{index + 1}.</div>
-                        <h3 className="text-xl font-bold text-black">{step.title}</h3>
-                      </div>
-                      <p className="text-gray-600">{step.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-16 text-white bg-[#0b0b0b]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              Why <span className="text-[#ff5010]">Brandsmashers Tech</span> Is Your Ideal Partner for Software Product Development
-            </h2>
-            <p className="text-lg max-w-3xl mx-auto text-gray-400">
-              Looking for a reliable partner to bring your software idea to life? Brandsmashers Tech is your go-to expert for end-to-end software product development. We blend innovation, agility, and top-tier talent to build powerful, scalable solutions that drive real results.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whyChooseUs.map((reason, index) => (
-              <div
-                key={index}
-                className="bg-[#161616] p-6 rounded-xl border border-[#2c2c2c] shadow-lg hover:shadow-[0_0_20px_#ff5722aa] transition-all duration-300"
-              >
-                <div className="flex items-center mb-4">
-                  <CheckCircle className="text-[#ff5010] mr-3" size={28} />
-                  <h3 className="text-xl font-semibold text-white">{reason.title}</h3>
-                </div>
-                <p className="text-gray-400">{reason.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Case Study Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-black">Our Success Stories</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Explore how we've helped businesses transform their digital presence with our product development expertise.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
-            {[
-              {
-                title: "Fintech Mobile App",
-                description: "Developed a secure, scalable financial solution with real-time data processing",
-                industry: "Finance"
-              },
-              {
-                title: "E-commerce Platform",
-                description: "Built a high-performance marketplace with advanced search capabilities",
-                industry: "Retail"
-              },
-              {
-                title: "Healthcare Management System",
-                description: "Created an integrated platform for patient records and telemedicine",
-                industry: "Healthcare"
-              }
-            ].map((item, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                <div className="h-48 bg-gray-200 flex items-center justify-center">
-                  <img src="/api/placeholder/400/200" alt="Project" className="object-cover w-full h-full" />
-                </div>
-                <div className="p-6">
-                  <div className="text-sm font-medium text-[#ff5010] mb-2">{item.industry}</div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-600 mb-4">{item.description}</p>
-                  <a 
-                    href="#" 
-                    style={{ color: "#ff5010" }} 
-                    className="flex items-center font-medium hover:underline"
-                  >
-                    View Case Study
-                    <ArrowUpRight size={16} className="ml-1" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action Section */}
-      <section className="py-16 px-6 md:px-12 text-white bg-[#0b0b0b] relative overflow-hidden">
-        
-        {/* Glowing Accent Shape */}
-        <div className="absolute -bottom-10 right-0 w-32 h-32 md:w-64 md:h-64 bg-[#ff5722] rounded-full opacity-20 blur-2xl"></div>
-
-        <div className="max-w-6xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Build Your <span className="text-[#ff5722]">Next Product?</span>
-          </h2>
-          <p className="max-w-2xl mx-auto text-lg mb-12 text-gray-400">
-            Let's transform your idea into a powerful digital product that drives growth and engages users.
-          </p>
-
-          <div className="inline-block mb-16">
-            <button className="bg-transparent hover:bg-[#ff5722] transition-colors px-8 py-3 rounded-md font-medium text-white border-2 border-[#ff5722] hover:border-[#ff5722] hover:text-black">
-              Discuss Your Business Requirements
-            </button>
-          </div>
-
-          <div className="flex flex-col md:flex-row justify-center md:space-x-16 space-y-6 md:space-y-0">
-            {[
-              { text: 'Technical Excellence' },
-              { text: 'Dedicated Team' },
-              { text: 'Innovative Solutions' },
-            ].map((item, index) => (
-              <div key={index} className="flex items-center justify-center">
-                <div className="h-12 w-12 rounded-full bg-[#161616] border-2 border-[#ff5722] flex items-center justify-center mr-3 shadow-[0_0_10px_#ff572255]">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#ff5722]" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-white text-lg">{item.text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
-          </div>
-          
-          <div className="max-w-3xl mx-auto">
-            {faqs.map((faq, index) => (
-              <div key={index} className="mb-4 border border-gray-200 rounded-lg overflow-hidden">
-                <button 
-                  className="w-full flex justify-between items-center p-5 bg-gray-50 text-left text-black"
-                  onClick={() => toggleFaq(index)}
-                >
-                  <span className="font-medium text-lg text-black">{faq.question}</span>
-                  {activeFaq === index ? (
-                    <ChevronUp size={20} />
-                  ) : (
-                    <ChevronDown size={20} />
-                  )}
-                </button>
-                {activeFaq === index && (
-                  <div className="p-5 border-t border-gray-200">
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
- 
     </div>
   );
 }
+
