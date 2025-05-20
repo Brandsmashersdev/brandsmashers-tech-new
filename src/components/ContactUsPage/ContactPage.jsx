@@ -238,7 +238,7 @@ const ContactPage = () => {
           formDataToSend.append(key, formData[key]);
         });
         formDataToSend.append('helpType', helpType);
-        formDataToSend.append('access_key', 'a65e3644-4ed0-4175-84ec-cde563');
+        formDataToSend.append('access_key', 'ced5f765-5f1b-4a75-8584-5ca061816ed2');
 
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
