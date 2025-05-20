@@ -246,7 +246,7 @@ const Navbar = () => {
       </ul>
 
       <button className={`${styles.contactBtn} ${styles.mobileHidden}`}>
-        <Link href="/">Contact Us</Link>
+        <Link href="/contact">Contact Us</Link>
       </button>
     </nav>
   );

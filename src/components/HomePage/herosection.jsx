@@ -159,13 +159,35 @@ const HeroSection = () => {
     <section className="relative">
       {/* Hero Main Section */}
       <div className="w-full min-h-screen bg-cover bg-center relative overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            height="100%"
+            width="100%"
+          // Optional: Add a poster image while video loads
+          >
+            <source src="/background_video.mp4" type="video/mp4" />
+            {/* Add additional source formats for better browser compatibility if needed */}
+            {/* <source src="/assets/background-video.webm" type="video/webm" /> */}
+            Your browser does not support the video tag.
+          </video>
+          
+          {/* Video overlay to ensure text readability */}
+          <div className="absolute inset-0 bg-black/70"></div>
+        </div>
+        
         {/* Background with overlay */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 z-10">
           {/* Geometric patterns */}
           <div className="absolute inset-0 z-0">
             <div className="absolute top-0 left-0 w-full h-full">
               <svg className="absolute left-0 top-0 h-full w-full" preserveAspectRatio="none" viewBox="0 0 100 100">
-                <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="#111827" />
+                <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="#111827" opacity="0.5" />
                 <path d="M0,0 L100,0 L0,100 Z" fill="#ff5010" opacity="0.05" />
                 <path d="M100,0 L100,100 L0,100 Z" fill="#ff5010" opacity="0.03" />
               </svg>
@@ -177,7 +199,7 @@ const HeroSection = () => {
           <div className="absolute bottom-1/3 right-1/4 w-32 sm:w-48 md:w-80 h-32 sm:h-48 md:h-80 rounded-full bg-gradient-to-l from-[#ff5010]/15 to-transparent blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
           
           {/* Noise texture overlay */}
-          <div className="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-black/30 mix-blend-multiply"></div>
           
           {/* Animated accent lines - less visible on mobile */}
           <div className="hidden sm:block absolute top-0 left-1/5 w-px h-full bg-gradient-to-b from-transparent via-[#ff5010]/20 to-transparent"></div>
@@ -186,7 +208,7 @@ const HeroSection = () => {
         </div>
         
         {/* Hero content - improved responsiveness */}
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 flex flex-col justify-center items-center md:items-start h-full min-h-screen">
+        <div className="relative z-20 container mx-auto px-4 sm:px-6 flex flex-col justify-center items-center md:items-start h-full min-h-screen">
           <div className="pt-20 sm:pt-24 md:pt-0 md:max-w-3xl text-center md:text-left">
             {/* Animated intro badge */}
             <div className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full bg-gray-800/80 backdrop-blur-sm border border-gray-700 mb-4 sm:mb-6 overflow-hidden relative">
@@ -272,7 +294,7 @@ const HeroSection = () => {
 
         {/* Trusted By Global Brands indicator */}
         <div 
-          className="hidden  sm:flex absolute bottom-20 sm:bottom-24 left-1/2 transform -translate-x-1/2 flex-col items-center transition-opacity duration-300"
+          className="hidden sm:flex absolute bottom-20 sm:bottom-24 left-1/2 transform -translate-x-1/2 flex-col items-center transition-opacity duration-300"
           style={{ opacity: scrollOpacity }}
         >
           {/* <div className="flex flex-col items-center">
@@ -282,7 +304,7 @@ const HeroSection = () => {
         </div>
 
         {/* Partners Section - enhanced for mobile responsiveness */}
-        <div className="absolute bottom-0 left-0 right-0 py-4 sm:py-6 overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 py-4 sm:py-6 overflow-hidden z-20">
           {/* Subtle divider with more visible separation */}
           <div className="absolute top-0 left-0 w-full h-px"></div>
           
