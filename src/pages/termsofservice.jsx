@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '@/components/footer/footer';
 import Navbar  from '@/components/navbar/navbar';
-import TermsOfService from '@/components/termsofservice';
+import TermsOfService from '@/components/TermsofService';
 function termsofservice() {
   return (
     <div>
