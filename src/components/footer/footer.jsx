@@ -205,16 +205,20 @@ export default function Footer() {
           
           {/* Links */}
           <div className="flex flex-wrap gap-6 justify-center mb-4 md:mb-0">
-            {["Sitemap", "Terms of Service", "Privacy Policy"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-gray-400 text-sm hover:text-[#ff5010] transition-colors duration-300"
-              >
-                {item}
-              </a>
-            ))}
-          </div>
+  {[
+    { name: "Sitemap", link: "/sitemap" },
+    { name: "Terms of Service", link: "/termsofservice" },
+    { name: "Privacy Policy", link: "/PrivacyPolicyPage" }
+  ].map((item) => (
+    <a
+      key={item.name}
+      href={item.link}
+      className="text-gray-400 text-sm hover:text-[#ff5010] transition-colors duration-300"
+    >
+      {item.name}
+    </a>
+  ))}
+</div>
           
           {/* Social Icons */}
           <div className="flex space-x-3">
