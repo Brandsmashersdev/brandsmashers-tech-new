@@ -1,16 +1,15 @@
 import { useState } from "react";
-import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  ChevronDown, 
-  ChevronUp, 
-  CheckCircle, 
-  Code, 
-  Database, 
-  Layers, 
-  Figma, 
-  Cloud, 
-  TestTube, 
+import {
+  ChevronDown,
+  ChevronUp,
+  CheckCircle,
+  Code,
+  Database,
+  Layers,
+  Figma,
+  Cloud,
+  TestTube,
   Wrench,
   ArrowRight,
   Clock,
@@ -32,11 +31,12 @@ import {
 import TechGrid from "./TechGrid";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import Link from "next/link";
 
 export default function ProductDevelopmentPage() {
   const [activeTab, setActiveTab] = useState(0);
   const [activeFaq, setActiveFaq] = useState(null);
-  
+
 
   const toggleFaq = (index) => {
     if (activeFaq === index) {
@@ -49,18 +49,18 @@ export default function ProductDevelopmentPage() {
 
   //email functionality code
   const toastConfig = {
-  position: 'top-right',
-  autoClose: 3000,
-  hideProgressBar: false,
-  closeOnClick: true,
-  pauseOnHover: true,
-  draggable: true,
-  progress: undefined,
-};
-   const [showContactForm, setShowContactForm] = useState(false);
-   const [errors, setErrors] = useState({});
-     const [helpType, setHelpType] = useState(null);
-   const [serviceForm, setServiceForm] = useState({
+    position: 'top-right',
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  };
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [helpType, setHelpType] = useState(null);
+  const [serviceForm, setServiceForm] = useState({
     name: "",
     email: "",
     phone: "",
@@ -70,14 +70,14 @@ export default function ProductDevelopmentPage() {
     const { name, value } = e.target;
     let newValue = value;
     let error = '';
-   switch (name) {
+    switch (name) {
       case 'name':
         if (value && !validateName(value)) {
           error = 'Please enter only letters';
           newValue = serviceForm[name];
         }
         break;
-        case 'email':
+      case 'email':
         if (value && !validateEmail(value)) {
           error = 'Please enter only letters';
           newValue = serviceForm[name];
@@ -88,9 +88,9 @@ export default function ProductDevelopmentPage() {
         const digits = value.replace(/\D/g, '');
         if (digits.length > 10) {
           newValue = serviceForm[name];
-        } 
+        }
         break;
-        
+
 
       default:
         break;
@@ -100,7 +100,7 @@ export default function ProductDevelopmentPage() {
       ...prev,
       [name]: value
     }));
-    
+
 
     if (error) {
       setErrors(prev => ({
@@ -117,44 +117,44 @@ export default function ProductDevelopmentPage() {
 
   };
 
-  const handleServiceFormSubmit = async(e) => {
+  const handleServiceFormSubmit = async (e) => {
     e.preventDefault();
     // In a real application, you would handle the form submission here
-   if (validateForm()) {
-         try {
-           const formDataToSend = new FormData();
-           
-           Object.keys(serviceForm).forEach(key => {
-             formDataToSend.append(key, serviceForm[key]);
-           });
-           formDataToSend.append('helpType', helpType);
-           formDataToSend.append('access_key', 'ced5f765-5f1b-4a75-8584-5ca061816ed2');
-   
-           const response = await fetch('https://api.web3forms.com/submit', {
-             method: 'POST',
-             body: formDataToSend
-           });
-   
-           const data = await response.json();
-           
-           if (data.success) {
-             toast.success('Form submitted successfully!', toastConfig);
-             
-             setServiceForm({
-               name:'',
-               email: '',
-               phone: '',
-               message: '',
-             });
-             setHelpType(null);
-           } else {
-             toast.error('Error submitting form. Please try again.', toastConfig);
-           }
-         } catch (error) {
-           console.error('Submission Error:', error);
-           toast.error('Network error. Please try again later.', toastConfig);
-         }
-       }
+    if (validateForm()) {
+      try {
+        const formDataToSend = new FormData();
+
+        Object.keys(serviceForm).forEach(key => {
+          formDataToSend.append(key, serviceForm[key]);
+        });
+        formDataToSend.append('helpType', helpType);
+        formDataToSend.append('access_key', 'ced5f765-5f1b-4a75-8584-5ca061816ed2');
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formDataToSend
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          toast.success('Form submitted successfully!', toastConfig);
+
+          setServiceForm({
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+          });
+          setHelpType(null);
+        } else {
+          toast.error('Error submitting form. Please try again.', toastConfig);
+        }
+      } catch (error) {
+        console.error('Submission Error:', error);
+        toast.error('Network error. Please try again later.', toastConfig);
+      }
+    }
   };
 
   const validateName = (name) => {
@@ -184,7 +184,7 @@ export default function ProductDevelopmentPage() {
       newErrors.email = 'Email is required';
     } else if (!validateEmail(serviceForm.email)) {
       newErrors.email = 'Please enter a valid email';
-    }  
+    }
     if (!serviceForm.phone) {
       newErrors.phone = 'Phone number is required';
     } else if (!validatePhone(serviceForm.phone)) {
@@ -193,7 +193,7 @@ export default function ProductDevelopmentPage() {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-  
+
 
 
 
@@ -351,11 +351,11 @@ export default function ProductDevelopmentPage() {
 
       <ToastContainer />
       {/* Hero Section */}
-      <header className="relative text-white bg-black" 
-      style={{ 
-        backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url("/api/placeholder/1200/600")',
-        backgroundSize: 'cover'
-      }} 
+      <header className="relative text-white bg-black"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url("/api/placeholder/1200/600")',
+          backgroundSize: 'cover'
+        }}
       >
         <div className="absolute inset-0"></div>
         <div className="container mx-auto px-6 md:px-24 py-24 relative z-10">
@@ -363,15 +363,15 @@ export default function ProductDevelopmentPage() {
             <h1 className="text-5xl font-bold leading-tight mb-6">Product Development Services</h1>
             <p className="text-xl mb-8">Bring your ideas to life with our full-cycle product development services — from concept to launch. We craft innovative, scalable, and industry-leading solutions that set your brand apart.</p>
             <div className="flex flex-wrap gap-4">
-            <link href="/contactus" className="inline-block">
-  <button
-    className="rounded-md px-6 py-3 font-bold flex items-center"
-    style={{ backgroundColor: primaryColor }}
-  >
-    Get Started <ArrowRight className="ml-2" size={18} />
-  </button>
-</link>
-          
+              <Link href="/contactus" className="inline-block">
+                <button
+                  className="rounded-md px-6 py-3 font-bold flex items-center"
+                  style={{ backgroundColor: primaryColor }}
+                >
+                  Get Started <ArrowRight className="ml-2" size={18} />
+                </button>
+              </Link>
+
             </div>
           </div>
         </div>
@@ -386,7 +386,7 @@ export default function ProductDevelopmentPage() {
               We redefine excellence through our custom product development services designed to meet your specific business goals. From initial concept to final launch, our expert team builds scalable, high-performing digital products that set you apart in the market.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition">
@@ -435,8 +435,8 @@ export default function ProductDevelopmentPage() {
         <div className="absolute -top-20 left-0 w-64 h-64 bg-[#ff5722] opacity-10 blur-3xl rounded-full"></div>
       </section>
 
-      
-        {/* Hire Digital Marketing Expert Section */}
+
+      {/* Hire Digital Marketing Expert Section */}
       <section className="py-16 px-6 md:px-12 bg-white text-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -445,24 +445,24 @@ export default function ProductDevelopmentPage() {
             </h2>
             <p className="max-w-3xl mx-auto text-lg text-gray-600">
               Boost your online presence with expert digital marketers who understand your goals. Whether it&#39;s
- SEO, social media, paid ads, or full-scale strategy — hire dedicated professionals on flexible terms with complete transparency and security.
+              SEO, social media, paid ads, or full-scale strategy — hire dedicated professionals on flexible terms with complete transparency and security.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
-              { 
-                title: "Simple & Transparent Pricing", 
+              {
+                title: "Simple & Transparent Pricing",
                 icon: CheckCircle,
                 description: "Clear pricing structure with no hidden costs. Pay only for what you need."
               },
-              { 
-                title: "Fully Signed NDA", 
+              {
+                title: "Fully Signed NDA",
                 icon: FileText,
                 description: "Your business information stays secure with legally binding non-disclosure agreements."
               },
-              { 
-                title: "Easy Exit Policy", 
+              {
+                title: "Easy Exit Policy",
                 icon: ArrowRight,
                 description: "Flexible engagement models with straightforward exit terms if needed."
               }
@@ -478,7 +478,7 @@ export default function ProductDevelopmentPage() {
           </div>
 
           <div className="text-center">
-            <button 
+            <button
               onClick={() => setShowContactForm(true)}
               className="inline-block bg-[#ff5010] hover:bg-[#ff672b] text-white font-medium px-8 py-3 rounded-md transition"
             >
@@ -491,87 +491,87 @@ export default function ProductDevelopmentPage() {
         {showContactForm && (
           <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
             <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md relative">
-              <button 
+              <button
                 onClick={() => setShowContactForm(false)}
                 className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
               >
                 <X size={24} />
               </button>
-              
+
               <h3 className="text-2xl font-bold mb-6 text-center text-black">Schedule a Call</h3>
               <form onSubmit={handleServiceFormSubmit}>
-                      <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                          Full Name
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          value={serviceForm.name}
-                          onChange={handleServiceFormChange}
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                          placeholder="Your Name"
-                          required
-                        />
-                      </div>
-                      
-                      <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                          Email
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          value={serviceForm.email}
-                          onChange={handleServiceFormChange}
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                          placeholder="your@email.com"
-                          required
-                        />
-                      </div>
-                      
-                      <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
-                          Phone Number
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          value={serviceForm.phone}
-                          onChange={handleServiceFormChange}
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                          placeholder="+1 (123) 456-7890"
-                          required
-                        />
-                      </div>
-                      
-                      <div className="mb-6">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                          How can we help you? (Optional)
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          value={serviceForm.message}
-                          onChange={handleServiceFormChange}
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
-                          placeholder="Tell us about your digital marketing needs..."
-                        ></textarea>
-                      </div>
-                      
-                      <div className="flex items-center justify-center">
-                        <button
-                          type="submit"
-                          className="bg-[#ff5010] hover:bg-[#ff672b] text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline w-full"
-                        >
-                          Submit
-                        </button>
-                      </div>
-                    </form>
-            
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={serviceForm.name}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={serviceForm.email}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={serviceForm.phone}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="+1 (123) 456-7890"
+                    required
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+                    How can we help you? (Optional)
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={serviceForm.message}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                    placeholder="Tell us about your digital marketing needs..."
+                  ></textarea>
+                </div>
+
+                <div className="flex items-center justify-center">
+                  <button
+                    type="submit"
+                    className="bg-[#ff5010] hover:bg-[#ff672b] text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline w-full"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+
             </div>
           </div>
         )}
@@ -586,12 +586,12 @@ export default function ProductDevelopmentPage() {
               Here is a streamlined overview of our custom product development process.
             </p>
           </div>
-          
+
           <div className="max-w-5xl mx-auto">
             <div className="relative">
               {/* Process timeline line */}
               <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-300 transform -translate-x-1/2"></div>
-              
+
               {/* Process steps */}
               {process.map((step, index) => (
                 <div key={index} className="relative mb-12">
@@ -602,12 +602,12 @@ export default function ProductDevelopmentPage() {
                         <step.icon size={20} style={{ color: "#ff5010" }} />
                       </div>
                     </div>
-                    
+
                     {/* Step number for mobile */}
                     <div className="md:hidden w-12 h-12 rounded-full bg-white border-4 border-gray-300 flex items-center justify-center mb-4">
-                      <step.icon size={20} style={{ color: "#ff5010" }} /> 
+                      <step.icon size={20} style={{ color: "#ff5010" }} />
                     </div>
-                    
+
                     {/* Content box */}
                     <div className={`w-full md:w-5/12 p-6 bg-white rounded-lg shadow-lg border border-gray-100 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
                       <div className="flex items-center mb-3">
@@ -662,7 +662,7 @@ export default function ProductDevelopmentPage() {
               Explore how we have helped businesses transform their digital presence with our product development expertise.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
             {[
               {
@@ -683,21 +683,21 @@ export default function ProductDevelopmentPage() {
             ].map((item, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
                 <div className="h-48 bg-gray-200 flex items-center justify-center">
-                <Image
-  src="/api/placeholder/400/200"
-  alt="Project"
-  width={400}
-  height={200}
-  className="object-cover w-full h-full"
-/>
+                  <Image
+                    src="/api/placeholder/400/200"
+                    alt="Project"
+                    width={400}
+                    height={200}
+                    className="object-cover w-full h-full"
+                  />
                 </div>
                 <div className="p-6">
                   <div className="text-sm font-medium text-[#ff5010] mb-2">{item.industry}</div>
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                   <p className="text-gray-600 mb-4">{item.description}</p>
-                  <a 
-                    href="#" 
-                    style={{ color: "#ff5010" }} 
+                  <a
+                    href="#"
+                    style={{ color: "#ff5010" }}
                     className="flex items-center font-medium hover:underline"
                   >
                     View Case Study
@@ -712,7 +712,7 @@ export default function ProductDevelopmentPage() {
 
       {/* Call to Action Section */}
       <section className="py-16 px-6 md:px-12 text-white bg-[#0b0b0b] relative overflow-hidden">
-        
+
         {/* Glowing Accent Shape */}
         <div className="absolute -bottom-10 right-0 w-32 h-32 md:w-64 md:h-64 bg-[#ff5722] rounded-full opacity-20 blur-2xl"></div>
 
@@ -755,11 +755,11 @@ export default function ProductDevelopmentPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
           </div>
-          
+
           <div className="max-w-3xl mx-auto">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4 border border-gray-200 rounded-lg overflow-hidden">
-                <button 
+                <button
                   className="w-full flex justify-between items-center p-5 bg-gray-50 text-left text-black"
                   onClick={() => toggleFaq(index)}
                 >
@@ -781,7 +781,7 @@ export default function ProductDevelopmentPage() {
         </div>
       </section>
 
- 
+
     </div>
   );
 }
