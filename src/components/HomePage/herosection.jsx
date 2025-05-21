@@ -135,7 +135,7 @@ const HeroSection = () => {
 
       {/* CTA Button Fix */}
       <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 md:space-x-6 justify-center md:justify-start mb-6 sm:mb-10">
-        <Link href="/" passHref>
+        <Link href="/" >
           <button className="group relative overflow-hidden px-4 sm:px-6 py-2 sm:py-3 bg-[#ff5010] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto">
             <div className="relative z-10 flex items-center justify-center space-x-2">
               <Send size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -144,7 +144,9 @@ const HeroSection = () => {
           </button>
         </Link>
 
-        <Link href="/contactus" passHref>
+        <Link href="/contactus">
+        <div>
+
           <button className="group relative overflow-hidden px-4 sm:px-6 py-2 sm:py-3 bg-black border border-[#ff5010] text-[#ff5010] font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto">
             <span className="absolute inset-0 bg-[#ff5010] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
             <div className="relative z-10 flex items-center justify-center space-x-2">
@@ -152,6 +154,7 @@ const HeroSection = () => {
               <span className="group-hover:text-white transition-colors duration-300">Hire Developers</span>
             </div>
           </button>
+        </div>
         </Link>
       </div>
 

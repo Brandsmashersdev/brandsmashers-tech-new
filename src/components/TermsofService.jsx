@@ -27,7 +27,7 @@ export default function TermsOfService() {
         <header className="border-b border-gray-800 bg-white
         ">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-            <Link href="/" passHref>
+            <Link href="/">
               <div className="text-2xl font-bold cursor-pointer flex items-center">
                 <span className="text-white">{companyDetails.name}</span>
               </div>

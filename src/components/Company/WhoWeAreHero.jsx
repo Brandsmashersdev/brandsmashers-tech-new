@@ -1,4 +1,4 @@
-'use client';
+import Link from 'next/link';
 
 export default function WhoWeAreHero() {
   return (
@@ -38,6 +38,9 @@ export default function WhoWeAreHero() {
             </p>
           </div>
         </div>
+
+        {/* Example of fixed Link component */}
+      
 
       </div>
     </section>

@@ -92,8 +92,7 @@ export default function Footer() {
               ].map((item) => (
                 <li key={item.name} className="hover:pl-2 hover:text-white transition-all duration-300">
                   <Link href={item.link} className="inline-flex items-center group">
-                    <span className="w-1.5 h-1.5 bg-[#ff5010] rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    {item.name}
+                    <span className="w-1.5 h-1.5 bg-[#ff5010] rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{item.name}</span>
                   </Link>
                 </li>
               ))}
@@ -113,8 +112,8 @@ export default function Footer() {
               ].map((item) => (
                 <li key={item.name} className="hover:pl-2 hover:text-white transition-all duration-300">
                   <Link href={item.link} className="inline-flex items-center group">
-                    <span className="w-1.5 h-1.5 bg-[#ff5010] rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    {item.name}
+                    <span className="w-1.5 h-1.5 bg-[#ff5010] rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{item.name}</span>
+                    
                   </Link>
                 </li>
               ))}
@@ -134,8 +133,8 @@ export default function Footer() {
               ].map((item) => (
                 <li key={item.name} className="hover:pl-2 hover:text-white transition-all duration-300">
                   <Link href={item.link} className="inline-flex items-center group">
-                    <span className="w-1.5 h-1.5 bg-[#ff5010] rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    {item.name}
+                    <span className="w-1.5 h-1.5 bg-[#ff5010] rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{item.name}</span>
+                    
                   </Link>
                 </li>
               ))}

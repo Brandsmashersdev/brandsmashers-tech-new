@@ -400,13 +400,16 @@ const AiMlService = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight  mb-6"> AI/ML Development Services</h1>
             <p className="text-xl mb-8">Unlock the power of Artificial Intelligence and Machine Learning with Brandsmashers Tech. We build smart, data-driven solutions that automate processes, enhance decision-making, and drive business growth</p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contactus" passHref>
+              <Link href="/contactus" >
+              <div>
+
                 <button
                   className="rounded-md px-6 py-3 font-bold flex items-center"
                   style={{ backgroundColor: primaryColor }}
-                >
+                  >
                   Get Started <ArrowRight className="ml-2" size={18} />
                 </button>
+                  </div>
               </Link>
 
             </div>

@@ -24,7 +24,7 @@ const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
             </p>
             
             <div className="pt-4">
-              {/* Replace <a> with <Link> for internal navigation */}
+   
               <Link href="/contactus">
                 <button 
                   className="flex items-center gap-2 px-8 py-4 rounded-lg font-medium text-white bg-[#ff5010] hover:bg-[#e04509] transition-colors duration-300 shadow-lg"
