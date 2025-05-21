@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './leftservice.module.css';
+import Image from 'next/image';
 
 const DataDive= () => {
   return (
@@ -8,16 +9,18 @@ const DataDive= () => {
         {/* Left Image Section */}
         <div className={styles.leftSection}>
           <div className={styles.imageWrapper}>
-            <img 
+            <Image
               src="/datadive.png"
               alt="Web Development"
+              height={400}
+              width={600}
               className={styles.image}
             />
             
             {/* Overlay Box */}
             <div className={styles.overlayBox}>
               <p>
-                <span className={styles.highlightoverlay}>Brandsmashers' Data Science </span>
+                <span className={styles.highlightoverlay}>Brandsmashers&apos; Data Science </span>
                 Development Services transform raw data 
                 into actionable insights. From data collection to advanced analytics, we deliver 
                 tailored solutions like predictive analytics and BI dashboards to empower informed decisions

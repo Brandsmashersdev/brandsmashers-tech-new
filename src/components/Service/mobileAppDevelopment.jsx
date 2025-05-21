@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronRight, Code, SmartphoneCharging, Layers, Laptop, Watch, Gamepad, CheckCircle, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function MobileAppDevelopmentPage() {
   const [activeTab, setActiveTab] = useState(0);
   const [activeFaq, setActiveFaq] = useState(null);
-  
+
   const primaryColor = "#ff5010";
   const secondaryColor = "#ff7a47";
   const darkColor = "#222";
-  
+
   const services = [
     {
       title: "Android App Development",
@@ -46,7 +47,7 @@ export default function MobileAppDevelopmentPage() {
       description: "Design engaging, high-performance mobile games with powerful engines like Unity, Unreal Engine, and Cocos2d. We specialize in creating visually rich, responsive games with smooth mechanics."
     }
   ];
-  
+
   const process = [
     {
       title: "Planning",
@@ -73,7 +74,7 @@ export default function MobileAppDevelopmentPage() {
       description: "Post-launch, we provide ongoing support, updates, and improvements to keep your app running flawlessly."
     }
   ];
-  
+
   const advantages = [
     {
       title: "Expert App Developers",
@@ -96,7 +97,7 @@ export default function MobileAppDevelopmentPage() {
       description: "From launch to updates, we provide continuous support to keep your app running at its best."
     }
   ];
-  
+
   const faqItems = [
     {
       question: "What types of mobile apps do you develop at Brandsmashers?",
@@ -119,7 +120,7 @@ export default function MobileAppDevelopmentPage() {
       answer: "Brandsmashers stands out due to its client-centric approach, experienced developers, and transparent process. Our Mobile App Development Services are designed to turn your ideas into scalable and engaging mobile apps that drive business growth and customer satisfaction."
     }
   ];
-  
+
   const toggleFaq = (index) => {
     if (activeFaq === index) {
       setActiveFaq(null);
@@ -127,15 +128,15 @@ export default function MobileAppDevelopmentPage() {
       setActiveFaq(index);
     }
   };
-  
+
   return (
-     <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section with Background Image - IMPROVED TEXT LAYOUT */}
-      <section 
+      <section
         className="py-16 px-6 md:px-12 text-white relative bg-gray-900 flex-grow"
       >
         {/* Background Image with Overlay */}
-        <div 
+        <div
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1536148935331-408321065b18?q=80&w=1920&auto=format&fit=crop')",
@@ -151,8 +152,8 @@ export default function MobileAppDevelopmentPage() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               {/* Modified title to ensure it stays on one line */}
-              <h1 
-                className="text-4xl md:text-5xl font-bold mb-6 whitespace-nowrap" 
+              <h1
+                className="text-4xl md:text-5xl font-bold mb-6 whitespace-nowrap"
                 style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}
               >
                 Mobile App Development
@@ -166,21 +167,20 @@ export default function MobileAppDevelopmentPage() {
                 </p>
               </div>
               <div className="flex space-x-4">
-              <a href="/contactus" className="inline-block">
-  <button
-    className="rounded-md px-6 py-3 font-bold flex items-center"
-    style={{ backgroundColor: primaryColor }}
-  >
-    Get Started <ArrowRight className="ml-2" size={18} />
-  </button>
-</a>
-             
+                <Link href="/contactus" className="inline-block">
+                  <button
+                    className="rounded-md px-6 py-3 font-bold flex items-center"
+                    style={{ backgroundColor: primaryColor }}
+                  >
+                    Get Started <ArrowRight className="ml-2" size={18} />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
-    
+
       {/* Services Section */}
       <section className="py-16 px-6 md:px-12 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -190,13 +190,13 @@ export default function MobileAppDevelopmentPage() {
               Transform your ideas into high-performing mobile apps with end-to-end development services tailored for iOS, Android, and cross-platform solutions.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
-                <div 
+                <div
                   className="p-3 rounded-full inline-flex mb-4"
-                  style={{ backgroundColor: `${primaryColor}20 `}}
+                  style={{ backgroundColor: `${primaryColor}20 ` }}
                 >
                   <div style={{ color: primaryColor }}>{service.icon}</div>
                 </div>
@@ -209,7 +209,7 @@ export default function MobileAppDevelopmentPage() {
       </section>
 
       {/* Solution Matrix */}
-      <section 
+      <section
         className="py-16 px-6 md:px-12 text-white"
         style={{ backgroundColor: darkColor }}
       >
@@ -223,7 +223,7 @@ export default function MobileAppDevelopmentPage() {
               At Brandsmashers Tech, we build custom mobile apps that are scalable, secure, and user-friendly. From idea to launch, our expert team ensures your app meets your business goals and delivers a seamless user experience.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-800 p-6 rounded-lg">
               <div className="text-4xl font-bold mb-2" style={{ color: primaryColor }}>200+</div>
@@ -254,9 +254,9 @@ export default function MobileAppDevelopmentPage() {
       </section>
 
       {/* Cost Section */}
-      <section 
+      <section
         className="py-16 px-6 md:px-12"
-        style={{ backgroundColor: `${primaryColor}10 `}}
+        style={{ backgroundColor: `${primaryColor}10 ` }}
       >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -267,7 +267,7 @@ export default function MobileAppDevelopmentPage() {
               Simple & Transparent Pricing | Fully Signed NDA | Code Security | Easy Exit Policy
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-lg font-medium mb-4 text-black">Basic</div>
@@ -277,18 +277,18 @@ export default function MobileAppDevelopmentPage() {
                 <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> Single Platform</li>
                 <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> 30-Day Support</li>
               </ul>
-              <button 
+              <button
                 className="w-full py-2 rounded-md text-white"
                 style={{ backgroundColor: primaryColor }}
               >
                 Get Started
               </button>
             </div>
-            <div 
+            <div
               className="p-6 rounded-lg shadow-lg text-center text-white relative"
               style={{ backgroundColor: darkColor }}
             >
-              <div 
+              <div
                 className="absolute top-0 right-0 left-0 py-1 text-sm font-medium"
                 style={{ backgroundColor: primaryColor }}
               >
@@ -302,7 +302,7 @@ export default function MobileAppDevelopmentPage() {
                 <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> 90-Day Support</li>
                 <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> API Integration</li>
               </ul>
-              <button 
+              <button
                 className="w-full py-2 rounded-md text-white"
                 style={{ backgroundColor: primaryColor }}
               >
@@ -319,7 +319,7 @@ export default function MobileAppDevelopmentPage() {
                 <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> Full Integration</li>
                 <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-500" /> White-label Option</li>
               </ul>
-              <button 
+              <button
                 className="w-full py-2 rounded-md text-white"
                 style={{ backgroundColor: primaryColor }}
               >
@@ -339,11 +339,11 @@ export default function MobileAppDevelopmentPage() {
               We follow a streamlined process to deliver high-quality mobile apps—from idea validation and UI/UX design to agile development, testing, and launch.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {process.map((step, index) => (
               <div key={index} className="flex">
-                <div 
+                <div
                   className="h-12 w-12 rounded-full flex items-center justify-center font-bold text-white shrink-0 mt-1"
                   style={{ backgroundColor: primaryColor }}
                 >
@@ -360,9 +360,9 @@ export default function MobileAppDevelopmentPage() {
       </section>
 
       {/* Technologies Section */}
-      <section 
+      <section
         className="py-16 px-6 md:px-12"
-        style={{ backgroundColor: `${primaryColor}05 `}}
+        style={{ backgroundColor: `${primaryColor}05 ` }}
       >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -371,11 +371,11 @@ export default function MobileAppDevelopmentPage() {
               Leverage the expertise of a top app development company to build high-performance, feature-rich mobile apps.
             </p>
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-8">
             {['React Native', 'Flutter', 'Swift', 'Kotlin', 'Java', 'Objective-C', 'Unity', 'Firebase'].map((tech, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="px-6 py-3 bg-white rounded-full shadow-md font-medium"
                 style={{ color: primaryColor }}
               >
@@ -397,14 +397,14 @@ export default function MobileAppDevelopmentPage() {
               Brandsmashers Tech stands out as a smart choice for custom mobile app development with its blend of innovation, expertise, and client-first approach.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {advantages.map((advantage, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
                 <h3 className="text-xl font-semibold mb-3 flex items-center text-black">
-                  <CheckCircle 
-                    size={20} 
-                    className="mr-2" 
+                  <CheckCircle
+                    size={20}
+                    className="mr-2"
                     style={{ color: primaryColor }}
                   />
                   {advantage.title}
@@ -417,23 +417,23 @@ export default function MobileAppDevelopmentPage() {
       </section>
 
       {/* Call to Action */}
-      <section 
+      <section
         className="py-16 px-6 md:px-12 text-white bg-black relative overflow-hidden"
       >
         {/* Small orange accent shape */}
-        <div 
+        <div
           className="absolute -bottom-10 right-0 w-32 h-32 md:w-64 md:h-64 bg-orange-500 rounded-full opacity-10"
         ></div>
-        
+
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Ready to Build Your <span className="text-orange-500">Mobile App?</span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg mb-12 text-white font-medium">
-            Let's transform your idea into a powerful mobile application that drives growth and engages users.
+            Let&apos;s transform your idea into a powerful mobile application that drives growth and engages users.
           </p>
           <div className="inline-block mb-16">
-            <button 
+            <button
               className="bg-transparent hover:bg-orange-500 transition-colors px-8 py-3 rounded-md font-medium text-white border-2 border-orange-500 hover:border-orange-500"
             >
               Get a Free Consultation
@@ -477,20 +477,20 @@ export default function MobileAppDevelopmentPage() {
               Find answers to common questions about our mobile app development services.
             </p>
           </div>
-          
+
           <div className="space-y-4">
             {faqItems.map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="border border-gray-200 rounded-lg overflow-hidden"
               >
-                <button 
+                <button
                   className="flex justify-between items-center w-full p-4 text-left font-medium text-black"
                   onClick={() => toggleFaq(index)}
                 >
                   {item.question}
-                  {activeFaq === index ? 
-                    <ChevronDown size={20} /> : 
+                  {activeFaq === index ?
+                    <ChevronDown size={20} /> :
                     <ChevronRight size={20} />
                   }
                 </button>

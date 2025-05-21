@@ -16,17 +16,21 @@ const OurPartners = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [animationDuration, setAnimationDuration] = useState(20); // seconds
 
+  // Store animationDuration in ref to avoid re-renders in event handlers
+  const animationDurationRef = useRef(animationDuration);
+  animationDurationRef.current = animationDuration;
+
   useEffect(() => {
     // Clone the images to create the infinite effect
     const createInfiniteScroll = () => {
       if (!innerRef.current) return;
       
-      // Clear any existing content first
+      // Clear existing content
       while (innerRef.current.firstChild) {
         innerRef.current.removeChild(innerRef.current.firstChild);
       }
       
-      // Create the original set
+      // Create original set
       images.forEach((image) => {
         const div = document.createElement('div');
         div.className = 'partner-image-item flex-shrink-0 px-8 transition-transform hover:scale-110';
@@ -40,7 +44,7 @@ const OurPartners = () => {
         innerRef.current.appendChild(div);
       });
       
-      // Clone the set multiple times to ensure smooth infinite scrolling
+      // Clone multiple times
       const originalItems = Array.from(innerRef.current.children);
       for (let i = 0; i < 3; i++) {
         originalItems.forEach(item => {
@@ -49,21 +53,22 @@ const OurPartners = () => {
         });
       }
       
-      // Calculate animation duration based on the number of items
+      // Calculate animation duration based on total items
       const totalItems = innerRef.current.children.length;
-      const newDuration = totalItems * 3; // 3 seconds per item seems reasonable
+      const newDuration = totalItems * 3; // 3 seconds per item
       setAnimationDuration(newDuration);
     };
     
     createInfiniteScroll();
     
-    // Reset animation whenever window resizes
+    // Reset animation on resize
     const handleResize = () => {
       if (innerRef.current) {
         innerRef.current.style.animation = 'none';
         setTimeout(() => {
           if (innerRef.current) {
-            innerRef.current.style.animation = isPaused ? 'none' : `scrollLeftToRight ${animationDuration}s linear infinite`;
+            // Use latest duration from ref
+            innerRef.current.style.animation = isPaused ? 'none' : `scrollLeftToRight ${animationDurationRef.current}s linear infinite`;
           }
         }, 50);
       }
@@ -73,18 +78,14 @@ const OurPartners = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, []); // empty deps, runs once on mount
 
-  // Update animation state when paused/unpaused
+  // Update animation when paused or duration changes
   useEffect(() => {
     if (!innerRef.current) return;
-    
-    if (isPaused) {
-      innerRef.current.style.animationPlayState = 'paused';
-    } else {
-      innerRef.current.style.animationPlayState = 'running';
-    }
-  }, [isPaused]);
+    innerRef.current.style.animation = isPaused ? 'none' : `scrollLeftToRight ${animationDuration}s linear infinite`;
+    innerRef.current.style.animationPlayState = isPaused ? 'paused' : 'running';
+  }, [isPaused, animationDuration]);
 
   return (
     <section className="w-full bg-white py-16 overflow-hidden" id="our-partners">

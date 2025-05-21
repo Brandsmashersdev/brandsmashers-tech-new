@@ -390,7 +390,7 @@ export default function UIUXDesignPage() {
                 Your Trusted Partner for <span className="text-[#ff5722]">Modern</span> and <span className="text-[#ff5722]">Scalable</span> UI/UX Design
               </h2>
               <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-                At Brandsmashers Tech, we design digital experiences that are beautiful, functional, and scalable. Whether you're launching a new product or revamping an existing one, our team ensures every interface is optimized for performance, usability, and brand impact.
+                At Brandsmashers Tech, we design digital experiences that are beautiful, functional, and scalable. Whether you&apos;re launching a new product or revamping an existing one, our team ensures every interface is optimized for performance, usability, and brand impact.
               </p>
             </div>
   
@@ -423,7 +423,7 @@ export default function UIUXDesignPage() {
                 Hire a <span className="text-[#ff5010]">UI/UX Designer</span> As Per Your Project Needs
               </h2>
               <p className="max-w-3xl mx-auto text-lg text-gray-600">
-                Enhance your digital products with our expert UI/UX designers who understand user needs and business goals. Whether it's a complete redesign, a new product, or ongoing design support — hire dedicated professionals on flexible terms.
+                Enhance your digital products with our expert UI/UX designers who understand user needs and business goals. Whether it&apos;s a complete redesign, a new product, or ongoing design support — hire dedicated professionals on flexible terms.
               </p>
             </div>
   

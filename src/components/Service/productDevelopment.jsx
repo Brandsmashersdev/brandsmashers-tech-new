@@ -10,7 +10,6 @@ import {
   Cloud, 
   TestTube, 
   Wrench,
-  ArrowRight,
   Clock,
   FileCode,
   Smartphone,

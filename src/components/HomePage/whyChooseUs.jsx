@@ -44,7 +44,7 @@ const WhyHireRemoteDevelopers = () => {
           </h2>
           <p className="text-gray-700 max-w-3xl mx-auto text-lg">
             At Brandsmashers Tech, we provide highly skilled, pre-vetted remote developers who seamlessly integrate with your team. 
-            Whether you're scaling fast, filling a skill gap, or looking to reduce development costs, our experts are ready to 
+            Whether you&apos;re scaling fast, filling a skill gap, or looking to reduce development costs, our experts are ready to 
             deliver quality work with flexibility and speed.
           </p>
         </div>

@@ -101,11 +101,10 @@ const BlogCarousel = () => {
   // Auto-scroll every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide();
+      setActiveIndex(prevIndex => (prevIndex + 1) % (blogPosts.length - visiblePosts + 1));
     }, 5000);
-    
     return () => clearInterval(interval);
-  }, [activeIndex]);
+  }, []);
 
   return (
     <div className="py-20 bg-gray-50 relative overflow-hidden">

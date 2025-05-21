@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './leftservice.module.css';
+import Image from 'next/image';
 
 const Browser = () => {
   return (
@@ -8,9 +9,11 @@ const Browser = () => {
         {/* Left Image Section */}
         <div className={styles.leftSection}>
           <div className={styles.imageWrapper}>
-            <img 
+            <Image
               src="/browser.png"
               alt="Web Development"
+              height={400}
+              width={600}
               className={styles.image}
             />
             
@@ -43,9 +46,9 @@ const Browser = () => {
             technology-savvy company, we are focused on providing the best digital experiences
             to solve your business problems effectively. We are determined to make your brand
             shine and receive more attention among the numerous Internet users. Using up-to-date
-            techniques, we ensure you capture the consumer's attention, evoke their emotions, and
+            techniques, we ensure you capture the consumer&apos;s attention, evoke their emotions, and
             produce measurable outcomes. We at Brandsmashers are ready to bring your idea to life 
-            and help you become an unbeatable force on the online stage!
+            and help you become an unbeatable force on the online stage!
             </p>
           </div>
         </div>

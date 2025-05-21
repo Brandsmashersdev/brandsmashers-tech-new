@@ -1,12 +1,13 @@
 "use client";
 
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const ToggleIcon = ({ isOpen }) => (
   <div className={`transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}>
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 5V19" stroke="#ff5010" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M5 12H19" stroke="#ff5010" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M12 5V19" stroke="#ff5010" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M5 12H19" stroke="#ff5010" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   </div>
 );
@@ -53,7 +54,7 @@ const FAQSection = () => {
     <div className="bg-white p-8 py-16">
       <div className="mx-auto max-w-4xl">
         {/* Header Section with minimalist design */}
-      <div className="flex flex-col md:flex-row justify-between items-center mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-16">
           {/* Left Section with title */}
           <div className="mb-8 md:mb-0">
             <h1 className="text-4xl font-bold text-gray-900 relative inline-block">
@@ -62,18 +63,29 @@ const FAQSection = () => {
               <div className="absolute -bottom-3 left-0 h-1 w-16 bg-[#ff5010]"></div>
             </h1>
           </div>
-          
+
           {/* Right Section - Simple Call to action */}
           <div className="text-right">
             <h2 className="text-gray-700 text-xl font-medium mb-2">Still Have Questions?</h2>
-            <a
-              href="/contactus" 
-              className="text-[#ff5010] text-xl font-semibold hover:underline inline-flex items-center group" >
-              Let's Talk
-              <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            <Link
+              to="/contactus"
+              className="text-[#ff5010] text-xl font-semibold hover:underline inline-flex items-center group"
+            >
+              Let&apos;s Talk
+              <svg
+                className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -82,35 +94,36 @@ const FAQSection = () => {
           {faqData.map((faq, index) => {
             const isActive = activeIndex === index;
             return (
-            <div 
-              key={index} 
-              className="transition-all duration-300 border-b border-gray-100 pb-2"
-            >
-              {/* Question */}
               <div
-                onClick={() => toggleQuestion(index)}
-                className="cursor-pointer"
+                key={index}
+                className="transition-all duration-300 border-b border-gray-100 pb-2"
               >
-                <div className="flex justify-between items-center py-5">
-                  <h3 className={`text-xl font-medium ${isActive ? 'text-[#ff5010]' : 'text-gray-800'} transition-colors duration-300`}>
-                    {faq.question}
-                  </h3>
-                  <ToggleIcon isOpen={isActive} />
+                {/* Question */}
+                <div
+                  onClick={() => toggleQuestion(index)}
+                  className="cursor-pointer"
+                >
+                  <div className="flex justify-between items-center py-5">
+                    <h3 className={`text-xl font-medium ${isActive ? 'text-[#ff5010]' : 'text-gray-800'} transition-colors duration-300`}>
+                      {faq.question}
+                    </h3>
+                    <ToggleIcon isOpen={isActive} />
+                  </div>
+                </div>
+
+                {/* Answer with smooth transition */}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${isActive ? 'max-h-[500px] opacity-100 mb-6' : 'max-h-0 opacity-0'}`}
+                >
+                  <p className="text-gray-600 leading-relaxed pl-4 border-l-2 border-[#ff5010]">
+                    {faq.answer}
+                  </p>
                 </div>
               </div>
-
-              {/* Answer with smooth transition */}
-              <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${isActive ? 'max-h-[500px] opacity-100 mb-6' : 'max-h-0 opacity-0'}`}
-              >
-                <p className="text-gray-600 leading-relaxed pl-4 border-l-2 border-[#ff5010]">
-                  {faq.answer}
-                </p>
-              </div>
-            </div>
-          )})}
+            )
+          })}
         </div>
-        
+
         {/* Stylish bottom decoration */}
         <div className="mt-16 flex justify-center">
           <div className="h-1 w-24 bg-[#ff5010]"></div>

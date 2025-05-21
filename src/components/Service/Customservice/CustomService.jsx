@@ -1,22 +1,22 @@
-import { useState,useEffect, useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 import { Check, Calendar } from 'lucide-react';
-import { 
-  ChevronDown, 
+import {
+  ChevronDown,
   Code,
- Rocket,
+  Rocket,
   ShieldCheck,
   Timer,
   Users,
-  
+
   Lightbulb,
   Wrench,
-  ChevronUp, 
-  CheckCircle,  
-  Database, 
-  Layers, 
-  FileCode, 
-  Cloud, 
-  TestTube, 
+  ChevronUp,
+  CheckCircle,
+  Database,
+  Layers,
+  FileCode,
+  Cloud,
+  TestTube,
   FileText,
   ArrowRight,
   Clock,
@@ -36,15 +36,16 @@ import DeveloperHiringSection from "./DeveloperHiringSection";
 import CustomSoftwareStats from "./CustomSoftwareStats";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import Link from "next/link";
 
 export default function CustomSoftwareDevelopmentPage() {
   const [activeTab, setActiveTab] = useState(0);
   const [activeFaq, setActiveFaq] = useState(null);
- const [hoveredIndex, setHoveredIndex] = useState(null);
- 
- //email functionality
- const primaryColor = "#ff5010";
-const toastConfig = {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  //email functionality
+  const primaryColor = "#ff5010";
+  const toastConfig = {
     position: "top-right",
     autoClose: 3000,
     hideProgressBar: false,
@@ -53,144 +54,144 @@ const toastConfig = {
     draggable: true,
     style: { background: '#ff5010', color: 'white' }
   };
-    const [showContactForm, setShowContactForm] = useState(false);
-    const [errors, setErrors] = useState({});
-      const [helpType, setHelpType] = useState(null);
-    const [serviceForm, setServiceForm] = useState({
-     name: "",
-     email: "",
-     phone: "",
-     message: ""
-   });
-   const handleServiceFormChange = (e) => {
-     const { name, value } = e.target;
-     let newValue = value;
-     let error = '';
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [helpType, setHelpType] = useState(null);
+  const [serviceForm, setServiceForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+  const handleServiceFormChange = (e) => {
+    const { name, value } = e.target;
+    let newValue = value;
+    let error = '';
     switch (name) {
-       case 'name':
-         if (value && !validateName(value)) {
-           error = 'Please enter only letters';
-           newValue = serviceForm[name];
-         }
-         break;
-         case 'email':
-         if (value && !validateEmail(value)) {
-           error = 'Please enter only letters';
-           newValue = serviceForm[name];
-         }
-         break;
- 
-       case 'phone':
-         const digits = value.replace(/\D/g, '');
-         if (digits.length > 10) {
-           newValue = serviceForm[name];
-         } 
-         break;
-         
- 
-       default:
-         break;
-     }
- 
-     setServiceForm(prev => ({
-       ...prev,
-       [name]: value
-     }));
-     
- 
-     if (error) {
-       setErrors(prev => ({
-         ...prev,
-         [name]: error
-       }));
-     } else {
-       setErrors(prev => {
-         const newErrors = { ...prev };
-         delete newErrors[name];
-         return newErrors;
-       });
-     }
- 
-   };
- 
-   const handleServiceFormSubmit = async(e) => {
-     e.preventDefault();
-     // In a real application, you would handle the form submission here
-    if (validateForm()) {
-          try {
-            const formDataToSend = new FormData();
-            
-            Object.keys(serviceForm).forEach(key => {
-              formDataToSend.append(key, serviceForm[key]);
-            });
-            formDataToSend.append('helpType', helpType);
-            formDataToSend.append('access_key', 'ced5f765-5f1b-4a75-8584-5ca061816ed2');
-    
-            const response = await fetch('https://api.web3forms.com/submit', {
-              method: 'POST',
-              body: formDataToSend
-            });
-    
-            const data = await response.json();
-            
-            if (data.success) {
-              toast.success('Form submitted successfully!', toastConfig);
-              alert()
-              
-              setServiceForm({
-                name:'',
-                email: '',
-                phone: '',
-                message: '',
-              });
-              setHelpType(null);
-            } else {
-              toast.error('Error submitting form. Please try again.', toastConfig);
-            }
-          } catch (error) {
-            console.error('Submission Error:', error);
-            toast.error('Network error. Please try again later.', toastConfig);
-          }
+      case 'name':
+        if (value && !validateName(value)) {
+          error = 'Please enter only letters';
+          newValue = serviceForm[name];
         }
-   };
- 
-   const validateName = (name) => {
-     const nameRegex = /^[A-Za-z\s]+$/;
-     return nameRegex.test(name);
-   };
- 
-   const validateEmail = (email) => {
-     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-     return emailRegex.test(email);
-   };
- 
-   const validatePhone = (phone) => {
-     const phoneRegex = /^\d{10}$/;
-     return phoneRegex.test(phone.replace(/\D/g, ''));
-   };
- 
-   const validateForm = () => {
-     const newErrors = {};
- 
-     if (!serviceForm.name) {
-       newErrors.firstName = 'First name is required';
-     } else if (!validateName(serviceForm.firstName)) {
-       newErrors.firstName = 'Please enter only letters';
-     }
-     if (!serviceForm.email) {
-       newErrors.email = 'Email is required';
-     } else if (!validateEmail(serviceForm.email)) {
-       newErrors.email = 'Please enter a valid email';
-     }  
-     if (!serviceForm.phone) {
-       newErrors.phone = 'Phone number is required';
-     } else if (!validatePhone(serviceForm.phone)) {
-       newErrors.phone = 'Please enter a valid 10-digit phone number';
-     }
-     setErrors(newErrors);
-     return Object.keys(newErrors).length === 0;
-   };
-   
+        break;
+      case 'email':
+        if (value && !validateEmail(value)) {
+          error = 'Please enter only letters';
+          newValue = serviceForm[name];
+        }
+        break;
+
+      case 'phone':
+        const digits = value.replace(/\D/g, '');
+        if (digits.length > 10) {
+          newValue = serviceForm[name];
+        }
+        break;
+
+
+      default:
+        break;
+    }
+
+    setServiceForm(prev => ({
+      ...prev,
+      [name]: value
+    }));
+
+
+    if (error) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: error
+      }));
+    } else {
+      setErrors(prev => {
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      });
+    }
+
+  };
+
+  const handleServiceFormSubmit = async (e) => {
+    e.preventDefault();
+    // In a real application, you would handle the form submission here
+    if (validateForm()) {
+      try {
+        const formDataToSend = new FormData();
+
+        Object.keys(serviceForm).forEach(key => {
+          formDataToSend.append(key, serviceForm[key]);
+        });
+        formDataToSend.append('helpType', helpType);
+        formDataToSend.append('access_key', 'ced5f765-5f1b-4a75-8584-5ca061816ed2');
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formDataToSend
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          toast.success('Form submitted successfully!', toastConfig);
+          alert()
+
+          setServiceForm({
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+          });
+          setHelpType(null);
+        } else {
+          toast.error('Error submitting form. Please try again.', toastConfig);
+        }
+      } catch (error) {
+        console.error('Submission Error:', error);
+        toast.error('Network error. Please try again later.', toastConfig);
+      }
+    }
+  };
+
+  const validateName = (name) => {
+    const nameRegex = /^[A-Za-z\s]+$/;
+    return nameRegex.test(name);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phone.replace(/\D/g, ''));
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!serviceForm.name) {
+      newErrors.firstName = 'First name is required';
+    } else if (!validateName(serviceForm.firstName)) {
+      newErrors.firstName = 'Please enter only letters';
+    }
+    if (!serviceForm.email) {
+      newErrors.email = 'Email is required';
+    } else if (!validateEmail(serviceForm.email)) {
+      newErrors.email = 'Please enter a valid email';
+    }
+    if (!serviceForm.phone) {
+      newErrors.phone = 'Phone number is required';
+    } else if (!validatePhone(serviceForm.phone)) {
+      newErrors.phone = 'Please enter a valid 10-digit phone number';
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
 
   const toggleFaq = (index) => {
     if (activeFaq === index) {
@@ -200,9 +201,9 @@ const toastConfig = {
     }
   };
 
-  
 
-  
+
+
   // Services with their icons
   const services = [
     {
@@ -281,47 +282,47 @@ const toastConfig = {
 
   // Why choose us points
   const whyChooseUs = [
-  {
-    title: "Expert Developers",
-    description: "Our team is made up of highly experienced software engineers who specialize in modern tech stacks.",
-    icon: Code
-  },
-  {
-    title: "Faster Time to Market",
-    description: "We build, test, and launch your product efficiently with agile methodologies and CI/CD pipelines.",
-    icon: Rocket
-  },
-  {
-    title: "Secure Architecture",
-    description: "We follow best security practices, encrypt sensitive data, and ensure compliance with industry standards.",
-    icon: ShieldCheck
-  },
-  {
-    title: "On-Time Delivery",
-    description: "Timely project completion is part of our DNA, backed by strong project planning and execution.",
-    icon: Timer
-  },
-  {
-    title: "Collaborative Approach",
-    description: "We work closely with your team, ensuring complete transparency and shared progress at every step.",
-    icon: Users
-  },
-  {
-    title: "Scalable Solutions",
-    description: "Our software is built to scale with your growing business needs, without performance compromise.",
-    icon: Layers
-  },
-  {
-    title: "Innovation-Driven",
-    description: "We don’t just deliver software—we innovate, helping your brand stay ahead of the curve.",
-    icon: Lightbulb
-  },
-  {
-    title: "Comprehensive Support",
-    description: "Post-launch support and maintenance to ensure your product runs smoothly and evolves as needed.",
-    icon: Wrench
-  }
-];
+    {
+      title: "Expert Developers",
+      description: "Our team is made up of highly experienced software engineers who specialize in modern tech stacks.",
+      icon: Code
+    },
+    {
+      title: "Faster Time to Market",
+      description: "We build, test, and launch your product efficiently with agile methodologies and CI/CD pipelines.",
+      icon: Rocket
+    },
+    {
+      title: "Secure Architecture",
+      description: "We follow best security practices, encrypt sensitive data, and ensure compliance with industry standards.",
+      icon: ShieldCheck
+    },
+    {
+      title: "On-Time Delivery",
+      description: "Timely project completion is part of our DNA, backed by strong project planning and execution.",
+      icon: Timer
+    },
+    {
+      title: "Collaborative Approach",
+      description: "We work closely with your team, ensuring complete transparency and shared progress at every step.",
+      icon: Users
+    },
+    {
+      title: "Scalable Solutions",
+      description: "Our software is built to scale with your growing business needs, without performance compromise.",
+      icon: Layers
+    },
+    {
+      title: "Innovation-Driven",
+      description: "We don’t just deliver software—we innovate, helping your brand stay ahead of the curve.",
+      icon: Lightbulb
+    },
+    {
+      title: "Comprehensive Support",
+      description: "Post-launch support and maintenance to ensure your product runs smoothly and evolves as needed.",
+      icon: Wrench
+    }
+  ];
 
 
   // Business solutions
@@ -378,78 +379,78 @@ const toastConfig = {
   ];
 
   // Tech stack categories
-    const cards = [
-      {
-        id: 'hourly',
-        price: '$2',
-        note: '*',
-        subtitle: 'Hourly (USD)',
-        features: [
-          "Fully signed NDA for confidentiality",
-          "Full code ownership",
-          "Flexible scaling based on needs"
-        ],
-        buttonText: 'Get Started'
-      },
-      {
-        id: 'monthly',
-        price: '$2',
-        note: '***',
-        subtitle: 'Monthly (USD)',
-        highlightText: 'STARTS WITH',
-        features: [
-          "4+ Years Senior Developer",
-          "160 hours/month",
-          "Dedicated resource"
-        ],
-        buttonText: 'Get Started'
-      },
-      {
-        id: 'fixed',
-        price: 'Get a Quote',
-        subtitle: 'Fixed Cost Solution',
-        features: [
-          "Timely Delivery",
-          "Within Budget",
-          "Complete scoping & planning"
-        ],
-        buttonText: 'Request Quote'
-      }
-    ];
-  
-    const [current, setCurrent] = useState(0);
-    const getPositionClass = (index) => {
-      if (index === current) return 'z-20 scale-110';
-      if ((index + 1) % 3 === current) return 'translate-x-[-120%] opacity-70 scale-95';
-      if ((index + 2) % 3 === current) return 'translate-x-[120%] opacity-70 scale-95';
-      return 'hidden';
-    };
+  const cards = [
+    {
+      id: 'hourly',
+      price: '$2',
+      note: '*',
+      subtitle: 'Hourly (USD)',
+      features: [
+        "Fully signed NDA for confidentiality",
+        "Full code ownership",
+        "Flexible scaling based on needs"
+      ],
+      buttonText: 'Get Started'
+    },
+    {
+      id: 'monthly',
+      price: '$2',
+      note: '***',
+      subtitle: 'Monthly (USD)',
+      highlightText: 'STARTS WITH',
+      features: [
+        "4+ Years Senior Developer",
+        "160 hours/month",
+        "Dedicated resource"
+      ],
+      buttonText: 'Get Started'
+    },
+    {
+      id: 'fixed',
+      price: 'Get a Quote',
+      subtitle: 'Fixed Cost Solution',
+      features: [
+        "Timely Delivery",
+        "Within Budget",
+        "Complete scoping & planning"
+      ],
+      buttonText: 'Request Quote'
+    }
+  ];
+
+  const [current, setCurrent] = useState(0);
+  const getPositionClass = (index) => {
+    if (index === current) return 'z-20 scale-110';
+    if ((index + 1) % 3 === current) return 'translate-x-[-120%] opacity-70 scale-95';
+    if ((index + 2) % 3 === current) return 'translate-x-[120%] opacity-70 scale-95';
+    return 'hidden';
+  };
 
   return (
     <div className="font-sans text-gray-800 bg-black">
       <ToastContainer />
       {/* Hero Section */}
-      <header className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white" 
-       style={{
-        // backgroundImage: `url(https://i0.wp.com/eastgate-software.com/wp-content/uploads/2024/05/Custom-Software-Development-1024x538-1.webp?fit=1024%2C538&ssl=1)`,
-        backgroundSize:'cover'
-     }}
-     >
+      <header className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white"
+        style={{
+          // backgroundImage: `url(https://i0.wp.com/eastgate-software.com/wp-content/uploads/2024/05/Custom-Software-Development-1024x538-1.webp?fit=1024%2C538&ssl=1)`,
+          backgroundSize: 'cover'
+        }}
+      >
         <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="container mx-auto px-4 py-24 relative z-10">  
+        <div className="container mx-auto px-4 py-24 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight  mb-6">Custom Software Development Services</h1>
             <p className="text-xl mb-8">Elevate your business with robust custom software services, designed to unleash innovation and drive unparalleled growth.</p>
             <div className="flex flex-wrap gap-4">
-            <a href="/contactus" className="inline-block">
-  <button
-    className="rounded-md px-6 py-3 font-bold flex items-center"
-    style={{ backgroundColor: primaryColor }}
-  >
-    Get Started <ArrowRight className="ml-2" size={18} />
-  </button>
-</a>
-             
+              <Link href="/contactus" className="inline-block">
+                <span
+                  className="rounded-md px-6 py-3 font-bold flex items-center"
+                  style={{ backgroundColor: primaryColor }}
+                >
+                  Get Started <ArrowRight className="ml-2" size={18} />
+                </span>
+              </Link>
+
             </div>
           </div>
         </div>
@@ -477,211 +478,211 @@ const toastConfig = {
           </div>
         </div>
       </section>
-      
-{/* Why Choose Us Section */}
 
-        <section className="py-16 text-white bg-[#0b0b0b]">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-12">
-      <h2 className="text-4xl font-bold mb-4">
-       Why Choose <span className="text-[#ff5722] text-3xl md:text-4xl">Brandsmashers Tech</span> As Your Custom Software Solutions Partner 
-      </h2>
-      <p className="text-lg max-w-3xl mx-auto text-gray-400">
-        At Brandsmashers Tech, we combine deep technical expertise with a user-first mindset to deliver tailored software solutions that align perfectly with your business goals. From concept to deployment, we ensure transparency, innovation, and on-time delivery, making us the trusted partner for companies seeking impactful digital transformation.
-      </p>
-    </div>
+      {/* Why Choose Us Section */}
 
-      {/* Industries Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {whyChooseUs.map((reason, index) => (
-            <div
-              key={index}
-              className="bg-gray-900 rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg border border-gray-800"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              {/* Colored top bar */}
-              <div className={`h-1 w-full bg-[#ff5010]`}></div>
-              
-              <div className="p-6">
-                {/* Icon and title */}
-                <div className="flex items-center mb-4">
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mr-4 transition-colors duration-300 ${
-                    hoveredIndex === index ? "bg-[#ff5010] text-white" : "bg-[#ff5010] bg-opacity-20 text-[#ff5010]"
-                  }`}>
-                    {reason.icon && (<reason.icon className="w-6 h-6" />)}
+      <section className="py-16 text-white bg-[#0b0b0b]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">
+              Why Choose <span className="text-[#ff5722] text-3xl md:text-4xl">Brandsmashers Tech</span> As Your Custom Software Solutions Partner
+            </h2>
+            <p className="text-lg max-w-3xl mx-auto text-gray-400">
+              At Brandsmashers Tech, we combine deep technical expertise with a user-first mindset to deliver tailored software solutions that align perfectly with your business goals. From concept to deployment, we ensure transparency, innovation, and on-time delivery, making us the trusted partner for companies seeking impactful digital transformation.
+            </p>
+          </div>
+
+          {/* Industries Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {whyChooseUs.map((reason, index) => (
+              <div
+                key={index}
+                className="bg-gray-900 rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg border border-gray-800"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                {/* Colored top bar */}
+                <div className={`h-1 w-full bg-[#ff5010]`}></div>
+
+                <div className="p-6">
+                  {/* Icon and title */}
+                  <div className="flex items-center mb-4">
+                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center mr-4 transition-colors duration-300 ${hoveredIndex === index ? "bg-[#ff5010] text-white" : "bg-[#ff5010] bg-opacity-20 text-[#ff5010]"
+                      }`}>
+                      {reason.icon && (<reason.icon className="w-6 h-6" />)}
+                    </div>
+                    <h3 className="font-bold text-lg text-white">{reason.title}</h3>
                   </div>
-                  <h3 className="font-bold text-lg text-white">{reason.title}</h3>
+
+                  {/* Description */}
+                  <p className="text-gray-300">{reason.description}</p>
+
+                  {/* Learn more link */}
+                  <a
+  href="#"
+  className={`mt-4 inline-flex items-center text-sm font-medium transition-colors duration-300 ${
+    hoveredIndex === index ? "text-[#ff5010]" : "text-gray-400"
+  }`}
+>
+  Learn more
+  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+  </svg>
+</a>
+
                 </div>
-                
-                {/* Description */}
-                <p className="text-gray-300">{reason.description}</p>
-                
-                {/* Learn more link */}
-                <a 
-                  href="#" 
-                  className={`mt-4 inline-flex items-center text-sm font-medium transition-colors duration-300 ${
-                    hoveredIndex === index ? "text-[#ff5010]" : "text-gray-400"
-                  }`}
-                >
-                  Learn more
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+
+
         </div>
+      </section>
 
-
-   
-  </div>
-</section>
-    
 
       {/* Hire Developer Section */}
-      
-<section className="py-16 px-6 md:px-12 bg-white text-black">
-              <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                    Hire a <span className="text-[#ff5010]">Custom Software Development</span> Tailored to Your Business Needs
-                  </h2>
-                  <p className="max-w-3xl mx-auto text-lg text-gray-600">
-                    Boost your online presence with expert digital marketers who understand your goals. Whether it's SEO, social media, paid ads, or full-scale strategy — hire dedicated professionals on flexible terms with complete transparency and security.
-                  </p>
+
+      <section className="py-16 px-6 md:px-12 bg-white text-black">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Hire a <span className="text-[#ff5010]">Custom Software Development</span> Tailored to Your Business Needs
+            </h2>
+            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+              Boost your online presence with expert digital marketers who understand your goals. Whether it&apos;s SEO, social media, paid ads, or full-scale strategy — hire dedicated professionals on flexible terms with complete transparency and security.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                title: "Simple & Transparent Pricing",
+                icon: CheckCircle,
+                description: "Clear pricing structure with no hidden costs. Pay only for what you need."
+              },
+              {
+                title: "Fully Signed NDA",
+                icon: FileText,
+                description: "Your business information stays secure with legally binding non-disclosure agreements."
+              },
+              {
+                title: "Easy Exit Policy",
+                icon: ArrowRight,
+                description: "Flexible engagement models with straightforward exit terms if needed."
+              }
+            ].map((item, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div className="flex items-center mb-4">
+                  <item.icon className="text-[#ff5010] mr-3" size={24} />
+                  <h3 className="text-lg font-bold text-black">{item.title}</h3>
                 </div>
-      
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                  {[
-                    { 
-                      title: "Simple & Transparent Pricing", 
-                      icon: CheckCircle,
-                      description: "Clear pricing structure with no hidden costs. Pay only for what you need."
-                    },
-                    { 
-                      title: "Fully Signed NDA", 
-                      icon: FileText,
-                      description: "Your business information stays secure with legally binding non-disclosure agreements."
-                    },
-                    { 
-                      title: "Easy Exit Policy", 
-                      icon: ArrowRight,
-                      description: "Flexible engagement models with straightforward exit terms if needed."
-                    }
-                  ].map((item, index) => (
-                    <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                      <div className="flex items-center mb-4">
-                        <item.icon className="text-[#ff5010] mr-3" size={24} />
-                        <h3 className="text-lg font-bold text-black">{item.title}</h3>
-                      </div>
-                      <p className="text-gray-600">{item.description}</p>
-                    </div>
-                  ))}
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <button
+              onClick={() => setShowContactForm(true)}
+              className="inline-block bg-[#ff5010] hover:bg-[#ff672b] text-white font-medium px-8 py-3 rounded-md transition"
+            >
+              Schedule a Call
+            </button>
+          </div>
+        </div>
+
+        {/* Contact Form Modal */}
+        {showContactForm && (
+          <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+            <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md relative">
+              <button
+                onClick={() => setShowContactForm(false)}
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+              >
+                <X size={24} />
+              </button>
+
+              <h3 className="text-2xl font-bold mb-6 text-center text-black">Schedule a Call</h3>
+
+              <form onSubmit={handleServiceFormSubmit}>
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={serviceForm.name}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Your Name"
+                    required
+                  />
                 </div>
-      
-                <div className="text-center">
-                  <button 
-                    onClick={() => setShowContactForm(true)}
-                    className="inline-block bg-[#ff5010] hover:bg-[#ff672b] text-white font-medium px-8 py-3 rounded-md transition"
+
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={serviceForm.email}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={serviceForm.phone}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="+1 (123) 456-7890"
+                    required
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+                    How can we help you? (Optional)
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={serviceForm.message}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                    placeholder="Tell us about your digital marketing needs..."
+                  ></textarea>
+                </div>
+
+                <div className="flex items-center justify-center">
+                  <button
+                    type="submit"
+                    className="bg-[#ff5010] hover:bg-[#ff672b] text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline w-full"
                   >
-                    Schedule a Call
+                    Submit
                   </button>
                 </div>
-              </div>
-      
-              {/* Contact Form Modal */}
-              {showContactForm && (
-                <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-                  <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md relative">
-                    <button 
-                      onClick={() => setShowContactForm(false)}
-                      className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-                    >
-                      <X size={24} />
-                    </button>
-                    
-                    <h3 className="text-2xl font-bold mb-6 text-center text-black">Schedule a Call</h3>
-                    
-                     <form onSubmit={handleServiceFormSubmit}>
-                      <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                          Full Name
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          value={serviceForm.name}
-                          onChange={handleServiceFormChange}
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                          placeholder="Your Name"
-                          required
-                        />
-                      </div>
-                      
-                      <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                          Email
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          value={serviceForm.email}
-                          onChange={handleServiceFormChange}
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                          placeholder="your@email.com"
-                          required
-                        />
-                      </div>
-                      
-                      <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
-                          Phone Number
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          value={serviceForm.phone}
-                          onChange={handleServiceFormChange}
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                          placeholder="+1 (123) 456-7890"
-                          required
-                        />
-                      </div>
-                      
-                      <div className="mb-6">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                          How can we help you? (Optional)
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          value={serviceForm.message}
-                          onChange={handleServiceFormChange}
-                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
-                          placeholder="Tell us about your digital marketing needs..."
-                        ></textarea>
-                      </div>
-                      
-                      <div className="flex items-center justify-center">
-                        <button
-                          type="submit"
-                          className="bg-[#ff5010] hover:bg-[#ff672b] text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline w-full"
-                        >
-                          Submit
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              )}
-            </section>
-      
-     {/* Process Section */}
+              </form>
+            </div>
+          </div>
+        )}
+      </section>
+
+      {/* Process Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -690,12 +691,12 @@ const toastConfig = {
               Here is a streamlined overview of our custom web app development process.
             </p>
           </div>
-          
+
           <div className="max-w-5xl mx-auto">
             <div className="relative">
               {/* Process timeline line */}
               <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-300 transform -translate-x-1/2"></div>
-              
+
               {/* Process steps */}
               {process.map((step, index) => (
                 <div key={index} className="relative mb-10 ">
@@ -706,12 +707,12 @@ const toastConfig = {
                         <step.icon size={20} style={{ color: "#ff5010" }} />
                       </div>
                     </div>
-                    
+
                     {/* Step number for mobile */}
                     <div className="md:hidden w-12 h-12 rounded-full bg-white border-4 border-gray-300 flex items-center justify-center mb-4">
-                      <step.icon size={20} style={{ color: "#ff5010" }} /> 
+                      <step.icon size={20} style={{ color: "#ff5010" }} />
                     </div>
-                    
+
                     {/* Content box */}
                     <div className={`w-full md:w-5/12 p-6 bg-white rounded-lg shadow-lg border border-gray-100 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
                       <div className="flex items-center mb-3">
@@ -727,11 +728,11 @@ const toastConfig = {
           </div>
         </div>
       </section>
-     
 
-      
-     {/* Solution Metrics Section */}
-      <CustomSoftwareStats/>
+
+
+      {/* Solution Metrics Section */}
+      <CustomSoftwareStats />
 
       {/* Business Solutions Section */}
       <section className="py-16 bg-white">
@@ -742,7 +743,7 @@ const toastConfig = {
               Our collaborative and transparent approach allows us to deeply understand your vision and craft high-performance solutions that go beyond expectations.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {businessSolutions.map((solution, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition">
@@ -757,8 +758,8 @@ const toastConfig = {
         </div>
       </section>
 
-     
-      
+
+
 
       {/* Case Study Section Placeholder */}
       <section className="py-16 bg-white">
@@ -769,7 +770,7 @@ const toastConfig = {
               Explore how our custom software solutions have transformed businesses across various sectors.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {["Healthcare", "Finance", "E-Commerce"].map((industry) => (
               <div key={industry} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
@@ -779,9 +780,9 @@ const toastConfig = {
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{industry} Solution</h3>
                   <p className="text-gray-600 mb-4">How we helped a {industry.toLowerCase()} company streamline operations and boost efficiency with custom software.</p>
-                  <a 
-                    href="#" 
-                    style={{ color: "#ff5010" }} 
+                  <a
+                    href="#"
+                    style={{ color: "#ff5010" }}
                     className="flex items-center font-medium hover:underline"
                   >
                     View Case Study
@@ -800,11 +801,11 @@ const toastConfig = {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
           </div>
-          
+
           <div className="max-w-3xl mx-auto">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4 border border-gray-200 rounded-lg overflow-hidden">
-                <button 
+                <button
                   className="w-full flex justify-between items-center p-5 bg-gray-100 text-left"
                   onClick={() => toggleFaq(index)}
                 >
@@ -826,10 +827,10 @@ const toastConfig = {
         </div>
       </section>
 
- 
+
 
       {/* Footer */}
-  
+
     </div>
   );
 }
