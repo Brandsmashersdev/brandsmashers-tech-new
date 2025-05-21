@@ -31,12 +31,10 @@ const DynamicCarousel = ({ heading = {}, title = '', description = '', cardsData
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [cardsPerSlide, setCardsPerSlide] = useState(3);
+  const [totalSlides, setTotalSlides] = useState(1);
+  const [currentCards, setCurrentCards] = useState([]);
 
-  // Ensure the data is valid before proceeding with the component logic
-  if (!Array.isArray(cardsData) || cardsData.length === 0) {
-    return null; // Return null if no cards are available
-  }
-
+  // Function to get responsive cards per slide
   const getCardsPerSlide = () => {
     if (typeof window !== 'undefined') {
       if (window.innerWidth < 768) return 1;
@@ -46,9 +44,7 @@ const DynamicCarousel = ({ heading = {}, title = '', description = '', cardsData
     return 3;
   };
 
-  const totalSlides = Math.ceil(cardsData.length / cardsPerSlide);
-
-  // Handle window resize to adjust the number of cards per slide
+  // Effect for handling window resize
   useEffect(() => {
     const handleResize = () => {
       const newCardsPerSlide = getCardsPerSlide();
@@ -63,7 +59,32 @@ const DynamicCarousel = ({ heading = {}, title = '', description = '', cardsData
     return () => window.removeEventListener('resize', handleResize);
   }, [cardsPerSlide]);
 
-  // Slide logic, now checking conditions inside the useEffect
+  // Effect for updating total slides and current cards whenever dependencies change
+  useEffect(() => {
+    if (!Array.isArray(cardsData) || cardsData.length === 0) {
+      setTotalSlides(1);
+      setCurrentCards([]);
+      return;
+    }
+
+    const newTotalSlides = Math.ceil(cardsData.length / cardsPerSlide);
+    setTotalSlides(newTotalSlides);
+    
+    // Ensure current slide is valid
+    const validCurrentSlide = Math.min(currentSlide, newTotalSlides - 1);
+    if (validCurrentSlide !== currentSlide) {
+      setCurrentSlide(validCurrentSlide);
+    }
+    
+    // Update current cards
+    const newCurrentCards = cardsData.slice(
+      validCurrentSlide * cardsPerSlide,
+      (validCurrentSlide * cardsPerSlide) + cardsPerSlide
+    );
+    setCurrentCards(newCurrentCards);
+  }, [cardsData, cardsPerSlide, currentSlide]);
+
+  // Slide logic
   useEffect(() => {
     if (totalSlides <= 1) return; // No sliding needed if there's only one slide
 
@@ -89,10 +110,10 @@ const DynamicCarousel = ({ heading = {}, title = '', description = '', cardsData
     }
   };
 
-  const currentCards = cardsData.slice(
-    currentSlide * cardsPerSlide,
-    (currentSlide * cardsPerSlide) + cardsPerSlide
-  );
+  // Early return if no cards data
+  if (!Array.isArray(cardsData) || cardsData.length === 0) {
+    return null; // Return null if no cards are available
+  }
 
   return (
     <div className={styles.main_wrapper}>
