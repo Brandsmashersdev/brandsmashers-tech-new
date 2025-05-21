@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FileText } from "lucide-react";
+import { FileText, X } from "lucide-react";
 
 import { ChevronDown, ChevronRight, Code, SmartphoneCharging, Layers, Laptop, Watch, Gamepad, CheckCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';

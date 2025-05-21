@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from 'next/link';  // Add this import statement at the top of your file
+import Image from "next/image";
 
 
 const BlogCarousel = () => {
@@ -201,10 +202,12 @@ const BlogCarousel = () => {
                     {/* Blog image with gradient overlay */}
                     <div className="relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10 z-10"></div>
-                      <img
+                      <Image
                         src={post.image}
                         alt={post.title}
                         className="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110"
+                        height={200}
+                        width={200}
                       />
                       
                       {/* Category badge */}
