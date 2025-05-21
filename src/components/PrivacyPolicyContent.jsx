@@ -129,10 +129,10 @@ export default function PrivacyPolicyContent() {
               </p>
               <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
                 <p className="text-gray-300 mb-2"><strong>Brandsmashers Tech</strong></p>
-                <p className="text-gray-300 mb-2">123 Tech Avenue</p>
-                <p className="text-gray-300 mb-2">San Francisco, CA 94105</p>
-                <p className="text-gray-300 mb-2">Email: privacy@brandsmashers.tech</p>
-                <p className="text-gray-300">Phone: (555) 123-4567</p>
+                {/* <p className="text-gray-300 mb-2">123 Tech Avenue</p> */}
+                <p className="text-gray-300 mb-2">Bhopal, India</p>
+                <p className="text-gray-300 mb-2">Email: info@brandsmashers.com</p>
+                <p className="text-gray-300">Phone: 7000863918</p>
               </div>
             </section>
           </div>
