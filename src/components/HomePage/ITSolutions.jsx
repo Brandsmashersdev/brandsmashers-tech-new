@@ -4,6 +4,7 @@ import Image from 'next/image'; // Ensure you import Next.js Image
 
 const ITSolutions = () => {
   const [isVisible, setIsVisible] = useState(false);
+   const [isMounted, setIsMounted] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -70,11 +71,14 @@ const ITSolutions = () => {
       link: "/services/customService"
     }
   ];
+    if (!isMounted) {
+    return null; // Or you could return a loading spinner if you'd like
+  }
 
   return (
     <div ref={sectionRef} className="min-h-screen bg-gray-900 text-white relative overflow-hidden py-16 md:py-24">
       {/* Background elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+  <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
           <svg className="absolute left-0 top-0 h-full w-full" preserveAspectRatio="none" viewBox="0 0 100 100">
             <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="#111827" />
@@ -85,7 +89,24 @@ const ITSolutions = () => {
         <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-gradient-to-bl from-[#ff5010]/20 to-transparent blur-3xl"></div>
         <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-gradient-to-tr from-[#ff5010]/15 to-transparent blur-3xl"></div>
       </div>
-
+      <div className="container mx-auto px-4 relative z-10">
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <span className="inline-block px-4 py-1 bg-[#ff5010]/10 text-[#ff5010] font-medium rounded-full text-sm mb-4">
+            INNOVATIVE SOLUTIONS
+          </span>
+          <h2 className="text-4xl md:text-5xl lg:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+            Software Development & Engineering 
+            <span className="text-[#ff5010]">Services</span>
+          </h2>
+          <div className="flex justify-center space-x-2 mb-6">
+            <div className="w-2 h-2 rounded-full bg-[#ff5010]"></div>
+            <div className="w-12 h-2 rounded-full bg-[#ff5010]"></div>
+            <div className="w-2 h-2 rounded-full bg-[#ff5010]"></div>
+          </div>
+          <p className="max-w-2xl mx-auto text-gray-300 text-lg ">
+            Build innovative, scalable, and user-centric digital solutions with our end-to-end Software Development & Engineering Services. From custom software and mobile apps to AI/ML, UI/UX, and digital marketing—we turn your ideas into powerful products.
+          </p>
+        </div>
       {/* Desktop Grid View */}
       <div className={`hidden lg:grid grid-cols-4 gap-6 mb-20 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         {solutions.map((item, index) => (
@@ -165,6 +186,120 @@ const ITSolutions = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 mb-20">
+          {/* Content Block */}
+          <div className={`w-full lg:w-1/2 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <div className="max-w-xl mx-auto lg:mx-0">
+              <span className="inline-block px-3 py-1 bg-[#ff5010]/10 text-[#ff5010] rounded-md text-sm font-medium mb-4">WHY CHOOSE US</span>
+              
+              <h3 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
+              Cut Through the Noise 
+
+                <span className="text-[#ff5010] block mt-1">Connect Only with the Top 1% of Qualified Candidates</span>
+              </h3>
+              
+              <div className="space-y-6">
+                <p className="text-gray-300 leading-relaxed">
+                Stop wasting time on endless interviews and underqualified profiles. With our expert IT Staff Augmentation services, we match you with pre-vetted, highly skilled professionals who are ready to make an impact from day one. Whether you are looking to hire remote developers from India or expand your in-house team with niche tech talent, we ensure you engage with only the best — faster, smarter, and without the hiring headaches.
+
+
+
+                </p>
+                
+                {/* <p className="text-gray-300 leading-relaxed">
+                  From concept to deployment, we embrace a collaborative approach that ensures your vision is realized with precision and purpose, creating software that not only meets your current needs but scales with your future ambitions.
+                </p> */}
+                
+                {/* Feature Points */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
+                  {[
+                    " Share Your Talent Requirements", 
+                    "Receive Handpicked CVs", 
+                    "Interview the Best-Fit Engineers", 
+                    "Smooth Documentation & Compliance",
+                    "Onboard & Get Started"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#ff5010]/10 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-[#ff5010]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-100 font-medium">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* CTA Buttons */}
+              {/* <div className="mt-8 flex flex-wrap gap-4">
+                <button className="group relative overflow-hidden px-6 py-3 bg-[#ff5010] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                  <span className="relative z-10">Start Your Project</span>
+                  <span className="absolute inset-0 bg-black/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </button>
+                
+                <button className="group px-6 py-3 border-2 border-gray-600 hover:border-[#ff5010] text-gray-300 hover:text-[#ff5010] font-semibold rounded-lg transition-all duration-300">
+                  <span>Our Process</span>
+                </button>
+              </div> */}
+            </div>
+          </div>
+          
+          {/* Featured Image Block */}
+          <div className={`w-full lg:w-1/2 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            <div className="relative">
+              {/* Decorative Elements */}
+              <div className="absolute -top-6 -right-6 w-24 h-24 border-2 border-[#ff5010]/30 rounded-xl -rotate-6"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 border-2 border-[#ff5010]/20 rounded-xl rotate-12"></div>
+              
+              {/* Main Image */}
+              <div className="relative rounded-xl overflow-hidden border-4 border-gray-800 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#ff5010]/20 to-transparent opacity-60 mix-blend-overlay"></div>
+                <image 
+                  src="/digital.png" 
+                  alt="Digital transformation services"
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Stats Overlay */}
+                {/* <div className="absolute bottom-6 right-6 bg-black/80 backdrop-blur-sm p-4 rounded-xl border border-gray-700">
+                  <div className="flex space-x-6">
+                    <div className="text-center">
+                      <h4 className="text-[#ff5010] text-3xl font-bold">98%</h4>
+                      <p className="text-gray-300 text-xs">Client Retention</p>
+                    </div>
+                    <div className="text-center">
+                      <h4 className="text-[#ff5010] text-3xl font-bold">350+</h4>
+                      <p className="text-gray-300 text-xs">Projects</p>
+                    </div>
+                  </div>
+                </div> */}
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Stats Section */}
+        <div className={`transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { value: "100+", label: "Clients" },
+              { value: "250+", label: "Projects Completed" },
+              { value: "7+", label: "Years of Excellence" },
+              { value: "50+", label: "Tech Specialists" }
+            ].map((stat, index) => (
+              <div 
+                key={index} 
+                className="group relative overflow-hidden bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-[#ff5010]/50 transition-all duration-300"
+              >
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#ff5010]/0 via-[#ff5010] to-[#ff5010]/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                <h4 className="text-[#ff5010] text-3xl md:text-4xl font-bold mb-2">{stat.value}</h4>
+                <p className="text-gray-300">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
