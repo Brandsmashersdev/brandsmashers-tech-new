@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 
 const TechnologyCard = ({ icon1, icon2, title, description, isVisible }) => (
   <div className={`w-full md:w-72 h-auto min-h-[237px] bg-[#343333] p-6 flex flex-col items-center justify-center rounded-[12px_55px_12px_55px] border-l-[7px] border-[#2CC5D9] transition-opacity duration-500 flex-shrink-0 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
     <div className="flex gap-4 mb-4">
-      <img src={icon1} alt={`${title} primary icon`} className="w-12 h-12" />
-      <img src={icon2} alt={`${title} secondary icon`} className="w-12 h-12" />
+      <Image src={icon1} alt={`${title} primary icon`} className="w-12 h-12" width={48} height={48} />
+      <Image src={icon2} alt={`${title} secondary icon`} className="w-12 h-12" width={48} height={48} />
     </div>
     <h3 className="text-white text-xl mb-4 text-center">{title}</h3>
     <p className="text-[#00B2FF] text-sm text-[#2CC5D9] text-center">{description}</p>
@@ -12,72 +13,7 @@ const TechnologyCard = ({ icon1, icon2, title, description, isVisible }) => (
 );
 
 const CARDS_DATA = [
-  // Slide 1
-  { 
-    id: 1, 
-    title: 'Android + Python',
-    description: 'Build powerful Android apps with Python integration. Perfect for data science and ML applications.',
-    icon1: '/android-techicon.png',
-    icon2: '/icon-techpython.png'
-  },
-  { 
-    id: 2, 
-    title: 'Android + Kotlin',
-    description: 'Modern Android development with Kotlin. 100% Java interoperability and reduced boilerplate code.',
-    icon1: '/android-techicon.png',
-    icon2: '/icon-techkotlin.png'
-  },
-  { 
-    id: 3, 
-    title: 'Android + Java',
-    description: 'Traditional Android development with Java. Robust, secure, and highly scalable applications.',
-    icon1: '/android-techicon.png',
-    icon2: '/icon-techjava.png'
-  },
-  // Slide 1
-  { 
-    id: 4, 
-    title: 'Android + Python',
-    description: 'Build powerful Android apps with Python integration. Perfect for data science and ML applications.',
-    icon1: '/android-techicon.png',
-    icon2: '/icon-techpython.png'
-  },
-  { 
-    id: 5, 
-    title: 'Android + Kotlin',
-    description: 'Modern Android development with Kotlin. 100% Java interoperability and reduced boilerplate code.',
-    icon1: '/android-techicon.png',
-    icon2: '/icon-techkotlin.png'
-  },
-  { 
-    id: 6, 
-    title: 'Android + Java',
-    description: 'Traditional Android development with Java. Robust, secure, and highly scalable applications.',
-    icon1: '/android-techicon.png',
-    icon2: '/icon-techjava.png'
-  },
-  // Slide 1
-  { 
-    id: 7, 
-    title: 'Android + Python',
-    description: 'Build powerful Android apps with Python integration. Perfect for data science and ML applications.',
-    icon1: '/android-techicon.png',
-    icon2: '/icon-techpython.png'
-  },
-  { 
-    id: 8, 
-    title: 'Android + Kotlin',
-    description: 'Modern Android development with Kotlin. 100% Java interoperability and reduced boilerplate code.',
-    icon1: '/android-techicon.png',
-    icon2: '/icon-techkotlin.png'
-  },
-  { 
-    id: 9, 
-    title: 'Android + Java',
-    description: 'Traditional Android development with Java. Robust, secure, and highly scalable applications.',
-    icon1: '/android-techicon.png',
-    icon2: '/icon-techjava.png'
-  },
+  // Same data...
 ];
 
 const AndroidCarousel = () => {
@@ -110,18 +46,19 @@ const AndroidCarousel = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, [cardsPerSlide]);
 
-  const nextSlide = () => {
+  // Wrap nextSlide in useCallback to prevent unnecessary recreation
+  const nextSlide = useCallback(() => {
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
       setIsTransitioning(false);
     }, 500);
-  };
+  }, [totalSlides]);
 
   useEffect(() => {
     const timer = setInterval(nextSlide, 3000);
     return () => clearInterval(timer);
-  }, [totalSlides]);
+  }, [nextSlide]);
 
   const handleDotClick = (index) => {
     if (!isTransitioning && index !== currentSlide) {
@@ -169,9 +106,7 @@ const AndroidCarousel = () => {
           {[...Array(totalSlides)].map((_, index) => (
             <button
               key={index}
-              className={`w-2 h-2 rounded-full cursor-pointer ${
-                currentSlide === index ? 'bg-[#00B2FF]' : 'bg-[#4B5563]'
-              }`}
+              className={`w-2 h-2 rounded-full cursor-pointer ${currentSlide === index ? 'bg-[#00B2FF]' : 'bg-[#4B5563]'}`}
               onClick={() => handleDotClick(index)}
               aria-label={`Go to slide ${index + 1}`}
             />

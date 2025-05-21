@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const BrandsmashersGrid = () => {
   return (
@@ -15,14 +16,14 @@ const BrandsmashersGrid = () => {
         </div>
 
         {/* Freestyle Grid Layout */}
-        <div className=" w-full">
+        <div className="w-full">
           {/* Top Row - 3 cards */}
           <div className="flex flex-col md:flex-row gap-3 mb-4">
             {/* Tailored Solutions */}
             <div className="md:w-1/3 w-full rounded-md overflow-hidden" style={{ background: '#FEE2E1' }}>
               <div className="p-8">
-                <div className="flex gap-4 mb-3">
-                  <img src="homeicon.png" alt="Home icon" className="w-10 h-10" />
+                <div className="flex gap-4 mb-3 items-center">
+                  <Image src="/homeicon.png" alt="Home icon" width={40} height={40} />
                   <h3 className="font-semibold text-md text-black">Tailored Solutions</h3>
                 </div>
                 <p className="text-sm italic text-black">
@@ -34,8 +35,8 @@ const BrandsmashersGrid = () => {
             {/* Comprehensive IT Services */}
             <div className="md:w-1/3 w-full rounded-md overflow-hidden" style={{ background: '#DCFCE7' }}>
               <div className="p-8">
-                <div className="flex gap-4 mb-3">
-                  <img src="Servicesicon.png" alt="Services icon" className="w-10 h-10" />
+                <div className="flex gap-4 mb-3 items-center">
+                  <Image src="/Servicesicon.png" alt="Services icon" width={40} height={40} />
                   <h3 className="font-semibold text-md text-black">Comprehensive IT Services</h3>
                 </div>
                 <p className="text-sm italic text-black">
@@ -45,10 +46,10 @@ const BrandsmashersGrid = () => {
             </div>
 
             {/* Client-Centric Focus */}
-            <div className="md:w-1/3 w-fullrounded-md overflow-hidden" style={{ background: '#DBE9FE' }}>
+            <div className="md:w-1/3 w-full rounded-md overflow-hidden" style={{ background: '#DBE9FE' }}>
               <div className="p-8">
-                <div className="flex gap-4 mb-3">
-                  <img src="Clienticon.png" alt="Client icon" className="w-10 h-10" />
+                <div className="flex gap-4 mb-3 items-center">
+                  <Image src="/Clienticon.png" alt="Client icon" width={40} height={40} />
                   <h3 className="font-semibold text-md text-black">Client-Centric Focus</h3>
                 </div>
                 <p className="text-sm italic text-black">
@@ -63,8 +64,8 @@ const BrandsmashersGrid = () => {
             {/* Innovative Approach */}
             <div className="md:w-5/12 w-full rounded-md overflow-hidden" style={{ background: '#FEF9C3' }}>
               <div className="p-8">
-                <div className="flex gap-4 mb-3">
-                  <img src="Innovationicon.png" alt="Innovation icon" className="w-10 h-10" />
+                <div className="flex gap-4 mb-3 items-center">
+                  <Image src="/Innovationicon.png" alt="Innovation icon" width={40} height={40} />
                   <h3 className="font-semibold text-md text-black">Innovative Approach</h3>
                 </div>
                 <p className="text-sm italic text-black">
@@ -76,8 +77,8 @@ const BrandsmashersGrid = () => {
             {/* Skilled Team */}
             <div className="md:w-5/12 w-full rounded-md overflow-hidden" style={{ background: '#B4E9FF' }}>
               <div className="p-8">
-                <div className="flex gap-4 mb-3">
-                  <img src="Teamicon.png" alt="Team icon" className="w-10 h-10" />
+                <div className="flex gap-4 mb-3 items-center">
+                  <Image src="/Teamicon.png" alt="Team icon" width={40} height={40} />
                   <h3 className="font-semibold text-md text-black">Skilled Team</h3>
                 </div>
                 <p className="text-sm italic text-black">
@@ -92,8 +93,8 @@ const BrandsmashersGrid = () => {
             {/* Proven Experience */}
             <div className="md:w-6/12 w-full rounded-md overflow-hidden" style={{ background: '#F3E8FF' }}>
               <div className="p-8">
-                <div className="flex gap-4 mb-3">
-                  <img src="Experienceicon.png" alt="Experience icon" className="w-10 h-10" />
+                <div className="flex gap-4 mb-3 items-center">
+                  <Image src="/Experienceicon.png" alt="Experience icon" width={40} height={40} />
                   <h3 className="font-semibold text-md text-black">Proven Experience</h3>
                 </div>
                 <p className="text-sm italic text-black">

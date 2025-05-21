@@ -567,7 +567,7 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "Angular Application Developers",
-        afterHighlight: " from India with Expertise in Cross-Platform Development"
+        afterHighlight: "from India with Expertise in Cross-Platform Development "
       },
       description: "Build dynamic, high-performance web applications with our skilled AngularJS developers, ensuring scalability and smooth user experiences.",
       cardsData: [
@@ -1505,7 +1505,7 @@ const technologyData = {
   "php-developer": {
     title: "Hire Best PHP Developer from India",
     description:" Looking for a skilled PHP developer from India? Your search ends here At Brandsmashers Tech, we specialize in providing top-tier PHP development services to help you build dynamic, scalable, and secure web applications. Our expert PHP developers use the latest frameworks and technologies to create high-performance, user-friendly solutions tailored to your business needs. Hire PHP developers from India today and transform your web development with robust and efficient PHP solutions",
-    buttonText: "Hire Dotnet Developer",
+    buttonText: "Hire php Developer",
     services: {
       mainTitle: "Hire Skilled PHP Developers to Drive Your Business Growth",
       // highlightedWord: "App Developers",
@@ -1622,8 +1622,531 @@ const technologyData = {
           icon2: '/icon-techcloud.png'
         }
       ]
+    },
+  },
+  "wordpress": {
+    title: "Hire Best Wordpress Developer from India",
+    description:"Unlock the Power of WordPress with Expert Developers from India!At Brandsmashers Tech, we bring your vision to life with cutting-edge WordPress development services. Whether you need a custom website, theme development, plugin integration, or a complete eCommerce solution, our skilled WordPress developers craft seamless, high-performing, and SEO-friendly websites tailored to your business goals.Hire dedicated WordPress developers from India today and experience innovation, scalability, and excellence in web development! ",
+    buttonText: "Hire Dotnet Developer",
+    services: {
+      mainTitle: "Hire Skilled WordPress Developers to Elevate Your Online Presence!",
+      // highlightedWord: "App Developers",
+      subTitle:
+        "At Brandsmashers Tech, our experienced WordPress developers specialize in crafting feature-rich, responsive, and user-friendly websites to help your business thrive online.",
+      services: [
+        {
+          title: "Custom WordPress Website Development",
+          description:
+            " Hire our expert WordPress developers to build a unique and high-performing website from scratch.Our developers specialize in creating fully customized, SEO-friendly WordPress websites tailored to your business needs.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "WordPress Theme Development & Customization",
+          description:
+            "Get a visually stunning and fully responsive WordPress theme designed for your brand.We build and customize themes to match your vision, ensuring a modern and professional web presence.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "WordPress Plugin Development & Integration",
+          description:
+            "Enhance your website’s functionality with custom plugin development.Our experts create and integrate powerful plugins that improve performance, security, and user engagement.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "WooCommerce Development for Online Stores",
+          description:
+            "Launch and grow your eCommerce business with a feature-rich WooCommerce website.We develop secure, scalable, and fully optimized online stores that boost sales and improve user experience.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "WordPress Speed & Performance Optimization",
+          description:
+            "Improve website loading speed and overall performance with our optimization services.We fine-tune your WordPress site for fast loading, better user experience, and higher search engine rankings.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "WordPress Security & Maintenance Services",
+          description:
+            "Keep your website safe, updated, and running smoothly with our expert maintenance services.We provide regular updates, security audits, and 24/7 support to ensure your site is secure and up-to-date.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+      ],
+    },
+          carousel: {
+            "heading": {
+              "beforeHighlight": "Hire Remote",
+              "highlight": " Programmatic Developers ",
+              "afterHighlight": "from India – Automate, Optimize & Scale Your Business"
+            },
+          
+            "description": "Get top programmatic developers to build intelligent, data-driven automation solutions for your business. Leverage custom scripts, API integrations, and workflow automation to enhance efficiency, reduce manual effort, and scale seamlessly.",
+          
+            "cardsData": [
+              {
+                "id": 1,
+                "title": "Custom Scripting & Automation",
+                "description": "Automate repetitive tasks with custom scripts in Python, JavaScript, and Shell. Enhance efficiency and reduce operational overhead.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techautomation.png"
+              },
+              {
+                "id": 2,
+                "title": "API Development & Integration",
+                "description": "Integrate third-party APIs, create custom RESTful services, and automate data exchanges between applications.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techapi.png"
+              },
+              {
+                "id": 3,
+                "title": "Web Scraping & Data Extraction",
+                "description": "Extract valuable insights from the web using advanced web scraping techniques and structured data parsing.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techscraping.png"
+              },
+              {
+                "id": 4,
+                "title": "Workflow Automation",
+                "description": "Optimize business processes by automating tasks across multiple platforms using Zapier, Integromat, and custom scripts.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techworkflow.png"
+              },
+              {
+                "id": 5,
+                "title": "Cloud & Serverless Automation",
+                "description": "Deploy automation solutions using AWS Lambda, Google Cloud Functions, and Azure Functions for cost-effective scalability.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techcloud.png"
+              },
+              {
+                "id": 6,
+                "title": "AI & Machine Learning Automation",
+                "description": "Integrate AI-powered automation using NLP, computer vision, and predictive analytics to enhance decision-making.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techai.png"
+              },
+              {
+                "id": 7,
+                "title": "Database Automation & Management",
+                "description": "Automate database tasks such as backups, performance tuning, and real-time data synchronization.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techdatabase.png"
+              },
+              {
+                "id": 8,
+                "title": "AdTech & Programmatic Advertising",
+                "description": "Leverage programmatic advertising automation for campaign optimization, real-time bidding, and audience targeting.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techadtech.png"
+              },
+              {
+                "id": 9,
+                "title": "CI/CD & DevOps Automation",
+                "description": "Implement continuous integration and deployment pipelines with Jenkins, GitHub Actions, and Kubernetes for seamless software delivery.",
+                "icon1": "/icon-techprogrammatic.png",
+                "icon2": "/icon-techdevops.png"
+        },
+      ],
     }
   },
+  "programmatic-developer": {
+    title: "Transform Your Business with Programmatic Advertising Experts",
+    description:"Boost your brand’s reach and drive data-driven results with Brandsmashers Tech — your trusted partner for hiring programmatic advertising experts. Our team connects you with skilled professionals who use AI-powered strategies to automate ad placements, optimize bidding, and maximize ROI. Whether you're scaling an eCommerce store or expanding your SaaS platform, our programmatic advertising experts tailor campaigns to target the right audience at the right time. Don’t let outdated ad strategies hold you back — partner with Brandsmashers Tech to hire programmatic advertising experts for measurable results and sustained growth. ",
+    buttonText: "Programmatic Advertising Experts",
+    services: {
+      mainTitle: "Hire Skilled Programmatic Advertising Experts to Maximize Your ROI",
+      // highlightedWord: "App Developers",
+      subTitle:
+        "At Brandsmashers Tech, our skilled programmatic advertising experts harness the power of automation and data analytics to streamline ad buying and drive campaign performance.",
+      services: [
+        {
+          title: "Custom Programmatic Advertising Strategy",
+          description:
+            "Our experts design tailored programmatic ad strategies aligned with your business goals. From real-time bidding (RTB) to audience segmentation, we create targeted campaigns that boost your brand visibility and ROI.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "AI-Powered Ad Optimization",
+          description:
+            "We leverage AI algorithms to analyze user behavior, optimize ad placements, and adjust bidding strategies in real-time — ensuring your ads reach the most relevant audience with maximum efficiency.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "Cross-Platform Advertising ",
+          description:
+            "Our programmatic advertising experts manage multi-channel campaigns across display, video, mobile, and social media platforms, helping you engage your audience wherever they are online.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "Audience Targeting & Segmentation ",
+          description:
+            "We use advanced data analytics to segment your audience based on demographics, interests, and online behavior, delivering personalized ad experiences that drive higher engagement and conversions.",
+        },
+        {
+          title: "Ad Performance Tracking & Reporting",
+          description:
+            "Stay informed with detailed reports on ad performance, including impressions, click-through rates (CTR), conversion rates, and ROI. Our transparent reporting helps you make data-backed decisions for continuous improvement.",
+        },
+        {
+          title: "Retargeting & Remarketing Campaigns ",
+          description:
+            "Our experts develop retargeting strategies to re-engage users who’ve shown interest in your products or services, boosting your chances of conversion and customer retention.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+      ],
+    },
+    carousel: {
+      "heading": {
+        "beforeHighlight": "Hire Remote",
+        "highlight": " Programmatic Developers ",
+        "afterHighlight": "from India – Automate, Optimize & Scale Your Business"
+      },
+    
+      "description": "Get top programmatic developers to build intelligent, data-driven automation solutions for your business. Leverage custom scripts, API integrations, and workflow automation to enhance efficiency, reduce manual effort, and scale seamlessly.",
+    
+      "cardsData": [
+        {
+          "id": 1,
+          "title": "Custom Scripting & Automation",
+          "description": "Automate repetitive tasks with custom scripts in Python, JavaScript, and Shell. Enhance efficiency and reduce operational overhead.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techautomation.png"
+        },
+        {
+          "id": 2,
+          "title": "API Development & Integration",
+          "description": "Integrate third-party APIs, create custom RESTful services, and automate data exchanges between applications.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techapi.png"
+        },
+        {
+          "id": 3,
+          "title": "Web Scraping & Data Extraction",
+          "description": "Extract valuable insights from the web using advanced web scraping techniques and structured data parsing.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techscraping.png"
+        },
+        {
+          "id": 4,
+          "title": "Workflow Automation",
+          "description": "Optimize business processes by automating tasks across multiple platforms using Zapier, Integromat, and custom scripts.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techworkflow.png"
+        },
+        {
+          "id": 5,
+          "title": "Cloud & Serverless Automation",
+          "description": "Deploy automation solutions using AWS Lambda, Google Cloud Functions, and Azure Functions for cost-effective scalability.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techcloud.png"
+        },
+        {
+          "id": 6,
+          "title": "AI & Machine Learning Automation",
+          "description": "Integrate AI-powered automation using NLP, computer vision, and predictive analytics to enhance decision-making.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techai.png"
+        },
+        {
+          "id": 7,
+          "title": "Database Automation & Management",
+          "description": "Automate database tasks such as backups, performance tuning, and real-time data synchronization.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techdatabase.png"
+        },
+        {
+          "id": 8,
+          "title": "AdTech & Programmatic Advertising",
+          "description": "Leverage programmatic advertising automation for campaign optimization, real-time bidding, and audience targeting.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techadtech.png"
+        },
+        {
+          "id": 9,
+          "title": "CI/CD & DevOps Automation",
+          "description": "Implement continuous integration and deployment pipelines with Jenkins, GitHub Actions, and Kubernetes for seamless software delivery.",
+          "icon1": "/icon-techprogrammatic.png",
+          "icon2": "/icon-techdevops.png"
+        
+        }
+      ]
+    }
+    
+  },
+  "SEO": {
+    title: "Hire Professional SEO Experts For Your Project.",
+    description:"Boost your online presence with Brandsmashers Tech — your go-to partner for hiring remote SEO experts. Our team connects you with top-tier SEO specialists, ensuring you get the expertise to elevate your website's performance. Whether it's a SaaS platform or an eCommerce site, our experts drive organic traffic, optimize site structure, and enhance user experience. From keyword research to technical SEO audits and link-building, we craft strategies tailored to your business goals. Don’t let competitors outrank you — partner with Brandsmashers Tech to hire remote SEO experts for measurable results and long-term growth.",
+    buttonText: "Hire SEO Developer",
+    services: {
+      mainTitle: "Hire Skilled SEO Experts to Drive Your Business Growth.",
+      // highlightedWord: "App Developers",
+      subTitle:
+        "Boost Your Online Presence At Brandsmashers Tech, our skilled SEO experts specialize in driving organic traffic, improving search engine rankings, and enhancing your website's performance.",
+      services: [
+        {
+          title: "Custom SEO Strategy Development",
+          description:
+            " Our SEO experts craft tailored SEO strategies focused on your business goals. From in-depth keyword research to on-page and off-page optimization, we ensure your website ranks higher and reaches the right audience.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "Technical SEO Optimization.",
+          description:
+            "We identify and fix technical SEO issues that may be affecting your site's performance. Our team optimizes site speed, mobile responsiveness, and indexing to ensure search engines can easily crawl and rank your pages",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "Content Optimization & Strategy",
+          description:
+            "Let our SEO experts create and optimize content that not only engages your audience but also aligns with search engine algorithms. We focus on high-quality, keyword-rich content that drives traffic and boosts conversions",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "Link Building & Off-Page SEO",
+          description:
+            "Our SEO specialists build high-quality backlinks and develop effective off-page strategies to increase your website's domain authority and search rankings.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "Local SEO Solutions",
+          description:
+            "Target your local audience with precision. We optimize your website for local search, ensuring your business appears in local listings, Google Maps, and location-based searches.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+        {
+          title: "SEO Audit & Reporting",
+          description:
+            "Our SEO experts conduct comprehensive SEO audits to uncover opportunities for growth. With transparent reporting, we provide actionable insights and track progress to ensure your SEO strategies deliver measurable results.",
+          iconSrc: "/Android-page-img/mobile-icon.svg",
+        },
+      ],
+    },
+    carousel: {
+      "heading": {
+        "beforeHighlight": "Hire Remote",
+        "highlight": "SEO Developers",
+        "afterHighlight": "from India – Optimize, Rank & Grow Your Business"
+      },
+    
+      "description": "Get top SEO developers to build high-performance, search engine-optimized websites and automation solutions. Leverage technical SEO, website speed optimization, structured data, and AI-driven strategies to enhance rankings, drive traffic, and maximize conversions.",
+    
+      "cardsData": [
+        {
+          "id": 1,
+          "title": "Technical SEO & Site Optimization",
+          "description": "Enhance website performance with Core Web Vitals optimization, structured data implementation, and mobile-first indexing strategies.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techoptimization.png"
+        },
+        {
+          "id": 2,
+          "title": "SEO Automation & AI Integration",
+          "description": "Implement AI-driven SEO automation for content generation, keyword research, and rank tracking using machine learning models.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techai.png"
+        },
+        {
+          "id": 3,
+          "title": "Schema Markup & Structured Data",
+          "description": "Boost search visibility with JSON-LD, microdata, and rich snippets to enhance Google rankings and click-through rates.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techschema.png"
+        },
+        {
+          "id": 4,
+          "title": "API & SEO Tool Integrations",
+          "description": "Seamlessly integrate SEO tools like Google Search Console, SEMrush, Ahrefs, and Moz for data-driven insights and automation.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techapi.png"
+        },
+        {
+          "id": 5,
+          "title": "Content Optimization & NLP",
+          "description": "Leverage NLP and AI to create high-quality, search-optimized content that ranks for competitive keywords and improves engagement.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-technlp.png"
+        },
+        {
+          "id": 6,
+          "title": "Page Speed & Core Web Vitals",
+          "description": "Optimize load times with advanced caching, lazy loading, and CDN integration to meet Google's Core Web Vitals standards.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techspeed.png"
+        },
+        {
+          "id": 7,
+          "title": "E-Commerce SEO & Marketplace Optimization",
+          "description": "Boost sales and visibility on platforms like Shopify, WooCommerce, and Amazon with structured SEO strategies.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techcommerce.png"
+        },
+        {
+          "id": 8,
+          "title": "SEO-Optimized Web Development",
+          "description": "Develop websites with clean code, SEO-friendly architecture, and mobile-first design for better indexing and rankings.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techdevelopment.png"
+        },
+        {
+          "id": 9,
+          "title": "Local SEO & Google My Business Optimization",
+          "description": "Improve local search visibility with GMB optimization, citation management, and geo-targeted SEO strategies.",
+          "icon1": "/icon-techseo.png",
+          "icon2": "/icon-techlocal.png"
+        }
+      ]
+    }
+  },
+  wordpress: {
+    "title": "Hire Best WordPress Developer from India",
+    "description": "Unlock the power of WordPress with expert developers from India! At Brandsmashers Tech, we bring your vision to life with cutting-edge WordPress development services. Whether you need a custom website, theme development, plugin integration, or a complete eCommerce solution, our skilled WordPress developers craft seamless, high-performing, and SEO-friendly websites tailored to your business goals. Hire dedicated WordPress developers from India today and experience innovation, scalability, and excellence in web development!",
+    "buttonText": "Hire WordPress Developer",
+    "services": {
+      "mainTitle": "Hire Expert WordPress Developers to Elevate Your Online Presence!",
+      "subTitle": "Build dynamic, scalable, and fully customized WordPress websites with our expert developers, ensuring a high-performance web experience and optimized conversions.",
+      "services": [
+        {
+          "title": "Custom WordPress Website Development",
+          "description": "Hire our expert WordPress developers to build a unique and high-performing website from scratch. Our developers specialize in creating fully customized, SEO-friendly WordPress websites tailored to your business needs.",
+          "iconSrc": "/wordpress-techicon.png"
+        },
+        {
+          "title": "WordPress Theme Development & Customization",
+          "description": "Get a visually stunning and fully responsive WordPress theme designed for your brand. We build and customize themes to match your vision, ensuring a modern and professional web presence.",
+          "iconSrc": "/wordpress-techicon.png"
+        },
+        {
+          "title": "WordPress Plugin Development & Integration",
+          "description": "Enhance your website’s functionality with custom plugin development. Our experts create and integrate powerful plugins that improve performance, security, and user engagement.",
+          "iconSrc": "/wordpress-techicon.png"
+        },
+        {
+          "title": "WooCommerce Development for Online Stores",
+          "description": "Launch and grow your eCommerce business with a feature-rich WooCommerce website. We develop secure, scalable, and fully optimized online stores that boost sales and improve user experience.",
+          "iconSrc": "/wordpress-techicon.png"
+        },
+        {
+          "title": "WordPress Speed & Performance Optimization",
+          "description": "Improve website loading speed and overall performance with our optimization services. We fine-tune your WordPress site for fast loading, better user experience, and higher search engine rankings.",
+          "iconSrc": "/wordpress-techicon.png"
+        },
+        {
+          "title": "WordPress Security & Maintenance Services",
+          "description": "Keep your website safe, updated, and running smoothly with our expert maintenance services. We provide regular updates, security audits, and 24/7 support to ensure your site is secure and up-to-date.",
+          "iconSrc": "/wordpress-techicon.png"
+        }
+      ]
+    },
+    "carousel": {
+      "heading": {
+        "beforeHighlight": "Hire Remote ",
+        "highlight": "WordPress Developers",
+        "afterHighlight": " The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services."
+      },
+      "description": "The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services to create a seamless, high-performance website for your business.",
+      "cardsData": [
+        {
+          "id": 1,
+          "title": "WordPress + ReactJS",
+          "description": "Combine WordPress with ReactJS for high-end web solutions. Our developers build dynamic and highly interactive WordPress websites using the latest JavaScript frameworks.",
+          "icon1": "/icon-techphp.png",
+          "icon2": "/icon-techlaravel.png"
+        },
+        {
+          "id": 2,
+          "title": "WordPress + Ruby On Rails",
+          "description": "Leverage Ruby on Rails with WordPress to develop highly customized plugins and scalable web applications for advanced functionalities and seamless integrations.",
+          "icon1": "/icon-techphp.png",
+          "icon2": "/icon-techsymfony.png"
+        },
+        {
+          "id": 3,
+          "title": "WordPress + HTML",
+          "description": "Utilize HTML to create a fully customized WordPress site with tailored UI/UX. Our developers use HTML, CSS, and JavaScript to enhance design and functionality.",
+          "icon1": "/icon-techphp.png",
+          "icon2": "/icon-techmysql.png"
+        },
+      ]
+    }
+  },
+
+  
+  "shopify": {
+    title: "Hire Best Shopify Developer from India",
+    description:" Looking for a skilled Shopify developer from India? Your search ends here! Hire top Shopify developers from Brandsmashers Tech to build secure, scalable, and high-performing eCommerce stores. Our experts ensure seamless integrations, user-friendly designs, and customized solutions tailored to meet your business needs. Hire Shopify developers today to create a feature-rich online store that drives conversions and growth.",
+    buttonText: "Hire Shopify Developer",
+    services: {
+      mainTitle: "Hire Expert Shopify Developers to Elevate Your eCommerce Business!",
+      
+      subTitle:
+        "Build high-performing, scalable, and fully customized Shopify stores with our skilled developers, ensuring a seamless shopping experience and optimized sales potential.",
+      services: [
+        {
+          title: "Custom Shopify Store Development",
+          description: "Our expert Shopify developers craft unique, user-friendly, and visually appealing Shopify stores tailored to your brand’s identity, ensuring a seamless shopping experience.",
+          iconSrc: "/android-techicon.png"
+        },
+        {
+          title: "Shopify Theme Development & Customization",
+          description: "Enhance your store with custom themes and modifications. Our developers ensure mobile responsiveness, fast loading times, and a visually engaging shopping experience.",
+          iconSrc: "/android-techicon.png"
+        },
+        {
+          title: "Shopify App Development & Integration",
+          description: "Extend your Shopify stores functionality with custom apps and third-party integrations, from payment gateways to CRM solutions, ensuring smooth business operations.",
+          iconSrc: "/android-techicon.png"
+        },
+        {
+          title: "Shopify Migration Services",
+          description: "Seamlessly migrate your existing store from platforms like WooCommerce or Magento to Shopify, ensuring zero data loss, SEO preservation, and enhanced performance.",
+          iconSrc: "/android-techicon.png"
+        },
+        {
+          title: "Performance Optimization & SEO",
+          description: "Boost your Shopify stores speed and visibility with our optimization services. We enhance load times, improve search engine rankings, and drive organic traffic.",
+          iconSrc: "/android-techicon.png"
+        },
+        {
+          title: "Ongoing Shopify Support & Maintenance",
+          description: "Ensure smooth operation with our dedicated Shopify support. We provide regular updates, bug fixes, and feature enhancements to keep your store running efficiently.",
+          iconSrc: "/android-techicon.png"
+        },
+      ],
+    },
+    carousel: {
+      heading: {
+        beforeHighlight: "Hire Remote ",
+        highlight: "Shopify Developers",
+        afterHighlight: " The Shopify platform is a powerful and widely preferred solution for building high-performing eCommerce stores. Explore our range of expert Shopify development services."
+      },
+      description: "The Shopify platform is a powerful and widely preferred solution for building high-performing eCommerce stores. Explore our range of expert Shopify development services to create a seamless, scalable, and sales-driven online store for your business.",
+      cardsData: [
+        {
+          id: 1,
+          title: 'Shopify + Reactjs',
+          description: 'Our dedicated Shopify developers are proficient in the latest themes, apps, and frameworks to deliver high-performing, conversion-optimized online stores',
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techlaravel.png'
+        },
+        {
+          id: 2,
+          title: 'Shopify + Ruby On Rails',
+          description: 'Our dedicated Shopify developers are proficient in the latest themes, apps, and frameworks to deliver high-performing, conversion-optimized online stores.',
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techsymfony.png'
+        },
+        {
+          id: 3,
+          title: 'Shopify + HTML',
+          description: 'Leverage HTML to create a fully customized Shopify store with tailored UI/UX',
+          icon1: '/icon-techphp.png',
+          icon2: '/icon-techmysql.png'
+        },
+        
+      ]
+    }
+  },
+
+
 };
 
 export default function TechnologyDetails() {
@@ -1662,19 +2185,19 @@ export default function TechnologyDetails() {
         buttonText={data.buttonText}
         imageSrc={heroImage}
       />
-      <Stats />
-      <PartnerCompanies />
        <AndroidHero/>
+      <Stats />
+     
        {/* <ServiceGrids/> */}
-       <ServiceGrids serviceData={data.services} />
        {data.carousel && (
-  <DynamicCarousel
-    heading={data.carousel.heading}
-    title={data.carousel.title}
-    description={data.carousel.description}
-    cardsData={data.carousel.cardsData}
-  />
-)}
+         <DynamicCarousel
+         heading={data.carousel.heading}
+         title={data.carousel.title}
+         description={data.carousel.description}
+         cardsData={data.carousel.cardsData}
+         />
+        )}
+        <ServiceGrids serviceData={data.services} />
        {/* <AndroidCarousel/> */}
       <FAQSection/>
       <Footer />

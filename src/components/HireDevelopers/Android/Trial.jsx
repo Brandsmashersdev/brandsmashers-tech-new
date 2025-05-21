@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './TrialForm.module.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Image from 'next/image';  // Import Image from next/image
 
 const TrialForm = ({ closeForm }) => {
   const WEB3FORMS_ACCESS_KEY = '26fd49ac-7bdb-4e08-9818-dbca12903e42';
@@ -99,11 +100,16 @@ const TrialForm = ({ closeForm }) => {
         <button className={styles.closeButton} onClick={closeForm}>×</button>
         <div className={styles.contentWrapper}>
           <div className={styles.leftSection}>
-            <img 
-              src="/robot.png"
-              alt="Robot mascot" 
-              className={styles.robotImage}
-            />
+            <div className={styles.robotImageWrapper}>
+              <Image 
+                src="/robot.png" 
+                alt="Robot mascot" 
+                className={styles.robotImage}
+                width={300}  // Adjust width as needed
+                height={300} // Adjust height as needed
+                layout="intrinsic"  // Ensures aspect ratio is maintained
+              />
+            </div>
           </div>
           
           <div className={styles.rightSection}>

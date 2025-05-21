@@ -1,197 +1,221 @@
-import React from "react";
-import styles from "./footer.module.css";
+'use client';
 
-const Footer = () => {
-  const aboutText =
-    "Founded in 2018, Brandsmashers has quickly grown into a trusted name in the world of software development and staff augmentation. We specialize in delivering tailor-made software solutions that drive business success and help companies scale their operations with top-tier talent. By combining technical expertise with innovative solutions, we help our clients navigate the complexities of digital transformation with ease.";
+import { useEffect, useState } from 'react';
+import Link from 'next/link'; // ✅ Imported Link for client-side routing
+import { 
+  FaArrowUp, 
+  FaFacebookF, 
+  FaInstagram, 
+  FaLinkedinIn, 
+  FaYoutube, 
+  FaCloud,
+  FaLongArrowAltRight,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhone
+} from "react-icons/fa";
 
-  const companyLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/aboutus" },
-    { name: "Service", href: "/services" },
-    { name: "Contact us", href: "/contactus" },
-    { name: "Our Partners", href: "/#our-partners" },
-  ];
+export default function Footer() {
+  const [isVisible, setIsVisible] = useState(false);
 
-  const servicesLinks = [
-    { name: "Web Design", href: "/services/#web-design" },
-    { name: "Desktop app development", href: "/services/#desktop-apps" },
-    { name: "Mobile app development", href: "/services/#mobile-apps" },
-    { name: "UI/UX", href: "/services/#ui-ux" },
-    { name: "AI/ML", href: "/services/#ai-ml" },
-    { name: "Data Drive", href: "/services/#data-dive" },
-    { name: "Digital marketing", href: "/services/#digital-marketing" },
-    { name: "Beyond the Browser", href: "/services/#beyond-the-browser" },
-  ];
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
 
-  const socialLinks = [
-    {
-      name: "LinkedIn",
-      href: "https://in.linkedin.com/company/brandsmashers-tech-pvt-ltd",
-      image: "/linkedin-icon.png",
-      row: 2,
-    },
-    {
-      name: "Facebook",
-      href: "https://www.facebook.com/brandsamsherstechnologies",
-      image: "/facebook-icon.png",
-      row: 1,
-    },
-    {
-      name: "Cloud",
-      href: "https://clutch.co/profile/brandsmashers-tech",
-      image: "/clutch-icon.png",
-      row: 2,
-    },
-    {
-      name: "YouTube",
-      href: "https://youtube.com/@Brandsmashers",
-      image: "/youtube-icon.png",
-      row: 1,
-    },
-    {
-      name: "Instagram",
-      href: "https://www.instagram.com/brandsmashers_technologies/",
-      image: "/instagram-icon.png",
-      row: 2,
-    },
-  ];
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
 
-  const SocialIcons = () => (
-    <div className={styles.socialIcons}>
-      <div className={styles.socialRowFirst}>
-        {socialLinks
-          .filter((social) => social.row === 1)
-          .map((social) => (
-            <a
-              key={social.name}
-              href={social.href}
-              className={styles.socialLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={social.image}
-                alt={social.name}
-                className={styles.socialIcon}
-              />
-            </a>
-          ))}
-      </div>
-      <div className={styles.socialRowSecond}>
-        {socialLinks
-          .filter((social) => social.row === 2)
-          .map((social) => (
-            <a
-              key={social.name}
-              href={social.href}
-              className={styles.socialLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={social.image}
-                alt={social.name}
-                className={styles.socialIcon}
-              />
-            </a>
-          ))}
-      </div>
-    </div>
-  );
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
-    <div className={styles.footerContainer}>
-      <div className={styles.leftTriangle}></div>
-      <div className={styles.rightTriangle}></div>
-      <footer className={styles.footer}>
-        <div className={styles.footerContent}>
-          <div className={styles.mobileLayout}>
-            <div className={styles.footerSection}>
-              <h3 className={styles.sectionTitle}>About Us</h3>
-              <p className={styles.aboutText}>{aboutText}</p>
-            </div>
-
-            <div className={styles.footerSection}>
-              <h3 className={styles.sectionTitle}>Company</h3>
-              <ul className={styles.companyLinks}>
-                {companyLinks.map((link) => (
-                  <li key={link.name}>
-                    <a href={link.href}>{link.name}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className={styles.footerSection}>
-              <h3 className={styles.sectionTitle}>More to explore</h3>
-              <ul className={styles.servicesLinks}>
-                {servicesLinks.map((link) => (
-                  <li key={link.name}>
-                    <a href={link.href}>{link.name}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className={styles.mobileSocial}>
-              <SocialIcons />
-            </div>
-          </div>
-
-          <div className={styles.desktopLayout}>
-            <div className={styles.footerSection}>
-              <h3 className={styles.sectionTitle}>About US</h3>
-              <p className={styles.aboutText}>{aboutText}</p>
-              <SocialIcons />
-            </div>
-
-            <div className={styles.footerSection}>
-              <h3 className={styles.sectionTitle}>Company</h3>
-              <ul className={styles.companyLinks}>
-                {companyLinks.map((link) => (
-                  <li key={link.name}>
-                    <a href={link.href}>{link.name}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className={styles.footerSection}>
-              <h3 className={styles.sectionTitle}>Services</h3>
-              <ul className={styles.servicesLinks}>
-                {servicesLinks.map((link) => (
-                  <li key={link.name}>
-                    <a href={link.href}>{link.name}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className={styles.bottomBar}>
-            <div className={styles.bottomContent}>
-              <div className={styles.bottomLinks}>
-                <a href="/sitemap">SITE MAP</a>
-                <a href="/privacy">PRIVACY</a>
-                <a href="/terms">TERM</a>
+    <footer className="relative bg-gradient-to-b from-black to-black text-white">
+      <div className="absolute top-0 left-0 right-0 h-12 overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-12 bg-gray-900" 
+            style={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 0)"}}></div>
+        <div className="absolute top-0 left-0 right-0 h-12 bg-[#ff5010]" 
+            style={{clipPath: "polygon(0 0, 100% 0, 100% 80%, 0 0)", opacity: 0.15}}></div>
+      </div>
+      
+      <div className="container mx-auto px-6 pt-20 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
+          <div className="md:col-span-2 space-y-6">
+            <h1 className="text-3xl font-bold tracking-tight text-white relative inline-block">
+              Brandsmashers<span className="text-[#ff5010]">Tech</span>
+              <span className="absolute -bottom-1 left-0 w-12 h-1 bg-[#ff5010]"></span>
+            </h1>
+            
+            <p className="text-gray-400 pr-4 mt-6 leading-relaxed">
+              We are a leading Software Development Company delivering excellence and innovation since 2010. Our expertise spans across various technologies and industries.
+            </p>
+            
+            <div className="flex flex-col space-y-3 text-gray-300 pt-2">
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-[#ff5010]">
+                  <FaMapMarkerAlt size={14} />
+                </div>
+                <span>Bhopal, India</span>
               </div>
-              <p className={styles.copyright}>
-                © 2018 <span className={styles.highlight}>Brandsmashers</span>{" "}
-                Tech |
-                <a href="#top" className={styles.backToTop}>
-                  {" "}
-                  BACK TO TOP ↑
-                </a>
-              </p>
+              
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-[#ff5010]">
+                  <FaEnvelope size={14} />
+                </div>
+                <span>info@brandsmashers.com</span>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-[#ff5010]">
+                  <FaPhone size={14} />
+                </div>
+                <span>7000863918</span>
+              </div>
             </div>
-            <div className={styles.tagline}>
-              Your Trusted Development Partner. 10X Faster and smarter
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800 flex items-center">
+              <span className="inline-block mr-2 w-2 h-6 bg-[#ff5010]"></span>
+              Services
+            </h3>
+            <ul className="space-y-3 text-gray-400">
+              {[
+                { name: "Mobile app development", link: "/services/mobileAppDevelopment" },
+                { name: "Digital Marketing services", link: "/services/digitalMarketingServices" },
+                { name: "AIML services", link: "/services/aimlservice" },
+                { name: "Ui/UX Development", link: "/services/uiuxdevelopment" },
+                { name: "Product Development", link: "/services/productDevelopment" },
+                { name: "Custom software development", link: "/services/customService" },
+                { name: "Web development", link: "/services/webdevelopment" }
+              ].map((item) => (
+                <li key={item.name} className="transition-all duration-300 hover:pl-2 hover:text-white">
+                  <a href={item.link} className="inline-flex items-center group">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800 flex items-center">
+              <span className="inline-block mr-2 w-2 h-6 bg-[#ff5010]"></span>
+              Company
+            </h3>
+            <ul className="space-y-3 text-gray-400">
+              {[
+                { name: "Who we are", link: "/whoweare" },
+                { name: "Join our team", link: "/Career" },
+                { name: "Blog", link: "/Blog" }
+              ].map((item) => (
+                <li key={item.name} className="transition-all duration-300 hover:pl-2 hover:text-white">
+                  <a href={item.link} className="inline-flex items-center group">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <div className="mb-8">
+              <h3 className="text-lg font-bold mb-6 pb-2 border-b border-gray-800 flex items-center">
+                <span className="inline-block mr-2 w-2 h-6 bg-[#ff5010]"></span>
+                Industries
+              </h3>
+              <ul className="space-y-3 text-gray-400">
+                <li className="transition-all duration-300 hover:pl-2 hover:text-white group">
+                  {/* ✅ Fixed /Blog link */}
+                  <Link href="/Blog" legacyBehavior>
+                    <a className="inline-flex items-center">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                      Blog
+                    </a>
+                  </Link>
+                </li>
+                <li className="transition-all duration-300 hover:pl-2 hover:text-white group">
+                  {/* ✅ Fixed /technologies link */}
+                  <Link href="/technologies" legacyBehavior>
+                    <a className="inline-flex items-center">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                      Technology
+                    </a>
+                  </Link>
+                </li>
+                <li className="transition-all duration-300 hover:pl-2 hover:text-white group">
+                  {/* ✅ Fixed /contactus link */}
+                  <Link href="/contactus" legacyBehavior>
+                    <a className="inline-flex items-center">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                      Contact us
+                    </a>
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
-  );
-};
 
-export default Footer;
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-gray-500 text-sm mb-4 md:mb-0">
+            © {new Date().getFullYear()} BrandsmashersTech. All rights reserved.
+          </div>
+
+          <div className="flex flex-wrap gap-6 justify-center mb-4 md:mb-0">
+            {[
+              { name: "Sitemap", link: "/sitemap" },
+              { name: "Terms of Service", link: "/termsofservice" },
+              { name: "Privacy Policy", link: "/PrivacyPolicyPage" }
+            ].map((item) => (
+              <a
+                key={item.name}
+                href={item.link}
+                className="text-gray-400 text-sm hover:text-[#ff5010] transition-colors duration-300"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex space-x-3">
+            {[
+              { icon: <FaFacebookF size={16} />, link: "https://www.facebook.com/brandsamsherstechnologies" },
+              { icon: <FaInstagram size={16} />, link: "https://www.instagram.com/brandsmashers_technologies/?hl=en" },
+              { icon: <FaLinkedinIn size={16} />, link: "https://in.linkedin.com/company/brandsmashers-tech-pvt-ltd" },
+              { icon: <FaYoutube size={16} />, link: "https://www.youtube.com/@Brandsmashers" },
+            ].map(({ icon, link }, idx) => (
+              <a
+                key={idx}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:bg-[#ff5010] hover:text-white transform hover:-translate-y-1 transition-all duration-300"
+              >
+                {icon}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.3s ease-in-out;
+        }
+      `}</style>
+    </footer>
+  );
+}

@@ -8,12 +8,11 @@ const WhatWeOffer = () => {
     "Engage with Precision": [
       { title: "Targeted Talent Acquisition", description: "Find candidates who fit both your skills and company culture." },
       { title: "Streamlined Screening Process", description: "Receive only top-quality profiles, saving you time." },
-      { title: "Expert Matchmaking"
-, description: "Get developers matched to your specific project needs." },
+      { title: "Expert Matchmaking", description: "Get developers matched to your specific project needs." },
     ],
     "Global Talent Access": [
       { title: "Worldwide Talent Pool", description: "Access a diverse selection of skilled developers from various regions around the world." },
-      { title: "Local Expertise, Global Reach", description: "Hire professionals fluent in multiple languages.Combine our local market knowledge with a global talent network to find the best fit." },
+      { title: "Local Expertise, Global Reach", description: "Hire professionals fluent in multiple languages. Combine our local market knowledge with a global talent network to find the best fit." },
       { title: "Time-Zone Flexibility", description: "Work with developers in different time zones to align with your project's schedule." },
     ],
     "Seamless Hiring Journey": [
@@ -30,9 +29,10 @@ const WhatWeOffer = () => {
         <h1 className={styles.heading}>
           Your Expert <span className={styles.highlight}>in Tech Recruitment</span>
         </h1>
-        <p className={styles.subheading}>
-        Let Brandsmashers handle the entire hiring process. We guarantee you'll find and onboard the ideal software developers tailored to your business needs. With our expertise, you can easily hire remote developers from India who are skilled, reliable, and aligned with your project goals, ensuring efficient development and smooth delivery.
-        </p>
+   <p className={styles.subheading}>
+  Let Brandsmashers handle the entire hiring process. We guarantee you&apos;ll find and onboard the ideal software developers tailored to your business needs. With our expertise, you can easily hire remote developers from India who are skilled, reliable, and aligned with your project goals, ensuring efficient development and smooth delivery.
+</p>
+
       </div>
       <div className={styles.tabContainer}>
         {Object.keys(data).map((tab) => (

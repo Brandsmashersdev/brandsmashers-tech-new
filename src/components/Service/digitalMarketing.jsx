@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './rightservice.module.css';
+import Image from 'next/image';
 
 const Digital = () => {
   return (
@@ -35,9 +36,11 @@ const Digital = () => {
         {/* Right Image Section */}
         <div className={styles.rightSection}>
           <div className={styles.imageWrapper}>
-            <img 
+            <Image
               src="/digital.png"
               alt="Digital Marketing"
+              height={400}
+              width={600}
               className={styles.image}
             />
             
