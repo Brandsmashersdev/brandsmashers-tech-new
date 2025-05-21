@@ -162,7 +162,7 @@ export default function BlueTokaiBlog() {
             While there are many ways to write code, choosing environmentally friendly options is a responsibility that we take seriously.
           </p>
           <p className="font-semibold italic">
-            "Building sustainable software is building a better future in every click."
+            &quot;Building sustainable software is building a better future in every click.&quot;
           </p>
 
           <Image

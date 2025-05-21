@@ -4,7 +4,7 @@ export default function Story() {
   const cards = [
     {
       title: 'Career Acceleration',
-      desc: 'We don’t just offer jobs — we offer career journeys with real growth, mentorship, and advancement opportunities.',
+      desc: 'We don&apos;t just offer jobs — we offer career journeys with real growth, mentorship, and advancement opportunities.',
     },
     {
       title: 'A True Sense of Belonging',
@@ -37,9 +37,9 @@ export default function Story() {
         </h2>
 
         <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
-          At Brandsmashers Tech, our people are at the heart of everything we do. We've built a culture where innovation thrives,
+          At Brandsmashers Tech, our people are at the heart of everything we do. We&apos;ve built a culture where innovation thrives,
           individuality is celebrated, and every team member is empowered to grow personally and professionally.
-          Here, you're not just part of a company — you're part of a movement shaping the future.
+          Here, you&apos;re not just part of a company — you&apos;re part of a movement shaping the future.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-left">

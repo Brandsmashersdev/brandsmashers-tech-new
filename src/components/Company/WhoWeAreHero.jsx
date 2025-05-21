@@ -3,7 +3,6 @@
 export default function WhoWeAreHero() {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat text-white py-20 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12"
       style={{ backgroundImage: `url('/Nav-Dropdown-icons/whowe_page.jpg')` }}
     >
       {/* Dark overlay */}
@@ -25,7 +24,7 @@ export default function WhoWeAreHero() {
               Driving Innovation with Passion and Purpose
             </h2>
             <p>
-              We are a team of thinkers, doers, and visionaries who thrive on crafting digital solutions that make an impact.
+              We&apos;re a team of thinkers, doers, and visionaries who thrive on crafting digital solutions that make an impact.
               Our culture is rooted in collaboration, creativity, and a relentless drive to empower clients with scalable, smart, and future-ready tech.
             </p>
           </div>
@@ -34,8 +33,8 @@ export default function WhoWeAreHero() {
               Building the Future, Together
             </h2>
             <p>
-              Whether it's a startup or a global brand, we bring the same level of commitment, agility, and technical excellence.
-              Let’s shape tomorrow’s digital landscape together.
+              Whether it&apos;s a startup or a global brand, we bring the same level of commitment, agility, and technical excellence.
+              Let&apos;s shape tomorrow&apos;s digital landscape together.
             </p>
           </div>
         </div>

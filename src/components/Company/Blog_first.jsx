@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function BrandSmasherBlog() {
   const [activeTab, setActiveTab] = useState('All Categories');
@@ -7,26 +8,26 @@ export default function BrandSmasherBlog() {
   const blogPosts = [
     {
       title: 'Healthy Documentation : An Unsung Hero of a Scalable Team.',
-      desc: ' What is the most effective method for preserving the vital facts, insightful research, diverse opinions',
-      img: 'Nav-Dropdown-icons/image_blog.jpg',
+      desc: 'What is the most effective method for preserving the vital facts, insightful research, diverse opinions',
+      img: '/Nav-Dropdown-icons/image_blog.jpg',
       link: '/blogsection1',
     },
     {
       title: 'Scalable Tech & Green IT',
       desc: 'As we move through the Industrial Revolution and the Information Revolution',
-      img: 'Nav-Dropdown-icons/image_blog2.jpg',
+      img: '/Nav-Dropdown-icons/image_blog2.jpg',
       link: '/blogsection2',
     },
     {
       title: 'Scoop of Digital Marketing',
       desc: 'In a world overflowing with products, apps, services, and ideas, the loudest voice doesn’t always win—but the clearest one does.',
-      img: 'Nav-Dropdown-icons/Blog9.jpg',
+      img: '/Nav-Dropdown-icons/Blog9.jpg',
       link: '/blogSection3',
     },
     {
       title: 'From Branding to Brandsmashers ',
       desc: 'In the midst of every crisis, lies great opportunity',
-      img: 'Nav-Dropdown-icons/Blog17.png',
+      img: '/Nav-Dropdown-icons/Blog17.png',
       link: '/blogsection4',
     },
   ];
@@ -34,10 +35,7 @@ export default function BrandSmasherBlog() {
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Hero Section */}
-      <div
-        className="relative h-[80vh] bg-cover bg-center flex items-center justify-center text-white bg-black"
-        // style={{ backgroundImage: `url('/Nav-Dropdown-icons/image.png')` }}
-      >
+      <div className="relative h-[80vh] bg-cover bg-center flex items-center justify-center text-white bg-black">
         <div className="absolute top-0 left-0 w-full h-full bg-black/50" />
         <div className="relative z-10 max-w-7xl w-full px-6 flex flex-col md:flex-row justify-between items-center">
           <div className="text-[2.5rem] md:text-[4rem] font-extrabold tracking-tight text-center md:text-left">
@@ -84,42 +82,44 @@ export default function BrandSmasherBlog() {
       </div>
 
       {/* Blog Cards Section */}
-   {/* Blog Cards Section */}
-<div className="bg-white py-16 px-6">
-  <div className="max-w-6xl mx-auto">
-    <h2 className="text-3xl font-bold text-center mb-10">
-      <span className="text-black">Latest from </span>
-      <span className="text-[#FF5010]">Our Blog</span>
-    </h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-10">
-      {blogPosts.map((card, idx) => (
-        <div
-          key={idx}
-          className="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-lg"
-        >
-          <a href={card.link}>
-            <img
-              src={card.img}
-              alt={card.title}
-              className="w-full h-56 object-cover cursor-pointer"
-            />
-          </a>
-          <div className="p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-2">{card.title}</h3>
-            <p className="text-gray-600 text-sm mb-4">{card.desc}</p>
-            <a
-              href={card.link}
-              className="inline-block text-sm text-[#FF5010] font-semibold hover:underline"
-            >
-              Read More →
-            </a>
+      <div className="bg-white py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-10">
+            <span className="text-black">Latest from </span>
+            <span className="text-[#FF5010]">Our Blog</span>
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-10">
+            {blogPosts.map((card, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-lg"
+              >
+                <a href={card.link}>
+                  <div className="w-full h-56 relative">
+                    <Image
+                      src={card.img}
+                      alt={card.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="cursor-pointer rounded-t-xl"
+                    />
+                  </div>
+                </a>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">{card.title}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{card.desc}</p>
+                  <a
+                    href={card.link}
+                    className="inline-block text-sm text-[#FF5010] font-semibold hover:underline"
+                  >
+                    Read More →
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</div>
-
+      </div>
     </div>
   );
 }

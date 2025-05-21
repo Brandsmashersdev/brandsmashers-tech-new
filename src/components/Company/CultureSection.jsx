@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image'; // Import Image from Next.js
+
 export default function CultureSection() {
   const events = [
     {
@@ -28,9 +30,11 @@ export default function CultureSection() {
           >
             {/* Image block */}
             <div className="w-full sm:w-1/2 h-64 sm:h-80 rounded-lg overflow-hidden shadow-md">
-              <img
+              <Image
                 src={event.image}
                 alt={event.title}
+                width={500} // You can adjust the width as needed
+                height={500} // Adjust the height accordingly
                 className="w-full h-full object-cover"
               />
             </div>

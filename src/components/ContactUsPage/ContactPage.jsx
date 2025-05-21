@@ -262,262 +262,202 @@ const ContactPage = () => {
     }
   };
 
-  return (
-    <div className="min-h-screen bg-gray-900 text-white relative">
-      <ToastContainer />
-      <GradientBackground />
-      
-      <div className="container mx-auto px-4 py-6 md:py-12">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-stretch">
-          {/* Left section - About */}
-          <div className="w-full lg:w-5/12 space-y-4 md:space-y-6">
-            {/* Heading with better text hierarchy */}
-            <div className="mb-4 md:mb-8">
-              <div className="inline-block px-2 py-1 md:px-3 md:py-1 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full text-orange-500 text-xs font-semibold tracking-wider mb-2 md:mb-4">
-                TECH TALENT EXPERTS
-              </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-2 md:mb-4 leading-tight">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">Brandsmashers</span> Tech.
-              </h1>
-              <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-white/80 leading-relaxed">
-                Work With <span className="text-orange-500">Only The</span>
-                <br className="hidden md:block" />
-                Top Pre-vetted <span className="text-orange-500">Tech Talent</span>
-              </h2>
+return (
+  <div className="min-h-screen bg-gray-900 text-white relative">
+    <ToastContainer />
+    <GradientBackground />
+    
+    <div className="container mx-auto px-4 py-6 md:py-12">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-stretch">
+        {/* Left section - About */}
+        <div className="w-full lg:w-5/12 space-y-4 md:space-y-6">
+          {/* Heading with better text hierarchy */}
+          <div className="mb-4 md:mb-8">
+            <div className="inline-block px-2 py-1 md:px-3 md:py-1 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full text-orange-500 text-xs font-semibold tracking-wider mb-2 md:mb-4">
+              TECH TALENT EXPERTS
             </div>
-            
-            {/* Badges with better layout */}
-            <div className="flex flex-wrap md:flex-row gap-2 md:gap-4 mb-4 md:mb-8">
-              <Badge icon={<Award size={14} />} text="Top 20 Indians Startups of 2023" />
-              <Badge icon={<Zap size={14} />} text="AI Bootcamp Top 20" />
-            </div>
-            
-            {/* Featured Clients component */}
-            <FeaturedClients />
-            
-            {/* Tagline with clearer typography */}
-            <p className="text-base md:text-lg text-gray-300 font-medium border-l-4 border-orange-500 pl-3 md:pl-4 py-1 md:py-2">
-              Top Devs, Trusted by The <span className="text-orange-500 font-semibold">Best</span> in Business
-            </p>
-            
-            {/* Tech Icons section */}
-            <TechIcons />
-
-            {/* Statistics section for social proof */}
-            <div className="grid grid-cols-3 gap-2 md:gap-4 mt-6 md:mt-8">
-              <div className="text-center p-2 md:p-4 bg-white/5 rounded-lg backdrop-blur-sm">
-                <div className="text-xl md:text-3xl font-bold text-orange-500">500+</div>
-                <div className="text-xs md:text-sm text-gray-400 mt-1">Developers</div>
-              </div>
-              <div className="text-center p-2 md:p-4 bg-white/5 rounded-lg backdrop-blur-sm">
-                <div className="text-xl md:text-3xl font-bold text-orange-500">98%</div>
-                <div className="text-xs md:text-sm text-gray-400 mt-1">Success Rate</div>
-              </div>
-              <div className="text-center p-2 md:p-4 bg-white/5 rounded-lg backdrop-blur-sm">
-                <div className="text-xl md:text-3xl font-bold text-orange-500">100+</div>
-                <div className="text-xs md:text-sm text-gray-400 mt-1">Clients</div>
-              </div>
-            </div>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-2 md:mb-4 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">Brandsmashers</span> Tech.
+            </h1>
+            <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-white/80 leading-relaxed">
+              Work With <span className="text-orange-500">Only The</span>
+              <br className="hidden md:block" />
+              Top Pre-vetted <span className="text-orange-500">Tech Talent</span>
+            </h2>
           </div>
+          
+          {/* Badges with better layout */}
+          <div className="flex flex-wrap md:flex-row gap-2 md:gap-4 mb-4 md:mb-8">
+            <Badge icon={<Award size={14} />} text="Top 20 Indians Startups of 2023" />
+            <Badge icon={<Zap size={14} />} text="AI Bootcamp Top 20" />
+          </div>
+          
+          {/* Featured Clients component */}
+          <FeaturedClients />
+          
+          {/* Tagline with clearer typography */}
+          <p className="text-base md:text-lg text-gray-300 font-medium border-l-4 border-orange-500 pl-3 md:pl-4 py-1 md:py-2">
+            Top Devs, Trusted by The <span className="text-orange-500 font-semibold">Best</span> in Business
+          </p>
+          
+          {/* Tech Icons section */}
+          <TechIcons />
 
-          {/* Right section - Form */}
-          <div className="w-full lg:w-7/12 bg-white/5 backdrop-blur-md rounded-2xl p-4 md:p-6 lg:p-8 border border-white/10 shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-48 md:w-64 h-48 md:h-64 bg-orange-500/10 rounded-full -mr-24 md:-mr-32 -mt-24 md:-mt-32 blur-xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 md:w-64 h-48 md:h-64 bg-orange-500/10 rounded-full -ml-24 md:-ml-32 -mb-24 md:-mb-32 blur-xl"></div>
-            
-            <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Get Hired</h3>
-            
-            <form onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
-                {/* Name fields */}
-                <div>
-                  <label className="block text-gray-300 text-sm mb-1 md:mb-2">First Name</label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <User size={16} className="text-orange-500" />
-                    </div>
-                    <input
-                      type="text"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      placeholder="First name"
-                      className={`w-full pl-10 pr-3 py-2 bg-white/10 border ${errors.firstName ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
-                    />
-                  </div>
-                  {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
-                </div>
-                
-                <div>
-                  <label className="block text-gray-300 text-sm mb-1 md:mb-2">Last Name</label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <User size={16} className="text-orange-500" />
-                    </div>
-                    <input
-                      type="text"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      placeholder="Last name"
-                      className={`w-full pl-10 pr-3 py-2 bg-white/10 border ${errors.lastName ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
-                    />
-                  </div>
-                  {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
-                </div>
-                
-                {/* Email */}
-                <div>
-                  <label className="block text-gray-300 text-sm mb-1 md:mb-2">Email</label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Mail size={16} className="text-orange-500" />
-                    </div>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Email address"
-                      className={`w-full pl-10 pr-3 py-2 bg-white/10 border ${errors.email ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
-                    />
-                  </div>
-                  {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
-                </div>
-                
-                {/* Phone */}
-                <div>
-                  <label className="block text-gray-300 text-sm mb-1 md:mb-2">Phone Number</label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Phone size={16} className="text-orange-500" />
-                    </div>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="Phone number"
-                      className={`w-full pl-10 pr-3 py-2 bg-white/10 border ${errors.phone ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
-                    />
-                  </div>
-                  {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
-                </div>
-              </div>
-              
-              {/* How we can help */}
-              <div className="mb-4 md:mb-6">
-                <label className="block text-gray-300 text-sm mb-2 md:mb-3">How we can Help</label>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-                  <div 
-                    onClick={() => setHelpType('recruiting')}
-                    className={`flex items-center gap-2 md:gap-3 p-2 md:p-3 rounded-lg cursor-pointer transition-all ${
-                      helpType === 'recruiting' 
-                      ? 'bg-gradient-to-r from-orange-500/30 to-orange-700/30 border border-orange-500/50' 
-                      : 'bg-white/10 border border-white/20 hover:bg-white/15'
-                    }`}
-                  >
-                    <div className={`w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center border ${
-                      helpType === 'recruiting' ? `border-orange-500 bg-orange-500` : 'border-white/30'
-                    }`}>
-                      {helpType === 'recruiting' && <Check size={10} className="text-white" />}
-                    </div>
-                    <span className="text-sm md:text-base">I'm Recruiting</span>
-                  </div>
-                  
-                  <div 
-                    onClick={() => setHelpType('developer')}
-                    className={`flex items-center gap-2 md:gap-3 p-2 md:p-3 rounded-lg cursor-pointer transition-all ${
-                      helpType === 'developer' 
-                      ? 'bg-gradient-to-r from-red-500/30 to-red-700/30 border border-red-500/50' 
-                      : 'bg-white/10 border border-white/20 hover:bg-white/15'
-                    }`}
-                  >
-                    <div className={`w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center border ${
-                      helpType === 'developer' ? 'border-red-500 bg-red-500' : 'border-white/30'
-                    }`}>
-                      {helpType === 'developer' && <Check size={10} className="text-white" />}
-                    </div>
-                    <span className="text-sm md:text-base">I'm a Developer</span>
-                  </div>
-                </div>
-                {errors.helpType && <p className="text-red-500 text-xs mt-1">{errors.helpType}</p>}
-              </div>
-              
-              {/* Skills */}
-              <div className="mb-4 md:mb-6">
-                <label className="block text-gray-300 text-sm mb-1 md:mb-2">What skills are you looking for?</label>
-                <div className="relative">
-                  <select
-                    name="skills"
-                    value={formData.skills}
-                    onChange={handleChange}
-                    className={`w-full pl-3 pr-10 py-2 appearance-none bg-white/10 border ${errors.skills ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
-                  >
-                    <option value="" className="bg-gray-800">What skills are you looking for?</option>
-                    {skillOptions.map((skill) => (
-                      <option key={skill} value={skill} className="bg-gray-800">{skill}</option>
-                    ))}
-                  </select>
-                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                    <ChevronDown size={16} className="text-orange-500" />
-                  </div>
-                </div>
-                {errors.skills && <p className="text-red-500 text-xs mt-1">{errors.skills}</p>}
-              </div>
-              
-              {/* Source */}
-              <div className="mb-6 md:mb-8">
-                <label className="block text-gray-300 text-sm mb-1 md:mb-2">How did you hear about Brandsmashers?</label>
-                <div className="relative">
-                  <select
-                    name="source"
-                    value={formData.source}
-                    onChange={handleChange}
-                    className={`w-full pl-3 pr-10 py-2 appearance-none bg-white/10 border ${errors.source ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
-                  >
-                    <option value="" className="bg-gray-800">How did you hear about us?</option>
-                    {sourceOptions.map((source) => (
-                      <option key={source} value={source} className="bg-gray-800">{source}</option>
-                    ))}
-                  </select>
-                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                    <ChevronDown size={16} className="text-orange-500" />
-                  </div>
-                </div>
-                {errors.source && <p className="text-red-500 text-xs mt-1">{errors.source}</p>}
-              </div>
-              
-              {/* Submit button */}
-              <button 
-                type="submit" 
-                className="w-full py-2 md:py-3 px-4 md:px-6 rounded-lg font-medium text-white flex items-center justify-center gap-2 transition-all bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 shadow-lg"
-              >
-                Let's Talk <Rocket size={16} />
-              </button>
-            </form>
+          {/* Statistics section for social proof */}
+          <div className="grid grid-cols-3 gap-2 md:gap-4 mt-6 md:mt-8">
+            <div className="text-center p-2 md:p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+              <div className="text-xl md:text-3xl font-bold text-orange-500">500+</div>
+              <div className="text-xs md:text-sm text-gray-400 mt-1">Developers</div>
+            </div>
+            <div className="text-center p-2 md:p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+              <div className="text-xl md:text-3xl font-bold text-orange-500">98%</div>
+              <div className="text-xs md:text-sm text-gray-400 mt-1">Success Rate</div>
+            </div>
+            <div className="text-center p-2 md:p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+              <div className="text-xl md:text-3xl font-bold text-orange-500">100+</div>
+              <div className="text-xs md:text-sm text-gray-400 mt-1">Clients</div>
+            </div>
           </div>
         </div>
-        
-        {/* Privacy notice */}
-        <div className="mt-8 md:mt-12 bg-white/5 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-white/10 max-w-3xl mx-auto">
-          <p className="text-gray-300 text-center text-sm md:text-base">
-            Your <span className="text-orange-500">trust is our priority</span>. 
-            We value your privacy and ensure that your personal information is{' '}
-            <span className="text-orange-500">kept secure</span>. 
-            Rest assured, we do{' '}
-            <span className="text-orange-500">not share, sell,</span> or{' '}
-            <span className="text-orange-500">misuse</span> your{' '}
-            <span className="text-orange-500">data</span> in any way. 
-            Your information will never be{' '}
-            <span className="text-orange-500">pirated or shared</span> with{' '}
-            <span className="text-orange-500">third parties</span> without{' '}
-            <span className="text-orange-500">your consent</span>.
-          </p>
+
+        {/* Right section - Form */}
+        <div className="w-full lg:w-7/12 bg-white/5 backdrop-blur-md rounded-2xl p-4 md:p-6 lg:p-8 border border-white/10 shadow-xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-48 md:w-64 h-48 md:h-64 bg-orange-500/10 rounded-full -mr-24 md:-mr-32 -mt-24 md:-mt-32 blur-xl"></div>
+          <div className="absolute bottom-0 left-0 w-48 md:w-64 h-48 md:h-64 bg-orange-500/10 rounded-full -ml-24 md:-ml-32 -mb-24 md:-mb-32 blur-xl"></div>
+          
+          <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Get Hired</h3>
+          
+          <form onSubmit={handleSubmit}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
+              {/* Name fields */}
+              <div>
+                <label className="block text-gray-300 text-sm mb-1 md:mb-2">First Name</label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <User size={16} className="text-orange-500" />
+                  </div>
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    placeholder="First name"
+                    className={`w-full pl-10 pr-3 py-2 bg-white/10 border ${errors.firstName ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
+                  />
+                </div>
+                {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
+              </div>
+              
+              <div>
+                <label className="block text-gray-300 text-sm mb-1 md:mb-2">Last Name</label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <User size={16} className="text-orange-500" />
+                  </div>
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    placeholder="Last name"
+                    className={`w-full pl-10 pr-3 py-2 bg-white/10 border ${errors.lastName ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
+                  />
+                </div>
+                {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
+              </div>
+              
+              {/* Email */}
+              <div>
+                <label className="block text-gray-300 text-sm mb-1 md:mb-2">Email</label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Mail size={16} className="text-orange-500" />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Email address"
+                    className={`w-full pl-10 pr-3 py-2 bg-white/10 border ${errors.email ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
+                  />
+                </div>
+                {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+              </div>
+              
+              {/* Phone */}
+              <div>
+                <label className="block text-gray-300 text-sm mb-1 md:mb-2">Phone Number</label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Phone size={16} className="text-orange-500" />
+                  </div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="Phone number"
+                    className={`w-full pl-10 pr-3 py-2 bg-white/10 border ${errors.phone ? 'border-red-500' : 'border-white/20'} rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent`}
+                  />
+                </div>
+                {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
+              </div>
+            </div>
+            
+            {/* How we can help */}
+            <div className="mb-4 md:mb-6">
+              <label className="block text-gray-300 text-sm mb-2 md:mb-3">How we can Help</label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+                <div 
+                  onClick={() => setHelpType('recruiting')}
+                  className={`flex items-center gap-2 md:gap-3 p-2 md:p-3 rounded-lg cursor-pointer transition-all ${
+                    helpType === 'recruiting' 
+                    ? 'bg-gradient-to-r from-orange-500/30 to-orange-700/30 border border-orange-500/50' 
+                    : 'bg-white/10 border border-white/20 hover:bg-white/15'
+                  }`}
+                >
+                  <div className={`w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center border ${
+                    helpType === 'recruiting' ? `border-orange-500 bg-orange-500` : 'border-white/30'
+                  }`}>
+                    {helpType === 'recruiting' && <Check size={10} className="text-white" />}
+                  </div>
+                  <span className="text-sm md:text-base">I&apos;m Recruiting</span>
+                </div>
+                
+                <div 
+                  onClick={() => setHelpType('developer')}
+                  className={`flex items-center gap-2 md:gap-3 p-2 md:p-3 rounded-lg cursor-pointer transition-all ${
+                    helpType === 'developer' 
+                    ? 'bg-gradient-to-r from-red-500/30 to-red-700/30 border border-red-500/50' 
+                    : 'bg-white/10 border border-white/20 hover:bg-white/15'
+                  }`}
+                >
+                  <div className={`w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center border ${
+                    helpType === 'developer' ? 'border-red-500 bg-red-500' : 'border-white/30'
+                  }`}>
+                    {helpType === 'developer' && <Check size={10} className="text-white" />}
+                  </div>
+                  <span className="text-sm md:text-base">I&apos;m a Developer</span>
+                </div>
+              </div>
+            </div>
+            
+            <button 
+              type="submit"
+              className="w-full py-3 mt-6 md:mt-8 bg-gradient-to-r from-orange-500 to-red-500 text-white text-lg font-semibold rounded-lg hover:bg-gradient-to-l transition-all"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>
-  );
+  </div>
+);
+
+
 };
+
 
 export default ContactPage;

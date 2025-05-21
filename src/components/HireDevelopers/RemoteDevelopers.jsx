@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'; // Import Image from next/image
 import styles from './RemoteDevelopers.module.css';
 
 const RemoteDev = () => {
@@ -10,15 +11,15 @@ const RemoteDev = () => {
     {
       title: 'Availability',
       value: '160 Hours',
-      },
+    },
     {
       title: 'Cost Efficient Process',
       value: '50%',
-      },
+    },
     {
       title: 'Start Hiring in',
       value: '2 Business Days',
-      bgColor: '#22d3ee'
+      bgColor: '#22d3ee',
     }
   ];
 
@@ -28,15 +29,19 @@ const RemoteDev = () => {
         {/* Left Section */}
         <div className={styles.leftSection}>
           <div className={styles.mainImage}>
-            <img 
+            {/* Replaced <img> with <Image> */}
+            <Image
               src="/remote.png"
               alt="Office workspace"
+              width={500} // Specify width
+              height={300} // Specify height
+              layout="intrinsic" // Optional: ensure image maintains aspect ratio
             />
           </div>
           <div className={styles.cardContainer}>
             {cards.map((card, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={styles.card}
                 style={{ backgroundColor: card.bgColor }}
               >
@@ -48,7 +53,6 @@ const RemoteDev = () => {
                     <span className={`${styles.days} ${card.bgColor === '#22d3ee' ? styles.whiteText : ''}`}>
                       {card.value}
                     </span>
-                    
                   </div>
                 </div>
               </div>
@@ -66,8 +70,7 @@ const RemoteDev = () => {
           <div className={styles.content}>
             <p className={styles.description}>
               At Brandsmashers Tech, we make it seamless to <span className={styles.highlight}>hire remote developers from India</span> who are experts in delivering high-quality solutions tailored to your specific needs. 
-              Whether you're upgrading an existing project or launching a new web or mobile application,
-              our developers bring technical expertise and a commitment to excellence.
+              Whether you&apos;re upgrading an existing project or launching a new web or mobile application, our developers bring technical expertise and a commitment to excellence.
             </p>
             <p className={styles.description}>
               With our <span className={styles.highlight}>IT staff augmentation services</span>, you gain access to a pre-vetted pool of skilled professionals, including web developers, mobile developers, frontend specialists,
@@ -75,7 +78,7 @@ const RemoteDev = () => {
             </p>
             <p className={styles.description}> 
               Our process is straightforward and hassle-free. You can interview and select your ideal development team while we handle the administrative details, including payroll and team management. Working with our 
-              Indian developers ensures not only cost-efficiency but also access to cutting-edge technologies and timely project delivery
+              Indian developers ensures not only cost-efficiency but also access to cutting-edge technologies and timely project delivery.
             </p>
           </div>
         </div>

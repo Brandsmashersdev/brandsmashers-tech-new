@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
+import Image from 'next/image';  // Import Image from next/image
 
 const HeroSection = ({
   imageSrc,
@@ -17,17 +18,20 @@ const HeroSection = ({
       <div className="w-4/5 mx-auto py-16">
         <div className="flex flex-col md:flex-row items-center gap-8">
           {/* Left Section - Image */}
-          <div className=" w-full md:w-1/2">
+          <div className="w-full md:w-1/2">
             <div className="rounded-2xl overflow-hidden">
-              <img 
+              <Image 
                 src={imageSrc} 
                 alt={imageAlt}
-                className=" object-cover relative rounded-[12px_55px_12px_55px]"
+                className="object-cover relative rounded-[12px_55px_12px_55px]"
                 style={{ 
                   borderLeft: `7px solid ${accentColor}`,
                   transition: 'opacity 500ms',
                   flexShrink: 0
                 }}
+                width={800}   // You can adjust these width and height values
+                height={600}  // to match the aspect ratio of your image
+                layout="responsive"  // Ensures the image scales correctly for different screen sizes
               />
             </div>
           </div>

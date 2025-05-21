@@ -39,18 +39,18 @@ export default function HealthyDocumentationBlog() {
           {/* Introduction Card */}
           <div className="bg-white rounded-xl shadow-lg p-8 mb-12 border-l-4 border-[#ff5010]">
             <p className="text-xl leading-relaxed mb-6">
-              What is the most effective method for preserving the vital facts, insightful research, diverse opinions, 
-              intricate processes, and impactful outcomes of an organization or product over the long term? 
+              What is the most effective method for preserving the vital facts, insightful research, diverse opinions,
+              intricate processes, and impactful outcomes of an organization or product over the long term?
               Can healthy documentation be the answer to this question?
             </p>
             <p className="text-lg leading-relaxed mb-6">
-              Let's talk about a hidden tool of a scalable team. Good documentation doesn't cost much — it's not glamorous. 
+              Let&#39;s talk about a hidden tool of a scalable team. Good documentation doesn&#39;t cost much — it&#39;s not glamorous.
               A manner of maintaining it will be enough.
             </p>
             <p className="text-lg leading-relaxed">
-              One more important aspect to consider is the "silent cost of bad documentation." This term describes the hidden 
-              but significant impact that poor, outdated, or unclear documentation can have on a business. While these costs 
-              might not be immediately visible on a balance sheet, addressing them can lead to substantial improvements 
+              One more important aspect to consider is the &quot;silent cost of bad documentation.&quot; This term describes the hidden
+              but significant impact that poor, outdated, or unclear documentation can have on a business. While these costs
+              might not be immediately visible on a balance sheet, addressing them can lead to substantial improvements
               in productivity, efficiency, and trust within the organization.
             </p>
           </div>
@@ -71,32 +71,32 @@ export default function HealthyDocumentationBlog() {
             <h2 className="text-3xl font-bold mb-8 text-[#ff5010] inline-block pb-2 border-b-2 border-[#ff5010]">
               Importance of Good Documentation
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                { 
-                  title: 'Efficiency and Productivity', 
-                  text: 'Clear documentation drives efficiency, ensuring teams save time and quickly find answers without the need to reinvent the wheel.' 
+                {
+                  title: 'Efficiency and Productivity',
+                  text: 'Clear documentation drives efficiency, ensuring teams save time and quickly find answers without the need to reinvent the wheel.',
                 },
-                { 
-                  title: 'Consistent Knowledge Sharing', 
-                  text: 'Documentation solidifies individual insights into collective expertise, making vital information easily accessible to everyone and fostering a culture of collaboration.' 
+                {
+                  title: 'Consistent Knowledge Sharing',
+                  text: 'Documentation solidifies individual insights into collective expertise, making vital information easily accessible to everyone and fostering a culture of collaboration.',
                 },
-                { 
-                  title: 'Smooth Onboarding', 
-                  text: 'With comprehensive documentation, new hires gain clarity and confidence from day one, swiftly mastering processes, tools, and expectations.' 
+                {
+                  title: 'Smooth Onboarding',
+                  text: 'With comprehensive documentation, new hires gain clarity and confidence from day one, swiftly mastering processes, tools, and expectations.',
                 },
-                { 
-                  title: 'Fewer Mistakes', 
-                  text: 'Thoroughly documented procedures eliminate confusion and significantly reduce the risk of errors, enhancing quality control and driving excellence.' 
+                {
+                  title: 'Fewer Mistakes',
+                  text: 'Thoroughly documented procedures eliminate confusion and significantly reduce the risk of errors, enhancing quality control and driving excellence.',
                 },
-                { 
-                  title: 'Compliance and Accountability', 
-                  text: 'In fields like finance and healthcare, robust documentation guarantees compliance and streamlines audits and reviews with clear and reliable traceability.' 
+                {
+                  title: 'Compliance and Accountability',
+                  text: 'In fields like finance and healthcare, robust documentation guarantees compliance and streamlines audits and reviews with clear and reliable traceability.',
                 },
-                { 
-                  title: 'Improved Communication', 
-                  text: 'Effective documentation transforms communication, minimizing unnecessary meetings and repetitive questions while empowering teams to collaborate seamlessly, especially in remote or hybrid environments.' 
+                {
+                  title: 'Improved Communication',
+                  text: 'Effective documentation transforms communication, minimizing unnecessary meetings and repetitive questions while empowering teams to collaborate seamlessly, especially in remote or hybrid environments.',
                 },
               ].map((point, idx) => (
                 <div key={idx} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border-t-4 border-[#ff5010]">
@@ -125,18 +125,18 @@ export default function HealthyDocumentationBlog() {
             </h2>
             <div className="space-y-4 text-lg">
               <p>
-                At Brandsmashers, we believe that great documentation is one of the keys to our success. It's like the backbone of our operations! 
+                At Brandsmashers, we believe that great documentation is one of the keys to our success. It&#39;s like the backbone of our operations!
                 Without well-organized documentation, even the most talented team members can face challenges.
               </p>
               <p>
-                We make it a point to document every step involved in our functions, departments, and collaborations. 
+                We make it a point to document every step involved in our functions, departments, and collaborations.
                 This approach helps everyone at Brandsmashers feel connected and on the same page.
               </p>
               <p>
-                It's more than a piece of information. It acts as a bridge, connecting our internal teams with external partners. Here's what we focus on:
+                It&#39;s more than a piece of information. It acts as a bridge, connecting our internal teams with external partners. Here&#39;s what we focus on:
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
               {[
                 { title: 'Technical Documentation', text: 'Information about code structure, APIs, and system architecture' },
@@ -151,7 +151,7 @@ export default function HealthyDocumentationBlog() {
                 </div>
               ))}
             </div>
-            
+
             <p className="mt-6 text-lg font-medium">
               Our ultimate goal is to empower our external team members to get up to speed quickly and work confidently!
             </p>
@@ -162,7 +162,7 @@ export default function HealthyDocumentationBlog() {
             <h2 className="text-3xl font-bold mb-8 text-[#ff5010] inline-block pb-2 border-b-2 border-[#ff5010]">
               Our Favorite Tools for Better Results
             </h2>
-            
+
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {[
                 { name: 'Notion', description: 'Perfect for team wikis, project docs, and standard operating procedures (SOPs)' },
@@ -181,10 +181,10 @@ export default function HealthyDocumentationBlog() {
                 </div>
               ))}
             </div>
-            
+
             <p className="text-lg">
-              By using these tools, we enhance our documentation practices and boost collaboration across the board. 
-              We can assist you in utilizing them by customizing features, simplifying workflows, or integrating seamlessly. 
+              By using these tools, we enhance our documentation practices and boost collaboration across the board.
+              We can assist you in utilizing them by customizing features, simplifying workflows, or integrating seamlessly.
               Our team ensures each tool is tailored to support your goals efficiently and effectively — with proper documentation.
             </p>
           </section>
@@ -207,18 +207,18 @@ export default function HealthyDocumentationBlog() {
             </h2>
             <div className="space-y-4 text-lg text-white">
               <p>
-                Through this blog, we aim to highlight a simple yet powerful approach. It's not just a one-day effort; 
-                it's a transformative habit.
+                Through this blog, we aim to highlight a simple yet powerful approach. It&#39;s not just a one-day effort;
+                it&#39;s a transformative habit.
               </p>
               <p>
-                Effective documentation secures your position, empowering you to achieve your goals quickly and hold 
+                Effective documentation secures your position, empowering you to achieve your goals quickly and hold
                 onto that success for the long run.
               </p>
               <p className="text-2xl font-bold mt-4">
                 <span className="text-white">Healthy Documentation Fixed</span> <span className="text-[#ff5010]">Your Owned Crown.</span>
               </p>
               <p className="italic text-xl mt-6 text-[#ff5010]">
-                "The palest ink is better than the best memory."
+                &quot;The palest ink is better than the best memory.&quot;
               </p>
             </div>
           </section>

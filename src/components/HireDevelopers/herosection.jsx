@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./herosection.module.css";
 import TrialForm from "./Android/Trial"; 
+import Image from 'next/image'; // Import the Image component from next/image
 
 const HeroSection = () => {
   // State to control the visibility of the TrialForm
@@ -39,10 +40,13 @@ const HeroSection = () => {
           {/* Image Container */}
           <div className={styles.imageContainer}>
             <div className={styles.brandImage}>
-              <img
-                src="/heroSection.png"
+              {/* Replace <img> with <Image> from next/image */}
+              <Image
+                src="/heroSection.png" // Path to your image
                 alt="Brandsmashers Logo"
-                className={styles.objectContain}
+                width={500} // Define width for optimization (adjust as needed)
+                height={500} // Define height for optimization (adjust as needed)
+                className={styles.objectContain} // Same class as before for styling
               />
             </div>
           </div>

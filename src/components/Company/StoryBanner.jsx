@@ -41,7 +41,7 @@ export default function StoryBanner() {
             className="mx-auto mb-3 rounded"
           />
           <p className="text-sm sm:text-base text-gray-800 dark:text-gray-300">
-            We're CMMI Level 4 Appraised IT Services and Solutions Company <br />
+            We&apos;re CMMI Level 4 Appraised IT Services and Solutions Company <br />
             ISO 27001:2013 Certified
           </p>
         </div>

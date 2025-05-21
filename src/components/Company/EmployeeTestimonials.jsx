@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import Image from 'next/image'; // Import Image from Next.js
 
 export default function EmployeeTestimonials() {
   return (
@@ -20,16 +21,18 @@ export default function EmployeeTestimonials() {
         <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl transition-all duration-300 hover:shadow-2xl">
           <p className="text-gray-700 dark:text-gray-300 text-lg sm:text-xl leading-relaxed mb-6 italic">
             “It has been 10+ years with Brandsmashers (Previously Systematix Infotech) and
-            it's truly an AWESOME place to work in. It has a nice work culture and
-            allows employees to work freely. Also, there's great support from seniors.
+            it&apos;s truly an AWESOME place to work in. It has a nice work culture and
+            allows employees to work freely. Also, there&apos;s great support from seniors.
             Employees are motivated and appreciated for their efforts.”
           </p>
 
           {/* Employee Info */}
-          <div className="flex items-center justify-center sm:justify-start gap-4">
-            <img
-              src=""
+          <div className="flex items-center space-x-4">
+            <Image
+              src="/path-to-image.jpg" // Replace with the actual path to the image
               alt="Aryman Saxena"
+              width={56} // Set the image width (in pixels)
+              height={56} // Set the image height (in pixels)
               className="w-14 h-14 rounded-full object-cover border-2 border-[#ff5010]"
             />
             <div className="text-left">
@@ -40,7 +43,7 @@ export default function EmployeeTestimonials() {
         </div>
 
         {/* Dot Indicators */}
-      
+        {/* Add dot indicators or other content here */}
       </div>
     </section>
   );

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Image from 'next/image'; // Import Image component from next/image
+import Link from 'next/link'; // Import Link from next/link
 
 const BlogCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -104,7 +106,7 @@ const BlogCarousel = () => {
       setActiveIndex(prevIndex => (prevIndex + 1) % (blogPosts.length - visiblePosts + 1));
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [blogPosts.length]);  // Add blogPosts.length as a dependency
 
   return (
     <div className="py-20 bg-gray-50 relative overflow-hidden">
@@ -113,9 +115,6 @@ const BlogCarousel = () => {
         <div className="absolute -top-20 -left-20 w-full h-full bg-gradient-to-br from-orange-50 to-transparent transform rotate-12 opacity-70"></div>
         <div className="absolute top-0 right-0 w-1/3 h-full bg-orange-50 transform skew-x-12 opacity-50"></div>
       </div>
-      
-      {/* Orange accent line */}
-      {/* <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-400"></div> */}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header with geometric accent */}
@@ -154,9 +153,11 @@ const BlogCarousel = () => {
                     {/* Blog image with gradient overlay */}
                     <div className="relative">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-                      <img 
+                      <Image 
                         src={post.image} 
                         alt={post.title} 
+                        width={600} 
+                        height={400} 
                         className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute top-4 right-4 bg-white text-[#ff5010] text-sm font-bold py-1 px-4 rounded-lg shadow-md z-20">
@@ -185,38 +186,17 @@ const BlogCarousel = () => {
                           </span>
                         </div>
                         
-                        <h3 className="text-xl font-extrabold text-gray-900 mb-3 leading-tight line-clamp-2 group-hover:text-[#ff5010] transition-colors duration-300">
-                          {post.title}
-                        </h3>
+                        <h3 className="text-xl font-semibold text-gray-800 mb-4">{post.title}</h3>
+                        <p className="text-base text-gray-600 mb-6">{post.excerpt}</p>
                         
-                        <p className="text-gray-600 mb-6 line-clamp-3">
-                          {post.excerpt}
-                        </p>
-                       
-                        {/* Author info with vertical divider */}
-                        <div className="flex items-center">
-                          <div className="w-12 h-12 rounded-full border-2 border-[#ff5010] p-0.5 overflow-hidden">
-                            <img 
-                              src={`/api/placeholder/44/44`} 
-                              alt={post.author} 
-                              className="w-full h-full object-cover rounded-full"
-                            />
-                          </div>
-                          <div className="ml-3 border-l-2 border-orange-100 pl-3">
-                            <p className="font-bold text-gray-900">{post.author}</p>
-                            <p className="text-sm text-gray-500">{post.authorRole}</p>
-                          </div>
-                        </div>
-                        
-                        {/* Read more button */}
-                        <div className="mt-6">
-                          <a 
-                            href="#" 
-                            className="block w-full bg-orange-50 text-[#ff5010] font-bold py-3 px-4 rounded-xl text-center hover:bg-[#ff5010] hover:text-white transition-colors duration-300 group-hover:shadow-md"
-                          >
-                            Read Article
+                        <Link href={`/blog/${post.id}`}>
+                          <a className="inline-flex items-center px-8 py-4 bg-[#ff5010] text-base font-bold rounded-full text-white hover:bg-[#e84600] transition-colors duration-300 shadow-lg hover:shadow-xl hover:shadow-orange-200/50">
+                            Explore All Articles
+                            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
                           </a>
-                        </div>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -224,54 +204,19 @@ const BlogCarousel = () => {
               ))}
             </div>
           </div>
-          
-          {/* Navigation arrows with updated design */}
-          <button 
-            onClick={prevSlide}
-            className="absolute top-1/2 left-2 md:left-6 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm text-[#ff5010] p-4 rounded-full shadow-xl hover:bg-[#ff5010] hover:text-white transition-all duration-300 focus:outline-none z-20"
-            aria-label="Previous slide"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+          {/* Carousel navigation */}
+          <div className="absolute top-1/2 left-4 transform -translate-y-1/2 cursor-pointer z-20" onClick={prevSlide}>
+            <svg className="w-10 h-10 text-white bg-[#ff5010] p-2 rounded-full shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-          </button>
+          </div>
           
-          <button 
-            onClick={nextSlide}
-            className="absolute top-1/2 right-2 md:right-6 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm text-[#ff5010] p-4 rounded-full shadow-xl hover:bg-[#ff5010] hover:text-white transition-all duration-300 focus:outline-none z-20"
-            aria-label="Next slide"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer z-20" onClick={nextSlide}>
+            <svg className="w-10 h-10 text-white bg-[#ff5010] p-2 rounded-full shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </button>
-        </div>
-        
-        {/* Slide indicators with pill design */}
-        <div className="flex justify-center mt-12 space-x-2">
-          {Array.from({ length: blogPosts.length - visiblePosts + 1 }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`h-3 rounded-full transition-all duration-300 focus:outline-none ${
-                activeIndex === index ? "bg-[#ff5010] w-10" : "bg-gray-300 w-3 hover:bg-orange-300"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-        
-        {/* View all posts button with updated design */}
-        <div className="text-center mt-14">
-          <a 
-            href="/Blog" 
-            className="inline-flex items-center px-8 py-4 bg-[#ff5010] text-base font-bold rounded-full text-white hover:bg-[#e84600] transition-colors duration-300 shadow-lg hover:shadow-xl hover:shadow-orange-200/50"
-          >
-            Explore All Articles
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
+          </div>
         </div>
       </div>
     </div>
