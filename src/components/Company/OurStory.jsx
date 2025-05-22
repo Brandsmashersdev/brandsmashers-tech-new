@@ -1,3 +1,6 @@
+'use client';
+
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function FounderCard() {
@@ -13,9 +16,11 @@ export default function FounderCard() {
         {/* Image Section */}
         <div className="md:w-1/2 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10 z-10"></div>
-          <img
+          <Image
             src="/Nav-Dropdown-icons/Brandsmashers.jpg"
             alt="Company Founder"
+            width={500} // Adjust width and height as necessary
+            height={500} // Adjust width and height as necessary
             className="w-full h-full object-cover"
           />
           <div className={`absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-80'} md:hidden`}>
@@ -28,22 +33,20 @@ export default function FounderCard() {
         <div className={`md:w-1/2 p-8 bg-white flex flex-col justify-center transition-all duration-300 ${isHovered ? 'bg-gray-50' : ''}`}>
           <div className="hidden md:block mb-6">
             <h3 className="text-3xl font-bold">
-           <span className="text-black">Brands</span>
-           <span className="text-[#ff5010]">masher's Story</span>
-           </h3>
-
+              <span className="text-black">Brands</span>
+              <span className="text-[#ff5010]">masher&apos;s Story</span> {/* Fixed apostrophe */}
+            </h3>
           </div>
 
           <blockquote className="mb-6 italic text-lg text-gray-700 border-l-4 border-[#ff5010] pl-4">
-            We’re proud of how far we’ve come — and even more excited about what lies ahead.
+            We&apos;re proud of how far we&apos;ve come — and even more excited about what lies ahead. {/* Fixed apostrophes */}
           </blockquote>
 
           <p className="mb-6 text-gray-700">
-             Founded in 2018 by Aayush Jain and Muskan Chhatrashal, Brandsmashers Tech began as a two-person venture with a bold vision: to revolutionize the way businesses connect with top tech talent. What started as a small initiative has now grown into a dynamic team of 80+ skilled professionals spread across the globe.<br/><br/>
-Our mission has always been clear — to bridge the gap between IT recruiters and the best remote developers through a simple, fast, and hassle-free hiring process. We’ve helped numerous leading tech companies accelerate their growth by providing expert staffing solutions that integrate seamlessly into their teams. Whether it's scaling development efforts, meeting tight project deadlines, or finding niche skill sets, our developers step in as an extension of your team from day one.<br/><br/>
-But we’re more than just a staffing agency. Brandsmashers Tech also offers end-to-end software solutions tailored to businesses across multiple sectors. From product ideation to post-launch support, we’re committed to delivering results that drive real business impact.
-
-            </p>
+            Founded in 2018 by Aayush Jain and Muskan Chhatrashal, Brandsmashers Tech began as a two-person venture with a bold vision: to revolutionize the way businesses connect with top tech talent. What started as a small initiative has now grown into a dynamic team of 80+ skilled professionals spread across the globe.<br/><br/>
+            Our mission has always been clear — to bridge the gap between IT recruiters and the best remote developers through a simple, fast, and hassle-free hiring process. We&apos;ve helped numerous leading tech companies accelerate their growth by providing expert staffing solutions that integrate seamlessly into their teams. Whether it&apos;s scaling development efforts, meeting tight project deadlines, or finding niche skill sets, our developers step in as an extension of your team from day one.<br/><br/>
+            But we&apos;re more than just a staffing agency. Brandsmashers Tech also offers end-to-end software solutions tailored to businesses across multiple sectors. From product ideation to post-launch support, we&apos;re committed to delivering results that drive real business impact. {/* Fixed apostrophes */}
+          </p>
 
           <div className="flex items-center space-x-4 mt-auto">
             {/* Facebook */}

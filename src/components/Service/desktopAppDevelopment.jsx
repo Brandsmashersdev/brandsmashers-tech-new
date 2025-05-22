@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './rightservice.module.css';
+import Image from 'next/image';
 
 const DesktopApp = () => {
   return (
@@ -26,7 +27,7 @@ const DesktopApp = () => {
               We prioritize creating effective, easy-to-navigate applications that enhance business operations 
               and employee performance. Collaborating with you throughout the process, we ensure the final product 
               meets both current and future needs.
-              Choose Brandsmashers for innovative desktop applications that set you apart in today's competitive market.
+              Choose Brandsmashers for innovative desktop applications that set you apart in today&apos;s competitive market.
             </p>
           </div>
         </div>
@@ -34,9 +35,11 @@ const DesktopApp = () => {
         {/* Right Image Section */}
         <div className={styles.rightSection}>
           <div className={styles.imageWrapper}>
-            <img 
+            <Image
               src="/desktop.png"
               alt="Desktop App Development"
+              width={600}
+              height={400}
               className={styles.image}
             />
             

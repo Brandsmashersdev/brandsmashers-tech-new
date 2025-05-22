@@ -83,7 +83,7 @@ export default function PrivacyPolicyContent() {
             <section>
               <h2 className="text-2xl font-bold mb-4">5. Third-Party Disclosure</h2>
               <p className="text-gray-300 mb-4">
-                We do not sell, trade, or rent users' personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates, and advertisers.
+                We do not sell, trade, or rent users&apos; personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates, and advertisers.
               </p>
               <p className="text-gray-300">
                 We may use third-party service providers to help us operate our business and the site or administer activities on our behalf, such as sending out newsletters or surveys. We may share your information with these third parties for those limited purposes if you have given us your permission.
@@ -93,7 +93,7 @@ export default function PrivacyPolicyContent() {
             <section>
               <h2 className="text-2xl font-bold mb-4">6. Cookie Policy</h2>
               <p className="text-gray-300 mb-4">
-                Our website may use "cookies" to enhance the user experience. A user's web browser places cookies on their hard drive for record-keeping purposes and sometimes to track information about them. Users may choose to set their web browser to refuse cookies or to alert you when cookies are being sent.
+                Our website may use &quot;cookies&quot; to enhance the user experience. A user&apos;s web browser places cookies on their hard drive for record-keeping purposes and sometimes to track information about them. Users may choose to set their web browser to refuse cookies or to alert you when cookies are being sent.
               </p>
             </section>
 
@@ -129,10 +129,10 @@ export default function PrivacyPolicyContent() {
               </p>
               <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
                 <p className="text-gray-300 mb-2"><strong>Brandsmashers Tech</strong></p>
-                <p className="text-gray-300 mb-2">123 Tech Avenue</p>
-                <p className="text-gray-300 mb-2">San Francisco, CA 94105</p>
-                <p className="text-gray-300 mb-2">Email: privacy@brandsmashers.tech</p>
-                <p className="text-gray-300">Phone: (555) 123-4567</p>
+                {/* <p className="text-gray-300 mb-2">123 Tech Avenue</p> */}
+                <p className="text-gray-300 mb-2">Bhopal, India</p>
+                <p className="text-gray-300 mb-2">Email: info@brandsmashers.com</p>
+                <p className="text-gray-300">Phone: 7000863918</p>
               </div>
             </section>
           </div>

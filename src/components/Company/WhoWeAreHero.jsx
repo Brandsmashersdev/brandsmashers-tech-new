@@ -4,7 +4,7 @@ export default function WhoWeAreHero() {
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat text-white py-20 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12"
-      style={{ backgroundImage: `url('/Nav-Dropdown-icons/whowe_page.jpg')` }}
+      style={{ backgroundImage: "url('/Nav-Dropdown-icons/whowe_page.jpg')" }}
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
@@ -34,8 +34,8 @@ export default function WhoWeAreHero() {
               Building the Future, Together
             </h2>
             <p>
-              Whether it's a startup or a global brand, we bring the same level of commitment, agility, and technical excellence.
-              Let’s shape tomorrow’s digital landscape together.
+              Whether it&lsquos a startup or a global brand, we bring the same level of commitment, agility, and technical excellence.
+              Lets shape tomorrow digital landscape together.
             </p>
           </div>
         </div>

@@ -26,15 +26,16 @@ export default function BlueTokaiBlog() {
         {/* Content */}
         <section className="space-y-6 text-[17px] leading-8">
           <p>
-            In a world overflowing with products, apps, services, and ideas, the loudest voice doesn’t always win—but the clearest one does. That voice can be Marketing & Branding. Marketing is not a nice-to-have option; it’s a necessity. No matter how great your service, product, or team is, if people don't know about it, they are irrelevant in the market. Marketing is about communicating value, building trust, and guiding growth. Whether you’re a startup founder, part of a tech team, or running a global enterprise, marketing bridges the gap between what you offer and what your audience truly needs.
+            In a world overflowing with products, apps, services, and ideas, the loudest voice doesn&rsquo;t always win&mdash;but the clearest one does. That voice can be Marketing &amp; Branding. Marketing is not a nice-to-have option; it&rsquo;s a necessity. No matter how great your service, product, or team is, if people don&rsquo;t know about it, they are irrelevant in the market. Marketing is about communicating value, building trust, and guiding growth. Whether you&rsquo;re a startup founder, part of a tech team, or running a global enterprise, marketing bridges the gap between what you offer and what your audience truly needs.
             <br />
-            Today's Marketing is not about pamphlets, hoarding, radio & TV Ads, Flyers, brochures, and direct mail. Today marketing is digital, data-driven, and interactive. It focuses on creating value, building relationships, and adapting to real-time behavior. Whether you're a startup or a scaled tech company, how you tell your story matters as much as the story itself. In this social revolution marketing become More than marketing it's a "Digital Marketing"
+            Today marketing is digital, data-driven, and interactive. It focuses on creating value, building relationships, and adapting to real-time behavior. Whether you&rsquo;re a startup or a scaled tech company, how you tell your story matters as much as the story itself. In this social revolution, marketing becomes more than marketing&mdash;it&rsquo;s a &quot;Digital Marketing&quot;.
             <br />
             Digital marketing is the use of online platforms and digital tools to promote products, build brands, and engage audiences.
           </p>
+
           <Image
             src="/Nav-Dropdown-icons/Blog10.jpg"
-            alt="Blue Tokai Blog Hero"
+            alt="Digital Marketing Visual"
             width={1200}
             height={600}
             className="rounded-lg w-full object-cover"
@@ -42,12 +43,12 @@ export default function BlueTokaiBlog() {
 
           <h3 className="text-xl font-semibold">Key Channels:</h3>
           <ul className="list-disc pl-6">
-            <li>Search Engine Optimization (SEO) – Helps your website rank higher on Google</li>
-            <li>Social Media Marketing – Engages audiences on platforms like Instagram, LinkedIn, X, and Facebook</li>
-            <li>Email Marketing – Personalized outreach and nurture campaigns</li>
-            <li>Content Marketing – Blogs, videos, guides, and infographics</li>
-            <li>Paid Advertising (PPC) – Targeted ads on Google, YouTube, and social platforms</li>
-            <li>Influencer and Affiliate Marketing – Leveraging trust through partnerships</li>
+            <li>Search Engine Optimization (SEO) &ndash; Helps your website rank higher on Google</li>
+            <li>Social Media Marketing &ndash; Engages audiences on platforms like Instagram, LinkedIn, X, and Facebook</li>
+            <li>Email Marketing &ndash; Personalized outreach and nurture campaigns</li>
+            <li>Content Marketing &ndash; Blogs, videos, guides, and infographics</li>
+            <li>Paid Advertising (PPC) &ndash; Targeted ads on Google, YouTube, and social platforms</li>
+            <li>Influencer and Affiliate Marketing &ndash; Leveraging trust through partnerships</li>
           </ul>
 
           <h2 className="text-2xl font-bold mt-10">Digital Marketing mainly focused on :</h2>
@@ -95,7 +96,7 @@ export default function BlueTokaiBlog() {
 
           <Image
             src="/Nav-Dropdown-icons/Blog12.jpg"
-            alt=""
+            alt="Marketing Approach"
             width={1200}
             height={600}
             className="rounded-lg w-full object-cover"
@@ -103,18 +104,18 @@ export default function BlueTokaiBlog() {
 
           <h2 className="text-2xl font-bold mt-10">Conclusion is Simple: Either Go with the Flow or Be Outdated</h2>
           <p>
-            In today’s fast-moving digital landscape, marketing is no longer a supporting role — it’s a strategic pillar. From building brand awareness to driving measurable growth, smart marketing is how businesses rise above the noise and connect with the people who matter most.
+            In today&rsquo;s fast-moving digital landscape, marketing is no longer a supporting role &mdash; it&rsquo;s a strategic pillar. From building brand awareness to driving measurable growth, smart marketing is how businesses rise above the noise and connect with the people who matter most.
           </p>
 
           <p>
-            At Brandsmashers Tech, we don’t just create marketing strategies — we embody them. We’ve built our own brand from the ground up, utilizing the same tools, storytelling techniques, and digital channels that we offer to our clients. From content creation and SEO to bold messaging and genuine engagement, every aspect of our growth is driven by intentional marketing.
+            At Brandsmashers Tech, we don&rsquo;t just create marketing strategies &mdash; we embody them. We&rsquo;ve built our own brand from the ground up, utilizing the same tools, storytelling techniques, and digital channels that we offer to our clients. From content creation and SEO to bold messaging and genuine engagement, every aspect of our growth is driven by intentional marketing.
           </p>
 
           <p>
             Because we believe if you can market your own brand with clarity and confidence, you can do it for anyone.
           </p>
           <p>
-            And at Brandsmashers — that’s exactly what we do.
+            And at Brandsmashers &mdash; that&rsquo;s exactly what we do.
           </p>
         </section>
       </main>

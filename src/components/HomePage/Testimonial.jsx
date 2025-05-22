@@ -114,7 +114,7 @@ const ClientTestimonials = () => {
           </h2>
           <div className="w-24 h-1 bg-[#ff5010] mx-auto mt-6 mb-8"></div>
           <p className="max-w-3xl mx-auto text-lg text-gray-700">
-            We take pride in delivering exceptional results, but don't just take our word for it. 
+            We take pride in delivering exceptional results, but don&apos;t just take our word for it. 
             Hear directly from our clients as they share their experiences, success stories, 
             and the impact Brandsmashers Tech has made on their businesses.
           </p>
@@ -157,7 +157,7 @@ const ClientTestimonials = () => {
                     
                     {/* Testimonial content */}
                     <p className="text-gray-800 text-lg italic leading-relaxed mb-8">
-                      "{testimonial.content}"
+                      &quot;{testimonial.content}&quot;
                     </p>
                     
                     {/* Client info */}

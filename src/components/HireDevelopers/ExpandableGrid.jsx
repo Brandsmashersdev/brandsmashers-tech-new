@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image'; // Import Image from next/image
 
 const ExpandableGrid = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -103,12 +104,15 @@ const ExpandableGrid = () => {
                   duration-500
                   ease-in-out
                   group-hover:scale-110
-                  ${expandedIndex === index ? 'lg:mt-8 lg:ml-8 mt-4' : ''}
-                `}>
-                  <img 
+                  ${expandedIndex === index ? 'lg:mt-8 lg:ml-8 mt-4' : ''}`}
+                >
+                  {/* Replaced <img> with <Image> component from Next.js */}
+                  <Image 
                     src={item.imageSrc} 
                     alt={item.title}
-                    className="w-12 h-12 object-contain"
+                    width={48}  // Set appropriate width
+                    height={48} // Set appropriate height
+                    className="object-contain"
                   />
                 </div>
               

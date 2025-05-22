@@ -27,7 +27,7 @@ export default function TermsOfService() {
         <header className="border-b border-gray-800 bg-white
         ">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-            <Link href="/" passHref>
+            <Link href="/">
               <div className="text-2xl font-bold cursor-pointer flex items-center">
                 <span className="text-white">{companyDetails.name}</span>
               </div>
@@ -67,11 +67,12 @@ export default function TermsOfService() {
               Throughout these Terms, the following definitions apply:
             </p>
             <ul className="list-disc list-inside text-gray-300 mb-6 ml-4">
-              <li className="mb-2">"Company", "we", "us", or "our" refers to {companyDetails.name}.</li>
-              <li className="mb-2">"Services" refers to all products, software, solutions, and services offered by {companyDetails.name}.</li>
-              <li className="mb-2">"User", "you", or "your" refers to any individual or entity using our Services.</li>
-              <li className="mb-2">"Website" refers to {companyDetails.website} and all subdomains.</li>
-            </ul>
+  <li className="mb-2">&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot; refers to {companyDetails.name}.</li>
+  <li className="mb-2">&quot;Services&quot; refers to all products, software, solutions, and services offered by {companyDetails.name}.</li>
+  <li className="mb-2">&quot;User&quot;, &quot;you&quot;, or &quot;your&quot; refers to any individual or entity using our Services.</li>
+  <li className="mb-2">&quot;Website&quot; refers to {companyDetails.website} and all subdomains.</li>
+</ul>
+
 
             <h2 className="text-2xl font-semibold mb-6">3. Use of Services</h2>
             <p className="text-gray-300 mb-6">

@@ -11,38 +11,38 @@ const Navbar = () => {
   const techDropdownContent = {
     "Mobile App Developers": {
       items: [
-        { name: "Android Developer", iconSrc: "/Nav-Dropdown-icons/Android.svg", path: "android-developer" },
-        { name: "iOS Developer", iconSrc: "/Nav-Dropdown-icons/iOS-Developer.svg", path: "ios-developer" },
-        { name: "Flutter Developer", iconSrc: "/Nav-Dropdown-icons/Flutter.svg", path: "flutter-developer" },
-        { name: "React-Native Developer", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "react-native-developer" },
+        { name: "Android Developer", iconSrc: "/Nav-Dropdown-icons/Android.svg", path: "/android-developer" },
+        { name: "iOS Developer", iconSrc: "/Nav-Dropdown-icons/iOS-Developer.svg", path: "/ios-developer" },
+        { name: "Flutter Developer", iconSrc: "/Nav-Dropdown-icons/Flutter.svg", path: "/flutter-developer" },
+        { name: "React-Native Developer", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "/react-native-developer" },
       ]
     },
     "Front End Developer": {
       items: [
-        { name: "Angular JS Developers", iconSrc: "/Nav-Dropdown-icons/Angular.svg", path: "angular-developer" },
-        { name: "React JS Developers", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "react-js-developer" },
-        { name: "JS Developer", iconSrc: "/Nav-Dropdown-icons/JS.svg", path: "js-developer" },
-        { name: "Next JS Developer", iconSrc: "/Nav-Dropdown-icons/Next-JS.svg", path: "next-js-developer" }
+        { name: "Angular JS Developers", iconSrc: "/Nav-Dropdown-icons/Angular.svg", path: "/angular-developer" },
+        { name: "React JS Developers", iconSrc: "/Nav-Dropdown-icons/React.svg", path: "/react-js-developer" },
+        { name: "JS Developer", iconSrc: "/Nav-Dropdown-icons/JS.svg", path: "/js-developer" },
+        { name: "Next JS Developer", iconSrc: "/Nav-Dropdown-icons/Next-JS.svg", path: "/next-js-developer" }
       ]
     },
     "Back-End Developers": {
       items: [
-        { name: "Laravel Developer", iconSrc: "/Nav-Dropdown-icons/Laravel.svg", path: "laravel-developer" },
-        { name: "Node JS Developer", iconSrc: "/Nav-Dropdown-icons/Node-JS.svg", path: "node-js-developer" },
-        { name: "Python Developer", iconSrc: "/Nav-Dropdown-icons/Python.svg", path: "python-developer" },
-        { name: ".Net Developer", iconSrc: "/Nav-Dropdown-icons/DotNet.svg", path: "dotnet-developer" },
-        { name: "PHP Developers", iconSrc: "/Nav-Dropdown-icons/PHP.svg", path: "php-developer" }
+        { name: "Laravel Developer", iconSrc: "/Nav-Dropdown-icons/Laravel.svg", path: "/laravel-developer" },
+        { name: "Node JS Developer", iconSrc: "/Nav-Dropdown-icons/Node-JS.svg", path: "/node-js-developer" },
+        { name: "Python Developer", iconSrc: "/Nav-Dropdown-icons/Python.svg", path: "/python-developer" },
+        { name: ".Net Developer", iconSrc: "/Nav-Dropdown-icons/DotNet.svg", path: "/dotnet-developer" },
+        { name: "PHP Developers", iconSrc: "/Nav-Dropdown-icons/PHP.svg", path: "/php-developer" }
       ]
     },
     "CMS & E-Commerce Developers": {
       items: [
-        { name: "WordPress Developer", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "wordpress" },
-        { name: "Shopify Developer", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "shopify" },
+        { name: "WordPress Developer", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "/wordpress" },
+        { name: "Shopify Developer", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "/shopify" },
       ]
     },
     "Marketing": {
       items: [
-        { name: "SEO", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "SEO" },
+        { name: "SEO", iconSrc: "/Nav-Dropdown-icons/Drupal.svg", path: "/SEO" },
       ]
     },
   };
@@ -51,7 +51,7 @@ const Navbar = () => {
   const companyDropdownContent = {
     "Company": {
       items: [
-        { name: "Who We Are", iconSrc: "/team.png", path: "/whoweare" },
+        { name: "Who We Are", iconSrc: "/team.png", path: "whoweare" },
         { name: "Join Our Team", iconSrc: "/handshake.png", path: "Career" },
         { name: "Blog", iconSrc: "/content-writing.png", path: "Blog" },
       ]
@@ -106,7 +106,7 @@ const Navbar = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null);
   };
-  
+
   const menuItems = [
     { name: "Company", hasDropdown: true },
     { name: "Services", hasDropdown: true },
@@ -117,12 +117,12 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image 
-            src="/logo.jpg" 
-            alt="Logo" 
-            width={100} 
-            height={50} 
-            style={{ objectFit: "cover" }} 
+          <Image
+            src="/logo.jpg"
+            alt="Logo"
+            width={100}
+            height={50}
+            style={{ objectFit: "cover" }}
           />
         </Link>
       </div>
@@ -133,12 +133,11 @@ const Navbar = () => {
 
       <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
         {menuItems.map((item) => (
-          <li 
+          <li
             key={item.name}
             data-menu-type={item.name}
-            className={`${item.hasDropdown ? styles.hasDropdown : ''} ${
-              activeDropdown === item.name ? styles.active : ''
-            }`}
+            className={`${item.hasDropdown ? styles.hasDropdown : ''} ${activeDropdown === item.name ? styles.active : ''
+              }`}
             onClick={() => item.hasDropdown && toggleDropdown(item.name)}
           >
             <div className={styles.menuItem}>
@@ -146,26 +145,24 @@ const Navbar = () => {
                 {item.name}
               </Link>
               {item.hasDropdown && (
-                <svg 
-                  className={`${styles.dropdownIcon} ${
-                    activeDropdown === item.name ? styles.rotate : ''
-                  }`}
-                  width="10" 
-                  height="6" 
-                  viewBox="0 0 10 6" 
-                  fill="none" 
+                <svg
+                  className={`${styles.dropdownIcon} ${activeDropdown === item.name ? styles.rotate : ''
+                    }`}
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                  fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               )}
             </div>
-            
+
             {/* Company Dropdown */}
             {item.name === "Company" && (
-              <div className={`${styles.dropdownMenu} ${
-                activeDropdown === item.name ? styles.show : ''
-              }`}>
+              <div className={`${styles.dropdownMenu} ${activeDropdown === item.name ? styles.show : ''
+                }`}>
                 <div className={styles.dropdownGrid}>
                   {Object.entries(companyDropdownContent).map(([category, { items }]) => (
                     <div key={category} className={styles.dropdownColumn}>
@@ -174,10 +171,12 @@ const Navbar = () => {
                         {items.map((item) => (
                           <li key={item.path}>
                             <Link href={`/${item.path}`}>
-                              <span className={styles.iconWrapper}>
-                                <Image src={item.iconSrc} alt={`${item.name} icon`} width={20} height={20} />
-                              </span>
-                              {item.name}
+                              <div>
+                                <span className={styles.iconWrapper}>
+                                  <Image src={item.iconSrc} alt={`${item.name} icon`} width={20} height={20} />
+                                </span>
+                                {item.name}
+                              </div>
                             </Link>
                           </li>
                         ))}
@@ -187,12 +186,11 @@ const Navbar = () => {
                 </div>
               </div>
             )}
-            
+
             {/* Services Dropdown */}
             {item.name === "Services" && (
-              <div className={`${styles.dropdownMenu} ${
-                activeDropdown === item.name ? styles.show : ''
-              }`}>
+              <div className={`${styles.dropdownMenu} ${activeDropdown === item.name ? styles.show : ''
+                }`}>
                 <div className={styles.dropdownGrid}>
                   {Object.entries(servicesDropdownContent).map(([category, { items }]) => (
                     <div key={category} className={styles.dropdownColumn}>
@@ -200,7 +198,7 @@ const Navbar = () => {
                       <ul>
                         {items.map((service) => (
                           <li key={service.path}>
-                            <Link href={`/services/${service.path}`}>
+                            <Link href={`/services${service.path}`}>
                               <span className={styles.iconWrapper}>
                                 <Image src={service.iconSrc} alt={`${service.name} icon`} width={20} height={20} />
                               </span>
@@ -214,12 +212,11 @@ const Navbar = () => {
                 </div>
               </div>
             )}
-            
+
             {/* Hire Developers Dropdown */}
             {item.name === "Hire Developers" && (
-              <div className={`${styles.dropdownMenu} ${
-                activeDropdown === item.name ? styles.show : ''
-              }`}>
+              <div className={`${styles.dropdownMenu} ${activeDropdown === item.name ? styles.show : ''
+                }`}>
                 <div className={styles.dropdownGrid}>
                   {Object.entries(techDropdownContent).map(([category, { items }]) => (
                     <div key={category} className={styles.dropdownColumn}>
@@ -227,7 +224,7 @@ const Navbar = () => {
                       <ul>
                         {items.map((tech) => (
                           <li key={tech.path}>
-                            <Link href={`/tech/${tech.path}`}>
+                            <Link href={`/tech${tech.path}`}>
                               <span className={styles.iconWrapper}>
                                 <Image src={tech.iconSrc} alt={`${tech.name} icon`} width={20} height={20} />
                               </span>

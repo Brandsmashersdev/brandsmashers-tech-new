@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link"; // Import Link from next/link
 
 const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
   return (
@@ -9,7 +10,7 @@ const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
           {/* Text Content */}
           <div className="w-full md:w-1/2 space-y-6">
             <div className="inline-block">
-              {/* <span className="text-lg font-semibold px-4 py-2 rounded-full  text-[#ff5010]">
+              {/* <span className="text-lg font-semibold px-4 py-2 rounded-full text-[#ff5010]">
                 {title}
               </span> */}
             </div>
@@ -23,26 +24,23 @@ const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
             </p>
             
             <div className="pt-4">
-            <a href="/contactus" className="inline-block">
-  <button 
-    className="flex items-center gap-2 px-8 py-4 rounded-lg font-medium text-white bg-[#ff5010] hover:bg-[#e04509] transition-colors duration-300 shadow-lg"
-  >
-    {buttonText}
-    <ArrowRight size={18} />
-  </button>
-</a>
+   
+              <Link href="/contactus">
+                <button 
+                  className="flex items-center gap-2 px-8 py-4 rounded-lg font-medium text-white bg-[#ff5010] hover:bg-[#e04509] transition-colors duration-300 shadow-lg"
+                >
+                  {buttonText}
+                  <ArrowRight size={18} />
+                </button>
+              </Link>
             </div>
           </div>
           
           {/* Image Container */}
           <div className="w-full md:w-1/2 relative">
             <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl">
-              </div> 
-              
-          
-            {/* <div className="absolute -top-6 -right-6 w-64 h-64 bg-orange-100 rounded-full -z-0 blur-xl opacity-70"></div> */}
-            
-            {/* <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[#ff5010] rounded-full -z-0 blur-xl opacity-20"></div> */}
+              {/* Add image here */}
+            </div>
           </div>
         </div>
       </div>

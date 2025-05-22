@@ -31,8 +31,7 @@ const ComingSoon = () => {
       }}>
         We’re working hard to bring something exciting your way! Stay tuned for updates!
       </p>
-      <Link href="/" legacyBehavior>
-        <a style={{
+      <Link href="/" legacyBehavior style={{
           padding: "12px 30px", 
           backgroundColor: "#24c0e3", 
           color: "#fff", 
@@ -43,7 +42,6 @@ const ComingSoon = () => {
           transition: "background-color 0.3s",
         }}>
           Go Back Home
-        </a>
       </Link>
     </div>
   );

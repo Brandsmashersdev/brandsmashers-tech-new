@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image"; // ✅ Import Next.js Image component
 import styles from "./WhyBrandsmashers.module.css";
 
 const cardData = [
@@ -27,9 +28,11 @@ const WhyBrandsmashers = () => {
     <section className={styles.container}>
       <div className={styles.content}>
         <header className={styles.heading}>
-          <h2 className={styles.title}>Why <span className={styles.highlight}>Brandsmashers</span></h2>
+          <h2 className={styles.title}>
+            Why <span className={styles.highlight}>Brandsmashers</span>
+          </h2>
           <p className={styles.subheading}>
-            At <span className={styles.highlight}>Brandsmashers</span>, we don't just build software, we build long-term
+            At <span className={styles.highlight}>Brandsmashers</span>, we do not just build software; we build long-term
             partnerships based on trust, quality, and innovation. Our commitment
             to excellence ensures that we consistently deliver top-tier
             solutions that meet your evolving business needs.
@@ -53,7 +56,14 @@ const WhyBrandsmashers = () => {
 const Card = ({ icon, title, description }) => (
   <div className={styles.card}>
     <div className={styles.icon}>
-      <img src={icon} alt={title} className={styles.iconImage} />
+      {/* ✅ Use optimized Image component */}
+      <Image
+        src={icon}
+        alt={title}
+        width={64} // ✅ You can adjust width/height as needed
+        height={64}
+        className={styles.iconImage}
+      />
     </div>
     <h3 className={styles.cardTitle}>{title}</h3>
     <p className={styles.cardDescription}>{description}</p>

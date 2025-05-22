@@ -1,4 +1,3 @@
-// ContactForm.jsx
 "use client";
 import { useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
@@ -89,7 +88,6 @@ const [loading, setLoading] = useState(false);
   
     };
   
-  
  const handleServiceFormSubmit = async(e) => {
       e.preventDefault();
       // In a real application, you would handle the form submission here
@@ -97,6 +95,7 @@ const [loading, setLoading] = useState(false);
            try {
              const formDataToSend = new FormData();
              
+
              Object.keys(serviceForm).forEach(key => {
                formDataToSend.append(key, serviceForm[key]);
              });
@@ -168,8 +167,7 @@ const [loading, setLoading] = useState(false);
       return Object.keys(newErrors).length === 0;
     };
   
- 
-  
+
   return (
     <>
      <ToastContainer />
@@ -193,7 +191,7 @@ const [loading, setLoading] = useState(false);
               </svg>
             </div>
             <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
-            <p className="text-gray-400">Your message has been received. We'll get back to you shortly.</p>
+            <p className="text-gray-400">Your message has been received. We&apos;ll get back to you shortly.</p>
             <button 
               onClick={() => setSubmitted(false)}
               className="mt-6 px-6 py-3 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900"

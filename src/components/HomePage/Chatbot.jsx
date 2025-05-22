@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Send, X, MessageSquare, Loader } from "lucide-react";
+import Image from "next/image";
 
 const WhatsAppChatbot = () => {
   // Replace with your actual WhatsApp number including country code (no spaces or special chars)
-  const whatsappNumber = "7000863918"; 
-  
+  const whatsappNumber = "7000863918";
+
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [imgSrc, setImgSrc] = useState('/whatsapp2.png');
   const [messages, setMessages] = useState([
     {
       sender: "bot",
@@ -27,12 +29,12 @@ const WhatsAppChatbot = () => {
       text: inputText,
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     };
-    
+
     setMessages((prev) => [...prev, userMessage]);
-    
+
     // Show typing indicator
     setIsTyping(true);
-    
+
     // Simulate brief delay
     setTimeout(() => {
       // Add response message
@@ -41,10 +43,10 @@ const WhatsAppChatbot = () => {
         text: "Thank you for your message! Redirecting you to WhatsApp to continue the conversation...",
         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
-      
+
       setMessages((prev) => [...prev, botResponse]);
       setIsTyping(false);
-      
+
       // Open WhatsApp with the provided number and pre-filled message
       setTimeout(() => {
         const encodedText = encodeURIComponent(inputText);
@@ -65,7 +67,7 @@ const WhatsAppChatbot = () => {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping]);
-  
+
   // Alternative direct WhatsApp redirect without chat interface
   const openWhatsAppDirect = () => {
     if (inputText.trim() === "") {
@@ -99,14 +101,13 @@ const WhatsAppChatbot = () => {
           <div className="bg-green-600 p-4 flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-                <img
-                  src="/whatsapp2.png" 
+                <Image
+                  src={imgSrc}
                   alt="Brandsmashers"
-                  className="w-8 h-8 object-contain"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "https://via.placeholder.com/40";
-                  }}
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                  onError={() => setImgSrc('https://via.placeholder.com/40')}
                 />
               </div>
               <div>
@@ -128,23 +129,21 @@ const WhatsAppChatbot = () => {
               {messages.map((msg, index) => (
                 <div
                   key={index}
-                  className={`flex ${
-                    msg.sender === "user" ? "justify-end" : "justify-start"
-                  }`}
+                  className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"
+                    }`}
                 >
                   <div
-                    className={`max-w-[80%] rounded-lg p-3 ${
-                      msg.sender === "user"
+                    className={`max-w-[80%] rounded-lg p-3 ${msg.sender === "user"
                         ? "bg-green-600 text-white rounded-tr-none"
                         : "bg-gray-800 text-white rounded-tl-none"
-                    }`}
+                      }`}
                   >
                     <p className="text-sm">{msg.text}</p>
                     <p className="text-xs mt-1 opacity-70 text-right">{msg.time}</p>
                   </div>
                 </div>
               ))}
-              
+
               {/* Typing indicator */}
               {isTyping && (
                 <div className="flex justify-start">
@@ -177,11 +176,10 @@ const WhatsAppChatbot = () => {
               <button
                 onClick={handleSendMessage}
                 disabled={inputText.trim() === ""}
-                className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                  inputText.trim() === ""
+                className={`w-10 h-10 rounded-full flex items-center justify-center ${inputText.trim() === ""
                     ? "bg-gray-700 text-gray-500"
                     : "bg-green-600 text-white hover:bg-green-700"
-                } transition-colors`}
+                  } transition-colors`}
                 title="Send and redirect to WhatsApp"
               >
                 <Send size={18} />

@@ -13,16 +13,15 @@ import WhoWeAreHero from '@/components/Company/WhoWeAreHero';
 const whoweare = () => {
   return (
     <div>
-        <Navbar />
-      
-        <WhoWeAreHero/>
+      <Navbar />
+      <WhoWeAreHero />
       <Introduction />
       <OurStory />
       <OurCompany />
       <Team />
       <TL />
       <Map />
-      <Footer/>
+      <Footer />
     </div>
   )
 }

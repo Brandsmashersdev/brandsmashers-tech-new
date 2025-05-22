@@ -5,9 +5,9 @@ import styles from "./StatisticsSection.module.css";
 const statsData = [
   { value: 2001, label: "Year of foundations", isStatic: true },
   { value: 810, label: "Global Customers", suffix: "+" },
-  { value: 1080, label: "IT Professionals" , suffix: "+"},
+  { value: 1080, label: "IT Professionals", suffix: "+" },
   { value: 36, label: "Countries with active customers" },
-  { value: 1800, label: "Completed Projects" , suffix: "+"},
+  { value: 1800, label: "Completed Projects", suffix: "+" },
   { value: 5, label: "Offices" },
   { value: 90, label: "Customer Retention", suffix: "%" },
   { value: 22, label: "Industries Served", suffix: "+" },
@@ -18,6 +18,8 @@ const StatisticsSection = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const currentSectionRef = sectionRef.current; // Save the current ref value to a variable
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -25,20 +27,20 @@ const StatisticsSection = () => {
         }
       },
       {
-        threshold: 0.5, // Adjust to trigger when 50% of the section is visible
+        threshold: 0.5, // Trigger when 50% of the section is visible
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef);
       }
     };
-  }, []);
+  }, []); // Empty dependency array means this effect runs only once after the component mounts
 
   return (
     <section className={styles.container} ref={sectionRef}>

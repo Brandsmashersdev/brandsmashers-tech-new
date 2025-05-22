@@ -13,6 +13,9 @@ import styles from "../components/HireDevelopers/herosection.module.css";
 import PartnerCompanies from "@/components/HireDevelopers/PartnerCompanies";
 import TrialForm from "@/components/HireDevelopers/Android/Trial";
 
+// Importing Image component from next/image
+import Image from "next/image";
+
 export default function HireDevelopers() {
   // State to handle visibility of TrialForm
   const [showTrialForm, setShowTrialForm] = useState(false);
@@ -26,6 +29,7 @@ export default function HireDevelopers() {
   const closeTrialForm = () => {
     setShowTrialForm(false);
   };
+
   const [isFormVisible, setIsFormVisible] = useState(false);
 
   const handleOpenForm = () => {
@@ -69,11 +73,16 @@ export default function HireDevelopers() {
             {/* Image Container */}
             <div className={styles.imageContainer}>
               <div className={styles.brandImage}>
-                <img
-                  src="./heroSection.png"
-                  alt="Brandsmashers Logo"
-                  className={styles.objectContain}
-                />
+                {/* Replaced <img> with <Image /> */}
+                <div className="relative w-full h-72">
+                  <Image
+                    src="/heroSection.png" // Assuming the image is inside the public folder
+                    alt="Brandsmashers Logo"
+                    layout="fill" // Ensure it covers the container
+                    objectFit="contain"
+                    className={styles.objectContain}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -88,7 +97,7 @@ export default function HireDevelopers() {
           </div>
         </div>
       )}
-      
+
       {/* Other components */}
       <RemoteDevelopers />
       <ProcessChart />
