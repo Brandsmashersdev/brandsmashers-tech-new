@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import Link from 'next/link';  // Add this import statement at the top of your file
+import Link from 'next/link';
 import Image from "next/image";
-
 
 const BlogCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -13,59 +12,36 @@ const BlogCarousel = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "10 Essential DevOps Practices Every Tech Team Should Adopt",
-      excerpt: "Discover the key DevOps strategies that can transform your development workflow and boost productivity across your entire organization.",
-      category: "Development",
-      date: "May 2, 2025",
-      author: "Priya Sharma",
-      authorRole: "Lead DevOps Engineer",
-      image: "/api/placeholder/600/400",
-      readTime: "6 min read"
+      title: "Healthy Documentation : An Unsung Hero of a Scalable Team.",
+      excerpt: "What is the most effective method for preserving the vital facts, insightful research, diverse opinions.",
+      image: "/Nav-Dropdown-icons/image_blog.jpg",
+      readTime: "6 min read",
+      link: "/blogsection1"
     },
     {
       id: 2,
-      title: "The Future of AI in Custom Software Development",
-      excerpt: "Explore how artificial intelligence is revolutionizing the software development landscape and creating new opportunities for businesses.",
-      category: "Artificial Intelligence",
-      date: "April 28, 2025",
-      author: "Rahul Kapoor",
-      authorRole: "AI Solutions Architect",
-      image: "/api/placeholder/600/400",
-      readTime: "8 min read"
+      title: "Scalable Tech & Green IT",
+      excerpt: "As we move through the Industrial Revolution and the Information Revolution",
+      image: "/Nav-Dropdown-icons/image_blog2.jpg",
+      readTime: "8 min read",
+      link: "/blogsection2"
     },
     {
       id: 3,
-      title: "Why Cloud-Native Applications Are the New Standard",
-      excerpt: "Learn how cloud-native architecture is becoming the industry standard and how it can provide unparalleled scalability for your business.",
-      category: "Cloud Computing",
-      date: "April 15, 2025",
-      author: "Alex Chen",
-      authorRole: "Cloud Solutions Expert",
-      image: "/api/placeholder/600/400",
-      readTime: "5 min read"
+      title: "Scoop of Digital Marketing",
+      excerpt: "In a world overflowing with products, apps, services, and ideas, the loudest voice doesn’t always win—but the clearest one does.",
+      image: "/Nav-Dropdown-icons/Blog9.jpg",
+      readTime: "5 min read",
+      link: "/blogSection3"
     },
     {
       id: 4,
-      title: "Securing Your Enterprise Applications: A Comprehensive Guide",
-      excerpt: "Cybersecurity threats are evolving. Discover the latest approaches to protecting your enterprise applications from sophisticated attacks.",
-      category: "Cybersecurity",
-      date: "April 10, 2025",
-      author: "Maya Patel",
-      authorRole: "Security Specialist",
-      image: "/api/placeholder/600/400",
-      readTime: "7 min read"
+      title: "From Branding to Brandsmashers ",
+      excerpt: "In the midst of every crisis, lies great opportunity",
+      image: "/Nav-Dropdown-icons/Blog17.png",
+      readTime: "7 min read",
+      link: "/blogsection4"
     },
-    {
-      id: 5,
-      title: "The Rise of Progressive Web Apps in 2025",
-      excerpt: "Progressive Web Apps continue to gain momentum. Find out why businesses are increasingly turning to PWAs for enhanced user experiences.",
-      category: "Web Development",
-      date: "April 5, 2025",
-      author: "David Wilson",
-      authorRole: "Frontend Lead",
-      image: "/api/placeholder/600/400",
-      readTime: "4 min read"
-    }
   ];
 
   // Calculate visible posts based on screen size
@@ -103,6 +79,7 @@ const BlogCarousel = () => {
   // Touch event handlers for swipe
   const handleTouchStart = (e) => {
     setTouchStartX(e.touches[0].clientX);
+    setTouchEndX(e.touches[0].clientX);
   };
 
   const handleTouchMove = (e) => {
@@ -110,12 +87,17 @@ const BlogCarousel = () => {
   };
 
   const handleTouchEnd = () => {
-    if (touchStartX - touchEndX > 75) {
-      // Swipe left
-      nextSlide();
-    } else if (touchEndX - touchStartX > 75) {
-      // Swipe right
-      prevSlide();
+    const swipeDistance = touchStartX - touchEndX;
+    const minSwipeDistance = 50; // Reduced threshold for easier swiping
+    
+    if (Math.abs(swipeDistance) > minSwipeDistance) {
+      if (swipeDistance > 0) {
+        // Swipe left - go to next slide
+        nextSlide();
+      } else {
+        // Swipe right - go to previous slide
+        prevSlide();
+      }
     }
   };
 
@@ -129,7 +111,7 @@ const BlogCarousel = () => {
     
     return () => clearInterval(interval);
   }, [blogPosts.length, visiblePosts, isHovering]);
-    
+
   return (
     <div className="py-24 md:py-32 bg-gradient-to-br from-gray-50 to-orange-50 relative overflow-hidden">
       {/* Decorative elements */}
@@ -143,10 +125,10 @@ const BlogCarousel = () => {
         <div className="hidden lg:block absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
           {[...Array(10)].map((_, i) => (
             <div 
-              key={i} 
-              className="absolute h-0.5 w-full bg-gradient-to-r from-transparent via-orange-300 to-transparent" 
-              style={{ 
-                top: `${i * 10}%`, 
+              key={i}
+              className="absolute h-0.5 w-full bg-gradient-to-r from-transparent via-orange-300 to-transparent"
+              style={{
+                top: `${i * 10}%`,
                 transform: 'rotate(45deg) scale(2) translateX(-25%)',
                 opacity: i % 2 === 0 ? '0.3' : '0.15'
               }}
@@ -158,10 +140,6 @@ const BlogCarousel = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <div className="text-center mb-16 md:mb-20 relative">
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-12 w-24 h-24 rounded-full bg-orange-100 opacity-60 blur-sm"></div>
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-10 w-16 h-16 rounded-full bg-orange-200 opacity-60 blur-sm"></div>
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-8 w-8 h-8 rounded-full bg-orange-300 opacity-60"></div>
-
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 relative tracking-tight">
             Our Latest <span className="text-[#ff5010] relative">
               Insights
@@ -181,17 +159,21 @@ const BlogCarousel = () => {
         {/* Blog carousel */}
         <div
           ref={carouselRef}
-          className="relative"
+          className="relative touch-pan-x"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
+          style={{ touchAction: 'pan-x' }}
         >
           <div className="overflow-hidden px-2 md:px-4">
             <div
-              className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${activeIndex * (100 / visiblePosts)}%)` }}
+              className="flex transition-transform duration-500 ease-out touch-pan-x"
+              style={{ 
+                transform: `translateX(-${activeIndex * (100 / visiblePosts)}%)`,
+                touchAction: 'pan-x'
+              }}
             >
               {blogPosts.map((post) => (
                 <div
@@ -224,17 +206,7 @@ const BlogCarousel = () => {
                       </div>
                       
                       {/* Author info - shown on hover */}
-                      <div className="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                        <div className="text-center text-white p-6">
-                          <div className="w-16 h-16 rounded-full bg-orange-100 mx-auto mb-3 flex items-center justify-center">
-                            <span className="text-xl font-bold text-[#ff5010]">
-                              {post.author.split(' ').map(name => name[0]).join('')}
-                            </span>
-                          </div>
-                          <p className="text-lg font-medium">{post.author}</p>
-                          <p className="text-sm text-gray-300">{post.authorRole}</p>
-                        </div>
-                      </div>
+                  
                     </div>
 
                     {/* Blog content with angled divider */}
@@ -254,12 +226,12 @@ const BlogCarousel = () => {
                         
                         <p className="text-base text-gray-600 mb-6 line-clamp-3">{post.excerpt}</p>
 
-                        <a href={`/blog/${post.id}`} className="inline-flex items-center justify-center px-6 py-3 bg-[#ff5010] text-base font-bold rounded-full text-white hover:bg-[#e84600] transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-orange-200/50 group-hover:scale-105 w-full sm:w-auto">
+                        <Link href={post.link} className="inline-flex items-center justify-center px-6 py-3 bg-[#ff5010] text-base font-bold rounded-full text-white hover:bg-[#e84600] transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-orange-200/50 group-hover:scale-105 w-full sm:w-auto">
                           Read Article
                           <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                           </svg>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -275,8 +247,8 @@ const BlogCarousel = () => {
                 key={index}
                 onClick={() => setActiveIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  activeIndex === index 
-                    ? 'bg-[#ff5010] w-8' 
+                  activeIndex === index
+                    ? 'bg-[#ff5010] w-8'
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
@@ -286,7 +258,7 @@ const BlogCarousel = () => {
 
           {/* Carousel navigation buttons */}
           <button 
-            className="absolute top-1/2 -left-4 sm:left-0 transform -translate-y-1/2 cursor-pointer z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 bg-white/90 backdrop-blur-sm text-[#ff5010] w-12 h-12 md:w-14 md:h-14 rounded-full shadow-lg flex items-center justify-center border border-gray-100"
+            className="absolute top-1/2 -left-4 sm:left-0 transform -translate-y-1/2 cursor-pointer z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 bg-white/90 backdrop-blur-sm text-[#ff5010] w-12 h-12 md:w-14 md:h-14  shadow-lg flex items-center justify-center border border-gray-100"
             onClick={prevSlide}
             aria-label="Previous slide"
           >

@@ -239,7 +239,7 @@ const HeroSection = () => {
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-2 text-white">
                 <span className="text-[#ff5010] font-bold">Expert Developers</span>
                 <span className="relative inline-block px-2">
-                  <span className="relative z-10">×</span>
+                  {/* <span className="relative z-10">×</span> */}
                   <span className="absolute inset-0 bg-[#ff5010]/10 rounded-full"></span>
                 </span>
                 <span>Streamlined Solutions</span>
