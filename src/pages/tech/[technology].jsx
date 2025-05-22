@@ -2069,7 +2069,7 @@ const technologyData = {
     }
   },
 
-  
+
   "shopify": {
     title: "Hire Best Shopify Developer from India",
     description:" Looking for a skilled Shopify developer from India? Your search ends here! Hire top Shopify developers from Brandsmashers Tech to build secure, scalable, and high-performing eCommerce stores. Our experts ensure seamless integrations, user-friendly designs, and customized solutions tailored to meet your business needs. Hire Shopify developers today to create a feature-rich online store that drives conversions and growth.",

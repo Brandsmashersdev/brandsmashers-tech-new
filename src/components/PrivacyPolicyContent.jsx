@@ -21,9 +21,7 @@ export default function PrivacyPolicyContent() {
               Privacy <span className="text-orange-600">Policy</span>
             </h1>
             <div className="h-1 w-16 bg-orange-600 mb-6"></div>
-            <p className="text-gray-400">
-              Last Updated: May 20, 2025
-            </p>
+      
           </div>
 
           <div className="space-y-8">

@@ -33,20 +33,18 @@ const ITSolutions = () => {
   const solutions = [
     {
       id: 1,
-      src: "/digital.png",
+      src: "/digital.jpg",
       alt: "Mobile App Development",
       title: "Mobile App Development",
       description: "Scalable software systems for complex enterprise needs",
-      icon: "💼",
       link: "/services/mobileAppDevelopment"
     },
     {
       id: 2,
-      src: "/development.png",
+      src: "/development.jpg",
       alt: "Web Development",
       title: "Web Development",
       description: "Native and cross-platform app solutions",
-      icon: "📱",
       link: "/services/webdevelopment"
     },
     {
@@ -55,7 +53,6 @@ const ITSolutions = () => {
       alt: "Product Development",
       title: "Product Development",
       description: "Seamless cloud migration and management",
-      icon: "☁️",
       link: "/services/productDevelopment"
     },
     {
@@ -64,7 +61,6 @@ const ITSolutions = () => {
       alt: "Custom Software Development",
       title: "Custom Software Development",
       description: "Insightful data processing and visualization",
-      icon: "📊",
       link: "/services/customService"
     }
   ];
@@ -118,11 +114,7 @@ const ITSolutions = () => {
                 height={320}
                 className="w-full h-80 object-cover object-center transition-all duration-700 group-hover:scale-110"
               />
-              <div className="absolute top-6 left-6 z-30">
-                <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#ff5010] text-white text-2xl">
-                  {item.icon}
-                </span>
-              </div>
+           
               <div className="absolute bottom-0 left-0 right-0 p-6 z-30">
                 <h3 className="text-white font-bold text-xl mb-2 group-hover:text-[#ff5010] transition-colors duration-300">
                   {item.title}
@@ -252,11 +244,11 @@ const ITSolutions = () => {
               <div className="relative rounded-xl overflow-hidden border-4 border-gray-800 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#ff5010]/20 to-transparent opacity-60 mix-blend-overlay"></div>
                 <Image
-                  src="/digital.png"
+                  src="/mobile.jpeg"
                   alt="Digital transformation services"
-                  className="w-full h-full object-cover"
-                  width={600}
-                  height={400}
+                  className="w-full h-100 object-cover"
+                  width={400}
+                  height={500}
                 />
 
                 {/* Stats Overlay */}
@@ -291,7 +283,7 @@ const ITSolutions = () => {
                 className="group relative overflow-hidden bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-[#ff5010]/50 transition-all duration-300"
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#ff5010]/0 via-[#ff5010] to-[#ff5010]/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                <h4 className="text-[#ff5010] text-3xl md:text-4xl font-bold mb-2">{stat.value}</h4>
+                <h4 className="text-[#ff5010] text-3xl md:tex-t-4xl font-bold mb-2">{stat.value}</h4>
                 <p className="text-gray-300">{stat.label}</p>
               </div>
             ))}
