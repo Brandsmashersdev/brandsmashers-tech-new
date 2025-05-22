@@ -14,7 +14,7 @@ const whoweare = () => {
   return (
     <div>
         <Navbar />
-        <first/>
+      
         <WhoWeAreHero/>
       <Introduction />
       <OurStory />

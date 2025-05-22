@@ -261,6 +261,7 @@ const ITSolutions = () => {
               {/* Main Image */}
               <div className="relative rounded-xl overflow-hidden border-4 border-gray-800 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#ff5010]/20 to-transparent opacity-60 mix-blend-overlay"></div>
+                
                 <img 
                   src="/digital.png" 
                   alt="Digital transformation services"
@@ -299,15 +300,12 @@ const ITSolutions = () => {
                 className="group relative overflow-hidden bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-[#ff5010]/50 transition-all duration-300"
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#ff5010]/0 via-[#ff5010] to-[#ff5010]/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                <h4 className="text-[#ff5010] text-3xl md:text-4xl font-bold mb-2">{stat.value}</h4>
+                <h4 className="text-[#ff5010] text-3xl md:tex-t-4xl font-bold mb-2">{stat.value}</h4>
                 <p className="text-gray-300">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
-        
-        {/* Footer CTA */}
-      
       </div>
     </div>
   );

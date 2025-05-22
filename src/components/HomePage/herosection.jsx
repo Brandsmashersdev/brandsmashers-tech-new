@@ -166,7 +166,7 @@ const HeroSection = () => {
             autoPlay 
             muted 
             loop 
-            playsInline
+            playsInline 
             height="100%"
             width="100%"
           // Optional: Add a poster image while video loads
