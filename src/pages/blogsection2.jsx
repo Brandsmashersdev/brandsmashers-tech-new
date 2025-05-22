@@ -16,7 +16,7 @@ const BlogSection2 = () => {
       </blockquote>
 
       <p className="mt-4">
-        Always remember, readability matters. Avoid writing things like "Hello World"
+        Always remember, readability matters. Avoid writing things like Hello World
         without escaping quotes in JSX.
       </p>
     </section>

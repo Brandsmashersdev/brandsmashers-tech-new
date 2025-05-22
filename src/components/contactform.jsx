@@ -192,7 +192,7 @@ export default function ContactForm() {
         <div className="text-center mb-16">
         
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Let's Start a{' '}
+            Let&apos;s Start a{' '}
             <span className="bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
               Conversation
             </span>
@@ -264,7 +264,7 @@ export default function ContactForm() {
             <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-orange-600 to-orange-500 p-8">
                 <h2 className="text-3xl font-bold text-white text-center">Get In Touch</h2>
-                <p className="text-orange-100 text-center mt-2">We'd love to hear about your project</p>
+                <p className="text-orange-100 text-center mt-2">We&apos;d love to hear about your project</p>
               </div>
               
               <div className="p-8 md:p-12">
