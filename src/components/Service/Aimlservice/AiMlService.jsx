@@ -304,16 +304,7 @@ const AiMlService = () => {
       description: "Our partnership doesn't end at deployment. We provide comprehensive maintenance and support to ensure your software continues to perform optimally.",
       icon: LifeBuoy
     },
-    {
-      title: "Legacy System Modernization Services",
-      description: "Revitalize your outdated systems with our legacy system modernization services. We upgrade and transform legacy applications into modern, efficient, and scalable solutions that align with today’s business demands and technology standards.",
-      icon: RefreshCw
-    },
-    {
-      title: "Software Maintenance & Support Services",
-      description: "Ensure your software remains reliable and up-to-date with our maintenance and support services. We provide ongoing enhancements, bug fixes, and performance monitoring to keep your applications running smoothly and securely.",
-      icon: Wrench
-    }
+  
   ];
 
   //process data
@@ -391,31 +382,52 @@ const AiMlService = () => {
     <div className="font-sans text-gray-800">
       <ToastContainer />
       {/**header section */}
-      <header className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white"
-
+      <section
+        className="py-16 px-6 md:px-12 text-white relative bg-gray-900 flex-grow"
       >
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="container mx-auto px-4 py-24 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight  mb-6"> AI/ML Development Services</h1>
-            <p className="text-xl mb-8">Unlock the power of Artificial Intelligence and Machine Learning with Brandsmashers Tech. We build smart, data-driven solutions that automate processes, enhance decision-making, and drive business growth</p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contactus" >
-              <div>
+        {/* Background Image with Overlay */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1536148935331-408321065b18?q=80&w=1920&auto=format&fit=crop')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Darker Overlay for Better Text Contrast */}
+          <div className="absolute inset-0 bg-black opacity-80"></div>
+        </div>
 
-                <button
-                  className="rounded-md px-6 py-3 font-bold flex items-center"
-                  style={{ backgroundColor: primaryColor }}
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              {/* Modified title to ensure it stays on one line */}
+              <h1
+                className="text-4xl md:text-5xl font-bold mb-6 whitespace-nowrap"
+                style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}
+              >
+        AI/ML Developer
+              </h1>
+              {/* Modified paragraph to create two distinct lines */}
+              <div className="text-lg mb-8 font-medium text-white">
+                <p className="mb-2">
+                Unlock the power of intelligent automation and data-driven insights with our AI/ML development services. We build smart, scalable, and adaptive solutions that help you innovate faster and make smarter business decisions.
+</p>
+              </div>
+              <div className="flex space-x-4">
+                <Link href="/contact" className="inline-block">
+                  <button
+                    className="rounded-md px-6 py-3 font-bold flex items-center"
+                    style={{ backgroundColor: primaryColor }}
                   >
-                  Get Started <ArrowRight className="ml-2" size={18} />
-                </button>
-                  </div>
-              </Link>
-
+                    Get Started <ArrowRight className="ml-2" size={18} />
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
       {/** services section */}
       <section className="py-16 bg-gray-50">
@@ -445,7 +457,7 @@ const AiMlService = () => {
       {/* Solution Metrics Section */}
       <AimlSolutionMetrix />
 
-      {/**hiring cost section */}
+      {/** cost section */}
 
       <section className="py-16 px-6 md:px-12 bg-white text-black">
         <div className="max-w-6xl mx-auto">
@@ -632,63 +644,58 @@ const AiMlService = () => {
           </div>
         </div>
       </section>
+  {/* Technologies Section */}
+  <section
+        className="py-16 px-6 md:px-12"
+        style={{ backgroundColor: `${primaryColor}05 ` }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">AI/ML Development Technologies We Work On</h2>
+            <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
+              Leverage the expertise of a top app development company to build high-performance, feature-rich mobile apps.
+            </p>
+          </div>
 
+          <div className="flex flex-wrap justify-center gap-8">
+            {['React Native', 'Flutter', 'Swift', 'Kotlin', 'Java', 'Objective-C', 'Unity', 'Firebase'].map((tech, index) => (
+              <div
+                key={index}
+                className="px-6 py-3 bg-white rounded-full shadow-md font-medium"
+                style={{ color: primaryColor }}
+              >
+                {tech}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/**why choose section */}
       <section className="py-16 text-white bg-[#0b0b0b]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">
-              Why Choose <span className="text-[#ff5722] text-3xl md:text-4xl">Brandsmashers Tech</span> for Cutting-Edge AI/ML Development
+              Why <span className="text-[#ff5010]">Brandsmashers Tech</span> Is Your Ideal Partner for AI/ML Development
             </h2>
             <p className="text-lg max-w-3xl mx-auto text-gray-400">
-              Unlock the full potential of AI and Machine Learning with Brandsmashers Tech. Our expert team builds smart, scalable, and custom solutions that automate workflows, boost efficiency, and drive innovation for your business.
-
+              Looking for a reliable partner to bring your software idea to life? Brandsmashers Tech is your go-to expert for end-to-end software product development. We blend innovation, agility, and top-tier talent to build powerful, scalable solutions that drive real results.
             </p>
           </div>
 
-          {/* Industries Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((reason, index) => (
               <div
                 key={index}
-                className="bg-gray-900 rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg border border-gray-800"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                className="bg-[#161616] p-6 rounded-xl border border-[#2c2c2c] shadow-lg hover:shadow-[0_0_20px_#ff5722aa] transition-all duration-300"
               >
-                {/* Colored top bar */}
-                <div className={`h-1 w-full bg-[#ff5010]`}></div>
-
-                <div className="p-6">
-                  {/* Icon and title */}
-                  <div className="flex items-center mb-4">
-                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center mr-4 transition-colors duration-300 ${hoveredIndex === index ? "bg-[#ff5010] text-white" : "bg-[#ff5010] bg-opacity-20 text-[#ff5010]"
-                      }`}>
-                      {reason.icon && (<reason.icon className="w-6 h-6" />)}
-                    </div>
-                    <h3 className="font-bold text-lg text-white">{reason.title}</h3>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-gray-300">{reason.description}</p>
-
-                  {/* Learn more link */}
-                  <a
-                    href="#"
-                    className={`mt-4 inline-flex items-center text-sm font-medium transition-colors duration-300 ${hoveredIndex === index ? "text-[#ff5010]" : "text-gray-400"
-                      }`}
-                  >
-                    Learn more
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-[#ff5010] mr-3" size={28} />
+                  <h3 className="text-xl font-semibold text-white">{reason.title}</h3>
                 </div>
+                <p className="text-gray-400">{reason.description}</p>
               </div>
             ))}
           </div>
-
-
-
         </div>
       </section>
       {/**case study section */}
@@ -722,6 +729,44 @@ const AiMlService = () => {
           </div>
         </div>
       </section>
+            {/* Call to Action Section */}
+            <section className="py-16 px-6 md:px-12 text-white bg-[#0b0b0b] relative overflow-hidden">
+
+{/* Glowing Accent Shape */}
+<div className="absolute -bottom-10 right-0 w-32 h-32 md:w-64 md:h-64 bg-[#ff5722] rounded-full opacity-20 blur-2xl"></div>
+
+<div className="max-w-6xl mx-auto text-center relative z-10">
+  <h2 className="text-4xl md:text-5xl font-bold mb-6">
+    Ready to Build Your <span className="text-[#ff5722]">Next Product?</span>
+  </h2>
+  <p className="max-w-2xl mx-auto text-lg mb-12 text-gray-400">
+    Lets transform your idea into a powerful digital product that drives growth and engages users.
+  </p>
+
+  <div className="inline-block mb-16">
+    <button className="bg-transparent hover:bg-[#ff5722] transition-colors px-8 py-3 rounded-md font-medium text-white border-2 border-[#ff5722] hover:border-[#ff5722] hover:text-black">
+      Discuss Your Business Requirements
+    </button>
+  </div>
+
+  <div className="flex flex-col md:flex-row justify-center md:space-x-16 space-y-6 md:space-y-0">
+    {[
+      { text: 'Technical Excellence' },
+      { text: 'Dedicated Team' },
+      { text: 'Innovative Solutions' },
+    ].map((item, index) => (
+      <div key={index} className="flex items-center justify-center">
+        <div className="h-12 w-12 rounded-full bg-[#161616] border-2 border-[#ff5722] flex items-center justify-center mr-3 shadow-[0_0_10px_#ff572255]">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#ff5722]" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+          </svg>
+        </div>
+        <span className="text-white text-lg">{item.text}</span>
+      </div>
+    ))}
+  </div>
+</div>
+</section>
       {/**faq section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">

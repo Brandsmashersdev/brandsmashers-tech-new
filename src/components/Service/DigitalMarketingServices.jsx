@@ -222,16 +222,7 @@ export default function DigitalMarketingPage() {
       description: "Maximize your ROI with goal-oriented, data-backed advertising campaigns. We focus on results — whether it's lead generation, sales, or app installs — using channels like Google Ads, Meta Ads, and more.",
       icon: LineChart
     },
-    {
-      title: "eCommerce Marketing",
-      description: "Boost your online store's traffic and sales with targeted eCommerce marketing strategies. From SEO and paid ads to abandoned cart recovery, we help you scale and succeed in the competitive online marketplace.",
-      icon: ShoppingCart
-    },
-    {
-      title: "Consulting & Strategy",
-      description: "Get expert guidance to build a winning digital marketing strategy tailored to your business goals. We analyze your brand, audience, and competitors to craft a data-driven roadmap for long-term growth and success.",
-      icon: Settings
-    }
+   
   ];
 
   // Process steps
@@ -279,6 +270,10 @@ export default function DigitalMarketingPage() {
     {
       title: "Transparent Reporting & Communication",
       description: "You stay in the loop at all times with regular updates, clear reports, and proactive strategy recommendations."
+    },
+    {
+      title: "Cutting-Edge Tools & Technologies",
+      description: "We leverage the latest digital marketing tools, automation platforms, and AI-driven insights to give your campaigns a competitive edge."
     }
   ];
 
@@ -329,40 +324,52 @@ export default function DigitalMarketingPage() {
     <div>
       <ToastContainer />
       {/* Hero Section with Digital Marketing Background */}
-      <header className="relative text-white bg-black"
-        style={{
-          // backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
+      <section
+        className="py-16 px-6 md:px-12 text-white relative bg-gray-900 flex-grow"
       >
-        <div className="absolute inset-0"></div>
-        <div className="container mx-auto px-4 md:px-12 py-24 relative z-10">
-          <div className="text-left">
-            <h1 className="text-5xl font-bold leading-tight mb-6">
-              {/* Adding decorative element behind the text */}
-              <span className="relative inline-block">
-                <span className="absolute -left-3 -top-3 w-12 h-12 rounded-full opacity-20"
-                  style={{ backgroundColor: "#ff5010", filter: "blur(15px)" }}>
-                </span>
-                Best Digital Marketing Services
-              </span>
-            </h1>
-            <p className="text-xl mb-8 max-w-3xl">Drive growth, boost visibility, and attract the right audience with our best-in-class digital marketing services. From SEO and social media to paid ads and content marketing, we create data-driven strategies that deliver real results for your business.</p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contactus" >
-                <button
-                  className="rounded-md px-6 py-3 font-bold flex items-center"
-                  style={{ backgroundColor: primaryColor }}
-                >
-                  Get Started <ArrowRight className="ml-2" size={18} />
-                </button>
-              </Link>
+        {/* Background Image with Overlay */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1536148935331-408321065b18?q=80&w=1920&auto=format&fit=crop')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Darker Overlay for Better Text Contrast */}
+          <div className="absolute inset-0 bg-black opacity-80"></div>
+        </div>
 
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              {/* Modified title to ensure it stays on one line */}
+              <h1
+                className="text-4xl md:text-5xl font-bold mb-6 whitespace-nowrap"
+                style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}
+              >
+          Digital Marketing Services
+              </h1>
+              {/* Modified paragraph to create two distinct lines */}
+              <div className="text-lg mb-8 font-medium text-white">
+                <p className="mb-2">
+                Amplify your brand’s voice with our data-driven digital marketing strategies — from SEO and social media to paid campaigns. We help you connect, convert, and grow in today’s digital-first world
+</p>
+              </div>
+              <div className="flex space-x-4">
+                <Link href="/contact" className="inline-block">
+                  <button
+                    className="rounded-md px-6 py-3 font-bold flex items-center"
+                    style={{ backgroundColor: primaryColor }}
+                  >
+                    Get Started <ArrowRight className="ml-2" size={18} />
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </header>
+      </section>
       {/* Main Service Introduction */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">

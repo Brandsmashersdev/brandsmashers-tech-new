@@ -41,7 +41,7 @@ const AimlSolutionMetrix = () => {
         <div className="text-center mb-12">
       <h2 className="text-3xl md:text-4xl font-bold mb-6">
         Your Reliable Partner for 
- <span className="text-[#ff5722]">Scalable</span> and <span className="text-[#ff5722]">Intelligent AI/ML Development</span>
+ <span className="text-[#ff5722]"> Scalable</span> and <span className="text-[#ff5722]">Intelligent AI/ML Development</span>
       </h2>
       <p className="text-lg text-gray-400 max-w-3xl mx-auto">
         Looking to bring smart automation to your business? Brandsmashers Tech is here to turn your vision into reality with scalable, AI-powered solutions that grow with you. Let’s build the future—together.

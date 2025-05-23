@@ -351,32 +351,53 @@ export default function ProductDevelopmentPage() {
 
       <ToastContainer />
       {/* Hero Section */}
-      <header className="relative text-white bg-black"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url("/api/placeholder/1200/600")',
-          backgroundSize: 'cover'
-        }}
+     
+      <section
+        className="py-16 px-6 md:px-12 text-white relative bg-gray-900 flex-grow"
       >
-        <div className="absolute inset-0"></div>
-        <div className="container mx-auto px-6 md:px-24 py-24 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold leading-tight mb-6">Product Development Services</h1>
-            <p className="text-xl mb-8">Bring your ideas to life with our full-cycle product development services — from concept to launch. We craft innovative, scalable, and industry-leading solutions that set your brand apart.</p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contactus" className="inline-block">
-                <button
-                  className="rounded-md px-6 py-3 font-bold flex items-center"
-                  style={{ backgroundColor: primaryColor }}
-                >
-                  Get Started <ArrowRight className="ml-2" size={18} />
-                </button>
-              </Link>
+        {/* Background Image with Overlay */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1536148935331-408321065b18?q=80&w=1920&auto=format&fit=crop')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Darker Overlay for Better Text Contrast */}
+          <div className="absolute inset-0 bg-black opacity-80"></div>
+        </div>
 
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              {/* Modified title to ensure it stays on one line */}
+              <h1
+                className="text-4xl md:text-5xl font-bold mb-6 whitespace-nowrap"
+                style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}
+              >
+           Product Development
+              </h1>
+              {/* Modified paragraph to create two distinct lines */}
+              <div className="text-lg mb-8 font-medium text-white">
+                <p className="mb-2">
+                Bring your ideas to life with our full-cycle product development services — from concept to launch. We craft innovative, scalable, and industry-leading solutions that set your brand apart.
+</p>
+              </div>
+              <div className="flex space-x-4">
+                <Link href="/contact" className="inline-block">
+                  <button
+                    className="rounded-md px-6 py-3 font-bold flex items-center"
+                    style={{ backgroundColor: primaryColor }}
+                  >
+                    Get Started <ArrowRight className="ml-2" size={18} />
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </header>
-
+      </section>
       {/* Services Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -436,7 +457,7 @@ export default function ProductDevelopmentPage() {
       </section>
 
 
-      {/* Hire Digital Marketing Expert Section */}
+      {/* Cost section*/}
       <section className="py-16 px-6 md:px-12 bg-white text-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -558,7 +579,7 @@ export default function ProductDevelopmentPage() {
                     value={serviceForm.message}
                     onChange={handleServiceFormChange}
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
-                    placeholder="Tell us about your digital marketing needs..."
+                    placeholder="Tell us about your Product Development needs..."
                   ></textarea>
                 </div>
 
@@ -624,6 +645,32 @@ export default function ProductDevelopmentPage() {
         </div>
       </section>
 
+    {/* Technologies Section */}
+    <section
+        className="py-16 px-6 md:px-12"
+        style={{ backgroundColor: `${primaryColor}05 ` }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">App Development Technologies We Work On</h2>
+            <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
+              Leverage the expertise of a top app development company to build high-performance, feature-rich mobile apps.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-8">
+            {['React Native', 'Flutter', 'Swift', 'Kotlin', 'Java', 'Objective-C', 'Unity', 'Firebase'].map((tech, index) => (
+              <div
+                key={index}
+                className="px-6 py-3 bg-white rounded-full shadow-md font-medium"
+                style={{ color: primaryColor }}
+              >
+                {tech}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Why Choose Us Section */}
       <section className="py-16 text-white bg-[#0b0b0b]">
         <div className="container mx-auto px-4">
