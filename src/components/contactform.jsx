@@ -200,7 +200,7 @@ export default function ContactForm() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ready to transform your ideas into reality? Our team of experts is here to discuss your vision and provide tailored solutions that drive success.
           </p>
-          
+        
           {/* Contact Info Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
@@ -234,7 +234,7 @@ export default function ContactForm() {
               <p className="text-gray-600 text-sm">Rapid deployment and implementation</p>
             </div>
           </div>
-        </div>
+          </div>
 
         {submitted ? (
           <div className="max-w-2xl mx-auto">
@@ -266,7 +266,6 @@ export default function ContactForm() {
                 <h2 className="text-3xl font-bold text-white text-center">Get In Touch</h2>
                 <p className="text-orange-100 text-center mt-2">We&apos;d love to hear about your project</p>
               </div>
-              
               <div className="p-8 md:p-12">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                   <div className="space-y-2">
