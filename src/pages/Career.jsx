@@ -16,8 +16,8 @@ const career = () => {
     <div>
         <Navbar/>
       <HeroSection/>
-      <Story/>
       <PerksSection/>
+      <Story/>
       <StoryBanner/>
       <CultureSection/>
       <EmployeeTestimonials/> 
