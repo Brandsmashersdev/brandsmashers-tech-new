@@ -1,4 +1,3 @@
-import Head from "next/head";
 import ReadyToInnovate from "@/components/HomePage/ReadyToInnovate";
 import ITSolutions from "@/components/HomePage/ITSolutions";
 import OurVision from "@/components/HomePage/OurVision";
@@ -17,58 +16,29 @@ import FAQSection from "@/components/HomePage/FAQSection";
 import Chatbot from "@/components/HomePage/Chatbot";
 import Qualifications from "@/components/HomePage/Qualifications";
 
+// import "../components/HomePage/TechnologyServices.module.css";
+// import "../components/HomePage/Industries.module.css";
+
+
 export default function Home() {
   return (
-    <>
-      {/* GTM HEAD Script */}
-      <Head>
-        <title>Home | Your Website</title>
-        <meta name="description" content="Your Description Here" />
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
-              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-              f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-MMM4SMCF');
-            `,
-          }}
-        />
-        {/* End Google Tag Manager */}
-      </Head>
-
-      {/* GTM Noscript */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-MMM4SMCF"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        ></iframe>
-      </noscript>
-
-      {/* Main Page Components */}
-      <div className="bg-[#343333]">
-        <Navbar />
-        <HeroSection />
-        {/* <SolutionsMatrix/> */}
-        <ITSolutions />
-        <Qualifications />
-        <ReadyToInnovate />
-        <OurVision />
-        {/* <OurPartner/> */}
-        <TechnologyServices />
-        <Testimonial />
-        <Industries />
-        <WhyChooseUs />
-        <Blogs />
-        <FAQSection />
-        <Footer />
-        <Chatbot />
-      </div>
-    </>
+    <div className="bg-[#343333]">
+     <Navbar/>
+    <HeroSection/>
+    {/* <SolutionsMatrix/> */}
+    <ITSolutions/>
+  <Qualifications/>
+    <ReadyToInnovate/>
+  <OurVision/>
+    {/* <OurPartner/> */}
+    <TechnologyServices/>
+    <Testimonial/>
+    <Industries/>
+    <WhyChooseUs/>
+    <Blogs/>
+    <FAQSection/>
+     <Footer/> 
+     <Chatbot/>
+    </div>
   );
 }
