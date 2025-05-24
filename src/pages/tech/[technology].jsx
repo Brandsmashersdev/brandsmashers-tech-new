@@ -11,7 +11,7 @@ import ServiceGrids from "@/components/HireDevelopers/Android/ServiceGrid";
 import DynamicCarousel from "@/components/HireDevelopers/DynamicCarousel";
 import Head from "next/head";
 import FAQSection from "@/components/HomePage/FAQSection";
-import ComingSoon from "@/pages/coming-soon";
+
 
 
 // Technology data
@@ -2165,7 +2165,7 @@ export default function TechnologyDetails() {
     return (
       <>
         <Navbar />
-        <ComingSoon />
+       
         <Footer />
       </>
     );

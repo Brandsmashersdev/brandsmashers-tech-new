@@ -692,11 +692,7 @@ export default function DigitalMarketingPage() {
             Take the first step toward digital marketing success. Get a free consultation and learn how we can help your business grow.
           </p>
 
-          <div className="inline-block mb-16">
-            <button className="bg-transparent hover:bg-[#ff5722] transition-colors px-8 py-3 rounded-md font-medium text-white border-2 border-[#ff5722] hover:border-[#ff5722] hover:text-black">
-              Get a Free Consultation Today
-            </button>
-          </div>
+       
 
           <div className="flex flex-col md:flex-row justify-center md:space-x-16 space-y-6 md:space-y-0">
             {[

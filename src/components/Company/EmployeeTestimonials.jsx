@@ -5,22 +5,22 @@ import Image from 'next/image'; // Import Image from Next.js
 
 export default function EmployeeTestimonials() {
   return (
-    <section className="bg-gray-50 dark:bg-gray-900 py-16 sm:py-20 px-4">
+    <section className="bg-gray-50 dark:bg py-16 sm:py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         {/* Section Title */}
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
-          <span className="text-white">Employee</span>{' '}
+          <span className="text-black">Employee</span>{' '}
           <span className="text-[#ff5010]">Testimonials</span>
         </h2>
-        <p className="text-gray-300 mb-12 max-w-3xl mx-auto text-lg sm:text-xl">
+        <p className="text-black mb-12 max-w-3xl mx-auto text-lg sm:text-xl">
           Hear what our team has to say about working at Softude. We believe in
           appreciation, growth, and a great work culture.
         </p>
 
         {/* Testimonial Card */}
         <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl transition-all duration-300 hover:shadow-2xl">
-          <p className="text-gray-700 dark:text-gray-300 text-lg sm:text-xl leading-relaxed mb-6 italic">
-            “It has been 10+ years with Brandsmashers (Previously Systematix Infotech) and
+          <p className="text-gray-700 dark:text-gray-300 text-lg sm:text-xl leading-relaxed mb-6 ">
+            “It has been 5+ years with Brandsmashers (Previously Systematix Infotech) and
             it&apos;s truly an AWESOME place to work in. It has a nice work culture and
             allows employees to work freely. Also, there&apos;s great support from seniors.
             Employees are motivated and appreciated for their efforts.”

@@ -62,24 +62,7 @@ export default function BrandSmasherBlog() {
         </div>
       </div>
 
-      {/* Category Navigation */}
-      <div className="bg-gray-100 py-4 px-6">
-        <div className="max-w-6xl mx-auto flex space-x-4 overflow-x-auto">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveTab(category)}
-              className={`text-sm px-4 py-2 font-bold border-b-2 ${
-                activeTab === category
-                  ? 'border-[#FF5010] text-[#FF5010]'
-                  : 'border-transparent text-gray-600 hover:text-black'
-              } transition`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-      </div>
+ 
 
       {/* Blog Cards Section */}
       <div className="bg-white py-16 px-6">

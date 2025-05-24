@@ -172,7 +172,7 @@ export default function Footer() {
 
           <div className="flex flex-wrap gap-6 justify-center mb-4 md:mb-0">
             {[
-              { name: "Sitemap", link: "/sitemap" },
+              // { name: "Sitemap", link: "/sitemap" },
               { name: "Terms of Service", link: "/termsofservice" },
               { name: "Privacy Policy", link: "/PrivacyPolicyPage" }
             ].map((item) => (
