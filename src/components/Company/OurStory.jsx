@@ -42,7 +42,7 @@ export default function FounderCard() {
             We&apos;re proud of how far we&apos;ve come — and even more excited about what lies ahead. {/* Fixed apostrophes */}
           </blockquote>
 
-          <p className="mb-6 text-gray-700">
+          <p className="mb-6 text-gray-700 text-justify">
             Founded in 2018 by Aayush Jain and Muskan Chhatrashal, Brandsmashers Tech began as a two-person venture with a bold vision: to revolutionize the way businesses connect with top tech talent. What started as a small initiative has now grown into a dynamic team of 80+ skilled professionals spread across the globe.<br/><br/>
             Our mission has always been clear — to bridge the gap between IT recruiters and the best remote developers through a simple, fast, and hassle-free hiring process. We&apos;ve helped numerous leading tech companies accelerate their growth by providing expert staffing solutions that integrate seamlessly into their teams. Whether it&apos;s scaling development efforts, meeting tight project deadlines, or finding niche skill sets, our developers step in as an extension of your team from day one.<br/><br/>
             But we&apos;re more than just a staffing agency. Brandsmashers Tech also offers end-to-end software solutions tailored to businesses across multiple sectors. From product ideation to post-launch support, we&apos;re committed to delivering results that drive real business impact. {/* Fixed apostrophes */}
