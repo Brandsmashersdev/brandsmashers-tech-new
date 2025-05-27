@@ -1,145 +1,410 @@
+/* Base styles */
 .main_wrapper {
-    width: 100%;
-    background-color: #D9D9D9;
-    padding: 2rem 0;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  background-color: #D9D9D9;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel_container {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel_heading {
+  color: #000000;
+  width: 100%;
+  max-width: 1160px;
+  text-align: center;
+  font-family: gilroy;
+  font-weight: 700;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 43.57px;
+  margin-bottom: 1rem;
+}
+
+.carousel_heading span {
+  color: #ff5010;
+}
+
+.carousel_description {
+  color: black;
+  width: 100%;
+  max-width: 941px;
+  font-family: gilroy;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cards_container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.technology_card {
+  width: 279px;
+  height: 237px;
+  background-color: rgb(0, 0, 0);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px 55px 12px 55px;
+  border-left: 7px solid #ff5010;
+  transition: opacity 0.5s ease-in-out;
+  flex-shrink: 0;
+}
+
+.fade_out {
+  opacity: 0;
+}
+
+.fade_in {
+  opacity: 1;
+}
+
+.icon_container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.icon_container img {
+  width: 48px;
+  height: 48px;
+}
+
+.card_title {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card_description {
+  color: white;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.navigation_dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #4B5563;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #00B2FF;
+}
+
+.dot:hover {
+  background-color: #6B7280;
+}
+
+.dot.active:hover {
+  background-color: #0EA5E9;
+}
+
+/* Mobile phones (up to 767px) */
+@media (max-width: 767px) {
+  .main_wrapper {
+    padding: 1.5rem 0;
   }
-  
+
   .carousel_container {
-    width: 80%;
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 90%;
   }
-  
+
   .carousel_heading {
-    color: #000000;
-    width: 100%;
-    max-width: 1160px;
-    text-align: center;
-    font-family: gilroy;
-    font-weight: 700;
-    font-size: 34px;
-    font-style: italic;
-    font-weight: 500;
-    line-height: 43.57px;
-    margin-bottom: 1rem;
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 0.75rem;
   }
-  
-  .carousel_heading span {
-    color: #ff5010;
-  }
-  
+
   .carousel_description {
-    color: black;
-    width: 100%;
-    max-width: 941px;
-    font-family: gilroy;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 500;
-    line-height: 24px;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .cards_container {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
+    font-size: 16px;
+    line-height: 20px;
     margin-bottom: 1.5rem;
   }
-  
+
+  .cards_container {
+    gap: 1rem;
+  }
+
+  .technology_card {
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+    padding: 1.25rem;
+  }
+
+  .card_title {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card_description {
+    font-size: 0.8125rem;
+  }
+
+  .navigation_dots {
+    gap: 0.4rem;
+  }
+
+  .dot {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+}
+
+/* iPad Mini Portrait (768px - 834px) */
+@media (min-width: 768px) and (max-width: 834px) {
+  .main_wrapper {
+    padding: 1.75rem 0;
+  }
+
+  .carousel_container {
+    width: 85%;
+  }
+
+  .carousel_heading {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 0.875rem;
+  }
+
+  .carousel_description {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 1.75rem;
+  }
+
+  .cards_container {
+    gap: 1.25rem;
+    max-width: 100%;
+  }
+
+  .technology_card {
+    width: calc(50% - 0.625rem);
+    min-width: 240px;
+    max-width: 300px;
+    height: 225px;
+    padding: 1.375rem;
+  }
+
+  .card_title {
+    font-size: 1.1875rem;
+  }
+
+  .card_description {
+    font-size: 0.8125rem;
+  }
+}
+
+/* iPad Air/Pro Portrait and iPad Mini Landscape (835px - 1024px) */
+@media (min-width: 835px) and (max-width: 1024px) {
+  .main_wrapper {
+    padding: 1.875rem 0;
+  }
+
+  .carousel_container {
+    width: 82%;
+  }
+
+  .carousel_heading {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 0.9375rem;
+  }
+
+  .carousel_description {
+    font-size: 19px;
+    line-height: 23px;
+    margin-bottom: 1.875rem;
+  }
+
+  .cards_container {
+    gap: 1.375rem;
+  }
+
+  .technology_card {
+    width: calc(50% - 0.6875rem);
+    min-width: 260px;
+    max-width: 320px;
+    height: 230px;
+    padding: 1.4375rem;
+  }
+
+  .card_title {
+    font-size: 1.21875rem;
+  }
+
+  .card_description {
+    font-size: 0.84375rem;
+  }
+}
+
+/* iPad Pro 11" and 12.9" Portrait/Landscape (1025px - 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .main_wrapper {
+    padding: 2rem 0;
+  }
+
+  .carousel_container {
+    width: 85%;
+  }
+
+  .carousel_heading {
+    font-size: 32px;
+    line-height: 41px;
+  }
+
+  .carousel_description {
+    font-size: 19px;
+    line-height: 23px;
+  }
+
+  .cards_container {
+    gap: 1.4375rem;
+  }
+
+  .technology_card {
+    width: calc(33.333% - 0.9583rem);
+    min-width: 250px;
+    max-width: 290px;
+    height: 235px;
+  }
+}
+
+/* Large iPad Pro Landscape and Desktop (1367px+) */
+@media (min-width: 1367px) {
+  .carousel_container {
+    width: 80%;
+  }
+
+  .cards_container {
+    gap: 1.5rem;
+  }
+
   .technology_card {
     width: 279px;
     height: 237px;
-    background-color: rgb(0, 0, 0);
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px 55px 12px 55px;
-    border-left: 7px solid #ff5010;
-    transition: opacity 0.5s ease-in-out;
-    flex-shrink: 0;
   }
-  
-  .fade_out {
-    opacity: 0;
-  }
-  
-  .fade_in {
-    opacity: 1;
-  }
-  
-  .icon_container {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
+}
+
+/* High DPI/Retina displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .icon_container img {
-    width: 48px;
-    height: 48px;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
   }
-  
+}
+
+/* Landscape orientation specific adjustments for tablets */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .main_wrapper {
+    padding: 1.5rem 0;
+  }
+
+  .carousel_heading {
+    margin-bottom: 0.75rem;
+  }
+
+  .carousel_description {
+    margin-bottom: 1.5rem;
+  }
+
+  .technology_card {
+    height: 200px;
+    padding: 1.25rem;
+  }
+
   .card_title {
-    color: white;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
   }
-  
+
   .card_description {
-    color: white;
-    font-size: 0.875rem;
-    text-align: center;
+    font-size: 0.8125rem;
   }
-  
-  .navigation_dots {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
+}
+
+/* Portrait orientation specific adjustments for tablets */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .technology_card {
+    height: 240px;
   }
-  
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
   .dot {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: #4B5563;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin: 0.25rem;
   }
-  
-  .dot.active {
-    background-color: #00B2FF;
+
+  .technology_card {
+    cursor: default;
   }
-  
-  @media (max-width: 768px) {
-    .carousel_container {
-      width: 90%;
-    }
-  
-    .carousel_heading {
-      font-size: 24px;
-      line-height: normal;
-    }
-  
-    .carousel_description {
-      font-size: 16px;
-      line-height: 20px;
-    }
-  
-    .technology_card {
-      width: 100%;
-    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .technology_card {
+    transition: none;
   }
-  
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .technology_card {
-      width: 45%;
-    }
+
+  .dot {
+    transition: none;
   }
+}
+
+/* Print styles */
+@media print {
+  .main_wrapper {
+    background-color: white;
+    padding: 1rem 0;
+  }
+
+  .navigation_dots {
+    display: none;
+  }
+
+  .technology_card {
+    border: 1px solid #ccc;
+    background-color: white;
+    color: black;
+    page-break-inside: avoid;
+  }
+
+  .card_title,
+  .card_description {
+    color: black;
+  }
+}

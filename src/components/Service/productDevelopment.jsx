@@ -462,7 +462,7 @@ export default function ProductDevelopmentPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Hire a <span className="text-[#ff5010]">Product Development</span> Tailored to Your Business Needs
+              Hire a <span className="text-[#ff5010]">Product Developer </span> Tailored to Your Business Needs
             </h2>
             <p className="max-w-3xl mx-auto text-lg text-gray-600">
               Boost your online presence with expert digital marketers who understand your goals. Whether it&#39;s
@@ -771,11 +771,7 @@ export default function ProductDevelopmentPage() {
             Lets transform your idea into a powerful digital product that drives growth and engages users.
           </p>
 
-          <div className="inline-block mb-16">
-            <button className="bg-transparent hover:bg-[#ff5722] transition-colors px-8 py-3 rounded-md font-medium text-white border-2 border-[#ff5722] hover:border-[#ff5722] hover:text-black">
-              Discuss Your Business Requirements
-            </button>
-          </div>
+       
 
           <div className="flex flex-col md:flex-row justify-center md:space-x-16 space-y-6 md:space-y-0">
             {[

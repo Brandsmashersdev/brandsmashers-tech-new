@@ -453,29 +453,30 @@ export default function WebDevelopmentPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Hire a <span className="text-[#ff5010]">Web Developer</span> Tailored to Your Business Needs
+              Hire a <span className="text-[#ff5010]">Web Developer </span> Tailored to Your Business Needs
             </h2>
             <p className="max-w-3xl mx-auto text-lg text-gray-600">
-              Boost your online presence with expert digital marketers who understand your goals. Whether it&apos;s SEO, social media, paid ads, or full-scale strategy — hire dedicated professionals on flexible terms with complete transparency and security.
+              Boost your online presence with expert digital marketers who understand your goals. Whether it&#39;s
+              SEO, social media, paid ads, or full-scale strategy — hire dedicated professionals on flexible terms with complete transparency and security.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
               {
-                title: 'Simple & Transparent Pricing',
+                title: "Simple & Transparent Pricing",
                 icon: CheckCircle,
-                description: 'Clear pricing structure with no hidden costs. Pay only for what you need.'
+                description: "Clear pricing structure with no hidden costs. Pay only for what you need."
               },
               {
-                title: 'Fully Signed NDA',
+                title: "Fully Signed NDA",
                 icon: FileText,
-                description: 'Your business information stays secure with legally binding non-disclosure agreements.'
+                description: "Your business information stays secure with legally binding non-disclosure agreements."
               },
               {
-                title: 'Easy Exit Policy',
+                title: "Easy Exit Policy",
                 icon: ArrowRight,
-                description: 'Flexible engagement models with straightforward exit terms if needed.'
+                description: "Flexible engagement models with straightforward exit terms if needed."
               }
             ].map((item, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
@@ -498,6 +499,7 @@ export default function WebDevelopmentPage() {
           </div>
         </div>
 
+        {/* Contact Form Modal */}
         {showContactForm && (
           <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
             <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md relative">
@@ -509,10 +511,79 @@ export default function WebDevelopmentPage() {
               </button>
 
               <h3 className="text-2xl font-bold mb-6 text-center text-black">Schedule a Call</h3>
-
               <form onSubmit={handleServiceFormSubmit}>
-                {/* Form fields same as before */}
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={serviceForm.name}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={serviceForm.email}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={serviceForm.phone}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="+1 (123) 456-7890"
+                    required
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+                    How can we help you? (Optional)
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={serviceForm.message}
+                    onChange={handleServiceFormChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                    placeholder="Tell us about your Product Development needs..."
+                  ></textarea>
+                </div>
+
+                <div className="flex items-center justify-center">
+                  <button
+                    type="submit"
+                    className="bg-[#ff5010] hover:bg-[#ff672b] text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline w-full"
+                  >
+                    Submit
+                  </button>
+                </div>
               </form>
+
             </div>
           </div>
         )}
@@ -690,12 +761,7 @@ export default function WebDevelopmentPage() {
             Lets transform your idea into a powerful digital product that drives growth and engages users.
           </p>
 
-          <div className="inline-block mb-16">
-            <button className="bg-transparent hover:bg-[#ff5722] transition-colors px-8 py-3 rounded-md font-medium text-white border-2 border-[#ff5722] hover:border-[#ff5722] hover:text-black">
-              Discuss Your Business Requirements
-            </button>
-          </div>
-
+    
           <div className="flex flex-col md:flex-row justify-center md:space-x-16 space-y-6 md:space-y-0">
             {[
               { text: 'Technical Excellence' },

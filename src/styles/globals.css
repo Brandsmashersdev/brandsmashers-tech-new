@@ -6,6 +6,17 @@
   --background: #343333;
   --foreground: #171717;
 }
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+  max-width: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari */
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {

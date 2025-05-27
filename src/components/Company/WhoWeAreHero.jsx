@@ -19,12 +19,12 @@ export default function WhoWeAreHero() {
         </div>
 
         {/* Right Vision Text Section */}
-        <div className="md:w-1/2 space-y-6 text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
+        <div className="md:w-1/2 space-y-6 text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 ">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold text-[#ff5010] mb-2">
               Driving Innovation with Passion and Purpose
             </h2>
-            <p>
+            <p className="text-justify">
               We are a team of thinkers, doers, and visionaries who thrive on crafting digital solutions that make an impact.
               Our culture is rooted in collaboration, creativity, and a relentless drive to empower clients with scalable, smart, and future-ready tech.
             </p>
@@ -33,8 +33,8 @@ export default function WhoWeAreHero() {
             <h2 className="text-xl sm:text-2xl font-bold text-[#ff5010] mt-4 mb-2">
               Building the Future, Together
             </h2>
-            <p>
-              Whether it&lsquos a startup or a global brand, we bring the same level of commitment, agility, and technical excellence.
+            <p className="text-justify">
+              Whether it&apos;s a startup or a global brand, we bring the same level of commitment, agility, and technical excellence.
               Lets shape tomorrow digital landscape together.
             </p>
           </div>

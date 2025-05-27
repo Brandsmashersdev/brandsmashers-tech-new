@@ -152,11 +152,7 @@ const ITSolutions = () => {
                     className="w-full h-48 md:h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/40"></div>
-                  <div className="absolute top-4 left-4">
-                    <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#ff5010] text-white text-xl">
-                      {item.icon}
-                    </span>
-                  </div>
+                
                 </div>
                 <div className="p-6 md:w-2/3 flex flex-col justify-center">
                   <h3 className="text-white font-bold text-xl mb-2">{item.title}</h3>

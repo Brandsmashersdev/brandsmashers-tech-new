@@ -34,11 +34,24 @@ const DynamicCarousel = ({ heading = {}, title = '', description = '', cardsData
   const [totalSlides, setTotalSlides] = useState(1);
   const [currentCards, setCurrentCards] = useState([]);
 
-  // Function to get responsive cards per slide
+  // Function to get responsive cards per slide with tablet-specific breakpoints
   const getCardsPerSlide = () => {
     if (typeof window !== 'undefined') {
-      if (window.innerWidth < 768) return 1;
-      if (window.innerWidth < 1024) return 2;
+      const width = window.innerWidth;
+      
+      // Mobile phones
+      if (width < 768) return 1;
+      
+      // iPad Mini (768px - 834px)
+      if (width >= 768 && width <= 834) return 2;
+      
+      // iPad Air/Pro Portrait (834px - 1024px)
+      if (width > 834 && width <= 1024) return 2;
+      
+      // iPad Pro 11" and 12.9" Portrait/Landscape (1024px - 1366px)
+      if (width > 1024 && width <= 1366) return 3;
+      
+      // Large tablets and desktop
       return 3;
     }
     return 3;

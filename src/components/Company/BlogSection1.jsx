@@ -1,229 +1,187 @@
-import Image from 'next/image';
-import Head from 'next/head';
+import React from 'react';
 
-export default function HealthyDocumentationBlog() {
+export default function ModernDocumentationBlog() {
   return (
-    <>
-      <Head>
-        <title>Healthy Documentation | Blog</title>
-        <meta name="description" content="Learn about the importance of healthy documentation in scaling teams" />
-      </Head>
-
-      <main className="font-sans text-gray-800 bg-white">
-        {/* Hero Section with Overlay */}
-        <section className="relative h-96 mb-16">
-          <div className="absolute inset-0">
-            <Image
-              src="/Nav-Dropdown-icons/image_blog.jpg"
-              alt="Hero image"
-              width={1200}
-              height={600}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-60"></div>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="relative bg-black overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+          <div className="text-center">
+            <div className="inline-block px-4 sm:px-6 py-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-4 sm:mb-6">
+              <span className="text-white font-semibold text-xs sm:text-sm tracking-wide uppercase">
+                Featured Article
+              </span>
+            </div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 sm:mb-6 leading-tight px-2">
+              Healthy
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+                Documentation
+              </span>
+            </h1>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4">
+              The foundation of every scalable team. Building knowledge systems that transform how teams collaborate and grow.
+            </p>
+            <div className="flex items-center justify-center space-x-4 sm:space-x-8 text-xs sm:text-sm text-gray-400">
+              <span>5 min read</span>
+              <div className="w-px h-3 sm:h-4 bg-gray-600"></div>
+              <span>Essential reading</span>
+            </div>
           </div>
-          <div className="relative h-full max-w-6xl mx-auto px-4 flex flex-col justify-center">
-            <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-                Healthy Documentation
-              </h1>
-              <p className="text-xl text-white font-medium">
-                An Unsung Hero of a Scalable Team
-              </p>
+        </div>
+        
+        {/* Decorative elements - hidden on small screens */}
+        <div className="hidden sm:block absolute top-20 left-10 w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-full opacity-20 animate-pulse"></div>
+        <div className="hidden sm:block absolute bottom-20 right-10 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-br from-orange-500 to-red-500 rounded-full opacity-10 animate-pulse delay-1000"></div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        
+        {/* Introduction */}
+        <div className="mb-8 sm:mb-12 lg:mb-16">
+          <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 first-letter:text-4xl sm:first-letter:text-6xl first-letter:font-bold first-letter:text-orange-500 first-letter:float-left first-letter:mr-2 sm:first-letter:mr-3 first-letter:mt-1">
+              Good documentation isn&apos;t glamorous. It does&apos;t cost much. But it&apos;s the hidden tool that separates scalable teams from struggling ones. Consider the silent cost of poor documentation — the invisible drain on productivity, trust, and organizational efficiency.
+            </p>
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+              What preserves vital knowledge over time? How do you capture insights, processes, and outcomes in a way that scales with your team? The answer lies in building robust documentation systems that grow with your organization.
+            </p>
+          </div>
+        </div>
+
+        {/* Why It Matters Section */}
+        <section className="mb-8 sm:mb-12 lg:mb-16">
+          <div className="flex items-center mb-6 sm:mb-8">
+            <div className="w-1 h-8 sm:h-12 bg-gradient-to-b from-orange-500 to-red-500 mr-3 sm:mr-4"></div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-black">Why Documentation Matters</h2>
+          </div>
+          
+          <div className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8">
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              Documentation becomes the central nervous system of successful teams. It&apos;s not just about recording information—it&apos;s about creating a knowledge ecosystem that enables faster decision-making, smoother onboarding, and sustained growth.
+            </p>
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+              When done right, documentation eliminates bottlenecks, reduces meetings, and empowers every team member to work independently while staying aligned with collective goals.
+            </p>
+          </div>
+
+          {/* Key Benefits */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
+            <div className="bg-black rounded-lg sm:rounded-xl p-4 sm:p-6 text-white hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl font-bold">→</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2">Speed & Efficiency</h3>
+              <p className="text-gray-300 text-sm">Teams move faster when answers are documented and easily accessible.</p>
+            </div>
+
+            <div className="bg-black rounded-lg sm:rounded-xl p-4 sm:p-6 text-white hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl font-bold">↗</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2">Scalable Knowledge</h3>
+              <p className="text-gray-300 text-sm">Information becomes accessible to everyone, reducing dependency on key individuals.</p>
+            </div>
+
+            <div className="bg-black rounded-lg sm:rounded-xl p-4 sm:p-6 text-white hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl font-bold">○</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2">Seamless Onboarding</h3>
+              <p className="text-gray-300 text-sm">New hires gain confidence and contribute faster with comprehensive guides.</p>
+            </div>
+
+            <div className="bg-black rounded-lg sm:rounded-xl p-4 sm:p-6 text-white hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl font-bold">✓</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2">Quality Assurance</h3>
+              <p className="text-gray-300 text-sm">Documented processes reduce errors and maintain consistency across projects.</p>
             </div>
           </div>
         </section>
 
-        {/* Content Container */}
-        <div className="max-w-6xl mx-auto px-4 pb-16">
-          {/* Introduction Card */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12 border-l-4 border-[#ff5010]">
-            <p className="text-xl leading-relaxed mb-6">
-              What is the most effective method for preserving the vital facts, insightful research, diverse opinions,
-              intricate processes, and impactful outcomes of an organization or product over the long term?
-              Can healthy documentation be the answer to this question?
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              Let&#39;s talk about a hidden tool of a scalable team. Good documentation doesn&#39;t cost much — it&#39;s not glamorous.
-              A manner of maintaining it will be enough.
-            </p>
-            <p className="text-lg leading-relaxed">
-              One more important aspect to consider is the &quot;silent cost of bad documentation.&quot; This term describes the hidden
-              but significant impact that poor, outdated, or unclear documentation can have on a business. While these costs
-              might not be immediately visible on a balance sheet, addressing them can lead to substantial improvements
-              in productivity, efficiency, and trust within the organization.
-            </p>
+        {/* Brandsmashers Approach Section */}
+        <section className="mb-8 sm:mb-12 lg:mb-16">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-3 sm:mb-4 px-2">Our Documentation Philosophy</h2>
+            <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto"></div>
           </div>
 
-          {/* Image Section */}
-          <div className="rounded-xl overflow-hidden shadow-lg mb-12">
-            <Image
-              src="/Nav-Dropdown-icons/Blog2.jpg"
-              alt="Documentation value"
-              width={1200}
-              height={700}
-              className="w-full object-cover h-96"
-            />
-          </div>
-
-          {/* Importance of Documentation Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-[#ff5010] inline-block pb-2 border-b-2 border-[#ff5010]">
-              Importance of Good Documentation
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                {
-                  title: 'Efficiency and Productivity',
-                  text: 'Clear documentation drives efficiency, ensuring teams save time and quickly find answers without the need to reinvent the wheel.',
-                },
-                {
-                  title: 'Consistent Knowledge Sharing',
-                  text: 'Documentation solidifies individual insights into collective expertise, making vital information easily accessible to everyone and fostering a culture of collaboration.',
-                },
-                {
-                  title: 'Smooth Onboarding',
-                  text: 'With comprehensive documentation, new hires gain clarity and confidence from day one, swiftly mastering processes, tools, and expectations.',
-                },
-                {
-                  title: 'Fewer Mistakes',
-                  text: 'Thoroughly documented procedures eliminate confusion and significantly reduce the risk of errors, enhancing quality control and driving excellence.',
-                },
-                {
-                  title: 'Compliance and Accountability',
-                  text: 'In fields like finance and healthcare, robust documentation guarantees compliance and streamlines audits and reviews with clear and reliable traceability.',
-                },
-                {
-                  title: 'Improved Communication',
-                  text: 'Effective documentation transforms communication, minimizing unnecessary meetings and repetitive questions while empowering teams to collaborate seamlessly, especially in remote or hybrid environments.',
-                },
-              ].map((point, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border-t-4 border-[#ff5010]">
-                  <h3 className="text-xl font-semibold mb-3 text-[#ff5010]">{point.title}</h3>
-                  <p className="text-gray-700">{point.text}</p>
+          <div className="space-y-6 sm:space-y-8">
+            {/* Documentation Types */}
+            <div className="border-l-4 border-orange-500 pl-4 sm:pl-6 py-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">1. Comprehensive Coverage</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                <div className="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-lg transition-shadow">
+                  <h4 className="font-semibold text-black mb-2 text-sm sm:text-base">Technical Documentation</h4>
+                  <p className="text-gray-600 text-xs sm:text-sm">APIs, architecture, code structure, and development guides</p>
                 </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Team Image */}
-          <div className="rounded-xl overflow-hidden shadow-lg mb-12">
-            <Image
-              src="/Nav-Dropdown-icons/Blog3.jpg"
-              alt="Team collaboration"
-              width={1200}
-              height={700}
-              className="w-full object-cover h-96"
-            />
-          </div>
-
-          {/* Company Section */}
-          <section className="mb-16 bg-gray-50 rounded-xl p-8 shadow-lg">
-            <h2 className="text-3xl font-bold mb-6 text-[#ff5010]">
-              It would not be wrong to say the key of smooth operations at Brandsmashers is documentation.
-            </h2>
-            <div className="space-y-4 text-lg">
-              <p>
-                At Brandsmashers, we believe that great documentation is one of the keys to our success. It&#39;s like the backbone of our operations!
-                Without well-organized documentation, even the most talented team members can face challenges.
-              </p>
-              <p>
-                We make it a point to document every step involved in our functions, departments, and collaborations.
-                This approach helps everyone at Brandsmashers feel connected and on the same page.
-              </p>
-              <p>
-                It&#39;s more than a piece of information. It acts as a bridge, connecting our internal teams with external partners. Here&#39;s what we focus on:
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-              {[
-                { title: 'Technical Documentation', text: 'Information about code structure, APIs, and system architecture' },
-                { title: 'Project Documentation', text: 'Details on timelines, goals, deliverables, and decision-making processes for our projects' },
-                { title: 'Process Documentation', text: 'Insights into our DevOps workflows, testing processes, and CI/CD pipelines' },
-                { title: 'Communication Norms', text: 'Guidelines on the tools we use (like Slack and Jira), how to escalate issues, and meeting etiquette' },
-                { title: 'Onboarding Documents', text: 'Helpful access guides, system overviews, and security policies for new team members' },
-              ].map((item, idx) => (
-                <div key={idx} className="bg-white p-4 rounded-lg shadow border-l-2 border-[#ff5010]">
-                  <h3 className="font-semibold text-[#ff5010]">{item.title}</h3>
-                  <p className="text-sm text-gray-700">{item.text}</p>
+                <div className="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-lg transition-shadow">
+                  <h4 className="font-semibold text-black mb-2 text-sm sm:text-base">Project Management</h4>
+                  <p className="text-gray-600 text-xs sm:text-sm">Timelines, goals, decisions, and milestone tracking</p>
                 </div>
-              ))}
-            </div>
-
-            <p className="mt-6 text-lg font-medium">
-              Our ultimate goal is to empower our external team members to get up to speed quickly and work confidently!
-            </p>
-          </section>
-
-          {/* Tools Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-[#ff5010] inline-block pb-2 border-b-2 border-[#ff5010]">
-              Our Favorite Tools for Better Results
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {[
-                { name: 'Notion', description: 'Perfect for team wikis, project docs, and standard operating procedures (SOPs)' },
-                { name: 'Confluence', description: 'A great choice for technical teams and enterprise knowledge bases' },
-                { name: 'Google Docs', description: 'Ideal for collaborative writing and flexible formatting' },
-                { name: 'GitHub Wiki', description: 'The go-to for anything related to code documentation' },
-                { name: 'Scribe', description: 'Automatically generates step-by-step guides for easy reference' },
-                { name: 'Read the Docs', description: 'Great for publishing and hosting code documentation' },
-              ].map((tool, idx) => (
-                <div key={idx} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                  <div className="p-1 bg-[#ff5010]"></div>
-                  <div className="p-6">
-                    <h3 className="font-bold text-xl mb-2">{tool.name}</h3>
-                    <p className="text-gray-700">{tool.description}</p>
-                  </div>
+                <div className="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-lg transition-shadow sm:col-span-2 lg:col-span-1">
+                  <h4 className="font-semibold text-black mb-2 text-sm sm:text-base">Process Documentation</h4>
+                  <p className="text-gray-600 text-xs sm:text-sm">DevOps workflows, testing procedures, and CI/CD pipelines</p>
                 </div>
-              ))}
+              </div>
             </div>
 
-            <p className="text-lg">
-              By using these tools, we enhance our documentation practices and boost collaboration across the board.
-              We can assist you in utilizing them by customizing features, simplifying workflows, or integrating seamlessly.
-              Our team ensures each tool is tailored to support your goals efficiently and effectively — with proper documentation.
-            </p>
-          </section>
+            {/* Tools & Technology */}
+            <div className="border-l-4 border-orange-500 pl-4 sm:pl-6 py-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">2. Powerful Documentation Tools</h3>
+              <div className="bg-gray-50 rounded-lg p-4 sm:p-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                  {[
+                    { name: 'Notion', desc: 'All-in-one workspace for teams' },
+                    { name: 'Confluence', desc: 'Enterprise knowledge management' },
+                    { name: 'GitHub Wiki', desc: 'Developer-focused documentation' },
+                    { name: 'Google Docs', desc: 'Real-time collaborative editing' },
+                    { name: 'Scribe', desc: 'Automated process documentation' },
+                    { name: 'Read the Docs', desc: 'Beautiful documentation hosting' },
+                  ].map((tool, idx) => (
+                    <div key={idx} className="flex items-start">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <span className="font-semibold text-gray-700 text-sm sm:text-base">{tool.name}</span>
+                        <p className="text-gray-600 text-xs sm:text-sm">{tool.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
 
-          {/* Tools Image */}
-          <div className="rounded-xl overflow-hidden shadow-lg mb-16">
-            <Image
-              src="/Nav-Dropdown-icons/Blog8.jpg"
-              alt="Tools for success"
-              width={1200}
-              height={700}
-              className="w-full object-cover h-96"
-            />
+            {/* Best Practices */}
+            <div className="border-l-4 border-orange-500 pl-4 sm:pl-6 py-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">3. Documentation Best Practices</h3>
+              <div className="flex flex-wrap gap-2 sm:gap-3">
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-black text-white rounded-full text-xs sm:text-sm">Living Documents</span>
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-black text-white rounded-full text-xs sm:text-sm">Version Control</span>
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-black text-white rounded-full text-xs sm:text-sm">Search Optimization</span>
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-black text-white rounded-full text-xs sm:text-sm">Regular Updates</span>
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-black text-white rounded-full text-xs sm:text-sm">Team Ownership</span>
+              </div>
+            </div>
+
+            <div className="border-l-4 border-orange-500 pl-4 sm:pl-6 py-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">4. Custom Solutions</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <div className="p-3 sm:p-4 border border-gray-200 rounded-lg">
+                  <h4 className="font-semibold text-black mb-2 text-sm sm:text-base">Tailored Workflows</h4>
+                  <p className="text-gray-600 text-xs sm:text-sm">No generic solutions — everything customized for your team</p>
+                </div>
+                <div className="p-3 sm:p-4 border border-gray-200 rounded-lg">
+                  <h4 className="font-semibold text-black mb-2 text-sm sm:text-base">Integration Focus</h4>
+                  <p className="text-gray-600 text-xs sm:text-sm">Seamless connection with your existing tools and processes</p>
+                </div>
+              </div>
+            </div>
           </div>
-
-          {/* Conclusion */}
-          <section className="bg-black rounded-xl p-8 shadow-lg border-l-4 border-[#ff5010]">
-            <h2 className="text-3xl font-bold mb-6">
-              <span className="text-white">Con</span><span className="text-[#ff5010]">clusion</span>
-            </h2>
-            <div className="space-y-4 text-lg text-white">
-              <p>
-                Through this blog, we aim to highlight a simple yet powerful approach. It&#39;s not just a one-day effort;
-                it&#39;s a transformative habit.
-              </p>
-              <p>
-                Effective documentation secures your position, empowering you to achieve your goals quickly and hold
-                onto that success for the long run.
-              </p>
-              <p className="text-2xl font-bold mt-4">
-                <span className="text-white">Healthy Documentation Fixed</span> <span className="text-[#ff5010]">Your Owned Crown.</span>
-              </p>
-              <p className="italic text-xl mt-6 text-[#ff5010]">
-                &quot;The palest ink is better than the best memory.&quot;
-              </p>
-            </div>
-          </section>
-        </div>
-      </main>
-    </>
+        </section>
+      </div>
+    </div>
   );
 }

@@ -1,124 +1,223 @@
-import Image from 'next/image';
-import Head from 'next/head';
+import React from 'react';
 
-export default function BlueTokaiBlog() {
+export default function ModernDigitalMarketingBlog() {
   return (
-    <>
-      <Head>
-        <title>Scoop of Digital Marketing:</title>
-      </Head>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="relative bg-black overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+          <div className="text-center">
+            <div className="inline-block px-4 sm:px-6 py-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-4 sm:mb-6">
+              <span className="text-white font-semibold text-xs sm:text-sm tracking-wide uppercase">
+                Marketing Insights
+              </span>
+            </div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-4 sm:mb-6 leading-tight px-2">
+              Scoop of
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+                Digital Marketing
+              </span>
+            </h1>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+              In a world overflowing with products and ideas, the clearest voice wins. 
+              Marketing bridges the gap between what you offer and what your audience truly needs.
+            </p>
+          </div>
+        </div>
+        
+        {/* Decorative elements - Hidden on very small screens */}
+        <div className="hidden sm:block absolute top-10 sm:top-20 left-4 sm:left-10 w-12 sm:w-20 h-12 sm:h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-full opacity-20 animate-pulse"></div>
+        <div className="hidden sm:block absolute bottom-10 sm:bottom-20 right-4 sm:right-10 w-16 sm:w-32 h-16 sm:h-32 bg-gradient-to-br from-orange-500 to-red-500 rounded-full opacity-10 animate-pulse delay-1000"></div>
+      </div>
 
-      <main className="max-w-3xl mx-auto px-4 py-10 font-sans text-gray-800">
-        {/* Hero Section */}
-        <div className="mb-10">
-          <Image
-            src="/Nav-Dropdown-icons/Blog9.jpg"
-            alt="Blue Tokai Blog Hero"
-            width={1200}
-            height={600}
-            className="rounded-lg w-full object-cover"
-          />
-          <h1 className="text-3xl md:text-4xl font-extrabold mt-6">
-            Scoop of Digital Marketing:
-          </h1>
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        
+        {/* Introduction */}
+        <div className="mb-12 sm:mb-16">
+          <div className="prose prose-sm sm:prose-lg max-w-none">
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 first-letter:text-4xl sm:first-letter:text-6xl first-letter:font-bold first-letter:text-orange-500 first-letter:float-left first-letter:mr-2 sm:first-letter:mr-3 first-letter:mt-1">
+              Marketing is not a nice-to-have option; it&apos;s a necessity. No matter how great your service, product, or team is, if people don&apos;t know about it, they are irrelevant in the market. Marketing is about communicating value, building trust, and guiding growth.
+            </p>
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+              Whether you&apos;re a startup founder, part of a tech team, or running a global enterprise, marketing bridges the gap between what you offer and what your audience truly needs. Today marketing is digital, data-driven, and interactive—it&apos;s more than marketing, it&apos;s Digital Marketing.
+            </p>
+          </div>
         </div>
 
-        {/* Content */}
-        <section className="space-y-6 text-[17px] leading-8">
-          <p>
-            In a world overflowing with products, apps, services, and ideas, the loudest voice doesn&rsquo;t always win&mdash;but the clearest one does. That voice can be Marketing &amp; Branding. Marketing is not a nice-to-have option; it&rsquo;s a necessity. No matter how great your service, product, or team is, if people don&rsquo;t know about it, they are irrelevant in the market. Marketing is about communicating value, building trust, and guiding growth. Whether you&rsquo;re a startup founder, part of a tech team, or running a global enterprise, marketing bridges the gap between what you offer and what your audience truly needs.
-            <br />
-            Today marketing is digital, data-driven, and interactive. It focuses on creating value, building relationships, and adapting to real-time behavior. Whether you&rsquo;re a startup or a scaled tech company, how you tell your story matters as much as the story itself. In this social revolution, marketing becomes more than marketing&mdash;it&rsquo;s a &quot;Digital Marketing&quot;.
-            <br />
-            Digital marketing is the use of online platforms and digital tools to promote products, build brands, and engage audiences.
-          </p>
+        {/* Key Channels Section */}
+        <section className="mb-12 sm:mb-16">
+          <div className="flex items-center mb-6 sm:mb-8">
+            <div className="w-1 h-8 sm:h-12 bg-gradient-to-b from-orange-500 to-red-500 mr-3 sm:mr-4"></div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-black">Key Digital Marketing Channels</h2>
+          </div>
+          
+          <div className="bg-gray-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 mb-6 sm:mb-8">
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              Digital marketing encompasses multiple channels and strategies, each serving unique purposes in your overall marketing ecosystem. The key is understanding which channels align best with your audience and business objectives.
+            </p>
+          </div>
 
-          <Image
-            src="/Nav-Dropdown-icons/Blog10.jpg"
-            alt="Digital Marketing Visual"
-            width={1200}
-            height={600}
-            className="rounded-lg w-full object-cover"
-          />
+          {/* Marketing Channels Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
+            <div className="bg-black rounded-lg sm:rounded-xl p-4 sm:p-6 text-white hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl font-bold">S</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2">SEO</h3>
+              <p className="text-gray-300 text-sm">Helps your website rank higher on Google and drive organic traffic</p>
+            </div>
 
-          <h3 className="text-xl font-semibold">Key Channels:</h3>
-          <ul className="list-disc pl-6">
-            <li>Search Engine Optimization (SEO) &ndash; Helps your website rank higher on Google</li>
-            <li>Social Media Marketing &ndash; Engages audiences on platforms like Instagram, LinkedIn, X, and Facebook</li>
-            <li>Email Marketing &ndash; Personalized outreach and nurture campaigns</li>
-            <li>Content Marketing &ndash; Blogs, videos, guides, and infographics</li>
-            <li>Paid Advertising (PPC) &ndash; Targeted ads on Google, YouTube, and social platforms</li>
-            <li>Influencer and Affiliate Marketing &ndash; Leveraging trust through partnerships</li>
-          </ul>
+            <div className="bg-black rounded-lg sm:rounded-xl p-4 sm:p-6 text-white hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl font-bold">@</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2">Social Media Marketing</h3>
+              <p className="text-gray-300 text-sm">Engages audiences on platforms where they spend their time</p>
+            </div>
 
-          <h2 className="text-2xl font-bold mt-10">Digital Marketing mainly focused on :</h2>
+            <div className="bg-black rounded-lg sm:rounded-xl p-4 sm:p-6 text-white hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl font-bold">✉</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2">Email Marketing</h3>
+              <p className="text-gray-300 text-sm">Personalized outreach campaigns for direct customer communication</p>
+            </div>
 
-          <h3 className="text-xl font-semibold">A. Target the Appropriate Audience</h3>
-          <p>
-            Utilizing tools such as Google Ads and Facebook Pixel allows for precise targeting of users based on a variety of criteria, including location, behavior, age, and interests.
-          </p>
+            <div className="bg-black rounded-lg sm:rounded-xl p-4 sm:p-6 text-white hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl font-bold">C</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2">Content Marketing</h3>
+              <p className="text-gray-300 text-sm">Blogs, videos, and guides that provide value to your audience</p>
+            </div>
 
-          <h3 className="text-xl font-semibold">B. Quantifiable Outcomes</h3>
-          <p>
-            Monitor performance in real-time, providing insights into which campaigns are effectively driving traffic, generating leads, or resulting in sales.
-          </p>
+            <div className="bg-black rounded-lg sm:rounded-xl p-4 sm:p-6 text-white hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl font-bold">$</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2">Paid Advertising</h3>
+              <p className="text-gray-300 text-sm">Targeted ads on platforms for immediate visibility and results</p>
+            </div>
 
-          <h3 className="text-xl font-semibold">C. Cost Efficiency</h3>
-          <p>
-            Digital marketing typically offers a higher return on investment (ROI) compared to traditional marketing channels such as television and print, all while accommodating smaller budgets.
-          </p>
-
-          <h3 className="text-xl font-semibold">D. Continuous Visibility</h3>
-          <p>
-            Your digital presence is active 24/7, ensuring that websites, social media posts, and advertisements are consistently accessible to your audience.
-          </p>
-
-          <h3 className="text-xl font-semibold">E. Enhanced Customer Engagement</h3>
-          <p>
-            Digital marketing fosters two-way communication, enabling the development of deeper relationships with your audience.
-          </p>
-
-          <Image
-            src="/Nav-Dropdown-icons/Blog11.jpg"
-            alt="Founders"
-            width={1200}
-            height={700}
-            className="rounded-lg w-full object-cover"
-          />
-
-          <h2 className="text-2xl font-bold mt-10">How Brandsmashers Tech Approaches It:</h2>
-          <p>
-            At Brandsmashers Tech, we discovered the power of resilience and adaptability during challenging times. We forged our brand amid a global crisis, thriving by embracing our humanity, agility, and boldness. Our offerings range from expert staff augmentation to innovative tech solutions, each designed to meet the unique needs of the market. Our message is simple: we evolve with you.
-          </p>
-          <p>
-            Our branding reflects our energy. Our marketing connects that energy to the people who need it most.
-          </p>
-
-          <Image
-            src="/Nav-Dropdown-icons/Blog12.jpg"
-            alt="Marketing Approach"
-            width={1200}
-            height={600}
-            className="rounded-lg w-full object-cover"
-          />
-
-          <h2 className="text-2xl font-bold mt-10">Conclusion is Simple: Either Go with the Flow or Be Outdated</h2>
-          <p>
-            In today&rsquo;s fast-moving digital landscape, marketing is no longer a supporting role &mdash; it&rsquo;s a strategic pillar. From building brand awareness to driving measurable growth, smart marketing is how businesses rise above the noise and connect with the people who matter most.
-          </p>
-
-          <p>
-            At Brandsmashers Tech, we don&rsquo;t just create marketing strategies &mdash; we embody them. We&rsquo;ve built our own brand from the ground up, utilizing the same tools, storytelling techniques, and digital channels that we offer to our clients. From content creation and SEO to bold messaging and genuine engagement, every aspect of our growth is driven by intentional marketing.
-          </p>
-
-          <p>
-            Because we believe if you can market your own brand with clarity and confidence, you can do it for anyone.
-          </p>
-          <p>
-            And at Brandsmashers &mdash; that&rsquo;s exactly what we do.
-          </p>
+            <div className="bg-black rounded-lg sm:rounded-xl p-4 sm:p-6 text-white hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl font-bold">★</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2">Influencer Marketing</h3>
+              <p className="text-gray-300 text-sm">Leveraging partnerships to expand reach and credibility</p>
+            </div>
+          </div>
         </section>
-      </main>
-    </>
+
+        {/* Focus Areas Section */}
+        <section className="mb-12 sm:mb-16">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4 px-4">Digital Marketing Focus Areas</h2>
+            <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto"></div>
+          </div>
+
+          <div className="space-y-6 sm:space-y-8">
+            {/* Target Audience */}
+            <div className="border-l-4 border-orange-500 pl-4 sm:pl-6 py-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-black mb-4">1. Precise Target Audience</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow">
+                  <h4 className="font-semibold text-black mb-2 text-sm sm:text-base">Location-Based</h4>
+                  <p className="text-gray-600 text-xs sm:text-sm">Geographic targeting for local and global audiences</p>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow">
+                  <h4 className="font-semibold text-black mb-2 text-sm sm:text-base">Behavioral Targeting</h4>
+                  <p className="text-gray-600 text-xs sm:text-sm">Based on user actions, preferences, and online behavior</p>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow">
+                  <h4 className="font-semibold text-black mb-2 text-sm sm:text-base">Interest-Based</h4>
+                  <p className="text-gray-600 text-xs sm:text-sm">Targeting users based on their interests and affinities</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Measurable Results */}
+            <div className="border-l-4 border-orange-500 pl-4 sm:pl-6 py-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-black mb-4">2. Measurable Results & Analytics</h3>
+              <div className="bg-gray-50 rounded-lg p-4 sm:p-6">
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm sm:text-base">Real-time performance monitoring and reporting</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm sm:text-base">Detailed insights into traffic, leads, and conversion rates</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm sm:text-base">ROI tracking and campaign optimization</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Additional focus areas */}
+            <div className="border-l-4 border-orange-500 pl-4 sm:pl-6 py-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-black mb-4">3. Cost Efficiency & Scalability</h3>
+              <div className="flex flex-wrap gap-2 sm:gap-3">
+                <span className="px-3 sm:px-4 py-2 bg-black text-white rounded-full text-xs sm:text-sm">Higher ROI</span>
+                <span className="px-3 sm:px-4 py-2 bg-black text-white rounded-full text-xs sm:text-sm">Flexible Budget</span>
+                <span className="px-3 sm:px-4 py-2 bg-black text-white rounded-full text-xs sm:text-sm">24/7 Visibility</span>
+                <span className="px-3 sm:px-4 py-2 bg-black text-white rounded-full text-xs sm:text-sm">Customer Engagement</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Brandsmashers Approach Section */}
+        <section className="mb-12 sm:mb-16">
+          <div className="flex items-center mb-6 sm:mb-8">
+            <div className="w-1 h-8 sm:h-12 bg-gradient-to-b from-orange-500 to-red-500 mr-3 sm:mr-4"></div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-black">How Brandsmashers Tech Approaches It</h2>
+          </div>
+          
+          <div className="bg-gray-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 mb-6 sm:mb-8">
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              At Brandsmashers Tech, we discovered the power of resilience and adaptability during challenging times. We forged our brand amid a global crisis, thriving by embracing our humanity, agility, and boldness.
+            </p>
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              Our offerings range from expert staff augmentation to innovative tech solutions, each designed to meet the unique needs of the market. Our message is simple: <strong>we evolve with you</strong>.
+            </p>
+            <p className="text-lg sm:text-xl font-semibold text-orange-500">
+              Our branding reflects our energy. Our marketing connects that energy to the people who need it most.
+            </p>
+          </div>
+        </section>
+
+        {/* Conclusion */}
+        <section className="text-center">
+          <div className="max-w-3xl mx-auto bg-black text-white rounded-xl sm:rounded-2xl p-8 sm:p-12">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+              Either Go with the Flow or 
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500 mt-2">
+                Be Outdated
+              </span>
+            </h2>
+            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-300 leading-relaxed">
+              <p>
+                In today&apos;s fast-moving digital landscape, marketing is no longer a supporting role — it&apos;s a strategic pillar. From building brand awareness to driving measurable growth, smart marketing is how businesses rise above the noise.
+              </p>
+              <p>
+                At Brandsmashers Tech, we don&apos;t just create marketing strategies — we embody them. We&apos;ve built our own brand from the ground up, utilizing the same tools and techniques that we offer to our clients.
+              </p>
+              <p className="text-orange-400 font-semibold text-lg sm:text-xl">
+                Because we believe if you can market your own brand with clarity and confidence, you can do it for anyone.
+              </p>
+              <p className="text-xl sm:text-2xl font-bold text-white">
+                And at Brandsmashers — that&apos;s exactly what we do.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   );
 }

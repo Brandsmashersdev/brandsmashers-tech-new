@@ -4,169 +4,182 @@ import { ArrowUpRight } from 'lucide-react';
 import { FaLightbulb, FaPencilRuler, FaCode, FaMobileAlt, FaBug, FaRocket } from "react-icons/fa";
 import Image from 'next/image';
 import React from 'react';
+// import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 import { ChevronDown, ChevronRight, Code, SmartphoneCharging, Layers, Laptop, Watch, Gamepad, CheckCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
+
 export default function MobileAppDevelopmentPage() {
   const [activeTab, setActiveTab] = useState(0);
   const [activeFaq, setActiveFaq] = useState(null);
-  const [showContactForm, setShowContactForm] = useState(false);
 
-
-
- 
-//email functionality code
-const toastConfig = {
-  position: 'top-right',
-  autoClose: 3000,
-  hideProgressBar: false,
-  closeOnClick: true,
-  pauseOnHover: true,
-  draggable: true,
-  progress: undefined,
-};
-
-const [errors, setErrors] = useState({});
-const [helpType, setHelpType] = useState(null);
-const [serviceForm, setServiceForm] = useState({
-  name: "",
-  email: "",
-  phone: "",
-  message: ""
-});
-const handleServiceFormChange = (e) => {
-  const { name, value } = e.target;
-  let newValue = value;
-  let error = '';
-  switch (name) {
-    case 'name':
-      if (value && !validateName(value)) {
-        error = 'Please enter only letters';
-        newValue = serviceForm[name];
-      }
-      break;
-    case 'email':
-      if (value && !validateEmail(value)) {
-        error = 'Please enter only letters';
-        newValue = serviceForm[name];
-      }
-      break;
-
-    case 'phone':
-      const digits = value.replace(/\D/g, '');
-      if (digits.length > 10) {
-        newValue = serviceForm[name];
-      }
-      break;
-
-
-    default:
-      break;
-  }
-
-  setServiceForm(prev => ({
-    ...prev,
-    [name]: value
-  }));
-
-
-  if (error) {
-    setErrors(prev => ({
-      ...prev,
-      [name]: error
-    }));
-  } else {
-    setErrors(prev => {
-      const newErrors = { ...prev };
-      delete newErrors[name];
-      return newErrors;
-    });
-  }
-
-};
-
-const handleServiceFormSubmit = async (e) => {
-  e.preventDefault();
-  // In a real application, you would handle the form submission here
-  if (validateForm()) {
-    try {
-      const formDataToSend = new FormData();
-
-      Object.keys(serviceForm).forEach(key => {
-        formDataToSend.append(key, serviceForm[key]);
-      });
-      formDataToSend.append('helpType', helpType);
-      formDataToSend.append('access_key', 'ced5f765-5f1b-4a75-8584-5ca061816ed2');
-
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formDataToSend
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        toast.success('Form submitted successfully!', toastConfig);
-
-        setServiceForm({
-          name: '',
-          email: '',
-          phone: '',
-          message: '',
-        });
-        setHelpType(null);
-      } else {
-        toast.error('Error submitting form. Please try again.', toastConfig);
-      }
-    } catch (error) {
-      console.error('Submission Error:', error);
-      toast.error('Network error. Please try again later.', toastConfig);
+  const toggleFaq = (index) => {
+    if (activeFaq === index) { 
+      setActiveFaq(null);
+    } else {
+      setActiveFaq(index);
     }
-  }
-};
+  };
 
-const validateName = (name) => {
-  const nameRegex = /^[A-Za-z\s]+$/;
-  return nameRegex.test(name);
-};
+  
+  //email functionality code
+  const toastConfig = {
+    position: 'top-right',
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  };
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [helpType, setHelpType] = useState(null);
+  const [serviceForm, setServiceForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+  const handleServiceFormChange = (e) => {
+    const { name, value } = e.target;
+    let newValue = value;
+    let error = '';
+    switch (name) {
+      case 'name':
+        if (value && !validateName(value)) {
+          error = 'Please enter only letters';
+          newValue = serviceForm[name];
+        }
+        break;
+      case 'email':
+        if (value && !validateEmail(value)) {
+          error = 'Please enter only letters';
+          newValue = serviceForm[name];
+        }
+        break;
 
-const validateEmail = (email) => {
-  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-  return emailRegex.test(email);
-};
-
-const validatePhone = (phone) => {
-  const phoneRegex = /^\d{10}$/;
-  return phoneRegex.test(phone.replace(/\D/g, ''));
-};
-
-const validateForm = () => {
-  const newErrors = {};
-
-  if (!serviceForm.name) {
-    newErrors.firstName = 'First name is required';
-  } else if (!validateName(serviceForm.firstName)) {
-    newErrors.firstName = 'Please enter only letters';
-  }
-  if (!serviceForm.email) {
-    newErrors.email = 'Email is required';
-  } else if (!validateEmail(serviceForm.email)) {
-    newErrors.email = 'Please enter a valid email';
-  }
-  if (!serviceForm.phone) {
-    newErrors.phone = 'Phone number is required';
-  } else if (!validatePhone(serviceForm.phone)) {
-    newErrors.phone = 'Please enter a valid 10-digit phone number';
-  }
-  setErrors(newErrors);
-  return Object.keys(newErrors).length === 0;
-};
+      case 'phone':
+        const digits = value.replace(/\D/g, '');
+        if (digits.length > 10) {
+          newValue = serviceForm[name];
+        }
+        break;
 
 
-const primaryColor = "#ff5010";
+      default:
+        break;
+    }
+
+    setServiceForm(prev => ({
+      ...prev,
+      [name]: value
+    }));
+
+
+    if (error) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: error
+      }));
+    } else {
+      setErrors(prev => {
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      });
+    }
+
+  };
+
+  const handleServiceFormSubmit = async (e) => {
+    e.preventDefault();
+    // In a real application, you would handle the form submission here
+    if (validateForm()) {
+      try {
+        const formDataToSend = new FormData();
+
+        Object.keys(serviceForm).forEach(key => {
+          formDataToSend.append(key, serviceForm[key]);
+        });
+        formDataToSend.append('helpType', helpType);
+        formDataToSend.append('access_key', 'ced5f765-5f1b-4a75-8584-5ca061816ed2');
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formDataToSend
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          toast.success('Form submitted successfully!', toastConfig);
+
+          setServiceForm({
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+          });
+          setHelpType(null);
+        } else {
+          toast.error('Error submitting form. Please try again.', toastConfig);
+        }
+      } catch (error) {
+        console.error('Submission Error:', error);
+        toast.error('Network error. Please try again later.', toastConfig);
+      }
+    }
+  };
+
+  const validateName = (name) => {
+    const nameRegex = /^[A-Za-z\s]+$/;
+    return nameRegex.test(name);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phone.replace(/\D/g, ''));
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!serviceForm.name) {
+      newErrors.name = 'First name is required';
+    } else if (!validateName(serviceForm.name)) {
+      newErrors.name = 'Please enter a valid email';
+    }
+    if (!serviceForm.email) {
+      newErrors.email = 'Email is required';
+    } else if (!validateEmail(serviceForm.email)) {
+      newErrors.email = 'Please enter a valid email';
+    }
+    if (!serviceForm.phone) {
+      newErrors.phone = 'Phone number is required';
+    } else if (!validatePhone(serviceForm.phone)) {
+      newErrors.phone = 'Please enter a valid 10-digit phone number';
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+
+
+
+
+  const primaryColor = "#ff5010";
   const secondaryColor = "#ff7a47";
   const darkColor = "#222";
+  const whiteColor = "#ffffff";
 
   const services = [
     {
@@ -287,16 +300,12 @@ const primaryColor = "#ff5010";
     }
   ];
 
-  const toggleFaq = (index) => {
-    if (activeFaq === index) {
-      setActiveFaq(null);
-    } else {
-      setActiveFaq(index);
-    }
-  };
 
   return (
+    
     <div className="flex flex-col min-h-screen bg-gray-50">
+      <ToastContainer />
+
       {/* Hero Section with Background Image - IMPROVED TEXT LAYOUT */}
       <section
         className="py-16 px-6 md:px-12 text-white relative bg-gray-900 flex-grow"
@@ -727,13 +736,7 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
           <p className="max-w-2xl mx-auto text-lg mb-12 text-white font-medium">
             Let&apos;s transform your idea into a powerful mobile application that drives growth and engages users.
           </p>
-          <div className="inline-block mb-16">
-            <button
-              className="bg-transparent hover:bg-[#ff5010] transition-colors px-8 py-3 rounded-md font-medium text-white border-2 border-orange-500 hover:border-orange-500"
-            >
-              Get a Free Consultation
-            </button>
-          </div>
+    
           <div className="flex flex-col md:flex-row justify-center md:space-x-16 space-y-6 md:space-y-0">
             <div className="flex items-center justify-center">
               <div className="h-10 w-10 rounded-full bg-black border-2 border-[#ff5010] flex items-center justify-center mr-3">

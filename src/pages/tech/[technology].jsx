@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/navbar/navbar";
+import Image from 'next/image';
 import Footer from "@/components/footer/footer";
 import HeroSectionTech from "@/components/HireDevelopers/HeroSectionForTech";
 import Stats from "@/components/HireDevelopers/Android/Stats";
@@ -11,7 +12,7 @@ import ServiceGrids from "@/components/HireDevelopers/Android/ServiceGrid";
 import DynamicCarousel from "@/components/HireDevelopers/DynamicCarousel";
 import Head from "next/head";
 import FAQSection from "@/components/HomePage/FAQSection";
-import ComingSoon from "@/pages/coming-soon";
+
 
 
 // Technology data
@@ -364,7 +365,7 @@ const technologyData = {
           title: 'Flutter + ML Kit',
           description: 'Integrate machine learning capabilities with ML Kit. Add features like text recognition, face detection, and image labeling.',
           icon1: '/icon-techflutter.png',
-          icon2: '/icon-techmlkit.png'
+          icon2: '/icon-mlkit.png'
         },
         {
           id: 7,
@@ -378,7 +379,7 @@ const technologyData = {
           title: 'Flutter + SQLite',
           description: 'Implement local data persistence using SQLite. Create offline-first applications with robust data management.',
           icon1: '/icon-techflutter.png',
-          icon2: '/icon-techsqlite.png'
+          icon2: '/icon-sql-server.png'
         },
         {
           id: 9,
@@ -458,7 +459,7 @@ const technologyData = {
           id: 2,
           title: 'React Native + TypeScript',
           description: 'Develop type-safe applications with TypeScript. Enhance code quality, catch errors early, and improve development experience.',
-          icon1: '//icon-techreact.png',
+          icon1: '/icon-techreact.png',
           icon2: '/icon-techtypescript.png'
         },
         {
@@ -472,7 +473,7 @@ const technologyData = {
           id: 4,
           title: 'React Native + GraphQL',
           description: 'Create efficient data-driven applications using GraphQL. Optimize API calls and implement real-time features with subscriptions.',
-          iicon1: '/icon-techreact.png',
+          icon1: '/icon-techreact.png',
           icon2: '/icon-techgraphql.png'
         },
         {
@@ -487,7 +488,7 @@ const technologyData = {
           title: 'React Native + Native Modules',
           description: 'Extend app capabilities with native modules. Bridge native Android/iOS functionalities for optimal performance.',
           icon1: '/icon-techreact.png',
-          icon2: '/icon-technativemodules.png'
+          icon2: '/icon-react.png'
         },
         {
           id: 7,
@@ -508,7 +509,7 @@ const technologyData = {
           title: 'React Native + AWS Amplify',
           description: 'Leverage AWS services with Amplify integration. Add cloud storage, authentication, APIs, and analytics to your app.',
           icon1: '/icon-techreact.png',
-          icon2: '/icon-techawsamplify.png'
+          icon2: '/icon-aws.png'
         }
       ]
     }
@@ -575,63 +576,63 @@ const technologyData = {
           id: 1,
           title: 'Angular + TypeScript',
           description: 'Build enterprise applications with TypeScript. Leverage strong typing, decorators, and advanced OOP features for robust development.',
-          icon1: '/icon-techangular.png',
+          icon1: '/icon-angular.png',
           icon2: '/icon-techtypescript.png'
         },
         {
           id: 2,
           title: 'Angular + RxJS',
           description: 'Implement reactive programming with RxJS. Handle complex data streams, event management, and asynchronous operations.',
-          icon1: '/icon-techangular.png',
-          icon2: '/icon-techrjxs.png'
+          icon1: '/icon-angular.png',
+          icon2: '/icon-techrxjs.png'
         },
         {
           id: 3,
           title: 'Angular + NgRx',
           description: 'Manage state with NgRx store. Implement Redux pattern for predictable state management and improved application scalability.',
-          icon1: '/icon-techangular.png',
+          icon1: '/icon-angular.png',
           icon2: '/icon-techngrx.png'
         },
         {
           id: 4,
           title: 'Angular + Material',
           description: 'Create beautiful UIs with Angular Material. Build responsive, modern interfaces following Material Design principles.',
-          icon1: '/icon-techangular.png',
-          icon2: '/icon-techmaterial.png'
+          icon1: '/icon-angular.png',
+          icon2: '/icon-techmobx.png'
         },
         {
           id: 5,
           title: 'Angular + Firebase',
           description: 'Integrate Firebase backend services. Implement authentication, real-time database, hosting, and cloud functions.',
-          icon1: '/icon-techangular.png',
+          icon1: '/icon-angular.png',
           icon2: '/icon-techfirebase.png'
         },
         {
           id: 6,
           title: 'Angular + GraphQL',
           description: 'Build efficient APIs with GraphQL integration. Optimize data fetching and implement real-time features with Apollo Client.',
-          icon1: '/icon-techangular.png',
+          icon1: '/icon-angular.png',
           icon2: '/icon-techgraphql.png'
         },
         {
           id: 7,
           title: 'Angular + PWA',
           description: 'Develop Progressive Web Applications. Create installable, offline-capable web apps with native-like features.',
-          icon1: '/icon-techangular.png',
+          icon1: '/icon-angular.png',
           icon2: '/icon-techpwa.png'
         },
         {
           id: 8,
           title: 'Angular + Jest',
           description: 'Implement comprehensive testing with Jest. Write unit tests, integration tests, and ensure code quality.',
-          icon1: '/icon-techangular.png',
+          icon1: '/icon-angular.png',
           icon2: '/icon-techjest.png'
         },
         {
           id: 9,
           title: 'Angular + Nx',
           description: 'Build monorepo applications with Nx. Create scalable enterprise applications with shared libraries and efficient tooling.',
-          icon1: '/icon-techangular.png',
+          icon1: '/icon-angular.png',
           icon2: '/icon-technx.png'
         }
       ]
@@ -714,7 +715,7 @@ const technologyData = {
           title: 'React + Next.js',
           description: 'Create server-side rendered applications with Next.js. Optimize for SEO, improve performance, and enhance user experience.',
           icon1: '/icon-techreact.png',
-          icon2: '/icon-technextjs.png'
+          icon2: '/next-js-developer.png'
         },
         {
           id: 4,
@@ -749,7 +750,7 @@ const technologyData = {
           title: 'React + Testing Library',
           description: 'Ensure code quality with Testing Library. Write maintainable tests that replicate user behavior and scenarios.',
          icon1: '/icon-techreact.png',
-          icon2: '/icon-techtestinglibrary.png'
+          icon2: '/testing.png'
         },
         {
           id: 9,
@@ -844,7 +845,7 @@ const technologyData = {
           title: 'JavaScript + Vue.js',
           description: 'Create dynamic front-end applications with Vue.js. Build reactive interfaces with a progressive JavaScript framework.',
           icon1: '/icon-techjavascript.png',
-          icon2: '/icon-techvuejs.png'
+          icon2: '/icon-techvue.png'
         },
         {
           id: 5,
@@ -872,7 +873,7 @@ const technologyData = {
           title: 'JavaScript + D3.js',
           description: 'Build data visualizations with D3.js. Create interactive charts, graphs, and custom data representations.',
           icon1: '/icon-techjavascript.png',
-          icon2: '/icon-techd3js.png'
+          icon2: '/icon-techd3.png'
         },
         {
           id: 9,
@@ -974,7 +975,7 @@ const technologyData = {
           title: 'Next.js + Redux Toolkit',
           description: 'Manage complex state with Redux Toolkit. Implement efficient state management with modern Redux best practices.',
           icon1: '/icon-technextjs.png',
-          icon2: '/icon-techreduxtoolkit.png'
+          icon2: '/icon-techredux.png'
         },
         {
           id: 6,
@@ -1440,64 +1441,64 @@ const technologyData = {
           id: 1,
           title: '.NET + ASP.NET Core',
           description: 'Build modern web applications with ASP.NET Core. Create high-performance APIs, MVC applications, and Razor Pages with cross-platform compatibility.',
-          icon1: '/icon-technet.png',
-          icon2: '/icon-techaspnetcore.png'
+          icon1: '/social.png',
+          icon2: '/icon-techaspmet.png'
         },
         {
           id: 2,
           title: '.NET + Entity Framework',
           description: 'Implement robust data access with Entity Framework Core. Create efficient database operations with code-first approach and LINQ integration.',
-          icon1: '/icon-technet.png',
-          icon2: '/icon-techerframework.png'
+          icon1: '/social.png',
+          icon2: '/framework.png'
         },
         {
           id: 3,
           title: '.NET + SQL Server',
           description: 'Build enterprise-grade database solutions with SQL Server. Utilize stored procedures, transactions, and advanced querying capabilities.',
-          icon1: '/icon-technet.png',
-          icon2: '/icon-techsqlserver.png'
+          icon1: '/social.png',
+          icon2: '/icon-techmysql.png'
         },
         {
           id: 4,
           title: '.NET + Blazor',
           description: 'Create interactive web UIs with Blazor. Build single-page applications using C# instead of JavaScript for both client and server.',
-          icon1: '/icon-technet.png',
+          icon1: '/social.png',
           icon2: '/icon-techblazor.png'
         },
         {
           id: 5,
           title: '.NET + Azure',
           description: 'Deploy and scale applications on Azure cloud. Leverage App Services, Azure Functions, and managed services for cloud-native solutions.',
-          icon1: '/icon-technet.png',
+          icon1: '/social.png',
           icon2: '/icon-techazure.png'
         },
         {
           id: 6,
           title: '.NET + Microservices',
           description: 'Build distributed systems using microservices architecture. Create scalable, containerized services with service mesh integration.',
-          icon1: '/icon-technet.png',
+          icon1: '/social.png',
           icon2: '/icon-techmicroservices.png'
         },
         {
           id: 7,
           title: '.NET + SignalR',
           description: 'Implement real-time features with SignalR. Build chat applications, live dashboards, and collaborative features with WebSocket support.',
-          icon1: '/icon-technet.png',
+          icon1: '/social.png',
           icon2: '/icon-techsignalr.png'
         },
         {
           id: 8,
           title: '.NET + Docker',
           description: 'Containerize applications with Docker. Create consistent development and deployment environments across different platforms.',
-          icon1: '/icon-technet.png',
+          icon1: '/social.png',
           icon2: '/icon-techdocker.png'
         },
         {
           id: 9,
           title: '.NET + Xamarin',
           description: 'Build cross-platform mobile applications with Xamarin. Create native iOS and Android apps using shared C# codebase and .NET features.',
-          icon1: '/icon-technet.png',
-          icon2: '/icon-techxamarin.png'
+          icon1: '/social.png',
+          icon2: '/icon-techxamari.png'
         }
       ]
     }
@@ -1562,316 +1563,70 @@ const technologyData = {
           id: 1,
           title: 'PHP + Laravel',
           description: 'Build elegant web applications with Laravel framework. Create secure, maintainable solutions with MVC architecture, Eloquent ORM, and Blade templating.',
-          icon1: '/icon-techphp.png',
+          icon1: '/php.png',
           icon2: '/icon-techlaravel.png'
         },
         {
           id: 2,
           title: 'PHP + Symfony',
           description: 'Develop enterprise-grade applications with Symfony framework. Utilize reusable components, Doctrine ORM, and robust security features.',
-          icon1: '/icon-techphp.png',
-          icon2: '/icon-techsymfony.png'
+          icon1: '/php.png',
+          icon2: '/icon-techsymphony.png'
         },
         {
           id: 3,
           title: 'PHP + MySQL',
           description: 'Build reliable database systems with MySQL. Implement efficient data management with optimized queries and transaction handling.',
-          icon1: '/icon-techphp.png',
+          icon1: '/php.png',
           icon2: '/icon-techmysql.png'
         },
         {
           id: 4,
           title: 'PHP + WordPress',
           description: 'Create custom WordPress solutions. Develop themes, plugins, and extend core functionality for content management systems.',
-          icon1: '/icon-techphp.png',
-          icon2: '/icon-techwordpress.png'
+          icon1: '/php.png',
+          icon2: '/wordpress.png'
         },
         {
           id: 5,
           title: 'PHP + WooCommerce',
           description: 'Build e-commerce solutions with WooCommerce. Create custom shopping experiences with payment integrations and inventory management.',
-          icon1: '/icon-techphp.png',
-          icon2: '/icon-techwoocommerce.png'
+          icon1: '/php.png',
+          icon2: '/image 124.png'
         },
         {
           id: 6,
           title: 'PHP + Redis',
           description: 'Enhance performance with Redis caching. Implement session management, caching layers, and real-time features for faster applications.',
-          icon1: '/icon-techphp.png',
+          icon1: '/php.png',
           icon2: '/icon-techredis.png'
         },
         {
           id: 7,
           title: 'PHP + Microservices',
           description: 'Build distributed systems with microservices architecture. Create scalable and maintainable service-oriented applications with API integration.',
-          icon1: '/icon-techphp.png',
+          icon1: '/php.png',
           icon2: '/icon-techmicroservices.png'
         },
         {
           id: 8,
           title: 'PHP + Docker',
           description: 'Containerize applications with Docker. Ensure consistent development environments and streamline deployment processes.',
-          icon1: '/icon-techphp.png',
+          icon1: '/php.png',
           icon2: '/icon-techdocker.png'
         },
         {
           id: 9,
           title: 'PHP + Cloud Platforms',
           description: 'Deploy and scale on major cloud platforms. Utilize AWS, Google Cloud, or Azure services for robust hosting and scaling solutions.',
-          icon1: '/icon-techphp.png',
-          icon2: '/icon-techcloud.png'
+          icon1: '/php.png',
+          icon2: '/cloud.png'
         }
       ]
     },
   },
-  "wordpress": {
-    title: "Hire Best Wordpress Developer from India",
-    description:"Unlock the Power of WordPress with Expert Developers from India!At Brandsmashers Tech, we bring your vision to life with cutting-edge WordPress development services. Whether you need a custom website, theme development, plugin integration, or a complete eCommerce solution, our skilled WordPress developers craft seamless, high-performing, and SEO-friendly websites tailored to your business goals.Hire dedicated WordPress developers from India today and experience innovation, scalability, and excellence in web development! ",
-    buttonText: "Hire Dotnet Developer",
-    services: {
-      mainTitle: "Hire Skilled WordPress Developers to Elevate Your Online Presence!",
-      // highlightedWord: "App Developers",
-      subTitle:
-        "At Brandsmashers Tech, our experienced WordPress developers specialize in crafting feature-rich, responsive, and user-friendly websites to help your business thrive online.",
-      services: [
-        {
-          title: "Custom WordPress Website Development",
-          description:
-            " Hire our expert WordPress developers to build a unique and high-performing website from scratch.Our developers specialize in creating fully customized, SEO-friendly WordPress websites tailored to your business needs.",
-          iconSrc: "/Android-page-img/mobile-icon.svg",
-        },
-        {
-          title: "WordPress Theme Development & Customization",
-          description:
-            "Get a visually stunning and fully responsive WordPress theme designed for your brand.We build and customize themes to match your vision, ensuring a modern and professional web presence.",
-          iconSrc: "/Android-page-img/mobile-icon.svg",
-        },
-        {
-          title: "WordPress Plugin Development & Integration",
-          description:
-            "Enhance your website’s functionality with custom plugin development.Our experts create and integrate powerful plugins that improve performance, security, and user engagement.",
-          iconSrc: "/Android-page-img/mobile-icon.svg",
-        },
-        {
-          title: "WooCommerce Development for Online Stores",
-          description:
-            "Launch and grow your eCommerce business with a feature-rich WooCommerce website.We develop secure, scalable, and fully optimized online stores that boost sales and improve user experience.",
-          iconSrc: "/Android-page-img/mobile-icon.svg",
-        },
-        {
-          title: "WordPress Speed & Performance Optimization",
-          description:
-            "Improve website loading speed and overall performance with our optimization services.We fine-tune your WordPress site for fast loading, better user experience, and higher search engine rankings.",
-          iconSrc: "/Android-page-img/mobile-icon.svg",
-        },
-        {
-          title: "WordPress Security & Maintenance Services",
-          description:
-            "Keep your website safe, updated, and running smoothly with our expert maintenance services.We provide regular updates, security audits, and 24/7 support to ensure your site is secure and up-to-date.",
-          iconSrc: "/Android-page-img/mobile-icon.svg",
-        },
-      ],
-    },
-          carousel: {
-            "heading": {
-              "beforeHighlight": "Hire Remote",
-              "highlight": " Programmatic Developers ",
-              "afterHighlight": "from India – Automate, Optimize & Scale Your Business"
-            },
-          
-            "description": "Get top programmatic developers to build intelligent, data-driven automation solutions for your business. Leverage custom scripts, API integrations, and workflow automation to enhance efficiency, reduce manual effort, and scale seamlessly.",
-          
-            "cardsData": [
-              {
-                "id": 1,
-                "title": "Custom Scripting & Automation",
-                "description": "Automate repetitive tasks with custom scripts in Python, JavaScript, and Shell. Enhance efficiency and reduce operational overhead.",
-                "icon1": "/icon-techprogrammatic.png",
-                "icon2": "/icon-techautomation.png"
-              },
-              {
-                "id": 2,
-                "title": "API Development & Integration",
-                "description": "Integrate third-party APIs, create custom RESTful services, and automate data exchanges between applications.",
-                "icon1": "/icon-techprogrammatic.png",
-                "icon2": "/icon-techapi.png"
-              },
-              {
-                "id": 3,
-                "title": "Web Scraping & Data Extraction",
-                "description": "Extract valuable insights from the web using advanced web scraping techniques and structured data parsing.",
-                "icon1": "/icon-techprogrammatic.png",
-                "icon2": "/icon-techscraping.png"
-              },
-              {
-                "id": 4,
-                "title": "Workflow Automation",
-                "description": "Optimize business processes by automating tasks across multiple platforms using Zapier, Integromat, and custom scripts.",
-                "icon1": "/icon-techprogrammatic.png",
-                "icon2": "/icon-techworkflow.png"
-              },
-              {
-                "id": 5,
-                "title": "Cloud & Serverless Automation",
-                "description": "Deploy automation solutions using AWS Lambda, Google Cloud Functions, and Azure Functions for cost-effective scalability.",
-                "icon1": "/icon-techprogrammatic.png",
-                "icon2": "/icon-techcloud.png"
-              },
-              {
-                "id": 6,
-                "title": "AI & Machine Learning Automation",
-                "description": "Integrate AI-powered automation using NLP, computer vision, and predictive analytics to enhance decision-making.",
-                "icon1": "/icon-techprogrammatic.png",
-                "icon2": "/icon-techai.png"
-              },
-              {
-                "id": 7,
-                "title": "Database Automation & Management",
-                "description": "Automate database tasks such as backups, performance tuning, and real-time data synchronization.",
-                "icon1": "/icon-techprogrammatic.png",
-                "icon2": "/icon-techdatabase.png"
-              },
-              {
-                "id": 8,
-                "title": "AdTech & Programmatic Advertising",
-                "description": "Leverage programmatic advertising automation for campaign optimization, real-time bidding, and audience targeting.",
-                "icon1": "/icon-techprogrammatic.png",
-                "icon2": "/icon-techadtech.png"
-              },
-              {
-                "id": 9,
-                "title": "CI/CD & DevOps Automation",
-                "description": "Implement continuous integration and deployment pipelines with Jenkins, GitHub Actions, and Kubernetes for seamless software delivery.",
-                "icon1": "/icon-techprogrammatic.png",
-                "icon2": "/icon-techdevops.png"
-        },
-      ],
-    }
-  },
-  "programmatic-developer": {
-    title: "Transform Your Business with Programmatic Advertising Experts",
-    description:"Boost your brand’s reach and drive data-driven results with Brandsmashers Tech — your trusted partner for hiring programmatic advertising experts. Our team connects you with skilled professionals who use AI-powered strategies to automate ad placements, optimize bidding, and maximize ROI. Whether you're scaling an eCommerce store or expanding your SaaS platform, our programmatic advertising experts tailor campaigns to target the right audience at the right time. Don’t let outdated ad strategies hold you back — partner with Brandsmashers Tech to hire programmatic advertising experts for measurable results and sustained growth. ",
-    buttonText: "Programmatic Advertising Experts",
-    services: {
-      mainTitle: "Hire Skilled Programmatic Advertising Experts to Maximize Your ROI",
-      // highlightedWord: "App Developers",
-      subTitle:
-        "At Brandsmashers Tech, our skilled programmatic advertising experts harness the power of automation and data analytics to streamline ad buying and drive campaign performance.",
-      services: [
-        {
-          title: "Custom Programmatic Advertising Strategy",
-          description:
-            "Our experts design tailored programmatic ad strategies aligned with your business goals. From real-time bidding (RTB) to audience segmentation, we create targeted campaigns that boost your brand visibility and ROI.",
-          iconSrc: "/Android-page-img/mobile-icon.svg",
-        },
-        {
-          title: "AI-Powered Ad Optimization",
-          description:
-            "We leverage AI algorithms to analyze user behavior, optimize ad placements, and adjust bidding strategies in real-time — ensuring your ads reach the most relevant audience with maximum efficiency.",
-          iconSrc: "/Android-page-img/mobile-icon.svg",
-        },
-        {
-          title: "Cross-Platform Advertising ",
-          description:
-            "Our programmatic advertising experts manage multi-channel campaigns across display, video, mobile, and social media platforms, helping you engage your audience wherever they are online.",
-          iconSrc: "/Android-page-img/mobile-icon.svg",
-        },
-        {
-          title: "Audience Targeting & Segmentation ",
-          description:
-            "We use advanced data analytics to segment your audience based on demographics, interests, and online behavior, delivering personalized ad experiences that drive higher engagement and conversions.",
-        },
-        {
-          title: "Ad Performance Tracking & Reporting",
-          description:
-            "Stay informed with detailed reports on ad performance, including impressions, click-through rates (CTR), conversion rates, and ROI. Our transparent reporting helps you make data-backed decisions for continuous improvement.",
-        },
-        {
-          title: "Retargeting & Remarketing Campaigns ",
-          description:
-            "Our experts develop retargeting strategies to re-engage users who’ve shown interest in your products or services, boosting your chances of conversion and customer retention.",
-          iconSrc: "/Android-page-img/mobile-icon.svg",
-        },
-      ],
-    },
-    carousel: {
-      "heading": {
-        "beforeHighlight": "Hire Remote",
-        "highlight": " Programmatic Developers ",
-        "afterHighlight": "from India – Automate, Optimize & Scale Your Business"
-      },
-    
-      "description": "Get top programmatic developers to build intelligent, data-driven automation solutions for your business. Leverage custom scripts, API integrations, and workflow automation to enhance efficiency, reduce manual effort, and scale seamlessly.",
-    
-      "cardsData": [
-        {
-          "id": 1,
-          "title": "Custom Scripting & Automation",
-          "description": "Automate repetitive tasks with custom scripts in Python, JavaScript, and Shell. Enhance efficiency and reduce operational overhead.",
-          "icon1": "/icon-techprogrammatic.png",
-          "icon2": "/icon-techautomation.png"
-        },
-        {
-          "id": 2,
-          "title": "API Development & Integration",
-          "description": "Integrate third-party APIs, create custom RESTful services, and automate data exchanges between applications.",
-          "icon1": "/icon-techprogrammatic.png",
-          "icon2": "/icon-techapi.png"
-        },
-        {
-          "id": 3,
-          "title": "Web Scraping & Data Extraction",
-          "description": "Extract valuable insights from the web using advanced web scraping techniques and structured data parsing.",
-          "icon1": "/icon-techprogrammatic.png",
-          "icon2": "/icon-techscraping.png"
-        },
-        {
-          "id": 4,
-          "title": "Workflow Automation",
-          "description": "Optimize business processes by automating tasks across multiple platforms using Zapier, Integromat, and custom scripts.",
-          "icon1": "/icon-techprogrammatic.png",
-          "icon2": "/icon-techworkflow.png"
-        },
-        {
-          "id": 5,
-          "title": "Cloud & Serverless Automation",
-          "description": "Deploy automation solutions using AWS Lambda, Google Cloud Functions, and Azure Functions for cost-effective scalability.",
-          "icon1": "/icon-techprogrammatic.png",
-          "icon2": "/icon-techcloud.png"
-        },
-        {
-          "id": 6,
-          "title": "AI & Machine Learning Automation",
-          "description": "Integrate AI-powered automation using NLP, computer vision, and predictive analytics to enhance decision-making.",
-          "icon1": "/icon-techprogrammatic.png",
-          "icon2": "/icon-techai.png"
-        },
-        {
-          "id": 7,
-          "title": "Database Automation & Management",
-          "description": "Automate database tasks such as backups, performance tuning, and real-time data synchronization.",
-          "icon1": "/icon-techprogrammatic.png",
-          "icon2": "/icon-techdatabase.png"
-        },
-        {
-          "id": 8,
-          "title": "AdTech & Programmatic Advertising",
-          "description": "Leverage programmatic advertising automation for campaign optimization, real-time bidding, and audience targeting.",
-          "icon1": "/icon-techprogrammatic.png",
-          "icon2": "/icon-techadtech.png"
-        },
-        {
-          "id": 9,
-          "title": "CI/CD & DevOps Automation",
-          "description": "Implement continuous integration and deployment pipelines with Jenkins, GitHub Actions, and Kubernetes for seamless software delivery.",
-          "icon1": "/icon-techprogrammatic.png",
-          "icon2": "/icon-techdevops.png"
-        
-        }
-      ]
-    }
-    
-  },
+  
+
   "SEO": {
     title: "Hire Professional SEO Experts For Your Project.",
     description:"Boost your online presence with Brandsmashers Tech — your go-to partner for hiring remote SEO experts. Our team connects you with top-tier SEO specialists, ensuring you get the expertise to elevate your website's performance. Whether it's a SaaS platform or an eCommerce site, our experts drive organic traffic, optimize site structure, and enhance user experience. From keyword research to technical SEO audits and link-building, we craft strategies tailored to your business goals. Don’t let competitors outrank you — partner with Brandsmashers Tech to hire remote SEO experts for measurable results and long-term growth.",
@@ -1934,69 +1689,69 @@ const technologyData = {
           "id": 1,
           "title": "Technical SEO & Site Optimization",
           "description": "Enhance website performance with Core Web Vitals optimization, structured data implementation, and mobile-first indexing strategies.",
-          "icon1": "/icon-techseo.png",
-          "icon2": "/icon-techoptimization.png"
+          "icon1": "/seo.png",
+         
         },
         {
           "id": 2,
           "title": "SEO Automation & AI Integration",
           "description": "Implement AI-driven SEO automation for content generation, keyword research, and rank tracking using machine learning models.",
-          "icon1": "/icon-techseo.png",
-          "icon2": "/icon-techai.png"
+          "icon1": "/seo.png",
+       
         },
         {
           "id": 3,
           "title": "Schema Markup & Structured Data",
           "description": "Boost search visibility with JSON-LD, microdata, and rich snippets to enhance Google rankings and click-through rates.",
-          "icon1": "/icon-techseo.png",
-          "icon2": "/icon-techschema.png"
+          "icon1": "/seo.png",
+        
         },
         {
           "id": 4,
           "title": "API & SEO Tool Integrations",
           "description": "Seamlessly integrate SEO tools like Google Search Console, SEMrush, Ahrefs, and Moz for data-driven insights and automation.",
-          "icon1": "/icon-techseo.png",
-          "icon2": "/icon-techapi.png"
+          "icon1": "/seo.png",
+       
         },
         {
           "id": 5,
           "title": "Content Optimization & NLP",
           "description": "Leverage NLP and AI to create high-quality, search-optimized content that ranks for competitive keywords and improves engagement.",
-          "icon1": "/icon-techseo.png",
-          "icon2": "/icon-technlp.png"
+          "icon1": "/seo.png",
+        
         },
         {
           "id": 6,
           "title": "Page Speed & Core Web Vitals",
           "description": "Optimize load times with advanced caching, lazy loading, and CDN integration to meet Google's Core Web Vitals standards.",
-          "icon1": "/icon-techseo.png",
-          "icon2": "/icon-techspeed.png"
+          "icon1": "/seo.png",
+         
         },
         {
           "id": 7,
           "title": "E-Commerce SEO & Marketplace Optimization",
           "description": "Boost sales and visibility on platforms like Shopify, WooCommerce, and Amazon with structured SEO strategies.",
-          "icon1": "/icon-techseo.png",
-          "icon2": "/icon-techcommerce.png"
+          "icon1": "/seo.png",
+        
         },
         {
           "id": 8,
           "title": "SEO-Optimized Web Development",
           "description": "Develop websites with clean code, SEO-friendly architecture, and mobile-first design for better indexing and rankings.",
-          "icon1": "/icon-techseo.png",
-          "icon2": "/icon-techdevelopment.png"
+          "icon1": "/seo.png",
+        
         },
         {
           "id": 9,
           "title": "Local SEO & Google My Business Optimization",
           "description": "Improve local search visibility with GMB optimization, citation management, and geo-targeted SEO strategies.",
-          "icon1": "/icon-techseo.png",
-          "icon2": "/icon-techlocal.png"
+          "icon1": "/seo.png",
+     
         }
       ]
     }
   },
-  wordpress: {
+  "wordpress": {
     "title": "Hire Best WordPress Developer from India",
     "description": "Unlock the power of WordPress with expert developers from India! At Brandsmashers Tech, we bring your vision to life with cutting-edge WordPress development services. Whether you need a custom website, theme development, plugin integration, or a complete eCommerce solution, our skilled WordPress developers craft seamless, high-performing, and SEO-friendly websites tailored to your business goals. Hire dedicated WordPress developers from India today and experience innovation, scalability, and excellence in web development!",
     "buttonText": "Hire WordPress Developer",
@@ -2048,27 +1803,26 @@ const technologyData = {
           "id": 1,
           "title": "WordPress + ReactJS",
           "description": "Combine WordPress with ReactJS for high-end web solutions. Our developers build dynamic and highly interactive WordPress websites using the latest JavaScript frameworks.",
-          "icon1": "/icon-techphp.png",
+          "icon1": "/wordpress.png",
           "icon2": "/icon-techlaravel.png"
         },
         {
           "id": 2,
           "title": "WordPress + Ruby On Rails",
-          "description": "Leverage Ruby on Rails with WordPress to develop highly customized plugins and scalable web applications for advanced functionalities and seamless integrations.",
-          "icon1": "/icon-techphp.png",
-          "icon2": "/icon-techsymfony.png"
+          "description": "Leverage Ruby on Rails with WordPress to develop highly customized plugins.",
+          "icon1": "/wordpress.png",
+          "icon2": "/icon-techruby.png"
         },
         {
           "id": 3,
           "title": "WordPress + HTML",
           "description": "Utilize HTML to create a fully customized WordPress site with tailored UI/UX. Our developers use HTML, CSS, and JavaScript to enhance design and functionality.",
-          "icon1": "/icon-techphp.png",
+          "icon1": "/wordpress.png",
           "icon2": "/icon-techmysql.png"
         },
       ]
     }
   },
-
 
   "shopify": {
     title: "Hire Best Shopify Developer from India",
@@ -2124,21 +1878,21 @@ const technologyData = {
           id: 1,
           title: 'Shopify + Reactjs',
           description: 'Our dedicated Shopify developers are proficient in the latest themes, apps, and frameworks to deliver high-performing, conversion-optimized online stores',
-          icon1: '/icon-techphp.png',
+          icon1: '/shopify.png',
           icon2: '/icon-techlaravel.png'
         },
         {
           id: 2,
           title: 'Shopify + Ruby On Rails',
           description: 'Our dedicated Shopify developers are proficient in the latest themes, apps, and frameworks to deliver high-performing, conversion-optimized online stores.',
-          icon1: '/icon-techphp.png',
-          icon2: '/icon-techsymfony.png'
+          icon1: '/shopify.png',
+          icon2: '/icon-techruby.png'
         },
         {
           id: 3,
           title: 'Shopify + HTML',
           description: 'Leverage HTML to create a fully customized Shopify store with tailored UI/UX',
-          icon1: '/icon-techphp.png',
+          icon1: '/shopify.png',
           icon2: '/icon-techmysql.png'
         },
         
@@ -2165,7 +1919,7 @@ export default function TechnologyDetails() {
     return (
       <>
         <Navbar />
-        <ComingSoon />
+       
         <Footer />
       </>
     );

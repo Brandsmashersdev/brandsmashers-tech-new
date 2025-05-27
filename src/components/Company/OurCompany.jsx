@@ -53,7 +53,7 @@ export default function MilestoneTimeline() {
                   </div>
 
                   {/* Text */}
-                  <div className="pl-20">
+                  <div className="pl-20 text-justify">
                     <h3 className="text-2xl font-semibold mb-2">
                       {milestone.title}
                     </h3>
