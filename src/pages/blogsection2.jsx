@@ -1,26 +1,24 @@
+// import BlogsHeroSection from "@/components/Blogs/BlogsHeroSection";
+// import BlogDetails from "@/components/Blogs/BlogDetails";
+import BlogSection1 from "@/components/Company/BlogSection1";
+import BlogSection2 from "@/components/Company/BlogSection2"
+import Footer from "@/components/footer/footer";
+import Navbar from "@/components/navbar/navbar";
 import React from "react";
+// import BlogPage from "@/components/blogcards";
+import Blog from "./Blog";
 
-const BlogSection2 = () => {
+const blogs = () => {
   return (
-    <section className="p-8 bg-gray-50">
-      <h2 className="text-3xl font-bold mb-4">
-        Understanding &quot;React&quot; and Its Core Concepts
-      </h2>
-      <p className="text-lg text-gray-700">
-        In this blog, we explore the key features of &quot;React&quot;, including components,
-        hooks, and JSX. React makes building user interfaces easy and efficient.
-      </p>
+    <div>
 
-      <blockquote className="mt-4 italic text-gray-500">
-        &ldquo;React is not a framework, it&apos;s a library for building UI&rdquo;
-      </blockquote>
-
-      <p className="mt-4">
-        Always remember, readability matters. Avoid writing things like Hello World
-        without escaping quotes in JSX.
-      </p>
-    </section>
+      <Navbar />
+      {/* <BlogSection1 /> */}
+      <BlogSection2/>
+      <Footer />
+      
+    </div>
   );
 };
 
-export default BlogSection2;
+export default blogs;

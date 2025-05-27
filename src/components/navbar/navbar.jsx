@@ -34,7 +34,7 @@ const Navbar = () => {
         { name: "PHP Developers", iconSrc: "/Nav-Dropdown-icons/PHP.svg", path: "/php-developer" }
       ]
     },
-    "CMS & E-Commerce Developers": {
+    "CMS Developers": {
       items: [
         { name: "WordPress Developer", iconSrc: "/Nav-Dropdown-icons/WordPress.svg", path: "/wordpress" },
         { name: "Shopify Developer", iconSrc: "/Nav-Dropdown-icons/Shopify.svg", path: "/shopify" },
@@ -85,24 +85,39 @@ const Navbar = () => {
       }
     };
 
+    const handleResize = () => {
+      if (window.innerWidth > 1024) {
+        setIsMenuOpen(false);
+        setActiveDropdown(null);
+      }
+    };
+
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('resize', handleResize);
+    };
   }, [isMenuOpen]);
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setActiveDropdown(null);
   };
 
   const toggleDropdown = (menu) => {
     setActiveDropdown(activeDropdown === menu ? null : menu);
   };
 
-  const handleItemClick = (path) => {
-    window.location.href = path;
+  const closeMenu = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null);
   };
@@ -116,19 +131,23 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <Link href="/">
+        <Link href="/" onClick={closeMenu}>
           <Image
             src="/logo.jpg"
             alt="Logo"
-            width={100}
-            height={50}
+            width={300}
+            height={300}
             style={{ objectFit: "cover" }}
           />
         </Link>
       </div>
 
       <div className={styles.hamburger} onClick={toggleMenu}>
-        <Image src="/toggle.jpg" alt="Menu" width={24} height={24} />
+        <div className={`${styles.hamburgerIcon} ${isMenuOpen ? styles.open : ''}`}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
 
       <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
@@ -136,18 +155,18 @@ const Navbar = () => {
           <li
             key={item.name}
             data-menu-type={item.name}
-            className={`${item.hasDropdown ? styles.hasDropdown : ''} ${activeDropdown === item.name ? styles.active : ''
-              }`}
-            onClick={() => item.hasDropdown && toggleDropdown(item.name)}
+            className={`${item.hasDropdown ? styles.hasDropdown : ''} ${activeDropdown === item.name ? styles.active : ''}`}
           >
-            <div className={styles.menuItem}>
-              <Link href={item.href || "#"}>
+            <div 
+              className={styles.menuItem}
+              onClick={() => item.hasDropdown && toggleDropdown(item.name)}
+            >
+              <Link href={item.href || "#"} onClick={(e) => item.hasDropdown && e.preventDefault()}>
                 {item.name}
               </Link>
               {item.hasDropdown && (
                 <svg
-                  className={`${styles.dropdownIcon} ${activeDropdown === item.name ? styles.rotate : ''
-                    }`}
+                  className={`${styles.dropdownIcon} ${activeDropdown === item.name ? styles.rotate : ''}`}
                   width="10"
                   height="6"
                   viewBox="0 0 10 6"
@@ -161,8 +180,7 @@ const Navbar = () => {
 
             {/* Company Dropdown */}
             {item.name === "Company" && (
-              <div className={`${styles.dropdownMenu} ${activeDropdown === item.name ? styles.show : ''
-                }`}>
+              <div className={`${styles.dropdownMenu} ${activeDropdown === item.name ? styles.show : ''}`}>
                 <div className={styles.dropdownGrid}>
                   {Object.entries(companyDropdownContent).map(([category, { items }]) => (
                     <div key={category} className={styles.dropdownColumn}>
@@ -170,7 +188,7 @@ const Navbar = () => {
                       <ul>
                         {items.map((item) => (
                           <li key={item.path}>
-                            <Link href={`/${item.path}`}>
+                            <Link href={`/${item.path}`} onClick={closeMenu}>
                               <div>
                                 <span className={styles.iconWrapper}>
                                   <Image src={item.iconSrc} alt={`${item.name} icon`} width={20} height={20} />
@@ -189,8 +207,7 @@ const Navbar = () => {
 
             {/* Services Dropdown */}
             {item.name === "Services" && (
-              <div className={`${styles.dropdownMenu} ${activeDropdown === item.name ? styles.show : ''
-                }`}>
+              <div className={`${styles.dropdownMenu} ${activeDropdown === item.name ? styles.show : ''}`}>
                 <div className={styles.dropdownGrid}>
                   {Object.entries(servicesDropdownContent).map(([category, { items }]) => (
                     <div key={category} className={styles.dropdownColumn}>
@@ -198,7 +215,7 @@ const Navbar = () => {
                       <ul>
                         {items.map((service) => (
                           <li key={service.path}>
-                            <Link href={`/services${service.path}`}>
+                            <Link href={`/services${service.path}`} onClick={closeMenu}>
                               <span className={styles.iconWrapper}>
                                 <Image src={service.iconSrc} alt={`${service.name} icon`} width={20} height={20} />
                               </span>
@@ -215,8 +232,7 @@ const Navbar = () => {
 
             {/* Hire Developers Dropdown */}
             {item.name === "Hire Developers" && (
-              <div className={`${styles.dropdownMenu} ${activeDropdown === item.name ? styles.show : ''
-                }`}>
+              <div className={`${styles.dropdownMenu} ${activeDropdown === item.name ? styles.show : ''}`}>
                 <div className={styles.dropdownGrid}>
                   {Object.entries(techDropdownContent).map(([category, { items }]) => (
                     <div key={category} className={styles.dropdownColumn}>
@@ -224,7 +240,7 @@ const Navbar = () => {
                       <ul>
                         {items.map((tech) => (
                           <li key={tech.path}>
-                            <Link href={`/tech${tech.path}`}>
+                            <Link href={`/tech${tech.path}`} onClick={closeMenu}>
                               <span className={styles.iconWrapper}>
                                 <Image src={tech.iconSrc} alt={`${tech.name} icon`} width={20} height={20} />
                               </span>
@@ -240,11 +256,16 @@ const Navbar = () => {
             )}
           </li>
         ))}
+        
+        {/* Mobile Contact Button */}
+        <li className={styles.mobileContactBtn}>
+          <Link href="/contact" onClick={closeMenu}>
+            <button className={styles.contactBtnMobile}>Contact Us</button>
+          </Link>
+        </li>
       </ul>
 
-      <button className={`${styles.contactBtn} ${styles.mobileHidden}`}>
-        <Link href="/contact">Contact Us</Link>
-      </button>
+ 
     </nav>
   );
 };

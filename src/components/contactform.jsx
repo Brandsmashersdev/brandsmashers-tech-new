@@ -192,15 +192,16 @@ export default function ContactForm() {
         <div className="text-center mb-16">
         
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+        
             Let&apos;s Start a{' '}
             <span className="bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
-              Conversation
+            Conversation
             </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ready to transform your ideas into reality? Our team of experts is here to discuss your vision and provide tailored solutions that drive success.
           </p>
-        
+     
           {/* Contact Info Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
@@ -264,7 +265,7 @@ export default function ContactForm() {
             <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-orange-600 to-orange-500 p-8">
                 <h2 className="text-3xl font-bold text-white text-center">Get In Touch</h2>
-                <p className="text-orange-100 text-center mt-2">We&apos;d love to hear about your project</p>
+                <p className="text-orange-100 text-center mt-2">We&apos;d love to hear about your Query</p>
               </div>
               <div className="p-8 md:p-12">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

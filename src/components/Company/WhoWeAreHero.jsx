@@ -34,7 +34,7 @@ export default function WhoWeAreHero() {
               Building the Future, Together
             </h2>
             <p className="text-justify">
-              Whether it&lsquos a startup or a global brand, we bring the same level of commitment, agility, and technical excellence.
+              Whether it's a startup or a global brand, we bring the same level of commitment, agility, and technical excellence.
               Lets shape tomorrow digital landscape together.
             </p>
           </div>

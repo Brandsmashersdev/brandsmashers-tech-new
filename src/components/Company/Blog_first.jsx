@@ -34,7 +34,7 @@ export default function BrandSmasherBlog() {
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Hero Section */}
-      <div className="relative min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] lg:min-h-[85vh] xl:min-h-[90vh] bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center text-white">
+      <div className="relative min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] lg:min-h-[85vh] xl:min-h-[60vh] bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center text-white">
         <div className="absolute inset-0 bg-black/40" />
         
         {/* Background Pattern */}
@@ -50,7 +50,7 @@ export default function BrandSmasherBlog() {
             {/* Left Side - Brand Title */}
             <div className="text-center lg:text-left lg:flex-1">
               <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-tight">
-                <span className="text-white block sm:inline">Brandsmasher</span>
+                <span className="text-white block sm:inline">Brandsmashers</span>
                 <span className="text-[#FF5010] block sm:inline"> Tech</span>
               </div>
             </div>
