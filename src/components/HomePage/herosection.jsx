@@ -143,6 +143,16 @@ const HeroSection = () => {
   }, []);
 
   return (
+
+    <>
+
+     <Head>
+        <title>Brand Smashers Tech</title>
+        <meta
+          name="description"
+          content="Brand Smashers Tech offers innovative custom software development, IT outsourcing, and scalable web & mobile app solutions."
+        />
+      </Head>
     <section className="relative">
       {/* Hero Main Section */}
       <div className="w-full min-h-screen bg-cover bg-center relative overflow-hidden">
@@ -539,6 +549,7 @@ const HeroSection = () => {
         }
       `}</style>
     </section>
+    </>
   );
 };
 
