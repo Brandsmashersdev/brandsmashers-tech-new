@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Send, Code, ChevronDown, Star, ArrowRight } from "lucide-react";
+import Head from "next/head";
 
 const phrases = [
   "Modern Trendy",
