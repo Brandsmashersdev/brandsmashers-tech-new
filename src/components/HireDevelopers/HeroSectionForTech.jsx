@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
   const defaultTitle = "Technology Solutions";
@@ -296,10 +297,14 @@ const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
             {description || defaultDescription}
           </p>
           
+          <Link href="/contactus">
+              <Link href="/contactus">
           <button className="cta-button">
             {buttonText || defaultButtonText}
             <ArrowRight size={20} />
           </button>
+          </Link>
+              </Link>
         </div>
 
     

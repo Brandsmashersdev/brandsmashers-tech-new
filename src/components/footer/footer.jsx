@@ -53,7 +53,8 @@ export default function Footer() {
             </h1>
             
             <p className="text-gray-400 pr-4 mt-6 leading-relaxed">
-              We are a leading Software Development Company delivering excellence and innovation since 2010. Our expertise spans across various technologies and industries.
+              Brandsmashers Tech is a trusted software development and IT staff augmentation company, helping startups and enterprises build custom digital solutions and hire top remote developers from India since 2018.
+
             </p>
             
             <div className="flex flex-col space-y-3 text-gray-300 pt-2">

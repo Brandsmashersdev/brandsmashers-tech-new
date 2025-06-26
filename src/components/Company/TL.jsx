@@ -6,7 +6,7 @@ const teamLeads = [
   { name: "Alice", role: "", image: "/Nav-Dropdown-icons/Aniket.jpg" },
   { name: "Bob", role: "", image: "/Nav-Dropdown-icons/Gourav.jpg" },
   { name: "Sophie", role: "", image: "/Nav-Dropdown-icons/Hitanshi.jpg" },
-  { name: "James", role: "", image: "/Nav-Dropdown-icons/Chirag.jpg" },
+  { name: "James", role: "", image: "/Nav-Dropdown-icons/shilpa.jpg" },
   { name: "Emma", role: "", image: "/Nav-Dropdown-icons/jay.jpg" },
   { name: "Liam", role: "", image: "/Nav-Dropdown-icons/mayuri.jpg" },
 ];

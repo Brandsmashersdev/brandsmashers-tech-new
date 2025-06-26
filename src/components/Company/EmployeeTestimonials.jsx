@@ -13,17 +13,14 @@ export default function EmployeeTestimonials() {
           <span className="text-[#ff5010]">Testimonials</span>
         </h2>
         <p className="text-black mb-12 max-w-3xl mx-auto text-lg sm:text-xl">
-          Hear what our team has to say about working at Softude. We believe in
-          appreciation, growth, and a great work culture.
+          Hear what our team has to say about working at Brandsmashers Tech. We believe in appreciation, growth, and a great work culture.
+
         </p>
 
         {/* Testimonial Card */}
         <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl transition-all duration-300 hover:shadow-2xl">
           <p className="text-gray-700 dark:text-gray-300 text-lg sm:text-xl leading-relaxed mb-6 ">
-            “It has been 5+ years with Brandsmashers (Previously Systematix Infotech) and
-            it&apos;s truly an AWESOME place to work in. It has a nice work culture and
-            allows employees to work freely. Also, there&apos;s great support from seniors.
-            Employees are motivated and appreciated for their efforts.”
+            “It’s been 4+ years with Brandsmashers Tech, and it’s truly an AWESOME place to work! The work culture is supportive and flexible, allowing employees to work with freedom and creativity. There’s strong support from seniors, and efforts are always recognized and appreciated.”
           </p>
 
           {/* Employee Info */}

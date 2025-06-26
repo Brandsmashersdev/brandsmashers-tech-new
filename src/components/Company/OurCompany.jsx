@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 
 import Image from 'next/image';
 
@@ -6,10 +6,10 @@ export default function MilestoneTimeline() {
   const milestones = [
     {
       id: 1,
-      title: 'Empowering Businessses with Tech Talent, Technology, and Transformation.',
+      title: 'Empowering Businesses with Tech Talent, Technology and Transformation.',
       description:
-        'At Brandsmashers Tech, we are driven by a clear purpose — to bridge the gap between global businesses and exceptional remote developers. As a leading Software Development company in India, our mission is to simplify tech hiring through our best-in-class IT Staff Augmentation services, while delivering scalable and impactful digital solutions across industries.     We envision a future where innovation knows no borders and world-class teams are built without limits. Through talent, technology, and trust, we’re shaping the next generation of digital success stories.',
-        icon: '/Nav-Dropdown-icons/Achievement.png',
+        'At Brandsmashers Tech, we are driven by a clear purpose — to bridge the gap between global businesses and exceptional remote developers. As a leading Software Development company in India, our mission is to simplify tech hiring through our best-in-class IT Staff Augmentation services, while delivering scalable and impactful digital solutions across industries. We envision a future where innovation knows no borders and world-class teams are built without limits. Through talent, technology, and trust, we’re shaping the next generation of digital success stories.',
+      icon: '/Nav-Dropdown-icons/Achievement.png',
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ export default function MilestoneTimeline() {
       description:
         'At the heart of Brandsmashers Tech is a team of passionate leaders with a bold vision and relentless drive. From steering strategic direction to nurturing a culture of excellence, our leadership team brings deep industry expertise and a shared commitment to delivering world-class IT solutions and staff augmentation services. Get to know the people powering our mission and inspiring our team of 80+ tech experts.',
       icon: '/Nav-Dropdown-icons/Achievement.png',
-    },
+    }
   ];
 
   return (
@@ -54,7 +54,7 @@ export default function MilestoneTimeline() {
 
                   {/* Text */}
                   <div className="pl-20 text-justify">
-                    <h3 className="text-2xl font-semibold mb-2">
+                    <h3 className="text-2xl font-semibold mb-2 tracking-normal whitespace-normal">
                       {milestone.title}
                     </h3>
                     <p className="text-gray-300">{milestone.description}</p>

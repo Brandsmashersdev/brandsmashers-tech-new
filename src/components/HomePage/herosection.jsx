@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Send, Code, ChevronDown, Star, ArrowRight } from "lucide-react";
 import Head from "next/head";
+import Link from 'next/link';
 
 const phrases = [
   "Modern Trendy",
@@ -245,6 +246,7 @@ const HeroSection = () => {
 
             {/* Enhanced CTA buttons - optimized layout for Nest Hub */}
             <div className="flex flex-col sm:flex-row nest-hub:flex-row nest-hub-max:flex-row space-y-3 sm:space-y-0 nest-hub:space-y-0 nest-hub-max:space-y-0 sm:space-x-4 nest-hub:space-x-4 nest-hub-max:space-x-6 md:space-x-6 justify-center md:justify-start nest-hub:justify-center nest-hub-max:justify-center mb-6 sm:mb-10 nest-hub:mb-4 nest-hub-max:mb-6">
+             <Link href="/contact">
               <button className="group relative overflow-hidden px-4 sm:px-6 nest-hub:px-5 nest-hub-max:px-6 py-2 sm:py-3 nest-hub:py-2.5 nest-hub-max:py-3 bg-[#ff5010] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto nest-hub:w-auto nest-hub-max:w-auto">
                 <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
                 <div className="relative z-10 flex items-center justify-center space-x-2">
@@ -252,7 +254,9 @@ const HeroSection = () => {
                   <span>Contact Us</span>
                 </div>
               </button>
+              </Link>
 
+              <Link href="/contactus">
               <button className="group relative overflow-hidden px-4 sm:px-6 nest-hub:px-5 nest-hub-max:px-6 py-2 sm:py-3 nest-hub:py-2.5 nest-hub-max:py-3 bg-black border border-[#ff5010] text-[#ff5010] font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto nest-hub:w-auto nest-hub-max:w-auto">
                 <span className="absolute inset-0 bg-[#ff5010] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
                 <div className="relative z-10 flex items-center justify-center space-x-2">
@@ -260,6 +264,7 @@ const HeroSection = () => {
                   <span className="group-hover:text-white transition-colors duration-300">Hire Developers</span>
                 </div>
               </button>
+              </Link>
             </div>
 
             {/* Stats counter - optimized for Nest Hub */}

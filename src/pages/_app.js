@@ -1,11 +1,17 @@
 // src/pages/_app.js
+import Head from "next/head";
 import Script from "next/script";
 import "../styles/globals.css"; // your global styles
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+    
       {/* Google Tag Manager */}
+      <Head>
+        <title>Brandsmashers Tech</title>
+        <link rel="icon" href="/logo.jpg" />
+      </Head>
       <Script
         id="gtm-init"
         strategy="afterInteractive"
