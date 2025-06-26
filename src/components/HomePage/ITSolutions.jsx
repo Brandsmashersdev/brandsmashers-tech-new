@@ -177,9 +177,12 @@ const ITSolutions = () => {
               <span className="inline-block px-3 py-1 bg-[#ff5010]/10 text-[#ff5010] rounded-md text-sm font-medium mb-4">WHY CHOOSE US</span>
 
               <h3 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
-                Cut Through the Noise
 
-                <span className="text-[#ff5010] block mt-1">Connect Only with the Top 1% of Qualified Candidates</span>
+
+                <span className="text-[#fffff] block mt-1">Why Partner with the Best IT </span>
+                
+
+                <span className="text-[#ff5010] block mt-1"> Staff Augmentation Company in India?</span>
               </h3>
 
               <div className="space-y-6">
@@ -197,11 +200,11 @@ const ITSolutions = () => {
                 {/* Feature Points */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
                   {[
-                    " Share Your Talent Requirements",
-                    "Receive Handpicked CVs",
-                    "Interview the Best-Fit Engineers",
-                    "Smooth Documentation & Compliance",
-                    "Onboard & Get Started"
+                    " Access to Top 1% Remote Developers from India",
+                    " Fast & Focused Talent Matching",
+                    "Interview-Ready Candidates",
+                    " Hassle-Free Compliance & Onboarding",
+                    " Flexible Engagement Models"
                   ].map((item, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#ff5010]/10 flex items-center justify-center">

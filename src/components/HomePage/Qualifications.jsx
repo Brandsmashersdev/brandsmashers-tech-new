@@ -83,7 +83,10 @@ export default function CutThroughNoiseSection() {
             Hire Pre-vetted Developers from <span className="text-orange-500">Best IT Staff Augmentation Company</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Stop wasting time on endless interviews and underqualified profiles. With our expert IT Staff Augmentation services, we match you with pre-vetted, highly skilled professionals who are ready to make an impact from day one.
+            Tired of slow hiring and mismatched talent? With Brandsmashers Tech, you can hire pre-vetted developers from the best IT Staff Augmentation company, without the delays or guesswork. We streamline the entire process—from understanding your project needs to onboarding top-tier developers—so you can build faster, smarter, and with full confidence.
+
+
+
           </p>
         </div>
         

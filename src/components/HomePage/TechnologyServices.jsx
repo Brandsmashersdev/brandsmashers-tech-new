@@ -106,7 +106,9 @@ const TechStack = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Tech-Stacked & Battle-Tested: <span style={{ color: "#ff5010" }}>Meet Our Remote Dev Experts</span>
+             Hire Dedicated Remote Developers from India <span style={{ color: "#ff5010" }}>  Skilled </span>
+              in Web & Mobile App Development
+
           </h2>
           {/* <p className="max-w-3xl mx-auto text-gray-600 text-lg">
             Brandsmashers Tech is a leading IT services company specializing in web & mobile app development, 
