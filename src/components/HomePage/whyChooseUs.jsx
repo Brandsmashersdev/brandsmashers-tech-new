@@ -43,7 +43,7 @@ const WhyHireRemoteDevelopers = () => {
             {/* <div className="absolute h-1 w-24 left-1/2 -translate-x-1/2 bottom-0" style={{ backgroundColor: primaryColor }}></div> */}
           </h2>
           <p className="text-gray-700 max-w-3xl mx-auto text-lg">
-            At Brandsmashers Tech, we provide highly skilled, pre-vetted remote developers who seamlessly integrate with your team. 
+            At Brandsmashers Tech,  we provide highly skilled, pre-vetted remote developers who seamlessly integrate with your team. 
             Whether you&apos;re scaling fast, filling a skill gap, or looking to reduce development costs, our experts are ready to 
             deliver quality work with flexibility and speed.
           </p>
