@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
     
+  
       {/* Google Tag Manager */}
       <Head>
         <title>Brandsmashers Tech</title>
