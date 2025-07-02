@@ -46,7 +46,7 @@ const BlogPage = () => {
               src={item.imageSrc}
               alt={`Image ${item.id}`}
               width={500}  // Set the width of the image (adjust as necessary)
-              height={300} // Set the height of the image (adjust as necessary)
+              // height={300} // Set the height of the image (adjust as necessary)
               className={styles.cardImage}
             />
             <div className={styles.cardContent}>

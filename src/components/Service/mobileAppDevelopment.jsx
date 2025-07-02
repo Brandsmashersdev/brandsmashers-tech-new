@@ -301,6 +301,27 @@ export default function MobileAppDevelopmentPage() {
   ];
 
 
+   const caseStudies = [
+    {
+      title: "Fintech Mobile App",
+      description: "Developed a secure, scalable financial solution with real-time data processing",
+      industry: "Finance",
+      slug: "first", // maps to pages/CaseStudy/first.js
+    },
+    {
+      title: "E-commerce Platform",
+      description: "Built a high-performance marketplace with advanced search capabilities",
+      industry: "Retail",
+      slug: "second", // maps to pages/CaseStudy/second.js
+    },
+    {
+      title: "Healthcare Management System",
+      description: "Created an integrated platform for patient records and telemedicine",
+      industry: "Healthcare",
+      slug: "third", // maps to pages/CaseStudy/third.js
+    },
+  ];
+
   return (
     
     <div className="flex flex-col min-h-screen bg-gray-50">
@@ -328,7 +349,7 @@ export default function MobileAppDevelopmentPage() {
             <div>
               {/* Modified title to ensure it stays on one line */}
               <h1
-                className="text-4xl md:text-5xl font-bold mb-6 whitespace-nowrap"
+                className="text-4xl md:text-5xl font-bold mb-6 md:whitespace-nowrap"
                 style={{ textShadow: "0px 2px 4px rgba(0,0,0,0.5)" }}
               >
            Mobile App Development
@@ -664,61 +685,44 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
       </section>
 
          {/* Case Study Section */}
-         <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-black">Our Success Stories</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Explore how we have helped businesses transform their digital presence with our product development expertise.
-            </p>
-          </div>
+        <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4 text-black">Our Success Stories</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Explore how we have helped businesses transform their digital presence with our product development expertise.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
-            {[
-              {
-                title: "Fintech Mobile App",
-                description: "Developed a secure, scalable financial solution with real-time data processing",
-                industry: "Finance"
-              },
-              {
-                title: "E-commerce Platform",
-                description: "Built a high-performance marketplace with advanced search capabilities",
-                industry: "Retail"
-              },
-              {
-                title: "Healthcare Management System",
-                description: "Created an integrated platform for patient records and telemedicine",
-                industry: "Healthcare"
-              }
-            ].map((item, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                <div className="h-48 bg-gray-200 flex items-center justify-center">
-                  <Image
-                    src="/api/placeholder/400/200"
-                    alt="Project"
-                    width={400}
-                    height={200}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="text-sm font-medium text-[#ff5010] mb-2">{item.industry}</div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-600 mb-4">{item.description}</p>
-                  <a
-                    href="#"
-                    style={{ color: "#ff5010" }}
-                    className="flex items-center font-medium hover:underline"
-                  >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
+          {caseStudies.map((item, index) => (
+            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+              <div className="h-48 bg-gray-200 flex items-center justify-center">
+                <Image
+                  // src="/api/placeholder/400/200"
+                  alt={item.title}
+                  // width={400}
+                  // height={200}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <div className="p-6">
+                <div className="text-sm font-medium text-[#ff5010] mb-2">{item.industry}</div>
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-gray-600 mb-4">{item.description}</p>
+
+                <Link href={`/CaseStudy/${item.slug}`} legacyBehavior>
+                  <a className="flex items-center font-medium hover:underline">
                     View Case Study
                     <ArrowUpRight size={16} className="ml-1" />
                   </a>
-                </div>
+                </Link>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Call to Action */}
       <section
