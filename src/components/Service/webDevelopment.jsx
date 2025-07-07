@@ -705,7 +705,8 @@ export default function WebDevelopmentPage() {
               {
                 title: "Fintech Mobile App",
                 description: "Developed a secure, scalable financial solution with real-time data processing",
-                industry: "Finance"
+                industry: "Finance",
+                
               },
               {
                 title: "E-commerce Platform",

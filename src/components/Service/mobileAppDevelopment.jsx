@@ -303,20 +303,20 @@ export default function MobileAppDevelopmentPage() {
 
    const caseStudies = [
     {
-      title: "Fintech Mobile App",
-      description: "Developed a secure, scalable financial solution with real-time data processing",
-      industry: "Finance",
+      title: "Smart Attend Meta Description",
+      description: "Transform attendance management with SmartAttend! Our digital portal slashed manual HR time by 90% and boosted employee compliance by 30%, offering real-time tracking, automated leave workflows, and secure cloud solutions.",
+      industry: "Smart Attend",
       slug: "first", // maps to pages/CaseStudy/first.js
     },
     {
-      title: "E-commerce Platform",
-      description: "Built a high-performance marketplace with advanced search capabilities",
-      industry: "Retail",
+      title: "Music App",
+      description: "Transform music creation and learning with our dual-platform app. It offers real-time collaboration, a beat marketplace, licensing, interactive lessons, and progress tracking, empowering musicians of all levels.",
+      industry: "Music",
       slug: "second", // maps to pages/CaseStudy/second.js
     },
     {
-      title: "Healthcare Management System",
-      description: "Created an integrated platform for patient records and telemedicine",
+      title: "Medi Info",
+      description: "MediInfo centralizes 12,000+ drug data, reducing medication errors by 45% and boosting treatment success by 28%. Optimize patient care with smart filters and AI suggestions.",
       industry: "Healthcare",
       slug: "third", // maps to pages/CaseStudy/third.js
     },
@@ -701,8 +701,8 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
                 <Image
                   // src="/api/placeholder/400/200"
                   alt={item.title}
-                  // width={400}
-                  // height={200}
+                  width={400}
+                  height={200}
                   className="object-cover w-full h-full"
                 />
               </div>
