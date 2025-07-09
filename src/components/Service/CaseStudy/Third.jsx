@@ -26,14 +26,13 @@ export default function MediVaultCaseStudy() {
 
           <div className="flex justify-center mb-12">
             <Image
-              src="/medical.jpeg"
-              alt="MediVault Overview"
-              width={900}
-              height={500}
-              className="rounded-xl shadow-md w-full max-w-lg h-auto object-cover"
+              src="/med1.jpeg"
+              alt="Music Collaboration App Overview"
+              width={600} // reduced width
+              height={350} // reduced height
+              className="rounded-xl shadow-md w-full max-w-md object-cover"
             />
           </div>
-
           <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-red-600">The Challenge</h2>
             <ul className="list-disc pl-6 text-gray-700 space-y-2 marker:text-red-500">
@@ -46,15 +45,15 @@ export default function MediVaultCaseStudy() {
 
           <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-red-600">The Solution</h2>
-            <div className="flex justify-center mb-8">
-              <Image
-                src="/medical2.jpeg"
-                alt="MediVault UI"
-                width={800}
-                height={400}
-                className="rounded-xl shadow-md w-full max-w-3xl h-auto object-cover"
-              />
-            </div>
+      <div className="flex justify-center mb-12">
+        <Image
+          src="/med2.jpeg"
+          alt="Music Collaboration App Overview"
+          width={600} // reduced width
+          height={350} // reduced height
+          className="rounded-xl shadow-md w-full max-w-md object-cover"
+        />
+      </div>
 
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
               MediVault was designed as a dynamic and intelligent pharmaceutical database to empower healthcare professionals with fast, searchable, and accurate drug data. It integrates seamlessly into clinical workflows and supports informed decision-making through organized and actionable insights.
@@ -95,16 +94,15 @@ export default function MediVaultCaseStudy() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center mb-8">
-                        <Image
-                          src="/medical3.jpeg"
-                          alt="Platform Results"
-                          width={900}
-                          height={500}
-                          className="rounded-xl shadow-md w-full max-w-3xl h-auto object-cover"
-                        />
-                      </div>
-          
+         <div className="flex justify-center mb-12">
+           <Image
+             src="/med3.jpeg"
+             alt="Music Collaboration App Overview"
+             width={600} // reduced width
+             height={350} // reduced height
+             className="rounded-xl shadow-md w-full max-w-md object-cover"
+           />
+         </div>
 
           <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-red-600">The Results</h2>

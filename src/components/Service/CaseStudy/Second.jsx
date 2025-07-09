@@ -25,14 +25,15 @@ export default function MusicCaseStudy() {
 
           {/* Hero Image */}
           <div className="flex justify-center mb-12">
-            <Image
-              src="/music2.jpeg"
-              alt="Music Collaboration App Overview"
-              width={900}
-              height={500}
-              className="rounded-xl shadow-md w-full max-w-5xl h-auto object-cover"
-            />
-          </div>
+  <Image
+    src="/m1.jpeg"
+    alt="Music Collaboration App Overview"
+    width={600} // reduced width
+    height={350} // reduced height
+    className="rounded-xl shadow-md w-full max-w-md object-cover"
+  />
+</div>
+
 
           {/* The Challenge */}
           <div className="mb-12">
@@ -55,15 +56,15 @@ export default function MusicCaseStudy() {
           <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-red-600">The Solution</h2>
 
-            <div className="flex justify-center mb-8">
-              <Image
-                src="/music.jpeg"
-                alt="Music App UI"
-                width={400}
-                height={200}
-                className="rounded-xl shadow-md w-full max-w-3xl h-auto object-cover"
-              />
-            </div>
+            <div className="flex justify-center mb-12">
+  <Image
+    src="/m2.jpeg"
+    alt="Music Collaboration App Overview"
+    width={600} // reduced width
+    height={350} // reduced height
+    className="rounded-xl shadow-md w-full max-w-md object-cover"
+  />
+</div>
 
             <p className="text-lg leading-relaxed text-gray-700 max-w-4xl mx-auto">
               We developed a full-stack, dual-platform application: a real-time music collaboration app and a music learning platform. Key technical solutions included:
@@ -87,15 +88,15 @@ export default function MusicCaseStudy() {
           <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-red-600">The Results</h2>
 
-            <div className="flex justify-center mb-8">
-              <Image
-                src="/music3.jpeg"
-                alt="Platform Results"
-                width={900}
-                height={500}
-                className="rounded-xl shadow-md w-full max-w-3xl h-auto object-cover"
-              />
-            </div>
+           <div className="flex justify-center mb-12">
+  <Image
+    src="/m3.jpeg"
+    alt="Music Collaboration App Overview"
+    width={600} // reduced width
+    height={350} // reduced height
+    className="rounded-xl shadow-md w-full max-w-md object-cover"
+  />
+</div>
 
             <ul className="list-disc pl-6 text-gray-700 space-y-2 marker:text-red-500">
               <li>Over 2,500 learners registered within 3 months</li>
