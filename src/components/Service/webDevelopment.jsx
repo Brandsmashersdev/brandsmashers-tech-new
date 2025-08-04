@@ -375,7 +375,7 @@ export default function WebDevelopmentPage() {
            Web Development
               </h1>
               {/* Modified paragraph to create two distinct lines */}
-              <div className="text-lg mb-8 font-medium text-white">
+              <div className="text-left text-lg mb-8 font-medium text-white">
                 <p className="mb-2">
                 Build powerful, responsive, and fast-loading websites with our end-to-end web development services. We leverage the latest technologies to create engaging user experiences that drive results and reflect your brand’s vision
 </p>
@@ -400,7 +400,7 @@ export default function WebDevelopmentPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-black">Professional Web Development Services</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
               Component-focused development is at the heart of every high-performing digital experience. At Brandsmashers Tech, we don&apos;t just build software—we craft tailored, scalable solutions designed to meet your unique business needs.
             </p>
           </div>
@@ -426,7 +426,7 @@ export default function WebDevelopmentPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Your Trusted Partner for <span className="text-[#ff5722]">Scalable</span> and <span className="text-[#ff5722]">Web Development</span>
             </h2>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-400 max-w-3xl mx-auto">
               Delivering tailored web development solutions built for performance, scalability, and long-term success. From responsive design to robust backend systems, we create custom websites that grow with your business and enhance user experience.
             </p>
           </div>
@@ -455,7 +455,7 @@ export default function WebDevelopmentPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Hire a <span className="text-[#ff5010]">Web Developer </span> Tailored to Your Business Needs
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+            <p className="text-left max-w-3xl mx-auto text-lg text-gray-600">
               Boost your online presence with expert digital marketers who understand your goals. Whether it&#39;s
               SEO, social media, paid ads, or full-scale strategy — hire dedicated professionals on flexible terms with complete transparency and security.
             </p>
@@ -594,7 +594,7 @@ export default function WebDevelopmentPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-black">Our Web Development Process</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
               Here is a streamlined overview of our custom product development process.
             </p>
           </div>
@@ -643,7 +643,7 @@ export default function WebDevelopmentPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Web Development Technologies We Work On</h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
+            <p className="text-left max-w-3xl mx-auto text-lg text-gray-800 font-medium">
               Leverage the expertise of a top app development company to build high-performance, feature-rich mobile apps.
             </p>
           </div>
@@ -668,7 +668,7 @@ export default function WebDevelopmentPage() {
             <h2 className="text-4xl font-bold mb-4">
               Why <span className="text-[#ff5010]">Brandsmashers Tech</span> Is Your Ideal Partner for Software Web Development
             </h2>
-            <p className="text-lg max-w-3xl mx-auto text-gray-400">
+            <p className="text-left text-lg max-w-3xl mx-auto text-gray-400">
               Looking for a reliable partner to bring your software idea to life? Brandsmashers Tech is your go-to expert for end-to-end software product development. We blend innovation, agility, and top-tier talent to build powerful, scalable solutions that drive real results.
             </p>
           </div>
@@ -695,7 +695,7 @@ export default function WebDevelopmentPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-black">Our Success Stories</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
               Explore how we have helped businesses transform their digital presence with our product development expertise.
             </p>
           </div>
@@ -758,7 +758,7 @@ export default function WebDevelopmentPage() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Build Your <span className="text-[#ff5722]">Next Product?</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-lg mb-12 text-gray-400">
+          <p className="text-left max-w-2xl mx-auto text-lg mb-12 text-gray-400">
             Lets transform your idea into a powerful digital product that drives growth and engages users.
           </p>
 

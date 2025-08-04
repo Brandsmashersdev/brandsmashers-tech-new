@@ -54,7 +54,7 @@ export default function ModernDigitalMarketingBlog() {
           </div>
           
           <div className="bg-gray-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 mb-6 sm:mb-8">
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            <p className="text-left text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
               Digital marketing encompasses multiple channels and strategies, each serving unique purposes in your overall marketing ecosystem. The key is understanding which channels align best with your audience and business objectives.
             </p>
           </div>
@@ -180,13 +180,13 @@ export default function ModernDigitalMarketingBlog() {
           </div>
           
           <div className="bg-gray-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 mb-6 sm:mb-8">
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            <p className="text-left text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
               At Brandsmashers Tech, we discovered the power of resilience and adaptability during challenging times. We forged our brand amid a global crisis, thriving by embracing our humanity, agility, and boldness.
             </p>
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            <p className="text-left text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
               Our offerings range from expert staff augmentation to innovative tech solutions, each designed to meet the unique needs of the market. Our message is simple: <strong>we evolve with you</strong>.
             </p>
-            <p className="text-lg sm:text-xl font-semibold text-orange-500">
+            <p className="text-left text-lg sm:text-xl font-semibold text-orange-500">
               Our branding reflects our energy. Our marketing connects that energy to the people who need it most.
             </p>
           </div>
@@ -201,7 +201,7 @@ export default function ModernDigitalMarketingBlog() {
                 Be Outdated
               </span>
             </h2>
-            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-300 leading-relaxed">
+            <div className="text-left space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-300 leading-relaxed">
               <p>
                 In today&apos;s fast-moving digital landscape, marketing is no longer a supporting role — it&apos;s a strategic pillar. From building brand awareness to driving measurable growth, smart marketing is how businesses rise above the noise.
               </p>

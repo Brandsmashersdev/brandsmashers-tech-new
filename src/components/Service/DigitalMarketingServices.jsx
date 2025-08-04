@@ -351,7 +351,7 @@ export default function DigitalMarketingPage() {
           Digital Marketing Services
               </h1>
               {/* Modified paragraph to create two distinct lines */}
-              <div className="text-lg mb-8 font-medium text-white">
+              <div className="text-left text-left text-lg mb-8 font-medium text-white">
                 <p className="mb-2">
                 Amplify your brand’s voice with our data-driven digital marketing strategies — from SEO and social media to paid campaigns. We help you connect, convert, and grow in today’s digital-first world
 </p>
@@ -375,7 +375,7 @@ export default function DigitalMarketingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-black">Result-Driven Digital Marketing Services to Grow Your Business</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
               Unlock your brand&apos;s full potential with our comprehensive digital marketing services. From boosting visibility to driving leads and sales, we use proven strategies and modern tools to help your business thrive in the digital world.
             </p>
           </div>
@@ -401,7 +401,7 @@ export default function DigitalMarketingPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Your Trusted Partner for <span className="text-[#ff5722]">Scalable and Result-Driven</span> Digital Marketing Services
             </h2>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-400 max-w-3xl mx-auto">
               We help brands grow faster with scalable and result-driven digital marketing services. From strategy to execution, our expert team delivers measurable results through SEO, social media, paid ads, and more, tailored to your business goals.
             </p>
           </div>
@@ -434,7 +434,7 @@ export default function DigitalMarketingPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Hire a <span className="text-[#ff5010]">Digital Marketing Expert</span> Tailored to Your Business Needs
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+            <p className="text-left max-w-3xl mx-auto text-lg text-gray-600">
               Boost your online presence with expert digital marketers who understand your goals. Whether it&apos;s SEO, social media, paid ads, or full-scale strategy — hire dedicated professionals on flexible terms with complete transparency and security.
             </p>
           </div>
@@ -572,7 +572,7 @@ export default function DigitalMarketingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-black">Proven Digital Marketing Process That Delivers Real Results</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
               Our digital marketing approach is built on clarity, strategy, and performance. From understanding your business to delivering measurable results, we follow a streamlined process that drives consistent growth.
             </p>
           </div>
@@ -621,7 +621,7 @@ export default function DigitalMarketingPage() {
             <h2 className="text-4xl font-bold mb-4">
               Why <span className="text-[#ff5010]">Brandsmashers Tech</span> Is a Smart Choice for Digital Marketing Services
             </h2>
-            <p className="text-lg max-w-3xl mx-auto text-gray-400">
+            <p className="text-left text-lg max-w-3xl mx-auto text-gray-400">
               At Brandsmashers Tech, we blend strategy, creativity, and data to deliver digital marketing services that drive real business growth. From boosting visibility to generating leads, we craft tailored campaigns that produce measurable results for every client.
             </p>
           </div>
@@ -648,7 +648,7 @@ export default function DigitalMarketingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-black">Our Success Stories</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
               Real results for real businesses. See how our digital marketing services have transformed brands and driven measurable growth.
             </p>
           </div>
@@ -688,7 +688,7 @@ export default function DigitalMarketingPage() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to <span className="text-[#ff5722]">Boost Your Brand</span> Online?
           </h2>
-          <p className="max-w-2xl mx-auto text-lg mb-12 text-gray-400">
+          <p className="text-left max-w-2xl mx-auto text-lg mb-12 text-gray-400">
             Take the first step toward digital marketing success. Get a free consultation and learn how we can help your business grow.
           </p>
 

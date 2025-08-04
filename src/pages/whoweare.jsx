@@ -19,7 +19,7 @@ const whoweare = () => {
       <OurStory />
       <OurCompany />
       <Team />
-      <TL />
+      {/* <TL /> */}
       <Map />
       <Footer />
     </div>

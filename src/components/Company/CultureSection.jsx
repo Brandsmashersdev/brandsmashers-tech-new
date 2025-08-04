@@ -45,7 +45,7 @@ export default function CultureSection() {
                 <span className="text-black">{event.title.split(' ')[0]}</span>{' '}
                 <span className="text-[#ff5010]">{event.title.split(' ').slice(1).join(' ')}</span>
               </h3>
-              <p className="text-gray-700 text-base sm:text-lg">
+              <p className="text-left text-gray-700 text-base sm:text-lg">
                 {event.description}
               </p>
             </div>

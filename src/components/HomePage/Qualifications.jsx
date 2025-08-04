@@ -82,7 +82,7 @@ export default function CutThroughNoiseSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
             Hire Pre-vetted Developers from <span className="text-orange-500">Best IT Staff Augmentation Company</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
             Tired of slow hiring and mismatched talent? With Brandsmashers Tech, you can hire pre-vetted developers from the best IT Staff Augmentation company, without the delays or guesswork. We streamline the entire process—from understanding your project needs to onboarding top-tier developers—so you can build faster, smarter, and with full confidence.
 
 

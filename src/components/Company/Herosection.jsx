@@ -25,7 +25,7 @@ export default function HeroSection() {
         <div>
         
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-10 max-w-4xl mx-auto leading-relaxed text-justify">
-          At <span className="font-semibold text-[#ff5010]">Brandsmashers Tech</span>, we don&apos;t just build technology — we build futures.
+          At <span className="font-semibold text-[#ff5010]">Brandsmashers Tech</span>, we don&apos;t just build technology - we build futures.
           We&apos;re a dynamic team of creators, coders, marketers, and dreamers who thrive on innovation and collaboration.
           If you&apos;re looking to grow, challenge yourself, and make an impact, your journey starts here.
         </p>

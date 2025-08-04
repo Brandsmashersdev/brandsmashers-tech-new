@@ -464,7 +464,7 @@ export default function CustomSoftwareDevelopmentPage() {
          Custom Software Development 
               </h1>
               {/* Modified paragraph to create two distinct lines */}
-              <div className="text-lg mb-8 font-medium text-white">
+              <div className="text-left text-left text-lg mb-8 font-medium text-white">
                 <p className="mb-2">
                 Empower your business with tailor-made software solutions built to match your unique workflows and goals. Our custom development approach ensures high performance, scalability, and a perfect fit for your operational needs.
 </p>
@@ -489,7 +489,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto mb-10 text-center">
             <h2 className="text-3xl font-bold mb-4">End-to-End Custom Software Development Service</h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-left text-left text-lg text-gray-600">
               Our custom software development process is built on a hyper-focused approach that prioritizes personalized user experiences and the creation of highly efficient solutions. We ensure a transparent and trusted partnership, delivering impactful and innovative software solutions that drive real results.
             </p>
           </div>
@@ -519,7 +519,7 @@ export default function CustomSoftwareDevelopmentPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Hire a <span className="text-[#ff5010]">Custom Software Development</span> Tailored to Your Business Needs
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+            <p className="text-left max-w-3xl mx-auto text-lg text-gray-600">
               Boost your online presence with expert digital marketers who understand your goals. Whether it&apos;s SEO, social media, paid ads, or full-scale strategy — hire dedicated professionals on flexible terms with complete transparency and security.
             </p>
           </div>
@@ -657,7 +657,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Custom Software Development Process</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
               Here is a streamlined overview of our custom web app development process.
             </p>
           </div>
@@ -710,7 +710,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Custom Software Development Technologies We Work On</h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
+            <p className="text-left max-w-3xl mx-auto text-lg text-gray-800 font-medium">
               Leverage the expertise of a top app development company to build high-performance, feature-rich mobile apps.
             </p>
           </div>
@@ -735,7 +735,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Empower Your Business with Custom Software Solutions</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
               Our collaborative and transparent approach allows us to deeply understand your vision and craft high-performance solutions that go beyond expectations.
             </p>
           </div>
@@ -762,7 +762,7 @@ export default function CustomSoftwareDevelopmentPage() {
             <h2 className="text-4xl font-bold mb-4">
               Why <span className="text-[#ff5010]">Brandsmashers Tech</span> Is Your Ideal Partner for Custom Software Development
             </h2>
-            <p className="text-lg max-w-3xl mx-auto text-gray-400">
+            <p className="text-left text-lg max-w-3xl mx-auto text-gray-400">
               Looking for a reliable partner to bring your software idea to life? Brandsmashers Tech is your go-to expert for end-to-end software product development. We blend innovation, agility, and top-tier talent to build powerful, scalable solutions that drive real results.
             </p>
           </div>
@@ -789,7 +789,7 @@ export default function CustomSoftwareDevelopmentPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Case Studies From Different Industries</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
               Explore how our custom software solutions have transformed businesses across various sectors.
             </p>
           </div>
@@ -802,7 +802,7 @@ export default function CustomSoftwareDevelopmentPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{industry} Solution</h3>
-                  <p className="text-gray-600 mb-4">How we helped a {industry.toLowerCase()} company streamline operations and boost efficiency with custom software.</p>
+                  <p className="text-left text-gray-600 mb-4">How we helped a {industry.toLowerCase()} company streamline operations and boost efficiency with custom software.</p>
                   <a
                     href="#"
                     style={{ color: "#ff5010" }}
@@ -827,7 +827,7 @@ export default function CustomSoftwareDevelopmentPage() {
   <h2 className="text-4xl md:text-5xl font-bold mb-6">
     Ready to Build Your <span className="text-[#ff5722]">Next Product?</span>
   </h2>
-  <p className="max-w-2xl mx-auto text-lg mb-12 text-gray-400">
+  <p className="text-left max-w-2xl mx-auto text-lg mb-12 text-gray-400">
     Lets transform your idea into a powerful digital product that drives growth and engages users.
   </p>
 

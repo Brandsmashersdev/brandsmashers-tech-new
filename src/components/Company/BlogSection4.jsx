@@ -57,7 +57,7 @@ export default function ModernBrandsmashersBlog() {
           </div>
           
           <div className="bg-gray-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 mb-6 sm:mb-8">
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            <p className="text-left text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
               These partnerships taught us something new with each project. What began with a few people is now a team of 70+. It hasn&apos;t been easy—we&apos;ve invested time, energy, and personal funds—but our perseverance fueled each new chapter.
             </p>
           </div>
@@ -150,7 +150,7 @@ export default function ModernBrandsmashersBlog() {
             <div className="border-l-4 border-orange-500 pl-4 sm:pl-6 py-4">
               <h3 className="text-xl sm:text-2xl font-bold text-black mb-4">Tools We Started With</h3>
               <div className="bg-gray-50 rounded-lg p-4 sm:p-6 mb-4 sm:mb-6">
-                <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4">
+                <p className="text-left text-gray-700 text-base sm:text-lg leading-relaxed mb-4">
                   When speed, scalability, and a JavaScript-centric approach are paramount, MERN stands out. We began our journey with the MERN stack, React Native, and WordPress—empowering us to deliver versatile digital solutions.
                 </p>
               </div>
@@ -224,7 +224,7 @@ export default function ModernBrandsmashersBlog() {
                 We Bring Certainty Through Skill
               </span>
             </h2>
-            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-300 leading-relaxed">
+            <div className="text-left space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-300 leading-relaxed">
               <p>
                 Our journey from a small branding initiative to a thriving tech company of 70+ professionals showcases the power of vision, perseverance, and adaptability.
               </p>

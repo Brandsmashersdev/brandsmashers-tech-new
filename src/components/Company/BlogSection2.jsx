@@ -177,7 +177,7 @@ export default function ModernTechBlog() {
         <section className="text-center">
           <div className="max-w-3xl mx-auto px-2">
             <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4 sm:mb-6">Building a Better Future</h2>
-            <p className="text-gray-700 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-left text-gray-700 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
               Sustainable technology and Green IT have become strategic imperatives for every forward-thinking 
               software company. From writing cleaner code to selecting greener infrastructure, every technical 
               decision can help shape a more sustainable future.

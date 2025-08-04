@@ -36,7 +36,7 @@ export default function Story() {
           <span className="text-[#ff5010]">Brandsmashers Tech?</span>
         </h2>
 
-        <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
+        <p className="text-left text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
           At Brandsmashers Tech, our people are at the heart of everything we do. We&apos;ve built a culture where innovation thrives,
           individuality is celebrated, and every team member is empowered to grow personally and professionally.
           Here, you&apos;re not just part of a company — you&apos;re part of a movement shaping the future.

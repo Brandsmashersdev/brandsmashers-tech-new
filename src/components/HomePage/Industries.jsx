@@ -105,12 +105,12 @@ const Industries = () => {
               Industries We <span className="text-[#ff5010]">Serve</span>
             </h2>
             <div className="w-20 h-1 bg-[#ff5010] mb-6"></div>
-            <p className="text-lg text-gray-300 leading-relaxed mb-8">
+            <p className="text-left text-lg text-gray-300 leading-relaxed mb-8">
               At Brandsmashers Tech, we empower businesses across all industries with innovative, 
               tailor-made technology solutions. From startups to enterprises, we deliver cutting-edge 
               software, web, mobile, and AI-driven services that drive growth, efficiency, and digital transformation.
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-left text-lg text-gray-300 leading-relaxed">
               Our IT staff augmentation services help you scale your team effortlessly with top-tier, 
               on-bench talent ready to jump into your projects and accelerate delivery.
             </p>

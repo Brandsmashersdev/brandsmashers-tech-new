@@ -43,7 +43,7 @@ const DeveloperHiringSection = () => {
   return (
     <div className="bg-white py-16 px-4 sm:px-8 md:px-16 max-w-full mx-auto">
       <h2 className="text-2xl md:text-4xl font-bold text-center mb-2">Hire Custom Software Developer As Per Your Need</h2>
-      <p className="text-center text-gray-600 text-sm md:text-base mb-8 md:mb-12">
+      <p className="text-left text-gray-600 text-sm md:text-base mb-8 md:mb-12">
         Simple & Transparent Pricing | Fully Signed NDA | Code Security | Easy Exit Policy
       </p>
 

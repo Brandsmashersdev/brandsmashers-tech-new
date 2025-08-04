@@ -118,7 +118,7 @@ const TechStack = () => {
         </div>
 
         <div className="mb-12">
-          <p className="text-center text-gray-700 mb-6">
+          <p className="text-left text-gray-700 mb-6">
             Boost your business with our team of experienced offshore developers. Our experts are skilled in both cutting-edge and classic
             technologies. Hire our dedicated remote developers, renowned for developing advanced web and mobile apps that are perfectly
             tailored to your start-up or established enterprise.

@@ -53,10 +53,10 @@ const FAQSection = () => {
   return (
     <div className="bg-white p-8 py-16">
       <div className="mx-auto max-w-4xl">
-        {/* Header Section with minimalist design */}
-        <div className="flex flex-col md:flex-row justify-between items-center mb-16">
+        {/* Header Section with perfect alignment */}
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-16 gap-8">
           {/* Left Section with title */}
-          <div className="mb-8 md:mb-0">
+          <div className="flex-1">
             <h1 className="text-4xl font-bold text-gray-900 relative inline-block">
               Frequently Asked
               <span className="text-[#ff5010]"> Questions</span>
@@ -64,29 +64,29 @@ const FAQSection = () => {
             </h1>
           </div>
 
-          {/* Right Section - Simple Call to action */}
-          <div className="text-right">
-            <h2 className="text-gray-700 text-xl font-medium mb-2">Still Have Questions?</h2>
-            <Link href="/contactus"
-              className="text-[#ff5010] text-xl font-semibold hover:underline inline-flex items-center group"
+          {/* Right Section - Call to action with proper alignment */}
+          <div className="flex-shrink-0 lg:text-right text-left lg:ml-8">
+            <h2 className="text-gray-700 text-lg lg:text-xl font-medium mb-3">
+              Still Have Questions?
+            </h2>
+            <Link 
+              href="/contactus"
+              className="text-[#ff5010] text-lg lg:text-xl font-semibold hover:underline inline-flex items-center group transition-all duration-300"
             >
-              <div>
-
-                Let&apos;s Talk
-                <svg
-                  className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  ></path>
-                </svg>
-              </div>
+              Let&apos;s Talk
+              <svg
+                className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
             </Link>
           </div>
         </div>
@@ -106,10 +106,12 @@ const FAQSection = () => {
                   className="cursor-pointer"
                 >
                   <div className="flex justify-between items-center py-5">
-                    <h3 className={`text-xl font-medium ${isActive ? 'text-[#ff5010]' : 'text-gray-800'} transition-colors duration-300`}>
+                    <h3 className={`text-lg lg:text-xl font-medium pr-4 ${isActive ? 'text-[#ff5010]' : 'text-gray-800'} transition-colors duration-300`}>
                       {faq.question}
                     </h3>
-                    <ToggleIcon isOpen={isActive} />
+                    <div className="flex-shrink-0">
+                      <ToggleIcon isOpen={isActive} />
+                    </div>
                   </div>
                 </div>
 
@@ -117,7 +119,7 @@ const FAQSection = () => {
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${isActive ? 'max-h-[500px] opacity-100 mb-6' : 'max-h-0 opacity-0'}`}
                 >
-                  <p className="text-gray-600 leading-relaxed pl-4 border-l-2 border-[#ff5010]">
+                  <p className="text-gray-600 leading-relaxed pl-4 border-l-2 border-[#ff5010] text-sm lg:text-base">
                     {faq.answer}
                   </p>
                 </div>

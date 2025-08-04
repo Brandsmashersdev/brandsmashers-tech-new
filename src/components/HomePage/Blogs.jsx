@@ -151,7 +151,7 @@ const BlogCarousel = () => {
           
           <div className="w-32 h-1.5 bg-gradient-to-r from-orange-300 via-[#ff5010] to-orange-300 mx-auto mt-6 mb-8 rounded-full shadow-sm"></div>
           
-          <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed">
+          <p className="text-left max-w-3xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed">
             Stay ahead of the curve with expert perspectives on emerging technologies and industry trends
           </p>
         </div>

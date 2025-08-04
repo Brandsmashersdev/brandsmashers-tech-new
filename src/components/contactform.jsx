@@ -198,7 +198,7 @@ export default function ContactForm() {
             Conversation
             </span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-left text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ready to transform your ideas into reality? Our team of experts is here to discuss your vision and provide tailored solutions that drive success.
           </p>
      

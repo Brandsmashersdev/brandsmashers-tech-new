@@ -94,7 +94,7 @@ const ITSolutions = () => {
             <div className="w-12 h-2 rounded-full bg-[#ff5010]"></div>
             <div className="w-2 h-2 rounded-full bg-[#ff5010]"></div>
           </div>
-          <p className="max-w-2xl mx-auto text-gray-300 text-lg ">
+          <p className="text-left max-w-2xl mx-auto text-gray-300 text-lg ">
             Build innovative, scalable, and user-centric digital solutions with our end-to-end Software Development & Engineering Services. From custom software and mobile apps to AI/ML, UI/UX, and digital marketing—we turn your ideas into powerful products.
           </p>
         </div>

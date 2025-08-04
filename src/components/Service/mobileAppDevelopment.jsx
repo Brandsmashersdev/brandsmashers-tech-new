@@ -355,7 +355,7 @@ export default function MobileAppDevelopmentPage() {
            Mobile App Development
               </h1>
               {/* Modified paragraph to create two distinct lines */}
-              <div className="text-lg mb-8 font-medium text-white">
+              <div className="text-left text-lg mb-8 font-medium text-white">
                 <p className="mb-2">
                Create intuitive, scalable, and high-performance mobile apps that elevate your brand and engage your users.
 Whether you are building for iOS, Android, or both, our custom mobile solutions provide seamless experiences that integrate with your business needs
@@ -411,7 +411,7 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
       <h2 className="text-3xl md:text-4xl font-bold mb-6">
         Your Trusted Partner for <span className="text-[#ff5722]">Scalable and Custom Mobile App Development</span>
       </h2>
-      <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+      <p className="text-left text-lg text-gray-400 max-w-3xl mx-auto">
         At Brandsmashers Tech, we build custom mobile apps that are scalable, secure, and user-friendly. From idea to launch, our expert team ensures your app meets your business goals and delivers a seamless user experience.
       </p>
     </div>
@@ -448,7 +448,7 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Hire a <span className="text-[#ff5010]">Mobile Development</span> Tailored to Your Business Needs
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+            <p className="text-left max-w-3xl mx-auto text-lg text-gray-600">
               Boost your online presence with expert digital marketers who understand your goals. Whether it&apos;s SEO, social media, paid ads, or full-scale strategy — hire dedicated professionals on flexible terms with complete transparency and security.
             </p>
           </div>
@@ -471,8 +471,8 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
                 description: "Flexible engagement models with straightforward exit terms if needed."
               }
             ].map((item, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                <div className="flex items-center mb-4">
+              <div key={index} className="text-left bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div className="text-left flex items-center mb-4">
                   <item.icon className="text-[#ff5010] mr-3" size={24} />
                   <h3 className="text-lg font-bold text-black">{item.title}</h3>
                 </div>
@@ -636,7 +636,7 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Mobile App Development Technologies We Work On</h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
+            <p className="text-left max-w-3xl mx-auto text-lg text-gray-800 font-medium">
               Leverage the expertise of a top app development company to build high-performance, feature-rich mobile apps.
             </p>
           </div>
@@ -689,7 +689,7 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-black">Our Success Stories</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
             Explore how we have helped businesses transform their digital presence with our product development expertise.
           </p>
         </div>
@@ -709,7 +709,7 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
               <div className="p-6">
                 <div className="text-sm font-medium text-[#ff5010] mb-2">{item.industry}</div>
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-gray-600 mb-4">{item.description}</p>
+                <p className="text-left text-gray-600 mb-4">{item.description}</p>
 
                 <Link href={`/CaseStudy/${item.slug}`} legacyBehavior>
                   <a className="flex items-center font-medium hover:underline">
@@ -726,7 +726,7 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
 
       {/* Call to Action */}
       <section
-        className="py-16 px-6 md:px-12 text-white bg-black relative overflow-hidden"
+        className="text-left py-16 px-6 md:px-12 text-white bg-black relative overflow-hidden"
       >
         {/* Small orange accent shape */}
         <div
@@ -737,7 +737,7 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Ready to Build Your <span className="text-[#ff5010]">Mobile App?</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-lg mb-12 text-white font-medium">
+          <p className="text-left max-w-2xl mx-auto text-lg mb-12 text-white font-medium">
             Let&apos;s transform your idea into a powerful mobile application that drives growth and engages users.
           </p>
     
@@ -775,7 +775,7 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
-            <p className="text-lg text-gray-800 font-medium">
+            <p className="text-left text-lg text-gray-800 font-medium">
               Find answers to common questions about our mobile app development services.
             </p>
           </div>

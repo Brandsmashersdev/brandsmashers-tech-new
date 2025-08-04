@@ -368,7 +368,7 @@ export default function UIUXDesignPage() {
               </h1>
               {/* Modified paragraph to create two distinct lines */}
               <div className="text-lg mb-8 font-medium text-white">
-                <p className="mb-2">
+                <p className="text-left mb-2">
                 Transform user interactions into memorable experiences with our UI/UX design services. We craft intuitive, visually striking interfaces that drive engagement, boost usability, and elevate your brands digital presence.
 </p>
               </div>
@@ -392,7 +392,7 @@ export default function UIUXDesignPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4 text-black">UI/UX Design Services</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
                 We offer end-to-end UI/UX design services that align with your brand and user needs. From research and wireframing to prototyping and interaction design, our process ensures visually appealing, intuitive, and goal-driven digital products.
               </p>
             </div>
@@ -418,7 +418,7 @@ export default function UIUXDesignPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Your Trusted Partner for <span className="text-[#ff5722]">Modern</span> and <span className="text-[#ff5722]">Scalable</span> UI/UX Design
               </h2>
-              <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+              <p className="text-left text-lg text-gray-400 max-w-3xl mx-auto">
                 At Brandsmashers Tech, we design digital experiences that are beautiful, functional, and scalable. Whether you&apos;re launching a new product or revamping an existing one, our team ensures every interface is optimized for performance, usability, and brand impact.
               </p>
             </div>
@@ -451,7 +451,7 @@ export default function UIUXDesignPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Hire a <span className="text-[#ff5010]">UI/UX Designer</span> As Per Your Project Needs
               </h2>
-              <p className="max-w-3xl mx-auto text-lg text-gray-600">
+              <p className="text-left max-w-3xl mx-auto text-lg text-gray-600">
                 Enhance your digital products with our expert UI/UX designers who understand user needs and business goals. Whether it&apos;s a complete redesign, a new product, or ongoing design support — hire dedicated professionals on flexible terms.
               </p>
             </div>
@@ -590,7 +590,7 @@ export default function UIUXDesignPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-black">Our Product Development Process</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
               Here is a streamlined overview of our custom product development process.
             </p>
           </div>
@@ -640,7 +640,7 @@ export default function UIUXDesignPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">UI/UX Designer  Technologies We Work On</h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-800 font-medium">
+            <p className="text-left max-w-3xl mx-auto text-lg text-gray-800 font-medium">
               Leverage the expertise of a top app development company to build high-performance, feature-rich mobile apps.
             </p>
           </div>
@@ -665,7 +665,7 @@ export default function UIUXDesignPage() {
             <h2 className="text-4xl font-bold mb-4">
               Why <span className="text-[#ff5010]">Brandsmashers Tech</span> Is Your Ideal Partner for Software Product Development
             </h2>
-            <p className="text-lg max-w-3xl mx-auto text-gray-400">
+            <p className="text-left text-lg max-w-3xl mx-auto text-gray-400">
               Looking for a reliable partner to bring your software idea to life? Brandsmashers Tech is your go-to expert for end-to-end software product development. We blend innovation, agility, and top-tier talent to build powerful, scalable solutions that drive real results.
             </p>
           </div>
@@ -692,7 +692,7 @@ export default function UIUXDesignPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-black">Our Success Stories</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left text-lg text-gray-600 max-w-3xl mx-auto">
               Explore how we have helped businesses transform their digital presence with our product development expertise.
             </p>
           </div>
@@ -754,7 +754,7 @@ export default function UIUXDesignPage() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Build Your <span className="text-[#ff5722]">Next Product?</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-lg mb-12 text-gray-400">
+          <p className="text-left max-w-2xl mx-auto text-lg mb-12 text-gray-400">
             Lets transform your idea into a powerful digital product that drives growth and engages users.
           </p>
 
