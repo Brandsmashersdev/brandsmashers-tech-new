@@ -52,9 +52,7 @@ const Navbar = () => {
     "Company": {
       items: [
         { name: "Who We Are", iconSrc: "/team.png", path: "whoweare" },
-        { name: "Case Studies", iconSrc: "/ProjectDiscussion.png", path: "case-studies" },
         { name: "Join Our Team", iconSrc: "/handshake.png", path: "Career" },
-        { name: "Blog", iconSrc: "/content-writing.png", path: "Blog" },
       ]
     }
   };
@@ -127,6 +125,8 @@ const Navbar = () => {
     { name: "Company", hasDropdown: true },
     { name: "Services", hasDropdown: true },
     { name: "Hire Developers", hasDropdown: true },
+    { name: "Blog", hasDropdown: false, href: "/Blog" },
+    { name: "Case Studies", hasDropdown: false, href: "/case-studies" },
   ];
 
   return (
@@ -168,9 +168,6 @@ const Navbar = () => {
               {item.hasDropdown && (
                 <svg
                   className={`${styles.dropdownIcon} ${activeDropdown === item.name ? styles.rotate : ''}`}
-                  // width="10"
-                  // height="6"
-
                   viewBox="0 0 10 6"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
