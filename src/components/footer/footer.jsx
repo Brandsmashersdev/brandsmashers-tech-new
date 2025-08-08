@@ -159,7 +159,7 @@ export default function Footer() {
 
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} BrandsmashersTech. All rights reserved.
+            © 2024 BrandsmashersTech. All rights reserved.
           </div>
 
           <div className="flex flex-wrap gap-6 justify-center mb-4 md:mb-0">

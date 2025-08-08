@@ -112,7 +112,11 @@ export default function Blog() {
                       <div className="flex items-center text-sm text-gray-500 mb-3">
                         <span>{post.author}</span>
                         <span className="mx-2">•</span>
-                        <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+                        <span>{new Date(post.publishDate).toLocaleDateString('en-GB', {
+                          year: 'numeric',
+                          month: '2-digit',
+                          day: '2-digit'
+                        })}</span>
                       </div>
                       
                       <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2">

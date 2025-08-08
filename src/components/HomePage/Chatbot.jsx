@@ -12,7 +12,7 @@ const WhatsAppChatbot = () => {
     {
       sender: "bot",
       text: "👋 Hi there! Welcome to Brandsmashers Tech. How can we help you today?",
-      time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      time: new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }),
     },
   ]);
   const [inputText, setInputText] = useState("");
@@ -27,7 +27,7 @@ const WhatsAppChatbot = () => {
     const userMessage = {
       sender: "user",
       text: inputText,
-      time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      time: new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }),
     };
 
     setMessages((prev) => [...prev, userMessage]);
@@ -41,7 +41,7 @@ const WhatsAppChatbot = () => {
       const botResponse = {
         sender: "bot",
         text: "Thank you for your message! Redirecting you to WhatsApp to continue the conversation...",
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        time: new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }),
       };
 
       setMessages((prev) => [...prev, botResponse]);
