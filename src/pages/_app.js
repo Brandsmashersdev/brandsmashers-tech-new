@@ -1,6 +1,8 @@
 // src/pages/_app.js
 import Head from "next/head";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import ErrorBoundary from "@/components/shared/ErrorBoundary";
 import "../styles/globals.css"; // your global styles
 
@@ -77,6 +79,8 @@ function MyApp({ Component, pageProps }) {
       </noscript>
 
       <Component {...pageProps} />
+      <Analytics />
+      <SpeedInsights />
     </ErrorBoundary>
   );
 }
