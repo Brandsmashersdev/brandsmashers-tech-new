@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./navbar.module.css";
+import DarkModeToggle from "../shared/DarkModeToggle";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -257,6 +258,11 @@ const Navbar = () => {
             )}
           </li>
         ))}
+        
+        {/* Dark Mode Toggle */}
+        <li className={styles.darkModeToggle}>
+          <DarkModeToggle />
+        </li>
         
         {/* Mobile Contact Button */}
         <li className={styles.mobileContactBtn}>

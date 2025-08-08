@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ErrorBoundary from "@/components/shared/ErrorBoundary";
+import ToastContainer from "@/components/shared/ToastContainer";
 import { initWebVitals } from "@/lib/web-vitals";
 import "../styles/globals.css"; // your global styles
 
@@ -86,6 +87,7 @@ function MyApp({ Component, pageProps }) {
       </noscript>
 
       <Component {...pageProps} />
+      <ToastContainer />
       <Analytics />
       <SpeedInsights />
     </ErrorBoundary>
