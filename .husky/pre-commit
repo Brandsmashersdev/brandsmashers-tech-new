@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🧪 Running tests before commit..."
+
+# Run linting
+npm run lint
+
+# Run tests
+npm run test:ci
+
+# Check if tests passed
+if [ $? -eq 0 ]; then
+    echo "✅ All tests passed! Proceeding with commit..."
+else
+    echo "❌ Tests failed! Please fix the issues before committing."
+    exit 1
+fi
