@@ -23,9 +23,9 @@ const SkeletonLoader = ({
           </div>
         );
       
-      case 'card':
-        return (
-          <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
+                   case 'card':
+               return (
+                 <div className={`bg-white rounded-lg shadow-md p-6 ${className}`} data-testid="skeleton-card">
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-gray-300 rounded-full animate-pulse" />
               <div className="flex-1 space-y-2">

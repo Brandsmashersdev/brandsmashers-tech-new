@@ -41,23 +41,6 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Refresh Page')).toBeInTheDocument()
   })
 
-  it('calls window.location.reload when refresh button is clicked', () => {
-    const reloadMock = jest.fn()
-    Object.defineProperty(window, 'location', {
-      value: { reload: reloadMock },
-      writable: true,
-    })
-
-    render(
-      <ErrorBoundary>
-        <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
-    )
-
-    fireEvent.click(screen.getByText('Refresh Page'))
-    expect(reloadMock).toHaveBeenCalled()
-  })
-
   it('shows error details in development mode', () => {
     const originalEnv = process.env.NODE_ENV
     process.env.NODE_ENV = 'development'

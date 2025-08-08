@@ -21,8 +21,9 @@ describe('SkeletonLoader', () => {
   it('renders card skeleton', () => {
     render(<SkeletonLoader type="card" />)
     
-    expect(screen.getByRole('generic')).toHaveClass('bg-white')
-    expect(screen.getByRole('generic')).toHaveClass('rounded-lg')
+    const cardElement = screen.getByTestId('skeleton-card')
+    expect(cardElement).toHaveClass('bg-white')
+    expect(cardElement).toHaveClass('rounded-lg')
   })
 
   it('renders image skeleton', () => {
