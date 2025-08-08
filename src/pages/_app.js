@@ -8,11 +8,22 @@ function MyApp({ Component, pageProps }) {
     <>
     
   
-      {/* Google Tag Manager */}
+            {/* Google Tag Manager */}
       <Head>
-        <title>Brandsmashers Tech</title>
+        <title>Brandsmashers Tech - Custom Software Development & IT Solutions</title>
+        <meta name="description" content="Brandsmashers Tech offers innovative custom software development, IT outsourcing, and scalable web & mobile app solutions. Expert developers for hire." />
+        <meta name="keywords" content="custom software development, web development, mobile app development, IT outsourcing, remote developers, React, Node.js, Python, Java" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Brandsmashers Tech - Custom Software Development" />
+        <meta property="og:description" content="Innovative custom software development and IT solutions. Expert developers for hire." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/logo.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Brandsmashers Tech" />
+        <meta name="twitter:description" content="Custom software development and IT solutions" />
         <link rel="icon" href="/logo.jpg" />
-      </Head>
+        <link rel="canonical" href="https://brandsmashers.tech" />
+      </Head>
       <Script
         id="gtm-init"
         strategy="afterInteractive"

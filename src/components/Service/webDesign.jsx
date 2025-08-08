@@ -39,9 +39,10 @@ const Webdesign  = () => {
               <Image 
                 src="/Web-img.png"  // Assuming the image is inside the public folder
                 alt="Web Development"
-                layout="fill"  // Make it fill the container
-                objectFit="contain"  // Maintain aspect ratio
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className={styles.image}
+                style={{ objectFit: "contain" }}
               />
             </div>
 

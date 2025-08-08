@@ -38,12 +38,16 @@ export default async function handler(req, res) {
       html: html || '',
     });
 
-    console.log('Message Sent:', info.messageId);
-    console.log('Mail sent to:', SITE_MAIL_RECIEVER);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Message Sent:', info.messageId);
+      console.log('Mail sent to:', SITE_MAIL_RECIEVER);
+    }
 
     return res.status(200).json({ success: true, messageId: info.messageId });
   } catch (error) {
-    console.error('Mail send error:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Mail send error:', error);
+    }
     return res.status(500).json({ success: false, error: 'Failed to send mail' });
   }
 }

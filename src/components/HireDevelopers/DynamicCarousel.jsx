@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Image from 'next/image'; // Import the Image component from next/image
 import styles from './DynamicCarousel.module.css';
 
@@ -35,7 +35,7 @@ const DynamicCarousel = ({ heading = {}, title = '', description = '', cardsData
   const [currentCards, setCurrentCards] = useState([]);
 
   // Function to get responsive cards per slide with tablet-specific breakpoints
-  const getCardsPerSlide = () => {
+  const getCardsPerSlide = useCallback(() => {
     if (typeof window !== 'undefined') {
       const width = window.innerWidth;
       
@@ -55,7 +55,7 @@ const DynamicCarousel = ({ heading = {}, title = '', description = '', cardsData
       return 3;
     }
     return 3;
-  };
+  }, []);
 
   // Effect for handling window resize
   useEffect(() => {
@@ -70,7 +70,7 @@ const DynamicCarousel = ({ heading = {}, title = '', description = '', cardsData
     handleResize(); // Initialize on mount
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [cardsPerSlide]);
+  }, [getCardsPerSlide, cardsPerSlide]);
 
   // Effect for updating total slides and current cards whenever dependencies change
   useEffect(() => {
@@ -97,6 +97,17 @@ const DynamicCarousel = ({ heading = {}, title = '', description = '', cardsData
     setCurrentCards(newCurrentCards);
   }, [cardsData, cardsPerSlide, currentSlide]);
 
+  // Memoize current cards calculation
+  const memoizedCurrentCards = useMemo(() => {
+    if (!Array.isArray(cardsData) || cardsData.length === 0) return [];
+    
+    const validCurrentSlide = Math.min(currentSlide, totalSlides - 1);
+    return cardsData.slice(
+      validCurrentSlide * cardsPerSlide,
+      (validCurrentSlide * cardsPerSlide) + cardsPerSlide
+    );
+  }, [cardsData, cardsPerSlide, currentSlide, totalSlides]);
+
   // Slide logic
   useEffect(() => {
     if (totalSlides <= 1) return; // No sliding needed if there's only one slide
@@ -113,7 +124,7 @@ const DynamicCarousel = ({ heading = {}, title = '', description = '', cardsData
     return () => clearInterval(timer);
   }, [totalSlides]);
 
-  const handleDotClick = (index) => {
+  const handleDotClick = useCallback((index) => {
     if (!isTransitioning && index !== currentSlide) {
       setIsTransitioning(true);
       setTimeout(() => {
@@ -121,7 +132,7 @@ const DynamicCarousel = ({ heading = {}, title = '', description = '', cardsData
         setIsTransitioning(false);
       }, 500);
     }
-  };
+  }, [isTransitioning, currentSlide]);
 
   // Early return if no cards data
   if (!Array.isArray(cardsData) || cardsData.length === 0) {

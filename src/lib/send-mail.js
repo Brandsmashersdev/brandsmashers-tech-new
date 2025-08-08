@@ -26,7 +26,9 @@ export async function sendMail({
   try {
     const isVerified = await transporter.verify();
   } catch (error) {
-    console.error('Something Went Wrong', SMTP_SERVER_USERNAME, SMTP_SERVER_PASSWORD, error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Something Went Wrong', SMTP_SERVER_USERNAME, SMTP_SERVER_PASSWORD, error);
+    }
     return;
   }
   const info = await transporter.sendMail({
@@ -36,7 +38,9 @@ export async function sendMail({
     text: text,
     html: html ? html : '',
   });
-  console.log('Message Sent', info.messageId);
-  console.log('Mail sent to', SITE_MAIL_RECIEVER);
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Message Sent', info.messageId);
+    console.log('Mail sent to', SITE_MAIL_RECIEVER);
+  }
   return info;
 }
