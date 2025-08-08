@@ -12,6 +12,7 @@ import Industries from "@/components/HomePage/Industries";
 import FAQSection from "@/components/HomePage/FAQSection";
 import Chatbot from "@/components/HomePage/Chatbot";
 import Qualifications from "@/components/HomePage/Qualifications";
+import CaseStudiesSection from "@/components/HomePage/CaseStudiesSection";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <ReadyToInnovate />
       <OurVision />
       <TechnologyServices />
+      <CaseStudiesSection />
       <Testimonial />
       <Industries />
       <WhyChooseUs />
