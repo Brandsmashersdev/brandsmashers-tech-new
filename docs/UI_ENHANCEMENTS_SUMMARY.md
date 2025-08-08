@@ -85,19 +85,7 @@ window.showToast({
 - ✅ **Smooth Transitions**: 300ms duration
 - ✅ **Glass Morphism**: Backdrop blur effects
 
-### **5. Dark Mode Implementation**
-```javascript
-// Dark mode toggle in navbar
-<DarkModeToggle />
-```
 
-**Features Added:**
-- ✅ **Toggle Switch**: Smooth sliding animation
-- ✅ **Theme Icons**: Sun/Moon icons
-- ✅ **Persistent Storage**: Remembers user preference
-- ✅ **System Preference**: Respects OS dark mode
-- ✅ **Smooth Transitions**: Instant theme switching
-- ✅ **Tailwind Integration**: `darkMode: 'class'` configured
 
 ---
 
@@ -244,13 +232,7 @@ const ServiceCard = ({ service, loading }) => {
 };
 ```
 
-### **Dark Mode Integration**
-```javascript
-// Automatically available in navbar
-// Users can toggle between light/dark themes
-// Preference is saved in localStorage
-// Respects system preference on first visit
-```
+
 
 ---
 
@@ -278,7 +260,7 @@ const ServiceCard = ({ service, loading }) => {
 - **Toast Notifications**: ✅ Global notification system
 - **Enhanced Buttons**: ✅ Micro-interactions and variants
 - **Enhanced Cards**: ✅ Hover effects and variants
-- **Dark Mode**: ✅ Toggle with persistence
+
 - **Build**: ✅ Successful compilation
 - **Performance**: ✅ Minimal bundle impact
 
