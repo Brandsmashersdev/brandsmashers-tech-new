@@ -1,12 +1,19 @@
 // src/pages/_app.js
+import React from "react";
 import Head from "next/head";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ErrorBoundary from "@/components/shared/ErrorBoundary";
+import { initWebVitals } from "@/lib/web-vitals";
 import "../styles/globals.css"; // your global styles
 
 function MyApp({ Component, pageProps }) {
+  // Initialize web vitals monitoring
+  React.useEffect(() => {
+    initWebVitals();
+  }, []);
+
   return (
     <ErrorBoundary>
       {/* Google Tag Manager */}

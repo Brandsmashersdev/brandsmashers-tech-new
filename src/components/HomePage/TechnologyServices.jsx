@@ -1,8 +1,7 @@
-"use client";
 import Image from 'next/image';
 import React from 'react';
 
-const TechStack = () => {
+const TechStack = React.memo(() => {
   const technologies = [
     // Mobile Technologies
     {
@@ -106,15 +105,9 @@ const TechStack = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-             Hire Dedicated Remote Developers from India <span style={{ color: "#ff5010" }}>  Skilled </span>
-              in Web & Mobile App Development
-
+            Hire Dedicated Remote Developers from India <span style={{ color: "#ff5010" }}>Skilled</span>
+            in Web & Mobile App Development
           </h2>
-          {/* <p className="max-w-3xl mx-auto text-gray-600 text-lg">
-            Brandsmashers Tech is a leading IT services company specializing in web & mobile app development, 
-            IT staff augmentation, and remote hiring solutions. We connect global businesses with top-tier 
-            tech talent to build, scale, and innovate faster.
-          </p> */}
         </div>
 
         <div className="mb-12">
@@ -137,12 +130,14 @@ const TechStack = () => {
                 <Image
                   src={tech.iconSrc}
                   alt={`${tech.title} icon`}
-                  width={64}       // specify width (adjust as needed)
-                  height={64}      // specify height (adjust as needed)
+                  width={64}
+                  height={64}
                   className="max-w-full max-h-full"
                 />
               </div>
-              <p className="text-center text-gray-800 font-medium group-hover:text-[#ff5010] transition-colors duration-300">{tech.title}</p>
+              <p className="text-center text-gray-800 font-medium group-hover:text-[#ff5010] transition-colors duration-300">
+                {tech.title}
+              </p>
             </a>
           ))}
         </div>
@@ -156,6 +151,8 @@ const TechStack = () => {
       </div>
     </div>
   );
-};
+});
+
+TechStack.displayName = 'TechStack';
 
 export default TechStack;
