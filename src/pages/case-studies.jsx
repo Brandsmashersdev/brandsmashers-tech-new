@@ -11,7 +11,7 @@ export default function CaseStudiesPage() {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [isLoading, setIsLoading] = useState(false);
 
-  const industries = ['all', 'Finance', 'Retail', 'Healthcare', 'Technology', 'Education'];
+  const industries = ['all', 'Finance', 'Retail', 'Healthcare', 'Technology', 'Education', 'Real Estate', 'Food & Beverage', 'Manufacturing', 'Travel & Tourism', 'Legal', 'Health & Fitness'];
 
   const filteredCaseStudies = selectedIndustry === 'all' 
     ? caseStudies 
@@ -52,6 +52,8 @@ export default function CaseStudiesPage() {
               <span className="bg-white/20 px-4 py-2 rounded-full">E-commerce</span>
               <span className="bg-white/20 px-4 py-2 rounded-full">Healthcare</span>
               <span className="bg-white/20 px-4 py-2 rounded-full">Technology</span>
+              <span className="bg-white/20 px-4 py-2 rounded-full">Real Estate</span>
+              <span className="bg-white/20 px-4 py-2 rounded-full">Food Delivery</span>
             </div>
           </div>
         </section>

@@ -52,6 +52,7 @@ const Navbar = () => {
     "Company": {
       items: [
         { name: "Who We Are", iconSrc: "/team.png", path: "whoweare" },
+        { name: "Case Studies", iconSrc: "/ProjectDiscussion.png", path: "case-studies" },
         { name: "Join Our Team", iconSrc: "/handshake.png", path: "Career" },
         { name: "Blog", iconSrc: "/content-writing.png", path: "Blog" },
       ]
