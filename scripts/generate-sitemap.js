@@ -25,5 +25,7 @@ ${sitemapEntries.join("\n")}
 </urlset>`;
 
   fs.writeFileSync("public/sitemap.xml", sitemap);
-  console.log("✅ Sitemap generated at public/sitemap.xml");
+  if (process.env.NODE_ENV === 'development') {
+    console.log("✅ Sitemap generated at public/sitemap.xml");
+  }
 })();
