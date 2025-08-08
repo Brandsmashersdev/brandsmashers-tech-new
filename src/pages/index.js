@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import WhyChooseUs from "@/components/HomePage/whyChooseUs";
 import Testimonial from "@/components/HomePage/Testimonial";
-import HeroSection from "@/components/HomePage/herosection";
+import HeroSection from "@/components/HomePage/HeroSectionWrapper";
 import Blogs from "@/components/HomePage/Blogs";
 import TechnologyServices from "@/components/HomePage/TechnologyServices";
 import Industries from "@/components/HomePage/Industries";

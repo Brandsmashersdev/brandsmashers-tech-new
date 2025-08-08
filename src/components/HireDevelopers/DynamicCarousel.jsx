@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Image from 'next/image'; // Import the Image component from next/image
 import styles from './DynamicCarousel.module.css';
 
-const TechnologyCard = ({ icon1, icon2, title, description, isVisible }) => (
+const TechnologyCard = React.memo(({ icon1, icon2, title, description, isVisible }) => (
   <div className={`${styles.technology_card} ${isVisible ? styles.fade_in : styles.fade_out}`}>
     <div className={styles.icon_container}>
       {/* Use next/image for optimized image rendering */}
@@ -24,7 +24,9 @@ const TechnologyCard = ({ icon1, icon2, title, description, isVisible }) => (
     <h3 className={styles.card_title}>{title}</h3>
     <p className={styles.card_description}>{description}</p>
   </div>
-);
+));
+
+TechnologyCard.displayName = 'TechnologyCard';
 
 const DynamicCarousel = ({ heading = {}, title = '', description = '', cardsData = [] }) => {
   // Initialize hooks at the top level
