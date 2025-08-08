@@ -1,14 +1,13 @@
 // src/pages/_app.js
 import Head from "next/head";
 import Script from "next/script";
+import ErrorBoundary from "@/components/shared/ErrorBoundary";
 import "../styles/globals.css"; // your global styles
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-    
-  
-            {/* Google Tag Manager */}
+    <ErrorBoundary>
+      {/* Google Tag Manager */}
       <Head>
         <title>Brandsmashers Tech - Custom Software Development & IT Solutions</title>
         <meta name="description" content="Brandsmashers Tech offers innovative custom software development, IT outsourcing, and scalable web & mobile app solutions. Expert developers for hire." />
@@ -23,6 +22,34 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:description" content="Custom software development and IT solutions" />
         <link rel="icon" href="/logo.jpg" />
         <link rel="canonical" href="https://brandsmashers.tech" />
+        
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Brandsmashers Tech",
+              "url": "https://brandsmashers.tech",
+              "logo": "https://brandsmashers.tech/logo.jpg",
+              "description": "Custom software development and IT solutions company",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "India"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "email": "contact@brandsmashers.tech"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/brandsmashers-tech",
+                "https://twitter.com/brandsmashers"
+              ]
+            })
+          }}
+        />
       </Head>
       <Script
         id="gtm-init"
@@ -50,7 +77,7 @@ function MyApp({ Component, pageProps }) {
       </noscript>
 
       <Component {...pageProps} />
-    </>
+    </ErrorBoundary>
   );
 }
 

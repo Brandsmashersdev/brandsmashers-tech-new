@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import CountUp from "react-countup";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 const StatsComponent = ({ 
   stats = [
@@ -15,13 +14,45 @@ const StatsComponent = ({
   duration = 2.5
 }) => {
   const [startCount, setStartCount] = useState(false);
+  const [counts, setCounts] = useState(stats.map(() => 0));
   const sectionRef = useRef(null);
+
+  // Custom count animation
+  const animateCount = useCallback((targetValue, index) => {
+    const startTime = Date.now();
+    const startValue = 0;
+    
+    const updateCount = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / (duration * 1000), 1);
+      
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentValue = Math.floor(startValue + (targetValue - startValue) * easeOutQuart);
+      
+      setCounts(prev => {
+        const newCounts = [...prev];
+        newCounts[index] = currentValue;
+        return newCounts;
+      });
+      
+      if (progress < 1) {
+        requestAnimationFrame(updateCount);
+      }
+    };
+    
+    requestAnimationFrame(updateCount);
+  }, [duration]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setStartCount(true);
+          // Start animations for all stats
+          stats.forEach((stat, index) => {
+            animateCount(stat.value, index);
+          });
           observer.disconnect();
         }
       },
@@ -33,7 +64,7 @@ const StatsComponent = ({
     }
 
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, stats, animateCount]);
 
   return (
     <div ref={sectionRef} className={`py-16 ${className}`}>
@@ -42,15 +73,7 @@ const StatsComponent = ({
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-[#ff5010] mb-2">
-                {startCount ? (
-                  <CountUp
-                    end={stat.value}
-                    duration={duration}
-                    separator=","
-                  />
-                ) : (
-                  "0"
-                )}
+                {startCount ? counts[index].toLocaleString() : "0"}
               </div>
               <div className="text-sm md:text-base text-gray-600">
                 {stat.label}
