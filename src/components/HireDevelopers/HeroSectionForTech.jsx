@@ -298,13 +298,11 @@ const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
           </p>
           
           <Link href="/contactus">
-              <Link href="/contactus">
-          <button className="cta-button">
-            {buttonText || defaultButtonText}
-            <ArrowRight size={20} />
-          </button>
-          </Link>
-              </Link>
+            <button className="cta-button">
+              {buttonText || defaultButtonText}
+              <ArrowRight size={20} />
+            </button>
+          </Link>
         </div>
 
     

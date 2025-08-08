@@ -135,30 +135,21 @@ export default function Footer() {
               </h3>
               <ul className="space-y-3 text-gray-400">
                 <li className="transition-all duration-300 hover:pl-2 hover:text-white group">
-                  {/* ✅ Fixed /Blog link */}
-                  <Link href="/Blog" legacyBehavior>
-                    <a className="inline-flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                      Blog
-                    </a>
+                  <Link href="/Blog" className="inline-flex items-center">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    Blog
                   </Link>
                 </li>
                 <li className="transition-all duration-300 hover:pl-2 hover:text-white group">
-                  {/* ✅ Fixed /technologies link */}
-                  <Link href="/technologies" legacyBehavior>
-                    <a className="inline-flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                      Technology
-                    </a>
+                  <Link href="/technologies" className="inline-flex items-center">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    Technology
                   </Link>
                 </li>
                 <li className="transition-all duration-300 hover:pl-2 hover:text-white group">
-                  {/* ✅ Fixed /contactus link */}
-                  <Link href="/contactus" legacyBehavior>
-                    <a className="inline-flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                      Contact us
-                    </a>
+                  <Link href="/contactus" className="inline-flex items-center">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    Contact us
                   </Link>
                 </li>
               </ul>

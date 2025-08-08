@@ -711,11 +711,9 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                 <p className="text-left text-gray-600 mb-4">{item.description}</p>
 
-                <Link href={`/CaseStudy/${item.slug}`} legacyBehavior>
-                  <a className="flex items-center font-medium hover:underline">
-                    View Case Study
-                    <ArrowUpRight size={16} className="ml-1" />
-                  </a>
+                <Link href={`/CaseStudy/${item.slug}`} className="flex items-center font-medium hover:underline">
+                  View Case Study
+                  <ArrowUpRight size={16} className="ml-1" />
                 </Link>
               </div>
             </div>
