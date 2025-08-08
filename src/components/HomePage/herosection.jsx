@@ -87,10 +87,11 @@ const HeroSection = () => {
 
   // Partners auto-scroll effect
   useEffect(() => {
-    if (!partnersTrackRef.current) return;
+    const currentRef = partnersTrackRef.current;
+    if (!currentRef) return;
 
-    while (partnersTrackRef.current.firstChild) {
-      partnersTrackRef.current.removeChild(partnersTrackRef.current.firstChild);
+    while (currentRef.firstChild) {
+      currentRef.removeChild(currentRef.firstChild);
     }
 
     const createInfinitePartners = () => {
@@ -108,7 +109,7 @@ const HeroSection = () => {
           img.className = 'h-6 sm:h-8 md:h-10 w-auto object-contain transition-all duration-300 filter brightness-0 invert opacity-80 hover:opacity-100';
 
           div.appendChild(img);
-          partnersTrackRef.current.appendChild(div);
+          currentRef.appendChild(div);
         });
       }
     };
@@ -124,9 +125,9 @@ const HeroSection = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
 
-      if (partnersTrackRef.current) {
-        while (partnersTrackRef.current.firstChild) {
-          partnersTrackRef.current.removeChild(partnersTrackRef.current.firstChild);
+      if (currentRef) {
+        while (currentRef.firstChild) {
+          currentRef.removeChild(currentRef.firstChild);
         }
       }
     };
