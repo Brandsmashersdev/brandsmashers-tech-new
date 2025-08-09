@@ -115,6 +115,7 @@ import CountUp from 'react-countup';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import caseStudies from '@/data/caseStudies';
+import { FaShieldAlt, FaBolt, FaUsers, FaCloud } from 'react-icons/fa';
 
 // Lazy load react-slick only on client to avoid SSR issues
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
@@ -130,37 +131,87 @@ export default function First() {
         <meta name="description" content="Discover how we built a secure, scalable fintech mobile app with real-time data processing and advanced security features." />
         <meta property="og:title" content="Case Study: Fintech Mobile App - Brandsmashers Tech" />
         <meta property="og:description" content="Secure, scalable fintech mobile app with real-time data processing." />
+        <meta property="og:image" content="/finance.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Article',
+              headline: 'Fintech Mobile App',
+              description:
+                'Secure, scalable fintech mobile app with real-time data processing and advanced security features.',
+              author: { '@type': 'Organization', name: 'Brandsmashers Tech' },
+              articleSection: 'Case Study',
+              about: 'Finance',
+              datePublished: '2024-01-15',
+              image: ['/finance.png'],
+            }),
+          }}
+        />
       </Head>
 
       <div className="min-h-screen bg-white">
         
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-[#ff5010] to-[#e0450e] text-white py-20">
+        <section className="bg-gradient-to-r from-[#ff5010] to-[#e0450e] text-white py-20" id="overview">
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
               <div className="flex items-center mb-6">
                 <span className="bg-white/20 px-4 py-2 rounded-full text-sm">Finance</span>
                 <span className="mx-4">•</span>
                 <span className="text-white/80">4 months</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Fintech Mobile App
-              </h1>
-              <p className="text-xl md:text-2xl mb-8">
-                Developed a secure, scalable financial solution with real-time data processing and advanced security features for a leading fintech startup.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <span className="bg-white/20 px-4 py-2 rounded-full">React Native</span>
-                <span className="bg-white/20 px-4 py-2 rounded-full">Node.js</span>
-                <span className="bg-white/20 px-4 py-2 rounded-full">MongoDB</span>
-                <span className="bg-white/20 px-4 py-2 rounded-full">AWS</span>
+              <div>
+                <h1 className="text-4xl md:text-6xl font-bold mb-6">Fintech Mobile App</h1>
+                <p className="text-xl md:text-2xl mb-8">
+                  Developed a secure, scalable financial solution with real-time data processing and advanced security features for a leading fintech startup.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <span className="bg-white/20 px-4 py-2 rounded-full">React Native</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-full">Node.js</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-full">MongoDB</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-full">AWS</span>
+                </div>
+              </div>
+              <div className="relative h-64 md:h-80 lg:h-96">
+                <Image
+                  src="/finance.png"
+                  alt="Fintech app interface"
+                  fill
+                  className="object-contain drop-shadow-xl"
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  priority
+                />
               </div>
             </div>
           </div>
         </section>
 
+        {/* On this page (TOC) */}
+        <nav className="bg-white/90 backdrop-blur sticky top-0 z-30 border-b">
+          <div className="container mx-auto px-6 overflow-x-auto">
+            <ul className="flex gap-4 py-3 text-sm text-gray-600 whitespace-nowrap">
+              {[
+                { href: '#challenge', label: 'Challenge' },
+                { href: '#solution', label: 'Solution' },
+                { href: '#results', label: 'Results' },
+                { href: '#tech', label: 'Technical' },
+                { href: '#gallery', label: 'Gallery' },
+                { href: '#timeline', label: 'Timeline' },
+                { href: '#testimonial', label: 'Testimonial' },
+                { href: '#faqs', label: 'FAQs' },
+              ].map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="hover:text-[#ff5010] transition-colors">{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+
         {/* Challenge Section */}
-        <section className="py-16">
+        <section className="py-16" id="challenge">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <div className="bg-red-50 border-l-4 border-red-500 p-8 rounded-r-lg mb-12">
@@ -181,7 +232,7 @@ export default function First() {
         </section>
 
         {/* Solution Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50" id="solution">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Solution</h2>
@@ -212,30 +263,34 @@ export default function First() {
         </section>
 
         {/* Results Section */}
-        <section className="py-16">
+        <section className="py-16" id="results">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">The Results</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="text-center">
+                  <div className="flex justify-center text-[#ff5010] mb-2"><FaBolt size={28} /></div>
                   <div className="text-4xl font-bold text-[#ff5010] mb-2">
                     <CountUp end={40} suffix="%" duration={1.2} enableScrollSpy scrollSpyOnce />
                   </div>
                   <div className="text-gray-600">Increase in user engagement</div>
                 </div>
                 <div className="text-center">
+                  <div className="flex justify-center text-[#ff5010] mb-2"><FaCloud size={26} /></div>
                   <div className="text-4xl font-bold text-[#ff5010] mb-2">
                     <CountUp end={99.9} decimals={1} suffix="%" duration={1.2} enableScrollSpy scrollSpyOnce />
                   </div>
                   <div className="text-gray-600">Uptime achieved</div>
                 </div>
                 <div className="text-center">
+                  <div className="flex justify-center text-[#ff5010] mb-2"><FaShieldAlt size={26} /></div>
                   <div className="text-4xl font-bold text-[#ff5010] mb-2">
                     <CountUp end={50} suffix="%" duration={1.2} enableScrollSpy scrollSpyOnce />
                   </div>
                   <div className="text-gray-600">Reduction in transaction time</div>
                 </div>
                 <div className="text-center">
+                  <div className="flex justify-center text-[#ff5010] mb-2"><FaUsers size={26} /></div>
                   <div className="text-4xl font-bold text-[#ff5010] mb-2">
                     <CountUp end={10000} separator="," suffix="+" duration={1.4} enableScrollSpy scrollSpyOnce />
                   </div>
@@ -247,7 +302,7 @@ export default function First() {
         </section>
 
         {/* Technical Details */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50" id="tech">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Technical Implementation</h2>
@@ -285,7 +340,7 @@ export default function First() {
         </section>
 
         {/* Visual Gallery */}
-        <section className="py-16">
+        <section className="py-16" id="gallery">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Visual Gallery</h2>
@@ -299,9 +354,9 @@ export default function First() {
                 adaptiveHeight
               >
                 {[
-                  { src: '/Web-img.png', alt: 'Dashboard overview' },
-                  { src: '/ReadyToInnovate.png', alt: 'Mobile app screens' },
-                  { src: '/Technologyservices.png', alt: 'Technology services' },
+                  { src: '/finance.png', alt: 'Finance analytics dashboard' },
+                  { src: '/Statistics.png', alt: 'Key performance statistics' },
+                  { src: '/chart1.svg', alt: 'Growth trend chart' },
                 ].map((img) => (
                   <div key={img.src} className="relative h-[380px] md:h-[460px]">
                     <Image
@@ -320,7 +375,7 @@ export default function First() {
         </section>
 
         {/* Project Timeline */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50" id="timeline">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Project Timeline</h2>
@@ -344,7 +399,7 @@ export default function First() {
         </section>
 
         {/* Client Testimonial */}
-        <section className="py-16">
+        <section className="py-16" id="testimonial">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
               <div className="text-5xl text-[#ff5010] mb-4">“</div>
@@ -357,7 +412,7 @@ export default function First() {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50" id="faqs">
           <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">FAQs</h2>
             <div className="space-y-4">
