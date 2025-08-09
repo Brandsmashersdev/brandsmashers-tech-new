@@ -111,8 +111,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navbar from '@/components/navbar/navbar';
-import Footer from '@/components/footer/footer';
+import CountUp from 'react-countup';
 
 export default function First() {
   return (
@@ -125,7 +124,6 @@ export default function First() {
       </Head>
 
       <div className="min-h-screen bg-white">
-        <Navbar />
         
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-[#ff5010] to-[#e0450e] text-white py-20">
@@ -211,19 +209,27 @@ export default function First() {
               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">The Results</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[#ff5010] mb-2">40%</div>
+                  <div className="text-4xl font-bold text-[#ff5010] mb-2">
+                    <CountUp end={40} suffix="%" duration={1.2} enableScrollSpy scrollSpyOnce />
+                  </div>
                   <div className="text-gray-600">Increase in user engagement</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[#ff5010] mb-2">99.9%</div>
+                  <div className="text-4xl font-bold text-[#ff5010] mb-2">
+                    <CountUp end={99.9} decimals={1} suffix="%" duration={1.2} enableScrollSpy scrollSpyOnce />
+                  </div>
                   <div className="text-gray-600">Uptime achieved</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[#ff5010] mb-2">50%</div>
+                  <div className="text-4xl font-bold text-[#ff5010] mb-2">
+                    <CountUp end={50} suffix="%" duration={1.2} enableScrollSpy scrollSpyOnce />
+                  </div>
                   <div className="text-gray-600">Reduction in transaction time</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[#ff5010] mb-2">10,000+</div>
+                  <div className="text-4xl font-bold text-[#ff5010] mb-2">
+                    <CountUp end={10000} separator="," suffix="+" duration={1.4} enableScrollSpy scrollSpyOnce />
+                  </div>
                   <div className="text-gray-600">Active users</div>
                 </div>
               </div>
@@ -293,7 +299,6 @@ export default function First() {
           </div>
         </section>
 
-        <Footer />
       </div>
     </>
   );
