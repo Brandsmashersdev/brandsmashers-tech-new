@@ -6,6 +6,14 @@ const caseStudies = [
     slug: "first",
     duration: "4 months",
     technologies: ["React Native", "Node.js", "MongoDB", "AWS"],
+    images: {
+      hero: "/case-studies/fintech/hero.jpg",
+      gallery: [
+        "/case-studies/fintech/dashboard.jpg",
+        "/case-studies/fintech/mobile-1.jpg",
+        "/case-studies/fintech/security.jpg"
+      ]
+    },
     results: [
       "40% increase in user engagement",
       "99.9% uptime achieved",

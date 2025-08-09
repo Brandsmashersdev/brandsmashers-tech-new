@@ -175,8 +175,8 @@ export default function First() {
                 </div>
               </div>
               <div className="relative h-64 md:h-80 lg:h-96">
-                <Image
-                  src="/finance.png"
+            <Image
+                  src={(caseStudies.find(s => s.slug === 'first')?.images?.hero) || '/finance.png'}
                   alt="Fintech app interface"
                   fill
                   className="object-contain drop-shadow-xl"
@@ -332,7 +332,7 @@ export default function First() {
                     <li>• Auto-scaling infrastructure</li>
                     <li>• Load balancing</li>
                     <li>• Database optimization</li>
-                  </ul>
+            </ul>
                 </div>
               </div>
             </div>
@@ -353,15 +353,15 @@ export default function First() {
                 slidesToScroll={1}
                 adaptiveHeight
               >
-                {[
-                  { src: '/finance.png', alt: 'Finance analytics dashboard' },
-                  { src: '/Statistics.png', alt: 'Key performance statistics' },
-                  { src: '/chart1.svg', alt: 'Growth trend chart' },
-                ].map((img) => (
+                {(caseStudies.find(s => s.slug === 'first')?.images?.gallery || [
+                  '/finance.png',
+                  '/Statistics.png',
+                  '/chart1.svg'
+                ]).map((src) => (
                   <div key={img.src} className="relative h-[380px] md:h-[460px]">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
+              <Image
+                      src={src}
+                      alt="Case study image"
                       fill
                       className="object-contain"
                       sizes="(max-width: 768px) 100vw, 800px"
@@ -391,7 +391,7 @@ export default function First() {
                     <span className="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-[#ff5010] ring-8 ring-white"></span>
                     <h3 className="text-lg font-semibold text-gray-900">{step.title}</h3>
                     <p className="text-gray-600">{step.desc}</p>
-                  </li>
+              </li>
                 ))}
               </ol>
             </div>
