@@ -112,6 +112,15 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import CountUp from 'react-countup';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import caseStudies from '@/data/caseStudies';
+
+// Lazy load react-slick only on client to avoid SSR issues
+const Slider = dynamic(() => import('react-slick'), { ssr: false });
+// Slick styles
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function First() {
   return (
@@ -271,6 +280,120 @@ export default function First() {
                   </ul>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Visual Gallery */}
+        <section className="py-16">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Visual Gallery</h2>
+              <Slider
+                arrows
+                dots
+                infinite
+                speed={500}
+                slidesToShow={1}
+                slidesToScroll={1}
+                adaptiveHeight
+              >
+                {[
+                  { src: '/Web-img.png', alt: 'Dashboard overview' },
+                  { src: '/ReadyToInnovate.png', alt: 'Mobile app screens' },
+                  { src: '/Technologyservices.png', alt: 'Technology services' },
+                ].map((img) => (
+                  <div key={img.src} className="relative h-[380px] md:h-[460px]">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, 800px"
+                      priority={false}
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </div>
+        </section>
+
+        {/* Project Timeline */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Project Timeline</h2>
+              <ol className="relative border-s border-gray-200">
+                {[ 
+                  { title: 'Discovery & Research', desc: 'Workshops, user interviews, requirement mapping, success metrics' },
+                  { title: 'Solution Design', desc: 'Information architecture, user flows, low-to-high fidelity prototypes' },
+                  { title: 'MVP Build', desc: 'Core banking flows, authentication, dashboards, CI/CD' },
+                  { title: 'Scale & Optimize', desc: 'Performance tuning, observability, security hardening, autoscaling' },
+                  { title: 'Launch & Iterate', desc: 'Feature flags, A/B tests, post-launch analytics and support' },
+                ].map((step, index) => (
+                  <li key={index} className="mb-10 ms-6">
+                    <span className="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-[#ff5010] ring-8 ring-white"></span>
+                    <h3 className="text-lg font-semibold text-gray-900">{step.title}</h3>
+                    <p className="text-gray-600">{step.desc}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        {/* Client Testimonial */}
+        <section className="py-16">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+              <div className="text-5xl text-[#ff5010] mb-4">“</div>
+              <p className="text-xl text-gray-800 leading-relaxed">
+                Brandsmashers delivered a secure, scalable fintech app that our users love. We saw an immediate lift in engagement and a drastic cut in transaction latency without compromising compliance or security.
+              </p>
+              <div className="mt-6 text-gray-600">— Product Lead, Fintech Startup</div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">FAQs</h2>
+            <div className="space-y-4">
+              {[ 
+                { q: 'How did you ensure bank‑level security?', a: 'Multi-factor auth, biometric unlock, encrypted storage, signed requests, and continuous vulnerability scans.' },
+                { q: 'What was the approach to performance?', a: 'Real-time streaming with backpressure, client-side caching, lazy modules, and autoscaling on peak hours.' },
+                { q: 'How long did the MVP take?', a: 'We delivered the MVP in about 12 weeks, followed by iterative releases every two weeks.' },
+              ].map((item, i) => (
+                <details key={i} className="group rounded-xl border border-gray-200 bg-white p-5 open:shadow-md">
+                  <summary className="flex cursor-pointer list-none items-center justify-between">
+                    <span className="text-lg font-semibold text-gray-800">{item.q}</span>
+                    <span className="text-[#ff5010]">+</span>
+                  </summary>
+                  <p className="mt-3 text-gray-600">{item.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Related Case Studies */}
+        <section className="py-16">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Related Case Studies</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {caseStudies
+                .filter((s) => s.slug !== 'first')
+                .slice(0, 3)
+                .map((s) => (
+                  <div key={s.slug} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6">
+                    <div className="text-sm text-gray-500 mb-2">{s.industry}</div>
+                    <div className="font-bold text-gray-800 mb-2">{s.title}</div>
+                    <p className="text-gray-600 line-clamp-3 mb-4">{s.description}</p>
+                    <Link href={`/CaseStudy/${s.slug}`} className="text-[#ff5010] font-semibold">Read more →</Link>
+                  </div>
+                ))}
             </div>
           </div>
         </section>
