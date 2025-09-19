@@ -795,22 +795,26 @@ export default function CustomSoftwareDevelopmentPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {["Healthcare", "Finance", "E-Commerce"].map((industry) => (
-              <div key={industry} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+            {[
+              { label: "Healthcare", slug: "custom1" },
+              { label: "Finance", slug: "custom2" },
+              { label: "E-Commerce", slug: "custom3" }
+            ].map((item) => (
+              <div key={item.label} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
                 <div className="h-48 bg-gray-300">
                   {/* <img src="https://i.pinimg.com/736x/d9/dc/07/d9dc073561f34685fd7622aa73bebee3.jpg" className="h-48 w-full bg-cover bg-center"/> */}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{industry} Solution</h3>
-                  <p className="text-left text-gray-600 mb-4">How we helped a {industry.toLowerCase()} company streamline operations and boost efficiency with custom software.</p>
-                  <a
-                    href="#"
+                  <h3 className="text-xl font-bold mb-2">{item.label} Solution</h3>
+                  <p className="text-left text-gray-600 mb-4">How we helped a {item.label.toLowerCase()} company streamline operations and boost efficiency with custom software.</p>
+                  <Link
+                    href={`/CaseStudy/${item.slug}`}
                     style={{ color: "#ff5010" }}
                     className="flex items-center font-medium hover:underline"
                   >
                     View Case Study
                     <ArrowUpRight size={16} className="ml-1" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

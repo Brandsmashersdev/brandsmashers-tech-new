@@ -6,6 +6,7 @@ export default function Example() {
       <h1>Dynamic Placeholder Image</h1>
       <Image
         src="/api/placeholder/400/200"
+        unoptimized
         alt="Placeholder"
         width={400}
         height={200}

@@ -8,17 +8,52 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
 // Import bespoke case study pages when available
-import First from '@/components/Service/CaseStudy/First';
-import Second from '@/components/Service/CaseStudy/Second';
-import Third from '@/components/Service/CaseStudy/Third';
+import DynamicBookCaseStudy from '@/pages/CaseStudyPages/Mobile/DynamicBookPlatform';
+import MediInfoCaseStudy from '@/pages/CaseStudyPages/Mobile/MusicCollaborationNLearningPlatform';
+import MusicAppCaseStudy from '@/pages/CaseStudyPages/Mobile/MediInfoPharmaceuticalDataManagementPlatform';
+
+import SmartAttendCaseStudy from '@/pages/CaseStudyPages/Web/DigitalAttendanceNLeavePortal';
+import ImageLicensingCaseStudy from '@/pages/CaseStudyPages/Web/ImageLicensingPlatform';
+import SmartBuyerCaseStudy from '@/pages/CaseStudyPages/Web/SmartBuyerManagementSystem';
+import BankAIUseCaseStudy from '@/pages/CaseStudyPages/AIML/CaseStudyIHowaLeadingBankHarnessedAItoPredictRiskandStrengthenCustomerLoyalty';
+import MarketingAgencyCaseStudy from '@/pages/CaseStudyPages/AIML/CreatingaScalableProductEngineforaRapidlyGrowingMarketingAgency';
+import AIinHealthcareCaseStudy from '@/pages/CaseStudyPages/AIML/TransformingDiagnosiswithAI';
+import TranslationPlatformCaseStudy from '@/pages/CaseStudyPages/CustomMade/FeatureRichWebBasedLanguageTranslationPlatform';
+import FinancePlatformCaseStudy from '@/pages/CaseStudyPages/CustomMade/PersonalFinanceWebPlatform';
+import CoachingPlatformCaseStudy from '@/pages/CaseStudyPages/CustomMade/SmartWebPlatformforCoachingInstitutes';
+import DigitalMarketingCaseStudy from '@/pages/CaseStudyPages/DigitalMarketing/BrainstormingOurWaytoaWinningDigitalMarketingStrategy';
+import B2BLeadsCaseStudy from '@/pages/CaseStudyPages/DigitalMarketing/DrivingB2BLeadswithSEOEmailMarketing';
+import SocialMediaCaseStudy from '@/pages/CaseStudyPages/DigitalMarketing/GrowingBrandAwarenesswithSocialMediaContentMarketing';
+import BrandsmashersVendorManagementCaseStudy from '@/pages/CaseStudyPages/Productdevelopment/HowBrandsmashersReimaginedVendorManagementtoPowerItsOwnGrowth';
+import IdeaXCaseStudy from '@/pages/CaseStudyPages/Productdevelopment/HowWeBroughtIdeaXtoLifeFromVisiontoProductLaunch';
+import EntertainmentPlatformCaseStudy from '@/pages/CaseStudyPages/UIUX/EnhancingEntertainmentPlatformsforScalableEngagement';
+import AdAgencyCaseStudy from '@/pages/CaseStudyPages/UIUX/SimplifyingComplexityinanAdvertisingWorld';
+import FitnessAppCaseStudy from '@/pages/CaseStudyPages/UIUX/UXRevampingTheFitnessExperience';
 
 // Optional: lazy-load react-countup if we use it here later
 const CountUp = dynamic(() => import('react-countup'), { ssr: false });
 
 const customComponents = {
-  first: First,
-  second: Second,
-  third: Third,
+  Mobile1: DynamicBookCaseStudy,
+  Mobile2: MediInfoCaseStudy,
+  Mobile3: MusicAppCaseStudy,
+  web1: SmartAttendCaseStudy,
+  web2: ImageLicensingCaseStudy,
+  web3: SmartBuyerCaseStudy,
+  aiml1: BankAIUseCaseStudy,
+  aiml2: MarketingAgencyCaseStudy,
+  aiml3: AIinHealthcareCaseStudy,
+  custom1: TranslationPlatformCaseStudy,
+  custom2: FinancePlatformCaseStudy,
+  custom3: CoachingPlatformCaseStudy,
+  digital1: DigitalMarketingCaseStudy,
+  digital2: B2BLeadsCaseStudy,
+  digital3: SocialMediaCaseStudy,
+  product1: BrandsmashersVendorManagementCaseStudy,
+  product2: IdeaXCaseStudy,
+  ui1: EntertainmentPlatformCaseStudy,
+  ui2: AdAgencyCaseStudy,
+  ui3: FitnessAppCaseStudy,
 };
 
 export default function CaseStudyPage() {

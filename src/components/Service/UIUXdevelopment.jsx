@@ -699,21 +699,9 @@ export default function UIUXDesignPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
             {[
-              {
-                title: "Fintech Mobile App",
-                description: "Developed a secure, scalable financial solution with real-time data processing",
-                industry: "Finance"
-              },
-              {
-                title: "E-commerce Platform",
-                description: "Built a high-performance marketplace with advanced search capabilities",
-                industry: "Retail"
-              },
-              {
-                title: "Healthcare Management System",
-                description: "Created an integrated platform for patient records and telemedicine",
-                industry: "Healthcare"
-              }
+              { title: "Fintech Mobile App", description: "Developed a secure, scalable financial solution with real-time data processing", industry: "Finance", slug: "ui1" },
+              { title: "E-commerce Platform", description: "Built a high-performance marketplace with advanced search capabilities", industry: "Retail", slug: "ui2" },
+              { title: "Healthcare Management System", description: "Created an integrated platform for patient records and telemedicine", industry: "Healthcare", slug: "ui3" }
             ].map((item, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
                 <div className="h-48 bg-gray-200 flex items-center justify-center">
@@ -722,6 +710,7 @@ export default function UIUXDesignPage() {
                     alt="Project"
                     width={400}
                     height={200}
+                    unoptimized
                     className="object-cover w-full h-full"
                   />
                 </div>
@@ -729,14 +718,10 @@ export default function UIUXDesignPage() {
                   <div className="text-sm font-medium text-[#ff5010] mb-2">{item.industry}</div>
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                   <p className="text-gray-600 mb-4">{item.description}</p>
-                  <a
-                    href="#"
-                    style={{ color: "#ff5010" }}
-                    className="flex items-center font-medium hover:underline"
-                  >
+                  <Link href={`/CaseStudy/${item.slug}`} style={{ color: "#ff5010" }} className="flex items-center font-medium hover:underline">
                     View Case Study
                     <ArrowUpRight size={16} className="ml-1" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

@@ -657,20 +657,16 @@ export default function DigitalMarketingPage() {
             {caseStudies.map((item, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
                 <div className="h-48 bg-gray-200 flex items-center justify-center">
-                  <Image src="/api/placeholder/400/200" alt="Project" height={400} width={600} className="object-cover w-full h-full" />
+                  <Image src="/api/placeholder/400/200" alt="Project" height={400} width={600} unoptimized className="object-cover w-full h-full" />
                 </div>
                 <div className="p-6">
                   <div className="text-sm font-medium text-[#ff5010] mb-2">{item.industry}</div>
                   <h3 className="text-xl font-bold mb-2 text-black">{item.title}</h3>
                   <p className="text-gray-600 mb-4">{item.description}</p>
-                  <a
-                    href="#"
-                    style={{ color: "#ff5010" }}
-                    className="flex items-center font-medium hover:underline"
-                  >
+                  <Link href={`/CaseStudy/${index === 0 ? 'digital1' : index === 1 ? 'digital2' : 'digital3' }`} style={{ color: "#ff5010" }} className="flex items-center font-medium hover:underline">
                     View Case Study
                     <ArrowUpRight size={16} className="ml-1" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

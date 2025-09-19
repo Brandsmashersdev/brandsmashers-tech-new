@@ -10,12 +10,12 @@
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  height:5rem;
+  height:5.5rem;
 }
 
 .logo img {
-  height: 80px;
-  width:80px;
+  height: 88px;
+  width:100px;
 }
 
 /* Hamburger Menu Styles */
@@ -138,7 +138,7 @@
   position: absolute;
   width: fit-content;
   height: auto;
-  top: 100%;
+  top: calc(100% - 1px);
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -146,8 +146,9 @@
   border-radius: 12px;
   padding: 2rem;
   z-index: 999;
-  margin-top: 0.5rem;
+  margin-top: 0;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
 }
 
 /* Company dropdown */
@@ -155,28 +156,84 @@
   min-width: 200px;
   left: -100px;
   height: 15rem;
-  top: 4rem;
 }
 
 /* Services dropdown */
 [data-menu-type="Services"] .dropdownMenu {
   min-width: 606px;
   left: -220px;
-  height: 17rem;
-  top: 4rem;
+  max-height: 18rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Services unified layout */
+.dropdownInner {
+  display: flex;
+  flex-direction: column;
+}
+
+.servicesHeader {
+  color: #ff5010;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+  border-bottom: 2px solid #ff5010;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.twoColList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 2rem;
+}
+
+.twoColList li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666666;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.twoColList li a:hover {
+  color: #ff5010;
+  background-color: rgba(255, 80, 16, 0.1);
+  transform: translateX(5px);
 }
 
 /* Hire Developers dropdown */
 [data-menu-type="Hire Developers"] .dropdownMenu {
-  min-width: 77rem;
-  left: -830px;
+  min-width: 80rem;
+  max-width: calc(100vw - 2rem);
+  /* left: 50%; */
+  right: auto;
+  transform: translateX(-50%);
   height: 20rem;
-  top: 4rem;
-}
+  overflow: hidden auto;
+  width: 80rem;
+  margin-left: 0;
+  margin-right: 0;
+} 
+
 
 .dropdownMenu.show {
   display: block !important;
   animation: fadeInDown 0.3s ease-out;
+}
+
+/* Specific animation for Hire Developers dropdown */
+[data-menu-type="Hire Developers"] .dropdownMenu.show {
+  animation: fadeInDownCentered 0.3s ease-out;
 }
 
 /* Dropdown Grid Layout - Base */
@@ -195,14 +252,30 @@
 [data-menu-type="Services"] .dropdownGrid {
   grid-template-columns: repeat(2, 1fr);
 }
-
+ 
 [data-menu-type="Hire Developers"] .dropdownGrid {
   grid-template-columns: repeat(5, 1fr);
-}
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  align-items: start;
+}    
+
+
 
 /* Dropdown Column Styles */
 .dropdownColumn {
   min-width: 180px;
+  max-width: 100%;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* Specific styling for Marketing column to prevent cutoff */
+[data-menu-type="Hire Developers"] .dropdownColumn:last-child {
+  min-width: 200px;
+  max-width: 200px;
 }
 
 .dropdownColumn h3 {
@@ -236,6 +309,9 @@
   transition: all 0.3s ease;
   padding: 0.5rem;
   border-radius: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Icon Wrapper in Dropdown */
@@ -334,11 +410,36 @@
   }
 }
 
+/* Specific animation for Hire Developers dropdown to prevent shifting */
+@keyframes fadeInDownCentered {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
 /* Show dropdown on hover for desktop */
-@media (min-width: 1366px) {
+@media (min-width: 1025px) {
   .hasDropdown:hover .dropdownMenu,
   .hasDropdown.active .dropdownMenu {
     display: block;
+    animation: fadeInDown 0.2s ease-out;
+  }
+  
+  /* Specific animation for Hire Developers dropdown on hover */
+  [data-menu-type="Hire Developers"]:hover .dropdownMenu,
+  [data-menu-type="Hire Developers"].active .dropdownMenu {
+    animation: fadeInDownCentered 0.2s ease-out;
+  }
+  
+  /* Rotate caret on hover/active for desktop */
+  .hasDropdown:hover .dropdownIcon,
+  .hasDropdown.active .dropdownIcon {
+    transform: rotate(180deg);
   }
 }
 
@@ -399,11 +500,19 @@
   
   [data-menu-type="Hire Developers"] .dropdownMenu {
     min-width: 70rem;
-    left: -400px;
+    width: 70rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    max-width: calc(100vw - 2rem);
   }
   
   .dropdownGrid {
     gap: 1.5rem;
+  }
+
+  [data-menu-type="Hire Developers"] .dropdownGrid {
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .dropdownColumn {
@@ -448,11 +557,19 @@
   
   [data-menu-type="Hire Developers"] .dropdownMenu {
     min-width: 65rem;
-    left: -350px;
+    width: 65rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    max-width: calc(100vw - 2rem);
   }
   
   .dropdownGrid {
     gap: 1.2rem;
+  }
+
+  [data-menu-type="Hire Developers"] .dropdownGrid {
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .dropdownColumn {

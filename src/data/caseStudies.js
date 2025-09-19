@@ -3,7 +3,7 @@ const caseStudies = [
     title: "Fintech Mobile App",
     description: "Developed a secure, scalable financial solution with real-time data processing and advanced security features for a leading fintech startup.",
     industry: "Finance",
-    slug: "first",
+    slug: "Mobile1",
     duration: "4 months",
     technologies: ["React Native", "Node.js", "MongoDB", "AWS"],
     images: {
@@ -27,7 +27,7 @@ const caseStudies = [
     title: "E-commerce Platform",
     description: "Built a high-performance marketplace with advanced search capabilities, inventory management, and seamless payment integration.",
     industry: "Retail",
-    slug: "second",
+    slug: "Mobile2",
     duration: "6 months",
     technologies: ["React", "Next.js", "PostgreSQL", "Stripe"],
     results: [
@@ -43,7 +43,7 @@ const caseStudies = [
     title: "Healthcare Management System",
     description: "Created an integrated platform for patient records, appointment scheduling, and telemedicine capabilities for a healthcare network.",
     industry: "Healthcare",
-    slug: "third",
+    slug: "Mobile3",
     duration: "5 months",
     technologies: ["Vue.js", "Python", "Django", "PostgreSQL"],
     results: [

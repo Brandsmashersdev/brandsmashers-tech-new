@@ -176,12 +176,13 @@ export default function First() {
               </div>
               <div className="relative h-64 md:h-80 lg:h-96">
             <Image
-                  src={(caseStudies.find(s => s.slug === 'first')?.images?.hero) || '/finance.png'}
+                  src={(caseStudies.find(s => s.slug === 'Mobile1')?.images?.hero) || '/finance.png'}
                   alt="Fintech app interface"
                   fill
                   className="object-contain drop-shadow-xl"
                   sizes="(max-width: 768px) 100vw, 600px"
                   priority
+                  unoptimized
                 />
               </div>
             </div>
@@ -353,19 +354,20 @@ export default function First() {
                 slidesToScroll={1}
                 adaptiveHeight
               >
-                {(caseStudies.find(s => s.slug === 'first')?.images?.gallery || [
+                {(caseStudies.find(s => s.slug === 'Mobile1')?.images?.gallery || [
                   '/finance.png',
                   '/Statistics.png',
                   '/chart1.svg'
-                ]).map((src) => (
-                  <div key={img.src} className="relative h-[380px] md:h-[460px]">
-              <Image
+                ]).map((src, index) => (
+                  <div key={index} className="relative h-[380px] md:h-[460px]">
+                    <Image
                       src={src}
                       alt="Case study image"
                       fill
                       className="object-contain"
                       sizes="(max-width: 768px) 100vw, 800px"
                       priority={false}
+                      unoptimized
                     />
                   </div>
                 ))}
@@ -439,7 +441,7 @@ export default function First() {
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Related Case Studies</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {caseStudies
-                .filter((s) => s.slug !== 'first')
+                .filter((s) => s.slug !== 'Mobile1')
                 .slice(0, 3)
                 .map((s) => (
                   <div key={s.slug} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6">

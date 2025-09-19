@@ -303,22 +303,22 @@ export default function MobileAppDevelopmentPage() {
 
    const caseStudies = [
     {
-      title: "Smart Attend Meta Description",
-      description: "Transform attendance management with SmartAttend! Our digital portal slashed manual HR time by 90% and boosted employee compliance by 30%, offering real-time tracking, automated leave workflows, and secure cloud solutions.",
+      title: "Dynamic Book Platform",
+      description: "A case study on building a platform where users can co-create and experience evolving stories with alternate versions and endings.",
       industry: "Smart Attend",
-      slug: "first", // maps to pages/CaseStudy/first.js
+      slug: "Mobile1", // maps to pages/CaseStudy/first.js
     },
     {
       title: "Music App",
       description: "Transform music creation and learning with our dual-platform app. It offers real-time collaboration, a beat marketplace, licensing, interactive lessons, and progress tracking, empowering musicians of all levels.",
       industry: "Music",
-      slug: "second", // maps to pages/CaseStudy/second.js
+      slug: "Mobile2", // maps to pages/CaseStudy/second.js
     },
     {
       title: "Medi Info",
       description: "MediInfo centralizes 12,000+ drug data, reducing medication errors by 45% and boosting treatment success by 28%. Optimize patient care with smart filters and AI suggestions.",
       industry: "Healthcare",
-      slug: "third", // maps to pages/CaseStudy/third.js
+      slug: "Mobile3", // maps to pages/CaseStudy/third.js
     },
   ];
 

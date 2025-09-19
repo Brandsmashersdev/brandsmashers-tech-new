@@ -116,6 +116,22 @@ const Navbar = () => {
     setActiveDropdown(activeDropdown === menu ? null : menu);
   };
 
+  // Hover handlers for desktop to keep dropdown stable on hover
+  const handleHoverEnter = (menu) => {
+    if (typeof window !== 'undefined' && window.innerWidth > 1024) {
+      setActiveDropdown(menu);
+    }
+  };
+
+  const handleHoverLeave = (menu) => {
+    if (typeof window !== 'undefined' && window.innerWidth > 1024) {
+      // Only close if the same menu is active
+      if (activeDropdown === menu) {
+        setActiveDropdown(null);
+      }
+    }
+  };
+
   const closeMenu = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null);
@@ -157,6 +173,8 @@ const Navbar = () => {
             key={item.name}
             data-menu-type={item.name}
             className={`${item.hasDropdown ? styles.hasDropdown : ''} ${activeDropdown === item.name ? styles.active : ''}`}
+            onMouseEnter={() => item.hasDropdown && handleHoverEnter(item.name)}
+            onMouseLeave={() => item.hasDropdown && handleHoverLeave(item.name)}
           >
             <div 
               className={styles.menuItem}
@@ -207,12 +225,13 @@ const Navbar = () => {
             {/* Services Dropdown */}
             {item.name === "Services" && (
               <div className={`${styles.dropdownMenu} ${activeDropdown === item.name ? styles.show : ''}`}>
-                <div className={styles.dropdownGrid}>
-                  {Object.entries(servicesDropdownContent).map(([category, { items }]) => (
-                    <div key={category} className={styles.dropdownColumn}>
-                      <h3>{category}</h3>
-                      <ul>
-                        {items.map((service) => (
+                {(() => {
+                  const allServices = Object.values(servicesDropdownContent).flatMap(({ items }) => items);
+                  return (
+                    <div className={styles.dropdownInner}> 
+                      <h3 className={styles.servicesHeader}>Our Services</h3>
+                      <ul className={styles.twoColList}>
+                        {allServices.map((service) => (
                           <li key={service.path}>
                             <Link href={`/services${service.path}`} onClick={closeMenu}>
                               <span className={styles.iconWrapper}>
@@ -224,8 +243,8 @@ const Navbar = () => {
                         ))}
                       </ul>
                     </div>
-                  ))}
-                </div>
+                  );
+                })()}
               </div>
             )}
 
@@ -270,3 +289,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
