@@ -29,6 +29,7 @@ import IdeaXCaseStudy from '@/pages/CaseStudyPages/Productdevelopment/HowWeBroug
 import EntertainmentPlatformCaseStudy from '@/pages/CaseStudyPages/UIUX/EnhancingEntertainmentPlatformsforScalableEngagement';
 import AdAgencyCaseStudy from '@/pages/CaseStudyPages/UIUX/SimplifyingComplexityinanAdvertisingWorld';
 import FitnessAppCaseStudy from '@/pages/CaseStudyPages/UIUX/UXRevampingTheFitnessExperience';
+import HRMSCaseStudy from '@/pages/CaseStudyPages/Productdevelopment/HRMSCaseStudy';
 
 // Optional: lazy-load react-countup if we use it here later
 const CountUp = dynamic(() => import('react-countup'), { ssr: false });
@@ -54,6 +55,7 @@ const customComponents = {
   ui1: EntertainmentPlatformCaseStudy,
   ui2: AdAgencyCaseStudy,
   ui3: FitnessAppCaseStudy,
+  product3: HRMSCaseStudy,
 };
 
 export default function CaseStudyPage() {

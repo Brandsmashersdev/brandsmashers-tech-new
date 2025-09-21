@@ -784,7 +784,7 @@ export default function CustomSoftwareDevelopmentPage() {
         </div>
       </section>
 
-      {/* Case Study Section Placeholder */}
+           {/* Case Study Section Placeholder */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -796,9 +796,21 @@ export default function CustomSoftwareDevelopmentPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { label: "Healthcare", slug: "custom1" },
-              { label: "Finance", slug: "custom2" },
-              { label: "E-Commerce", slug: "custom3" }
+              { 
+                label: "Healthcare Language Translation Platform", 
+                slug: "custom1",
+                description: "This digital tool provides fast, accurate, and multilingual text or speech translation, enabling seamless communication within the healthcare industry."
+              },
+              { 
+                label: "Personal Finance Platform", 
+                slug: "custom2",
+                description: "A secure and intuitive platform designed to help users track expenses, manage budgets, and gain insights into their personal finances to achieve their goals."
+              },
+              { 
+                label: "Coaching Institute Platform", 
+                slug: "custom3",
+                description: "A comprehensive solution for coaching institutes to manage student enrollment, course materials, and online classes, enhancing the learning experience."
+              }
             ].map((item) => (
               <div key={item.label} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
                 <div className="h-48 bg-gray-300">
@@ -806,7 +818,7 @@ export default function CustomSoftwareDevelopmentPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{item.label} Solution</h3>
-                  <p className="text-left text-gray-600 mb-4">How we helped a {item.label.toLowerCase()} company streamline operations and boost efficiency with custom software.</p>
+                  <p className="text-left text-gray-600 mb-4">{item.description}</p>
                   <Link
                     href={`/CaseStudy/${item.slug}`}
                     style={{ color: "#ff5010" }}

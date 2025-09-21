@@ -702,9 +702,9 @@ export default function WebDevelopmentPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
             {[
-              { title: "Fintech Mobile App", description: "Developed a secure, scalable financial solution with real-time data processing", industry: "Finance", slug: "web1" },
-              { title: "E-commerce Platform", description: "Built a high-performance marketplace with advanced search capabilities", industry: "Retail", slug: "web2" },
-              { title: "Healthcare Management System", description: "Created an integrated platform for patient records and telemedicine", industry: "Healthcare", slug: "web3" }
+              { title: "Digital Attendance & Leave Portal", description: "Digital Attendance & Leave Portal is an online system to track employee attendance, manage leave requests, and streamline approval processes for organizations.", industry: "Finance", slug: "web1" },
+              { title: "Image Licensing Platform", description: "Image Licensing Platform is a digital system that enables creators to license, manage, and distribute images while ensuring legal use and royalty management.", industry: "Retail", slug: "web2" },
+              { title: "Smart Buyer Management System", description: "Smart Buyer Management System is a platform designed to track, analyze, and manage buyer interactions, helping businesses optimize sales and customer relationships.", industry: "Healthcare", slug: "web3" }
             ].map((item, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
                 <div className="h-48 bg-gray-200 flex items-center justify-center">

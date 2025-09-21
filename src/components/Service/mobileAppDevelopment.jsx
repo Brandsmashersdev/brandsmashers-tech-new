@@ -316,7 +316,7 @@ export default function MobileAppDevelopmentPage() {
     },
     {
       title: "Medi Info",
-      description: "MediInfo centralizes 12,000+ drug data, reducing medication errors by 45% and boosting treatment success by 28%. Optimize patient care with smart filters and AI suggestions.",
+      description: "MediInfo is a smart platform that streamlines pharmaceutical data, enabling faster decisions and improved patient care.",
       industry: "Healthcare",
       slug: "Mobile3", // maps to pages/CaseStudy/third.js
     },

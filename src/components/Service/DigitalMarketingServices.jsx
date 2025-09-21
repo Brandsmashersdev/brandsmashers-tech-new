@@ -304,8 +304,8 @@ export default function DigitalMarketingPage() {
   // Case studies
   const caseStudies = [
     {
-      title: "E-commerce Traffic Growth",
-      description: "Increased organic traffic by 170% and conversions by 85% through comprehensive SEO and content strategy",
+      title: "Digital Marketing Strategy",
+      description: "A plan that defines goals, target audience, channels, and tactics to promote a brand, drive engagement, and maximize ROI online.",
       industry: "E-commerce"
     },
     {
@@ -314,8 +314,8 @@ export default function DigitalMarketingPage() {
       industry: "SaaS"
     },
     {
-      title: "Local Business Visibility",
-      description: "Boosted local search visibility by 200% and increased in-store visits through local SEO and GMB optimization",
+      title: "Social Media & Content Marketing",
+      description: "Using social media platforms and content creation to engage audiences, build brand presence, and drive traffic or conversions.",
       industry: "Retail"
     }
   ];

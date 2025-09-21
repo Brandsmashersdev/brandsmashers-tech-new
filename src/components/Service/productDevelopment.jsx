@@ -712,9 +712,9 @@ export default function ProductDevelopmentPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
             {[
-              { title: "Fintech Mobile App", description: "Developed a secure, scalable financial solution with real-time data processing", industry: "Finance", slug: "product1" },
-              { title: "E-commerce Platform", description: "Built a high-performance marketplace with advanced search capabilities", industry: "Retail", slug: "product2" },
-              { title: "Healthcare Management System", description: "Created an integrated platform for patient records and telemedicine", industry: "Healthcare", slug: "third" }
+              { title: "Vendor Management", description: "Managing and optimizing relationships with suppliers and service providers to ensure quality, cost-efficiency, and timely delivery of products or services.", industry: "Finance", slug: "product1" },
+              { title: "IdeaX", description: "A platform for fostering innovation by collecting, evaluating, and implementing creative ideas to drive business growth and operational improvements.", industry: "Retail", slug: "product2" },
+              { title: "HRMS by Brandsmashers Tech", description: "A comprehensive Human Resource Management System (HRMS) designed to streamline employee data, payroll, attendance, and performance management for efficient organizational operations.", industry: "Healthcare", slug: "product3" }
             ].map((item, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
                 <div className="h-48 bg-gray-200 flex items-center justify-center">

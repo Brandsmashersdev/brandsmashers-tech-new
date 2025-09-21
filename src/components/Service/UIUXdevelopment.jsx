@@ -699,9 +699,9 @@ export default function UIUXDesignPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
             {[
-              { title: "Fintech Mobile App", description: "Developed a secure, scalable financial solution with real-time data processing", industry: "Finance", slug: "ui1" },
-              { title: "E-commerce Platform", description: "Built a high-performance marketplace with advanced search capabilities", industry: "Retail", slug: "ui2" },
-              { title: "Healthcare Management System", description: "Created an integrated platform for patient records and telemedicine", industry: "Healthcare", slug: "ui3" }
+              { title: "Entertainment Platform", description: "A digital platform providing movies, music, videos, and interactive content to engage and entertain users across multiple devices.", industry: "Finance", slug: "ui1" },
+              { title: "Ad Agency Workflow", description: "A system that manages and optimizes the end-to-end processes of an advertising agency, including campaign planning, creative development, client approvals, and performance tracking.", industry: "Retail", slug: "ui2" },
+              { title: "Fitness App UI/UX", description: "A mobile application interface designed to provide an intuitive and engaging user experience for tracking workouts, nutrition, progress, and personalized fitness goals.", industry: "Healthcare", slug: "ui3" }
             ].map((item, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
                 <div className="h-48 bg-gray-200 flex items-center justify-center">

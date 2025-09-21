@@ -1,417 +1,170 @@
-// // // 'use client';
 
-// // // import React from 'react';
-// // // import Head from 'next/head';
-// // // import Image from 'next/image';
-// // // import Navbar from '@/components/navbar/navbar';
-
-// // // export default function MusicAppCaseStudy() {
-// // //   return (
-// // //     <>
-// // //       <Head>
-// // //         <title>Case Study | Music Collaboration & Learning Platform</title>
-// // //         <meta name="description" content="A case study on a dual-platform solution for real-time music collaboration and beginner-friendly music education." />
-// // //         <meta property="og:title" content="Music Collaboration & Learning Platform - Case Study" />
-// // //         <meta property="og:image" content="/music-app-banner.jpg" />
-// // //         <meta property="og:type" content="website" />
-// // //       </Head>
-
-// // //       <div className="min-h-screen bg-white text-gray-800">
-// // //         <Navbar />
-
-// // //         <section className="py-16 px-6 md:px-20 bg-white">
-// // //           <h1 className="text-4xl font-bold mb-6 text-center text-black tracking-tight">
-// // //             Case Study: Music Collaboration & Beat Sharing App and Music Learning App
-// // //           </h1>
-
-// // //           <div className="flex justify-center mb-12">
-// // //             <Image
-// // //               src="/music-app-1.jpeg" // Placeholder image
-// // //               alt="Music Collaboration App Interface"
-// // //               width={600}
-// // //               height={350}
-// // //               className="rounded-xl shadow-md w-full max-w-md object-cover"
-// // //             />
-// // //           </div>
-
-// // //           <div className="mb-12">
-// // //             <h2 className="text-2xl font-semibold mb-4 text-orange-600">The Challenge</h2>
-// // //             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-6">
-// // //               The client wanted a collaborative platform for musicians, producers, and vocalists, combining the functions of SoundCloud with real-time collaboration tools. This also required integrating an educational component for aspiring artists.
-// // //             </p>
-// // //             <ul className="list-disc pl-6 text-gray-700 space-y-2 marker:text-orange-500">
-// // //               <li>**Collaboration Platform:** Low-latency audio, version control, and real-time messaging for a smooth collaborative workflow.</li>
-// // //               <li>**Music Learning App:** Pre-recorded video courses, interactive lessons, progress tracking, and certification for students.</li>
-// // //             </ul>
-// // //           </div>
-
-// // //           <div className="mb-12">
-// // //             <h2 className="text-2xl font-semibold mb-4 text-orange-600">The Solution</h2>
-// // //             <div className="flex justify-center mb-12">
-// // //               <Image
-// // //                 src="/music-app-2.jpeg" // Placeholder image
-// // //                 alt="Music App Learning Section"
-// // //                 width={600}
-// // //                 height={350}
-// // //                 className="rounded-xl shadow-md w-full max-w-md object-cover"
-// // //               />
-// // //             </div>
-// // //             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-// // //               We developed an innovative, full-stack dual-platform solution: a **Collaboration App** and a **Learning App** built to enhance creativity, collaboration, and education.
-// // //             </p>
-// // //             <ul className="mt-6 list-disc pl-6 text-gray-700 space-y-2 marker:text-orange-500">
-// // //               <li>**Collaboration App:** Allows users to upload and layer audio stems, collaborate in real-time, and use in-app messaging. An integrated marketplace allows for peer-to-peer beat sales with a licensing tracker.</li>
-// // //               <li>**Learning App:** Offers a comprehensive course module with pre-recorded videos and interactive tools like a metronome and chord recognition. Users can track their progress, take quizzes, and earn certificates.</li>
-// // //             </ul>
-// // //           </div>
-
-// // //           <div className="mb-12">
-// // //             <h2 className="text-2xl font-semibold mb-4 text-orange-600">Key Technologies</h2>
-// // //             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700">
-// // //               <div>
-// // //                 <strong>Frontend:</strong> React Native, Next.js, Tailwind CSS
-// // //               </div>
-// // //               <div>
-// // //                 <strong>Backend:</strong> Node.js, Express.js
-// // //               </div>
-// // //               <div>
-// // //                 <strong>Database:</strong> MongoDB, PostgreSQL, Firebase Realtime Database
-// // //               </div>
-// // //               <div>
-// // //                 <strong>Real-time Communication:</strong> WebRTC, Socket.IO
-// // //               </div>
-// // //               <div>
-// // //                 <strong>Media & Hosting:</strong> AWS S3, AWS CloudFront, AWS MediaConvert, FFmpeg
-// // //               </div>
-// // //               <div>
-// // //                 <strong>Payments & Security:</strong> Stripe API, Auth0, Smart Contracts on Ethereum, DRM integration
-// // //               </div>
-// // //             </div>
-// // //           </div>
-
-// // //           <div className="mb-12">
-// // //             <h2 className="text-2xl font-semibold mb-4 text-orange-600">The Result</h2>
-// // //             <ul className="list-disc pl-6 text-gray-700 space-y-2 marker:text-orange-500">
-// // //               <li>Over **2,500 learners** registered in 3 months.</li>
-// // //               <li>More than **5,000 tracks** were created in 90 days.</li>
-// // //               <li>A **72% course completion rate** was achieved, with over 500 certificates issued.</li>
-// // //               <li>Over **₹4.1L** earned from peer-to-peer beat sales.</li>
-// // //             </ul>
-// // //           </div>
-// // //         </section>
-// // //       </div>
-// // //     </>
-// // //   );
-// // // }
-
-// // 'use client';
-
-// // import React from 'react';
-// // import Head from 'next/head';
-// // import Image from 'next/image';
-// // import Navbar from '@/components/navbar/navbar';
-
-// // export default function MusicAppCaseStudy() {
-// //   return (
-// //     <>
-// //       <Head>
-// //         <title>Case Study | Music Collaboration & Learning Platform</title>
-// //         <meta name="description" content="A case study on a dual-platform solution for real-time music collaboration and beginner-friendly music education." />
-// //         <meta property="og:title" content="Music Collaboration & Learning Platform - Case Study" />
-// //         <meta property="og:image" content="/music-app-banner.jpg" />
-// //         <meta property="og:type" content="website" />
-// //       </Head>
-
-// //       <div className="min-h-screen bg-white text-gray-800">
-// //         <Navbar />
-
-// //         <section className="py-16 px-6 md:px-20 bg-white">
-// //           <h1 className="text-4xl font-bold mb-6 text-center text-black tracking-tight">
-// //             Case Study: Music Collaboration & Beat Sharing App and Music Learning App
-// //           </h1>
-
-// //           <div className="flex justify-center mb-12">
-// //             <Image
-// //               src="/music-app-1.jpeg" // Placeholder image
-// //               alt="Music Collaboration App Interface"
-// //               width={600}
-// //               height={350}
-// //               className="rounded-xl shadow-md w-full max-w-md object-cover"
-// //             />
-// //           </div>
-
-// //           <div className="mb-12">
-// //             <h2 className="text-2xl font-semibold mb-4 text-orange-600">The Challenge</h2>
-// //             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-6">
-// //               The client wanted a collaborative platform for musicians, producers, and vocalists, combining the functions of SoundCloud with real-time collaboration tools. This also required integrating an educational component for aspiring artists.
-// //             </p>
-// //             <ul className="list-disc pl-6 text-gray-700 space-y-2 marker:text-orange-500">
-// //               <li>**Collaboration Platform:** Low-latency audio, version control, and real-time messaging for a smooth collaborative workflow.</li>
-// //               <li>**Music Learning App:** Pre-recorded video courses, interactive lessons, progress tracking, and certification for students.</li>
-// //             </ul>
-// //           </div>
-
-// //           <div className="mb-12">
-// //             <h2 className="text-2xl font-semibold mb-4 text-orange-600">The Solution</h2>
-// //             <div className="flex justify-center mb-12">
-// //               <Image
-// //                 src="/music-app-2.jpeg" // Placeholder image
-// //                 alt="Music App Learning Section"
-// //                 width={600}
-// //                 height={350}
-// //                 className="rounded-xl shadow-md w-full max-w-md object-cover"
-// //               />
-// //             </div>
-// //             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-// //               We developed an innovative, full-stack dual-platform solution: a **Collaboration App** and a **Learning App** built to enhance creativity, collaboration, and education.
-// //             </p>
-// //             <ul className="mt-6 list-disc pl-6 text-gray-700 space-y-2 marker:text-orange-500">
-// //               <li>**Collaboration App:** Allows users to upload and layer audio stems, collaborate in real-time, and use in-app messaging. An integrated marketplace allows for peer-to-peer beat sales with a licensing tracker.</li>
-// //               <li>**Learning App:** Offers a comprehensive course module with pre-recorded videos and interactive tools like a metronome and chord recognition. Users can track their progress, take quizzes, and earn certificates.</li>
-// //             </ul>
-// //           </div>
-
-// //           <div className="mb-12">
-// //             <h2 className="text-2xl font-semibold mb-4 text-orange-600">Key Technologies</h2>
-// //             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700">
-// //               <div>
-// //                 <strong>Frontend:</strong> React Native, Next.js, Tailwind CSS
-// //               </div>
-// //               <div>
-// //                 <strong>Backend:</strong> Node.js, Express.js
-// //               </div>
-// //               <div>
-// //                 <strong>Database:</strong> MongoDB, PostgreSQL, Firebase Realtime Database
-// //               </div>
-// //               <div>
-// //                 <strong>Real-time Communication:</strong> WebRTC, Socket.IO
-// //               </div>
-// //               <div>
-// //                 <strong>Media & Hosting:</strong> AWS S3, AWS CloudFront, AWS MediaConvert, FFmpeg
-// //               </div>
-// //               <div>
-// //                 <strong>Payments & Security:</strong> Stripe API, Auth0, Smart Contracts on Ethereum, DRM integration
-// //               </div>
-// //             </div>
-// //           </div>
-
-// //           <div className="mb-12">
-// //             <h2 className="text-2xl font-semibold mb-4 text-orange-600">The Result</h2>
-// //             <ul className="list-disc pl-6 text-gray-700 space-y-2 marker:text-orange-500">
-// //               <li>Over **2,500 learners** registered in 3 months.</li>
-// //               <li>More than **5,000 tracks** were created in 90 days.</li>
-// //               <li>A **72% course completion rate** was achieved, with over 500 certificates issued.</li>
-// //               <li>Over **₹4.1L** earned from peer-to-peer beat sales.</li>
-// //             </ul>
-// //           </div>
-// //         </section>
-// //       </div>
-// //     </>
-// //   );
-// // }
-
-
-
-// 'use client';
-
-// import React from 'react';
-// import Head from 'next/head';
-// import Image from 'next/image';
-// import Navbar from '@/components/navbar/navbar';
-
-// export default function MusicAppCaseStudy() {
-//   return (
-//     <>
-//       <Head>
-//         <title>Case Study | Music Collaboration & Learning Platform</title>
-//         <meta name="description" content="A case study on a dual-platform solution for real-time music collaboration and beginner-friendly music education." />
-//         <meta property="og:title" content="Music Collaboration & Learning Platform - Case Study" />
-//         <meta property="og:image" content="/music-app-banner.jpg" />
-//         <meta property="og:type" content="website" />
-//       </Head>
-
-//       <div className="min-h-screen bg-white text-gray-800">
-//         <Navbar />
-
-//         <section className="py-16 px-6 md:px-20 bg-white">
-//           <h1 className="text-4xl font-bold mb-6 text-center text-black tracking-tight">
-//             Case Study: Music Collaboration & Beat Sharing App and Music Learning App
-//           </h1>
-
-//           <div className="flex justify-center mb-12">
-//             <Image
-//               src="/music-app-1.jpeg" // Placeholder image
-//               alt="Music Collaboration App Interface"
-//               width={600}
-//               height={350}
-//               className="rounded-xl shadow-md w-full max-w-md object-cover"
-//             />
-//           </div>
-
-//           <div className="mb-12">
-//             <h2 className="text-2xl font-semibold mb-4 text-orange-600">The Challenge</h2>
-//             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-6">
-//               The client wanted a collaborative platform for musicians, producers, and vocalists, combining the functions of SoundCloud with real-time collaboration tools. This also required integrating an educational component for aspiring artists.
-//             </p>
-//             <ul className="list-disc pl-6 text-gray-700 space-y-2 marker:text-orange-500">
-//               <li>**Collaboration Platform:** Low-latency audio, version control, and real-time messaging for a smooth collaborative workflow.</li>
-//               <li>**Music Learning App:** Pre-recorded video courses, interactive lessons, progress tracking, and certification for students.</li>
-//             </ul>
-//           </div>
-
-//           <div className="mb-12">
-//             <h2 className="text-2xl font-semibold mb-4 text-orange-600">The Solution</h2>
-//             <div className="flex justify-center mb-12">
-//               <Image
-//                 src="/music-app-2.jpeg" // Placeholder image
-//                 alt="Music App Learning Section"
-//                 width={600}
-//                 height={350}
-//                 className="rounded-xl shadow-md w-full max-w-md object-cover"
-//               />
-//             </div>
-//             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-//               We developed an innovative, full-stack dual-platform solution: a **Collaboration App** and a **Learning App** built to enhance creativity, collaboration, and education.
-//             </p>
-//             <ul className="mt-6 list-disc pl-6 text-gray-700 space-y-2 marker:text-orange-500">
-//               <li>**Collaboration App:** Allows users to upload and layer audio stems, collaborate in real-time, and use in-app messaging. An integrated marketplace allows for peer-to-peer beat sales with a licensing tracker.</li>
-//               <li>**Learning App:** Offers a comprehensive course module with pre-recorded videos and interactive tools like a metronome and chord recognition. Users can track their progress, take quizzes, and earn certificates.</li>
-//             </ul>
-//           </div>
-
-//           <div className="mb-12">
-//             <h2 className="text-2xl font-semibold mb-4 text-orange-600">Key Technologies</h2>
-//             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700">
-//               <div>
-//                 <strong>Frontend:</strong> React Native, Next.js, Tailwind CSS
-//               </div>
-//               <div>
-//                 <strong>Backend:</strong> Node.js, Express.js
-//               </div>
-//               <div>
-//                 <strong>Database:</strong> MongoDB, PostgreSQL, Firebase Realtime Database
-//               </div>
-//               <div>
-//                 <strong>Real-time Communication:</strong> WebRTC, Socket.IO
-//               </div>
-//               <div>
-//                 <strong>Media & Hosting:</strong> AWS S3, AWS CloudFront, AWS MediaConvert, FFmpeg
-//               </div>
-//               <div>
-//                 <strong>Payments & Security:</strong> Stripe API, Auth0, Smart Contracts on Ethereum, DRM integration
-//               </div>
-//             </div>
-//           </div>
-
-//           <div className="mb-12">
-//             <h2 className="text-2xl font-semibold mb-4 text-orange-600">The Result</h2>
-//             <ul className="list-disc pl-6 text-gray-700 space-y-2 marker:text-orange-500">
-//               <li>Over **2,500 learners** registered in 3 months.</li>
-//               <li>More than **5,000 tracks** were created in 90 days.</li>
-//               <li>A **72% course completion rate** was achieved, with over 500 certificates issued.</li>
-//               <li>Over **₹4.1L** earned from peer-to-peer beat sales.</li>
-//             </ul>
-//           </div>
-//         </section>
-//       </div>
-//     </>
-//   );
-// }
-
-
-'use client';
 
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Navbar from '@/components/navbar/navbar';
+
+const collaborationFeatures = [
+  {
+    title: 'Real-Time Collaboration',
+    description: 'Enables multiple users to edit and build projects simultaneously using WebRTC and Socket.IO for seamless interaction.',
+  },
+  {
+    title: 'Built-in Communication',
+    description: 'In-app messaging and threaded comments within each project foster clear communication among collaborators.',
+  },
+  {
+    title: 'Secure Marketplace',
+    description: 'A scalable marketplace for users to buy and sell beats or loops, with integrated Stripe API for secure payments.',
+  },
+  {
+    title: 'Licensing & Ownership',
+    description: 'A built-in licensing tracker using smart contracts on Ethereum assists in defining rights and royalties.',
+  },
+];
+
+const learningFeatures = [
+  {
+    title: 'Structured Courses',
+    description: 'Admins can upload organized courses with video chapters and allow for assignment uploads.',
+  },
+  {
+    title: 'Interactive Tools',
+    description: 'Utilities like chord recognition, a tempo trainer, and a metronome supported by the Web Audio API.',
+  },
+  {
+    title: 'Progress Tracking',
+    description: 'Users can monitor progress, set goals, track course completion, and earn digital certificates.',
+  },
+  {
+    title: 'DRM-Protected Content',
+    description: 'Premium content is safeguarded with DRM protection, AES encryption, and Auth0 for secure user access.',
+  },
+];
+
+const stats = [
+  { value: '2,500+', label: 'Learners Registered' },
+  { value: '5,000+', label: 'Tracks Created' },
+  { value: '72%', label: 'Course Completion Rate' },
+  { value: '500+', label: 'Certificates Issued' },
+  { value: '₹4.1L+', label: 'Earned from Beat Sales' },
+];
 
 export default function MusicAppCaseStudy() {
   return (
     <>
-      <div className="min-h-screen bg-white text-gray-800">
-        {/* /<Navbar /> */}
+      <Head>
+        <title>Case Study | Music Collaboration & Learning App</title>
+        <meta name="description" content="A case study on a dual-platform app for music collaboration and education." />
+      </Head>
 
-        <section className="py-16 px-6 md:px-20 bg-white">
-          <h1 className="text-4xl font-bold mb-6 text-center text-black tracking-tight">
-            Case Study: Music Collaboration & Beat Sharing App and Music Learning App
-          </h1>
-
-          <div className="flex justify-center mb-12">
-            <Image
-              src="/music-app-1.jpeg" // Placeholder image
-              alt="Music Collaboration App Interface"
-              width={600}
-              height={350}
-              className="rounded-xl shadow-md w-full max-w-md object-cover"
-            />
-          </div>
-
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-orange-600">The Challenge</h2>
-            <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-6">
-              The client wanted a collaborative platform for musicians, producers, and vocalists, combining the functions of SoundCloud with real-time collaboration tools. This also required integrating an educational component for aspiring artists.
+      <div className="bg-white font-sans text-gray-800">
+        <header className="py-24 text-center text-white" style={{ background: '#ff5010' }}>
+          <div className="container mx-auto px-6">
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4" style={{ color: '#ffffff' }}>
+              Case Study: Music Collaboration & Learning App
+            </h1>
+            <p className="text-xl md:text-2xl font-light opacity-90" style={{ color: '#ffffff' }}>
+              Where Music is Co-Created and Learned
             </p>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2 marker:text-orange-500">
-              <li>**Collaboration Platform:** Low-latency audio, version control, and real-time messaging for a smooth collaborative workflow.</li>
-              <li>**Music Learning App:** Pre-recorded video courses, interactive lessons, progress tracking, and certification for students.</li>
-            </ul>
           </div>
+        </header>
 
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-orange-600">The Solution</h2>
-            <div className="flex justify-center mb-12">
-              <Image
-                src="/music-app-2.jpeg" // Placeholder image
-                alt="Music App Learning Section"
-                width={600}
-                height={350}
-                className="rounded-xl shadow-md w-full max-w-md object-cover"
-              />
+        <main className="container mx-auto px-6 py-16">
+          <section className="mb-20 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#ff7a47' }}>The Challenge</h2>
+            <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed mb-8" style={{ color: '#222222' }}>
+              "What if we could combine the collaborative power of Google Docs with the creative freedom of SoundCloud?"
+            </p>
+            <div className="rounded-2xl shadow-xl p-8 max-w-2xl mx-auto" style={{ backgroundColor: '#f5f5f5' }}>
+              <h3 className="text-2xl font-semibold mb-4" style={{ color: '#ff7a47' }}>Project Goals</h3>
+              <ul className="list-disc text-left space-y-2 pl-5" style={{ color: '#222222' }}>
+                <li>Build a platform for real-time collaboration among musicians.</li>
+                <li>Ensure low-latency audio uploads and version control.</li>
+                <li>Incorporate a comprehensive music learning platform.</li>
+                <li>Design a scalable system for both individual learners and institutions.</li>
+              </ul>
             </div>
-            <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              We developed an innovative, full-stack dual-platform solution: a **Collaboration App** and a **Learning App** built to enhance creativity, collaboration, and education.
-            </p>
-            <ul className="mt-6 list-disc pl-6 text-gray-700 space-y-2 marker:text-orange-500">
-              <li>**Collaboration App:** Allows users to upload and layer audio stems, collaborate in real-time, and use in-app messaging. An integrated marketplace allows for peer-to-peer beat sales with a licensing tracker.</li>
-              <li>**Learning App:** Offers a comprehensive course module with pre-recorded videos and interactive tools like a metronome and chord recognition. Users can track their progress, take quizzes, and earn certificates.</li>
-            </ul>
-          </div>
+          </section>
 
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-orange-600">Key Technologies</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700">
+          <div className="border-t my-12" style={{ borderColor: '#e5e7eb' }} />
+
+          <section className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#ff7a47' }}>Our Solution</h2>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <strong>Frontend:</strong> React Native, Next.js, Tailwind CSS
+                <p className="text-lg leading-relaxed mb-8" style={{ color: '#222222' }}>
+                  We built a full-stack platform with two core applications: one for collaboration and one for music education. The solution is powered by a robust tech stack to handle the complexities of real-time audio and interactive learning.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  {collaborationFeatures.map((feature, index) => (
+                    <div key={index} className="flex flex-col items-start p-6 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105" style={{ backgroundColor: '#f5f5f5' }}>
+                      <h4 className="text-xl font-semibold mb-2" style={{ color: '#ff7a47' }}>{feature.title}</h4>
+                      <p className="text-sm" style={{ color: '#222222' }}>{feature.description}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div>
-                <strong>Backend:</strong> Node.js, Express.js
-              </div>
-              <div>
-                <strong>Database:</strong> MongoDB, PostgreSQL, Firebase Realtime Database
-              </div>
-              <div>
-                <strong>Real-time Communication:</strong> WebRTC, Socket.IO
-              </div>
-              <div>
-                <strong>Media & Hosting:</strong> AWS S3, AWS CloudFront, AWS MediaConvert, FFmpeg
-              </div>
-              <div>
-                <strong>Payments & Security:</strong> Stripe API, Auth0, Smart Contracts on Ethereum, DRM integration
+              <div className="mt-8 md:mt-0">
+                <Image
+                  src="/case-study-solution-music.png" // Placeholder image
+                  alt="Music Collaboration App Interface"
+                  width={600}
+                  height={400}
+                  className="rounded-3xl shadow-2xl animate-fade-in"
+                />
               </div>
             </div>
-          </div>
+            
+            <div className="border-t my-12" style={{ borderColor: '#e5e7eb' }} />
 
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-orange-600">The Result</h2>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2 marker:text-orange-500">
-              <li>Over **2,500 learners** registered in 3 months.</li>
-              <li>More than **5,000 tracks** were created in 90 days.</li>
-              <li>A **72% course completion rate** was achieved, with over 500 certificates issued.</li>
-              <li>Over **₹4.1L** earned from peer-to-peer beat sales.</li>
-            </ul>
-          </div>
-        </section>
+            <div className="grid md:grid-cols-2 gap-12 items-center mt-20">
+              <div className="mb-8 md:mb-0">
+                <Image
+                  src="/case-study-learning-app.png" // Placeholder image
+                  alt="Music Learning App Interface"
+                  width={600}
+                  height={400}
+                  className="rounded-3xl shadow-2xl animate-fade-in"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold mb-4" style={{ color: '#ff7a47' }}>Music Learning App</h3>
+                <p className="text-lg leading-relaxed mb-8" style={{ color: '#222222' }}>
+                  A comprehensive cross-platform app for aspiring artists of all ages, with structured lessons, interactive tools, and progress tracking to foster a love for music.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  {learningFeatures.map((feature, index) => (
+                    <div key={index} className="flex flex-col items-start p-6 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105" style={{ backgroundColor: '#f5f5f5' }}>
+                      <h4 className="text-xl font-semibold mb-2" style={{ color: '#ff7a47' }}>{feature.title}</h4>
+                      <p className="text-sm" style={{ color: '#222222' }}>{feature.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div className="border-t my-12" style={{ borderColor: '#e5e7eb' }} />
+
+          <section className="mb-20 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12" style={{ color: '#ff7a47' }}>The Results</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+              {stats.map((stat, index) => (
+                <div key={index} className="rounded-xl shadow-lg p-6 transition-transform duration-300 hover:scale-110" style={{ backgroundColor: '#f5f5f5' }}>
+                  <p className="text-4xl font-extrabold" style={{ color: '#ff5010' }}>{stat.value}</p>
+                  <p className="text-sm uppercase tracking-wide font-medium mt-2" style={{ color: '#222222' }}>{stat.label}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 p-6 rounded-xl shadow-lg max-w-lg mx-auto transition-transform duration-300 hover:scale-105" style={{ backgroundColor: '#f5f5f5' }}>
+              <h3 className="text-2xl font-semibold mb-4" style={{ color: '#ff7a47' }}>Summary</h3>
+              <p className="italic" style={{ color: '#222222' }}>
+                "With This App, People Can Create Their Own Euphoria for Music."
+              </p>
+            </div>
+          </section>
+        </main>
       </div>
     </>
   );

@@ -709,15 +709,27 @@ const AiMlService = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { label: "Healthcare", slug: "aiml1" },
-              { label: "Finance", slug: "aiml2" },
-              { label: "E-Commerce", slug: "aiml3" }
+              {
+                label: "Bank AI",
+                slug: "aiml1",
+                description: "Implemented a custom AI-driven platform for a bank to enhance fraud detection and automate customer service inquiries."
+              },
+              {
+                label: "Marketing Agency",
+                slug: "aiml2",
+                description: "Developed a marketing automation tool to help an agency personalize campaigns and analyze client data more effectively."
+              },
+              {
+                label: "Transforming Diagnosis with AI",
+                slug: "aiml3",
+                description: "Built an AI-powered diagnostic tool for a healthcare company, enabling faster and more accurate analysis of medical images."
+              }
             ].map((item) => (
               <div key={item.label} className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
                 <div className="h-48 bg-gray-300"></div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{item.label} Solution</h3>
-                  <p className="text-gray-600 mb-4">How we helped a {item.label.toLowerCase()} company streamline operations and boost efficiency with custom software.</p>
+                  <p className="text-gray-600 mb-4">{item.description}</p>
                   <Link href={`/CaseStudy/${item.slug}`} style={{ color: "#ff5010" }} className="flex items-center font-medium hover:underline">
                     View Case Study
                     <ArrowUpRight size={16} className="ml-1" />
