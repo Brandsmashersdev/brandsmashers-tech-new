@@ -216,7 +216,7 @@ export default function MediInfoCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/case-study-medinfo-solution.png"
+                  src="/CaseStudyImages/meditinfomobile.png"
                   alt="MediInfo Solution Dashboard"
                   width={600}
                   height={400}

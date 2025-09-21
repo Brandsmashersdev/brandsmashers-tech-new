@@ -219,7 +219,7 @@ export default function BrandsmashersVendorManagementCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/vendor-hub-solution.png" // Placeholder image
+                  src="/CaseStudyImages/vendormanagement.png" // Placeholder image
                   alt="VendorHub Dashboard"
                   width={600}
                   height={400}

@@ -191,7 +191,7 @@ export default function IdeaXCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/ideax-solution.png" // Placeholder image
+                  src="/CaseStudyImages/ideax.png" // Placeholder image
                   alt="IdeaX Platform Overview"
                   width={600}
                   height={400}

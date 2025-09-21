@@ -208,7 +208,7 @@ export default function CoachingPlatformCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/coaching-solution.png" // Placeholder image
+                  src="/CaseStudyImages/customcoaching.png" // Placeholder image
                   alt="Coaching Platform Dashboard"
                   width={600}
                   height={400}

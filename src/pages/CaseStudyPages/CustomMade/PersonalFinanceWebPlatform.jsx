@@ -177,7 +177,7 @@ export default function FinancePlatformCaseStudy() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-lg leading-relaxed mb-8" style={{ color: '#222222' }}>
-                  We developed a secure and intelligent personal finance platform that not only tracks user data but also provides actionable insights to promote healthier financial behaviors. At its core, the platform integrates with various financial institutions to provide a **centralized, real-time view** of a user's entire financial life.
+                  We developed a secure and intelligent personal finance platform that not only tracks user data but also provides actionable insights to promote healthier financial behaviors. At its core, the platform integrates with various financial institutions to provide a **centralized, real-time view** of a user&apos;s entire financial life.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   {solutionDetails.map((detail, index) => (
@@ -190,7 +190,7 @@ export default function FinancePlatformCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/finance-solution.png" // Placeholder image
+                  src="/CaseStudyImages/personalfinancecuston.png" // Placeholder image
                   alt="Financial Insights"
                   width={600}
                   height={400}
@@ -214,7 +214,7 @@ export default function FinancePlatformCaseStudy() {
             </div>
             <div className="mt-8 p-6 rounded-xl shadow-lg max-w-lg mx-auto transition-transform duration-300 hover:scale-105" style={{ backgroundColor: '#f5f5f5' }}>
               <p className="italic text-lg" style={{ color: '#222222' }}>
-                The on-time launch achieved impressive user growth and high engagement, indicating a successful solution that met and exceeded the client's goals.
+                The on-time launch achieved impressive user growth and high engagement, indicating a successful solution that met and exceeded the client&apos;s goals.
               </p>
             </div>
           </section>

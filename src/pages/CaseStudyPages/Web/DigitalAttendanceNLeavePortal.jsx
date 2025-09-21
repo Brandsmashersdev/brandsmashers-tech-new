@@ -91,7 +91,7 @@ export default function SmartAttendCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/smart-attend-solution.png" // Placeholder image
+                  src="/CaseStudyImages/portalweb.png" // Placeholder image
                   alt="SmartAttend Portal"
                   width={600}
                   height={400}

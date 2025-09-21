@@ -182,7 +182,7 @@ export default function ImageLicensingCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/licensing-solution.png" // Placeholder image
+                  src="/CaseStudyImages/imagelicence.png" // Placeholder image
                   alt="Solution Overview"
                   width={600}
                   height={400}

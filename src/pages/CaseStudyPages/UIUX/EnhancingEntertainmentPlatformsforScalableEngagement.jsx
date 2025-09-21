@@ -187,7 +187,7 @@ export default function EntertainmentPlatformCaseStudy() {
           <section className="mb-20 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#ff7a47' }}>The Objective</h2>
             <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed mb-8" style={{ color: '#222222' }}>
-              Our client's entertainment platform was gaining traction, but its outdated technical infrastructure was a major bottleneck, hindering user growth and retention.
+              Our client&apos;s entertainment platform was gaining traction, but its outdated technical infrastructure was a major bottleneck, hindering user growth and retention.
             </p>
             <div className="rounded-2xl shadow-xl p-8 max-w-2xl mx-auto" style={{ backgroundColor: '#f5f5f5' }}>
               <h3 className="text-2xl font-semibold mb-4" style={{ color: '#ff7a47' }}>Core Issues</h3>
@@ -219,7 +219,7 @@ export default function EntertainmentPlatformCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/entertainment-solution.png" // Placeholder image
+                  src="/CaseStudyImages/uiuxentertainment.png" // Placeholder image
                   alt="AI-Driven Content Feed"
                   width={600}
                   height={400}

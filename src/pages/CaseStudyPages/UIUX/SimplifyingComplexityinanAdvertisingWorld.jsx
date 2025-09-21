@@ -208,7 +208,7 @@ export default function AdAgencyCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/ad-agency-solution.png" // Placeholder image
+                  src="/CaseStudyImages/uiuxadai.png" // Placeholder image
                   alt="New Campaign Management Portal"
                   width={600}
                   height={400}
@@ -246,7 +246,7 @@ export default function AdAgencyCaseStudy() {
             </div>
             <div className="mt-8 p-6 rounded-xl shadow-lg max-w-lg mx-auto transition-transform duration-300 hover:scale-105" style={{ backgroundColor: '#f5f5f5' }}>
               <p className="italic text-lg" style={{ color: '#222222' }}>
-                The new portal helped transform the client's ad operations into a more streamlined and efficient process.
+                The new portal helped transform the client&apos;s ad operations into a more streamlined and efficient process.
               </p>
             </div>
           </section>

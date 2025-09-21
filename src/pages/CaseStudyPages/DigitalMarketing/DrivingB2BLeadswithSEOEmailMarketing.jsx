@@ -199,7 +199,7 @@ export default function B2BLeadsCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/b2b-leads-solution.png" // Placeholder image
+                  src="/CaseStudyImages/b2b.png" // Placeholder image
                   alt="SEO & Email Marketing Strategy"
                   width={600}
                   height={400}

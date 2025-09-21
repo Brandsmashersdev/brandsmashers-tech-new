@@ -217,7 +217,7 @@ export default function AIinHealthcareCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/ai-healthcare-solution.png" // Placeholder image
+                  src="/CaseStudyImages/diagnosiswithaiaiml.png" // Placeholder image
                   alt="AI System Dashboard"
                   width={600}
                   height={400}
@@ -255,7 +255,7 @@ export default function AIinHealthcareCaseStudy() {
             </div>
             <div className="mt-8 p-6 rounded-xl shadow-lg max-w-lg mx-auto transition-transform duration-300 hover:scale-105" style={{ backgroundColor: '#f5f5f5' }}>
               <p className="italic text-lg" style={{ color: '#222222' }}>
-                "It's akin to having a colleague who never tires — one who meticulously reviews every detail... and aids us in making timely decisions."
+                &ldquo;It&apos;s akin to having a colleague who never tires — one who meticulously reviews every detail... and aids us in making timely decisions.&rdquo;
               </p>
             </div>
           </section>

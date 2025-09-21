@@ -72,7 +72,7 @@ export default function DynamicBookCaseStudy() {
           <section className="mb-20 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">The Challenge</h2>
             <p className="max-w-3xl mx-auto text-lg md:text-xl" style={{ color: '#222222' }}>
-              "What if books weren’t static? What if readers could experience new versions, plot twists, or alternate endings written by other users — all within one app?"
+              &ldquo;What if books weren&apos;t static? What if readers could experience new versions, plot twists, or alternate endings written by other users — all within one app?&rdquo;
             </p>
             <div className="rounded-2xl shadow-xl p-8 max-w-2xl mx-auto" style={{ backgroundColor: '#f5f5f5' }}>
               <h3 className="text-2xl font-semibold text-black mb-4">Project Goals</h3>
@@ -90,7 +90,7 @@ export default function DynamicBookCaseStudy() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <Image
-                  src="/case-study-solution.png" // Replace with a professional image
+                  src="/CaseStudyImages/dynamictwo.png" // Replace with a professional image
                   alt="Our Solution"
                   width={600}
                   height={400}
@@ -134,7 +134,7 @@ export default function DynamicBookCaseStudy() {
                 <div className="mt-8 p-6 rounded-xl shadow-lg" style={{ backgroundColor: '#f5f5f5' }}>
                   <h3 className="text-2xl font-semibold text-black mb-4">Community Feedback</h3>
                   <p className="italic" style={{ color: '#222222' }}>
-                    "Interactive," "refreshing," and "the future of digital reading."
+                    &ldquo;Interactive,&rdquo; &ldquo;refreshing,&rdquo; and &ldquo;the future of digital reading.&rdquo;
                   </p>
                   <p className="text-sm mt-4" style={{ color: '#222222' }}>
                     — Overwhelmingly positive feedback from readers.
@@ -143,7 +143,7 @@ export default function DynamicBookCaseStudy() {
               </div>
               <div>
                 <Image
-                  src="/case-study-results.png" // Replace with a professional image
+                  src="/CaseStudyImages/dynamicone.png" // Replace with a professional image
                   alt="The Results"
                   width={600}
                   height={400}

@@ -185,7 +185,7 @@ export default function SmartBuyerCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/smart-buyer-solution.png" // Placeholder image
+                  src="/CaseStudyImages/webdev.png" // Placeholder image
                   alt="Solution Overview"
                   width={600}
                   height={400}
@@ -209,7 +209,7 @@ export default function SmartBuyerCaseStudy() {
             </div>
             <div className="mt-8 p-6 rounded-xl shadow-lg max-w-lg mx-auto transition-transform duration-300 hover:scale-105" style={{ backgroundColor: '#f5f5f5' }}>
               <p className="italic text-lg" style={{ color: '#222222' }}>
-                "This system saves me hours every week and gives me real control over my customers and sales."
+                &ldquo;This system saves me hours every week and gives me real control over my customers and sales.&rdquo;
               </p>
             </div>
           </section>

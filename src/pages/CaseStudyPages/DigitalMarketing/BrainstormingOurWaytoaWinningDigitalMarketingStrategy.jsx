@@ -213,7 +213,7 @@ export default function DigitalMarketingCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/marketing-strategy-solution.png" // Placeholder image
+                  src="/CaseStudyImages/digitaltwostratergytwo.png" // Placeholder image
                   alt="Strategy Session"
                   width={600}
                   height={400}
@@ -243,7 +243,7 @@ export default function DigitalMarketingCaseStudy() {
               </div>
               <div className="order-1 md:order-2 mt-8 md:mt-0">
                 <Image
-                  src="/marketing-strategy-final.png" // Placeholder image
+                  src="/CaseStudyImages/digitalstragergytone.png" // Placeholder image
                   alt="Campaign Implementation"
                   width={600}
                   height={400}

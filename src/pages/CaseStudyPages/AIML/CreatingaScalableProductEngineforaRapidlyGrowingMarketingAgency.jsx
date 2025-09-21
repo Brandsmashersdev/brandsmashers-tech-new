@@ -196,7 +196,7 @@ export default function MarketingAgencyCaseStudy() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-lg leading-relaxed mb-8" style={{ color: '#222222' }}>
-                  We designed and developed a bespoke web application named **"Pulse"**—a centralized campaign management and operations platform tailored to their unique needs.
+                  We designed and developed a bespoke web application named **&ldquo;Pulse&rdquo;**—a centralized campaign management and operations platform tailored to their unique needs.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   {solutionFeatures.map((feature, index) => (
@@ -209,7 +209,7 @@ export default function MarketingAgencyCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/marketing-agency-solution.png" // Placeholder image
+                  src="/CaseStudyImages/aimlagency.png" // Placeholder image
                   alt="New Product Engine"
                   width={600}
                   height={400}

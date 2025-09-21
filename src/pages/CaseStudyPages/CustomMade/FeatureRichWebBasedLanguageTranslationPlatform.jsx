@@ -177,7 +177,7 @@ export default function TranslationPlatformCaseStudy() {
               </div>
               <div className="order-1 md:order-2 mt-8 md:mt-0">
                 <Image
-                  src="/translation-1.jpeg" // Placeholder image
+                  src="/CaseStudyImages/languagetranslationONEcustom.png" // Placeholder image
                   alt="Translation Platform Interface"
                   width={600}
                   height={400}
@@ -194,7 +194,7 @@ export default function TranslationPlatformCaseStudy() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <Image
-                  src="/translation-2.jpeg" // Placeholder image
+                  src="/CaseStudyImages/languagecustomtwo.png" // Placeholder image
                   alt="AI-Powered Features"
                   width={600}
                   height={400}

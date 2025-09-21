@@ -201,7 +201,7 @@ export default function SocialMediaCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/social-media-solution.png" // Placeholder image
+                  src="/CaseStudyImages/socialmediadigital.png" // Placeholder image
                   alt="Social Media Content"
                   width={600}
                   height={400}

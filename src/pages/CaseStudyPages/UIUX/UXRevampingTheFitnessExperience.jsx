@@ -207,7 +207,7 @@ export default function FitnessAppCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/fitness-app-solution.png" // Placeholder image
+                  src="/CaseStudyImages/uiuxfitness.png" // Placeholder image
                   alt="New Dashboard and Features"
                   width={600}
                   height={400}
