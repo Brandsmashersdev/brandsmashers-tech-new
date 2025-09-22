@@ -21,7 +21,7 @@ const BlogCarousel = () => {
     {
       id: 2,
       title: "Scalable Tech & Green IT",
-      excerpt: "As we move through the Industrial Revolution and the Information Revolution",
+      excerpt: "As we move forward through the Industrial Revolution and continue advancing into the era of the Information Revolution",
       image: "/Nav-Dropdown-icons/image_blog2.jpg",
       readTime: "8 min read",
       link: "/blogsection2"
@@ -34,14 +34,14 @@ const BlogCarousel = () => {
       readTime: "5 min read",
       link: "/blogSection3"
     },
-    // {
-    //   id: 4,
-    //   title: "From Branding to Brandsmashers ",
-    //   excerpt: "In the midst of every crisis, lies great opportunity",
-    //   image: "/Nav-Dropdown-icons/Blog17.png",
-    //   readTime: "7 min read",
-    //   link: "/blogsection4"
-    // },
+     {
+      id: 4,
+      title: 'How to Hire Remote Developers from India',
+      excerpt: "A practical guide for Indian companies to hire remote developers efficiently, covering talent sourcing, vetting, compliance, onboarding, and best practices for a high-performing remote team.",
+      image: "/Images/Gemini_Generated_Image_htkv5khtkv5khtkv.png",
+      readTime: "8 min read",
+      link: "/BlogSectionNew",
+    },
   ];
 
   // Calculate visible posts based on screen size

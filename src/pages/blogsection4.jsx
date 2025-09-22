@@ -6,6 +6,7 @@ import BlogSection4 from "@/components/Company/BlogSection4"
 import React from "react";
 import Blog from "./Blog";
 
+
 const blogs = () => {
   return (
     <div>
