@@ -48,7 +48,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
           <div className="md:col-span-2 space-y-6">
             <h1 className="text-3xl font-bold tracking-tight text-white relative inline-block">
-              Brandsmashers<span className="text-[#ff5010]">Tech</span>
+              Brandsmashers <span className="text-[#ff5010]">Tech</span>
               <span className="absolute -bottom-1 left-0 w-12 h-1 bg-[#ff5010]"></span>
             </h1>
             
@@ -159,7 +159,7 @@ export default function Footer() {
 
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-500 text-sm mb-4 md:mb-0">
-            © 2024 BrandsmashersTech. All rights reserved.
+            © 2024 Brandsmashers Tech. All rights reserved.
           </div>
 
           <div className="flex flex-wrap gap-6 justify-center mb-4 md:mb-0">

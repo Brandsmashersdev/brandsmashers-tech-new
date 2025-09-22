@@ -142,7 +142,7 @@ const Navbar = () => {
     { name: "Services", hasDropdown: true },
     { name: "Hire Developers", hasDropdown: true },
     { name: "Blog", hasDropdown: false, href: "/Blog" },
-    { name: "Case Studies", hasDropdown: false, href: "/case-studies" },
+    //{ name: "Case Studies", hasDropdown: false, href: "/case-studies" },
   ];
 
   return (

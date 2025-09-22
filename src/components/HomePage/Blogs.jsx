@@ -34,14 +34,14 @@ const BlogCarousel = () => {
       readTime: "5 min read",
       link: "/blogSection3"
     },
-    {
-      id: 4,
-      title: "From Branding to Brandsmashers ",
-      excerpt: "In the midst of every crisis, lies great opportunity",
-      image: "/Nav-Dropdown-icons/Blog17.png",
-      readTime: "7 min read",
-      link: "/blogsection4"
-    },
+    // {
+    //   id: 4,
+    //   title: "From Branding to Brandsmashers ",
+    //   excerpt: "In the midst of every crisis, lies great opportunity",
+    //   image: "/Nav-Dropdown-icons/Blog17.png",
+    //   readTime: "7 min read",
+    //   link: "/blogsection4"
+    // },
   ];
 
   // Calculate visible posts based on screen size
