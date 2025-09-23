@@ -1,21 +1,17 @@
-
+// src/pages/BlogSectionNew.jsx
+import BlogPageAll from "@/components/HomePage/BlogPageALL";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
-import BlogSection4 from "@/components/Company/BlogSection4"
 import React from "react";
 
-
-
-const blogs = () => {
+const blogSectionNew = () => {
   return (
     <div>
-
       <Navbar />
-      <BlogSection4 />
+      <BlogPageAll/>
       <Footer />
-      
     </div>
   );
 };
 
-export default blogs;
+export default blogSectionNew;

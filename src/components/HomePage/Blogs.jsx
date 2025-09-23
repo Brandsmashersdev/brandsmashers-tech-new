@@ -280,7 +280,7 @@ const BlogCarousel = () => {
         
         {/* View all button */}
         <div className="mt-12 md:mt-16 text-center">
-          <Link href="/Blog" className="inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-[#ff5010] to-orange-500 text-lg font-bold rounded-full text-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-orange-200/50 group">
+          <Link href="/BlogPageALL" className="inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-[#ff5010] to-orange-500 text-lg font-bold rounded-full text-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-orange-200/50 group">
             <span>Explore All Articles</span>
             <svg className="w-6 h-6 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
