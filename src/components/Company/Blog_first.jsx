@@ -94,7 +94,8 @@ export default function BrandSmasherBlog() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">
             <span className="text-black">Latest from </span>
-            <span className="text-[#FF5010]">Our Blog</span>
+            {/* <span className="text-[#FF5010]">Our Blog</span> */}
+             <span className="text-[#FF5010]">Our Blog</span>
           </h2>
 
           {/* Responsive Grid */}
