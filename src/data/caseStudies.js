@@ -1,204 +1,148 @@
 const caseStudies = [
   {
-    title: "Fintech Mobile App",
-    description: "Developed a secure, scalable financial solution with real-time data processing and advanced security features for a leading fintech startup.",
-    industry: "Finance",
+    title: "Dynamic Book Platform",
+    description: "A case study on building a platform where users can co-create and experience evolving stories with alternate versions and endings.",
+    industry: "Education",
     slug: "Mobile1",
-    duration: "4 months",
-    technologies: ["React Native", "Node.js", "MongoDB", "AWS"],
-    images: {
-      hero: "/case-studies/fintech/hero.jpg",
-      gallery: [
-        "/case-studies/fintech/dashboard.jpg",
-        "/case-studies/fintech/mobile-1.jpg",
-        "/case-studies/fintech/security.jpg"
-      ]
-    },
-    results: [
-      "40% increase in user engagement",
-      "99.9% uptime achieved",
-      "50% reduction in transaction time",
-      "Over 10,000 active users"
-    ],
-    challenge: "Building a secure, scalable mobile banking application with real-time transaction processing",
-    solution: "Developed a React Native app with Node.js backend, implementing advanced security protocols and real-time data synchronization"
+    imageSrc: "/CaseStudyImages/dynamicone.png",
   },
   {
-    title: "E-commerce Platform",
-    description: "Built a high-performance marketplace with advanced search capabilities, inventory management, and seamless payment integration.",
-    industry: "Retail",
+    title: "Music App",
+    description: "Transform music creation and learning with our dual-platform app. It offers real-time collaboration, a beat marketplace, licensing, interactive lessons, and progress tracking, empowering musicians of all levels.",
+    industry: "Entertainment",
     slug: "Mobile2",
-    duration: "6 months",
-    technologies: ["React", "Next.js", "PostgreSQL", "Stripe"],
-    results: [
-      "300% increase in sales",
-      "60% improvement in search accuracy",
-      "25% reduction in cart abandonment",
-      "Over 500 active sellers"
-    ],
-    challenge: "Creating a scalable e-commerce platform that could handle thousands of products and users simultaneously",
-    solution: "Built a Next.js application with PostgreSQL database, implementing advanced search algorithms and Stripe payment integration"
+    imageSrc: "/CaseStudyImages/music2mobile.png",
   },
   {
-    title: "Healthcare Management System",
-    description: "Created an integrated platform for patient records, appointment scheduling, and telemedicine capabilities for a healthcare network.",
+    title: "Medi Info",
+    description: "MediInfo is a smart platform that streamlines pharmaceutical data, enabling faster decisions and improved patient care.",
     industry: "Healthcare",
     slug: "Mobile3",
-    duration: "5 months",
-    technologies: ["Vue.js", "Python", "Django", "PostgreSQL"],
-    results: [
-      "80% reduction in appointment scheduling time",
-      "90% improvement in patient data accuracy",
-      "50% increase in telemedicine consultations",
-      "HIPAA compliance achieved"
-    ],
-    challenge: "Developing a HIPAA-compliant healthcare management system with telemedicine capabilities",
-    solution: "Created a Vue.js frontend with Django backend, implementing strict security protocols and real-time video conferencing"
+    imageSrc: "/CaseStudyImages/meditinfomobile.png",
+  },
+  {
+    title: "Bank AI",
+    slug: "aiml1",
+    description: "Implemented a custom AI-driven platform for a bank to enhance fraud detection and automate customer service inquiries.",
+    industry: "Finance",
+    imageSrc: "/CaseStudyImages/aimlBankai.png",
+  },
+  {
+    title: "Marketing Agency",
+    slug: "aiml2",
+    description: "Developed a marketing automation tool to help an agency personalize campaigns and analyze client data more effectively.",
+    industry: "Marketing",
+    imageSrc: "/CaseStudyImages/aimlagency.png",
+  },
+  {
+    title: "Transforming Diagnosis with AI",
+    slug: "aiml3",
+    description: "Built an AI-powered diagnostic tool for a healthcare company, enabling faster and more accurate analysis of medical images.",
+    industry: "Healthcare",
+    imageSrc: "/CaseStudyImages/diagnosiswithaiaiml.png",
+  },
+  {
+    title: "Healthcare Language Translation Platform",
+    slug: "custom1",
+    description: "This digital tool provides fast, accurate, and multilingual text or speech translation, enabling seamless communication within the healthcare industry.",
+    industry: "Healthcare",
+    imageSrc: "/CaseStudyImages/languagetranslationONEcustom.png",
+  },
+  {
+    title: "Personal Finance Platform",
+    slug: "custom2",
+    description: "A secure and intuitive platform designed to help users track expenses, manage budgets, and gain insights into their personal finances to achieve their goals.",
+    industry: "Finance",
+    imageSrc: "/CaseStudyImages/personalfinancecuston.png",
+  },
+  {
+    title: "Coaching Institute Platform",
+    slug: "custom3",
+    description: "A comprehensive solution for coaching institutes to manage student enrollment, course materials, and online classes, enhancing the learning experience.",
+    industry: "Education",
+    imageSrc: "/CaseStudyImages/customcoaching.png",
+  },
+  {
+    title: "Vendor Management",
+    description: "Managing and optimizing relationships with suppliers and service providers to ensure quality, cost-efficiency, and timely delivery of products or services.",
+    industry: "Finance",
+    slug: "product1",
+    imageSrc: "/CaseStudyImages/vendormanagement.png",
+  },
+  {
+    title: "IdeaX",
+    description: "A platform for fostering innovation by collecting, evaluating, and implementing creative ideas to drive business growth and operational improvements.",
+    industry: "Technology",
+    slug: "product2",
+    imageSrc: "/CaseStudyImages/ideax.png",
+  },
+  {
+    title: "HRMS by Brandsmashers Tech",
+    description: "A comprehensive Human Resource Management System (HRMS) designed to streamline employee data, payroll, attendance, and performance management for efficient organizational operations.",
+    industry: "HR Tech",
+    slug: "product3",
+    imageSrc: "/CaseStudyImages/hrms.png",
+  },
+  {
+    title: "Digital Attendance & Leave Portal",
+    description: "Digital Attendance & Leave Portal is an online system to track employee attendance, manage leave requests, and streamline approval processes for organizations.",
+    industry: "Enterprise Software",
+    slug: "web1",
+    imageSrc: "/CaseStudyImages/portalweb.png",
+  },
+  {
+    title: "Image Licensing Platform",
+    description: "Image Licensing Platform is a digital system that enables creators to license, manage, and distribute images while ensuring legal use and royalty management.",
+    industry: "Digital Media",
+    slug: "web2",
+    imageSrc: "/CaseStudyImages/imagelicence.png",
   },
   {
     title: "Smart Buyer Management System",
-    description: "Built a comprehensive customer management solution for a local retail mart with purchase tracking and loyalty programs.",
+    description: "Smart Buyer Management System is a platform designed to track, analyze, and manage buyer interactions, helping businesses optimize sales and customer relationships.",
     industry: "Retail",
-    slug: "fourth",
-    duration: "3 months",
-    technologies: ["React", "Express.js", "MySQL", "JWT"],
-    results: [
-      "700+ buyer records digitized",
-      "Clear insights into best-selling items",
-      "Targeted discount programs implemented",
-      "Hours saved weekly on customer management"
-    ],
-    challenge: "Creating a user-friendly system to manage customer information, purchase histories, and pricing details",
-    solution: "Developed a React application with Express.js backend, featuring secure admin login and comprehensive buyer profiles"
+    slug: "web3",
+    imageSrc: "/CaseStudyImages/webdev.png",
   },
   {
-    title: "Educational Learning Platform",
-    description: "Designed an interactive learning management system with video streaming, progress tracking, and gamification features.",
-    industry: "Education",
-    slug: "fifth",
-    duration: "7 months",
-    technologies: ["Angular", "Node.js", "MongoDB", "WebRTC"],
-    results: [
-      "500+ courses created",
-      "10,000+ active students",
-      "85% course completion rate",
-      "95% student satisfaction score"
-    ],
-    challenge: "Building an engaging online learning platform with video streaming and progress tracking",
-    solution: "Created an Angular application with Node.js backend, implementing WebRTC for video streaming and gamification features"
+    title: "Digital Marketing Strategy",
+    description: "A plan that defines goals, target audience, channels, and tactics to promote a brand, drive engagement, and maximize ROI online.",
+    industry: "Marketing",
+    imageSrc: "/CaseStudyImages/digitalstragergytone.png",
   },
   {
-    title: "AI-Powered Analytics Dashboard",
-    description: "Developed an intelligent analytics platform with machine learning capabilities for data-driven business insights.",
-    industry: "Technology",
-    slug: "sixth",
-    duration: "8 months",
-    technologies: ["React", "Python", "TensorFlow", "AWS"],
-    results: [
-      "90% accuracy in predictive analytics",
-      "60% faster decision-making process",
-      "Real-time data processing",
-      "Custom ML models deployed"
-    ],
-    challenge: "Creating an AI-powered analytics platform that could process large datasets and provide actionable insights",
-    solution: "Built a React dashboard with Python backend, implementing TensorFlow for machine learning and AWS for scalable infrastructure"
+    title: "B2B Lead Generation",
+    description: "Generated 120+ qualified leads monthly through targeted LinkedIn campaigns and content marketing",
+    industry: "Marketing",
+    imageSrc: "/CaseStudyImages/b2b.png",
   },
   {
-    title: "Real Estate Management Platform",
-    description: "Built a comprehensive property management system with virtual tours, tenant portals, and automated maintenance tracking.",
-    industry: "Real Estate",
-    slug: "seventh",
-    duration: "6 months",
-    technologies: ["React", "Node.js", "PostgreSQL", "AWS S3"],
-    results: [
-      "200+ properties managed",
-      "75% reduction in maintenance response time",
-      "Virtual tour bookings increased by 300%",
-      "95% tenant satisfaction rate"
-    ],
-    challenge: "Creating a comprehensive property management platform with virtual tour capabilities and automated workflows",
-    solution: "Developed a React application with Node.js backend, implementing 3D virtual tours and automated maintenance scheduling"
+    title: "Social Media & Content Marketing",
+    description: "Using social media platforms and content creation to engage audiences, build brand presence, and drive traffic or conversions.",
+    industry: "Marketing",
+    imageSrc: "/CaseStudyImages/socialmediadigital.png",
   },
   {
-    title: "Food Delivery Aggregator",
-    description: "Created a multi-vendor food delivery platform with real-time tracking, payment processing, and restaurant management.",
-    industry: "Food & Beverage",
-    slug: "eighth",
-    duration: "9 months",
-    technologies: ["React Native", "Node.js", "MongoDB", "Stripe"],
-    results: [
-      "500+ restaurant partners",
-      "50,000+ active users",
-      "Average delivery time: 25 minutes",
-      "98% order accuracy rate"
-    ],
-    challenge: "Building a scalable food delivery platform that could handle multiple vendors and real-time order tracking",
-    solution: "Developed a React Native app with Node.js backend, implementing real-time GPS tracking and multi-vendor payment processing"
+    title: "Entertainment Platform",
+    description: "A digital platform providing movies, music, videos, and interactive content to engage and entertain users across multiple devices.",
+    industry: "Entertainment",
+    slug: "ui1",
+    imageSrc: "/CaseStudyImages/uiuxentertainment.png",
   },
   {
-    title: "Manufacturing ERP System",
-    description: "Developed an enterprise resource planning system for manufacturing with inventory management and production scheduling.",
-    industry: "Manufacturing",
-    slug: "ninth",
-    duration: "10 months",
-    technologies: ["Vue.js", "Python", "Django", "PostgreSQL"],
-    results: [
-      "30% reduction in production costs",
-      "40% improvement in inventory accuracy",
-      "Real-time production monitoring",
-      "Automated quality control"
-    ],
-    challenge: "Creating an ERP system that could handle complex manufacturing processes and supply chain management",
-    solution: "Built a Vue.js frontend with Django backend, implementing IoT integration and automated production scheduling"
+    title: "Ad Agency Workflow",
+    description: "A system that manages and optimizes the end-to-end processes of an advertising agency, including campaign planning, creative development, client approvals, and performance tracking.",
+    industry: "Marketing",
+    slug: "ui2",
+    imageSrc: "/CaseStudyImages/uiuxadai.png",
   },
   {
-    title: "Travel Booking Platform",
-    description: "Built a comprehensive travel booking system with flight, hotel, and activity reservations for a travel agency.",
-    industry: "Travel & Tourism",
-    slug: "tenth",
-    duration: "7 months",
-    technologies: ["React", "Next.js", "MongoDB", "Payment Gateway"],
-    results: [
-      "10,000+ bookings processed",
-      "25% increase in booking conversion",
-      "Multi-language support",
-      "24/7 customer support integration"
-    ],
-    challenge: "Creating a travel booking platform that could handle multiple booking types and real-time availability",
-    solution: "Developed a React application with Next.js, implementing real-time availability checking and multi-payment gateway support"
+    title: "Fitness App UI/UX",
+    description: "A mobile application interface designed to provide an intuitive and engaging user experience for tracking workouts, nutrition, progress, and personalized fitness goals.",
+    industry: "Healthcare",
+    slug: "ui3",
+    imageSrc: "/CaseStudyImages/uiuxfitness.png",
   },
-  {
-    title: "Legal Practice Management System",
-    description: "Created a comprehensive legal practice management platform with case tracking, document management, and billing automation.",
-    industry: "Legal",
-    slug: "eleventh",
-    duration: "8 months",
-    technologies: ["Angular", "C#", ".NET", "SQL Server"],
-    results: [
-      "500+ cases managed",
-      "80% reduction in document processing time",
-      "Automated billing system",
-      "Client portal integration"
-    ],
-    challenge: "Building a legal practice management system with document automation and compliance features",
-    solution: "Developed an Angular application with .NET backend, implementing document automation and legal compliance features"
-  },
-  {
-    title: "Fitness Tracking Mobile App",
-    description: "Developed a comprehensive fitness tracking application with workout planning, nutrition tracking, and social features.",
-    industry: "Health & Fitness",
-    slug: "twelfth",
-    duration: "5 months",
-    technologies: ["React Native", "Node.js", "MongoDB", "AWS"],
-    results: [
-      "50,000+ active users",
-      "Average user engagement: 45 minutes/day",
-      "95% workout completion rate",
-      "Social features increased retention by 40%"
-    ],
-    challenge: "Creating an engaging fitness app that could track workouts, nutrition, and provide social motivation",
-    solution: "Built a React Native app with Node.js backend, implementing workout tracking algorithms and social networking features"
-  }
 ];
 
 export default caseStudies;

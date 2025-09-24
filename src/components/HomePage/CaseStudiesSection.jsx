@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image'
 import caseStudies from '@/data/caseStudies';
 
 const CaseStudiesSection = () => {
@@ -26,10 +27,13 @@ const CaseStudiesSection = () => {
               key={study.slug}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
-              <div className="relative h-48 bg-gradient-to-br from-[#ff5010] to-[#e0450e] rounded-t-xl flex items-center justify-center">
-                <div className="text-white text-6xl font-bold opacity-20">
-                  {study.industry.charAt(0)}
-                </div>
+              <div className="relative h-48 w-full rounded-t-xl overflow-hidden">
+                <Image
+                  src={study.imageSrc}
+                  alt={study.title}
+                  layout="fill"
+                  objectFit="cover"
+                />
                 <div className="absolute top-4 right-4 bg-white/20 px-3 py-1 rounded-full text-sm">
                   {study.industry}
                 </div>

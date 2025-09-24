@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -6,12 +6,27 @@ import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
 import caseStudies from '@/data/caseStudies';
 import SkeletonLoader from '@/components/shared/SkeletonLoader';
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function CaseStudiesPage() {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [isLoading, setIsLoading] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const industries = ['all', 'Finance', 'Retail', 'Healthcare', 'Technology', 'Education', 'Real Estate', 'Food & Beverage', 'Manufacturing', 'Travel & Tourism', 'Legal', 'Health & Fitness'];
+  const carouselImages = [
+    '/CaseStudyImages/aimlagency.png',
+    '/CaseStudyImages/b2b.png',
+    '/CaseStudyImages/customcoaching.png',
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 5000); // change every 5 sec
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
+
+  const industries = ['all', 'Finance', 'Retail', 'Healthcare', 'Technology', 'Education'];
 
   const filteredCaseStudies = selectedIndustry === 'all' 
     ? caseStudies 
@@ -38,28 +53,27 @@ export default function CaseStudiesPage() {
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-[#ff5010] to-[#e0450e] text-white py-20">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our Success Stories
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Discover how we&apos;ve transformed businesses across industries with innovative technology solutions
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <span className="bg-white/20 px-4 py-2 rounded-full">Fintech</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">E-commerce</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">Healthcare</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">Technology</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">Real Estate</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">Food Delivery</span>
-            </div>
-          </div>
-        </section>
+        <div className="relative w-full h-[60vh] overflow-hidden">
+        <AnimatePresence>
+          <motion.img
+            key={currentIndex}
+            src={carouselImages[currentIndex]}
+            alt="Cover"
+            className="w-full h-full object-cover"
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <h1 className="text-white text-4xl md:text-6xl font-bold text-center drop-shadow-lg">
+            Our Success Stories
+          </h1>
+        </div>
+      </div>
 
-        {/* Filter Section */}
-        <section className="bg-white py-8 border-b">
+        <section className="bg-white py-8 border-b sticky top-0 z-10 shadow-md">
           <div className="container mx-auto px-6">
             <div className="flex flex-wrap items-center justify-center gap-4">
               <span className="text-gray-600 font-medium">Filter by Industry:</span>
@@ -67,7 +81,7 @@ export default function CaseStudiesPage() {
                 <button
                   key={industry}
                   onClick={() => handleIndustryChange(industry)}
-                  className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                  className={`px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 ${
                     selectedIndustry === industry
                       ? 'bg-[#ff5010] text-white shadow-lg'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -80,7 +94,6 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* Case Studies Grid */}
         <section className="py-16">
           <div className="container mx-auto px-6">
             {isLoading ? (
@@ -94,13 +107,17 @@ export default function CaseStudiesPage() {
                 {filteredCaseStudies.map((study, index) => (
                   <div
                     key={study.slug}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                    className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden"
                   >
-                    <div className="relative h-48 bg-gradient-to-br from-[#ff5010] to-[#e0450e] rounded-t-xl flex items-center justify-center">
-                      <div className="text-white text-6xl font-bold opacity-20">
-                        {study.industry.charAt(0)}
-                      </div>
-                      <div className="absolute top-4 right-4 bg-white/20 px-3 py-1 rounded-full text-sm">
+                    <div className="relative h-48 w-full overflow-hidden rounded-t-xl">
+                                            <Image
+                        src={study.imageSrc}
+                        alt={study.title}
+                        layout="fill"
+                        objectFit="cover"
+                        className="transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full text-sm text-white">
                         {study.industry}
                       </div>
                     </div>
@@ -113,17 +130,17 @@ export default function CaseStudiesPage() {
                         {study.description}
                       </p>
                       
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between mt-6">
                         <span className="text-sm text-gray-500">
-                          {study.industry} • {study.duration || '3-6 months'}
+                          {study.duration || '3-6 months'}
                         </span>
                         <Link
                           href={`/CaseStudy/${study.slug}`}
-                          className="inline-flex items-center px-4 py-2 bg-[#ff5010] text-white rounded-lg hover:bg-[#e0450e] transition-colors duration-300"
+                          className="inline-flex items-center px-4 py-2 bg-[#ff5010] text-white rounded-lg hover:bg-[#e0450e] transition-colors duration-300 font-semibold"
                         >
-                          Read Case Study
+                          Read More
                           <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5-5 5M6 12h12" />
                           </svg>
                         </Link>
                       </div>
@@ -147,7 +164,6 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="bg-gray-900 text-white py-16">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -178,3 +194,4 @@ export default function CaseStudiesPage() {
     </>
   );
 }
+
