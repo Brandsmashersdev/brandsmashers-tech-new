@@ -141,7 +141,7 @@ const Navbar = () => {
     { name: "Company", hasDropdown: true },
     { name: "Services", hasDropdown: true },
     { name: "Hire Developers", hasDropdown: true },
-    { name: "Blogs", hasDropdown: false, href: "/Blog" },
+    { name: "Blogs", hasDropdown: false, href: "/BlogPageALL" },
     //{ name: "Case Studies", hasDropdown: false, href: "/case-studies" },
   ];
 
