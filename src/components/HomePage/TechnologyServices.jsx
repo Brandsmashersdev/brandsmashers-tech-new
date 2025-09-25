@@ -105,7 +105,7 @@ const TechStack = React.memo(() => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Hire Dedicated Remote Developers from India <span style={{ color: "#ff5010" }}>Skilled</span>
+            Hire Dedicated Remote Developers from India <span style={{ color: "#ff5010" }}>Skilled </span>
             in Web & Mobile App Development
           </h2>
         </div>
