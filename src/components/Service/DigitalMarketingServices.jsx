@@ -30,6 +30,7 @@ import {
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import Image from "next/image";
+import Head from 'next/head';
 
 export default function DigitalMarketingPage() {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -326,8 +327,13 @@ export default function DigitalMarketingPage() {
   ];
 
   return (
-    <div>
-      <ToastContainer />
+    <>
+      <Head>
+        <title>Digital Marketing Services to Grow Your Brand | Brandsmashers</title>
+        <meta name="description" content="Amplify your online presence with Brandsmashers Tech's result-driven digital marketing covering SEO, social media, PPC and content strategies." />
+      </Head>
+      <div>
+        <ToastContainer />
       {/* Hero Section with Digital Marketing Background */}
       <section
         className="py-16 px-6 md:px-12 text-white relative bg-gray-900 flex-grow"
@@ -747,7 +753,8 @@ export default function DigitalMarketingPage() {
       </section>
 
       {/* Footer */}
-   
+
     </div>
+    </>
   );
 }

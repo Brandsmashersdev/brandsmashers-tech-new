@@ -150,10 +150,10 @@ const HeroSection = () => {
     <>
 
      <Head>
-        <title>Brand Smashers Tech</title>
+        <title>Hire Remote Developers for Your next Project - Get Started!</title>
         <meta
           name="description"
-          content="Brand Smashers Tech offers innovative custom software development, IT outsourcing, and scalable web & mobile app solutions."
+          content="Hire pre-vetted remote developers globally on flexible contracts. Get expert talent for your project—hire now and elevate your business!"
         />
       </Head>
     <section className="relative">

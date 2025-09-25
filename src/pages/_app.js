@@ -76,16 +76,6 @@ function MyApp({ Component, pageProps }) {
         }}
       />
 
-      {/* GTM (noscript fallback for non-JS users) */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-MMM4SMCF"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        ></iframe>
-      </noscript>
-
       <Component {...pageProps} />
       <ToastContainer />
       <Analytics />

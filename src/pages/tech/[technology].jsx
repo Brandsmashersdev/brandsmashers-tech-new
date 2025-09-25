@@ -8,7 +8,6 @@ import Stats from "@/components/HireDevelopers/Android/Stats";
 import PartnerCompanies from "@/components/HireDevelopers/Android/PartnerCompanies";
 import AndroidHero from "@/components/HireDevelopers/Android/AndroidHero";
 import ServiceGrids from "@/components/HireDevelopers/Android/ServiceGrid";
-// import AndroidCarousel from "@/components/HireDevelopers/Android/AndroidCarousel";
 import DynamicCarousel from "@/components/HireDevelopers/DynamicCarousel";
 import Head from "next/head";
 import FAQSection from "@/components/HomePage/FAQSection";
@@ -18,9 +17,9 @@ import FAQSection from "@/components/HomePage/FAQSection";
 // Technology data
 const technologyData = {
   "android-developer": {
-    title: "Hire Best Android App Developer from India",
+    title: "Hire Best Android App Developers from India | Remote Android App Development",
     description:
-      "Need a remote Android app developer from India? Your search ends here! Hire top Android developers through Brandsmashers Tech and get custom-built mobile solutions designed for a seamless, visually stunning user experience. Our experts ensure high-quality, performance-driven apps tailored to your business needs",
+      "Hire top remote Android developers from India with Brandsmashers Tech. Get custom apps, Blockchain solutions, UI/UX, and game development tailored to your needs!",
     buttonText: "Hire Android Developer",
     services: {
       mainTitle: "Hire Top-Tier Android Developers for Your Next Project",
@@ -143,9 +142,9 @@ const technologyData = {
     }
   },
   "ios-developer": {
-    title: "Hire Expert iOS Developers",
+    title: "Hire Expert iOS App Developers from India | Remote iOS App Development",
     description:
-      "Are you looking for a remote ios app developer from India? Look nowhere and hire Android app developers through Best Remote Team. Our skilled Android experts offer the best-in-class, tailor-made mobile solutions that provide a visually enticing experience to your app users.",
+      "Hire top remote iOS developers from India with Brandsmashers Tech. Get custom apps, Apple Vision Pro, UI/UX, games & enterprise solutions tailored to your needs!",
     buttonText: "Hire iOS Developer",
 
     services: {
@@ -268,9 +267,9 @@ const technologyData = {
     }
   },
   "flutter-developer": {
-    title: "Hire Best Flutter Developer from India",
+    title: "Hire Expert Flutter Developers from India | Cross-Platform App Development",
     description:
-      "Are you looking for a remote Flutter developer from India? Look nowhere and hire Android app developers through Best Remote Team. Our skilled Android experts offer the best-in-class, tailor-made mobile solutions that provide a visually enticing experience to your app users.",
+      "Hire remote Flutter developers from India to build high-performance cross-platform apps for iOS & Android. Get custom solutions, UI/UX design & support.",
     buttonText: "Hire Flutter Developer",
     services: {
       mainTitle:
@@ -392,9 +391,9 @@ const technologyData = {
     }
   },
   "react-native-developer": {
-    title: "Hire Best React Native Developer from India",
+    title: "Hire Best React Native Developer from India | Brandsmashers Tech",
     description:
-      "Do you want to develop a high-performance cross-platform mobile app for your business? Hire a React Native Developer through Brandsmashers Tech and leverage our expertise to build scalable, user-friendly, and feature-rich React Native applications for Android, iOS, and other platforms. Our skilled developers ensure seamless performance, intuitive UI/UX, and business-centric solutions tailored to your needs.",
+      "Hire remote React Native developers from India to build high-performance cross-platform apps for iOS & Android. Get custom solutions, UI/UX design & support.",
     buttonText: "Hire React Natiive Developer",
     services: {
       mainTitle: "Our Extensive Expertise in React Native Development",
@@ -516,9 +515,9 @@ const technologyData = {
    
   },
   "angular-developer": {
-    title: "Hire Best Angular Developer from India",
+    title: "Hire Expert AngularJS Developers from India | Brandsmashers Tech",
     description:
-      "Looking for a remote AngularJS developer from India? We've got you covered! Hire top AngularJS developers through Brandsmashers Tech to build dynamic, scalable web applications with a seamless user experience. Our experts deliver high-performance, responsive, and feature-rich solutions tailored to your business needs.",
+      "Hire top AngularJS developers from India to build dynamic, scalable web apps. Get secure, high-performance solutions tailored to your business needs.",
     buttonText: "Hire Angular Developer",
     services: {
       mainTitle: "Get Expert AngularJS Developers for Your Next Web Project!",
@@ -639,9 +638,9 @@ const technologyData = {
     }
   },
   "react-js-developer": {
-    title: "Hire Best React Js Developer from India",
+    title: "HHire ReactJS Developer from India | Build High-Performance React Apps",
     description:
-      "Seeking a remote ReactJS developer from India? Look no further! Hire top ReactJS developers from Brandsmashers Tech to craft dynamic, scalable, and high-performing web applications. Our experts ensure responsive designs, seamless user experiences, and feature-packed solutions tailored to meet your business objectives. Hire ReactJS developers today to build innovative applications that drive growth and success.",
+      "Hire ReactJS developers from India for robust, scalable, and high-performance web applications. Expert ReactJS development services at competitive rates.",
     buttonText: "Hire React Developer",
     services: {
       mainTitle:
@@ -763,9 +762,9 @@ const technologyData = {
     }
   },
   "js-developer": {
-    title: "Hire Best Javascript Developer from India",
+    title: "Hire Expert JavaScript Developers from India | Brandsmashers Tech",
     description:
-      "Are you looking for dedicated JavaScript developers to build high-quality, feature-packed, and scalable web or mobile applications? Hire JS developers from Brandsmashers Tech, with a proven track record of delivering tailored, business-focused JavaScript solutions that drive results and enhance your online presence.",
+      "Hire top JavaScript developers from India to build scalable web and mobile apps. Get custom, high-performance solutions tailored to your business needs.",
     buttonText: "Hire JavaScript Developer",
     services: {
       mainTitle: "Our Comprehensive JavaScript Development Services",
@@ -886,9 +885,9 @@ const technologyData = {
     }
   },
   "next-js-developer": {
-    title: "Hire Best Next JS Developer from India",
+    title: "Hire Expert Next.js Developers from India | Brandsmashers Tech",
     description:
-      "Searching for a skilled Next JS developer from India? Look no further! At Brandsmashers Tech, we specialize in providing top-notch Next JS development services to help you create fast, SEO-friendly, and scalable web applications. Our expert Next JS developers use the latest tools and techniques to deliver seamless, high-performance solutions that align perfectly with your business goals and user needs. Hire Next JS developer from India today and elevate your web development to the next level!",
+      "Hire skilled Next.js developers from India to build fast, SEO-optimized, and scalable web apps. Get custom solutions tailored to your business needs today!",
     buttonText: "Hire Next Js Developer",
     services: {
       mainTitle: "Our Premium Next.js Development Solutions",
@@ -1010,9 +1009,9 @@ const technologyData = {
   },
   
   "laravel-developer": {
-    title: "Hire Best Laravel Developer from India",
+    title: "Hire Expert Laravel Developers from India | Brandsmashers Tech",
     description:
-      "Need a proficient Laravel developer from India? We’ve got you covered! At Brandsmashers Tech, we provide expert Laravel development services to help you build feature-rich, maintainable, and scalable web applications. Our experienced Laravel developers use the latest practices to craft solutions that are both robust and user-friendly, ensuring your business achieves its goals efficiently. Hire Laravel developers from India today and experience the best in web development!",
+      "Hire skilled Laravel developers from India to build secure, scalable web apps. Get custom Laravel solutions tailored to your business needs today!",
     buttonText: "Hire Laravel Developer",
     services: {
       mainTitle: "Our End-to-End Laravel Development Solutions",
@@ -1133,9 +1132,9 @@ const technologyData = {
     }
   },
   "node-js-developer": {
-    title: "Hire Best Node Js Developer from India",
+    title: "Hire Expert Node.js Developers from India | Brandsmashers Tech",
     description:
-      "On the lookout for an experienced Node.js developer from India? Look no further! At Brandsmashers Tech, we offer exceptional Node.js development services to help you create high-performance, real-time applications. Our expert Node.js developers are equipped with the right skills and knowledge to develop scalable, fast, and reliable web applications that cater to your business needs. Hire Node.js developers from India now and build next-gen web solutions that power your business growth!",
+      "Hire top Node.js developers from India to build secure, scalable web apps. Get custom Node.js solutions tailored to your business needs today!",
     buttonText: "Hire NodeJS Developer",
     services: {
       mainTitle:
@@ -1257,9 +1256,9 @@ const technologyData = {
     }
   },
   "python-developer": {
-    title: "Hire Best Python Developer from India",
+    title: "Hire Expert Python Developers from India | Brandsmashers Tech",
     description:
-      "Looking for a skilled Python developer from India? Your search ends here! At Brandsmashers Tech, we specialize in providing top-tier Python development services that enable you to build powerful, scalable, and secure web applications. Our Python experts leverage the latest frameworks and technologies to create high-performance solutions that align with your business needs. Hire Python developers from India today to unlock the potential of your next project and take it to new heights!",
+      "Hire top Python developers from India to build scalable web apps, data-driven solutions, and automation tools. Get custom Python development services today!",
     buttonText: "Hire Python Developer",
     services: {
       mainTitle:
@@ -1381,9 +1380,9 @@ const technologyData = {
     }
   },
   "dotnet-developer": {
-    title: "Hire Best Dotnet Developer from India",
+    title: "Hire .Net Developer from India | Enterprise-Grade .NET Solutions",
     description:
-      "Need a proficient Dotnet developer from India? We’ve got you covered! At Brandsmashers Tech, we provide expert Dotnet development services to help you build feature-rich, maintainable, and scalable web applications. Our experienced Dotnet developers use the latest practices to craft solutions that are both robust and user-friendly, ensuring your business achieves its goals efficiently. Hire Dotnet developers from India today and experience the best in web development!",
+      "Hire .NET developers from India for scalable enterprise applications. Get expert .NET development for web, desktop, and cloud solutions.",
     buttonText: "Hire Dotnet Developer",
     services: {
       mainTitle: "Our End-to-End Dotnet Development Solutions",
@@ -1504,8 +1503,8 @@ const technologyData = {
     }
   },
   "php-developer": {
-    title: "Hire Best PHP Developer from India",
-    description:" Looking for a skilled PHP developer from India? Your search ends here At Brandsmashers Tech, we specialize in providing top-tier PHP development services to help you build dynamic, scalable, and secure web applications. Our expert PHP developers use the latest frameworks and technologies to create high-performance, user-friendly solutions tailored to your business needs. Hire PHP developers from India today and transform your web development with robust and efficient PHP solutions",
+    title: "Hire PHP Developer from India | Expert Custom PHP Development",
+    description:" Hire PHP developers from India for secure, scalable, and custom web development. Get expert PHP solutions tailored to your business needs.",
     buttonText: "Hire php Developer",
     services: {
       mainTitle: "Hire Skilled PHP Developers to Drive Your Business Growth",
@@ -1628,8 +1627,8 @@ const technologyData = {
   
 
   "SEO": {
-    title: "Hire Professional SEO Experts For Your Project.",
-    description:"Boost your online presence with Brandsmashers Tech — your go-to partner for hiring remote SEO experts. Our team connects you with top-tier SEO specialists, ensuring you get the expertise to elevate your website's performance. Whether it's a SaaS platform or an eCommerce site, our experts drive organic traffic, optimize site structure, and enhance user experience. From keyword research to technical SEO audits and link-building, we craft strategies tailored to your business goals. Don’t let competitors outrank you — partner with Brandsmashers Tech to hire remote SEO experts for measurable results and long-term growth.",
+    title: "Hire Best SEO Expert in India | SEO Services for Higher Rankings",
+    description:"Hire SEO specialists from India to boost search rankings, drive organic traffic, and grow your business with expert SEO strategies.",
     buttonText: "Hire SEO Developer",
     services: {
       mainTitle: "Hire Skilled SEO Experts to Drive Your Business Growth.",
@@ -1752,8 +1751,8 @@ const technologyData = {
     }
   },
   "wordpress": {
-    "title": "Hire Best WordPress Developer from India",
-    "description": "Unlock the power of WordPress with expert developers from India! At Brandsmashers Tech, we bring your vision to life with cutting-edge WordPress development services. Whether you need a custom website, theme development, plugin integration, or a complete eCommerce solution, our skilled WordPress developers craft seamless, high-performing, and SEO-friendly websites tailored to your business goals. Hire dedicated WordPress developers from India today and experience innovation, scalability, and excellence in web development!",
+    "title": "Hire WordPress Developer from India | Custom WordPress Solutions",
+    "description": "Hire WordPress developers from India to build stunning, high-performance, and SEO-friendly WordPress websites.",
     "buttonText": "Hire WordPress Developer",
     "services": {
       "mainTitle": "Hire Expert WordPress Developers to Elevate Your Online Presence!",
@@ -1825,8 +1824,8 @@ const technologyData = {
   },
 
   "shopify": {
-    title: "Hire Best Shopify Developer from India",
-    description:" Looking for a skilled Shopify developer from India? Your search ends here! Hire top Shopify developers from Brandsmashers Tech to build secure, scalable, and high-performing eCommerce stores. Our experts ensure seamless integrations, user-friendly designs, and customized solutions tailored to meet your business needs. Hire Shopify developers today to create a feature-rich online store that drives conversions and growth.",
+    title: "Hire Shopify Developer from India | Custom E-commerce Solutions",
+    description:" Hire Shopify developers from India to build custom e-commerce stores. Get expert Shopify development for high-converting online businesses.",
     buttonText: "Hire Shopify Developer",
     services: {
       mainTitle: "Hire Expert Shopify Developers to Elevate Your eCommerce Business!",
