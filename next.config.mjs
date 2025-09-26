@@ -8,6 +8,15 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig = {
   reactStrictMode: true,
+  
+  async rewrites() {
+    return [
+      {
+        source: '/all-links',
+        destination: 'https://bstree-yn8q.vercel.app/',
+      },
+    ];
+  },
   // Enable bundle analyzer when ANALYZE=true
   ...(process.env.ANALYZE === 'true' && {
     webpack: (config, { isServer }) => {
