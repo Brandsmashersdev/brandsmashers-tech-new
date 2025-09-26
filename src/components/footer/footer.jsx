@@ -115,7 +115,8 @@ export default function Footer() {
               {[
                 { name: "Who we are", link: "/whoweare" },
                 { name: "Join our team", link: "/Career" },
-                { name: "Blog", link: "/Blog" }
+                { name: "Blog", link: "/Blog" },
+                { name: "Links", link: "https://bstree-yn8q.vercel.app" }
               ].map((item) => (
                 <li key={item.name} className="transition-all duration-300 hover:pl-2 hover:text-white">
                   <a href={item.link} className="inline-flex items-center group">
