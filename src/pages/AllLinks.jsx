@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Facebook, Instagram, Linkedin, Github, Mail, MapPin, Phone, Globe, ArrowRight, Sparkles, Users, Link2, Calendar, Star, Award, Briefcase, ExternalLink } from 'lucide-react';
 
 export default function BrandsmashersShowcase() {
@@ -377,10 +378,11 @@ export default function BrandsmashersShowcase() {
                 {/* Image Container */}
                 <div className="relative h-60 sm:h-80 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent z-10" />
-                  <img
-                    src={member.image}
+                  <Image
+                    src={`/${member.image}`}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    fill
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                     style={{ objectPosition: 'center top' }}
                   />
                   
@@ -453,9 +455,9 @@ export default function BrandsmashersShowcase() {
             
             <div className="relative z-10">
               <Globe className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 text-[#ff5010]" />
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Let's Create Something Amazing</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Let&apos;s Create Something Amazing</h2>
               <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-8">
-                Ready to collaborate? Get in touch with us and let's bring your vision to life.
+                Ready to collaborate? Get in touch with us and let&apos;s bring your vision to life.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
