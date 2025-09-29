@@ -97,10 +97,10 @@ export default function Footer() {
                 { name: "Web development", link: "/services/webdevelopment" }
               ].map((item) => (
                 <li key={item.name} className="transition-all duration-300 hover:pl-2 hover:text-white">
-                  <a href={item.link} className="inline-flex items-center group">
+                  <Link href={item.link} className="inline-flex items-center group">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -116,13 +116,13 @@ export default function Footer() {
                 { name: "Who we are", link: "/whoweare" },
                 { name: "Join our team", link: "/Career" },
                 { name: "Blog", link: "/Blog" },
-                { name: "Links", link: "https://bstree-yn8q.vercel.app" }
+                { name: "Links", link: "/AllLinks" }
               ].map((item) => (
                 <li key={item.name} className="transition-all duration-300 hover:pl-2 hover:text-white">
-                  <a href={item.link} className="inline-flex items-center group">
+                  <Link href={item.link} className="inline-flex items-center group">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#ff5010] mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
