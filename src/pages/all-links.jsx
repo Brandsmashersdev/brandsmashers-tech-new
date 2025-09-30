@@ -95,7 +95,7 @@ export default function BrandsmashersShowcase() {
     {
       name: 'Aayush Jain',
       role: 'CEO & Founder',
-      bio: 'Visionary leader with 15+ years in tech. Passionate about innovation and building exceptional teams.',
+      bio: 'Visionary tech leader with 7+ years of experience, driving innovation and building high-performing teams to deliver impactful solutions.',
       image: 'aayush.jpeg',
       social: {
         linkedin: 'https://www.linkedin.com/in/aayush-jain-code/',
@@ -104,8 +104,8 @@ export default function BrandsmashersShowcase() {
     },
     {
       name: 'Muskan Chhatrasal',
-      role: 'Co-Founder',
-      bio: 'Creative strategist with expertise in digital campaigns and brand positioning. Drives our marketing initiatives.',
+      role: 'Director & Founder',
+      bio: 'Dynamic leader with 6+ years in technology, focused on strategy, growth, and creating meaningful client partnerships.',
    
       image: 'Muskan.jpg',
       social: {
@@ -116,7 +116,7 @@ export default function BrandsmashersShowcase() {
     {
       name: 'Shilpa Jain',
       role: 'HR Manager',
-      bio: 'Full-stack wizard who transforms ideas into elegant code. Specializes in React and modern web technologies.',
+      bio: 'Seasoned HR professional with 20+ years of expertise in talent management, employee engagement, and organizational development.',
       image: 'shilpamaam.jpeg',
       social: {
         linkedin: 'https://www.linkedin.com/in/shilpa-jain-hrmanager/',
@@ -125,9 +125,9 @@ export default function BrandsmashersShowcase() {
     },
     {
       name: 'Mayuri Urkude',
-      role: 'Project Manager',
-      bio: 'Award-winning designer with an eye for detail. Creates stunning visual experiences that captivate audiences.',
-      image: 'mayurimaam.jpeg',
+      role: ' Operations Manager',
+      bio: 'Efficient operations leader with 5+ years of experience, ensuring smooth processes and delivering excellence across projects.',
+      image: 'mayuriimaam.png',
       social: {
         linkedin: 'https://www.linkedin.com/in/mayuri-urkude-95944022b/',
         // instagram: 'https://instagram.com/davidkim',
@@ -376,18 +376,18 @@ export default function BrandsmashersShowcase() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Image Container */}
-                <div className="relative h-60 sm:h-80 overflow-hidden">
+                <div className="relative h-80 sm:h-96 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent z-10" />
                   <Image
                     src={`/${member.image}`}
                     alt={member.name}
                     fill
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
                     style={{ objectPosition: 'center top' }}
                   />
                   
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#ff5010]/90 via-[#ff5010]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
+                  {/* Hover Overlay - Reduced opacity */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#ff5010]/40 via-[#ff5010]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
                 </div>
 
                 {/* Content */}
