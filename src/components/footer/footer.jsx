@@ -116,7 +116,7 @@ export default function Footer() {
                 { name: "Who we are", link: "/whoweare" },
                 { name: "Join our team", link: "/Career" },
                 { name: "Blog", link: "/Blog" },
-                { name: "Links", link: "/AllLinks" }
+                { name: "Links", link: "/all-links" }
               ].map((item) => (
                 <li key={item.name} className="transition-all duration-300 hover:pl-2 hover:text-white">
                   <Link href={item.link} className="inline-flex items-center group">
