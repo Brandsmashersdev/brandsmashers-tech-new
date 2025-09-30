@@ -6,7 +6,7 @@ import React, { useEffect } from "react";
 import Head from "next/head";
 import { trackBlogPageView } from "@/lib/gtm";
 
-const blogs = () => {
+const Blogs = () => {
   useEffect(() => {
     // GTM Page View Tracking
     trackBlogPageView('section2', 'Blog Section 2 - Brandsmashers Tech');
@@ -27,4 +27,4 @@ const blogs = () => {
   );
 };
 
-export default blogs;
+export default Blogs;

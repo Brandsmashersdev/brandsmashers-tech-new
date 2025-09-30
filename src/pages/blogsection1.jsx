@@ -8,7 +8,7 @@ import { trackBlogPageView } from "@/lib/gtm";
 // import BlogPage from "@/components/blogcards";
 
 
-const blogs = () => {
+const Blogs = () => {
   useEffect(() => {
     // GTM Page View Tracking
     trackBlogPageView('section1', 'Blog Section 1 - Brandsmashers Tech');
@@ -29,4 +29,4 @@ const blogs = () => {
   );
 };
 
-export default blogs;
+export default Blogs;

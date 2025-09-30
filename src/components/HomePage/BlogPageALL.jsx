@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import Navbar from "../navbar/navbar";
 import Footer from "@/components/footer/footer";
 
@@ -102,16 +103,21 @@ export default function BlogPage() {
       {/* Cover Image Carousel */}
       <div className="relative w-full h-[60vh] overflow-hidden">
         <AnimatePresence>
-          <motion.img
+          <motion.div
             key={currentIndex}
-            src={carouselImages[currentIndex]}
-            alt="Cover"
-            className="w-full h-full object-cover"
+            className="w-full h-full"
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-          />
+          >
+            <Image
+              src={carouselImages[currentIndex]}
+              alt="Cover"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
         </AnimatePresence>
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h1 className="text-white text-4xl md:text-6xl font-bold text-center drop-shadow-lg">
@@ -198,10 +204,11 @@ export default function BlogPage() {
                       animate={hoveredIndex === index ? "hover" : "initial"}
                       transition={{ duration: 0.4 }}
                     >
-                      <img
+                      <Image
                         src={post.image}
                         alt={post.title}
-                        className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-500"
+                        fill
+                        className="object-cover transform group-hover:scale-110 transition-transform duration-500"
                       />
                     </motion.div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

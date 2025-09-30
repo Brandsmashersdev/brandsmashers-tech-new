@@ -12,7 +12,7 @@ import WhoWeAreHero from '@/components/Company/WhoWeAreHero';
 import Head from 'next/head';
 import { initializePageTracking } from '@/lib/gtm';
 
-const whoweare = () => {
+const WhoWeAre = () => {
   useEffect(() => {
     // GTM Page View Tracking
     initializePageTracking('Who We Are - Brandsmashers Tech', '/whoweare', {
@@ -41,4 +41,4 @@ const whoweare = () => {
   )
 }
 
-export default whoweare
+export default WhoWeAre

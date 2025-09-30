@@ -7,7 +7,7 @@ import Head from 'next/head';
 import { trackServicePageView } from '@/lib/gtm';
 
 
-const demo = () => {
+const Demo = () => {
   useEffect(() => {
     // GTM Page View Tracking
     trackServicePageView('customService', 'Custom Software Development - Brandsmashers Tech');
@@ -28,6 +28,6 @@ const demo = () => {
 }
 
 
-   export default demo;
+   export default Demo;
    
 

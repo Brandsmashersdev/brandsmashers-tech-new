@@ -68,6 +68,7 @@ export default function Document() {
             width="1"
             style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=552757887385423&ev=PageView&noscript=1"
+            alt=""
           />
         </noscript>
         {/* End Meta Pixel (noscript) */}

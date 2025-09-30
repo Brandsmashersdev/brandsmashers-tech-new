@@ -20,7 +20,7 @@ import Head from 'next/head'
 import { initializePageTracking } from '@/lib/gtm'
 
 
-const services = () => {
+const Services = () => {
   useEffect(() => {
     // GTM Page View Tracking
     initializePageTracking('Our Services - Brandsmashers Tech', '/services', {
@@ -56,4 +56,4 @@ const services = () => {
   )
 }
 
-export default services
+export default Services
