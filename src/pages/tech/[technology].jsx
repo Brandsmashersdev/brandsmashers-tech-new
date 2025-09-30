@@ -11,6 +11,7 @@ import ServiceGrids from "@/components/HireDevelopers/Android/ServiceGrid";
 import DynamicCarousel from "@/components/HireDevelopers/DynamicCarousel";
 import Head from "next/head";
 import FAQSection from "@/components/HomePage/FAQSection";
+import { trackTechnologyPageView } from "@/lib/gtm";
 
 
 
@@ -1911,6 +1912,11 @@ export default function TechnologyDetails() {
   useEffect(() => {
     if (router.isReady && router.query.technology) {
       setData(technologyData[router.query.technology] || null);
+      
+      // GTM Page View Tracking for technology pages
+      const technology = router.query.technology;
+      const pageTitle = `${technologyData[technology]?.title || 'Technology Page'} - Brandsmashers Tech`;
+      trackTechnologyPageView(technology, pageTitle);
     }
   }, [router.isReady, router.query.technology]);
 
