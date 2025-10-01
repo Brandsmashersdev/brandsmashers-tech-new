@@ -135,7 +135,7 @@ export default function BrandsmashersShowcase() {
     },
     {
       name: 'Muskan Chhatrasal',
-      role: 'Director & Founder',
+      role: 'Founder & Director',
       bio: 'Dynamic leader with 6+ years in technology, focused on strategy, growth, and creating meaningful client partnerships.',
    
       image: 'MuskanMadam.jpeg',
@@ -536,7 +536,7 @@ export default function BrandsmashersShowcase() {
               <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#ff5010] to-orange-400 bg-clip-text text-transparent mb-1">
                 Brandsmashers Tech
               </h3>
-              <p className="text-gray-400 text-sm">From Vision to Imapact</p>
+              <p className="text-gray-400 text-sm">From Vision To Imapact</p>
             </div>
             
             <div className="flex items-center gap-3 sm:gap-4">
