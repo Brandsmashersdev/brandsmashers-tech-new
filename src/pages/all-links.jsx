@@ -138,7 +138,7 @@ export default function BrandsmashersShowcase() {
       role: 'Director & Founder',
       bio: 'Dynamic leader with 6+ years in technology, focused on strategy, growth, and creating meaningful client partnerships.',
    
-      image: 'Muskan.jpg',
+      image: 'MuskanMadam.jpeg',
       social: {
         linkedin: 'https://www.linkedin.com/in/muskan-chhatrasal/',
      
@@ -148,7 +148,7 @@ export default function BrandsmashersShowcase() {
       name: 'Shilpa Jain',
       role: 'HR Manager',
       bio: 'Seasoned HR professional with 20+ years of expertise in talent management, employee engagement, and organizational development.',
-      image: 'shilpamaamreal.png',
+      image: 'Shilpamadam.png',
       social: {
         linkedin: 'https://www.linkedin.com/in/shilpa-jain-hrmanager/',
         
