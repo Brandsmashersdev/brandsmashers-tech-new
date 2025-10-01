@@ -332,9 +332,9 @@ export default function BrandsmashersShowcase() {
             {/* Stats Bar */}
             <div className="grid grid-cols-3 gap-4 max-w-xs sm:max-w-3xl mx-auto">
               {[
-                { label: 'Social Platforms', value: '4' },
-                { label: 'Action Channels', value: '5' },
-                { label: 'Engagement Rate', value: '15%' }
+                { label: 'Years', value: '7+' },
+                { label: 'Projects', value: '250+' },
+                { label: 'Experts', value: '50+' }
               ].map((stat, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-3 sm:p-4 text-center hover:bg-white/10 transition-all duration-300">
                   <div className="text-xl sm:text-2xl font-bold text-[#ff5010] mb-0.5 sm:mb-1">{stat.value}</div>
