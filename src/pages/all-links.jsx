@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Facebook, Instagram, Linkedin, Github, Mail, MapPin, Phone, Globe, ArrowRight, Sparkles, Users, Link2, Calendar, Star, Award, Briefcase, ExternalLink } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Github, Mail, MapPin, Phone, Globe, ArrowRight, Sparkles, Users, Link2, Calendar, Star, Award, Briefcase, ExternalLink, MessageSquare } from 'lucide-react';
 
 export default function BrandsmashersShowcase() {
   const [scrollY, setScrollY] = useState(0);
@@ -15,12 +15,12 @@ export default function BrandsmashersShowcase() {
 
   const socialLinks = [
     {
-      name: 'Facebook',
-      icon: Facebook,
-      url: 'https://www.facebook.com/brandsamsherstechnologies/',
-      color: 'from-blue-600 to-blue-800',
-      hoverColor: 'hover:shadow-blue-500/50',
-      // followers: '25K+'
+      name: 'LinkedIn',
+      icon: Linkedin,
+      url: 'https://www.linkedin.com/company/brandsmashers-tech-llp/posts/?feedView=all',
+      color: 'from-blue-700 to-blue-900',
+      hoverColor: 'hover:shadow-blue-700/50',
+      // followers: '12K+'
     },
     {
       name: 'Instagram',
@@ -31,12 +31,12 @@ export default function BrandsmashersShowcase() {
       // followers: '40K+'
     },
     {
-      name: 'LinkedIn',
-      icon: Linkedin,
-      url: 'https://www.linkedin.com/company/brandsmashers-tech-llp/posts/?feedView=all',
-      color: 'from-blue-700 to-blue-900',
-      hoverColor: 'hover:shadow-blue-700/50',
-      // followers: '12K+'
+      name: 'Facebook',
+      icon: Facebook,
+      url: 'https://www.facebook.com/brandsamsherstechnologies/',
+      color: 'from-blue-600 to-blue-800',
+      hoverColor: 'hover:shadow-blue-500/50',
+      // followers: '25K+'
     },
     {
       name: 'Google',
@@ -94,7 +94,7 @@ export default function BrandsmashersShowcase() {
   const teamMembers = [
     {
       name: 'Aayush Jain',
-      role: 'CEO & Founder',
+      role: 'Founder & CEO',
       bio: 'Visionary tech leader with 7+ years of experience, driving innovation and building high-performing teams to deliver impactful solutions.',
       image: 'aayush.jpeg',
       social: {
@@ -474,6 +474,15 @@ export default function BrandsmashersShowcase() {
                 >
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                   Call Us
+                </a>
+                <a
+                  href="https://wa.me/9039231369"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-green-500 to-green-600 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/50 flex items-center justify-center gap-2 text-sm sm:text-base"
+                >
+                  <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5" />
+                  WhatsApp
                 </a>
               </div>
             </div>
