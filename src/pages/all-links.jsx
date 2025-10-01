@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Head from 'next/head';
 import { Facebook, Instagram, Linkedin, Github, Mail, MapPin, Phone, Globe, ArrowRight, Sparkles, Users, Link2, Calendar, Star, Award, Briefcase, ExternalLink, MessageSquare } from 'lucide-react';
 
 export default function BrandsmashersShowcase() {
@@ -12,6 +13,35 @@ export default function BrandsmashersShowcase() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Load Calendly script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    const link = document.createElement('link');
+    link.href = 'https://assets.calendly.com/assets/external/widget.css';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+
+    return () => {
+      // Cleanup
+      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+      const existingLink = document.querySelector('link[href="https://assets.calendly.com/assets/external/widget.css"]');
+      if (existingScript) existingScript.remove();
+      if (existingLink) existingLink.remove();
+    };
+  }, []);
+
+  const openCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/brandsmashers-info/new-meeting'
+      });
+    }
+  };
 
   const socialLinks = [
     {
@@ -58,12 +88,13 @@ export default function BrandsmashersShowcase() {
       followers: 'Visit'
     },
     {
-      name: 'Call Us',
-      icon: Phone,
-      url: 'tel:+917470755435',
-      color: 'from-blue-600 to-indigo-700',
-      hoverColor: 'hover:shadow-blue-500/50',
-      followers: 'Contact'
+      name: 'Book a Call',
+      icon: Calendar,
+      url: '#',
+      color: 'from-teal-600 to-cyan-700',
+      hoverColor: 'hover:shadow-teal-500/50',
+      followers: 'Schedule',
+      isCalendly: true
     },
     {
       name: 'Glassdoor',
@@ -117,7 +148,7 @@ export default function BrandsmashersShowcase() {
       name: 'Shilpa Jain',
       role: 'HR Manager',
       bio: 'Seasoned HR professional with 20+ years of expertise in talent management, employee engagement, and organizational development.',
-      image: 'shilpamaam.jpeg',
+      image: 'shilpamaamreal.png',
       social: {
         linkedin: 'https://www.linkedin.com/in/shilpa-jain-hrmanager/',
         
@@ -127,7 +158,7 @@ export default function BrandsmashersShowcase() {
       name: 'Mayuri Urkude',
       role: ' Operations Manager',
       bio: 'Efficient operations leader with 5+ years of experience, ensuring smooth processes and delivering excellence across projects.',
-      image: 'mayuriimaam.png',
+      image: 'Mayurimaamreal.png',
       social: {
         linkedin: 'https://www.linkedin.com/in/mayuri-urkude-95944022b/',
         // instagram: 'https://instagram.com/davidkim',
@@ -139,7 +170,12 @@ export default function BrandsmashersShowcase() {
   const parallaxOffset = scrollY * 0.5;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white overflow-hidden">
+    <>
+      <Head>
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white overflow-hidden">
       {/* Animated Background */}
       <div className="fixed inset-0 opacity-30">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop')] bg-cover bg-center bg-fixed" 
@@ -273,20 +309,21 @@ export default function BrandsmashersShowcase() {
               <h3 className="text-2xl sm:text-3xl font-bold text-center mb-6 bg-gradient-to-r from-[#ff5010] to-orange-400 bg-clip-text text-transparent">
                 Connect & Engage
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-6xl mx-auto">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-3 max-w-5xl mx-auto">
                 {actionButtons.map((button, index) => {
                   const Icon = button.icon;
                   const cardIndex = socialLinks.length + index;
                   return (
                     <a
                       key={index}
-                      href={button.url}
+                      href={button.isCalendly ? '#' : button.url}
                       target={button.url.startsWith('tel:') || button.url.startsWith('mailto:') ? '_self' : '_blank'}
                       rel={button.url.startsWith('tel:') || button.url.startsWith('mailto:') ? '' : 'noopener noreferrer'}
                       className={`group relative overflow-hidden rounded-xl sm:rounded-2xl transition-all duration-700 hover:scale-105 sm:hover:scale-110 hover:-translate-y-1 sm:hover:-translate-y-2 ${button.hoverColor} hover:shadow-2xl`}
                       style={{ animationDelay: `${(socialLinks.length + index) * 0.1}s` }}
                       onMouseEnter={() => setHoveredCard(cardIndex)}
                       onMouseLeave={() => setHoveredCard(null)}
+                      onClick={button.isCalendly ? (e) => { e.preventDefault(); openCalendly(); } : undefined}
                     >
                       {/* ... (Existing card structure for animation) ... */}
                       <div className={`absolute inset-0 bg-gradient-to-br ${button.color} opacity-95 group-hover:opacity-100 transition-opacity duration-500`} />
@@ -303,19 +340,19 @@ export default function BrandsmashersShowcase() {
                         </div>
                       )}
                       
-                      <div className="relative p-4 sm:p-6 flex flex-col items-center justify-center h-28 sm:h-36">
-                        <div className="mb-2 sm:mb-3 relative">
+                      <div className="relative p-2 sm:p-3 flex flex-col items-center justify-center h-20 sm:h-24">
+                        <div className="mb-1 sm:mb-2 relative">
                           <div className="absolute inset-0 bg-white/30 rounded-full blur-xl group-hover:blur-2xl group-hover:scale-150 transition-all duration-500" />
                           <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-full group-hover:from-white/30 group-hover:to-white/10 transition-all duration-500" />
-                          <div className="relative bg-white/20 backdrop-blur-sm p-3 sm:p-4 rounded-full border-2 border-white/40 group-hover:border-white/60 group-hover:scale-110 sm:group-hover:scale-125 group-hover:rotate-6 sm:group-hover:rotate-12 transition-all duration-500 shadow-lg">
-                            <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:drop-shadow-lg" />
+                          <div className="relative bg-white/20 backdrop-blur-sm p-2 sm:p-2.5 rounded-full border-2 border-white/40 group-hover:border-white/60 group-hover:scale-110 sm:group-hover:scale-125 group-hover:rotate-6 sm:group-hover:rotate-12 transition-all duration-500 shadow-lg">
+                            <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:drop-shadow-lg" />
                           </div>
                         </div>
                         
-                        <h3 className="text-xs sm:text-sm font-bold mb-0.5 text-center text-white group-hover:text-white/90 transition-colors duration-300">
+                        <h3 className="text-[10px] sm:text-xs font-bold mb-0.5 text-center text-white group-hover:text-white/90 transition-colors duration-300">
                           {button.name}
                         </h3>
-                        <p className="text-white/90 text-[10px] sm:text-xs font-semibold group-hover:text-white transition-colors duration-300">
+                        <p className="text-white/90 text-[8px] sm:text-[10px] font-semibold group-hover:text-white transition-colors duration-300">
                           {button.followers}
                         </p>
                       </div>
@@ -469,7 +506,8 @@ export default function BrandsmashersShowcase() {
                   Email Us
                 </a>
                 <a
-                  href="tel:+917470755435"
+                  href="#"
+                  onClick={(e) => { e.preventDefault(); openCalendly(); }}
                   className="px-6 py-3 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-sm rounded-full font-semibold border border-white/20 transition-all duration-300 hover:bg-white/20 hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base"
                 >
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -498,7 +536,7 @@ export default function BrandsmashersShowcase() {
               <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#ff5010] to-orange-400 bg-clip-text text-transparent mb-1">
                 Brandsmashers Tech
               </h3>
-              <p className="text-gray-400 text-sm">Innovating the future, one project at a time.</p>
+              <p className="text-gray-400 text-sm">From Vision to Imapact</p>
             </div>
             
             <div className="flex items-center gap-3 sm:gap-4">
@@ -524,6 +562,7 @@ export default function BrandsmashersShowcase() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
