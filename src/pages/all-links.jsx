@@ -128,7 +128,7 @@ export default function BrandsmashersShowcase() {
       name: 'Aayush Jain',
       role: 'Founder & CEO',
       bio: 'Visionary tech leader with 7+ years of experience, driving innovation and building high-performing teams to deliver impactful solutions.',
-      image: 'aayush.jpeg',
+      image: 'AayushSir.jpeg',
       social: {
         linkedin: 'https://www.linkedin.com/in/aayush-jain-code/',
        
