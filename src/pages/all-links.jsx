@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import Link from 'next/link';
 import { Facebook, Instagram, Linkedin, Github, Mail, MapPin, Phone, Globe, ArrowRight, Sparkles, Users, Link2, Calendar, Star, Award, Briefcase, ExternalLink, MessageSquare } from 'lucide-react';
+import ActionCard from '../components/shared/ActionCard';
 
 export default function BrandsmashersShowcase() {
   const [scrollY, setScrollY] = useState(0);
   const [activeSection, setActiveSection] = useState('hero'); // Kept for future use if navigation is added
-  const [hoveredCard, setHoveredCard] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -53,6 +54,14 @@ export default function BrandsmashersShowcase() {
       // followers: '12K+'
     },
     {
+      name: 'Google',
+      icon: ExternalLink,
+      url: 'https://share.google/XEglW0XXsrAlMfuRO',
+      color: 'from-blue-500 to-blue-700',
+      hoverColor: 'hover:shadow-blue-500/50',
+      // followers: 'Visit'
+    },
+    {
       name: 'Instagram',
       icon: Instagram,
       url: 'https://www.instagram.com/brandsmashers_technologies/?hl=en',
@@ -68,14 +77,6 @@ export default function BrandsmashersShowcase() {
       hoverColor: 'hover:shadow-blue-500/50',
       // followers: '25K+'
     },
-    {
-      name: 'Google',
-      icon: ExternalLink,
-      url: 'https://share.google/XEglW0XXsrAlMfuRO',
-      color: 'from-blue-500 to-blue-700',
-      hoverColor: 'hover:shadow-blue-500/50',
-      // followers: 'Visit'
-    }
   ];
 
   const actionButtons = [
@@ -138,7 +139,7 @@ export default function BrandsmashersShowcase() {
       role: 'Founder & Director',
       bio: 'Dynamic leader with 6+ years in technology, focused on strategy, growth, and creating meaningful client partnerships.',
    
-      image: 'MuskanMadam.jpeg',
+      image: 'IMG_6798.JPG',
       social: {
         linkedin: 'https://www.linkedin.com/in/muskan-chhatrasal/',
      
@@ -196,6 +197,19 @@ export default function BrandsmashersShowcase() {
           0% { transform: translate(0, 0); }
           100% { transform: translate(50px, 50px); }
         }
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeInUp {
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
       `}</style>
 
       {/* Hero Section */}
@@ -204,7 +218,7 @@ export default function BrandsmashersShowcase() {
           <div className="w-64 h-64 md:w-96 md:h-96 bg-[#ff5010] rounded-full blur-3xl animate-pulse" />
         </div>
         
-        <div className="relative z-10 text-center max-w-5xl mx-auto">
+        <div className="relative z-10 text-center max-w-5xl mx-auto animate-fadeInUp">
           {/* Small Logo */}
           {/* <div className="mb-4 sm:mb-6">
   <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-[#ff5010]/20 backdrop-blur-sm rounded-full border border-[#ff5010]/30 mb-4 overflow-hidden">
@@ -260,8 +274,6 @@ export default function BrandsmashersShowcase() {
                       rel="noopener noreferrer"
                       className={`group relative overflow-hidden rounded-xl sm:rounded-2xl transition-all duration-700 hover:scale-105 sm:hover:scale-110 hover:-translate-y-1 sm:hover:-translate-y-2 ${social.hoverColor} hover:shadow-2xl`}
                       style={{ animationDelay: `${index * 0.1}s` }}
-                      onMouseEnter={() => setHoveredCard(index)}
-                      onMouseLeave={() => setHoveredCard(null)}
                     >
                       {/* ... (Existing card structure for animation) ... */}
                       <div className={`absolute inset-0 bg-gradient-to-br ${social.color} opacity-95 group-hover:opacity-100 transition-opacity duration-500`} />
@@ -270,13 +282,6 @@ export default function BrandsmashersShowcase() {
                       <div className="absolute inset-0 rounded-xl sm:rounded-2xl border-2 border-white/30 group-hover:border-white/60 transition-all duration-500" />
                       <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       
-                      {hoveredCard === index && (
-                        <div className="absolute inset-0 overflow-hidden">
-                          <div className="absolute top-2 left-2 w-1 h-1 bg-white/60 rounded-full animate-ping" />
-                          <div className="absolute top-4 right-3 w-1 h-1 bg-white/40 rounded-full animate-ping" style={{ animationDelay: '0.5s' }} />
-                          <div className="absolute bottom-3 left-4 w-1 h-1 bg-white/50 rounded-full animate-ping" style={{ animationDelay: '1s' }} />
-                        </div>
-                      )}
                       
                       <div className="relative p-4 sm:p-6 flex flex-col items-center justify-center h-28 sm:h-36">
                         <div className="mb-2 sm:mb-3 relative">
@@ -309,60 +314,21 @@ export default function BrandsmashersShowcase() {
               <h3 className="text-2xl sm:text-3xl font-bold text-center mb-6 bg-gradient-to-r from-[#ff5010] to-orange-400 bg-clip-text text-transparent">
                 Connect & Engage
               </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-3 max-w-5xl mx-auto">
-                {actionButtons.map((button, index) => {
-                  const Icon = button.icon;
-                  const cardIndex = socialLinks.length + index;
-                  return (
-                    <a
-                      key={index}
-                      href={button.isCalendly ? '#' : button.url}
-                      target={button.url.startsWith('tel:') || button.url.startsWith('mailto:') ? '_self' : '_blank'}
-                      rel={button.url.startsWith('tel:') || button.url.startsWith('mailto:') ? '' : 'noopener noreferrer'}
-                      className={`group relative overflow-hidden rounded-xl sm:rounded-2xl transition-all duration-700 hover:scale-105 sm:hover:scale-110 hover:-translate-y-1 sm:hover:-translate-y-2 ${button.hoverColor} hover:shadow-2xl`}
-                      style={{ animationDelay: `${(socialLinks.length + index) * 0.1}s` }}
-                      onMouseEnter={() => setHoveredCard(cardIndex)}
-                      onMouseLeave={() => setHoveredCard(null)}
-                      onClick={button.isCalendly ? (e) => { e.preventDefault(); openCalendly(); } : undefined}
-                    >
-                      {/* ... (Existing card structure for animation) ... */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${button.color} opacity-95 group-hover:opacity-100 transition-opacity duration-500`} />
-                      <div className="absolute inset-0 bg-gradient-to-tl from-black/20 via-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      
-                      <div className="absolute inset-0 rounded-xl sm:rounded-2xl border-2 border-white/30 group-hover:border-white/60 transition-all duration-500" />
-                      <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      
-                      {hoveredCard === cardIndex && (
-                        <div className="absolute inset-0 overflow-hidden">
-                          <div className="absolute top-2 left-2 w-1 h-1 bg-white/60 rounded-full animate-ping" />
-                          <div className="absolute top-4 right-3 w-1 h-1 bg-white/40 rounded-full animate-ping" style={{ animationDelay: '0.5s' }} />
-                          <div className="absolute bottom-3 left-4 w-1 h-1 bg-white/50 rounded-full animate-ping" style={{ animationDelay: '1s' }} />
-                        </div>
-                      )}
-                      
-                      <div className="relative p-2 sm:p-3 flex flex-col items-center justify-center h-20 sm:h-24">
-                        <div className="mb-1 sm:mb-2 relative">
-                          <div className="absolute inset-0 bg-white/30 rounded-full blur-xl group-hover:blur-2xl group-hover:scale-150 transition-all duration-500" />
-                          <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-full group-hover:from-white/30 group-hover:to-white/10 transition-all duration-500" />
-                          <div className="relative bg-white/20 backdrop-blur-sm p-2 sm:p-2.5 rounded-full border-2 border-white/40 group-hover:border-white/60 group-hover:scale-110 sm:group-hover:scale-125 group-hover:rotate-6 sm:group-hover:rotate-12 transition-all duration-500 shadow-lg">
-                            <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:drop-shadow-lg" />
-                          </div>
-                        </div>
-                        
-                        <h3 className="text-[10px] sm:text-xs font-bold mb-0.5 text-center text-white group-hover:text-white/90 transition-colors duration-300">
-                          {button.name}
-                        </h3>
-                        <p className="text-white/90 text-[8px] sm:text-[10px] font-semibold group-hover:text-white transition-colors duration-300">
-                          {button.followers}
-                        </p>
-                      </div>
-
-                      <div className="absolute top-0 right-0 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-white/20 to-transparent rounded-bl-full transform translate-x-6 -translate-y-6 sm:translate-x-8 sm:-translate-y-8 group-hover:translate-x-4 group-hover:-translate-y-4 sm:group-hover:translate-x-6 sm:group-hover:-translate-y-6 group-hover:scale-110 transition-all duration-500" />
-                      <div className="absolute bottom-0 left-0 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-tr from-white/10 to-transparent rounded-tr-full transform -translate-x-4 translate-y-4 sm:-translate-x-6 sm:translate-y-6 group-hover:-translate-x-2 group-hover:translate-y-2 sm:group-hover:-translate-x-4 sm:group-hover:translate-y-4 group-hover:scale-110 transition-all duration-500" />
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
-                    </a>
-                  );
-                })}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 max-w-5xl mx-auto">
+                {actionButtons.map((button, index) => (
+                  <ActionCard
+                    key={index}
+                    name={button.name}
+                    icon={button.icon}
+                    url={button.url}
+                    color={button.color}
+                    hoverColor={button.hoverColor}
+                    followers={button.followers}
+                    isCalendly={button.isCalendly}
+                    onClick={button.isCalendly ? openCalendly : undefined}
+                    index={socialLinks.length + index}
+                  />
+                ))}
               </div>
             </div>
 
@@ -385,6 +351,9 @@ export default function BrandsmashersShowcase() {
             <a href="#team" className="px-6 py-3 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-sm rounded-full font-semibold border border-white/20 transition-all duration-300 hover:bg-white/20 hover:scale-105 sm:hover:scale-110 text-sm sm:text-base">
               Meet Our Team
             </a>
+            <Link href="/learn-more" className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#ff5010] to-orange-600 rounded-full font-semibold transition-all duration-300 hover:scale-105 sm:hover:scale-110 hover:shadow-2xl hover:shadow-[#ff5010]/50 text-sm sm:text-base">
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
