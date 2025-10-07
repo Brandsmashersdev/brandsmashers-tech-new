@@ -149,7 +149,7 @@ export default function BrandsmashersShowcase() {
       name: 'Shilpa Jain',
       role: 'HR Manager',
       bio: 'Seasoned HR professional with 20+ years of expertise in talent management, employee engagement, and organizational development.',
-      image: 'Shilpamadam.png',
+      image: 'shilpamaamnew.png',
       social: {
         linkedin: 'https://www.linkedin.com/in/shilpa-jain-hrmanager/',
         
@@ -159,7 +159,7 @@ export default function BrandsmashersShowcase() {
       name: 'Mayuri Urkude',
       role: ' Operations Manager',
       bio: 'Efficient operations leader with 5+ years of experience, ensuring smooth processes and delivering excellence across projects.',
-      image: 'Mayurimaamreal.png',
+      image: 'MayuriNewPhoto.png',
       social: {
         linkedin: 'https://www.linkedin.com/in/mayuri-urkude-95944022b/',
         // instagram: 'https://instagram.com/davidkim',
@@ -263,7 +263,7 @@ export default function BrandsmashersShowcase() {
               <h3 className="text-2xl sm:text-3xl font-bold text-center mb-6 bg-gradient-to-r from-[#ff5010] to-orange-400 bg-clip-text text-transparent">
                 Social Media
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-8 max-w-5xl mx-auto">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 max-w-5xl mx-auto">
                 {socialLinks.map((social, index) => {
                   const Icon = social.icon;
                   return (
@@ -278,11 +278,11 @@ export default function BrandsmashersShowcase() {
                       {/* ... (Existing card structure for animation) ... */}
                       <div className={`absolute inset-0 bg-gradient-to-br ${social.color} opacity-95 group-hover:opacity-100 transition-opacity duration-500`} />
                       <div className="absolute inset-0 bg-gradient-to-tl from-black/20 via-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      
+
                       <div className="absolute inset-0 rounded-xl sm:rounded-2xl border-2 border-white/30 group-hover:border-white/60 transition-all duration-500" />
                       <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      
-                      
+
+
                       <div className="relative p-4 sm:p-6 flex flex-col items-center justify-center h-28 sm:h-36">
                         <div className="mb-2 sm:mb-3 relative">
                           <div className="absolute inset-0 bg-white/30 rounded-full blur-xl group-hover:blur-2xl group-hover:scale-150 transition-all duration-500" />
@@ -291,7 +291,7 @@ export default function BrandsmashersShowcase() {
                             <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:drop-shadow-lg" />
                           </div>
                         </div>
-                        
+
                         <h3 className="text-xs sm:text-sm font-bold mb-0.5 text-center text-white group-hover:text-white/90 transition-colors duration-300">
                           {social.name}
                         </h3>
@@ -314,7 +314,7 @@ export default function BrandsmashersShowcase() {
               <h3 className="text-2xl sm:text-3xl font-bold text-center mb-6 bg-gradient-to-r from-[#ff5010] to-orange-400 bg-clip-text text-transparent">
                 Connect & Engage
               </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 max-w-5xl mx-auto">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 md:gap-6 max-w-5xl mx-auto">
                 {actionButtons.map((button, index) => (
                   <ActionCard
                     key={index}
