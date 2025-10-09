@@ -505,7 +505,7 @@ export default function BrandsmashersShowcase() {
               <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#ff5010] to-orange-400 bg-clip-text text-transparent mb-1">
                 Brandsmashers Tech
               </h3>
-              <p className="text-gray-400 text-sm">From Vision To Imapact</p>
+              <p className="text-gray-400 text-sm">From Vision To Impact</p>
             </div>
             
             <div className="flex items-center gap-3 sm:gap-4">
