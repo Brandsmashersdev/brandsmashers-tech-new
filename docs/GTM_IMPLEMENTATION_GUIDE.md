@@ -169,6 +169,7 @@ const blogs = () => {
 16. ✅ `www.brandsmashers.com/tech/wordpress`
 17. ✅ `www.brandsmashers.com/technologies`
 18. ✅ `www.brandsmashers.com/whoweare`
+19. ✅ `www.brandsmashers.com/blogsection6`
 
 ---
 

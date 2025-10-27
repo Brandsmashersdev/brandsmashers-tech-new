@@ -49,6 +49,16 @@ export default function BlogPage() {
     },
     {
       id: 3,
+      title: "Stepping into Tomorrow at GITEX 2025 Dubai",
+      excerpt:
+        "When the Brandsmashers Tech team arrived at GITEX 2025 Dubai, we weren’t just attending another technology conference — we were stepping into a living, breathing ecosystem of ideas shaping the future of humanity.",
+      image: "/Nav-Dropdown-icons/GITEX.jpeg",
+      readTime: "6 min read",
+      link: "/blogsection6",
+      industry: "Technology",
+    },
+    {
+      id: 4,
       title: "Scoop of Digital Marketing",
       excerpt:
         "In a world overflowing with products, apps, services, and ideas, the loudest voice doesn’t always win—but the clearest one does.",
@@ -58,7 +68,7 @@ export default function BlogPage() {
       industry: "Marketing",
     },
     {
-      id: 4,
+      id: 5,
       title: "How to Hire Remote Developers from India",
       excerpt:
         "A practical guide for Indian companies to hire remote developers efficiently, covering talent sourcing, vetting, compliance, onboarding, and best practices for a high-performing remote team.",

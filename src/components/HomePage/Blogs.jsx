@@ -20,11 +20,11 @@ const BlogCarousel = () => {
     },
     {
       id: 2,
-      title: "Scalable Tech & Green IT",
-      excerpt: "As we move forward through the Industrial Revolution and continue advancing into the era of the Information Revolution",
-      image: "/Nav-Dropdown-icons/image_blog2.jpg",
-      readTime: "8 min read",
-      link: "/blogsection2"
+      title: "Stepping into Tomorrow at GITEX 2025 Dubai",
+      excerpt: "When the Brandsmashers Tech team arrived at GITEX 2025 Dubai, we weren’t just attending another technology conference — we were stepping into a living, breathing ecosystem of ideas shaping the future of humanity.",
+      image: "/Nav-Dropdown-icons/GITEX.jpeg",
+      readTime: "6 min read",
+      link: "/blogsection6"
     },
     {
       id: 3,
