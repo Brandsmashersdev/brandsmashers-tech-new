@@ -160,7 +160,7 @@ export default function Footer() {
 
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-500 text-sm mb-4 md:mb-0">
-            © 2024 Brandsmashers Tech. All rights reserved.
+            © 2025 Brandsmashers Tech. All rights reserved.
           </div>
 
           <div className="flex flex-wrap gap-6 justify-center mb-4 md:mb-0">
