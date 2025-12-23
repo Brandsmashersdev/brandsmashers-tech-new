@@ -91,7 +91,7 @@
 //               </div>
 //             </div>
 //           </div>
-          
+
 //           <div className="mb-12">
 //             <h2 className="text-2xl font-semibold mb-4 text-sky-600">Result: Transforming Chaos into Clarity</h2>
 //             <div className="flex justify-center mb-12">
@@ -116,51 +116,54 @@
 //   );
 // }
 
-
 // src/components/BrandsmashersVendorManagementCaseStudy.jsx
 
-import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
+import React from "react";
+import Head from "next/head";
+import Image from "next/image";
 
 const challengeIssues = [
-  'Diminished visibility into roles and submissions.',
-  'Critical candidate follow-ups were often overlooked.',
-  'Inability to easily track vendor performance.',
+  "Diminished visibility into roles and submissions.",
+  "Critical candidate follow-ups were often overlooked.",
+  "Inability to easily track vendor performance.",
 ];
 
 const solutionDetails = [
   {
-    title: 'Unified Role Dashboard',
-    description: 'Gives vendors clear visibility into approved roles, timelines, and quotas.',
+    title: "Unified Role Dashboard",
+    description:
+      "Gives vendors clear visibility into approved roles, timelines, and quotas.",
   },
   {
-    title: 'Smart Submission Tracker',
-    description: 'Tracks each candidate submission with statuses and feedback for transparency.',
+    title: "Smart Submission Tracker",
+    description:
+      "Tracks each candidate submission with statuses and feedback for transparency.",
   },
   {
-    title: 'Performance Insights',
-    description: 'Allows vendors to monitor their own performance metrics in real-time.',
+    title: "Performance Insights",
+    description:
+      "Allows vendors to monitor their own performance metrics in real-time.",
   },
   {
-    title: 'Alerts & Nudges',
-    description: 'Automated system prompts keep vendors informed about aging submissions and required documentation.',
+    title: "Alerts & Nudges",
+    description:
+      "Automated system prompts keep vendors informed about aging submissions and required documentation.",
   },
 ];
 
 const techStack = [
-  { tech: 'Design', name: 'Figma' },
-  { tech: 'Frontend', name: 'React' },
-  { tech: 'Backend', name: 'Node' },
-  { tech: 'Real-time & Auth', name: 'Firebase' },
-  { tech: 'Database', name: 'MongoDB' },
-  { tech: 'Analytics', name: 'Power BI' },
+  { tech: "Design", name: "Figma" },
+  { tech: "Frontend", name: "React" },
+  { tech: "Backend", name: "Node" },
+  { tech: "Real-time & Auth", name: "Firebase" },
+  { tech: "Database", name: "MongoDB" },
+  { tech: "Analytics", name: "Power BI" },
 ];
 
 const results = [
-  { value: '35%', label: 'Decrease in Time-to-Fill' },
-  { value: 'Enhanced', label: 'Vendor Satisfaction' },
-  { value: 'Data-Driven', label: 'Vendor Insights' },
+  { value: "35%", label: "Decrease in Time-to-Fill" },
+  { value: "Enhanced", label: "Vendor Satisfaction" },
+  { value: "Data-Driven", label: "Vendor Insights" },
 ];
 
 export default function BrandsmashersVendorManagementCaseStudy() {
@@ -168,16 +171,28 @@ export default function BrandsmashersVendorManagementCaseStudy() {
     <>
       <Head>
         <title>Case Study | Vendor Management</title>
-        <meta name="description" content="A case study on how Brandsmashers Tech built an internal vendor management platform to streamline operations and enhance communication." />
+        <meta
+          name="description"
+          content="A case study on how Brandsmashers Tech built an internal vendor management platform to streamline operations and enhance communication."
+        />
       </Head>
 
       <div className="bg-white font-sans text-gray-800">
-        <header className="py-24 text-center text-white" style={{ background: '#ff5010' }}>
+        <header
+          className="py-24 text-center text-white"
+          style={{ background: "#ff5010" }}
+        >
           <div className="container mx-auto px-6">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4" style={{ color: '#ffffff' }}>
+            <h1
+              className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4"
+              style={{ color: "#ffffff" }}
+            >
               Case Study: Vendor Management
             </h1>
-            <p className="text-xl md:text-2xl font-light opacity-90" style={{ color: '#ffffff' }}>
+            <p
+              className="text-xl md:text-2xl font-light opacity-90"
+              style={{ color: "#ffffff" }}
+            >
               Powering Our Own Growth
             </p>
           </div>
@@ -185,13 +200,34 @@ export default function BrandsmashersVendorManagementCaseStudy() {
 
         <main className="container mx-auto px-6 py-16">
           <section className="mb-20 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#ff7a47' }}>The Challenge</h2>
-            <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed mb-8" style={{ color: '#222222' }}>
-              As Brandsmashers Tech scaled its staff augmentation services, its manual vendor management process became overwhelmed, leading to inefficiency and limited growth.
+            <h2
+              className="text-3xl md:text-4xl font-bold mb-6"
+              style={{ color: "#ff7a47" }}
+            >
+              The Challenge
+            </h2>
+            <p
+              className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed mb-8"
+              style={{ color: "#222222" }}
+            >
+              As Brandsmashers Tech scaled its staff augmentation services, its
+              manual vendor management process became overwhelmed, leading to
+              inefficiency and limited growth.
             </p>
-            <div className="rounded-2xl shadow-xl p-8 max-w-2xl mx-auto" style={{ backgroundColor: '#f5f5f5' }}>
-              <h3 className="text-2xl font-semibold mb-4" style={{ color: '#ff7a47' }}>Core Issues</h3>
-              <ul className="list-disc text-left space-y-2 pl-5" style={{ color: '#222222' }}>
+            <div
+              className="rounded-2xl shadow-xl p-8 max-w-2xl mx-auto"
+              style={{ backgroundColor: "#f5f5f5" }}
+            >
+              <h3
+                className="text-2xl font-semibold mb-4"
+                style={{ color: "#ff7a47" }}
+              >
+                Core Issues
+              </h3>
+              <ul
+                className="list-disc text-left space-y-2 pl-5"
+                style={{ color: "#222222" }}
+              >
                 {challengeIssues.map((issue, index) => (
                   <li key={index}>{issue}</li>
                 ))}
@@ -199,27 +235,49 @@ export default function BrandsmashersVendorManagementCaseStudy() {
             </div>
           </section>
 
-          <div className="border-t my-12" style={{ borderColor: '#e5e7eb' }} />
+          <div className="border-t my-12" style={{ borderColor: "#e5e7eb" }} />
 
           <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#ff7a47' }}>The Solution</h2>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-center mb-12"
+              style={{ color: "#ff7a47" }}
+            >
+              The Solution
+            </h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="text-lg leading-relaxed mb-8" style={{ color: '#222222' }}>
-                  We built an advanced internal product, **VendorHub**, that transformed our operations. We took a discovery-driven approach, conducting internal interviews to identify pain points and developed a cohesive platform.
+                <p
+                  className="text-lg leading-relaxed mb-8"
+                  style={{ color: "#222222" }}
+                >
+                  We built an advanced internal product, **VendorHub**, that
+                  transformed our operations. We took a discovery-driven
+                  approach, conducting internal interviews to identify pain
+                  points and developed a cohesive platform.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   {solutionDetails.map((detail, index) => (
-                    <div key={index} className="flex flex-col items-start p-6 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105" style={{ backgroundColor: '#f5f5f5' }}>
-                      <h4 className="text-xl font-semibold mb-2" style={{ color: '#ff7a47' }}>{detail.title}</h4>
-                      <p className="text-sm" style={{ color: '#222222' }}>{detail.description}</p>
+                    <div
+                      key={index}
+                      className="flex flex-col items-start p-6 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+                      style={{ backgroundColor: "#f5f5f5" }}
+                    >
+                      <h4
+                        className="text-xl font-semibold mb-2"
+                        style={{ color: "#ff7a47" }}
+                      >
+                        {detail.title}
+                      </h4>
+                      <p className="text-sm" style={{ color: "#222222" }}>
+                        {detail.description}
+                      </p>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/CaseStudyImages/vendormanagement" // Placeholder image
+                  src="/CaseStudyImages/vendormanagement.png" // Placeholder image
                   alt="VendorHub Dashboard"
                   width={600}
                   height={400}
@@ -229,35 +287,75 @@ export default function BrandsmashersVendorManagementCaseStudy() {
             </div>
           </section>
 
-          <div className="border-t my-12" style={{ borderColor: '#e5e7eb' }} />
+          <div className="border-t my-12" style={{ borderColor: "#e5e7eb" }} />
 
           <section className="mb-20 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12" style={{ color: '#ff7a47' }}>Technical Stack</h2>
+            <h2
+              className="text-3xl md:text-4xl font-bold mb-12"
+              style={{ color: "#ff7a47" }}
+            >
+              Technical Stack
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
               {techStack.map((item, index) => (
-                <div key={index} className="rounded-xl shadow-lg p-6 transition-transform duration-300 hover:scale-105" style={{ backgroundColor: '#f5f5f5' }}>
-                  <p className="text-xl font-bold" style={{ color: '#ff5010' }}>{item.tech}</p>
-                  <p className="text-sm uppercase tracking-wide font-medium mt-2" style={{ color: '#222222' }}>{item.name}</p>
+                <div
+                  key={index}
+                  className="rounded-xl shadow-lg p-6 transition-transform duration-300 hover:scale-105"
+                  style={{ backgroundColor: "#f5f5f5" }}
+                >
+                  <p className="text-xl font-bold" style={{ color: "#ff5010" }}>
+                    {item.tech}
+                  </p>
+                  <p
+                    className="text-sm uppercase tracking-wide font-medium mt-2"
+                    style={{ color: "#222222" }}
+                  >
+                    {item.name}
+                  </p>
                 </div>
               ))}
             </div>
           </section>
 
-          <div className="border-t my-12" style={{ borderColor: '#e5e7eb' }} />
-          
+          <div className="border-t my-12" style={{ borderColor: "#e5e7eb" }} />
+
           <section className="mb-20 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12" style={{ color: '#ff7a47' }}>The Results</h2>
+            <h2
+              className="text-3xl md:text-4xl font-bold mb-12"
+              style={{ color: "#ff7a47" }}
+            >
+              The Results
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
               {results.map((result, index) => (
-                <div key={index} className="rounded-xl shadow-lg p-6 transition-transform duration-300 hover:scale-110" style={{ backgroundColor: '#f5f5f5' }}>
-                  <p className="text-4xl font-extrabold" style={{ color: '#ff5010' }}>{result.value}</p>
-                  <p className="text-sm uppercase tracking-wide font-medium mt-2" style={{ color: '#222222' }}>{result.label}</p>
+                <div
+                  key={index}
+                  className="rounded-xl shadow-lg p-6 transition-transform duration-300 hover:scale-110"
+                  style={{ backgroundColor: "#f5f5f5" }}
+                >
+                  <p
+                    className="text-4xl font-extrabold"
+                    style={{ color: "#ff5010" }}
+                  >
+                    {result.value}
+                  </p>
+                  <p
+                    className="text-sm uppercase tracking-wide font-medium mt-2"
+                    style={{ color: "#222222" }}
+                  >
+                    {result.label}
+                  </p>
                 </div>
               ))}
             </div>
-            <div className="mt-8 p-6 rounded-xl shadow-lg max-w-lg mx-auto transition-transform duration-300 hover:scale-105" style={{ backgroundColor: '#f5f5f5' }}>
-              <p className="italic text-lg" style={{ color: '#222222' }}>
-                The new platform enabled our talent acquisition team to transition to a more proactive approach, transforming chaos into clarity and powering our growth.
+            <div
+              className="mt-8 p-6 rounded-xl shadow-lg max-w-lg mx-auto transition-transform duration-300 hover:scale-105"
+              style={{ backgroundColor: "#f5f5f5" }}
+            >
+              <p className="italic text-lg" style={{ color: "#222222" }}>
+                The new platform enabled our talent acquisition team to
+                transition to a more proactive approach, transforming chaos into
+                clarity and powering our growth.
               </p>
             </div>
           </section>

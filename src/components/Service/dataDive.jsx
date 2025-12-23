@@ -33,8 +33,8 @@ const DataDive = () => {
         <div className={styles.rightContent}>
           <div className={styles.titleGroup}>
             <h1 className={styles.title}>
-              <span>Data Dive </span>
-              <span className={styles.highlight}>Development</span>
+              
+              <span className={styles.highlight}> Data Dive Development</span>
             </h1>
             <p className={styles.subtitle}>
               Transform data into valuable insights with expert analysis

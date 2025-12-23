@@ -10,8 +10,8 @@ const DesktopApp = () => {
         <div className={styles.leftSection}>
           <div className={styles.titleGroup}>
             <h1 className={styles.title}>
-              <span>Desktop App </span>
-              <span className={styles.highlight}>Development</span>
+             
+              <span className={styles.highlight}>  Desktop App Development</span>
             </h1>
             <p className={styles.subtitle}>
               Innovative Desktop App Development Solutions with the Best Desktop App Development Services

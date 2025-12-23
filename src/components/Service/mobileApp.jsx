@@ -36,7 +36,7 @@ const MobileApp = () => {
           <div className={styles.titleGroup}>
             <h1 className={styles.title}>
               <span>Mobile</span>
-              <span className={styles.highlight}>App</span>
+              <span className={styles.highlight}> Mobile App</span>
             </h1>
             <p className={styles.subtitle}>
               Develop Seamless, Engaging Mobile Experiences with Custom Mobile App Development Services

@@ -1,10 +1,10 @@
-import React from 'react';
-import styles from './leftservice.module.css';
-import Image from 'next/image';
+import React from "react";
+import styles from "./leftservice.module.css";
+import Image from "next/image";
 
 const Browser = () => {
   return (
-    <div className={styles.serviceContainer} id='beyond-the-browser'>
+    <div className={styles.serviceContainer} id="beyond-the-browser">
       <div className={styles.contentWrapper}>
         {/* Left Image Section */}
         <div className={styles.leftSection}>
@@ -12,15 +12,20 @@ const Browser = () => {
             <Image
               src="/browser.png"
               alt="Web Development"
-              height={400}
-              width={600}
+              height={300}
+              width={500}
               className={styles.image}
             />
-            
+
             {/* Overlay Box */}
             <div className={styles.overlayBox}>
-            <p>At <span className={styles.highlightoverlay}>Brandsmashers</span>, we craft intuitive and visually appealing interfaces by 
-                understanding your audience, refining designs with wireframes and prototypes, and ensuring seamless responsiveness across all devices.
+              <p>
+                At{" "}
+                <span className={styles.highlightoverlay}>Brandsmashers</span>,
+                we craft intuitive and visually appealing interfaces by
+                understanding your audience, refining designs with wireframes
+                and prototypes, and ensuring seamless responsiveness across all
+                devices.
               </p>
             </div>
           </div>
@@ -30,25 +35,28 @@ const Browser = () => {
         <div className={styles.rightContent}>
           <div className={styles.titleGroup}>
             <h1 className={styles.title}>
-              <span>Beyond the </span>
-              <span className={styles.highlight}>Browser</span>
+              <span className={styles.highlight}> Beyond the Browser</span>
             </h1>
             <p className={styles.subtitle}>
-            Innovate with Applications and Technologies That Stand Out!            </p>
+              Innovate with Applications and Technologies That Stand Out!{" "}
+            </p>
           </div>
 
           <div className={styles.textContent}>
             <p>
-            At Brandsmashers our focus is shifted from simple website solutions to
-            creating unique digital experiences that redefine your brand. Some of our
-            services include creating new applications and incorporating new technologies
-            that would help improve the interaction and effectiveness of processes. Being a 
-            technology-savvy company, we are focused on providing the best digital experiences
-            to solve your business problems effectively. We are determined to make your brand
-            shine and receive more attention among the numerous Internet users. Using up-to-date
-            techniques, we ensure you capture the consumer&apos;s attention, evoke their emotions, and
-            produce measurable outcomes. We at Brandsmashers are ready to bring your idea to life 
-            and help you become an unbeatable force on the online stage!
+              At Brandsmashers our focus is shifted from simple website
+              solutions to creating unique digital experiences that redefine
+              your brand. Some of our services include creating new applications
+              and incorporating new technologies that would help improve the
+              interaction and effectiveness of processes. Being a
+              technology-savvy company, we are focused on providing the best
+              digital experiences to solve your business problems effectively.
+              We are determined to make your brand shine and receive more
+              attention among the numerous Internet users. Using up-to-date
+              techniques, we ensure you capture the consumer&apos;s attention,
+              evoke their emotions, and produce measurable outcomes. We at
+              Brandsmashers are ready to bring your idea to life and help you
+              become an unbeatable force on the online stage!
             </p>
           </div>
         </div>

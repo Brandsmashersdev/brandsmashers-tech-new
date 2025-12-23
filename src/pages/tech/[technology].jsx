@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/navbar/navbar";
-import Image from 'next/image';
+import Image from "next/image";
 import Footer from "@/components/footer/footer";
 import HeroSectionTech from "@/components/HireDevelopers/HeroSectionForTech";
 import Stats from "@/components/HireDevelopers/Android/Stats";
@@ -13,12 +13,11 @@ import Head from "next/head";
 import FAQSection from "@/components/HomePage/FAQSection";
 import { trackTechnologyPageView } from "@/lib/gtm";
 
-
-
 // Technology data
 const technologyData = {
   "android-developer": {
-    title: "Hire Best Android App Developers from India | Remote Android App Development",
+    title:
+      "Hire Best Android App Developers from India | Remote Android App Development",
     description:
       "Hire top remote Android developers from India with Brandsmashers Tech. Get custom apps, Blockchain solutions, UI/UX, and game development tailored to your needs!",
     buttonText: "Hire Android Developer",
@@ -65,85 +64,95 @@ const technologyData = {
           iconSrc: "/Android-page-img/mobile-icon.svg",
         },
       ],
-    
     },
     carousel: {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "Android Application Developers",
-        afterHighlight: "from India with Expertise in Relevant Technologies"
+        afterHighlight: "from India with Expertise in Relevant Technologies",
       },
 
-      description: "The Android platform is a powerful and widely preferred choice for developing high-quality mobile applications. Whether you're looking to build a custom app or enhance an existing one, hiring an Android app developer from India gives you access to skilled professionals with expertise in the latest Android technologies. Explore our comprehensive range of services to create innovative, feature-rich Android apps that meet your business needs.",
+      description:
+        "The Android platform is a powerful and widely preferred choice for developing high-quality mobile applications. Whether you're looking to build a custom app or enhance an existing one, hiring an Android app developer from India gives you access to skilled professionals with expertise in the latest Android technologies. Explore our comprehensive range of services to create innovative, feature-rich Android apps that meet your business needs.",
       cardsData: [
         {
           id: 1,
-          title: 'Android + Kotlin',
-          description: 'Modern Android development with Kotlin. 100% Java interoperability and reduced boilerplate code.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techkotlin.png'
+          title: "Android + Kotlin",
+          description:
+            "Modern Android development with Kotlin. 100% Java interoperability and reduced boilerplate code.",
+          icon1: "/android-techicon.png",
+          icon2: "/icon-techkotlin.png",
         },
         {
           id: 2,
-          title: 'Android + Java',
-          description: 'Traditional Android development with Java. Robust, secure, and highly scalable applications.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techjava.png'
+          title: "Android + Java",
+          description:
+            "Traditional Android development with Java. Robust, secure, and highly scalable applications.",
+          icon1: "/android-techicon.png",
+          icon2: "/icon-techjava.png",
         },
         {
           id: 3,
-          title: 'Android + Flutter',
-          description: 'Cross-platform development with Flutter. Create beautiful native interfaces for Android devices.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techflutter.png'
+          title: "Android + Flutter",
+          description:
+            "Cross-platform development with Flutter. Create beautiful native interfaces for Android devices.",
+          icon1: "/android-techicon.png",
+          icon2: "/icon-techflutter.png",
         },
         {
           id: 4,
-          title: 'Android + React Native',
-          description: 'Build native Android apps using React Native. Leverage JavaScript for mobile development.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techreact.png'
+          title: "Android + React Native",
+          description:
+            "Build native Android apps using React Native. Leverage JavaScript for mobile development.",
+          icon1: "/android-techicon.png",
+          icon2: "/icon-techreact.png",
         },
         {
           id: 5,
-          title: 'Android + Firebase',
-          description: 'Integrate Firebase services for robust backend solutions. Real-time database, authentication, and cloud functions.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techfirebase.png'
+          title: "Android + Firebase",
+          description:
+            "Integrate Firebase services for robust backend solutions. Real-time database, authentication, and cloud functions.",
+          icon1: "/android-techicon.png",
+          icon2: "/icon-techfirebase.png",
         },
         {
           id: 6,
-          title: 'Android + Jetpack',
-          description: 'Leverage Android Jetpack components for modern app architecture. Build robust, maintainable applications.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techjetpack.png'
+          title: "Android + Jetpack",
+          description:
+            "Leverage Android Jetpack components for modern app architecture. Build robust, maintainable applications.",
+          icon1: "/android-techicon.png",
+          icon2: "/icon-techjetpack.png",
         },
         {
           id: 7,
-          title: 'Android + NDK',
-          description: 'Native Development Kit for high-performance applications. Optimize critical components with C/C++.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techndk.png'
+          title: "Android + NDK",
+          description:
+            "Native Development Kit for high-performance applications. Optimize critical components with C/C++.",
+          icon1: "/android-techicon.png",
+          icon2: "/icon-techndk.png",
         },
         {
           id: 8,
-          title: 'Android + Unity',
-          description: 'Create immersive gaming experiences for Android. Develop high-quality 2D and 3D games.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techunity.png'
+          title: "Android + Unity",
+          description:
+            "Create immersive gaming experiences for Android. Develop high-quality 2D and 3D games.",
+          icon1: "/android-techicon.png",
+          icon2: "/icon-techunity.png",
         },
         {
           id: 9,
-          title: 'Android + TensorFlow',
-          description: 'Implement machine learning in Android apps. Add AI capabilities with TensorFlow Lite.',
-          icon1: '/android-techicon.png',
-          icon2: '/icon-techtensorflow.png'
-        }
-      ]
-    }
+          title: "Android + TensorFlow",
+          description:
+            "Implement machine learning in Android apps. Add AI capabilities with TensorFlow Lite.",
+          icon1: "/android-techicon.png",
+          icon2: "/icon-techtensorflow.png",
+        },
+      ],
+    },
   },
   "ios-developer": {
-    title: "Hire Expert iOS App Developers from India | Remote iOS App Development",
+    title:
+      "Hire Expert iOS App Developers from India | Remote iOS App Development",
     description:
       "Hire top remote iOS developers from India with Brandsmashers Tech. Get custom apps, Apple Vision Pro, UI/UX, games & enterprise solutions tailored to your needs!",
     buttonText: "Hire iOS Developer",
@@ -197,78 +206,90 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Top ",
         highlight: "iOS Application Developers",
-        afterHighlight: " from India – Pre-Vetted Experts for Flawless App Development"
+        afterHighlight:
+          " from India – Pre-Vetted Experts for Flawless App Development",
       },
-      description: "Leverage our skilled developers to build high-performance, user-friendly iOS apps tailored to your business needs.",
+      description:
+        "Leverage our skilled developers to build high-performance, user-friendly iOS apps tailored to your business needs.",
       cardsData: [
         {
           id: 1,
-          title: 'iOS + Swift',
-          description: 'Modern iOS development with Swift. Build fast, safe, and interactive applications with Apples preferred language.',
-          icon1: '/icon-techios.png',
-          icon2: '/icon-techswift.png'
+          title: "iOS + Swift",
+          description:
+            "Modern iOS development with Swift. Build fast, safe, and interactive applications with Apples preferred language.",
+          icon1: "/icon-techios.png",
+          icon2: "/icon-techswift.png",
         },
         {
           id: 2,
-          title: 'iOS + Objective-C',
-          description: 'Traditional iOS development with Objective-C. Perfect for maintaining legacy apps and utilizing established codebases.',
-          icon1: '/icon-techios.png',
-          icon2: '/icon-techobjectiveC.png'
+          title: "iOS + Objective-C",
+          description:
+            "Traditional iOS development with Objective-C. Perfect for maintaining legacy apps and utilizing established codebases.",
+          icon1: "/icon-techios.png",
+          icon2: "/icon-techobjectiveC.png",
         },
         {
           id: 3,
-          title: 'iOS + Objective-C++',
-          description: 'Combine Objective-C with C++ for high-performance computing and complex algorithms in iOS applications.',
-          icon1: '/icon-techios.png',
-          icon2: '/icon-techobjectiveC++.png'
+          title: "iOS + Objective-C++",
+          description:
+            "Combine Objective-C with C++ for high-performance computing and complex algorithms in iOS applications.",
+          icon1: "/icon-techios.png",
+          icon2: "/icon-techobjectiveC++.png",
         },
         {
           id: 4,
-          title: 'iOS + Python',
-          description: 'Integrate Python scripts and libraries into iOS apps using Pythonkit. Perfect for data analysis and ML features.',
-          icon1: '/icon-techios.png',
-          icon2: '/icon-techpython.png'
+          title: "iOS + Python",
+          description:
+            "Integrate Python scripts and libraries into iOS apps using Pythonkit. Perfect for data analysis and ML features.",
+          icon1: "/icon-techios.png",
+          icon2: "/icon-techpython.png",
         },
         {
           id: 5,
-          title: 'iOS + JavaScript',
-          description: 'Utilize JavaScript with frameworks like React Native or integrate JS libraries into native iOS applications.',
-          icon1: '/icon-techios.png',
-          icon2: '/icon-techjavascript.png'
+          title: "iOS + JavaScript",
+          description:
+            "Utilize JavaScript with frameworks like React Native or integrate JS libraries into native iOS applications.",
+          icon1: "/icon-techios.png",
+          icon2: "/icon-techjavascript.png",
         },
         {
           id: 6,
-          title: 'iOS + C++',
-          description: 'Leverage C++ for performance-critical components and cross-platform code sharing in iOS applications.',
-          icon1: '/icon-techios.png',
-          icon2: '/icon-techobjectiveC++.png'
+          title: "iOS + C++",
+          description:
+            "Leverage C++ for performance-critical components and cross-platform code sharing in iOS applications.",
+          icon1: "/icon-techios.png",
+          icon2: "/icon-techobjectiveC++.png",
         },
         {
           id: 7,
-          title: 'iOS + Ruby',
-          description: 'Integrate Ruby scripts and automate iOS development workflows. Perfect for custom build tools and testing.',
-          icon1: '/icon-techios.png',
-          icon2: '/icon-techruby.png'
+          title: "iOS + Ruby",
+          description:
+            "Integrate Ruby scripts and automate iOS development workflows. Perfect for custom build tools and testing.",
+          icon1: "/icon-techios.png",
+          icon2: "/icon-techruby.png",
         },
         {
           id: 8,
-          title: 'iOS + Dart',
-          description: 'Build iOS applications using Flutter/Dart. Create beautiful, natively compiled applications from a single codebase.',
-          icon1: '/icon-techios.png',
-          icon2: '/icon-techdart.png'
+          title: "iOS + Dart",
+          description:
+            "Build iOS applications using Flutter/Dart. Create beautiful, natively compiled applications from a single codebase.",
+          icon1: "/icon-techios.png",
+          icon2: "/icon-techdart.png",
         },
         {
           id: 9,
-          title: 'iOS + Shell Script',
-          description: 'Automate iOS development processes and create custom build scripts using Shell scripting for enhanced workflow.',
-          icon1: '/icon-techios.png',
-          icon2: '/icon-techshellscript.png'
-        }
-      ]
-    }
+          title: "iOS + Shell Script",
+          description:
+            "Automate iOS development processes and create custom build scripts using Shell scripting for enhanced workflow.",
+          icon1: "/icon-techios.png",
+          icon2: "/icon-techshellscript.png",
+        },
+      ],
+    },
   },
   "flutter-developer": {
-    title: "Hire Expert Flutter Developers from India | Cross-Platform App Development",
+    title:
+      "Hire Expert Flutter Developers from India | Cross-Platform App Development",
     description:
       "Hire remote Flutter developers from India to build high-performance cross-platform apps for iOS & Android. Get custom solutions, UI/UX design & support.",
     buttonText: "Hire Flutter Developer",
@@ -321,75 +342,86 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "Flutter Application Developers",
-        afterHighlight: " from India with Expertise in Cross-Platform Development"
+        afterHighlight:
+          " from India with Expertise in Cross-Platform Development",
       },
-      description: "Leverage the power of Flutter to build stunning, high-performance apps for iOS and Android with our experienced developers.",
+      description:
+        "Leverage the power of Flutter to build stunning, high-performance apps for iOS and Android with our experienced developers.",
       cardsData: [
         {
           id: 1,
-          title: 'Flutter + Firebase',
-          description: 'Build scalable apps with Firebase backend. Integrate real-time databases, authentication, cloud functions, and analytics.',
-          icon1: '/icon-techflutter.png',
-          icon2: '/icon-techfirebase.png'
+          title: "Flutter + Firebase",
+          description:
+            "Build scalable apps with Firebase backend. Integrate real-time databases, authentication, cloud functions, and analytics.",
+          icon1: "/icon-techflutter.png",
+          icon2: "/icon-techfirebase.png",
         },
         {
           id: 2,
-          title: 'Flutter + REST APIs',
-          description: 'Develop apps with RESTful services integration. Handle complex API interactions, data serialization, and state management.',
-          icon1: '/icon-techflutter.png',
-          icon2: '/icon-techrestapi.png'
+          title: "Flutter + REST APIs",
+          description:
+            "Develop apps with RESTful services integration. Handle complex API interactions, data serialization, and state management.",
+          icon1: "/icon-techflutter.png",
+          icon2: "/icon-techrestapi.png",
         },
         {
           id: 3,
-          title: 'Flutter + GraphQL',
-          description: 'Create efficient data-driven applications using GraphQL. Optimize network requests and implement real-time features.',
-          icon1: '/icon-techflutter.png',
-          icon2: '/icon-techgraphql.png'
+          title: "Flutter + GraphQL",
+          description:
+            "Create efficient data-driven applications using GraphQL. Optimize network requests and implement real-time features.",
+          icon1: "/icon-techflutter.png",
+          icon2: "/icon-techgraphql.png",
         },
         {
           id: 4,
-          title: 'Flutter + BLoC',
-          description: 'Implement robust state management using BLoC pattern. Build predictable and testable application architecture.',
-          icon1: '/icon-techflutter.png',
-          icon2: '/icon-techbloc.png'
+          title: "Flutter + BLoC",
+          description:
+            "Implement robust state management using BLoC pattern. Build predictable and testable application architecture.",
+          icon1: "/icon-techflutter.png",
+          icon2: "/icon-techbloc.png",
         },
         {
           id: 5,
-          title: 'Flutter + GetX',
-          description: 'Leverage GetX for state, route, and dependency management. Build lightweight and high-performance applications.',
-          icon1: '/icon-techflutter.png',
-          icon2: '/icon-techgetx.png'
+          title: "Flutter + GetX",
+          description:
+            "Leverage GetX for state, route, and dependency management. Build lightweight and high-performance applications.",
+          icon1: "/icon-techflutter.png",
+          icon2: "/icon-techgetx.png",
         },
         {
           id: 6,
-          title: 'Flutter + ML Kit',
-          description: 'Integrate machine learning capabilities with ML Kit. Add features like text recognition, face detection, and image labeling.',
-          icon1: '/icon-techflutter.png',
-          icon2: '/icon-mlkit.png'
+          title: "Flutter + ML Kit",
+          description:
+            "Integrate machine learning capabilities with ML Kit. Add features like text recognition, face detection, and image labeling.",
+          icon1: "/icon-techflutter.png",
+          icon2: "/icon-mlkit.png",
         },
         {
           id: 7,
-          title: 'Flutter + WebRTC',
-          description: 'Build real-time communication apps with WebRTC. Implement video calls, chat, and data sharing functionalities.',
-          icon1:'/icon-techflutter.png',
-          icon2: '/icon-techwebrtc.png'
+          title: "Flutter + WebRTC",
+          description:
+            "Build real-time communication apps with WebRTC. Implement video calls, chat, and data sharing functionalities.",
+          icon1: "/icon-techflutter.png",
+          icon2: "/icon-techwebrtc.png",
         },
         {
           id: 8,
-          title: 'Flutter + SQLite',
-          description: 'Implement local data persistence using SQLite. Create offline-first applications with robust data management.',
-          icon1: '/icon-techflutter.png',
-          icon2: '/icon-sql-server.png'
+          title: "Flutter + SQLite",
+          description:
+            "Implement local data persistence using SQLite. Create offline-first applications with robust data management.",
+          icon1: "/icon-techflutter.png",
+          icon2: "/icon-sql-server.png",
         },
         {
           id: 9,
-          title: 'Flutter + Provider',
-          description: 'Use Provider pattern for efficient state management. Build scalable apps with dependency injection and reactive programming.',
-          icon1: '/icon-techflutter.png',
-          icon2: '/icon-techprovider.png' 
-        }
-      ]
-    }
+          title: "Flutter + Provider",
+          description:
+            "Use Provider pattern for efficient state management. Build scalable apps with dependency injection and reactive programming.",
+          icon1: "/icon-techflutter.png",
+          icon2: "/icon-techprovider.png",
+        },
+      ],
+    },
   },
   "react-native-developer": {
     title: "Hire Best React Native Developer from India | Brandsmashers Tech",
@@ -444,76 +476,86 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "React Native Application Developers",
-        afterHighlight: " from India – Pre-Vetted Experts for Seamless Development"
+        afterHighlight:
+          " from India – Pre-Vetted Experts for Seamless Development",
       },
-      description: "Our React Native developers leverage their expertise to deliver future-ready and highly scalable mobile applications, ensuring top-notch solutions for your business. Hire React Native Developers from Brandsmashers Tech to build cutting-edge apps with seamless performance and innovation.",
+      description:
+        "Our React Native developers leverage their expertise to deliver future-ready and highly scalable mobile applications, ensuring top-notch solutions for your business. Hire React Native Developers from Brandsmashers Tech to build cutting-edge apps with seamless performance and innovation.",
       cardsData: [
         {
           id: 1,
-          title: 'React Native + Redux',
-          description: 'Implement robust state management with Redux. Build predictable app states, manage complex data flows, and enable easy debugging.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techredux.png'
+          title: "React Native + Redux",
+          description:
+            "Implement robust state management with Redux. Build predictable app states, manage complex data flows, and enable easy debugging.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techredux.png",
         },
         {
           id: 2,
-          title: 'React Native + TypeScript',
-          description: 'Develop type-safe applications with TypeScript. Enhance code quality, catch errors early, and improve development experience.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techtypescript.png'
+          title: "React Native + TypeScript",
+          description:
+            "Develop type-safe applications with TypeScript. Enhance code quality, catch errors early, and improve development experience.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techtypescript.png",
         },
         {
           id: 3,
-          title: 'React Native + Firebase',
-          description: 'Build scalable apps with Firebase integration. Implement authentication, real-time database, cloud functions, and analytics.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techfirebase.png'
+          title: "React Native + Firebase",
+          description:
+            "Build scalable apps with Firebase integration. Implement authentication, real-time database, cloud functions, and analytics.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techfirebase.png",
         },
         {
           id: 4,
-          title: 'React Native + GraphQL',
-          description: 'Create efficient data-driven applications using GraphQL. Optimize API calls and implement real-time features with subscriptions.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techgraphql.png'
+          title: "React Native + GraphQL",
+          description:
+            "Create efficient data-driven applications using GraphQL. Optimize API calls and implement real-time features with subscriptions.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techgraphql.png",
         },
         {
           id: 5,
-          title: 'React Native + MobX',
-          description: 'Utilize MobX for simple and scalable state management. Build reactive applications with automatic state tracking.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techmobx.png'
+          title: "React Native + MobX",
+          description:
+            "Utilize MobX for simple and scalable state management. Build reactive applications with automatic state tracking.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techmobx.png",
         },
         {
           id: 6,
-          title: 'React Native + Native Modules',
-          description: 'Extend app capabilities with native modules. Bridge native Android/iOS functionalities for optimal performance.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-react.png'
+          title: "React Native + Native Modules",
+          description:
+            "Extend app capabilities with native modules. Bridge native Android/iOS functionalities for optimal performance.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-react.png",
         },
         {
           id: 7,
-          title: 'React Native + Realm',
-          description: 'Implement efficient local database with Realm. Create offline-first apps with real-time synchronization capabilities.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techrealm.png'
+          title: "React Native + Realm",
+          description:
+            "Implement efficient local database with Realm. Create offline-first apps with real-time synchronization capabilities.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techrealm.png",
         },
         {
           id: 8,
-          title: 'React Native + Socket.IO',
-          description: 'Build real-time applications with Socket.IO. Implement live chat, notifications, and bi-directional communication.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techsocketio.png'
+          title: "React Native + Socket.IO",
+          description:
+            "Build real-time applications with Socket.IO. Implement live chat, notifications, and bi-directional communication.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techsocketio.png",
         },
         {
           id: 9,
-          title: 'React Native + AWS Amplify',
-          description: 'Leverage AWS services with Amplify integration. Add cloud storage, authentication, APIs, and analytics to your app.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-aws.png'
-        }
-      ]
-    }
-   
+          title: "React Native + AWS Amplify",
+          description:
+            "Leverage AWS services with Amplify integration. Add cloud storage, authentication, APIs, and analytics to your app.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-aws.png",
+        },
+      ],
+    },
   },
   "angular-developer": {
     title: "Hire Expert AngularJS Developers from India | Brandsmashers Tech",
@@ -568,78 +610,90 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "Angular Application Developers",
-        afterHighlight: "from India with Expertise in Cross-Platform Development "
+        afterHighlight:
+          "from India with Expertise in Cross-Platform Development ",
       },
-      description: "Build dynamic, high-performance web applications with our skilled AngularJS developers, ensuring scalability and smooth user experiences.",
+      description:
+        "Build dynamic, high-performance web applications with our skilled AngularJS developers, ensuring scalability and smooth user experiences.",
       cardsData: [
         {
           id: 1,
-          title: 'Angular + TypeScript',
-          description: 'Build enterprise applications with TypeScript. Leverage strong typing, decorators, and advanced OOP features for robust development.',
-          icon1: '/icon-angular.png',
-          icon2: '/icon-techtypescript.png'
+          title: "Angular + TypeScript",
+          description:
+            "Build enterprise applications with TypeScript. Leverage strong typing, decorators, and advanced OOP features for robust development.",
+          icon1: "/icon-angular.png",
+          icon2: "/icon-techtypescript.png",
         },
         {
           id: 2,
-          title: 'Angular + RxJS',
-          description: 'Implement reactive programming with RxJS. Handle complex data streams, event management, and asynchronous operations.',
-          icon1: '/icon-angular.png',
-          icon2: '/icon-techrxjs.png'
+          title: "Angular + RxJS",
+          description:
+            "Implement reactive programming with RxJS. Handle complex data streams, event management, and asynchronous operations.",
+          icon1: "/icon-angular.png",
+          icon2: "/icon-techrxjs.png",
         },
         {
           id: 3,
-          title: 'Angular + NgRx',
-          description: 'Manage state with NgRx store. Implement Redux pattern for predictable state management and improved application scalability.',
-          icon1: '/icon-angular.png',
-          icon2: '/icon-techngrx.png'
+          title: "Angular + NgRx",
+          description:
+            "Manage state with NgRx store. Implement Redux pattern for predictable state management and improved application scalability.",
+          icon1: "/icon-angular.png",
+          icon2: "/icon-techngrx.png",
         },
         {
           id: 4,
-          title: 'Angular + Material',
-          description: 'Create beautiful UIs with Angular Material. Build responsive, modern interfaces following Material Design principles.',
-          icon1: '/icon-angular.png',
-          icon2: '/icon-techmobx.png'
+          title: "Angular + Material",
+          description:
+            "Create beautiful UIs with Angular Material. Build responsive, modern interfaces following Material Design principles.",
+          icon1: "/icon-angular.png",
+          icon2: "/icon-techmobx.png",
         },
         {
           id: 5,
-          title: 'Angular + Firebase',
-          description: 'Integrate Firebase backend services. Implement authentication, real-time database, hosting, and cloud functions.',
-          icon1: '/icon-angular.png',
-          icon2: '/icon-techfirebase.png'
+          title: "Angular + Firebase",
+          description:
+            "Integrate Firebase backend services. Implement authentication, real-time database, hosting, and cloud functions.",
+          icon1: "/icon-angular.png",
+          icon2: "/icon-techfirebase.png",
         },
         {
           id: 6,
-          title: 'Angular + GraphQL',
-          description: 'Build efficient APIs with GraphQL integration. Optimize data fetching and implement real-time features with Apollo Client.',
-          icon1: '/icon-angular.png',
-          icon2: '/icon-techgraphql.png'
+          title: "Angular + GraphQL",
+          description:
+            "Build efficient APIs with GraphQL integration. Optimize data fetching and implement real-time features with Apollo Client.",
+          icon1: "/icon-angular.png",
+          icon2: "/icon-techgraphql.png",
         },
         {
           id: 7,
-          title: 'Angular + PWA',
-          description: 'Develop Progressive Web Applications. Create installable, offline-capable web apps with native-like features.',
-          icon1: '/icon-angular.png',
-          icon2: '/icon-techpwa.png'
+          title: "Angular + PWA",
+          description:
+            "Develop Progressive Web Applications. Create installable, offline-capable web apps with native-like features.",
+          icon1: "/icon-angular.png",
+          icon2: "/icon-techpwa.png",
         },
         {
           id: 8,
-          title: 'Angular + Jest',
-          description: 'Implement comprehensive testing with Jest. Write unit tests, integration tests, and ensure code quality.',
-          icon1: '/icon-angular.png',
-          icon2: '/icon-techjest.png'
+          title: "Angular + Jest",
+          description:
+            "Implement comprehensive testing with Jest. Write unit tests, integration tests, and ensure code quality.",
+          icon1: "/icon-angular.png",
+          icon2: "/icon-techjest.png",
         },
         {
           id: 9,
-          title: 'Angular + Nx',
-          description: 'Build monorepo applications with Nx. Create scalable enterprise applications with shared libraries and efficient tooling.',
-          icon1: '/icon-angular.png',
-          icon2: '/icon-technx.png'
-        }
-      ]
-    }
+          title: "Angular + Nx",
+          description:
+            "Build monorepo applications with Nx. Create scalable enterprise applications with shared libraries and efficient tooling.",
+          icon1: "/icon-angular.png",
+          icon2: "/icon-technx.png",
+        },
+      ],
+    },
   },
   "react-js-developer": {
-    title: "HHire ReactJS Developer from India | Build High-Performance React Apps",
+    title:
+      "HHire ReactJS Developer from India | Build High-Performance React Apps",
     description:
       "Hire ReactJS developers from India for robust, scalable, and high-performance web applications. Expert ReactJS development services at competitive rates.",
     buttonText: "Hire React Developer",
@@ -692,75 +746,86 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "ReactJS Developers",
-        afterHighlight: " from India – Pre-Vetted Experts for Seamless Web Development"
+        afterHighlight:
+          " from India – Pre-Vetted Experts for Seamless Web Development",
       },
-      description: "Build dynamic, high-performance web applications with our skilled ReactJS developers. We focus on delivering scalable solutions and smooth, responsive user experiences that align perfectly with your business goals.",
+      description:
+        "Build dynamic, high-performance web applications with our skilled ReactJS developers. We focus on delivering scalable solutions and smooth, responsive user experiences that align perfectly with your business goals.",
       cardsData: [
         {
           id: 1,
-          title: 'React + Redux',
-          description: 'Implement robust state management with Redux. Create predictable state containers, manage complex data flows, and enable powerful debugging.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techredux.png'
+          title: "React + Redux",
+          description:
+            "Implement robust state management with Redux. Create predictable state containers, manage complex data flows, and enable powerful debugging.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techredux.png",
         },
         {
           id: 2,
-          title: 'React + TypeScript',
-          description: 'Build type-safe applications with TypeScript. Enhance code quality, catch errors during development, and improve team collaboration.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techtypescript.png'
+          title: "React + TypeScript",
+          description:
+            "Build type-safe applications with TypeScript. Enhance code quality, catch errors during development, and improve team collaboration.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techtypescript.png",
         },
         {
           id: 3,
-          title: 'React + Next.js',
-          description: 'Create server-side rendered applications with Next.js. Optimize for SEO, improve performance, and enhance user experience.',
-          icon1: '/icon-techreact.png',
-          icon2: '/next-js-developer.png'
+          title: "React + Next.js",
+          description:
+            "Create server-side rendered applications with Next.js. Optimize for SEO, improve performance, and enhance user experience.",
+          icon1: "/icon-techreact.png",
+          icon2: "/next-js-developer.png",
         },
         {
           id: 4,
-          title: 'React + GraphQL',
-          description: 'Build efficient APIs with GraphQL integration. Optimize data fetching and implement real-time features using Apollo Client.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techgraphql.png'
+          title: "React + GraphQL",
+          description:
+            "Build efficient APIs with GraphQL integration. Optimize data fetching and implement real-time features using Apollo Client.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techgraphql.png",
         },
         {
           id: 5,
-          title: 'React + Material UI',
-          description: 'Design beautiful interfaces with Material UI. Create responsive, modern UIs with customizable components and themes.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techmaterialui.png'
+          title: "React + Material UI",
+          description:
+            "Design beautiful interfaces with Material UI. Create responsive, modern UIs with customizable components and themes.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techmaterialui.png",
         },
         {
           id: 6,
-          title: 'React + Tailwind CSS',
-          description: 'Style applications with Tailwind CSS. Build custom designs efficiently with utility-first CSS framework.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techtailwindcss.png'
+          title: "React + Tailwind CSS",
+          description:
+            "Style applications with Tailwind CSS. Build custom designs efficiently with utility-first CSS framework.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techtailwindcss.png",
         },
         {
           id: 7,
-          title: 'React + Firebase',
-          description: 'Integrate Firebase backend services. Implement authentication, real-time database, hosting, and serverless functions.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techfirebase.png'
+          title: "React + Firebase",
+          description:
+            "Integrate Firebase backend services. Implement authentication, real-time database, hosting, and serverless functions.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techfirebase.png",
         },
         {
           id: 8,
-          title: 'React + Testing Library',
-          description: 'Ensure code quality with Testing Library. Write maintainable tests that replicate user behavior and scenarios.',
-         icon1: '/icon-techreact.png',
-          icon2: '/testing.png'
+          title: "React + Testing Library",
+          description:
+            "Ensure code quality with Testing Library. Write maintainable tests that replicate user behavior and scenarios.",
+          icon1: "/icon-techreact.png",
+          icon2: "/testing.png",
         },
         {
           id: 9,
-          title: 'React + Zustand',
-          description: 'Manage state with Zustand. Implement simple yet powerful state management with minimal boilerplate code.',
-          icon1: '/icon-techreact.png',
-          icon2: '/icon-techzustand.png'
-        }
-      ]
-    }
+          title: "React + Zustand",
+          description:
+            "Manage state with Zustand. Implement simple yet powerful state management with minimal boilerplate code.",
+          icon1: "/icon-techreact.png",
+          icon2: "/icon-techzustand.png",
+        },
+      ],
+    },
   },
   "js-developer": {
     title: "Hire Expert JavaScript Developers from India | Brandsmashers Tech",
@@ -815,75 +880,85 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "JavaScript Developers",
-        afterHighlight: " from India – Experts for Robust Web Solutions!"
+        afterHighlight: " from India – Experts for Robust Web Solutions!",
       },
-      description: " Our skilled JavaScript developers are well-versed in the latest technologies and tools to deliver high-quality, scalable web solutions tailored to your business needs.",
+      description:
+        " Our skilled JavaScript developers are well-versed in the latest technologies and tools to deliver high-quality, scalable web solutions tailored to your business needs.",
       cardsData: [
         {
           id: 1,
-          title: 'JavaScript + Node.js',
-          description: 'Build scalable server-side applications with Node.js. Create fast, event-driven backends and RESTful APIs.',
-          icon1: '/icon-techjavascript.png',
-          icon2: '/icon-technodejs.png'
+          title: "JavaScript + Node.js",
+          description:
+            "Build scalable server-side applications with Node.js. Create fast, event-driven backends and RESTful APIs.",
+          icon1: "/icon-techjavascript.png",
+          icon2: "/icon-technodejs.png",
         },
         {
           id: 2,
-          title: 'JavaScript + Express.js',
-          description: 'Develop web applications with Express.js framework. Create robust APIs, handle middleware, and manage routing efficiently.',
-          icon1: '/icon-techjavascript.png',
-          icon2: '/icon-techexpressjs.png'
+          title: "JavaScript + Express.js",
+          description:
+            "Develop web applications with Express.js framework. Create robust APIs, handle middleware, and manage routing efficiently.",
+          icon1: "/icon-techjavascript.png",
+          icon2: "/icon-techexpressjs.png",
         },
         {
           id: 3,
-          title: 'JavaScript + MongoDB',
-          description: 'Implement NoSQL database solutions with MongoDB. Build flexible, scalable data storage with powerful querying capabilities.',
-          icon1: '/icon-techjavascript.png',
-          icon2: '/icon-techmongodb.png'
+          title: "JavaScript + MongoDB",
+          description:
+            "Implement NoSQL database solutions with MongoDB. Build flexible, scalable data storage with powerful querying capabilities.",
+          icon1: "/icon-techjavascript.png",
+          icon2: "/icon-techmongodb.png",
         },
         {
           id: 4,
-          title: 'JavaScript + Vue.js',
-          description: 'Create dynamic front-end applications with Vue.js. Build reactive interfaces with a progressive JavaScript framework.',
-          icon1: '/icon-techjavascript.png',
-          icon2: '/icon-techvue.png'
+          title: "JavaScript + Vue.js",
+          description:
+            "Create dynamic front-end applications with Vue.js. Build reactive interfaces with a progressive JavaScript framework.",
+          icon1: "/icon-techjavascript.png",
+          icon2: "/icon-techvue.png",
         },
         {
           id: 5,
-          title: 'JavaScript + WebSocket',
-          description: 'Implement real-time features with WebSocket. Build bi-directional communication for live updates and notifications.',
-          icon1: '/icon-techjavascript.png',
-          icon2: '/icon-techwebsocket.png'
+          title: "JavaScript + WebSocket",
+          description:
+            "Implement real-time features with WebSocket. Build bi-directional communication for live updates and notifications.",
+          icon1: "/icon-techjavascript.png",
+          icon2: "/icon-techwebsocket.png",
         },
         {
           id: 6,
-          title: 'JavaScript + jQuery',
-          description: 'Enhance web applications with jQuery. Simplify DOM manipulation, event handling, and AJAX interactions.',
-          icon1: '/icon-techjavascript.png',
-          icon2: '/icon-techjquery.png'
+          title: "JavaScript + jQuery",
+          description:
+            "Enhance web applications with jQuery. Simplify DOM manipulation, event handling, and AJAX interactions.",
+          icon1: "/icon-techjavascript.png",
+          icon2: "/icon-techjquery.png",
         },
         {
           id: 7,
-          title: 'JavaScript + Three.js',
-          description: 'Create 3D visualizations with Three.js. Build immersive web experiences and interactive 3D graphics.',
-          icon1: '/icon-techjavascript.png',
-          icon2: '/icon-techthreejs.png'
+          title: "JavaScript + Three.js",
+          description:
+            "Create 3D visualizations with Three.js. Build immersive web experiences and interactive 3D graphics.",
+          icon1: "/icon-techjavascript.png",
+          icon2: "/icon-techthreejs.png",
         },
         {
           id: 8,
-          title: 'JavaScript + D3.js',
-          description: 'Build data visualizations with D3.js. Create interactive charts, graphs, and custom data representations.',
-          icon1: '/icon-techjavascript.png',
-          icon2: '/icon-techd3.png'
+          title: "JavaScript + D3.js",
+          description:
+            "Build data visualizations with D3.js. Create interactive charts, graphs, and custom data representations.",
+          icon1: "/icon-techjavascript.png",
+          icon2: "/icon-techd3.png",
         },
         {
           id: 9,
-          title: 'JavaScript + Jest',
-          description: 'Ensure code quality with Jest testing. Implement comprehensive testing suites for reliable applications.',
-          icon1: '/icon-techjavascript.png',
-          icon2: '/icon-techjest.png'
-        }
-      ]
-    }
+          title: "JavaScript + Jest",
+          description:
+            "Ensure code quality with Jest testing. Implement comprehensive testing suites for reliable applications.",
+          icon1: "/icon-techjavascript.png",
+          icon2: "/icon-techjest.png",
+        },
+      ],
+    },
   },
   "next-js-developer": {
     title: "Hire Expert Next.js Developers from India | Brandsmashers Tech",
@@ -938,77 +1013,88 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "Next.js Developers",
-        afterHighlight: " from India – Pre-Vetted Experts for Seamless Web Development"
+        afterHighlight:
+          " from India – Pre-Vetted Experts for Seamless Web Development",
       },
-      description: "Leverage the power of Next.js with our skilled developers to create fast, SEO-optimized, and scalable web applications. Whether you're building dynamic websites or complex enterprise solutions, our Next.js experts deliver seamless, high-performance experiences that accelerate your business growth.",
+      description:
+        "Leverage the power of Next.js with our skilled developers to create fast, SEO-optimized, and scalable web applications. Whether you're building dynamic websites or complex enterprise solutions, our Next.js experts deliver seamless, high-performance experiences that accelerate your business growth.",
       cardsData: [
         {
           id: 1,
-          title: 'Next.js + TypeScript',
-          description: 'Build type-safe applications with TypeScript integration. Enhance code quality, catch errors early, and improve development workflow.',
-          icon1: '/icon-technextjs.png',
-          icon2: '/icon-techtypescript.png'
+          title: "Next.js + TypeScript",
+          description:
+            "Build type-safe applications with TypeScript integration. Enhance code quality, catch errors early, and improve development workflow.",
+          icon1: "/icon-technextjs.png",
+          icon2: "/icon-techtypescript.png",
         },
         {
           id: 2,
-          title: 'Next.js + Prisma',
-          description: 'Implement robust database operations with Prisma ORM. Create type-safe database queries and efficient data modeling.',
-          icon1: '/icon-technextjs.png',
-          icon2: '/icon-techprisma.png'
+          title: "Next.js + Prisma",
+          description:
+            "Implement robust database operations with Prisma ORM. Create type-safe database queries and efficient data modeling.",
+          icon1: "/icon-technextjs.png",
+          icon2: "/icon-techprisma.png",
         },
         {
           id: 3,
-          title: 'Next.js + tRPC',
-          description: 'Build end-to-end typesafe APIs with tRPC. Create seamless full-stack applications with automatic type inference.',
-          icon1: '/icon-technextjs.png',
-          icon2: '/icon-techtrpc.png'
+          title: "Next.js + tRPC",
+          description:
+            "Build end-to-end typesafe APIs with tRPC. Create seamless full-stack applications with automatic type inference.",
+          icon1: "/icon-technextjs.png",
+          icon2: "/icon-techtrpc.png",
         },
         {
           id: 4,
-          title: 'Next.js + Tailwind CSS',
-          description: 'Style applications efficiently with Tailwind CSS. Create responsive, modern interfaces using utility-first approach.',
-          icon1: '/icon-technextjs.png',
-          icon2: '/icon-techtailwindcss.png'
+          title: "Next.js + Tailwind CSS",
+          description:
+            "Style applications efficiently with Tailwind CSS. Create responsive, modern interfaces using utility-first approach.",
+          icon1: "/icon-technextjs.png",
+          icon2: "/icon-techtailwindcss.png",
         },
         {
           id: 5,
-          title: 'Next.js + Redux Toolkit',
-          description: 'Manage complex state with Redux Toolkit. Implement efficient state management with modern Redux best practices.',
-          icon1: '/icon-technextjs.png',
-          icon2: '/icon-techredux.png'
+          title: "Next.js + Redux Toolkit",
+          description:
+            "Manage complex state with Redux Toolkit. Implement efficient state management with modern Redux best practices.",
+          icon1: "/icon-technextjs.png",
+          icon2: "/icon-techredux.png",
         },
         {
           id: 6,
-          title: 'Next.js + Vercel',
-          description: 'Deploy and scale applications with Vercel. Utilize serverless functions, edge computing, and global CDN.',
-         icon1: '/icon-technextjs.png',
-          icon2: '/icon-techvercel.png'
+          title: "Next.js + Vercel",
+          description:
+            "Deploy and scale applications with Vercel. Utilize serverless functions, edge computing, and global CDN.",
+          icon1: "/icon-technextjs.png",
+          icon2: "/icon-techvercel.png",
         },
         {
           id: 7,
-          title: 'Next.js + Auth.js',
-          description: 'Implement authentication with Auth.js (NextAuth). Add secure, flexible authentication with multiple providers.',
-          icon1: '/icon-technextjs.png',
-          icon2: '/icon-techauthjs.png'
+          title: "Next.js + Auth.js",
+          description:
+            "Implement authentication with Auth.js (NextAuth). Add secure, flexible authentication with multiple providers.",
+          icon1: "/icon-technextjs.png",
+          icon2: "/icon-techauthjs.png",
         },
         {
           id: 8,
-          title: 'Next.js + React Query',
-          description: 'Manage server state with React Query. Handle caching, synchronization, and real-time data updates efficiently.',
-          icon1: '/icon-technextjs.png',
-          icon2: '/icon-techreactquery.png'
+          title: "Next.js + React Query",
+          description:
+            "Manage server state with React Query. Handle caching, synchronization, and real-time data updates efficiently.",
+          icon1: "/icon-technextjs.png",
+          icon2: "/icon-techreactquery.png",
         },
         {
           id: 9,
-          title: 'Next.js + Jest/Testing Library',
-          description: 'Ensure application quality with comprehensive testing. Implement unit, integration, and end-to-end tests.',
-          icon1: '/icon-technextjs.png',
-          icon2: '/icon-techjest.png'
-        }
-      ]
-    }
+          title: "Next.js + Jest/Testing Library",
+          description:
+            "Ensure application quality with comprehensive testing. Implement unit, integration, and end-to-end tests.",
+          icon1: "/icon-technextjs.png",
+          icon2: "/icon-techjest.png",
+        },
+      ],
+    },
   },
-  
+
   "laravel-developer": {
     title: "Hire Expert Laravel Developers from India | Brandsmashers Tech",
     description:
@@ -1062,75 +1148,86 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "Laravel Developers",
-        afterHighlight: " from India – Experts in Building Scalable & Secure Web Applications"
+        afterHighlight:
+          " from India – Experts in Building Scalable & Secure Web Applications",
       },
-      description: "Get top Laravel developers to build secure, high-performance web applications tailored to your business needs. Experience seamless development with expert solutions.",
+      description:
+        "Get top Laravel developers to build secure, high-performance web applications tailored to your business needs. Experience seamless development with expert solutions.",
       cardsData: [
         {
           id: 1,
-          title: 'Laravel + Vue.js',
-          description: 'Create dynamic single-page applications with Vue.js integration. Build reactive interfaces with Laravel\'s preferred front-end framework.',
-          icon1: '/icon-techlaravel.png',
-          icon2: '/icon-techvue.png'
+          title: "Laravel + Vue.js",
+          description:
+            "Create dynamic single-page applications with Vue.js integration. Build reactive interfaces with Laravel's preferred front-end framework.",
+          icon1: "/icon-techlaravel.png",
+          icon2: "/icon-techvue.png",
         },
         {
           id: 2,
-          title: 'Laravel + Livewire',
-          description: 'Build dynamic interfaces without writing JavaScript. Create full-stack applications with real-time functionality using Livewire.',
-          icon1: '/icon-techlaravel.png',
-          icon2: '/icon-techlivewire.png'
+          title: "Laravel + Livewire",
+          description:
+            "Build dynamic interfaces without writing JavaScript. Create full-stack applications with real-time functionality using Livewire.",
+          icon1: "/icon-techlaravel.png",
+          icon2: "/icon-techlivewire.png",
         },
         {
           id: 3,
-          title: 'Laravel + MySQL',
-          description: 'Implement robust database solutions with MySQL. Utilize Eloquent ORM for efficient database operations and relationships.',
-          icon1: '/icon-techlaravel.png',
-          icon2: '/icon-techmysql.png'
+          title: "Laravel + MySQL",
+          description:
+            "Implement robust database solutions with MySQL. Utilize Eloquent ORM for efficient database operations and relationships.",
+          icon1: "/icon-techlaravel.png",
+          icon2: "/icon-techmysql.png",
         },
         {
           id: 4,
-          title: 'Laravel + Redis',
-          description: 'Enhance application performance with Redis caching. Implement queue systems and real-time features efficiently.',
-          icon1: '/icon-techlaravel.png',
-          icon2: '/icon-techredis.png'
+          title: "Laravel + Redis",
+          description:
+            "Enhance application performance with Redis caching. Implement queue systems and real-time features efficiently.",
+          icon1: "/icon-techlaravel.png",
+          icon2: "/icon-techredis.png",
         },
         {
           id: 5,
-          title: 'Laravel + Docker',
-          description: 'Containerize applications with Docker integration. Create consistent development and deployment environments.',
-          icon1: '/icon-techlaravel.png',
-          icon2: '/icon-techdocker.png'
+          title: "Laravel + Docker",
+          description:
+            "Containerize applications with Docker integration. Create consistent development and deployment environments.",
+          icon1: "/icon-techlaravel.png",
+          icon2: "/icon-techdocker.png",
         },
         {
           id: 6,
-          title: 'Laravel + Tailwind CSS',
-          description: 'Style applications with Tailwind CSS framework. Build modern, responsive interfaces using utility-first approach.',
-          icon1: '/icon-techlaravel.png',
-          icon2: '/icon-techtailwindcss.png'
+          title: "Laravel + Tailwind CSS",
+          description:
+            "Style applications with Tailwind CSS framework. Build modern, responsive interfaces using utility-first approach.",
+          icon1: "/icon-techlaravel.png",
+          icon2: "/icon-techtailwindcss.png",
         },
         {
           id: 7,
-          title: 'Laravel + PHPUnit',
-          description: 'Ensure code quality with PHPUnit testing. Implement comprehensive testing suites for reliable applications.',
-          icon1: '/icon-techlaravel.png',
-          icon2: '/icon-techphpunit.png'
+          title: "Laravel + PHPUnit",
+          description:
+            "Ensure code quality with PHPUnit testing. Implement comprehensive testing suites for reliable applications.",
+          icon1: "/icon-techlaravel.png",
+          icon2: "/icon-techphpunit.png",
         },
         {
           id: 8,
-          title: 'Laravel + AWS',
-          description: 'Deploy and scale applications on AWS. Utilize cloud services for storage, queuing, and serverless functions.',
-          icon1: '/icon-techlaravel.png',
-          icon2: '/icon-techaws.png'
+          title: "Laravel + AWS",
+          description:
+            "Deploy and scale applications on AWS. Utilize cloud services for storage, queuing, and serverless functions.",
+          icon1: "/icon-techlaravel.png",
+          icon2: "/icon-techaws.png",
         },
         {
           id: 9,
-          title: 'Laravel + Sanctum',
-          description: 'Implement secure authentication with Sanctum. Build token-based APIs and SPAs with robust security features.',
-          icon1: '/icon-techlaravel.png',
-          icon2: '/icon-techsanctum.png'
-        }
-      ]
-    }
+          title: "Laravel + Sanctum",
+          description:
+            "Implement secure authentication with Sanctum. Build token-based APIs and SPAs with robust security features.",
+          icon1: "/icon-techlaravel.png",
+          icon2: "/icon-techsanctum.png",
+        },
+      ],
+    },
   },
   "node-js-developer": {
     title: "Hire Expert Node.js Developers from India | Brandsmashers Tech",
@@ -1186,75 +1283,86 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "Node.js Developers",
-        afterHighlight: " from India – Experts in Building Scalable & High-Performance Applications"
+        afterHighlight:
+          " from India – Experts in Building Scalable & High-Performance Applications",
       },
-      description: "Get top Node.js developers to build secure, scalable backend solutions tailored to your business needs. Experience seamless development with expert solutions.",
+      description:
+        "Get top Node.js developers to build secure, scalable backend solutions tailored to your business needs. Experience seamless development with expert solutions.",
       cardsData: [
         {
           id: 1,
-          title: 'Node.js + Express',
-          description: 'Build robust web applications with Express framework. Create RESTful APIs, handle middleware, and implement secure routing.',
-          icon1: '/icon-technodejs.png',
-          icon2: '/icon-techexpressjs.png'
+          title: "Node.js + Express",
+          description:
+            "Build robust web applications with Express framework. Create RESTful APIs, handle middleware, and implement secure routing.",
+          icon1: "/icon-technodejs.png",
+          icon2: "/icon-techexpressjs.png",
         },
         {
           id: 2,
-          title: 'Node.js + MongoDB',
-          description: 'Implement NoSQL database solutions with MongoDB. Create flexible, scalable data storage with Mongoose ODM integration.',
-          icon1: '/icon-technodejs.png',
-          icon2: '/icon-techmongodb.png'
+          title: "Node.js + MongoDB",
+          description:
+            "Implement NoSQL database solutions with MongoDB. Create flexible, scalable data storage with Mongoose ODM integration.",
+          icon1: "/icon-technodejs.png",
+          icon2: "/icon-techmongodb.png",
         },
         {
           id: 3,
-          title: 'Node.js + PostgreSQL',
-          description: 'Build reliable database systems with PostgreSQL. Utilize Sequelize ORM for efficient relational data management.',
-          icon1: '/icon-technodejs.png',
-          icon2: '/icon-techpostgresql.png'
+          title: "Node.js + PostgreSQL",
+          description:
+            "Build reliable database systems with PostgreSQL. Utilize Sequelize ORM for efficient relational data management.",
+          icon1: "/icon-technodejs.png",
+          icon2: "/icon-techpostgresql.png",
         },
         {
           id: 4,
-          title: 'Node.js + Socket.IO',
-          description: 'Create real-time applications with Socket.IO. Build chat systems, live dashboards, and collaborative features.',
-          icon1: '/icon-technodejs.png',
-          icon2: '/icon-techsocketio.png'
+          title: "Node.js + Socket.IO",
+          description:
+            "Create real-time applications with Socket.IO. Build chat systems, live dashboards, and collaborative features.",
+          icon1: "/icon-technodejs.png",
+          icon2: "/icon-techsocketio.png",
         },
         {
           id: 5,
-          title: 'Node.js + GraphQL',  
-          description: 'Build efficient APIs with GraphQL. Optimize data fetching and implement flexible query capabilities.',
-          icon1: '/icon-technodejs.png',
-          icon2: '/icon-techgraphql.png'
+          title: "Node.js + GraphQL",
+          description:
+            "Build efficient APIs with GraphQL. Optimize data fetching and implement flexible query capabilities.",
+          icon1: "/icon-technodejs.png",
+          icon2: "/icon-techgraphql.png",
         },
         {
           id: 6,
-          title: 'Node.js + Redis',
-          description: 'Enhance performance with Redis caching. Implement session management, caching, and real-time features.',
-          icon1: '/icon-technodejs.png',
-          icon2: '/icon-techredis.png'
+          title: "Node.js + Redis",
+          description:
+            "Enhance performance with Redis caching. Implement session management, caching, and real-time features.",
+          icon1: "/icon-technodejs.png",
+          icon2: "/icon-techredis.png",
         },
         {
           id: 7,
-          title: 'Node.js + Microservices',
-          description: 'Build distributed systems with microservices architecture. Create scalable and maintainable service-oriented applications.',
-          icon1: '/icon-technodejs.png',
-          icon2: '/icon-techmicroservices.png'
+          title: "Node.js + Microservices",
+          description:
+            "Build distributed systems with microservices architecture. Create scalable and maintainable service-oriented applications.",
+          icon1: "/icon-technodejs.png",
+          icon2: "/icon-techmicroservices.png",
         },
         {
           id: 8,
-          title: 'Node.js + Docker',
-          description: 'Containerize applications with Docker. Create consistent development and deployment environments.',
-          icon1: '/icon-technodejs.png',
-          icon2: '/icon-techdocker.png'
+          title: "Node.js + Docker",
+          description:
+            "Containerize applications with Docker. Create consistent development and deployment environments.",
+          icon1: "/icon-technodejs.png",
+          icon2: "/icon-techdocker.png",
         },
         {
           id: 9,
-          title: 'Node.js + AWS',
-          description: 'Deploy and scale on AWS infrastructure. Utilize serverless functions, cloud storage, and managed services.',
-          icon1: '/icon-technodejs.png',
-          icon2: '/icon-techaws.png'
-        }
-      ]
-    }
+          title: "Node.js + AWS",
+          description:
+            "Deploy and scale on AWS infrastructure. Utilize serverless functions, cloud storage, and managed services.",
+          icon1: "/icon-technodejs.png",
+          icon2: "/icon-techaws.png",
+        },
+      ],
+    },
   },
   "python-developer": {
     title: "Hire Expert Python Developers from India | Brandsmashers Tech",
@@ -1310,75 +1418,86 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "Python Developers",
-        afterHighlight: " from India – Experts in Building Scalable & Data-Driven Applications"
+        afterHighlight:
+          " from India – Experts in Building Scalable & Data-Driven Applications",
       },
-      description: "Get top Python developers to build powerful, efficient solutions tailored to your business needs. Experience seamless development with expert solutions in web, data science, and automation.",
+      description:
+        "Get top Python developers to build powerful, efficient solutions tailored to your business needs. Experience seamless development with expert solutions in web, data science, and automation.",
       cardsData: [
         {
           id: 1,
-          title: 'Python + Django',
-          description: 'Build robust web applications with Django framework. Create secure, scalable backends with built-in admin interface and ORM capabilities.',
-          icon1: '/icon-techpython.png',
-          icon2: '/icon-techdjango.png'
+          title: "Python + Django",
+          description:
+            "Build robust web applications with Django framework. Create secure, scalable backends with built-in admin interface and ORM capabilities.",
+          icon1: "/icon-techpython.png",
+          icon2: "/icon-techdjango.png",
         },
         {
           id: 2,
-          title: 'Python + Flask',
-          description: 'Develop lightweight web applications with Flask. Create RESTful APIs, microservices, and flexible routing with minimal framework overhead.',
-          icon1: '/icon-techpython.png',
-          icon2: '/icon-techflask.png'
+          title: "Python + Flask",
+          description:
+            "Develop lightweight web applications with Flask. Create RESTful APIs, microservices, and flexible routing with minimal framework overhead.",
+          icon1: "/icon-techpython.png",
+          icon2: "/icon-techflask.png",
         },
         {
           id: 3,
-          title: 'Python + PostgreSQL',
-          description: 'Build reliable database systems with PostgreSQL. Utilize SQLAlchemy ORM for efficient relational data management and complex queries.',
-          icon1: '/icon-techpython.png',
-          icon2: '/icon-techpostgresql.png'
+          title: "Python + PostgreSQL",
+          description:
+            "Build reliable database systems with PostgreSQL. Utilize SQLAlchemy ORM for efficient relational data management and complex queries.",
+          icon1: "/icon-techpython.png",
+          icon2: "/icon-techpostgresql.png",
         },
         {
           id: 4,
-          title: 'Python + Data Science',
-          description: 'Leverage NumPy, Pandas, and Scikit-learn for data analysis and machine learning. Build predictive models and data visualization solutions.',
-          icon1: '/icon-techpython.png',
-          icon2: '/icon-techdatascience.png'
+          title: "Python + Data Science",
+          description:
+            "Leverage NumPy, Pandas, and Scikit-learn for data analysis and machine learning. Build predictive models and data visualization solutions.",
+          icon1: "/icon-techpython.png",
+          icon2: "/icon-techdatascience.png",
         },
         {
           id: 5,
-          title: 'Python + FastAPI',
-          description: 'Create high-performance APIs with FastAPI. Build async-capable endpoints with automatic OpenAPI documentation and type validation.',
-          icon1: '/icon-techpython.png',
-          icon2: '/icon-techfastapi.png'
+          title: "Python + FastAPI",
+          description:
+            "Create high-performance APIs with FastAPI. Build async-capable endpoints with automatic OpenAPI documentation and type validation.",
+          icon1: "/icon-techpython.png",
+          icon2: "/icon-techfastapi.png",
         },
         {
           id: 6,
-          title: 'Python + Redis',
-          description: 'Enhance application performance with Redis caching. Implement session management, task queues, and real-time features.',
-          icon1: '/icon-techpython.png',
-          icon2: '/icon-techredis.png'
+          title: "Python + Redis",
+          description:
+            "Enhance application performance with Redis caching. Implement session management, task queues, and real-time features.",
+          icon1: "/icon-techpython.png",
+          icon2: "/icon-techredis.png",
         },
         {
           id: 7,
-          title: 'Python + Microservices',
-          description: 'Build distributed systems with microservices architecture. Create scalable applications using FastAPI or Flask with Docker integration.',
-          icon1: '/icon-techpython.png',
-          icon2: '/icon-techmicroservices.png'
+          title: "Python + Microservices",
+          description:
+            "Build distributed systems with microservices architecture. Create scalable applications using FastAPI or Flask with Docker integration.",
+          icon1: "/icon-techpython.png",
+          icon2: "/icon-techmicroservices.png",
         },
         {
           id: 8,
-          title: 'Python + Docker',
-          description: 'Containerize applications with Docker. Ensure consistent deployment across environments and simplify development workflows.',
-          icon1: '/icon-techpython.png',
-          icon2: '/icon-techdocker.png'
+          title: "Python + Docker",
+          description:
+            "Containerize applications with Docker. Ensure consistent deployment across environments and simplify development workflows.",
+          icon1: "/icon-techpython.png",
+          icon2: "/icon-techdocker.png",
         },
         {
           id: 9,
-          title: 'Python + AWS',
-          description: 'Deploy and scale on AWS infrastructure. Utilize Lambda functions, S3 storage, and other cloud services for serverless applications.',
-          icon1: '/icon-techpython.png',
-          icon2: '/icon-techaws.png'
-        }
-      ]
-    }
+          title: "Python + AWS",
+          description:
+            "Deploy and scale on AWS infrastructure. Utilize Lambda functions, S3 storage, and other cloud services for serverless applications.",
+          icon1: "/icon-techpython.png",
+          icon2: "/icon-techaws.png",
+        },
+      ],
+    },
   },
   "dotnet-developer": {
     title: "Hire .Net Developer from India | Enterprise-Grade .NET Solutions",
@@ -1433,79 +1552,91 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: ".NET Developers",
-        afterHighlight: " from India – Experts in Building Enterprise-Grade & Cloud-Native Applications"
+        afterHighlight:
+          " from India – Experts in Building Enterprise-Grade & Cloud-Native Applications",
       },
-      description: "Get top .NET developers to build secure, scalable enterprise solutions tailored to your business needs. Experience seamless development with expert solutions in web, cloud, and microservices.",
+      description:
+        "Get top .NET developers to build secure, scalable enterprise solutions tailored to your business needs. Experience seamless development with expert solutions in web, cloud, and microservices.",
       cardsData: [
         {
           id: 1,
-          title: '.NET + ASP.NET Core',
-          description: 'Build modern web applications with ASP.NET Core. Create high-performance APIs, MVC applications, and Razor Pages with cross-platform compatibility.',
-          icon1: '/social.png',
-          icon2: '/icon-techaspmet.png'
+          title: ".NET + ASP.NET Core",
+          description:
+            "Build modern web applications with ASP.NET Core. Create high-performance APIs, MVC applications, and Razor Pages with cross-platform compatibility.",
+          icon1: "/social.png",
+          icon2: "/icon-techaspmet.png",
         },
         {
           id: 2,
-          title: '.NET + Entity Framework',
-          description: 'Implement robust data access with Entity Framework Core. Create efficient database operations with code-first approach and LINQ integration.',
-          icon1: '/social.png',
-          icon2: '/framework.png'
+          title: ".NET + Entity Framework",
+          description:
+            "Implement robust data access with Entity Framework Core. Create efficient database operations with code-first approach and LINQ integration.",
+          icon1: "/social.png",
+          icon2: "/framework.png",
         },
         {
           id: 3,
-          title: '.NET + SQL Server',
-          description: 'Build enterprise-grade database solutions with SQL Server. Utilize stored procedures, transactions, and advanced querying capabilities.',
-          icon1: '/social.png',
-          icon2: '/icon-techmysql.png'
+          title: ".NET + SQL Server",
+          description:
+            "Build enterprise-grade database solutions with SQL Server. Utilize stored procedures, transactions, and advanced querying capabilities.",
+          icon1: "/social.png",
+          icon2: "/icon-techmysql.png",
         },
         {
           id: 4,
-          title: '.NET + Blazor',
-          description: 'Create interactive web UIs with Blazor. Build single-page applications using C# instead of JavaScript for both client and server.',
-          icon1: '/social.png',
-          icon2: '/icon-techblazor.png'
+          title: ".NET + Blazor",
+          description:
+            "Create interactive web UIs with Blazor. Build single-page applications using C# instead of JavaScript for both client and server.",
+          icon1: "/social.png",
+          icon2: "/icon-techblazor.png",
         },
         {
           id: 5,
-          title: '.NET + Azure',
-          description: 'Deploy and scale applications on Azure cloud. Leverage App Services, Azure Functions, and managed services for cloud-native solutions.',
-          icon1: '/social.png',
-          icon2: '/icon-techazure.png'
+          title: ".NET + Azure",
+          description:
+            "Deploy and scale applications on Azure cloud. Leverage App Services, Azure Functions, and managed services for cloud-native solutions.",
+          icon1: "/social.png",
+          icon2: "/icon-techazure.png",
         },
         {
           id: 6,
-          title: '.NET + Microservices',
-          description: 'Build distributed systems using microservices architecture. Create scalable, containerized services with service mesh integration.',
-          icon1: '/social.png',
-          icon2: '/icon-techmicroservices.png'
+          title: ".NET + Microservices",
+          description:
+            "Build distributed systems using microservices architecture. Create scalable, containerized services with service mesh integration.",
+          icon1: "/social.png",
+          icon2: "/icon-techmicroservices.png",
         },
         {
           id: 7,
-          title: '.NET + SignalR',
-          description: 'Implement real-time features with SignalR. Build chat applications, live dashboards, and collaborative features with WebSocket support.',
-          icon1: '/social.png',
-          icon2: '/icon-techsignalr.png'
+          title: ".NET + SignalR",
+          description:
+            "Implement real-time features with SignalR. Build chat applications, live dashboards, and collaborative features with WebSocket support.",
+          icon1: "/social.png",
+          icon2: "/icon-techsignalr.png",
         },
         {
           id: 8,
-          title: '.NET + Docker',
-          description: 'Containerize applications with Docker. Create consistent development and deployment environments across different platforms.',
-          icon1: '/social.png',
-          icon2: '/icon-techdocker.png'
+          title: ".NET + Docker",
+          description:
+            "Containerize applications with Docker. Create consistent development and deployment environments across different platforms.",
+          icon1: "/social.png",
+          icon2: "/icon-techdocker.png",
         },
         {
           id: 9,
-          title: '.NET + Xamarin',
-          description: 'Build cross-platform mobile applications with Xamarin. Create native iOS and Android apps using shared C# codebase and .NET features.',
-          icon1: '/social.png',
-          icon2: '/icon-techxamari.png'
-        }
-      ]
-    }
+          title: ".NET + Xamarin",
+          description:
+            "Build cross-platform mobile applications with Xamarin. Create native iOS and Android apps using shared C# codebase and .NET features.",
+          icon1: "/social.png",
+          icon2: "/icon-techxamari.png",
+        },
+      ],
+    },
   },
   "php-developer": {
     title: "Hire PHP Developer from India | Expert Custom PHP Development",
-    description:" Hire PHP developers from India for secure, scalable, and custom web development. Get expert PHP solutions tailored to your business needs.",
+    description:
+      " Hire PHP developers from India for secure, scalable, and custom web development. Get expert PHP solutions tailored to your business needs.",
     buttonText: "Hire php Developer",
     services: {
       mainTitle: "Hire Skilled PHP Developers to Drive Your Business Growth",
@@ -1555,81 +1686,92 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "PHP Developers",
-        afterHighlight: " from India Experts in Building Dynamic & Robust Web Applications"
+        afterHighlight:
+          " from India Experts in Building Dynamic & Robust Web Applications",
       },
-      description: "Get top PHP developers to build secure, scalable web solutions tailored to your business needs. Experience seamless development with expert solutions in CMS, e-commerce, and custom applications.",
+      description:
+        "Get top PHP developers to build secure, scalable web solutions tailored to your business needs. Experience seamless development with expert solutions in CMS, e-commerce, and custom applications.",
       cardsData: [
         {
           id: 1,
-          title: 'PHP + Laravel',
-          description: 'Build elegant web applications with Laravel framework. Create secure, maintainable solutions with MVC architecture, Eloquent ORM, and Blade templating.',
-          icon1: '/php.png',
-          icon2: '/icon-techlaravel.png'
+          title: "PHP + Laravel",
+          description:
+            "Build elegant web applications with Laravel framework. Create secure, maintainable solutions with MVC architecture, Eloquent ORM, and Blade templating.",
+          icon1: "/php.png",
+          icon2: "/icon-techlaravel.png",
         },
         {
           id: 2,
-          title: 'PHP + Symfony',
-          description: 'Develop enterprise-grade applications with Symfony framework. Utilize reusable components, Doctrine ORM, and robust security features.',
-          icon1: '/php.png',
-          icon2: '/icon-techsymphony.png'
+          title: "PHP + Symfony",
+          description:
+            "Develop enterprise-grade applications with Symfony framework. Utilize reusable components, Doctrine ORM, and robust security features.",
+          icon1: "/php.png",
+          icon2: "/icon-techsymphony.png",
         },
         {
           id: 3,
-          title: 'PHP + MySQL',
-          description: 'Build reliable database systems with MySQL. Implement efficient data management with optimized queries and transaction handling.',
-          icon1: '/php.png',
-          icon2: '/icon-techmysql.png'
+          title: "PHP + MySQL",
+          description:
+            "Build reliable database systems with MySQL. Implement efficient data management with optimized queries and transaction handling.",
+          icon1: "/php.png",
+          icon2: "/icon-techmysql.png",
         },
         {
           id: 4,
-          title: 'PHP + WordPress',
-          description: 'Create custom WordPress solutions. Develop themes, plugins, and extend core functionality for content management systems.',
-          icon1: '/php.png',
-          icon2: '/wordpress.png'
+          title: "PHP + WordPress",
+          description:
+            "Create custom WordPress solutions. Develop themes, plugins, and extend core functionality for content management systems.",
+          icon1: "/php.png",
+          icon2: "/wordpress.png",
         },
         {
           id: 5,
-          title: 'PHP + WooCommerce',
-          description: 'Build e-commerce solutions with WooCommerce. Create custom shopping experiences with payment integrations and inventory management.',
-          icon1: '/php.png',
-          icon2: '/image 124.png'
+          title: "PHP + WooCommerce",
+          description:
+            "Build e-commerce solutions with WooCommerce. Create custom shopping experiences with payment integrations and inventory management.",
+          icon1: "/php.png",
+          icon2: "/image 124.png",
         },
         {
           id: 6,
-          title: 'PHP + Redis',
-          description: 'Enhance performance with Redis caching. Implement session management, caching layers, and real-time features for faster applications.',
-          icon1: '/php.png',
-          icon2: '/icon-techredis.png'
+          title: "PHP + Redis",
+          description:
+            "Enhance performance with Redis caching. Implement session management, caching layers, and real-time features for faster applications.",
+          icon1: "/php.png",
+          icon2: "/icon-techredis.png",
         },
         {
           id: 7,
-          title: 'PHP + Microservices',
-          description: 'Build distributed systems with microservices architecture. Create scalable and maintainable service-oriented applications with API integration.',
-          icon1: '/php.png',
-          icon2: '/icon-techmicroservices.png'
+          title: "PHP + Microservices",
+          description:
+            "Build distributed systems with microservices architecture. Create scalable and maintainable service-oriented applications with API integration.",
+          icon1: "/php.png",
+          icon2: "/icon-techmicroservices.png",
         },
         {
           id: 8,
-          title: 'PHP + Docker',
-          description: 'Containerize applications with Docker. Ensure consistent development environments and streamline deployment processes.',
-          icon1: '/php.png',
-          icon2: '/icon-techdocker.png'
+          title: "PHP + Docker",
+          description:
+            "Containerize applications with Docker. Ensure consistent development environments and streamline deployment processes.",
+          icon1: "/php.png",
+          icon2: "/icon-techdocker.png",
         },
         {
           id: 9,
-          title: 'PHP + Cloud Platforms',
-          description: 'Deploy and scale on major cloud platforms. Utilize AWS, Google Cloud, or Azure services for robust hosting and scaling solutions.',
-          icon1: '/php.png',
-          icon2: '/cloud.png'
-        }
-      ]
+          title: "PHP + Cloud Platforms",
+          description:
+            "Deploy and scale on major cloud platforms. Utilize AWS, Google Cloud, or Azure services for robust hosting and scaling solutions.",
+          icon1: "/php.png",
+          icon2: "/cloud.png",
+        },
+      ],
     },
   },
-  
 
-  "SEO": {
+  SEO: {
     title: "Hire Best SEO Expert in India | SEO Services for Higher Rankings",
-    description:"Hire SEO specialists from India to boost search rankings, drive organic traffic, and grow your business with expert SEO strategies.",
+    description:
+      "Hire SEO specialists from India to boost search rankings, drive organic traffic, and grow your business with expert SEO strategies.",
     buttonText: "Hire SEO Developer",
     services: {
       mainTitle: "Hire Skilled SEO Experts to Drive Your Business Growth.",
@@ -1676,193 +1818,216 @@ const technologyData = {
       ],
     },
     carousel: {
-      "heading": {
-        "beforeHighlight": "Hire Remote",
-        "highlight": "SEO Developers",
-        "afterHighlight": "from India – Optimize, Rank & Grow Your Business"
+      heading: {
+        beforeHighlight: "Hire Remote",
+        highlight: "SEO Developers",
+        afterHighlight: "from India – Optimize, Rank & Grow Your Business",
       },
-    
-      "description": "Get top SEO developers to build high-performance, search engine-optimized websites and automation solutions. Leverage technical SEO, website speed optimization, structured data, and AI-driven strategies to enhance rankings, drive traffic, and maximize conversions.",
-    
-      "cardsData": [
+
+      description:
+        "Get top SEO developers to build high-performance, search engine-optimized websites and automation solutions. Leverage technical SEO, website speed optimization, structured data, and AI-driven strategies to enhance rankings, drive traffic, and maximize conversions.",
+
+      cardsData: [
         {
-          "id": 1,
-          "title": "Technical SEO & Site Optimization",
-          "description": "Enhance website performance with Core Web Vitals optimization, structured data implementation, and mobile-first indexing strategies.",
-          "icon1": "/seo.png",
-         
+          id: 1,
+          title: "Technical SEO & Site Optimization",
+          description:
+            "Enhance website performance with Core Web Vitals optimization, structured data implementation, and mobile-first indexing strategies.",
+          icon1: "/seo.png",
         },
         {
-          "id": 2,
-          "title": "SEO Automation & AI Integration",
-          "description": "Implement AI-driven SEO automation for content generation, keyword research, and rank tracking using machine learning models.",
-          "icon1": "/seo.png",
-       
+          id: 2,
+          title: "SEO Automation & AI Integration",
+          description:
+            "Implement AI-driven SEO automation for content generation, keyword research, and rank tracking using machine learning models.",
+          icon1: "/seo.png",
         },
         {
-          "id": 3,
-          "title": "Schema Markup & Structured Data",
-          "description": "Boost search visibility with JSON-LD, microdata, and rich snippets to enhance Google rankings and click-through rates.",
-          "icon1": "/seo.png",
-        
+          id: 3,
+          title: "Schema Markup & Structured Data",
+          description:
+            "Boost search visibility with JSON-LD, microdata, and rich snippets to enhance Google rankings and click-through rates.",
+          icon1: "/seo.png",
         },
         {
-          "id": 4,
-          "title": "API & SEO Tool Integrations",
-          "description": "Seamlessly integrate SEO tools like Google Search Console, SEMrush, Ahrefs, and Moz for data-driven insights and automation.",
-          "icon1": "/seo.png",
-       
+          id: 4,
+          title: "API & SEO Tool Integrations",
+          description:
+            "Seamlessly integrate SEO tools like Google Search Console, SEMrush, Ahrefs, and Moz for data-driven insights and automation.",
+          icon1: "/seo.png",
         },
         {
-          "id": 5,
-          "title": "Content Optimization & NLP",
-          "description": "Leverage NLP and AI to create high-quality, search-optimized content that ranks for competitive keywords and improves engagement.",
-          "icon1": "/seo.png",
-        
+          id: 5,
+          title: "Content Optimization & NLP",
+          description:
+            "Leverage NLP and AI to create high-quality, search-optimized content that ranks for competitive keywords and improves engagement.",
+          icon1: "/seo.png",
         },
         {
-          "id": 6,
-          "title": "Page Speed & Core Web Vitals",
-          "description": "Optimize load times with advanced caching, lazy loading, and CDN integration to meet Google's Core Web Vitals standards.",
-          "icon1": "/seo.png",
-         
+          id: 6,
+          title: "Page Speed & Core Web Vitals",
+          description:
+            "Optimize load times with advanced caching, lazy loading, and CDN integration to meet Google's Core Web Vitals standards.",
+          icon1: "/seo.png",
         },
         {
-          "id": 7,
-          "title": "E-Commerce SEO & Marketplace Optimization",
-          "description": "Boost sales and visibility on platforms like Shopify, WooCommerce, and Amazon with structured SEO strategies.",
-          "icon1": "/seo.png",
-        
+          id: 7,
+          title: "E-Commerce SEO & Marketplace Optimization",
+          description:
+            "Boost sales and visibility on platforms like Shopify,  Amazon with structured SEO strategies.",
+          icon1: "/seo.png",
         },
         {
-          "id": 8,
-          "title": "SEO-Optimized Web Development",
-          "description": "Develop websites with clean code, SEO-friendly architecture, and mobile-first design for better indexing and rankings.",
-          "icon1": "/seo.png",
-        
+          id: 8,
+          title: "SEO-Optimized Web Development",
+          description:
+            "Develop websites with clean code, SEO-friendly architecture, and mobile-first design for better indexing and rankings.",
+          icon1: "/seo.png",
         },
         {
-          "id": 9,
-          "title": "Local SEO & Google My Business Optimization",
-          "description": "Improve local search visibility with GMB optimization, citation management, and geo-targeted SEO strategies.",
-          "icon1": "/seo.png",
-     
-        }
-      ]
-    }
-  },
-  "wordpress": {
-    "title": "Hire WordPress Developer from India | Custom WordPress Solutions",
-    "description": "Hire WordPress developers from India to build stunning, high-performance, and SEO-friendly WordPress websites.",
-    "buttonText": "Hire WordPress Developer",
-    "services": {
-      "mainTitle": "Hire Expert WordPress Developers to Elevate Your Online Presence!",
-      "subTitle": "Build dynamic, scalable, and fully customized WordPress websites with our expert developers, ensuring a high-performance web experience and optimized conversions.",
-      "services": [
-        {
-          "title": "Custom WordPress Website Development",
-          "description": "Hire our expert WordPress developers to build a unique and high-performing website from scratch. Our developers specialize in creating fully customized, SEO-friendly WordPress websites tailored to your business needs.",
-          "iconSrc": "/wordpress-techicon.png"
+          id: 9,
+          title: "Local SEO & Google My Business Optimization",
+          description:
+            "Improve local search visibility with GMB optimization, citation management, and geo-targeted SEO strategies.",
+          icon1: "/seo.png",
         },
-        {
-          "title": "WordPress Theme Development & Customization",
-          "description": "Get a visually stunning and fully responsive WordPress theme designed for your brand. We build and customize themes to match your vision, ensuring a modern and professional web presence.",
-          "iconSrc": "/wordpress-techicon.png"
-        },
-        {
-          "title": "WordPress Plugin Development & Integration",
-          "description": "Enhance your website’s functionality with custom plugin development. Our experts create and integrate powerful plugins that improve performance, security, and user engagement.",
-          "iconSrc": "/wordpress-techicon.png"
-        },
-        {
-          "title": "WooCommerce Development for Online Stores",
-          "description": "Launch and grow your eCommerce business with a feature-rich WooCommerce website. We develop secure, scalable, and fully optimized online stores that boost sales and improve user experience.",
-          "iconSrc": "/wordpress-techicon.png"
-        },
-        {
-          "title": "WordPress Speed & Performance Optimization",
-          "description": "Improve website loading speed and overall performance with our optimization services. We fine-tune your WordPress site for fast loading, better user experience, and higher search engine rankings.",
-          "iconSrc": "/wordpress-techicon.png"
-        },
-        {
-          "title": "WordPress Security & Maintenance Services",
-          "description": "Keep your website safe, updated, and running smoothly with our expert maintenance services. We provide regular updates, security audits, and 24/7 support to ensure your site is secure and up-to-date.",
-          "iconSrc": "/wordpress-techicon.png"
-        }
-      ]
+      ],
     },
-    "carousel": {
-      "heading": {
-        "beforeHighlight": "Hire Remote ",
-        "highlight": "WordPress Developers",
-        "afterHighlight": " The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services."
+  },
+  wordpress: {
+    title: "Hire WordPress Developer from India | Custom WordPress Solutions",
+    description:
+      "Hire WordPress developers from India to build stunning, high-performance, and SEO-friendly WordPress websites.",
+    buttonText: "Hire WordPress Developer",
+    services: {
+      mainTitle:
+        "Hire Expert WordPress Developers to Elevate Your Online Presence!",
+      subTitle:
+        "Build dynamic, scalable, and fully customized WordPress websites with our expert developers, ensuring a high-performance web experience and optimized conversions.",
+      services: [
+        {
+          title: "Custom WordPress Website Development",
+          description:
+            "Hire our expert WordPress developers to build a unique and high-performing website from scratch. Our developers specialize in creating fully customized, SEO-friendly WordPress websites tailored to your business needs.",
+          iconSrc: "/wordpress-techicon.png",
+        },
+        {
+          title: "WordPress Theme Development & Customization",
+          description:
+            "Get a visually stunning and fully responsive WordPress theme designed for your brand. We build and customize themes to match your vision, ensuring a modern and professional web presence.",
+          iconSrc: "/wordpress-techicon.png",
+        },
+        {
+          title: "WordPress Plugin Development & Integration",
+          description:
+            "Enhance your website’s functionality with custom plugin development. Our experts create and integrate powerful plugins that improve performance, security, and user engagement.",
+          iconSrc: "/wordpress-techicon.png",
+        },
+        {
+          title: "WooCommerce Development for Online Stores",
+          description:
+            "Launch and grow your eCommerce business with a feature-rich WooCommerce website. We develop secure, scalable, and fully optimized online stores that boost sales and improve user experience.",
+          iconSrc: "/wordpress-techicon.png",
+        },
+        {
+          title: "WordPress Speed & Performance Optimization",
+          description:
+            "Improve website loading speed and overall performance with our optimization services. We fine-tune your WordPress site for fast loading, better user experience, and higher search engine rankings.",
+          iconSrc: "/wordpress-techicon.png",
+        },
+        {
+          title: "WordPress Security & Maintenance Services",
+          description:
+            "Keep your website safe, updated, and running smoothly with our expert maintenance services. We provide regular updates, security audits, and 24/7 support to ensure your site is secure and up-to-date.",
+          iconSrc: "/wordpress-techicon.png",
+        },
+      ],
+    },
+    carousel: {
+      heading: {
+        beforeHighlight: "Hire Remote ",
+        highlight: "WordPress Developers",
+        afterHighlight:
+          " The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services.",
       },
-      "description": "The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services to create a seamless, high-performance website for your business.",
-      "cardsData": [
+      description:
+        "The WordPress platform is a powerful and widely preferred solution for building dynamic, scalable, and feature-rich websites. Explore our range of expert WordPress development services to create a seamless, high-performance website for your business.",
+      cardsData: [
         {
-          "id": 1,
-          "title": "WordPress + ReactJS",
-          "description": "Combine WordPress with ReactJS for high-end web solutions. Our developers build dynamic and highly interactive WordPress websites using the latest JavaScript frameworks.",
-          "icon1": "/wordpress.png",
-          "icon2": "/icon-techlaravel.png"
+          id: 1,
+          title: "WordPress + ReactJS",
+          description:
+            "Combine WordPress with ReactJS for high-end web solutions. Our developers build dynamic and highly interactive WordPress websites using the latest JavaScript frameworks.",
+          icon1: "/wordpress.png",
+          icon2: "/icon-techlaravel.png",
         },
         {
-          "id": 2,
-          "title": "WordPress + Ruby On Rails",
-          "description": "Leverage Ruby on Rails with WordPress to develop highly customized plugins.",
-          "icon1": "/wordpress.png",
-          "icon2": "/icon-techruby.png"
+          id: 2,
+          title: "WordPress + Ruby On Rails",
+          description:
+            "Leverage Ruby on Rails with WordPress to develop highly customized plugins.",
+          icon1: "/wordpress.png",
+          icon2: "/icon-techruby.png",
         },
         {
-          "id": 3,
-          "title": "WordPress + HTML",
-          "description": "Utilize HTML to create a fully customized WordPress site with tailored UI/UX. Our developers use HTML, CSS, and JavaScript to enhance design and functionality.",
-          "icon1": "/wordpress.png",
-          "icon2": "/icon-techmysql.png"
+          id: 3,
+          title: "WordPress + HTML",
+          description:
+            "Utilize HTML to create a fully customized WordPress site with tailored UI/UX. Our developers use HTML, CSS, and JavaScript to enhance design and functionality.",
+          icon1: "/wordpress.png",
+          icon2: "/icon-techmysql.png",
         },
-      ]
-    }
+      ],
+    },
   },
 
-  "shopify": {
+  shopify: {
     title: "Hire Shopify Developer from India | Custom E-commerce Solutions",
-    description:" Hire Shopify developers from India to build custom e-commerce stores. Get expert Shopify development for high-converting online businesses.",
+    description:
+      " Hire Shopify developers from India to build custom e-commerce stores. Get expert Shopify development for high-converting online businesses.",
     buttonText: "Hire Shopify Developer",
     services: {
-      mainTitle: "Hire Expert Shopify Developers to Elevate Your eCommerce Business!",
-      
+      mainTitle:
+        "Hire Expert Shopify Developers to Elevate Your eCommerce Business!",
+
       subTitle:
         "Build high-performing, scalable, and fully customized Shopify stores with our skilled developers, ensuring a seamless shopping experience and optimized sales potential.",
       services: [
         {
           title: "Custom Shopify Store Development",
-          description: "Our expert Shopify developers craft unique, user-friendly, and visually appealing Shopify stores tailored to your brand’s identity, ensuring a seamless shopping experience.",
-          iconSrc: "/android-techicon.png"
+          description:
+            "Our expert Shopify developers craft unique, user-friendly, and visually appealing Shopify stores tailored to your brand’s identity, ensuring a seamless shopping experience.",
+          iconSrc: "/android-techicon.png",
         },
         {
           title: "Shopify Theme Development & Customization",
-          description: "Enhance your store with custom themes and modifications. Our developers ensure mobile responsiveness, fast loading times, and a visually engaging shopping experience.",
-          iconSrc: "/android-techicon.png"
+          description:
+            "Enhance your store with custom themes and modifications. Our developers ensure mobile responsiveness, fast loading times, and a visually engaging shopping experience.",
+          iconSrc: "/android-techicon.png",
         },
         {
           title: "Shopify App Development & Integration",
-          description: "Extend your Shopify stores functionality with custom apps and third-party integrations, from payment gateways to CRM solutions, ensuring smooth business operations.",
-          iconSrc: "/android-techicon.png"
+          description:
+            "Extend your Shopify stores functionality with custom apps and third-party integrations, from payment gateways to CRM solutions, ensuring smooth business operations.",
+          iconSrc: "/android-techicon.png",
         },
         {
           title: "Shopify Migration Services",
-          description: "Seamlessly migrate your existing store from platforms like WooCommerce or Magento to Shopify, ensuring zero data loss, SEO preservation, and enhanced performance.",
-          iconSrc: "/android-techicon.png"
+          description:
+            "Seamlessly migrate your existing store from platforms like WooCommerce or Magento to Shopify, ensuring zero data loss, SEO preservation, and enhanced performance.",
+          iconSrc: "/android-techicon.png",
         },
         {
           title: "Performance Optimization & SEO",
-          description: "Boost your Shopify stores speed and visibility with our optimization services. We enhance load times, improve search engine rankings, and drive organic traffic.",
-          iconSrc: "/android-techicon.png"
+          description:
+            "Boost your Shopify stores speed and visibility with our optimization services. We enhance load times, improve search engine rankings, and drive organic traffic.",
+          iconSrc: "/android-techicon.png",
         },
         {
           title: "Ongoing Shopify Support & Maintenance",
-          description: "Ensure smooth operation with our dedicated Shopify support. We provide regular updates, bug fixes, and feature enhancements to keep your store running efficiently.",
-          iconSrc: "/android-techicon.png"
+          description:
+            "Ensure smooth operation with our dedicated Shopify support. We provide regular updates, bug fixes, and feature enhancements to keep your store running efficiently.",
+          iconSrc: "/android-techicon.png",
         },
       ],
     },
@@ -1870,37 +2035,39 @@ const technologyData = {
       heading: {
         beforeHighlight: "Hire Remote ",
         highlight: "Shopify Developers",
-        afterHighlight: " The Shopify platform is a powerful and widely preferred solution for building high-performing eCommerce stores. Explore our range of expert Shopify development services."
+        afterHighlight:
+          " The Shopify platform is a powerful and widely preferred solution for building high-performing eCommerce stores. Explore our range of expert Shopify development services.",
       },
-      description: "The Shopify platform is a powerful and widely preferred solution for building high-performing eCommerce stores. Explore our range of expert Shopify development services to create a seamless, scalable, and sales-driven online store for your business.",
+      description:
+        "The Shopify platform is a powerful and widely preferred solution for building high-performing eCommerce stores. Explore our range of expert Shopify development services to create a seamless, scalable, and sales-driven online store for your business.",
       cardsData: [
         {
           id: 1,
-          title: 'Shopify + Reactjs',
-          description: 'Our dedicated Shopify developers are proficient in the latest themes, apps, and frameworks to deliver high-performing, conversion-optimized online stores',
-          icon1: '/shopify.png',
-          icon2: '/icon-techlaravel.png'
+          title: "Shopify + Reactjs",
+          description:
+            "Our dedicated Shopify developers are proficient in the latest themes, apps, and frameworks to deliver high-performing, conversion-optimized online stores",
+          icon1: "/shopify.png",
+          icon2: "/icon-techlaravel.png",
         },
         {
           id: 2,
-          title: 'Shopify + Ruby On Rails',
-          description: 'Our dedicated Shopify developers are proficient in the latest themes, apps, and frameworks to deliver high-performing, conversion-optimized online stores.',
-          icon1: '/shopify.png',
-          icon2: '/icon-techruby.png'
+          title: "Shopify + Ruby On Rails",
+          description:
+            "Our dedicated Shopify developers are proficient in the latest themes, apps, and frameworks to deliver high-performing, conversion-optimized online stores.",
+          icon1: "/shopify.png",
+          icon2: "/icon-techruby.png",
         },
         {
           id: 3,
-          title: 'Shopify + HTML',
-          description: 'Leverage HTML to create a fully customized Shopify store with tailored UI/UX',
-          icon1: '/shopify.png',
-          icon2: '/icon-techmysql.png'
+          title: "Shopify + HTML",
+          description:
+            "Leverage HTML to create a fully customized Shopify store with tailored UI/UX",
+          icon1: "/shopify.png",
+          icon2: "/icon-techmysql.png",
         },
-        
-      ]
-    }
+      ],
+    },
   },
-
-
 };
 
 export default function TechnologyDetails() {
@@ -1912,10 +2079,12 @@ export default function TechnologyDetails() {
   useEffect(() => {
     if (router.isReady && router.query.technology) {
       setData(technologyData[router.query.technology] || null);
-      
+
       // GTM Page View Tracking for technology pages
       const technology = router.query.technology;
-      const pageTitle = `${technologyData[technology]?.title || 'Technology Page'} - Brandsmashers Tech`;
+      const pageTitle = `${
+        technologyData[technology]?.title || "Technology Page"
+      } - Brandsmashers Tech`;
       trackTechnologyPageView(technology, pageTitle);
     }
   }, [router.isReady, router.query.technology]);
@@ -1924,7 +2093,7 @@ export default function TechnologyDetails() {
     return (
       <>
         <Navbar />
-       
+
         <Footer />
       </>
     );
@@ -1944,21 +2113,21 @@ export default function TechnologyDetails() {
         buttonText={data.buttonText}
         imageSrc={heroImage}
       />
-       <AndroidHero/>
+      <AndroidHero />
       <Stats />
-     
-       {/* <ServiceGrids/> */}
-       {data.carousel && (
-         <DynamicCarousel
-         heading={data.carousel.heading}
-         title={data.carousel.title}
-         description={data.carousel.description}
-         cardsData={data.carousel.cardsData}
-         />
-        )}
-        <ServiceGrids serviceData={data.services} />
-       {/* <AndroidCarousel/> */}
-      <FAQSection/>
+
+      {/* <ServiceGrids/> */}
+      {data.carousel && (
+        <DynamicCarousel
+          heading={data.carousel.heading}
+          title={data.carousel.title}
+          description={data.carousel.description}
+          cardsData={data.carousel.cardsData}
+        />
+      )}
+      <ServiceGrids serviceData={data.services} />
+      {/* <AndroidCarousel/> */}
+      <FAQSection />
       <Footer />
     </>
   );
