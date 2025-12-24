@@ -1,21 +1,28 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
-import Navbar from '@/components/navbar/navbar';
-import Footer from '@/components/footer/footer';
-import blogPosts from '@/data/blogPosts';
-import SkeletonLoader from '@/components/shared/SkeletonLoader';
+import React, { useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer/footer";
+import blogPosts from "@/data/blogPosts";
+import SkeletonLoader from "@/components/shared/SkeletonLoader";
 
 export default function Blog() {
-  const [selectedCategory, setSelectedCategory] = useState('All Categories');
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [isLoading, setIsLoading] = useState(false);
 
-  const categories = ['All Categories', 'Technology', 'Marketing & Branding', 'Company', 'Solution by Industry'];
+  const categories = [
+    "All Categories",
+    "Technology",
+    "Marketing & Branding",
+    "Company",
+    "Solution by Industry",
+  ];
 
-  const filteredPosts = selectedCategory === 'All Categories' 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
+  const filteredPosts =
+    selectedCategory === "All Categories"
+      ? blogPosts
+      : blogPosts.filter((post) => post.category === selectedCategory);
 
   const handleCategoryChange = (category) => {
     setIsLoading(true);
@@ -27,30 +34,43 @@ export default function Blog() {
     <>
       <Head>
         <title>Blog - Brandsmashers Tech</title>
-        <meta name="description" content="Explore our latest insights on technology, software development, digital marketing, and industry trends." />
+        <meta
+          name="description"
+          content="Explore our latest insights on technology, software development, digital marketing, and industry trends."
+        />
         <meta property="og:title" content="Blog - Brandsmashers Tech" />
-        <meta property="og:description" content="Latest insights on technology, software development, and digital trends." />
+        <meta
+          property="og:description"
+          content="Latest insights on technology, software development, and digital trends."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://brandsmashers.tech/Blog" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">
         <Navbar />
-        
+
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-[#ff5010] to-[#e0450e] text-white py-20">
+        <section className="bg-gradient-to-r from-[#000000] to-[#000000] text-white py-20">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our Blog
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Blog</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Insights, trends, and expert perspectives on technology, software development, and digital innovation
+              Insights, trends, and expert perspectives on technology, software
+              development, and digital innovation
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <span className="bg-white/20 px-4 py-2 rounded-full">Technology</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">Marketing</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">Company</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">Industry</span>
+              <span className="bg-white/20 px-4 py-2 rounded-full">
+                Technology
+              </span>
+              <span className="bg-white/20 px-4 py-2 rounded-full">
+                Marketing
+              </span>
+              <span className="bg-white/20 px-4 py-2 rounded-full">
+                Company
+              </span>
+              <span className="bg-white/20 px-4 py-2 rounded-full">
+                Industry
+              </span>
             </div>
           </div>
         </section>
@@ -59,15 +79,17 @@ export default function Blog() {
         <section className="bg-white py-8 border-b">
           <div className="container mx-auto px-6">
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <span className="text-gray-600 font-medium">Filter by Category:</span>
+              <span className="text-gray-600 font-medium">
+                Filter by Category:
+              </span>
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => handleCategoryChange(category)}
                   className={`px-4 py-2 rounded-lg transition-all duration-300 ${
                     selectedCategory === category
-                      ? 'bg-[#ff5010] text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      ? "bg-[#ff5010] text-white shadow-lg"
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
                   {category}
@@ -93,40 +115,47 @@ export default function Blog() {
                     key={post.id}
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                   >
-                    <div className="relative h-48 bg-gradient-to-br from-[#ff5010] to-[#e0450e] rounded-t-xl flex items-center justify-center overflow-hidden">
+                    <div className="relative h-48 rounded-t-xl overflow-hidden">
                       <Image
                         src={post.image}
                         alt={post.title}
                         fill
-                        className="object-cover opacity-20"
+                        className="object-cover"
                       />
-                      <div className="absolute top-4 left-4 bg-white/20 px-3 py-1 rounded-full text-sm">
+
+                      <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
                         {post.category}
                       </div>
-                      <div className="absolute top-4 right-4 bg-white/20 px-3 py-1 rounded-full text-sm">
+
+                      <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
                         {post.readTime}
                       </div>
                     </div>
-                    
+
                     <div className="p-6">
                       <div className="flex items-center text-sm text-gray-500 mb-3">
                         <span>{post.author}</span>
                         <span className="mx-2">•</span>
-                        <span>{new Date(post.publishDate).toLocaleDateString('en-GB', {
-                          year: 'numeric',
-                          month: '2-digit',
-                          day: '2-digit'
-                        })}</span>
+                        <span>
+                          {new Date(post.publishDate).toLocaleDateString(
+                            "en-GB",
+                            {
+                              year: "numeric",
+                              month: "2-digit",
+                              day: "2-digit",
+                            }
+                          )}
+                        </span>
                       </div>
-                      
+
                       <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2">
                         {post.title}
                       </h3>
-                      
+
                       <p className="text-gray-600 mb-4 line-clamp-3">
                         {post.excerpt}
                       </p>
-                      
+
                       {/* Tags */}
                       <div className="mb-4">
                         <div className="flex flex-wrap gap-2">
@@ -145,14 +174,24 @@ export default function Blog() {
                           )}
                         </div>
                       </div>
-                      
+
                       <Link
                         href={`/blog/${post.slug}`}
                         className="inline-flex items-center px-4 py-2 bg-[#ff5010] text-white rounded-lg hover:bg-[#e0450e] transition-colors duration-300 text-sm"
                       >
                         Read More
-                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <svg
+                          className="ml-2 w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
                         </svg>
                       </Link>
                     </div>
@@ -182,7 +221,8 @@ export default function Blog() {
               Stay Updated
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Subscribe to our newsletter for the latest insights on technology, software development, and industry trends
+              Subscribe to our newsletter for the latest insights on technology,
+              software development, and industry trends
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
