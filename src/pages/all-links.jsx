@@ -167,12 +167,12 @@ export default function BrandsmashersShowcase() {
       },
     },
     {
-      name: "Shilpa Jain",
+      name: "Raksha Kawadkar",
       role: "HR Manager",
-      bio: "Seasoned HR professional with 20+ years of expertise in talent management, employee engagement, and organizational development.",
-      image: "shilpamaamnew.png",
+      bio: "Seasoned HR professional with 3+ years of expertise in talent acquisition, employee engagement, and HR operations. Passionate about fostering positive workplace cultures.",
+      image: "rakshamam.jpeg",
       social: {
-        linkedin: "https://www.linkedin.com/in/shilpa-jain-hrmanager/",
+        linkedin: "https://www.linkedin.com/in/raksha-kawadkar-b79507230/",
       },
     },
     {
