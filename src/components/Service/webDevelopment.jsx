@@ -465,7 +465,7 @@ export default function WebDevelopmentPage() {
             {[
               { value: '200+', label: 'Happy Clients' },
               { value: '500+', label: 'Projects Completed' },
-              { value: '10+', label: 'Years Experience' },
+              { value: '8+', label: 'Years Experience' },
               { value: '50+', label: 'Expert Developers' }
             ].map((item, index) => (
               <div key={index} className="text-center p-6 bg-[#161616] border border-gray-800 rounded-xl shadow-[0_0_20px_#ff572233] hover:shadow-[0_0_25px_#ff572244] transition-shadow duration-300">

@@ -371,7 +371,7 @@ export default function BrandsmashersShowcase() {
               {/* Stats Bar */}
               <div className="grid grid-cols-3 gap-4 max-w-xs sm:max-w-3xl mx-auto">
                 {[
-                  { label: "Years", value: "7+" },
+                  { label: "Years", value: "8+" },
                   { label: "Projects", value: "250+" },
                   { label: "Experts", value: "50+" },
                 ].map((stat, index) => (

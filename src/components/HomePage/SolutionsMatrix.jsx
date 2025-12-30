@@ -67,7 +67,7 @@ export default function StatsCounter() {
           </h3>
 
           <p className="text-gray-700 leading-relaxed text-lg">
-            With over 6+ years of experience, Brandsmashers Tech is a trusted software 
+            With over 8+ years of experience, Brandsmashers Tech is a trusted software 
             development company in India, delivering innovative, custom solutions to 
             drive your growth and prepare you for the future.
           </p>

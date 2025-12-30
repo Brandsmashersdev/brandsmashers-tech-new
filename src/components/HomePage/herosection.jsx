@@ -271,7 +271,7 @@ const HeroSection = () => {
             {/* Stats counter - optimized for Nest Hub */}
             <div className="grid grid-cols-3 gap-3 sm:gap-6 nest-hub:gap-8 nest-hub-max:gap-10 max-w-xs sm:max-w-sm nest-hub:max-w-md nest-hub-max:max-w-lg mx-auto md:mx-0 nest-hub:mx-auto nest-hub-max:mx-auto">
               <div className="text-center">
-                <div className="text-[#ff5010] font-bold text-xl sm:text-2xl md:text-3xl nest-hub:text-2xl nest-hub-max:text-3xl">7+</div>
+                <div className="text-[#ff5010] font-bold text-xl sm:text-2xl md:text-3xl nest-hub:text-2xl nest-hub-max:text-3xl">8+</div>
                 <div className="text-gray-400 text-xs nest-hub:text-sm nest-hub-max:text-base">Years</div>
               </div>
               <div className="text-center">

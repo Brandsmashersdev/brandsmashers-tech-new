@@ -278,7 +278,7 @@ const ITSolutions = () => {
             {[
               { value: "100+", label: "Clients" },
               { value: "250+", label: "Projects Completed" },
-              { value: "7+", label: "Years of Excellence" },
+              { value: "8+", label: "Years of Excellence" },
               { value: "50+", label: "Tech Specialists" }
             ].map((stat, index) => (
               <div

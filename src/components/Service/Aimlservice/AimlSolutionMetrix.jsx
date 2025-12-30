@@ -17,7 +17,7 @@ const AimlSolutionMetrix = () => {
         <StatsComponent 
           className="text-white"
           stats={[
-            { value: 6, label: "Years of Expertise" },
+            { value: 8, label: "Years of Expertise" },
             { value: 95, label: "Timely Deliveries" },
             { value: 20, label: "Markets Worldwide" },
             { value: 50, label: "Global Brands" },
