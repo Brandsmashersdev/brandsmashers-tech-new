@@ -593,7 +593,7 @@ export default function BrandsmashersShowcase() {
 
             <div className="mt-6 pt-6 border-t border-white/10 text-center text-gray-400 text-xs sm:text-sm">
               <p>
-                 © 2026 Brandsmashers Tech. All rights reserved. | Crafted with
+                 © 2026 Brandsmashers Tech.  All rights reserved. |  Crafted with
                 passion and innovation.
               </p>
             </div>
