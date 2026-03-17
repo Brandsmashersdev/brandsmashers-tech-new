@@ -1,46 +1,62 @@
 import React from 'react';
+import Link from "next/link";
 
 const IndustriesPage = () => {
   const industries = [
     {
       title: "Real Estate Solutions",
       description: "Innovative property management, virtual tours, and smart building applications.",
-      icon: "home"
+      icon: "home",
+      link: "/industries/real-estate",
     },
     {
       title: "Retail Solutions",
       description: "End-to-end e-commerce platforms, inventory management, and customer loyalty systems.",
-      icon: "shopping-bag"
+      icon: "shopping-bag",
+      link: "/industries/retail",
+
     },
     {
       title: "Automotive Solutions",
       description: "Vehicle management, dealer platforms, and connected car applications.",
-      icon: "car"
+      icon: "car",
+      link: "/industries/automotive",
+
     },
     {
       title: "E.V. Industry Solutions",
       description: "Charging infrastructure software, battery management, and fleet monitoring systems.",
-      icon: "bolt"
+      icon: "bolt",
+      link: "/industries/ev",
+
     },
     {
       title: "Cloud Solutions",
       description: "Scalable cloud infrastructure, migration services, and managed cloud solutions.",
-      icon: "cloud"
+      icon: "cloud",
+      link: "/industries/cloud",
+
     },
     {
       title: "Healthcare Solutions",
       description: "Patient management systems, telemedicine platforms, and healthcare analytics.",
-      icon: "heart"
+      icon: "heart",
+      link: "/industries/healthcare",
+
     },
     {
       title: "Education Solutions",
       description: "Learning management systems, virtual classrooms, and educational content platforms.",
-      icon: "book"
+      icon: "book",
+      link: "/industries/education",
+
     },
     {
       title: "Finance IT Solutions",
       description: "Financial management software, payment processing, and fintech solutions.",
-      icon: "dollar-sign"
+      icon: "dollar-sign",
+      link: "/industries/finance",
+
     }
   ];
 
@@ -157,8 +173,8 @@ const IndustriesPage = () => {
               </div>
               <h3 className="text-lg font-medium mb-3">{industry.title}</h3>
               <p className="text-gray-400 text-sm mb-6">{industry.description}</p>
-              <a 
-                href="#" 
+              <Link 
+                href={industry.link || "/industries"} 
                 className="text-gray-400 text-sm flex items-center hover:text-ff5010 transition-colors"
                 style={{ color: '#gray-400' }}
               >
@@ -166,7 +182,7 @@ const IndustriesPage = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

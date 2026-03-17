@@ -421,7 +421,7 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {[
-        { value: '200+', label: 'Apps Delivered' },
+        { value: '500+', label: 'Apps Delivered' },
         { value: '50+', label: 'Tech Experts' },
 
         { value: '8+', label: 'Years Experience' },

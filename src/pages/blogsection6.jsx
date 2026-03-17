@@ -1,4 +1,4 @@
-import Blogsection6 from "@/components/Company/Blogsection6";
+import Blogsection6 from "@/components/Company/blogsection6";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import React from "react";

@@ -1,5 +1,5 @@
 
-import BlogSection1 from "@/components/Company/BlogSection1";
+import BlogSection1 from "@/components/Company/blogsection1";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import React, { useEffect } from "react";

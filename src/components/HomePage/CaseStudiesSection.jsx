@@ -91,7 +91,7 @@ const CaseStudiesSection = () => {
             href="/case-studies"
             className="inline-flex items-center px-8 py-3 bg-[#ff5010] text-white rounded-lg hover:bg-[#e0450e] transition-colors duration-300 font-semibold"
           >
-            View All Case Studies
+            View Case Studies
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -102,13 +102,14 @@ const CaseStudiesSection = () => {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-3xl font-bold text-[#ff5010] mb-2">
-              {caseStudies.length}+
+              {/* {caseStudies.length}+ */}
+              500+
             </div>
             <div className="text-gray-600">Projects Completed</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-[#ff5010] mb-2">
-              6
+              9+
             </div>
             <div className="text-gray-600">Industries Served</div>
           </div>

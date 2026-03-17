@@ -16,7 +16,7 @@ const BlogCarousel = () => {
       excerpt: "What is the most effective method for preserving the vital facts, insightful research, diverse opinions.",
       image: "/Nav-Dropdown-icons/image_blog.jpg",
       readTime: "6 min read",
-      link: "/blogsection1"
+      link: "/BlogSection1"
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const BlogCarousel = () => {
       excerpt: "When the Brandsmashers Tech team arrived at GITEX 2025 Dubai, we weren’t just attending another technology conference — we were stepping into a living, breathing ecosystem of ideas shaping the future of humanity.",
       image: "/Nav-Dropdown-icons/GITEX.jpeg",
       readTime: "6 min read",
-      link: "/blogsection6"
+      link: "/BlogSection6"
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ const BlogCarousel = () => {
       excerpt: "In a world overflowing with products, apps, services, and ideas, the loudest voice doesn’t always win—but the clearest one does.",
       image: "/Nav-Dropdown-icons/Blog9.jpg",
       readTime: "5 min read",
-      link: "/blogSection3"
+      link: "/BlogSection3"
     },
      {
       id: 4,

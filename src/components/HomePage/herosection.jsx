@@ -150,7 +150,7 @@ const HeroSection = () => {
     <>
 
      <Head>
-        <title>Hire Remote Developers for Your next Project - Get Started!</title>
+        <title>Hire Remote Developers from India | Brandsmashers Tech!</title>
         <meta
           name="description"
           content="Hire pre-vetted remote developers globally on flexible contracts. Get expert talent for your project—hire now and elevate your business!"
@@ -275,7 +275,7 @@ const HeroSection = () => {
                 <div className="text-gray-400 text-xs nest-hub:text-sm nest-hub-max:text-base">Years</div>
               </div>
               <div className="text-center">
-                <div className="text-[#ff5010] font-bold text-xl sm:text-2xl md:text-3xl nest-hub:text-2xl nest-hub-max:text-3xl">250+</div>
+                <div className="text-[#ff5010] font-bold text-xl sm:text-2xl md:text-3xl nest-hub:text-2xl nest-hub-max:text-3xl">500+</div>
                 <div className="text-gray-400 text-xs nest-hub:text-sm nest-hub-max:text-base">Projects</div>
               </div>
               <div className="text-center">

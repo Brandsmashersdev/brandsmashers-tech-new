@@ -277,7 +277,7 @@ const ITSolutions = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { value: "100+", label: "Clients" },
-              { value: "250+", label: "Projects Completed" },
+              { value: "500+", label: "Projects Completed" },
               { value: "8+", label: "Years of Excellence" },
               { value: "50+", label: "Tech Specialists" }
             ].map((stat, index) => (

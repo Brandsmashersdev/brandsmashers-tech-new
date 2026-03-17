@@ -33,7 +33,7 @@ export default function Blog() {
   return (
     <>
       <Head>
-        <title>Blog - Brandsmashers Tech</title>
+        <title>Tech Blog & Insights | Brandsmashers Tech</title>
         <meta
           name="description"
           content="Explore our latest insights on technology, software development, digital marketing, and industry trends."
@@ -137,14 +137,11 @@ export default function Blog() {
                         <span>{post.author}</span>
                         <span className="mx-2">•</span>
                         <span>
-                          {new Date(post.publishDate).toLocaleDateString(
-                            "en-GB",
-                            {
-                              year: "numeric",
-                              month: "2-digit",
-                              day: "2-digit",
-                            }
-                          )}
+                          {new Date(post.publishDate).toLocaleDateString("en-US", {
+                         weekday: "short",
+                         month: "short",
+                         day: "numeric",
+                         year: "numeric",})}
                         </span>
                       </div>
 

@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
     <ErrorBoundary>
       {/* Google Tag Manager */}
       <Head>
-        <title>Brandsmashers Tech - Custom Software Development & IT Solutions</title>
+        <title>Contact Us - Hire Developers | Brandsmashers Tech</title>
         <meta name="description" content="Brandsmashers Tech offers innovative custom software development, IT outsourcing, and scalable web & mobile app solutions. Expert developers for hire." />
         <meta name="keywords" content="custom software development, web development, mobile app development, IT outsourcing, remote developers, React, Node.js, Python, Java" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

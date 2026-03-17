@@ -371,7 +371,7 @@ export default function WebDevelopmentPage() {
   return (
 <>
 <Head>
-<title>Web Development Services | Fast, Secure & Responsive Websites</title>
+<title>Web Development Company India | Brandsmashers Tech</title>
 <meta name="description" content="Build high-performance websites with our expert web development services. Custom, responsive, and SEO-friendly solutions for your business growth." />
 </Head>
     <div>

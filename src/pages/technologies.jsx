@@ -22,7 +22,7 @@ const Technologies = () => {
   return (
     <>
       <Head>
-        <title>Technologies - Modern Tech Stack & Development Tools</title>
+        <title>Technologies & Development Stack | Brandsmashers Tech</title>
         <meta name="description" content="Explore our expertise in cutting-edge technologies including React, Node.js, Python, AI/ML, and more for your next project." />
       </Head>
       <div>

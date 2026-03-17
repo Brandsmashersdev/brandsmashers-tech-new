@@ -4,13 +4,13 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 
 const StatsComponent = ({ 
   stats = [
-    { value: 6, label: "Years of Expertise" },
-    { value: 95, label: "Timely Deliveries" },
-    { value: 20, label: "Markets Worldwide" },
-    { value: 50, label: "Global Brands" },
+    { value: 10, label: "Years of Expertise" },
+    { value: 998, label: "Timely Deliveries" },
+    { value: 30, label: "Markets Worldwide" },
+    { value: 90, label: "Global Brands" },
   ],
   className = "",
-  threshold = 0.5,
+  threshold = 0.2,
   duration = 2.5
 }) => {
   const [startCount, setStartCount] = useState(false);

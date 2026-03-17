@@ -23,7 +23,7 @@ const WhoWeAre = () => {
   return (
     <>
       <Head>
-        <title>Who We Are - About Brandsmashers Tech Team</title>
+        <title>About Us - IT Staff Augmentation | Brandsmashers Tech</title>
         <meta name="description" content="Learn about our team, company culture, and mission to deliver exceptional software development solutions." />
       </Head>
       <div>

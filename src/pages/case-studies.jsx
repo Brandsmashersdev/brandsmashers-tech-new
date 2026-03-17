@@ -9,6 +9,7 @@ import SkeletonLoader from '@/components/shared/SkeletonLoader';
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function CaseStudiesPage() {
+
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [isLoading, setIsLoading] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,15 +23,16 @@ export default function CaseStudiesPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
-    }, 5000); // change every 5 sec
+    }, 5000);
     return () => clearInterval(interval);
-  }, [carouselImages.length]);
+  }, []);
 
   const industries = ['all', 'Finance', 'Retail', 'Healthcare', 'Technology', 'Education'];
 
-  const filteredCaseStudies = selectedIndustry === 'all' 
-    ? caseStudies 
-    : caseStudies.filter(study => study.industry === selectedIndustry);
+  const filteredCaseStudies =
+    selectedIndustry === 'all'
+      ? caseStudies
+      : caseStudies.filter((study) => study.industry === selectedIndustry);
 
   const handleIndustryChange = (industry) => {
     setIsLoading(true);
@@ -41,157 +43,213 @@ export default function CaseStudiesPage() {
   return (
     <>
       <Head>
-        <title>Case Studies - Brandsmashers Tech</title>
-        <meta name="description" content="Explore our successful projects and case studies across various industries including fintech, e-commerce, healthcare, and more." />
-        <meta name="keywords" content="case studies, project portfolio, fintech, e-commerce, healthcare, software development" />
-        <meta property="og:title" content="Case Studies - Brandsmashers Tech" />
-        <meta property="og:description" content="Explore our successful projects and case studies across various industries." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://brandsmashers.tech/case-studies" />
+        <title>Portfolio & Case Studies | Brandsmashers Tech</title>
+        <meta
+          name="description"
+          content="Explore our successful projects and case studies across industries."
+        />
       </Head>
 
       <div className="min-h-screen bg-gray-50">
+
         <Navbar />
-        
+
+        {/* HERO CAROUSEL */}
+
         <div className="relative w-full h-[60vh] overflow-hidden">
-        <AnimatePresence>
-          <motion.img
-            key={currentIndex}
-            src={carouselImages[currentIndex]}
-            alt="Cover"
-            className="w-full h-full object-cover"
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-          />
-        </AnimatePresence>
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h1 className="text-white text-4xl md:text-6xl font-bold text-center drop-shadow-lg">
-            Our Success Stories
-          </h1>
+
+          <AnimatePresence>
+
+            <motion.img
+              key={currentIndex}
+              src={carouselImages[currentIndex]}
+              alt="Cover"
+              className="w-full h-full object-cover"
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+            />
+
+          </AnimatePresence>
+
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <h1 className="text-white text-4xl md:text-6xl font-bold text-center">
+              Our Success Stories
+            </h1>
+          </div>
+
         </div>
-      </div>
+
+        {/* FILTER */}
 
         <section className="bg-white py-8 border-b sticky top-0 z-10 shadow-md">
+
           <div className="container mx-auto px-6">
+
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <span className="text-gray-600 font-medium">Filter by Industry:</span>
+
+              <span className="text-gray-600 font-medium">
+                Filter by Industry:
+              </span>
+
               {industries.map((industry) => (
+
                 <button
                   key={industry}
                   onClick={() => handleIndustryChange(industry)}
-                  className={`px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 ${
-                    selectedIndustry === industry
-                      ? 'bg-[#ff5010] text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
+                  className={`px-4 py-2 rounded-lg transition ${selectedIndustry === industry
+                    ? 'bg-[#ff5010] text-white'
+                    : 'bg-gray-100'
+                    }`}
                 >
+
                   {industry === 'all' ? 'All Industries' : industry}
+
                 </button>
+
               ))}
+
             </div>
+
           </div>
+
         </section>
 
+        {/* CASE STUDIES */}
+
         <section className="py-16">
+
           <div className="container mx-auto px-6">
+
             {isLoading ? (
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[1, 2, 3].map((i) => (
                   <SkeletonLoader key={i} type="card" />
                 ))}
               </div>
+
             ) : (
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredCaseStudies.map((study, index) => (
+
+                {filteredCaseStudies.map((study) => (
+
                   <div
                     key={study.slug}
-                    className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden"
+                    className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 overflow-hidden"
                   >
-                    <div className="relative h-48 w-full overflow-hidden rounded-t-xl">
-                                            <Image
+
+                    {/* IMAGE */}
+
+                    <div className="relative h-48 w-full">
+
+                      <Image
                         src={study.imageSrc}
                         alt={study.title}
                         layout="fill"
                         objectFit="cover"
-                        className="transition-transform duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full text-sm text-white">
+
+                      <div className="absolute top-4 right-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
                         {study.industry}
                       </div>
+
                     </div>
-                    
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-800 mb-3">
+
+                    {/* CARD CONTENT */}
+
+                    <div className="p-5 flex flex-col flex-grow">
+
+                      {/* TITLE */}
+                      <h3 className="text-lg font-bold text-gray-800 mb-1">
                         {study.title}
                       </h3>
-                      <p className="text-gray-600 mb-4 line-clamp-3">
+
+                      <p className="text-gray-600 text-sm mb-3 line-clamp-2">
                         {study.description}
                       </p>
-                      
-                      <div className="flex items-center justify-between mt-6">
-                        <span className="text-sm text-gray-500">
-                          {study.duration || '3-6 months'}
-                        </span>
+
+                      {/* CLIENT */}
+                      {study.Client && (
+                        <p className="text-xs text-gray-500 mb-2">
+                          <span className="font-semibold">Client:</span> {study.Client}
+                        </p>
+                      )}
+
+                      {/* TIMELINE + TEAM */}
+                      <div className="flex gap-6 text-xs text-gray-600 mb-3">
+
+                        {study.timeline && (
+                          <span>
+                            <b>⏱</b> {study.timeline}
+                          </span>
+                        )}
+
+                        {study.teamSize && (
+                          <span>
+                            <b>👥</b> {study.teamSize}
+                          </span>
+                        )}
+
+                      </div>
+
+                      {/* TECH STACK */}
+                      {study.techStack && (
+                        <div className="flex flex-wrap gap-1 mb-3">
+                          {study.techStack.slice(0, 4).map((tech, i) => (
+                            <span
+                              key={i}
+                              className="bg-gray-100 text-[11px] px-2 py-1 rounded"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                          {study.techStack.length > 4 && (
+                            <span className="text-[11px] text-gray-500">
+                              +{study.techStack.length - 4}
+                            </span>
+                          )}
+                        </div>
+                      )}
+
+                      {/* RESULTS */}
+                      {study.results && (
+                        <div className="grid grid-cols-2 gap-1 text-[11px] text-gray-600 mb-3">
+                          {study.results.slice(0, 4).map((res, i) => (
+                            <span key={i}>• {res}</span>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* BUTTON */}
+                      <div className="mt-auto">
                         <Link
                           href={`/CaseStudy/${study.slug}`}
-                          className="inline-flex items-center px-4 py-2 bg-[#ff5010] text-white rounded-lg hover:bg-[#e0450e] transition-colors duration-300 font-semibold"
+                          className="text-sm font-semibold text-[#ff5010] hover:underline"
                         >
-                          Read More
-                          <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5-5 5M6 12h12" />
-                          </svg>
+                          Read More →
                         </Link>
                       </div>
+
                     </div>
+
                   </div>
+
                 ))}
+
               </div>
+
             )}
 
-            {filteredCaseStudies.length === 0 && !isLoading && (
-              <div className="text-center py-16">
-                <div className="text-gray-400 text-6xl mb-4">📋</div>
-                <h3 className="text-xl font-semibold text-gray-600 mb-2">
-                  No case studies found
-                </h3>
-                <p className="text-gray-500">
-                  Try selecting a different industry filter
-                </p>
-              </div>
-            )}
           </div>
-        </section>
 
-        <section className="bg-gray-900 text-white py-16">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Start Your Success Story?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how we can transform your business with innovative technology solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-3 bg-[#ff5010] text-white rounded-lg hover:bg-[#e0450e] transition-colors duration-300 font-semibold"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors duration-300 font-semibold"
-              >
-                View Our Services
-              </Link>
-            </div>
-          </div>
         </section>
 
         <Footer />
+
       </div>
     </>
   );
 }
-

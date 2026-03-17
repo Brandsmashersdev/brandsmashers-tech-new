@@ -459,7 +459,7 @@ export default function CustomSoftwareDevelopmentPage() {
   return (
     <>
       <Head>
-        <title>Custom Software Development Services | Scalable & Secure Solutions</title>
+        <title>Custom Software Development | Brandsmashers Tech</title>
         <meta name="description" content="Get custom software development services tailored to your business needs. Scalable, secure, and innovative solutions for enhanced efficiency." />
       </Head>
       <div className="font-sans text-gray-800 bg-black">
