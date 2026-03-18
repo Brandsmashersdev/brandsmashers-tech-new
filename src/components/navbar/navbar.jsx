@@ -155,7 +155,7 @@ const Navbar = () => {
             alt="Logo"
             width={300}
             height={300}
-            style={{ objectFit: "cover" }}
+            className="object-cover"
           />
         </Link>
       </div>

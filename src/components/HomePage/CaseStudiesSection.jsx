@@ -31,8 +31,8 @@ const CaseStudiesSection = () => {
                 <Image
                   src={study.imageSrc}
                   alt={study.title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute top-4 right-4 bg-white/20 px-3 py-1 rounded-full text-sm">
                   {study.industry}

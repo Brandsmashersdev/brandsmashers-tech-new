@@ -208,7 +208,7 @@ export default function HRMSCaseStudy() {
               </div>
               <div className="mt-8 md:mt-0">
                 <Image
-                  src="/CaseStudyImages/hrms.png"
+                  src="/CaseStudyImages/HRMS.png"
                   alt="HRMS Dashboard"
                   width={600}
                   height={400}

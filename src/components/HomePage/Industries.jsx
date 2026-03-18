@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import Link from 'next/link';
 
 const Industries = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  // Define the industries data
+  // Define the industries data with slugs for dynamic routing
   const industriesData = [
     {
+      slug: "real-estate",
       title: "Real Estate Solutions",
       img: "/api/placeholder/80/80",
       description: "Innovative property management, virtual tours, and smart building applications.",
@@ -16,6 +18,7 @@ const Industries = () => {
       )
     },
     {
+      slug: "retail",
       title: "Retail Solutions",
       img: "/api/placeholder/80/80",
       description: "End-to-end e-commerce platforms, inventory management, and customer loyalty systems.",
@@ -26,6 +29,7 @@ const Industries = () => {
       )
     },
     {
+      slug: "automotive",
       title: "Automotive Solutions",
       img: "/api/placeholder/80/80",
       description: "Vehicle management, dealer platforms, and connected car applications.",
@@ -36,6 +40,7 @@ const Industries = () => {
       )
     },
     {
+      slug: "ev",
       title: "E.V. Industry Solutions",
       img: "/api/placeholder/80/80",
       description: "Charging infrastructure software, battery management, and fleet monitoring systems.",
@@ -46,6 +51,7 @@ const Industries = () => {
       )
     },
     {
+      slug: "cloud",
       title: "Cloud Solutions",
       img: "/api/placeholder/80/80",
       description: "Secure cloud migration, SaaS development, and serverless architecture implementation.",
@@ -56,6 +62,7 @@ const Industries = () => {
       )
     },
     {
+      slug: "healthcare",
       title: "Healthcare Solutions", 
       img: "/api/placeholder/80/80",
       description: "Patient management, telemedicine platforms, and medical data analysis systems.",
@@ -66,6 +73,7 @@ const Industries = () => {
       )
     },
     {
+      slug: "education",
       title: "Education Solutions",
       img: "/api/placeholder/80/80",
       description: "Learning management systems, virtual classrooms, and educational content platforms.",
@@ -76,6 +84,7 @@ const Industries = () => {
       )
     },
     {
+      slug: "fintech",
       title: "Finance IT Solutions",
       img: "/api/placeholder/80/80",
       description: "Banking portals, payment gateways, and financial analysis software.",
@@ -88,7 +97,7 @@ const Industries = () => {
   ];
 
   return (
-    <div className="py-20 bg-black relative overflow-hidden">
+    <div className="py-20 bg-black relative overflow-hidden" id="industries">
       {/* Background elements */}
       {/* <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-[#ff5010] to-transparent opacity-15 rounded-bl-full"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-[#ff5010] to-transparent opacity-15 rounded-tr-full"></div>
@@ -162,9 +171,9 @@ const Industries = () => {
                 {/* Description */}
                 <p className="text-gray-300">{industry.description}</p>
                 
-                {/* Learn more link */}
-                <a 
-                  href="#" 
+                {/* Learn more link - now pointing to dynamic industry pages */}
+                <Link 
+                  href={`/industries/${industry.slug}`}
                   className={`mt-4 inline-flex items-center text-sm font-medium transition-colors duration-300 ${
                     hoveredIndex === index ? "text-[#ff5010]" : "text-gray-400"
                   }`}
@@ -173,20 +182,11 @@ const Industries = () => {
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
         </div>
-        
-        {/* CTA Section */}
-        {/* <div className="mt-16 text-center">
-          <div className="inline-block p-px bg-gradient-to-r from-[#ff5010] to-[#ff7040] rounded-lg">
-            <button className="px-8 py-3 bg-gray-900 text-[#ff5010] font-semibold rounded-lg hover:bg-transparent hover:text-white transition-all duration-300">
-              Discuss Your Industry Needs
-            </button>
-          </div>
-        </div> */}
       </div>
     </div>
   );

@@ -38,6 +38,22 @@ const nextConfig = {
         source: '/all-links',
         destination: 'https://bstree-yn8q.vercel.app/',
       },
+      {
+        source: '/android-developer',
+        destination: '/tech/android-developer',
+      },
+      {
+        source: '/ios-developer',
+        destination: '/tech/ios-developer',
+      },
+      {
+        source: '/flutter-developer',
+        destination: '/tech/flutter-developer',
+      },
+      {
+        source: '/react-native-developer',
+        destination: '/tech/react-native-developer',
+      },
     ];
   },
   // Enable bundle analyzer when ANALYZE=true

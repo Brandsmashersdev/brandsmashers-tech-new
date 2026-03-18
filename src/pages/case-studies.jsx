@@ -148,8 +148,8 @@ export default function CaseStudiesPage() {
                       <Image
                         src={study.imageSrc}
                         alt={study.title}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        className="object-cover"
                       />
 
                       <div className="absolute top-4 right-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full">

@@ -2107,13 +2107,16 @@ export default function TechnologyDetails() {
       </Head>
 
       <Navbar />
-      <HeroSectionTech
-        title={data.title}
-        description={data.description}
-        buttonText={data.buttonText}
-        imageSrc={heroImage}
-      />
-      <AndroidHero />
+      {technology === 'android-developer' ? (
+        <AndroidHero />
+      ) : (
+        <HeroSectionTech
+          title={data.title}
+          description={data.description}
+          buttonText={data.buttonText}
+          imageSrc={heroImage}
+        />
+      )}
       <Stats />
 
       {/* <ServiceGrids/> */}
