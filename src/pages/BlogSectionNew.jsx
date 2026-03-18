@@ -1,5 +1,5 @@
 // src/pages/BlogSectionNew.jsx
-import BlogSectionNew from "@/components/Company/BlogSectionNew";
+import BlogSectionNew from "@/components/Company/blogsectionnew";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import React from "react";

@@ -1,7 +1,7 @@
 
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
-import BlogSection4 from "@/components/Company/BlogSection4"
+import BlogSection4 from "@/components/Company/blogsection4"
 import React from "react";
 
 
