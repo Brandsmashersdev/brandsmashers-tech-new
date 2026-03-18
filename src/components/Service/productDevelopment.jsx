@@ -1,39 +1,39 @@
-// // import { useState } from "react";
-// // import Image from 'next/image';
-// // import {
-// //   ChevronDown,
-// //   ChevronUp,
-// //   CheckCircle,
-// //   Code,
-// //   Database,
-// //   Layers,
-// //   Figma,
-// //   Cloud,
-// //   TestTube,
-// //   Wrench,
-// //   ArrowRight,
-// //   Clock,
-// //   FileCode,
-// //   Smartphone,
-// //   Search,
-// //   ArrowUpRight,
-// //   MessageCircle,
-// //   Cpu,
-// //   Rocket,
-// //   Lightbulb,
-// //   Settings,
-// //   Zap,
-// //   FileText,
-// //   Mail,
-// //   Monitor,
-// //   X
-// // } from "lucide-react";
+import { useState } from "react";
+import Image from 'next/image';
+import {
+  ChevronDown,
+  ChevronUp,
+  CheckCircle,
+  Code,
+  Database,
+  Layers,
+  Figma,
+  Cloud,
+  TestTube,
+  Wrench,
+  ArrowRight,
+  Clock,
+  FileCode,
+  Smartphone,
+  Search,
+  ArrowUpRight,
+  MessageCircle,
+  Cpu,
+  Rocket,
+  Lightbulb,
+  Settings,
+  Zap,
+  FileText,
+  Mail,
+  Monitor,
+  X
+} from "lucide-react";
 // // import TechGrid from "./TechGrid";
 // // import 'react-toastify/dist/ReactToastify.css';
 // // import { ToastContainer, toast } from 'react-toastify';
 // // import Link from "next/link";
 
-// // export default function ProductDevelopmentPage() {
+// export default function ProductDevelopmentPage() {
 // //   const [activeTab, setActiveTab] = useState(0);
 // //   const [activeFaq, setActiveFaq] = useState(null);
 
@@ -844,13 +844,13 @@
 //   Monitor,
 //   X
 // } from "lucide-react";
-// import TechGrid from "./TechGrid";
-// import 'react-toastify/dist/ReactToastify.css';
-// import { ToastContainer, toast } from 'react-toastify';
-// import Link from "next/link";
+import TechGrid from "./TechGrid";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+import Link from "next/link";
 
-// export default function ProductDevelopmentPage() {
-//   const [activeTab, setActiveTab] = useState(0);
+export default function ProductDevelopmentPage() {
+  const [activeTab, setActiveTab] = useState(0);
 //   const [activeFaq, setActiveFaq] = useState(null);
 
 
