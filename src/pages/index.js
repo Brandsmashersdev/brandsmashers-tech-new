@@ -1,3 +1,4 @@
+// Quick fixes v2 - trigger Vercel deployment
 // Quick fixes - trigger Vercel deployment
 import ReadyToInnovate from "@/components/HomePage/ReadyToInnovate";
 import ITSolutions from "@/components/HomePage/ITSolutions";
