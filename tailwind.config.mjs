@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin');
-export default {
+const config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -25,18 +24,11 @@ export default {
 
     },
   },
-  plugins: [
-    plugin(function({ addUtilities }) {
-      const newUtilities = {
-        '.animate-loop-horizontal': {
-          animation: 'loopHorizontal 10s linear infinite',
-        }
-      }
-      addUtilities(newUtilities)
-    })
-  ],
+  plugins: [],
   
 };
+
+export default config;
 
 
 

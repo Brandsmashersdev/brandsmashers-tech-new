@@ -54,7 +54,7 @@ const nextConfig = {
     return [
       {
         source: '/all-links',
-        destination: 'https://bstree-yn8q.vercel.app/',
+        destination: 'https://www.brandsmashers.com/',
       },
       {
         source: '/android-developer',
