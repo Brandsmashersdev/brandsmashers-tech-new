@@ -52,6 +52,7 @@ const Navbar = () => {
     "Company": {
       items: [
         { name: "Who We Are", iconSrc: "/team.png", path: "whoweare" },
+        { name: "How We Vet Talent", iconSrc: "/best-product.png", path: "vetting-process" },
         { name: "Join Our Team", iconSrc: "/handshake.png", path: "Career" },
         { name: "Case Studies", iconSrc: "/casestudies.png", path: "case-studies" },
       ]
@@ -142,8 +143,11 @@ const Navbar = () => {
     { name: "Company", hasDropdown: true },
     { name: "Services", hasDropdown: true },
     { name: "Hire Developers", hasDropdown: true },
+    { name: "Talent Marketplace", hasDropdown: false, href: "/developers" },
+    // { name: "Find Geeks Talent", hasDropdown: false, href: "/marketplace" },
+    // { name: "Pricing", hasDropdown: false, href: "/pricing" },
     { name: "Blogs", hasDropdown: false, href: "/BlogPageALL" },
-    //{ name: "Case Studies", hasDropdown: false, href: "/case-studies" },
+    // { name: "Case Studies", hasDropdown: false, href: "/case-studies" },
   ];
 
   return (

@@ -153,9 +153,9 @@
 
 /* Company dropdown */
 [data-menu-type="Company"] .dropdownMenu {
-  min-width: 200px;
+  min-width: 175px;
   left: -100px;
-  height: 15rem;
+  height: 19rem;
 }
 
 /* Services dropdown */

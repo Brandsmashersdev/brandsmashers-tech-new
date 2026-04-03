@@ -6,7 +6,7 @@ const teamImages = [
   "/Images/whoWeAre.jpg",
   "/Nav-Dropdown-icons/team-3.jpg",
   // "/Nav-Dropdown-icons/team-4.jpg",
-  "/Images/birthdaypostwhoweare.jpg",
+  "/Images/replaceImages22.jpg",
   "/Nav-Dropdown-icons/team-5.jpg",
   "/Nav-Dropdown-icons/team-6.jpg",
 ];

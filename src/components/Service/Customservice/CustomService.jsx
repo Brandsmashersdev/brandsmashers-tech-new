@@ -507,6 +507,11 @@ export default function CustomSoftwareDevelopmentPage() {
                   </button>
                 </Link>
               </div>
+              <div className="mt-4">
+                <Link href="/vetting-process" className="text-sm text-gray-400 hover:text-[#ff5010] transition-colors underline decoration-[#ff5010]/50">
+                  Learn about our vetting process — Only 3% make the cut
+                </Link>
+              </div>
             </div>
           </div>
         </div>

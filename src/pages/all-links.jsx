@@ -62,7 +62,7 @@ export default function BrandsmashersShowcase() {
   const openCalendly = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: "https://calendly.com/brandsmashers-info/new-meeting",
+        url: "https://calendly.com/brandsmashers/30min",
       });
     }
   };

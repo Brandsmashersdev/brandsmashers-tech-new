@@ -2073,19 +2073,21 @@ const technologyData = {
 export default function TechnologyDetails() {
   const router = useRouter();
   const [data, setData] = useState(null);
+  const [technology, setTechnology] = useState('');
   const heroImage = "/Tech-Dropdown-Image.png";
 
   // Update data when route changes
   useEffect(() => {
     if (router.isReady && router.query.technology) {
-      setData(technologyData[router.query.technology] || null);
+      const tech = router.query.technology;
+      setTechnology(tech);
+      setData(technologyData[tech] || null);
 
       // GTM Page View Tracking for technology pages
-      const technology = router.query.technology;
       const pageTitle = `${
-        technologyData[technology]?.title || "Technology Page"
+        technologyData[tech]?.title || "Technology Page"
       } - Brandsmashers Tech`;
-      trackTechnologyPageView(technology, pageTitle);
+      trackTechnologyPageView(tech, pageTitle);
     }
   }, [router.isReady, router.query.technology]);
 

@@ -4,13 +4,12 @@ import { ArrowUpRight } from 'lucide-react';
 import { FaLightbulb, FaPencilRuler, FaCode, FaMobileAlt, FaBug, FaRocket } from "react-icons/fa";
 import Image from 'next/image';
 import React from 'react';
+import Link from 'next/link';
 // import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 
 import { ChevronDown, ChevronRight, Code, SmartphoneCharging, Layers, Laptop, Watch, Gamepad, CheckCircle, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-
 
 export default function MobileAppDevelopmentPage() {
   const [activeTab, setActiveTab] = useState(0);
@@ -374,6 +373,11 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
                   </button>
                 </Link>
               </div>
+              <div className="mt-4">
+                <Link href="/vetting-process" className="text-sm text-gray-400 hover:text-[#ff5010] transition-colors underline decoration-[#ff5010]/50">
+                  Learn about our vetting process — Only 3% make the cut
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -683,6 +687,14 @@ Whether you are building for iOS, Android, or both, our custom mobile solutions 
                 <p className="text-gray-400">{reason.description}</p>
               </div>
             ))}
+          </div>
+
+          {/* Vetting Process Link */}
+          <div className="text-center mt-12">
+            <Link href="/vetting-process" className="inline-flex items-center px-6 py-3 bg-[#ff5010] text-white font-semibold rounded-lg hover:bg-[#ff5010]/90 transition-all">
+              Learn About Our 5-Point Vetting Process
+              <ArrowUpRight className="ml-2 w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

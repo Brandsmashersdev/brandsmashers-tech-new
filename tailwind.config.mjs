@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        brandCyan: '#2CC5D9',
+        brandOrange: '#ff5010',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

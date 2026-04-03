@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'
 import caseStudies from '@/data/caseStudies';
 
-const CaseStudiesSection = () => {
+const CaseStudiesSection = memo(() => {
   // Get the latest 3 case studies
   const featuredCaseStudies = caseStudies.slice(0, 3);
 
@@ -129,6 +129,6 @@ const CaseStudiesSection = () => {
       </div>
     </section>
   );
-};
+});
 
 export default CaseStudiesSection;

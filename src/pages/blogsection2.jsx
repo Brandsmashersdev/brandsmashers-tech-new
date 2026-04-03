@@ -13,17 +13,14 @@ const Blogs = () => {
   }, []);
 
   return (
-    <>
-      <Head>
-        <title>Blog Section 2 - Brandsmashers Tech</title>
-        <meta name="description" content="Discover more insights, case studies, and technology updates from our expert team." />
-      </Head>
-      <div>
+      <><Head>
+      <title>Blog Section 2 - Brandsmashers Tech</title>
+      <meta name="description" content="Discover more insights, case studies, and technology updates from our expert team." />
+    </Head><div>
         <Navbar />
-        <BlogSection2/>
+        <BlogSection2 />
         <Footer />
-      </div>
-    </>
+      </div></>
   );
 };
 

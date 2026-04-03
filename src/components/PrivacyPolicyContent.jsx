@@ -23,7 +23,6 @@ export default function PrivacyPolicyContent() {
             <div className="h-1 w-16 bg-orange-600 mb-6"></div>
       
           </div>
-
           <div className="space-y-8">
             <section>
               <h2 className="text-2xl font-bold mb-4">1. Introduction</h2>

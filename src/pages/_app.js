@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ErrorBoundary from "@/components/shared/ErrorBoundary";
 import ToastContainer from "@/components/shared/ToastContainer";
+import ChatWidget from "@/components/shared/ChatWidget";
 import { initWebVitals } from "@/lib/web-vitals";
 import "../styles/globals.css"; // your global styles
 
@@ -32,6 +33,12 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:description" content="Custom software development and IT solutions" />
         <link rel="icon" href="/logo.jpg" />
         <link rel="canonical" href="https://brandsmashers.tech" />
+        
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://code.tidio.co" />
         
         {/* Structured Data */}
         <script
@@ -77,6 +84,17 @@ function MyApp({ Component, pageProps }) {
       />
 
       <Component {...pageProps} />
+      
+      {/* Tidio Chat Widget - Live Chat for Lead Capture */}
+      <Script
+        id="tidio-widget"
+        strategy="afterInteractive"
+        src="https://code.tidio.co/xu46hwnb13wjrpyqwjtg1kbthonqcoht.js"
+      />
+      
+      {/* Custom Chat Widget */}
+      {/* <ChatWidget /> */}
+      
       <ToastContainer />
       <Analytics />
       <SpeedInsights />

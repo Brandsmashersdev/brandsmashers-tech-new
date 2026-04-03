@@ -1,9 +1,9 @@
-import React from "react";
+// import React from "react";
 
-const SolutionsGrid = () => {
-  const solutions = [];
+// const SolutionsGrid = () => {
+//   const solutions = [];
 
-  return <></>;
-};
+//   return <></>;
+// };
 
-export default SolutionsGrid;
+// export default SolutionsGrid;

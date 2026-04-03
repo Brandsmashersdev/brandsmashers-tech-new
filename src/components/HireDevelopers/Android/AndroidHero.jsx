@@ -113,7 +113,7 @@ const AndroidPageHero = () => {
         "Fully-Vetted In-House Developers",
         "100% Resource Replacement Guarantee",
         "Agile Development Process",
-        "Upfront & Transparent Pricing",
+        // "Upfront & Transparent Pricing",
         "24/7 Customer Support"
       ]}
     />

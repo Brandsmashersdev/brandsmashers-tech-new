@@ -17,7 +17,7 @@ export default function FounderCard() {
         <div className="md:w-1/2 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10 z-10"></div>
           <Image
-            src="/Images/Brandsmashers_Group_image.png"
+            src="/Images/replace1.png.png"
             alt="Company Founder"
             width={500} // Adjust width and height as necessary
             height={500} // Adjust width and height as necessary
@@ -33,8 +33,10 @@ export default function FounderCard() {
         <div className={`md:w-1/2 p-8 bg-white flex flex-col justify-center transition-all duration-300 ${isHovered ? 'bg-gray-50' : ''}`}>
           <div className="hidden md:block mb-6">
             <h3 className="text-3xl font-bold">
-              <span className="text-black">Brands</span>
-              <span className="text-[#ff5010]">masher&apos;s Story</span> {/* Fixed apostrophe */}
+              {/* <span className="text-black">Brands</span> */}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5010] to-[#ff8c42] text-3xl font-bold">
+                Brandsmasher&apos;s Story
+              </span> {/* Fixed apostrophe */}
             </h3>
           </div>
 

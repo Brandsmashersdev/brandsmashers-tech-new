@@ -33,13 +33,17 @@ export default function StoryBanner() {
 
         {/* Right Image Card */}
         <div className="w-full sm:max-w-sm lg:w-1/3 bg-white dark:bg-gray-800 p-5 rounded-xl shadow-md text-center">
-          <Image
-            src="/certification.png"
-            alt="Certifications"
-            width={300}
-            height={200}
-            className="mx-auto mb-3 rounded"
-          />
+          <div className="mb-3">
+            <div className="flex items-center justify-center gap-4 mb-2">
+              <div className="bg-blue-100 dark:bg-blue-900 px-4 py-2 rounded-lg">
+                <span className="text-blue-600 dark:text-blue-300 font-bold text-sm">CMMI</span>
+              </div>
+              <div className="bg-green-100 dark:bg-green-900 px-4 py-2 rounded-lg">
+                <span className="text-green-600 dark:text-green-300 font-bold text-sm">ISO 27001</span>
+              </div>
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Level 4 Appraised • 2013 Certified</p>
+          </div>
           <p className="text-sm sm:text-base text-gray-800 dark:text-gray-300">
             We&apos;re CMMI Level 4 Appraised IT Services and Solutions Company <br />
             ISO 27001:2013 Certified

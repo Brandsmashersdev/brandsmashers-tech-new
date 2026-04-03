@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Gitex2025DubaiBlog() {
   return (
@@ -53,7 +54,7 @@ export default function Gitex2025DubaiBlog() {
           {
             title: "Day 1 – The Future Isn’t Coming, It’s Already Here",
             text: `The first day at GITEX 2025 was electrifying. As the doors opened, we could feel the pulse of thousands of innovators ready to redefine reality. The exhibition floor was a window into tomorrow, showcasing breakthroughs in AI, Crypto, Virtual Reality, Robotics, and Quantum Computing. These weren’t theoretical concepts; they were tangible technologies shaping everyday life. We were particularly inspired by HurayPositive from South Korea, which demonstrated how AI-driven precision medicine can revolutionize healthcare outcomes. Then came Tensor’s agentic AI on wheels, dubbed the world’s first personal robocar, and K2’s humanoid robots designed for industrial applications. Every booth reflected the same truth: we’re already living in the future. But beyond the spectacle, the real learning was clear: true innovation isn’t about novelty; it’s about utility. The most impactful solutions were those that solved real problems, especially in healthcare, logistics, and infrastructure. That’s where our own focus sharpened, developing AI solutions that are trustworthy, ethical, and practical. The day reminded us that while innovation builds excitement, responsibility builds trust, and trust is what sustains progress.`,
-            img: "showcase-pic4.png",
+            img: "/showcase-pic4.png",
           },
           {
             title: "Day 2 – Entering the Intelligence Economy Era",
@@ -63,7 +64,7 @@ export default function Gitex2025DubaiBlog() {
           {
             title: "Day 3 – The Human-Centric Intelligence Pivot",
             text: `By the third day, something shifted. The tone of GITEX became more introspective, less about machines and more about meaning. Day 3, themed around Digital Intelligence Infrastructure, explored how technology could rebuild something we’ve been losing: human connection, empathy, and trust. Inside the DigiHealth and Biotech halls, innovation met humanity. We witnessed Paradromics’ Connexus, a brain-computer implant that restores lost communication for people with paralysis. The demo moved the entire audience. We also heard from Mammoth Biosciences, where CRISPR and AI are joining forces to accelerate genetic discoveries and disease cures. It was clear the conversation had shifted from automation to augmentation. Meanwhile, the infrastructure discussions focused on Sovereign AI and the Data Commons approach. The challenge ahead is finding a balance to secure data sovereignty while fostering global collaboration. Sustainability also emerged as a critical theme. With AI consuming vast energy, solutions like graphene-based ultracapacitors by Skeleton Technologies highlighted a new frontier in green intelligence. Day 3 also introduced Agentic AI, capable of autonomous reasoning and decision-making. These systems promise massive efficiency but require new layers of AI safety, transparency, and governance. As we walked through those halls, one message resonated deeply with us: The future of AI is not just about power, it’s about purpose.`,
-            img: "1. GITEX GLOBAL 1.jpeg",
+            img: "/1. GITEX GLOBAL 1.jpeg",
           },
           {
             title: "Day 4 – Collaboration Meets the Future",
@@ -73,7 +74,7 @@ export default function Gitex2025DubaiBlog() {
           {
             title: "Day 5 – The Bridge Between Vision and Action",
             text: `The final day of GITEX 2025 felt different. The buzz of announcements had softened into reflection, the rush of exploration replaced by quiet conversations and meaningful connections. Day 5 was about what comes next. The discussions centered on implementation, sustainability, and real-world impact. Thought leaders from around the world agreed that the future belongs to those who can turn vision into action. At the Future Vision Forum, speakers from IBM, OpenAI, and G42 shared how organizations must now move from AI pilots to AI-first business strategies, systems that learn, adapt, and deliver value continuously. For Brandsmashers Tech, this message hit home. Over the week, we had witnessed the power of AI, the responsibility of ethics, and the importance of human-centered innovation. Day 5 tied it all together: AI is only as strong as the infrastructure behind it. Innovation is only meaningful when it solves real human problems. Partnerships are the true foundation of progress. The final hours of GITEX were filled with heartfelt exchanges between innovators who began as strangers and left as collaborators. Ideas turned into roadmaps, and conversations turned into commitments. As the lights dimmed, we realized that this wasn’t the end of an event; it was the beginning of a movement. A movement toward technology that doesn’t just advance, but uplifts. Day 5 wasn’t about what we saw; it was about what we’ll build next.`,
-            img: "GITEX Connecting images .png",
+            img: "/GITEX Connecting images .png",
           },
         ].map((day, i) => (
           <section
@@ -91,10 +92,12 @@ export default function Gitex2025DubaiBlog() {
             </div>
             {day.img && (
               <div className="rounded-lg overflow-hidden shadow-lg bg-gray-100 hover:shadow-xl transition-shadow duration-300">
-                <img
+                <Image
                   src={day.img}
                   alt={day.title}
                   className="w-full h-auto object-contain"
+                  width={400}
+                  height={300}
                 />
               </div>
             )}

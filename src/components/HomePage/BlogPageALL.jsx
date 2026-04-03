@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -22,7 +22,7 @@ export default function BlogPage() {
       setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [carouselImages.length]);
 
   const blogPosts = [
     {
@@ -104,18 +104,20 @@ export default function BlogPage() {
     },
   ];
 
-  const industries = ["all", ...new Set(blogPosts.map((p) => p.industry))];
+  const industries = useMemo(() => ["all", ...new Set(blogPosts.map((p) => p.industry))], []);
 
-  const filteredBlogPosts =
+  const filteredBlogPosts = useMemo(() =>
     selectedIndustry === "all"
       ? blogPosts
-      : blogPosts.filter((p) => p.industry === selectedIndustry);
+      : blogPosts.filter((p) => p.industry === selectedIndustry),
+    [selectedIndustry]
+  );
 
-  const handleIndustryChange = (industry) => {
+  const handleIndustryChange = useCallback((industry) => {
     setIsLoading(true);
     setSelectedIndustry(industry);
     setTimeout(() => setIsLoading(false), 300);
-  };
+  }, []);
 
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">

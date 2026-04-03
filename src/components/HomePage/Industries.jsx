@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import Link from 'next/link';
 
-const Industries = () => {
+const Industries = memo(() => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   // Define the industries data with slugs for dynamic routing
@@ -190,6 +190,6 @@ const Industries = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Industries;

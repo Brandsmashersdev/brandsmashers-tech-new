@@ -18,6 +18,7 @@ import CustomizedDesign from '@/components/Service/CustomizedStrategies'
 import ProjectDiscussion from '@/components/Service/Dropdown/ProjectDiscussion'
 import Head from 'next/head'
 import { initializePageTracking } from '@/lib/gtm'
+import CalendlyWidget from '@/components/CalendlyWidget'
 
 
 const Services = () => {
@@ -49,6 +50,19 @@ const Services = () => {
         <Browser/>
         <CustomizedDesign/>
         <BrandsmashersGrid/>
+        <div className="bg-[#1a1a1a] py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Book a Free 30-Minute Consultation
+              </h2>
+              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                Speak directly with our engineering team. No sales pitch — just an honest conversation about your needs.
+              </p>
+            </div>
+            <CalendlyWidget />
+          </div>
+        </div>
         <FAQSection/>
         <Footer/>
       </div>

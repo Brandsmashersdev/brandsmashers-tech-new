@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import Link from 'next/link';
 import Image from "next/image";
 
@@ -45,48 +45,48 @@ const BlogCarousel = () => {
   ];
 
   // Calculate visible posts based on screen size
-  const getVisiblePosts = () => {
+  const getVisiblePosts = useCallback(() => {
     if (typeof window !== 'undefined') {
       if (window.innerWidth >= 1280) return 3; // xl screens
       if (window.innerWidth >= 768) return 2; // md screens
       return 1; // small screens
     }
     return 3; // Default for server-side rendering
-  };
+  }, []);
   
   const [visiblePosts, setVisiblePosts] = useState(3);
   
+  const handleResize = useCallback(() => {
+    setVisiblePosts(getVisiblePosts());
+  }, [getVisiblePosts]);
+  
   useEffect(() => {
-    const handleResize = () => {
-      setVisiblePosts(getVisiblePosts());
-    };
-    
     handleResize(); // Set initial value
     
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [handleResize]);
 
   // Handle next and previous navigation
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % (blogPosts.length - visiblePosts + 1));
-  };
+  }, [blogPosts.length, visiblePosts]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + (blogPosts.length - visiblePosts + 1)) % (blogPosts.length - visiblePosts + 1));
-  };
+  }, [blogPosts.length, visiblePosts]);
 
   // Touch event handlers for swipe
-  const handleTouchStart = (e) => {
+  const handleTouchStart = useCallback((e) => {
     setTouchStartX(e.touches[0].clientX);
     setTouchEndX(e.touches[0].clientX);
-  };
+  }, []);
 
-  const handleTouchMove = (e) => {
+  const handleTouchMove = useCallback((e) => {
     setTouchEndX(e.touches[0].clientX);
-  };
+  }, []);
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = useCallback(() => {
     const swipeDistance = touchStartX - touchEndX;
     const minSwipeDistance = 50; // Reduced threshold for easier swiping
     
@@ -99,7 +99,7 @@ const BlogCarousel = () => {
         prevSlide();
       }
     }
-  };
+  }, [touchStartX, touchEndX, nextSlide, prevSlide]);
 
   // Auto-scroll every 5 seconds, pause on hover
   useEffect(() => {
@@ -176,10 +176,10 @@ const BlogCarousel = () => {
               }}
             >
               {blogPosts.map((post) => (
-                <div
-                  key={post.id}
-                  className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-3 md:p-4 lg:p-5"
-                >
+                  <div
+                    key={post.id}
+                    className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-3 md:p-4 lg:p-5"
+                  >
                   <div className="bg-white rounded-3xl overflow-hidden h-full shadow-xl transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2 group">
                     {/* Blog image with gradient overlay */}
                     <div className="relative overflow-hidden">
