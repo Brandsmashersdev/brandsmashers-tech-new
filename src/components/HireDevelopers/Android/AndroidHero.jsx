@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { CheckCircle } from 'lucide-react';
+import { useRouter } from 'next/router';
 
 const HeroSection = ({ 
   imageSrc, 
@@ -12,6 +13,8 @@ const HeroSection = ({
   description, 
   features 
 }) => {
+  const router = useRouter();
+  const technology = router.query.technology || 'android-developer';
   return (
     <section className="w-full bg-white py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
@@ -46,7 +49,7 @@ const HeroSection = ({
             
             <div className="pt-6">
            
-<Link href="/contact" >
+<Link href={`/contactus?tech=${encodeURIComponent(technology)}`}>
   <button className="px-8 py-4 bg-[#ff5010] text-white font-medium rounded-lg shadow-lg hover:bg-[#e04509] transition-all duration-300 flex items-center space-x-2">
     <span>Get Started</span>
     <svg 

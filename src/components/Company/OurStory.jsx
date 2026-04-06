@@ -17,7 +17,7 @@ export default function FounderCard() {
         <div className="md:w-1/2 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10 z-10"></div>
           <Image
-            src="/Images/replace1.png.png"
+            src="/Images/replace1-v2.jpg"
             alt="Company Founder"
             width={500} // Adjust width and height as necessary
             height={500} // Adjust width and height as necessary

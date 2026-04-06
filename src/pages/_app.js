@@ -86,12 +86,11 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       
       {/* Tidio Chat Widget - Live Chat for Lead Capture */}
-      <Script
-        id="tidio-widget"
-        strategy="afterInteractive"
-        src="https://code.tidio.co/xu46hwnb13wjrpyqwjtg1kbthonqcoht.js"
-      />
-      
+     <Script
+  id="tidio-widget"
+  strategy="afterInteractive"
+  src="https://code.tidio.co/bkxfkcgypkv0hru1zxkn74b4jxvthgyr.js"
+/>
       {/* Custom Chat Widget */}
       {/* <ChatWidget /> */}
       

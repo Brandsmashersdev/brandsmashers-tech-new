@@ -4,6 +4,26 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Image from 'next/image';  // Import Image from next/image
 
+const countryCodes = [
+  { code: '+91', country: 'India', flag: 'in' },
+  { code: '+1', country: 'USA', flag: 'us' },
+  { code: '+44', country: 'UK', flag: 'gb' },
+  { code: '+61', country: 'Australia', flag: 'au' },
+  { code: '+86', country: 'China', flag: 'cn' },
+  { code: '+81', country: 'Japan', flag: 'jp' },
+  { code: '+49', country: 'Germany', flag: 'de' },
+  { code: '+971', country: 'UAE', flag: 'ae' },
+];
+
+const Flag = ({ code }) => (
+  <img
+    src={`https://flagcdn.com/w40/${code}.png`}
+    alt={code}
+    className="w-5 h-4 rounded-sm object-cover mr-2"
+    style={{ display: 'inline' }}
+  />
+);
+
 const TrialForm = ({ closeForm }) => {
   const WEB3FORMS_ACCESS_KEY = '26fd49ac-7bdb-4e08-9818-dbca12903e42';
 
@@ -149,25 +169,30 @@ const TrialForm = ({ closeForm }) => {
 
               <div className={styles.formGroup}>
                 <label className={styles.label} htmlFor="phone">Enter Phone Number</label>
-                <div className={styles.phoneInputContainer}>
-                  <select 
-                    className={styles.countrySelect}
-                    name="countryCode"
-                    value={formData.countryCode}
-                    onChange={handleChange}
-                  >
-                    <option value="+91">🇮🇳 +91</option>
-                    <option value="+1">🇺🇸 +1</option>
-                    <option value="+44">🇬🇧 +44</option>
-                    <option value="+61">🇦🇺 +61</option>
-                    <option value="+86">🇨🇳 +86</option>
-                  </select>
+                <div className={styles.phoneInputContainer} style={{ display: 'flex', alignItems: 'center', backgroundColor: 'rgba(243, 244, 246, 0.8)', borderRadius: '4px', overflow: 'hidden', border: '1px solid #ccc' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', paddingLeft: '10px', filter: 'brightness(1.1)' }}>
+                    <Flag code={countryCodes.find(c => c.code === formData.countryCode)?.flag} />
+                    <select 
+                      className={styles.countrySelect}
+                      name="countryCode"
+                      value={formData.countryCode}
+                      onChange={handleChange}
+                      style={{ background: 'transparent', border: 'none', padding: '8px 4px', cursor: 'pointer' }}
+                    >
+                      {countryCodes.map((cc) => (
+                        <option key={cc.code} value={cc.code}>
+                          {cc.code}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div style={{ width: '1px', height: '36px', backgroundColor: '#ccc' }}></div>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
                     placeholder="Enter Phone Number"
-                    className={styles.phoneInput}
+                    style={{ flex: 1, border: 'none', padding: '10px', background: 'transparent', outline: 'none' }}
                     value={formData.phone}
                     onChange={handleChange}
                     required

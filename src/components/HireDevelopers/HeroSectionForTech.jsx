@@ -1,11 +1,26 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
+  const router = useRouter();
+  const [isLoaded, setIsLoaded] = useState(false);
+  const technology = router.query.technology || '';
   const defaultTitle = "Technology Solutions";
   const defaultDescription = "Transform your business with cutting-edge technology solutions designed to drive growth, efficiency, and innovation in today's digital landscape.";
   const defaultButtonText = "Get Started";
+
+  useEffect(() => {
+    if (router.isReady) {
+      setIsLoaded(true);
+    }
+  }, [router.isReady]);
+
+  if (!isLoaded) {
+    return null;
+  }
 
   return (
     <div className="hero-wrapper">
@@ -297,7 +312,7 @@ const HeroSectionTech = ({ title, description, buttonText, imageSrc }) => {
             {description || defaultDescription}
           </p>
           
-          <Link href="/contactus">
+          <Link href={`/contactus?tech=${encodeURIComponent(technology)}`}>
             <button className="cta-button">
               {buttonText || defaultButtonText}
               <ArrowRight size={20} />

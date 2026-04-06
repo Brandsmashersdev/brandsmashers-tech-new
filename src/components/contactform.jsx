@@ -2,7 +2,38 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-// Toast notification component (inline replacement for react-toastify)
+const Flag = ({ code }) => (
+  <img
+    src={`https://flagcdn.com/w40/${code}.png`}
+    alt={code}
+    className="w-5 h-4 rounded-sm object-cover mr-2"
+    style={{ display: 'inline' }}
+  />
+);
+
+const countryCodes = [
+  { code: '+91', country: 'India', flag: 'in' },
+  { code: '+1', country: 'USA', flag: 'us' },
+  { code: '+44', country: 'UK', flag: 'gb' },
+  { code: '+61', country: 'Australia', flag: 'au' },
+  { code: '+81', country: 'Japan', flag: 'jp' },
+  { code: '+49', country: 'Germany', flag: 'de' },
+  { code: '+86', country: 'China', flag: 'cn' },
+  { code: '+82', country: 'South Korea', flag: 'kr' },
+  { code: '+33', country: 'France', flag: 'fr' },
+  { code: '+971', country: 'UAE', flag: 'ae' },
+  { code: '+965', country: 'Kuwait', flag: 'kw' },
+  { code: '+968', country: 'Oman', flag: 'om' },
+  { code: '+973', country: 'Bahrain', flag: 'bh' },
+  { code: '+974', country: 'Qatar', flag: 'qa' },
+  { code: '+966', country: 'Saudi Arabia', flag: 'sa' },
+  { code: '+20', country: 'Egypt', flag: 'eg' },
+  { code: '+234', country: 'Nigeria', flag: 'ng' },
+  { code: '+254', country: 'Kenya', flag: 'ke' },
+  { code: '+55', country: 'Brazil', flag: 'br' },
+  { code: '+52', country: 'Mexico', flag: 'mx' },
+];
+
 const Toast = ({ message, type, onClose }) => {
   return (
     <div className={`fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 ${
@@ -40,6 +71,8 @@ export default function ContactForm() {
     location: "",
     reason:""
   });
+
+  const [countryCode, setCountryCode] = useState('+91');
 
   const showToast = (message, type) => {
     setToast({ message, type });
@@ -98,17 +131,29 @@ export default function ContactForm() {
     if (validateForm()) {
       setLoading(true);
       try {
-        const formDataToSend = new FormData();
-        
-        Object.keys(serviceForm).forEach(key => {
-          formDataToSend.append(key, serviceForm[key]);
-        });
-        formDataToSend.append('helpType', helpType);
-        formDataToSend.append('access_key', 'ced5f765-5f1b-4a75-8584-5ca061816ed2');
+        // Split name into firstName and lastName
+        const nameParts = serviceForm.name.trim().split(' ');
+        const firstName = nameParts[0] || '';
+        const lastName = nameParts.slice(1).join(' ') || '';
 
-        const response = await fetch('https://api.web3forms.com/submit', {
+        const formDataToSend = {
+          firstName,
+          lastName,
+          email: serviceForm.email,
+          phone: countryCode + serviceForm.phone,
+          reason: serviceForm.reason || '',
+          source: serviceForm.location || '',
+          techStack: 'Contact Form',
+          helpType: 'Contact',
+          formType: 'contact'
+        };
+
+        const response = await fetch('/api/save-hire-request', {
           method: 'POST',
-          body: formDataToSend
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formDataToSend)
         });
 
         const data = await response.json();
@@ -123,7 +168,6 @@ export default function ContactForm() {
             location: '',
             reason:''
           });
-          setHelpType(null);
         } else {
           showToast('Error submitting form. Please try again.', 'error');
         }
@@ -137,7 +181,7 @@ export default function ContactForm() {
   };
 
   const validateName = (name) => {
-    const nameRegex = /^[A-Za-z\s]+$/;
+    const nameRegex = /^[A-Za-z\s.'-]+$/;
     return nameRegex.test(name);
   };
 
@@ -147,8 +191,8 @@ export default function ContactForm() {
   };
 
   const validatePhone = (phone) => {
-    const phoneRegex = /^\d{10}$/;
-    return phoneRegex.test(phone.replace(/\D/g, ''));
+    const digits = phone.replace(/\D/g, '');
+    return digits.length >= 6 && digits.length <= 15;
   };
 
   const validateForm = () => {
@@ -167,10 +211,12 @@ export default function ContactForm() {
     if (!serviceForm.phone) {
       newErrors.phone = 'Phone number is required';
     } else if (!validatePhone(serviceForm.phone)) {
-      newErrors.phone = 'Please enter a valid 10-digit phone number';
+      newErrors.phone = 'Enter 6-15 digits';
     }
     if (!serviceForm.reason) {
       newErrors.reason = 'Please tell us why you\'re contacting us';
+    } else if (serviceForm.reason.trim().length < 10) {
+      newErrors.reason = 'Please provide more details (at least 10 characters)';
     }
     
     setErrors(newErrors);
@@ -311,15 +357,32 @@ export default function ContactForm() {
                     <label htmlFor="phone" className="block text-sm font-semibold text-gray-900">
                       Phone Number *
                     </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={serviceForm.phone}
-                      onChange={handleServiceFormChange}
-                      className={`w-full bg-gray-50 border-2 ${errors.phone ? 'border-red-300' : 'border-gray-200'} rounded-xl py-4 px-6 text-gray-900 focus:outline-none focus:border-orange-500 focus:bg-white transition-all duration-200`}
-                      placeholder=""
-                    />
+                    <div className={`flex items-center bg-gray-50 border-2 ${errors.phone ? 'border-red-300' : 'border-gray-200'} rounded-xl overflow-hidden focus-within:border-orange-500 focus-within:bg-white transition-all duration-200`}>
+                      <div className="flex items-center pl-3">
+                        <Flag code={countryCodes.find(c => c.code === countryCode)?.flag} />
+                        <select
+                          value={countryCode}
+                          onChange={(e) => setCountryCode(e.target.value)}
+                          className="bg-transparent text-gray-900 font-medium focus:outline-none py-4  cursor-pointer"
+                        >
+                          {countryCodes.map((cc) => (
+                            <option key={cc.code} value={cc.code}>
+                              {cc.code}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                      <div className="w-px h-10 bg-gray-300"></div>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={serviceForm.phone}
+                        onChange={handleServiceFormChange}
+                        className="flex-1 bg-transparent text-gray-900 px-3 py-4 focus:outline-none transition-all duration-200"
+                        placeholder="1234567890"
+                      />
+                    </div>
                     {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                   </div>
                   

@@ -2074,6 +2074,7 @@ export default function TechnologyDetails() {
   const router = useRouter();
   const [data, setData] = useState(null);
   const [technology, setTechnology] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
   const heroImage = "/Tech-Dropdown-Image.png";
 
   // Update data when route changes
@@ -2082,20 +2083,22 @@ export default function TechnologyDetails() {
       const tech = router.query.technology;
       setTechnology(tech);
       setData(technologyData[tech] || null);
+      setIsLoading(false);
 
       // GTM Page View Tracking for technology pages
       const pageTitle = `${
         technologyData[tech]?.title || "Technology Page"
       } - Brandsmashers Tech`;
       trackTechnologyPageView(tech, pageTitle);
+    } else if (router.isReady) {
+      setIsLoading(false);
     }
   }, [router.isReady, router.query.technology]);
 
-  if (!data) {
+  if (!data || isLoading) {
     return (
       <>
         <Navbar />
-
         <Footer />
       </>
     );

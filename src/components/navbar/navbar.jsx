@@ -159,7 +159,6 @@ const Navbar = () => {
             alt="Logo"
             width={300}
             height={300}
-            className="object-cover"
           />
         </Link>
       </div>
@@ -265,7 +264,7 @@ const Navbar = () => {
                           <li key={tech.path}>
                             <Link href={`/tech${tech.path}`} onClick={closeMenu}>
                               <span className={styles.iconWrapper}>
-                                <Image src={tech.iconSrc} alt={`${tech.name} icon`} width={20} height={20} />
+                                <Image src={tech.iconSrc} alt={`${tech.name} icon`} width={16} height={16} />
                               </span>
                               {tech.name}
                             </Link>
