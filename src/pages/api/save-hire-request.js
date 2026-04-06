@@ -1,6 +1,4 @@
 import { google } from 'googleapis';
-import fs from 'fs';
-import path from 'path';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -97,58 +95,6 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error('❌ Google Sheets error:', error.message);
-    
-    // Fall back to local CSV
-    console.log('Trying local CSV fallback...');
-    try {
-      const formType = req.body.formType || 'hire';
-      let filePath;
-      if (formType === 'contact') {
-        filePath = path.join(process.cwd(), 'contact-requests.csv');
-      } else {
-        filePath = path.join(process.cwd(), 'hire-requests.csv');
-      }
-      
-      let newEntry;
-      let headers;
-      
-      if (formType === 'contact') {
-        newEntry = [
-          new Date().toISOString(),
-          `${firstName} ${lastName}`.trim(),
-          email,
-          phone,
-          source || '',
-          reason || '',
-        ].map(field => `"${String(field).replace(/"/g, '""')}"`).join(',');
-        headers = 'Timestamp,Full Name,Email,Phone,Location,Reason\n';
-      } else {
-        newEntry = [
-          new Date().toISOString(),
-          firstName,
-          lastName,
-          email,
-          phone,
-          techStack || '',
-          helpType || '',
-        ].map(field => `"${String(field).replace(/"/g, '""')}"`).join(',');
-        headers = 'Timestamp,First Name,Last Name,Email,Phone,Tech Stack,Help Type\n';
-      }
-      
-      if (!fs.existsSync(filePath)) {
-        fs.writeFileSync(filePath, headers);
-      }
-
-      fs.appendFileSync(filePath, newEntry + '\n');
-      
-      console.log('Data saved to local CSV!');
-      return res.status(200).json({
-        success: true,
-        message: 'Data saved to local CSV',
-      });
-    } catch (csvError) {
-      console.error('❌ CSV fallback error:', csvError.message);
-      return res.status(500).json({ success: false, error: 'Failed to save data' });
-    }
+    return res.status(500).json({ success: false, error: 'Failed to save data' });
   }
 }
