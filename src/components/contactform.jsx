@@ -192,7 +192,7 @@ export default function ContactForm() {
 
   const validatePhone = (phone) => {
     const digits = phone.replace(/\D/g, '');
-    return digits.length >= 6 && digits.length <= 15;
+    return digits.length === 10;
   };
 
   const validateForm = () => {
@@ -211,7 +211,7 @@ export default function ContactForm() {
     if (!serviceForm.phone) {
       newErrors.phone = 'Phone number is required';
     } else if (!validatePhone(serviceForm.phone)) {
-      newErrors.phone = 'Enter 6-15 digits';
+      newErrors.phone = 'Enter 10 digits';
     }
     if (!serviceForm.reason) {
       newErrors.reason = 'Please tell us why you\'re contacting us';
@@ -379,6 +379,12 @@ export default function ContactForm() {
                         name="phone"
                         value={serviceForm.phone}
                         onChange={handleServiceFormChange}
+                        onKeyDown={(e) => {
+                          if (!/[0-9]/.test(e.key) && e.key !== 'Backspace' && e.key !== 'Delete' && e.key !== 'Tab') {
+                            e.preventDefault();
+                          }
+                        }}
+                        maxLength={10}
                         className="flex-1 bg-transparent text-gray-900 px-3 py-4 focus:outline-none transition-all duration-200"
                         placeholder="1234567890"
                       />

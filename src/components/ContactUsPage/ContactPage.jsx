@@ -237,7 +237,7 @@ const ContactPage = () => {
 
   const validatePhone = (phone) => {
     const digits = phone.replace(/\D/g, '');
-    return digits.length >= 6 && digits.length <= 15;
+    return digits.length === 10;
   };
 
   const handleChange = (e) => {
@@ -309,7 +309,7 @@ const ContactPage = () => {
     if (!formData.phone) {
       newErrors.phone = "Phone number is required";
     } else if (!validatePhone(formData.phone)) {
-      newErrors.phone = "Enter 6-15 digits";
+      newErrors.phone = "Enter 10 digits";
     }
 
     // Skills and Source are now optional
@@ -575,6 +575,12 @@ const ContactPage = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
+                      onKeyDown={(e) => {
+                        if (!/[0-9]/.test(e.key) && e.key !== 'Backspace' && e.key !== 'Delete' && e.key !== 'Tab') {
+                          e.preventDefault();
+                        }
+                      }}
+                      maxLength={10}
                       placeholder="1234567890"
                       className="flex-1 bg-transparent text-white px-3 py-2.5 focus:outline-none transition-all duration-200"
                     />
