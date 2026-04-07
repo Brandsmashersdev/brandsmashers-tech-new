@@ -31,8 +31,10 @@ export default async function handler(req, res) {
       privateKey = privateKey.slice(1, -1);
     }
     
-    // Replace escaped newlines and literal \n with actual newlines
-    privateKey = privateKey.replace(/\\n/g, '\n').replace(/\\\\n/g, '\n');
+    // Convert literal \n to actual newlines
+    if (privateKey.includes('\\n')) {
+      privateKey = privateKey.replace(/\\n/g, '\n');
+    }
 
     console.log('Processed key length:', privateKey.length);
 
